@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+<title>Shopping · 14–18 Sept</title>
+<style>
+  :root{--bg:#faf9f7;--fg:#1a1a1a;--muted:#6b6b6b;--line:#e2e0dc;
+    --card:#fff;--soft:#f3f1ed;--accent:#8a5a2b;--go:#3d7a4e;--hot:#a03232}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#141414;--fg:#ededed;--muted:#9a9a9a;--line:#2e2e2e;
+    --card:#1c1c1c;--soft:#232323;--accent:#d9a05b;--go:#7dc48f;--hot:#e08585}}
+  :root[data-theme="dark"]{--bg:#141414;--fg:#ededed;--muted:#9a9a9a;--line:#2e2e2e;
+    --card:#1c1c1c;--soft:#232323;--accent:#d9a05b;--go:#7dc48f;--hot:#e08585}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:17px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    max-width:620px;margin-inline:auto;padding:0 0 140px;
+    -webkit-font-smoothing:antialiased}
+
+  header{position:sticky;top:0;z-index:20;background:var(--bg);
+    border-bottom:1px solid var(--line);padding:14px 16px 10px;
+    padding-top:max(14px,env(safe-area-inset-top))}
+  h1{font-size:1.15rem;margin:0;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:.8rem;margin:2px 0 0}
+  .bar{height:4px;background:var(--line);border-radius:99px;margin-top:10px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--go);width:0;
+    transition:width .25s ease;border-radius:99px}
+  .barrow{display:flex;align-items:center;gap:12px;margin-top:9px}
+  .barrow .bar{flex:1;margin:0}
+  .count{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;
+    white-space:nowrap}
+
+  .stock{margin:14px 16px 0;background:var(--soft);border-radius:10px;overflow:hidden}
+  .stock summary{cursor:pointer;list-style:none;padding:12px 14px;
+    font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);font-weight:700}
+  .stock summary::-webkit-details-marker{display:none}
+  .stock summary::after{content:"▾";float:right;color:var(--muted);
+    font-size:.9rem;transform:translateY(-1px)}
+  .stock[open] summary::after{content:"▴"}
+  .stock p{margin:0;padding:0 14px 14px;font-size:.88rem;color:var(--muted);line-height:1.65}
+
+  .sec{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin:26px 16px 6px}
+
+  ul{list-style:none;margin:0;padding:0;background:var(--card);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  li{display:flex;align-items:center;gap:14px;padding:0 16px;
+    border-bottom:1px solid var(--line);min-height:56px;cursor:pointer;
+    user-select:none;transition:background .12s}
+  li:last-child{border-bottom:none}
+  li:active{background:var(--soft)}
+  .box{flex:0 0 24px;height:24px;border:2px solid var(--line);border-radius:7px;
+    display:grid;place-items:center;transition:all .15s}
+  .box svg{width:14px;height:14px;opacity:0;transform:scale(.6);transition:all .15s}
+  li.on .box{background:var(--go);border-color:var(--go)}
+  li.on .box svg{opacity:1;transform:scale(1)}
+  .txt{flex:1;padding:12px 0;min-width:0}
+  .nm{display:block;transition:opacity .15s}
+  .qt{display:block;font-size:.82rem;color:var(--muted);margin-top:1px;
+    font-variant-numeric:tabular-nums}
+  li.on .nm{text-decoration:line-through;opacity:.4}
+  li.on .qt{opacity:.4}
+  .rm{flex:0 0 auto;color:var(--muted);font-size:1.3rem;line-height:1;
+    padding:10px;margin-right:-10px;opacity:.5}
+
+  .add{margin:26px 16px 0;display:flex;gap:8px}
+  .add input{flex:1;min-width:0;font:inherit;font-size:16px;padding:13px 14px;
+    border:1px solid var(--line);border-radius:10px;background:var(--card);
+    color:var(--fg);-webkit-appearance:none}
+  .add input::placeholder{color:var(--muted)}
+  .add button{flex:0 0 auto;font:inherit;font-weight:600;font-size:.95rem;
+    padding:13px 18px;border:none;border-radius:10px;
+    background:var(--accent);color:#fff}
+
+  .foot{position:fixed;left:0;right:0;bottom:0;z-index:20;
+    background:var(--bg);border-top:1px solid var(--line);
+    padding:10px 16px max(10px,env(safe-area-inset-bottom));
+    display:flex;gap:8px;max-width:620px;margin-inline:auto}
+  .foot button{flex:1;font:inherit;font-weight:600;font-size:.92rem;
+    padding:14px 10px;border-radius:11px;border:1px solid var(--line);
+    background:var(--card);color:var(--fg)}
+  .foot button[disabled]{opacity:.35}
+  .foot .share{background:var(--accent);color:#fff;border-color:var(--accent);flex:1.4}
+
+  .toast{position:fixed;left:50%;bottom:86px;transform:translate(-50%,14px);
+    background:var(--fg);color:var(--bg);font-size:.85rem;font-weight:500;
+    padding:10px 16px;border-radius:99px;opacity:0;pointer-events:none;
+    transition:all .22s;z-index:30;max-width:90vw;text-align:center}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  .note{margin:22px 16px 0;font-size:.83rem;color:var(--muted);line-height:1.6}
+  .done{margin:22px 16px 0;padding:14px 16px;background:var(--soft);
+    border-radius:10px;font-size:.9rem;display:none}
+  .done.show{display:block}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Shopping</h1>
+  <p class="sub">Monday 14 – Friday 18 September</p>
+  <div class="barrow">
+    <div class="bar"><i id="fill"></i></div>
+    <span class="count" id="count">0 of 0</span>
+  </div>
+</header>
+
+<details class="stock">
+  <summary>Check you have these</summary>
+  <p>Whey · chia seeds · walnuts or almonds · pumpkin seeds · porridge oats · olive oil ·
+     spray oil · cumin · smoked paprika · chilli flakes · soy sauce · honey ·
+     tomato purée · fish sauce · red curry paste · vegetable stock<br><br>
+     <strong>Huel Black is already in the fridge</strong> — don't buy more.</p>
+</details>
+
+<div id="list"></div>
+
+<div class="add">
+  <input id="new" type="text" placeholder="Add anything else…"
+         autocomplete="off" autocapitalize="sentences" enterkeyhint="done">
+  <button id="addBtn">Add</button>
+</div>
+
+<div class="done" id="done">
+  <strong>That's everything.</strong> Wednesday's lunch is bought at M&amp;S, so there's
+  nothing here for it.
+</div>
+
+<p class="note">
+  The mince packs leave about 125g each of pork and beef spare — freeze them or push them
+  into Tuesday's chilli. Rice stays jasmine rather than brown: brown needs different liquid
+  and timing and would break a one-pot dish.
+</p>
+
+<div class="foot">
+  <button id="undo" disabled>Undo</button>
+  <button id="clear">Clear</button>
+  <button class="share" id="share">Share</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const ITEMS = [
+  ["Meat &amp; fish","Chicken thighs, skinless","1.6kg"],
+  ["Meat &amp; fish","Turkey mince, 5%","850g — two 500g packs"],
+  ["Meat &amp; fish","Pork mince, 5%","375g"],
+  ["Meat &amp; fish","Beef mince, 5%","375g"],
+  ["Meat &amp; fish","Cooked chicken breast","2 × 150g packs"],
+  ["Meat &amp; fish","Tuna in spring water","3 × 145g tins — no added salt"],
+
+  ["Fresh","Potatoes","550g"],
+  ["Fresh","Asparagus","240g"],
+  ["Fresh","Fennel","1 bulb"],
+  ["Fresh","Choy sum, pak choi or tenderstem","450g"],
+  ["Fresh","Peppers","3"],
+  ["Fresh","Onions","3"],
+  ["Fresh","Red onion","1"],
+  ["Fresh","Garlic","2 bulbs"],
+  ["Fresh","Cherry tomatoes","400g"],
+  ["Fresh","Cucumber","1"],
+  ["Fresh","Salad leaves","1 bag"],
+  ["Fresh","Bananas","5"],
+  ["Fresh","Apples","4"],
+  ["Fresh","Coriander","1 bunch"],
+  ["Fresh","Flat parsley","1 bunch"],
+  ["Fresh","Basil","1 pack"],
+  ["Fresh","Thyme","1 pack"],
+  ["Fresh","Lemons","2"],
+  ["Fresh","Lime","1"],
+
+  ["Dairy","Plain Skyr","2.5kg"],
+  ["Dairy","Semi-skimmed milk","2 litres"],
+  ["Dairy","Mozzarella","75g"],
+  ["Dairy","Parmesan","50g"],
+
+  ["Cupboard","Black beans","2 tins"],
+  ["Cupboard","Kidney beans","1 tin"],
+  ["Cupboard","Butter beans","2 tins"],
+  ["Cupboard","Chopped tomatoes","3 tins"],
+  ["Cupboard","Passata","850g"],
+  ["Cupboard","Coconut milk, reduced-fat","1 tin"],
+  ["Cupboard","Capers","small jar"],
+  ["Cupboard","Red lentils","190g"],
+  ["Cupboard","Jasmine rice","140g"],
+  ["Cupboard","Peanuts, dry-roasted unsalted","30g"],
+  ["Cupboard","Wholemeal ciabatta","1"],
+  ["Cupboard","Milbona protein drinks","4 — Lidl"],
+  ["Cupboard","Huel protein bar","1"],
+
+  ["Frozen","Mixed berries","500g"],
+  ["Frozen","Raspberries","500g"],
+  ["Frozen","Edamame","500g"]
+];
+
+const KEY = "shop-2026-09-14";
+let ticks = new Array(ITEMS.length).fill(0);
+let extras = [];
+let history = [];
+
+const $ = s => document.querySelector(s);
+
+/* ---------- encoding for the share link ---------- */
+function b64e(s){
+  const b = new TextEncoder().encode(s); let x = "";
+  b.forEach(c => x += String.fromCharCode(c));
+  return btoa(x).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+}
+function b64d(s){
+  s = s.replace(/-/g,"+").replace(/_/g,"/");
+  const b = atob(s), a = Uint8Array.from(b, c => c.charCodeAt(0));
+  return new TextDecoder().decode(a);
+}
+function encode(){
+  return b64e(JSON.stringify({t: ticks.join(""), x: extras.map(e => [e.n, e.t])}));
+}
+function decode(s){
+  const o = JSON.parse(b64d(s));
+  if (typeof o.t === "string")
+    ticks = o.t.split("").map(Number).slice(0, ITEMS.length);
+  while (ticks.length < ITEMS.length) ticks.push(0);
+  if (Array.isArray(o.x)) extras = o.x.map(e => ({n: e[0], t: e[1] ? 1 : 0}));
+}
+
+/* ---------- storage ---------- */
+function save(){
+  try { localStorage.setItem(KEY, encode()); } catch(e){}
+}
+function load(){
+  try {
+    const s = localStorage.getItem(KEY);
+    if (s) decode(s);
+  } catch(e){}
+}
+
+/* ---------- rendering ---------- */
+const TICK = '<svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function render(){
+  const wrap = $("#list");
+  wrap.innerHTML = "";
+  let sec = null, ul = null;
+
+  ITEMS.forEach((it, i) => {
+    if (it[0] !== sec){
+      sec = it[0];
+      const h = document.createElement("p");
+      h.className = "sec"; h.innerHTML = sec;
+      wrap.appendChild(h);
+      ul = document.createElement("ul");
+      wrap.appendChild(ul);
+    }
+    ul.appendChild(row(it[1], it[2], ticks[i], () => toggle(i)));
+  });
+
+  if (extras.length){
+    const h = document.createElement("p");
+    h.className = "sec"; h.textContent = "Also";
+    wrap.appendChild(h);
+    const el = document.createElement("ul");
+    extras.forEach((e, j) => {
+      const li = row(e.n, "", e.t, () => toggleExtra(j));
+      const rm = document.createElement("span");
+      rm.className = "rm"; rm.textContent = "×";
+      rm.onclick = ev => { ev.stopPropagation(); removeExtra(j); };
+      li.appendChild(rm);
+      el.appendChild(li);
+    });
+    wrap.appendChild(el);
+  }
+
+  const total = ITEMS.length + extras.length;
+  const got = ticks.reduce((a,b) => a+b, 0) + extras.reduce((a,e) => a+e.t, 0);
+  $("#count").textContent = got + " of " + total;
+  $("#fill").style.width = total ? (got/total*100) + "%" : "0%";
+  $("#done").classList.toggle("show", total > 0 && got === total);
+  $("#undo").disabled = history.length === 0;
+}
+
+function row(name, qty, on, fn){
+  const li = document.createElement("li");
+  if (on) li.className = "on";
+  li.innerHTML = '<span class="box">' + TICK + '</span><span class="txt">' +
+    '<span class="nm">' + name + '</span>' +
+    (qty ? '<span class="qt">' + qty + '</span>' : '') + '</span>';
+  li.onclick = fn;
+  return li;
+}
+
+/* ---------- actions ---------- */
+function snapshot(){
+  history.push({t: ticks.slice(), x: extras.map(e => ({...e}))});
+  if (history.length > 60) history.shift();
+}
+function toggle(i){ snapshot(); ticks[i] = ticks[i] ? 0 : 1; commit(); }
+function toggleExtra(j){ snapshot(); extras[j].t = extras[j].t ? 0 : 1; commit(); }
+function removeExtra(j){ snapshot(); extras.splice(j,1); commit(); toast("Removed"); }
+function commit(){ save(); render(); }
+
+$("#undo").onclick = () => {
+  if (!history.length) return;
+  const p = history.pop();
+  ticks = p.t; extras = p.x;
+  commit(); toast("Undone");
+};
+
+$("#clear").onclick = () => {
+  snapshot();
+  ticks = ticks.map(() => 0);
+  extras.forEach(e => e.t = 0);
+  commit(); toast("All unticked");
+};
+
+function addExtra(){
+  const inp = $("#new");
+  const v = inp.value.trim();
+  if (!v) return;
+  if (extras.some(e => e.n.toLowerCase() === v.toLowerCase())){
+    inp.value = ""; toast("Already on the list"); return;
+  }
+  snapshot();
+  extras.push({n: v, t: 0});
+  inp.value = "";
+  commit();
+}
+$("#addBtn").onclick = addExtra;
+$("#new").addEventListener("keydown", e => {
+  if (e.key === "Enter"){ e.preventDefault(); addExtra(); $("#new").blur(); }
+});
+
+/* ---------- share ---------- */
+$("#share").onclick = async () => {
+  const url = location.origin + location.pathname + "#" + encode();
+  const text = "Shopping list — 14–18 Sept";
+  try {
+    if (navigator.share){
+      await navigator.share({title: text, text: text, url: url});
+      return;
+    }
+  } catch(e){ if (e && e.name === "AbortError") return; }
+  try {
+    await navigator.clipboard.writeText(url);
+    toast("Link copied");
+  } catch(e){
+    prompt("Copy this link:", url);
+  }
+};
+
+/* ---------- toast ---------- */
+let tid;
+function toast(msg){
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(tid);
+  tid = setTimeout(() => t.classList.remove("show"), 1700);
+}
+
+/* ---------- boot ---------- */
+(function init(){
+  let fromLink = false;
+  if (location.hash.length > 1){
+    try { decode(location.hash.slice(1)); fromLink = true; } catch(e){}
+  }
+  if (!fromLink) load(); else save();
+  render();
+  if (fromLink){
+    history_clean();
+    toast("List received");
+  }
+})();
+function history_clean(){
+  try { window.history.replaceState(null, "", location.pathname); } catch(e){}
+}
+</script>
+
+</body>
+</html>
