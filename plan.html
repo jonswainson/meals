@@ -114,7 +114,7 @@ const BANANA = {
   slot: "2:30", name: "Banana and Skyr", macros: M(177, 12.4),
   ing: ["120g banana, weighed and peeled", "100g plain Skyr"],
   tip: "<b>Weigh the banana.</b> Yours came in at 196g last time, which is 70 calories more than the recipe means.",
-  cheryl: "100g Skyr, and a little of the banana if she wants it."
+  cheryl: "<b>Nothing at 2:30 — she's teaching.</b> Her Skyr and banana go in with lunch instead: same food, same day total, one fewer thing to stop for."
 };
 
 const DAYS = [
@@ -125,12 +125,11 @@ const DAYS = [
   meals:[
     SMOOTHIE,
     { slot:"Lunch", name:"Cooked chicken and butter bean tub", macros:M(457,54.0,8.2),
-      ing:["170g pre-packed cooked chicken breast",
-           "140g butter beans, drained and rinsed",
-           "60g salad leaves · 60g cherry tomatoes · 30g cucumber",
-           "12g olive oil · lemon"],
+      ing:["<b>One bowl for both of you:</b> 300g pre-packed cooked chicken · 260g butter beans, drained and rinsed · 120g salad leaves · 120g cherry tomatoes · 60g cucumber · oil and lemon",
+           "<b>Yours:</b> 170g chicken, 140g beans, 12g oil",
+           "<b>Cheryl:</b> 130g chicken, 120g beans, 8g oil, <b>plus a 100g pot of Skyr</b> — 417 kcal, 53g"],
       method:["Five minutes and nothing is cooked. Assemble it the night before if that's easier — the beans are better for sitting in the oil and lemon."],
-      tip:"<b>Cheryl has the Huel bottle.</b> The tub is there if she wants one, but the bottle is her default and it's an adherence thing, not a nutritional one."
+      tip:"<b>Make both at once.</b> Five minutes and nothing is cooked. <b>Cheryl's Skyr goes in with her lunch</b> — she's teaching at 2:30 and can't stop for it."
     },
     BANANA,
     { slot:"Dinner", name:"Sunday's roast beef", macros:M(698,70.8,11.1),
@@ -145,12 +144,13 @@ const DAYS = [
               ["Your daughter","110g beef, 200g roast potatoes, carrots, gravy. 531 kcal, 43g."]]
     },
     { tonight:true, slot:"Before bed", name:"Make tomorrow's tuna tub",
-      sub:"Eight minutes \u00b7 nothing is cooked \u00b7 it has to be tonight",
-      ing:["2 tins no-added-salt tuna in spring water, drained (190g)",
-           "160g butter beans, drained and rinsed",
-           "90g fennel, shaved as thin as you can get it",
-           "110g cherry tomatoes, halved \u00b7 28g red onion, paper-thin",
-           "6g capers, rinsed \u00b7 11g olive oil \u00b7 22g lemon juice \u00b7 9g flat parsley"],
+      sub:"Eight minutes \u00b7 nothing is cooked \u00b7 makes both tubs \u00b7 it has to be tonight",
+      ing:["3 tins no-added-salt tuna in spring water, drained (330g)",
+           "300g butter beans, drained and rinsed",
+           "160g fennel, shaved as thin as you can get it",
+           "200g cherry tomatoes, halved \u00b7 50g red onion, paper-thin",
+           "10g capers, rinsed \u00b7 20g olive oil \u00b7 40g lemon juice \u00b7 16g flat parsley",
+           "<b>Divide into two tubs:</b> yours 190g tuna and 160g beans, Cheryl\u2019s 140g and 140g"],
       method:["<b>Red onion into the lemon juice on its own for five minutes first.</b> It goes from harsh to sweet, and stops being the thing you can still taste an hour later.",
               "Beans, fennel, oil, capers and black pepper \u2014 mix and leave five minutes. Fennel needs that time in acid to lose its aniseed edge.",
               "Tuna flaked in last, in big pieces. Stir once.",
@@ -167,11 +167,9 @@ const DAYS = [
   meals:[
     BOWL,
     { slot:"Lunch", name:"Tuna, butter bean and fennel tub", macros:M(498,56.4,11.8),
-      ing:["2 tins no-added-salt tuna in spring water, drained (190g)",
-           "160g butter beans, drained and rinsed",
-           "90g fennel, shaved as thin as you can get it",
-           "110g cherry tomatoes, halved · 28g red onion, paper-thin",
-           "6g capers, rinsed · 11g olive oil · 22g lemon juice · 9g flat parsley"],
+      ing:["<b>One bowl, two tubs:</b> 3 tins no-added-salt tuna, drained (330g) · 300g butter beans · 160g shaved fennel · 200g cherry tomatoes · 50g red onion · 10g rinsed capers · 20g olive oil · 40g lemon juice · 16g flat parsley",
+           "<b>Yours:</b> 190g tuna, 160g beans",
+           "<b>Cheryl:</b> 140g tuna, 140g beans, <b>plus 100g Skyr and 40g banana</b> — 494 kcal, 55g"],
       method:["<b>Red onion into the lemon juice on its own for five minutes first.</b> It goes from harsh to sweet, and it stops being the thing you can still taste an hour later.",
               "Beans, fennel, oil, capers and pepper — mix and leave five minutes. Fennel needs that time in acid to lose its aniseed edge.",
               "Tuna flaked in last, in big pieces. Stir once.",
@@ -219,25 +217,25 @@ const DAYS = [
     { slot:"Lunch", name:"Bought in London", macros:M(497,50.4,1.0),
       ing:["M&amp;S hot smoked sweet chilli salmon — <b>the whole pack, not half</b>",
            "M&amp;S chicken Caesar box, 250g"],
-      tip:"Between them that's 50g of protein, which is what the day needs. It is also almost no fibre at all, which is why Wednesday comes in at 25g."
+      tip:"Between them that's 50g of protein, which is what the day needs. It is also almost no fibre at all, which is why Wednesday comes in at 25g.<br><br><b>Cheryl has the Huel Black bottle</b> — the one day this week she does — <b>plus 100g of Skyr</b>. 463 kcal, 46g."
     },
     { slot:"2:30", name:"Whey and a pear", macros:M(151,15.6,5.9),
       ing:["20g whey in water", "1 large pear"],
       tip:"<b>Weigh the whey into a shaker on Tuesday night and put the pear in the bag.</b> The pear is there for the fibre, which is the thing Wednesday is short of."
     },
     { slot:"Dinner", name:"Baked meatballs with ciabatta", macros:M(666,57.1,10.8),
-      sub:"Makes 4 · 50 minutes · one ovenproof pan",
-      ing:["300g pork mince, 5% · 300g beef mince, 5%",
-           "50g rolled oats · 1 onion, finely chopped · 4 sprigs thyme",
-           "150g dry red lentils, rinsed",
-           "2 × 400g tins chopped tomatoes · <b>500ml stock at half strength</b> · 7 cloves garlic · basil",
-           "60g mozzarella · 40g parmesan · 2 tsp olive oil",
+      sub:"Makes 5 · 50 minutes · one ovenproof pan",
+      ing:["375g pork mince, 5% · 375g beef mince, 5%",
+           "63g rolled oats · 190g onion, finely chopped · 4 sprigs thyme",
+           "190g dry red lentils, rinsed",
+           "3 × 400g tins chopped tomatoes · <b>625ml stock at half strength</b> · 7 cloves garlic · basil",
+           "75g mozzarella · 50g parmesan · 2 tsp olive oil",
            "Wholemeal ciabatta, to serve"],
       method:["Onion and garlic in 1 tsp oil in an ovenproof pan. Out into a bowl with both minces, the oats and the thyme. <b>Weigh in 1.5g of salt</b>, mix, roll into golf balls. Brown them in the same pan, then set aside.",
               "Remaining oil in the pan, garlic until soft. <b>Lentils and the stock in first — simmer 10 minutes before the tomatoes go anywhere near them.</b> That acid-free window is what makes them vanish.",
               "Tomatoes and basil in, <b>0.5g of salt</b>, simmer uncovered 15–20 minutes until reduced by a quarter.",
               "Oven to 200°C. Meatballs into the sauce, 10 minutes. Cheese over, back in until it melts. Basil, then to the table with the bread."],
-      tip:"<b>Make the stock at half strength — one cube to a litre.</b> A full-strength cube puts 2.4g of salt into the pan, and the cheese and tomatoes already bring 4.3g.",
+      tip:"<b>Make the stock at half strength — one cube to a litre.</b> A full-strength cube puts 2.4g of salt into the pan, and the cheese and tomatoes already bring 4.3g.<br><br><b>Five portions, not four</b> — three of you eat it tonight and it carries two lunches on Friday.",
       plates:[["Cheryl","475g, no bread. 479 kcal, 46g."],
               ["Your daughter","A full portion and two slices of ciabatta. Exactly the recipe — the lentils are invisible."]]
     }
@@ -251,7 +249,7 @@ const DAYS = [
     BOWL,
     { slot:"Lunch", name:"Tuesday's chilli", macros:M(507,49.6,13.9),
       ing:["590g from Tuesday's pan", "Skyr on top if you want it"],
-      tip:"<b>It's better than it was on the night.</b> Reheat until piping hot all the way through, once only. Cheryl takes 450g — or the Huel bottle, which is her default."
+      tip:"<b>It's better than it was on the night.</b> Reheat until piping hot all the way through, once only. <b>Cheryl takes 450g, plus 100g Skyr and 50g banana</b> — 497 kcal, 49g."
     },
     BANANA,
     { slot:"Dinner", name:"Honey-glazed chicken with potato wedges", macros:M(664,67.5,9.3),
@@ -279,7 +277,7 @@ const DAYS = [
     SMOOTHIE,
     { slot:"Lunch", name:"Wednesday's meatballs", macros:M(546,52.3,7.6),
       ing:["A full portion from Wednesday's pan", "<b>No bread</b> — the dinner carries the starch tonight"],
-      tip:"Cheryl takes 400g, or the bottle."
+      tip:"<b>Cheryl takes 400g, plus 100g Skyr and 25g banana</b> — 491 kcal, 50g. No bread for either of you."
     },
     BANANA,
     { slot:"Dinner", name:"One-pot sticky coconut chicken rice", macros:M(688,59.8,4.4),
