@@ -64,6 +64,9 @@
   .plate{background:var(--soft);border-radius:8px;padding:10px 12px;font-size:.87rem}
   .plate b{display:block;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;
     color:var(--muted);margin-bottom:4px}
+  .meal.tonight{border-color:var(--go);background:var(--soft)}
+  .meal.tonight .slot{color:var(--go)}
+  .meal.tonight .tip{border-left-color:var(--go)}
   .free{margin:40px 16px;text-align:center;color:var(--muted);font-size:.95rem}
   .free strong{display:block;color:var(--fg);font-size:1.05rem;margin-bottom:8px}
 </style>
@@ -140,6 +143,20 @@ const DAYS = [
       tip:"<b>No Yorkshire puddings.</b> The potatoes are the starch, and that's the rule that keeps this plate at 720g.",
       plates:[["Cheryl","~120g beef, 130g potatoes, the full share of vegetables. 470 kcal, 45g."],
               ["Your daughter","110g beef, 200g roast potatoes, carrots, gravy. 531 kcal, 43g."]]
+    },
+    { tonight:true, slot:"Before bed", name:"Make tomorrow's tuna tub",
+      sub:"Eight minutes \u00b7 nothing is cooked \u00b7 it has to be tonight",
+      ing:["2 tins no-added-salt tuna in spring water, drained (190g)",
+           "160g butter beans, drained and rinsed",
+           "90g fennel, shaved as thin as you can get it",
+           "110g cherry tomatoes, halved \u00b7 28g red onion, paper-thin",
+           "6g capers, rinsed \u00b7 11g olive oil \u00b7 22g lemon juice \u00b7 9g flat parsley"],
+      method:["<b>Red onion into the lemon juice on its own for five minutes first.</b> It goes from harsh to sweet, and stops being the thing you can still taste an hour later.",
+              "Beans, fennel, oil, capers and black pepper \u2014 mix and leave five minutes. Fennel needs that time in acid to lose its aniseed edge.",
+              "Tuna flaked in last, in big pieces. Stir once.",
+              "<b>Tomatoes and parsley on top, not stirred in.</b> They go in when you open the tub tomorrow, so they don't leak into the beans overnight.",
+              "Lid on, into the fridge."],
+      tip:"<b>This is the one thing that has to happen tonight.</b> The whole point of the recipe is the six hours the beans and fennel spend in the oil and lemon \u2014 made fresh in the morning it is a noticeably worse lunch."
     }
   ]
 },
@@ -159,7 +176,7 @@ const DAYS = [
               "Beans, fennel, oil, capers and pepper — mix and leave five minutes. Fennel needs that time in acid to lose its aniseed edge.",
               "Tuna flaked in last, in big pieces. Stir once.",
               "<b>Tomatoes and parsley on top, not stirred in.</b> They go in when you open the tub, so they don't leak into the beans."],
-      tip:"<b>Make it tonight.</b> This is a marinade, not a salad — the beans and fennel take up the oil and lemon over six hours and it arrives better than it went in. It needs no cold bag."
+      tip:"<b>Made last night</b> — see Monday. It is a marinade, not a salad: the beans and fennel take up the oil and lemon overnight and it arrives better than it went in. No cold bag needed."
     },
     { slot:"2:30", name:"Huel protein bar", macros:M(205,15),
       ing:["One bar, in the bag before you leave."] },
@@ -178,6 +195,14 @@ const DAYS = [
       tip:"<b>Cook all five portions even though there are two of you.</b> Thursday's lunch comes out of this pan, and about 720g goes in the freezer that night.",
       plates:[["Cheryl","500g. 467 kcal, 49g."],
               ["Yours","690g with 60g of Skyr on top — a big bowl, and it's exactly on the 750g plate limit."]]
+    },
+    { tonight:true, slot:"Before bed", name:"Pack for the 05:15",
+      sub:"Nothing gets made tomorrow morning",
+      ing:["<b>20g of whey weighed into a shaker</b> — dry; add water at the station",
+           "<b>1 large pear</b> in the bag",
+           "<b>Huel Black bottle</b> and the <b>Milbona drink</b> in the bag",
+           "Freeze the spare chilli — about 720g"],
+      tip:"<b>The pear is the fibre.</b> Wednesday comes in at 25g against a 30g target because the bought lunch has almost none in it, so it is not the optional item it looks like."
     }
   ]
 },
@@ -282,7 +307,8 @@ const DAYS = [
 ];
 
 function card(m){
-  let h = '<div class="meal"><p class="slot">' + m.slot + '</p><h2>' + m.name + '</h2>';
+  let h = '<div class="meal' + (m.tonight ? ' tonight' : '') + '"><p class="slot">' +
+    m.slot + '</p><h2>' + m.name + '</h2>';
   if (m.sub) h += '<p class="tip" style="margin:0 0 10px">' + m.sub + '</p>';
   if (m.macros) h += m.macros;
   if (m.ing) h += '<h3>Ingredients</h3><ul><li>' + m.ing.join('</li><li>') + '</li></ul>';

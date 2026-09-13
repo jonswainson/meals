@@ -42,6 +42,16 @@
     font-size:.9rem;transform:translateY(-1px)}
   .stock[open] summary::after{content:"▴"}
   .stock p{margin:0;padding:0 14px 14px;font-size:.88rem;color:var(--muted);line-height:1.65}
+  .sp{display:flex;align-items:center;gap:10px;padding:9px 14px;
+    border-top:1px solid var(--line)}
+  .sp .n{flex:1;font-size:.92rem;min-width:0}
+  .sp .n em{font-style:normal;color:var(--muted);font-size:.82rem;display:block}
+  .sp button{flex:0 0 auto;font:inherit;font-size:.78rem;font-weight:600;
+    padding:8px 12px;border-radius:8px;border:1px solid var(--line);
+    background:var(--card);color:var(--fg);min-width:60px}
+  .sp button.need{border-color:var(--accent);color:var(--accent)}
+  .stockfoot{padding:11px 14px 14px!important;font-size:.82rem!important}
+  .stockfoot a{color:var(--accent);text-decoration:none;font-weight:600}
 
   .sec{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;
     color:var(--accent);font-weight:700;margin:26px 16px 6px}
@@ -112,12 +122,10 @@
   </div>
 </header>
 
-<details class="stock">
+<details class="stock" id="stockBox" open>
   <summary>Check you have these</summary>
-  <p>Whey · chia seeds · walnuts or almonds · pumpkin seeds · porridge oats · olive oil ·
-     spray oil · cumin · smoked paprika · chilli flakes · soy sauce · honey ·
-     tomato purée · fish sauce · red curry paste · vegetable stock<br><br>
-     <strong>Huel Black — you need 6 bottles this week</strong> (5 for Cheryl's lunches, 1 for your Wednesday breakfast). Already in the fridge; check there are six.</p>
+  <div id="staples"></div>
+  <p class="stockfoot" id="stockFoot"></p>
 </details>
 
 <div id="list"></div>
@@ -205,6 +213,25 @@ const ITEMS = [
   ["Frozen","Edamame, shelled","1 × 400g bag"]
 ];
 
+const STAPLES = [
+  ["Huel Black","6 bottles — 5 for Cheryl, 1 for your Wednesday"],
+  ["Whey",""],
+  ["Porridge oats",""],
+  ["Chia seeds",""],
+  ["Walnuts or almonds",""],
+  ["Pumpkin seeds",""],
+  ["Olive oil",""],
+  ["Spray oil",""],
+  ["Cumin",""],
+  ["Smoked paprika",""],
+  ["Chilli flakes",""],
+  ["Honey",""],
+  ["Tomato pur\u00e9e",""],
+  ["Vegetable stock",""]
+];
+let pantry = new Array(STAPLES.length).fill(0);  /* 0 unresolved · 1 have · 2 need · 3 need+got */
+let showHave = false;
+
 const KEY = "shop-2026-09-14";
 let ticks = new Array(ITEMS.length).fill(0);
 let extras = [];
@@ -224,13 +251,17 @@ function b64d(s){
   return new TextDecoder().decode(a);
 }
 function encode(){
-  return b64e(JSON.stringify({t: ticks.join(""), x: extras.map(e => [e.n, e.t])}));
+  return b64e(JSON.stringify({t: ticks.join(""), p: pantry.join(""),
+                              x: extras.map(e => [e.n, e.t])}));
 }
 function decode(s){
   const o = JSON.parse(b64d(s));
   if (typeof o.t === "string")
     ticks = o.t.split("").map(Number).slice(0, ITEMS.length);
   while (ticks.length < ITEMS.length) ticks.push(0);
+  if (typeof o.p === "string")
+    pantry = o.p.split("").map(Number).slice(0, STAPLES.length);
+  while (pantry.length < STAPLES.length) pantry.push(0);
   if (Array.isArray(o.x)) extras = o.x.map(e => ({n: e[0], t: e[1] ? 1 : 0}));
 }
 
@@ -248,7 +279,50 @@ function load(){
 /* ---------- rendering ---------- */
 const TICK = '<svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
+function renderStaples(){
+  const box = document.getElementById("staples");
+  const foot = document.getElementById("stockFoot");
+  box.innerHTML = "";
+
+  STAPLES.forEach((st, i) => {
+    if (pantry[i] !== 0 && !(showHave && pantry[i] === 1)) return;
+    const d = document.createElement("div");
+    d.className = "sp";
+    d.innerHTML = '<span class="n">' + st[0] +
+      (st[1] ? '<em>' + st[1] + '</em>' : '') + '</span>';
+
+    const have = document.createElement("button");
+    have.textContent = pantry[i] === 1 ? "In stock" : "Got it";
+    have.onclick = () => { snapshot(); pantry[i] = pantry[i] === 1 ? 0 : 1; commit(); };
+
+    const need = document.createElement("button");
+    need.className = "need"; need.textContent = "Need it";
+    need.onclick = () => { snapshot(); pantry[i] = 2; commit();
+                           toast(st[0] + " added to the list"); };
+
+    d.appendChild(have); d.appendChild(need);
+    box.appendChild(d);
+  });
+
+  const haveCount = pantry.filter(v => v === 1).length;
+  const left = pantry.filter(v => v === 0).length;
+  if (!left && !showHave)
+    box.innerHTML = '<div class="sp"><span class="n">All checked.</span></div>';
+  foot.innerHTML = haveCount
+    ? haveCount + ' marked as in stock \u00b7 <a href="#" id="toggleHave">' +
+      (showHave ? 'hide' : 'show') + '</a>'
+    : 'Tap <strong>Got it</strong> if it is in the cupboard, or <strong>Need it</strong> ' +
+      'to move it onto the list.';
+  const t = document.getElementById("toggleHave");
+  if (t) t.onclick = e => { e.preventDefault(); showHave = !showHave; renderStaples(); };
+}
+
+function togglePantryTick(i){
+  snapshot(); pantry[i] = pantry[i] === 3 ? 2 : 3; commit();
+}
+
 function render(){
+  renderStaples();
   const wrap = $("#list");
   wrap.innerHTML = "";
   let sec = null, ul = null;
@@ -264,6 +338,24 @@ function render(){
     }
     ul.appendChild(row(it[1], it[2], ticks[i], () => toggle(i)));
   });
+
+  const needed = STAPLES.map((st,i) => [st,i]).filter(([st,i]) => pantry[i] >= 2);
+  if (needed.length){
+    const h = document.createElement("p");
+    h.className = "sec"; h.textContent = "Also need";
+    wrap.appendChild(h);
+    const el = document.createElement("ul");
+    needed.forEach(([st,i]) => {
+      const li = row(st[0], st[1], pantry[i] === 3 ? 1 : 0, () => togglePantryTick(i));
+      const rm = document.createElement("span");
+      rm.className = "rm"; rm.textContent = "\u00d7";
+      rm.onclick = ev => { ev.stopPropagation(); snapshot(); pantry[i] = 1; commit();
+                           toast("Moved back to in stock"); };
+      li.appendChild(rm);
+      el.appendChild(li);
+    });
+    wrap.appendChild(el);
+  }
 
   if (extras.length){
     const h = document.createElement("p");
@@ -281,8 +373,9 @@ function render(){
     wrap.appendChild(el);
   }
 
-  const total = ITEMS.length + extras.length;
-  const got = ticks.reduce((a,b) => a+b, 0) + extras.reduce((a,e) => a+e.t, 0);
+  const total = ITEMS.length + extras.length + needed.length;
+  const got = ticks.reduce((a,b) => a+b, 0) + extras.reduce((a,e) => a+e.t, 0) +
+              pantry.filter(v => v === 3).length;
   $("#count").textContent = got + " of " + total;
   $("#fill").style.width = total ? (got/total*100) + "%" : "0%";
   $("#done").classList.toggle("show", total > 0 && got === total);
@@ -301,7 +394,7 @@ function row(name, qty, on, fn){
 
 /* ---------- actions ---------- */
 function snapshot(){
-  history.push({t: ticks.slice(), x: extras.map(e => ({...e}))});
+  history.push({t: ticks.slice(), p: pantry.slice(), x: extras.map(e => ({...e}))});
   if (history.length > 60) history.shift();
 }
 function toggle(i){ snapshot(); ticks[i] = ticks[i] ? 0 : 1; commit(); }
@@ -313,6 +406,7 @@ $("#undo").onclick = () => {
   if (!history.length) return;
   const p = history.pop();
   ticks = p.t; extras = p.x;
+  if (p.p) pantry = p.p;
   commit(); toast("Undone");
 };
 
