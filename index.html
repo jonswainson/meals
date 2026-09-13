@@ -341,21 +341,58 @@ $("#new").addEventListener("keydown", e => {
 });
 
 /* ---------- share ---------- */
+function shareUrl(){
+  return location.href.split("#")[0] + "#" + encode();
+}
+
+/* works without a secure context, unlike navigator.clipboard */
+function legacyCopy(text){
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.setAttribute("readonly", "");
+  ta.style.cssText = "position:fixed;top:-1000px;opacity:0";
+  document.body.appendChild(ta);
+  ta.select();
+  ta.setSelectionRange(0, text.length);
+  let ok = false;
+  try { ok = document.execCommand("copy"); } catch(e){}
+  document.body.removeChild(ta);
+  return ok;
+}
+
 $("#share").onclick = async () => {
-  const url = location.origin + location.pathname + "#" + encode();
-  const text = "Shopping list — 14–18 Sept";
-  try {
-    if (navigator.share){
-      await navigator.share({title: text, text: text, url: url});
-      return;
-    }
-  } catch(e){ if (e && e.name === "AbortError") return; }
-  try {
-    await navigator.clipboard.writeText(url);
-    toast("Link copied");
-  } catch(e){
-    prompt("Copy this link:", url);
+  const web = location.protocol === "http:" || location.protocol === "https:";
+  if (!web){
+    toast("Sharing needs the online version");
+    return;
   }
+
+  const url = shareUrl();
+  const label = "Shopping list · 14–18 Sept";
+
+  if (navigator.share){
+    try {
+      await navigator.share({title: label, text: label, url: url});
+      return;
+    } catch(e){
+      if (e && e.name === "AbortError") return;   /* user cancelled */
+    }
+  }
+
+  if (navigator.clipboard && window.isSecureContext){
+    try {
+      await navigator.clipboard.writeText(url);
+      toast("Link copied — paste it into WhatsApp");
+      return;
+    } catch(e){}
+  }
+
+  if (legacyCopy(url)){
+    toast("Link copied — paste it into WhatsApp");
+    return;
+  }
+
+  window.prompt("Copy this link:", url);
 };
 
 /* ---------- toast ---------- */
@@ -382,8 +419,22 @@ function toast(msg){
   }
 })();
 function history_clean(){
-  try { window.history.replaceState(null, "", location.pathname); } catch(e){}
+  try { window.history.replaceState(null, "", location.pathname + location.search); } catch(e){}
 }
+
+/* a shared link tapped while the page is already open changes the hash
+   without reloading, so nothing would happen otherwise */
+window.addEventListener("hashchange", () => {
+  if (location.hash.length <= 1) return;
+  try {
+    snapshot();
+    decode(location.hash.slice(1));
+    save(); render(); history_clean();
+    toast("List received — Undo to go back");
+  } catch(e){
+    history_clean();
+  }
+});
 </script>
 
 </body>
