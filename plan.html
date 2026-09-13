@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+<title>The week · 14–18 Sept</title>
+<style>
+  :root{--bg:#faf9f7;--fg:#1a1a1a;--muted:#6b6b6b;--line:#e2e0dc;
+    --card:#fff;--soft:#f3f1ed;--accent:#8a5a2b;--go:#3d7a4e;--hot:#a03232}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#141414;--fg:#ededed;--muted:#9a9a9a;--line:#2e2e2e;
+    --card:#1c1c1c;--soft:#232323;--accent:#d9a05b;--go:#7dc48f;--hot:#e08585}}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    max-width:640px;margin-inline:auto;padding:0 0 60px;-webkit-font-smoothing:antialiased}
+
+  header{position:sticky;top:0;z-index:20;background:var(--bg);
+    border-bottom:1px solid var(--line);padding-top:max(10px,env(safe-area-inset-top))}
+  .title{display:flex;align-items:baseline;justify-content:space-between;
+    gap:12px;padding:0 16px 8px}
+  h1{font-size:1.1rem;margin:0;letter-spacing:-.01em}
+  .title a{color:var(--accent);font-size:.82rem;text-decoration:none;white-space:nowrap}
+
+  nav{display:flex;gap:4px;padding:0 10px 8px;overflow-x:auto;
+    scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav button{flex:1 0 auto;min-width:56px;font:inherit;font-size:.88rem;font-weight:600;
+    padding:9px 4px;border:1px solid transparent;border-radius:9px;
+    background:none;color:var(--muted);cursor:pointer}
+  nav button.on{background:var(--accent);color:#fff}
+  nav button.sat{color:var(--muted);font-weight:500}
+  nav button.sat.on{color:#fff}
+
+  .daybar{background:var(--soft);padding:11px 16px;font-size:.82rem;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
+  .daybar b{color:var(--fg);font-variant-numeric:tabular-nums}
+  .tag{font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--accent);font-weight:700}
+
+  .meal{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:14px 12px;padding:15px 17px}
+  .slot{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin:0 0 3px}
+  h2{font-size:1.02rem;margin:0 0 8px;letter-spacing:-.005em}
+  .macros{display:flex;gap:14px;flex-wrap:wrap;background:var(--soft);
+    border-radius:8px;padding:8px 12px;margin:0 0 12px;font-size:.84rem;
+    font-variant-numeric:tabular-nums}
+  .macros span{color:var(--muted)}
+  h3{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);margin:14px 0 6px;font-weight:700}
+  ul,ol{margin:0;padding-left:19px}
+  li{margin:5px 0;font-size:.92rem}
+  ol li{margin:8px 0}
+  .tip{border-left:3px solid var(--accent);padding:5px 0 5px 13px;margin:12px 0 0;
+    font-size:.87rem;color:var(--muted)}
+  .tip strong{color:var(--fg)}
+  .tip.hot{border-left-color:var(--hot)}
+  .tip.go{border-left-color:var(--go)}
+  .plates{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+  @media(max-width:460px){.plates{grid-template-columns:1fr}}
+  .plate{background:var(--soft);border-radius:8px;padding:10px 12px;font-size:.87rem}
+  .plate b{display:block;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:4px}
+  .free{margin:40px 16px;text-align:center;color:var(--muted);font-size:.95rem}
+  .free strong{display:block;color:var(--fg);font-size:1.05rem;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="title">
+    <h1>The week</h1>
+    <a href="./">Shopping list →</a>
+  </div>
+  <nav id="tabs"></nav>
+</header>
+
+<div id="day"></div>
+
+<script>
+const M = (k,p,f) => '<div class="macros"><div><b>' + k + '</b> <span>kcal</span></div>' +
+  '<div><b>' + p + 'g</b> <span>protein</span></div>' +
+  (f ? '<div><b>' + f + 'g</b> <span>fibre</span></div>' : '') + '</div>';
+
+const SMOOTHIE = {
+  slot: "Breakfast", name: "Berry and oat smoothie", macros: M(531, 57.6, 10.8),
+  ing: ["200g Skyr · 32g whey · 150ml milk",
+        "100g frozen mixed berries",
+        "30g porridge oats · 12g chia seeds"],
+  method: ["Whey in first, then everything else — powder sitting on the blades goes lumpy.",
+           "The KitchenAid handles whole oats in any order. No pre-blitzing."],
+  cheryl: "200g Skyr, 32g whey, <b>100ml</b> milk, 100g berries, <b>15g</b> oats, 12g chia. 450 kcal, 54g."
+};
+
+const BOWL = {
+  slot: "Breakfast", name: "The Skyr bowl", macros: M(587, 61.5, 13.3),
+  ing: ["250g Skyr · 32g whey · 20ml milk",
+        "100g frozen raspberries",
+        "12g chia · 15g walnuts · 10g pumpkin seeds",
+        "60g banana"],
+  method: ["<b>Whey powder in first, then the Skyr, then stir</b> — the other way round and you spend five minutes chasing lumps.",
+           "Berries and banana on top. Seeds and nuts last, so they stay crunchy.",
+           "Give the frozen berries five minutes to soften if the bowl is too solid to eat."],
+  cheryl: "200g Skyr, 32g whey, 20ml milk, 100g raspberries, 10g chia, 10g nuts, 30g banana. 427 kcal, 52g."
+};
+
+const BANANA = {
+  slot: "2:30", name: "Banana and Skyr", macros: M(177, 12.4),
+  ing: ["120g banana, weighed and peeled", "100g plain Skyr"],
+  tip: "<b>Weigh the banana.</b> Yours came in at 196g last time, which is 70 calories more than the recipe means.",
+  cheryl: "100g Skyr, and a little of the banana if she wants it."
+};
+
+const DAYS = [
+{
+  id:"mon", label:"Mon", date:"Monday 14 September",
+  tags:"Home · trains · leg day",
+  totals:"<b>1,863</b> kcal · <b>194.8g</b> protein · <b>32.3g</b> fibre · <b>4.7g</b> salt",
+  meals:[
+    SMOOTHIE,
+    { slot:"Lunch", name:"Cooked chicken and butter bean tub", macros:M(457,54.0,8.2),
+      ing:["170g pre-packed cooked chicken breast",
+           "140g butter beans, drained and rinsed",
+           "60g salad leaves · 60g cherry tomatoes · 30g cucumber",
+           "12g olive oil · lemon"],
+      method:["Five minutes and nothing is cooked. Assemble it the night before if that's easier — the beans are better for sitting in the oil and lemon."],
+      tip:"<b>Cheryl has the Huel bottle.</b> The tub is there if she wants one, but the bottle is her default and it's an adherence thing, not a nutritional one."
+    },
+    BANANA,
+    { slot:"Dinner", name:"Sunday's roast beef", macros:M(698,70.8,11.1),
+      ing:["180g beef, reheated in the gravy",
+           "200g roast potatoes",
+           "100g carrots · 100g broccoli · 80g cabbage",
+           "60ml gravy"],
+      method:["Potatoes and vegetables fresh; only the beef is reheated.",
+              "Reheat the beef <b>in</b> the gravy rather than dry — roast beef reheated on its own goes grey and tough."],
+      tip:"<b>No Yorkshire puddings.</b> The potatoes are the starch, and that's the rule that keeps this plate at 720g.",
+      plates:[["Cheryl","~120g beef, 130g potatoes, the full share of vegetables. 470 kcal, 45g."],
+              ["Your daughter","110g beef, 200g roast potatoes, carrots, gravy. 531 kcal, 43g."]]
+    }
+  ]
+},
+{
+  id:"tue", label:"Tue", date:"Tuesday 15 September",
+  tags:"Howden · your daughter out · two at the table",
+  totals:"<b>1,921</b> kcal · <b>197.5g</b> protein · <b>47.4g</b> fibre · <b>3.7g</b> salt",
+  meals:[
+    BOWL,
+    { slot:"Lunch", name:"Tuna, butter bean and fennel tub", macros:M(498,56.4,11.8),
+      ing:["2 tins no-added-salt tuna in spring water, drained (190g)",
+           "160g butter beans, drained and rinsed",
+           "90g fennel, shaved as thin as you can get it",
+           "110g cherry tomatoes, halved · 28g red onion, paper-thin",
+           "6g capers, rinsed · 11g olive oil · 22g lemon juice · 9g flat parsley"],
+      method:["<b>Red onion into the lemon juice on its own for five minutes first.</b> It goes from harsh to sweet, and it stops being the thing you can still taste an hour later.",
+              "Beans, fennel, oil, capers and pepper — mix and leave five minutes. Fennel needs that time in acid to lose its aniseed edge.",
+              "Tuna flaked in last, in big pieces. Stir once.",
+              "<b>Tomatoes and parsley on top, not stirred in.</b> They go in when you open the tub, so they don't leak into the beans."],
+      tip:"<b>Make it tonight.</b> This is a marinade, not a salad — the beans and fennel take up the oil and lemon over six hours and it arrives better than it went in. It needs no cold bag."
+    },
+    { slot:"2:30", name:"Huel protein bar", macros:M(205,15),
+      ing:["One bar, in the bag before you leave."] },
+    { slot:"Dinner", name:"Turkey and black bean chilli", macros:M(631,64.6,16.3),
+      sub:"Makes 5 · 35 minutes · reheats better than it cooks",
+      ing:["850g turkey mince, 5%",
+           "2 tins black beans + 1 tin kidney beans, drained",
+           "850g passata · 2 onions · 3 peppers · 5 cloves garlic",
+           "1 tbsp cumin · 1 tbsp smoked paprika · 2 tsp chilli flakes",
+           "1 tbsp olive oil · <b>4g salt</b> · Skyr to serve · lime"],
+      method:["Onion and peppers in the oil, 5 minutes. Garlic and spices for one minute — <b>the spices need dry heat before any liquid.</b>",
+              "Turkey in, broken up and browned. 5 minutes.",
+              "Beans, passata and a tin of water. <b>Simmer 20 minutes minimum.</b>",
+              "<b>Weigh 4g of salt into the whole batch at the end.</b> The beans and passata already bring 4.5g, so don't season by eye.",
+              "Skyr on top instead of soured cream. Lime over it at the table."],
+      tip:"<b>Cook all five portions even though there are two of you.</b> Thursday's lunch comes out of this pan, and about 720g goes in the freezer that night.",
+      plates:[["Cheryl","500g. 467 kcal, 49g."],
+              ["Yours","690g with 60g of Skyr on top — a big bowl, and it's exactly on the 750g plate limit."]]
+    }
+  ]
+},
+{
+  id:"wed", label:"Wed", date:"Wednesday 16 September",
+  tags:"London · out at 05:15",
+  totals:"<b>1,929</b> kcal · <b>193.1g</b> protein · <b>25.2g</b> fibre · <b>5.8g</b> salt",
+  meals:[
+    { slot:"Breakfast", name:"Two bottles, on the way in", macros:M(615,70,7.5),
+      ing:["Huel Black bottle — in the car",
+           "Milbona protein drink — on the train, about an hour later"],
+      tip:"<b>Nothing gets made after 05:15.</b> Both go in the bag the night before."
+    },
+    { slot:"Lunch", name:"Bought in London", macros:M(497,50.4,1.0),
+      ing:["M&amp;S hot smoked sweet chilli salmon — <b>the whole pack, not half</b>",
+           "M&amp;S chicken Caesar box, 250g"],
+      tip:"Between them that's 50g of protein, which is what the day needs. It is also almost no fibre at all, which is why Wednesday comes in at 25g."
+    },
+    { slot:"2:30", name:"Whey and a pear", macros:M(151,15.6,5.9),
+      ing:["20g whey in water", "1 large pear"],
+      tip:"<b>Weigh the whey into a shaker on Tuesday night and put the pear in the bag.</b> The pear is there for the fibre, which is the thing Wednesday is short of."
+    },
+    { slot:"Dinner", name:"Baked meatballs with ciabatta", macros:M(666,57.1,10.8),
+      sub:"Makes 4 · 50 minutes · one ovenproof pan",
+      ing:["300g pork mince, 5% · 300g beef mince, 5%",
+           "50g rolled oats · 1 onion, finely chopped · 4 sprigs thyme",
+           "150g dry red lentils, rinsed",
+           "2 × 400g tins chopped tomatoes · <b>500ml stock at half strength</b> · 7 cloves garlic · basil",
+           "60g mozzarella · 40g parmesan · 2 tsp olive oil",
+           "Wholemeal ciabatta, to serve"],
+      method:["Onion and garlic in 1 tsp oil in an ovenproof pan. Out into a bowl with both minces, the oats and the thyme. <b>Weigh in 1.5g of salt</b>, mix, roll into golf balls. Brown them in the same pan, then set aside.",
+              "Remaining oil in the pan, garlic until soft. <b>Lentils and the stock in first — simmer 10 minutes before the tomatoes go anywhere near them.</b> That acid-free window is what makes them vanish.",
+              "Tomatoes and basil in, <b>0.5g of salt</b>, simmer uncovered 15–20 minutes until reduced by a quarter.",
+              "Oven to 200°C. Meatballs into the sauce, 10 minutes. Cheese over, back in until it melts. Basil, then to the table with the bread."],
+      tip:"<b>Make the stock at half strength — one cube to a litre.</b> A full-strength cube puts 2.4g of salt into the pan, and the cheese and tomatoes already bring 4.3g.",
+      plates:[["Cheryl","475g, no bread. 479 kcal, 46g."],
+              ["Your daughter","A full portion and two slices of ciabatta. Exactly the recipe — the lentils are invisible."]]
+    }
+  ]
+},
+{
+  id:"thu", label:"Thu", date:"Thursday 17 September",
+  tags:"Home · trains",
+  totals:"<b>1,935</b> kcal · <b>191.0g</b> protein · <b>38.7g</b> fibre · <b>4.5g</b> salt",
+  meals:[
+    BOWL,
+    { slot:"Lunch", name:"Tuesday's chilli", macros:M(507,49.6,13.9),
+      ing:["590g from Tuesday's pan", "Skyr on top if you want it"],
+      tip:"<b>It's better than it was on the night.</b> Reheat until piping hot all the way through, once only. Cheryl takes 450g — or the Huel bottle, which is her default."
+    },
+    BANANA,
+    { slot:"Dinner", name:"Honey-glazed chicken with potato wedges", macros:M(664,67.5,9.3),
+      sub:"Makes 3 · 45 minutes, 15 of them yours · two trays",
+      ing:["650g skinless chicken thighs",
+           "500g potatoes, cut into wedges",
+           "<b>40ml reduced-salt soy sauce</b> · 2 tbsp tomato purée · 1½ tbsp honey · 3 cloves garlic, crushed",
+           "240g asparagus · 200g frozen edamame",
+           "1 tsp olive oil · <b>1g salt across the whole potato tray</b>"],
+      method:["Soy, purée, honey and garlic in a bag or bowl with the chicken. <b>15 minutes minimum</b> — the honey needs that long to do anything.",
+              "Oven to 200°C. Wedges tossed in the oil and the 1g of salt, <b>on their own tray</b>, 25 minutes.",
+              "Chicken into an ovenproof dish with its marinade, <b>35 minutes</b>, started at the same time as the wedges.",
+              "Asparagus onto the wedge tray for the last 5–8 minutes. Edamame from frozen into boiling water for 4."],
+      tip:"<b>Reduced-salt soy, not the ordinary kind.</b> 60ml of standard soy is 9.6g of salt in the batch and would put the day over the limit on its own. This one swap is the whole difference.",
+      plates:[["Cheryl","165g chicken, less of the wedges, the full share of asparagus and edamame. 458 kcal, 47g."],
+              ["Your daughter","240g chicken and wedges. Asparagus if she'll have it — nothing needs altering."]]
+    }
+  ]
+},
+{
+  id:"fri", label:"Fri", date:"Friday 18 September",
+  tags:"Home · trains · leg day · measurement morning",
+  totals:"<b>1,942</b> kcal · <b>182.1g</b> protein · <b>25.0g</b> fibre · <b>5.0g</b> salt",
+  meals:[
+    SMOOTHIE,
+    { slot:"Lunch", name:"Wednesday's meatballs", macros:M(546,52.3,7.6),
+      ing:["A full portion from Wednesday's pan", "<b>No bread</b> — the dinner carries the starch tonight"],
+      tip:"Cheryl takes 400g, or the bottle."
+    },
+    BANANA,
+    { slot:"Dinner", name:"One-pot sticky coconut chicken rice", macros:M(688,59.8,4.4),
+      sub:"Makes 3 · 45 minutes · one heavy pot with a tight lid",
+      ing:["650g skinless chicken thighs, trimmed",
+           "140g jasmine rice",
+           "<b>35g red curry paste</b> · 6 sprigs coriander, stalks and leaves chopped separately",
+           "190ml reduced-fat coconut milk · 115ml boiling water · <b>12ml fish sauce</b>",
+           "450g choy sum, pak choi or tenderstem, in 6cm lengths",
+           "45g dry-roasted unsalted peanuts · 1 lime · spray oil"],
+      method:["Heavy pot over medium-high, sprayed. Chicken <b>2 minutes a side</b> until lightly golden. Out, kept warm.",
+              "Curry paste and coriander <b>stalks</b> into the same pot, 1–2 minutes until fragrant.",
+              "Rice in, stirred to coat. Then the fish sauce, coconut milk and boiling water.",
+              "Chicken back on top in a single layer. Bring to the boil, then <b>lowest simmer, lid on, 20–25 minutes</b> until a crust forms on the bottom. <b>Don't lift the lid.</b>",
+              "Fork the rice through gently, greens over the top, lid back on, <b>5 minutes off the heat</b> to steam.",
+              "Slice the chicken. Coriander leaves, peanuts and lime over."],
+      tip:"<b>The curry paste and fish sauce are both down from the book</b>, for salt. The coconut milk and water are unchanged — that liquid ratio is what gives you the crust.",
+      plates:[["Cheryl","Less of the rice, the same chicken and the full share of greens. 462 kcal, 42g."],
+              ["Your daughter","Sliced chicken and rice, greens alongside. No chilli, no coriander, peanuts optional."]],
+      tip2:"<b>Rice stays full at 55g dry.</b> It's leg day."
+    }
+  ]
+},
+{ id:"sat", label:"Sat", free:true }
+];
+
+function card(m){
+  let h = '<div class="meal"><p class="slot">' + m.slot + '</p><h2>' + m.name + '</h2>';
+  if (m.sub) h += '<p class="tip" style="margin:0 0 10px">' + m.sub + '</p>';
+  if (m.macros) h += m.macros;
+  if (m.ing) h += '<h3>Ingredients</h3><ul><li>' + m.ing.join('</li><li>') + '</li></ul>';
+  if (m.method) h += '<h3>Method</h3><ol><li>' + m.method.join('</li><li>') + '</li></ol>';
+  if (m.tip) h += '<p class="tip">' + m.tip + '</p>';
+  if (m.tip2) h += '<p class="tip go">' + m.tip2 + '</p>';
+  if (m.cheryl) h += '<p class="tip"><strong>Cheryl:</strong> ' + m.cheryl + '</p>';
+  if (m.plates){
+    h += '<div class="plates">';
+    m.plates.forEach(p => h += '<div class="plate"><b>' + p[0] + '</b>' + p[1] + '</div>');
+    h += '</div>';
+  }
+  return h + '</div>';
+}
+
+function show(i){
+  const d = DAYS[i];
+  document.querySelectorAll('#tabs button').forEach((b,j) =>
+    b.classList.toggle('on', j === i));
+  const el = document.getElementById('day');
+  if (d.free){
+    el.innerHTML = '<p class="free"><strong>Saturday isn\'t counted.</strong>' +
+      'No target, no tracking, no photograph. Protein still holds as a habit — order the ' +
+      'protein-heavy main and stop thinking about it.<br><br>' +
+      'The risk is Sunday, not Saturday.</p>';
+  } else {
+    el.innerHTML = '<div class="daybar"><span class="tag">' + d.tags + '</span></div>' +
+      '<div class="daybar">' + d.totals + '</div>' +
+      d.meals.map(card).join('');
+  }
+  try { localStorage.setItem("plan-day", d.id); } catch(e){}
+  window.scrollTo(0,0);
+}
+
+const nav = document.getElementById('tabs');
+DAYS.forEach((d,i) => {
+  const b = document.createElement('button');
+  b.textContent = d.label;
+  if (d.free) b.className = 'sat';
+  b.onclick = () => show(i);
+  nav.appendChild(b);
+});
+
+/* open on today where today is a weekday in the plan, else Monday */
+(function(){
+  let i = 0;
+  const wd = new Date().getDay();            /* 0 Sun … 6 Sat */
+  if (wd >= 1 && wd <= 6) i = wd - 1;        /* Mon=0 … Sat=5 */
+  try {
+    const saved = localStorage.getItem("plan-day");
+    const j = DAYS.findIndex(d => d.id === saved);
+    if (j > -1) i = j;
+  } catch(e){}
+  show(i);
+})();
+</script>
+
+</body>
+</html>
