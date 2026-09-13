@@ -126,14 +126,16 @@
 </div>
 
 <div class="done" id="done">
-  <strong>That's everything.</strong> Wednesday's lunch is bought at M&amp;S, so there's
-  nothing here for it.
+  <strong>That's everything.</strong>
 </div>
 
 <p class="note">
-  The mince packs leave about 125g each of pork and beef spare — freeze them or push them
-  into Tuesday's chilli. Rice stays jasmine rather than brown: brown needs different liquid
-  and timing and would break a one-pot dish.
+  <strong>No beef to buy</strong> — Monday's dinner comes off Sunday's joint, take what you need.
+  <strong>Huel Black is already in the fridge.</strong><br><br>
+  <strong>What's left over:</strong> 250g of mince across the two packs — a small bolognese, or
+  burgers. 160g of butter beans and a tin of tuna — a lunchbox salad. 1.3kg of potatoes — a
+  jacket potato dinner. Most of a cabbage, half a cucumber, most of the fennel and 260g of
+  edamame all keep. Three spare pears and a banana.
 </p>
 
 <div class="foot">
@@ -146,55 +148,61 @@
 
 <script>
 const ITEMS = [
-  ["Meat &amp; fish","Chicken thighs, skinless","1.6kg"],
-  ["Meat &amp; fish","Turkey mince, 5%","850g — two 500g packs"],
-  ["Meat &amp; fish","Pork mince, 5%","375g"],
-  ["Meat &amp; fish","Beef mince, 5%","375g"],
-  ["Meat &amp; fish","Cooked chicken breast","2 × 150g packs"],
-  ["Meat &amp; fish","Tuna in spring water","3 × 145g tins — no added salt"],
-
-  ["Fresh","Potatoes","550g"],
-  ["Fresh","Asparagus","240g"],
-  ["Fresh","Fennel","1 bulb"],
-  ["Fresh","Choy sum, pak choi or tenderstem","450g"],
-  ["Fresh","Peppers","3"],
-  ["Fresh","Onions","3"],
-  ["Fresh","Red onion","1"],
-  ["Fresh","Garlic","2 bulbs"],
-  ["Fresh","Cherry tomatoes","400g"],
+  ["Fresh","Bananas","7 loose"],
+  ["Fresh","Pears","4 large"],
+  ["Fresh","Salad leaves","1 × 150g bag"],
+  ["Fresh","Cherry tomatoes","1 × 300g punnet"],
   ["Fresh","Cucumber","1"],
-  ["Fresh","Salad leaves","1 bag"],
-  ["Fresh","Bananas","5"],
-  ["Fresh","Apples","4"],
-  ["Fresh","Coriander","1 bunch"],
-  ["Fresh","Flat parsley","1 bunch"],
-  ["Fresh","Basil","1 pack"],
-  ["Fresh","Thyme","1 pack"],
-  ["Fresh","Lemons","2"],
+  ["Fresh","Fennel","1 bulb"],
+  ["Fresh","Onions","1 × 1kg net"],
+  ["Fresh","Red onions","1 × 3-pack"],
+  ["Fresh","Garlic","2 bulbs"],
+  ["Fresh","Peppers","1 pack of 3"],
+  ["Fresh","Potatoes","1 × 2.5kg bag"],
+  ["Fresh","Carrots","1 × 500g"],
+  ["Fresh","Broccoli","1 head"],
+  ["Fresh","Savoy cabbage","1"],
+  ["Fresh","Asparagus","2 × 125g bunches"],
+  ["Fresh","Pak choi or choy sum","2 × 200g packs"],
+  ["Fresh","Lemons","1 × 4-pack"],
   ["Fresh","Lime","1"],
+  ["Fresh","Parsley, coriander, thyme, basil","1 pack each"],
 
-  ["Dairy","Plain Skyr","2.5kg"],
-  ["Dairy","Semi-skimmed milk","2 litres"],
-  ["Dairy","Mozzarella","75g"],
-  ["Dairy","Parmesan","50g"],
+  ["Meat &amp; fish","Cooked chicken breast, pre-packed","2 × 150g packs"],
+  ["Meat &amp; fish","Chicken thighs, skinless boneless","2 × 650g packs"],
+  ["Meat &amp; fish","Turkey mince, 5%","2 × 500g"],
+  ["Meat &amp; fish","Pork mince, 5%","1 × 500g"],
+  ["Meat &amp; fish","Beef mince, 5%","1 × 500g"],
+  ["Meat &amp; fish","Tuna in spring water","1 × 4-pack of 145g tins — no added salt"],
 
-  ["Cupboard","Black beans","2 tins"],
-  ["Cupboard","Kidney beans","1 tin"],
-  ["Cupboard","Butter beans","2 tins"],
-  ["Cupboard","Chopped tomatoes","3 tins"],
-  ["Cupboard","Passata","850g"],
-  ["Cupboard","Coconut milk, reduced-fat","1 tin"],
-  ["Cupboard","Capers","small jar"],
-  ["Cupboard","Red lentils","190g"],
-  ["Cupboard","Jasmine rice","140g"],
-  ["Cupboard","Peanuts, dry-roasted unsalted","30g"],
-  ["Cupboard","Wholemeal ciabatta","1"],
-  ["Cupboard","Milbona protein drinks","4 — Lidl"],
-  ["Cupboard","Huel protein bar","1"],
+  ["Dairy","Plain Skyr","3 × 1kg tubs"],
+  ["Dairy","Semi-skimmed milk","2 × 2L"],
+  ["Dairy","Mozzarella","1 × 125g ball"],
+  ["Dairy","Parmesan","1 × 100g wedge"],
 
-  ["Frozen","Mixed berries","500g"],
-  ["Frozen","Raspberries","500g"],
-  ["Frozen","Edamame","500g"]
+  ["Cupboard","Butter beans","3 × 400g tins"],
+  ["Cupboard","Black beans","2 × 400g tins"],
+  ["Cupboard","Kidney beans","1 × 400g tin"],
+  ["Cupboard","Chopped tomatoes","3 × 400g tins"],
+  ["Cupboard","Passata","2 × 500g cartons"],
+  ["Cupboard","Coconut milk, reduced fat","1 × 400ml tin"],
+  ["Cupboard","Red lentils, dry","1 × 500g bag"],
+  ["Cupboard","Jasmine rice","1 × 1kg"],
+  ["Cupboard","Peanuts, dry roasted, unsalted","1 × 200g bag"],
+  ["Cupboard","Capers","1 small jar"],
+  ["Cupboard","Wholemeal ciabatta or sourdough","1 loaf"],
+  ["Cupboard","Reduced-salt soy sauce","1 × 150ml"],
+  ["Cupboard","Fish sauce","1 × 150ml"],
+  ["Cupboard","Red curry paste","1 × 110g jar"],
+  ["Cupboard","Gravy granules","1 tub"],
+  ["Cupboard","Milbona high-protein drink","1 — Lidl"],
+
+  ["Frozen","Mixed berries","1 × 500g"],
+  ["Frozen","Raspberries","1 × 500g"],
+  ["Frozen","Edamame, shelled","1 × 400g bag"],
+
+  ["At M&amp;S on Wednesday","Hot smoked sweet chilli salmon","1 pack"],
+  ["At M&amp;S on Wednesday","Chicken Caesar salad box","250g"]
 ];
 
 const KEY = "shop-2026-09-14";
