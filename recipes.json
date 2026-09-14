@@ -1,0 +1,4910 @@
+{
+ "version": "2026-09-14c",
+ "aisles": [
+  "fresh",
+  "meat-fish",
+  "dairy",
+  "cupboard",
+  "frozen",
+  "bakery"
+ ],
+ "recipes": [
+  {
+   "id": "chicken-fajitas",
+   "name": "Chicken fajitas",
+   "slot": "dinner",
+   "basePortions": 5,
+   "timeMinutes": 25,
+   "tags": [
+    "batch",
+    "leaves-lunch",
+    "one-pan"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken breast, raw",
+     "grams": 1000,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Red and yellow peppers",
+     "grams": 640,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "4 peppers"
+    },
+    {
+     "item": "Onions",
+     "grams": 300,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "2 onions"
+    },
+    {
+     "item": "Ground cumin",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tbsp"
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 7,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tbsp"
+    },
+    {
+     "item": "Dried oregano",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 12,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tsp"
+    },
+    {
+     "item": "Garlic powder",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tsp"
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Olive oil",
+     "grams": 21,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1.5 tbsp"
+    },
+    {
+     "item": "Limes",
+     "grams": 130,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "2 limes"
+    },
+    {
+     "item": "Wholemeal wraps",
+     "grams": 360,
+     "aisle": "bakery",
+     "packSize": 360,
+     "packUnit": "g",
+     "staple": false,
+     "note": "6 x 60g; wholegrain default"
+    },
+    {
+     "item": "Cheddar, grated",
+     "grams": 100,
+     "aisle": "dairy",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Salsa",
+     "grams": 150,
+     "aisle": "cupboard",
+     "packSize": 300,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Black beans, tinned",
+     "grams": 240,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "drained, 1 tin"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 100,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "to serve"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 602,
+     "protein": 65.1,
+     "fibre": 14.7,
+     "salt": 1.66,
+     "plateGrams": 624
+    },
+    "cheryl": {
+     "kcal": 432,
+     "protein": 41.1,
+     "fibre": 10.4,
+     "salt": 1.29,
+     "plateGrams": 443
+    },
+    "daughter": {
+     "kcal": 466,
+     "protein": 55.9,
+     "fibre": 4.5,
+     "salt": 1.6,
+     "plateGrams": 335,
+     "assumed": true,
+     "note": "corpus describes her plate but gives no figures"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "good",
+    "note": "eat cold in a wrap or over salad; reheating toughens the chicken"
+   }
+  },
+  {
+   "id": "bolognese-hidden-lentils",
+   "name": "Bolognese with hidden red lentils",
+   "slot": "dinner",
+   "basePortions": 5,
+   "timeMinutes": 45,
+   "tags": [
+    "batch",
+    "freezes",
+    "leaves-lunch",
+    "hidden-pulse"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Beef mince, 5%",
+     "grams": 750,
+     "aisle": "meat-fish",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Red lentils, dry",
+     "grams": 125,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true,
+     "note": "rinsed; dry weight"
+    },
+    {
+     "item": "Chopped tomatoes, tinned",
+     "grams": 1200,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "3 tins"
+    },
+    {
+     "item": "Tomato puree",
+     "grams": 24,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1.5 tbsp"
+    },
+    {
+     "item": "Onion",
+     "grams": 180,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 large"
+    },
+    {
+     "item": "Carrot",
+     "grams": 120,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 large, grated"
+    },
+    {
+     "item": "Garlic",
+     "grams": 12,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "4 cloves"
+    },
+    {
+     "item": "Dried oregano",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 12,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Bay leaf",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 3,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Worcestershire sauce",
+     "grams": 10,
+     "aisle": "cupboard",
+     "packSize": 150,
+     "packUnit": "ml",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 14,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1 tbsp"
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "replaces 'season generously', which v3 bans"
+    },
+    {
+     "item": "Wholewheat spaghetti, dry",
+     "grams": 195,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "75g Jon / 45g Cheryl / 75g daughter"
+    },
+    {
+     "item": "Parmesan",
+     "grams": 45,
+     "aisle": "dairy",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 706,
+     "protein": 55.9,
+     "fibre": 12.8,
+     "salt": 1.37,
+     "plateGrams": 677
+    },
+    "cheryl": {
+     "kcal": 487,
+     "protein": 39.9,
+     "fibre": 8.5,
+     "salt": 1,
+     "plateGrams": 480
+    },
+    "daughter": {
+     "kcal": 651,
+     "protein": 47.4,
+     "fibre": 11.6,
+     "salt": 1.26,
+     "plateGrams": 566,
+     "assumed": true,
+     "note": "0.8 of a portion with 75g dry pasta"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "note": "reheats better than day one"
+   }
+  },
+  {
+   "id": "loaded-jacket-potatoes",
+   "name": "Loaded jacket potatoes",
+   "slot": "dinner",
+   "basePortions": 3,
+   "timeMinutes": 75,
+   "tags": [
+    "build-your-own",
+    "no-leftover",
+    "high-salt"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Baking potatoes",
+     "grams": 825,
+     "aisle": "fresh",
+     "packSize": 2000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3 x 275g; buy one large and two smaller"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 5,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Coarse salt, for the skins",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Tuna in spring water, tinned",
+     "grams": 110,
+     "aisle": "cupboard",
+     "packSize": 145,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 tin drained; no-added-salt saves 0.8g"
+    },
+    {
+     "item": "Light mayonnaise",
+     "grams": 35,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Sweetcorn, tinned",
+     "grams": 80,
+     "aisle": "cupboard",
+     "packSize": 198,
+     "packUnit": "g",
+     "staple": false,
+     "note": "drained"
+    },
+    {
+     "item": "Baked beans",
+     "grams": 300,
+     "aisle": "cupboard",
+     "packSize": 415,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Cheddar, grated",
+     "grams": 60,
+     "aisle": "dairy",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Cottage cheese",
+     "grams": 200,
+     "aisle": "dairy",
+     "packSize": 300,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Butter",
+     "grams": 20,
+     "aisle": "dairy",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Salad leaves",
+     "grams": 100,
+     "aisle": "fresh",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true,
+     "note": "'salad' is unquantified in the corpus"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 648,
+     "protein": 53.1,
+     "fibre": 11.7,
+     "salt": 3.62,
+     "plateGrams": 700,
+     "note": "raw sum 757g; a baked potato loses ~20% water"
+    },
+    "cheryl": {
+     "kcal": 445,
+     "protein": 39.6,
+     "fibre": 6.8,
+     "salt": 2.5,
+     "plateGrams": 500
+    },
+    "daughter": {
+     "kcal": 601,
+     "protein": 19.8,
+     "fibre": 7.3,
+     "salt": 2.42,
+     "plateGrams": 435,
+     "assumed": true
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "poor",
+    "note": "a reheated jacket goes leathery - cook the number you will eat"
+   }
+  },
+  {
+   "id": "harissa-chicken-chickpeas",
+   "name": "Harissa chicken, chickpeas and peppers",
+   "slot": "dinner",
+   "basePortions": 5,
+   "timeMinutes": 35,
+   "tags": [
+    "batch",
+    "leaves-lunch",
+    "tray"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken thighs, skinless boneless",
+     "grams": 1000,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "halved"
+    },
+    {
+     "item": "Chickpeas, tinned",
+     "grams": 480,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins, drained"
+    },
+    {
+     "item": "Peppers",
+     "grams": 800,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "5, thickly sliced"
+    },
+    {
+     "item": "Red onions",
+     "grams": 300,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "2, in wedges"
+    },
+    {
+     "item": "Harissa",
+     "grams": 90,
+     "aisle": "cupboard",
+     "packSize": 180,
+     "packUnit": "g",
+     "staple": false,
+     "note": "5 tbsp; ~3g salt per 100g"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 28,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "2 tbsp"
+    },
+    {
+     "item": "Spinach",
+     "grams": 250,
+     "aisle": "fresh",
+     "packSize": 260,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 30,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 lemon"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 526,
+     "protein": 51.8,
+     "fibre": 10.8,
+     "salt": 1.25,
+     "plateGrams": 480,
+     "note": "one fifth of the tray"
+    },
+    "cheryl": {
+     "kcal": 461,
+     "protein": 41.6,
+     "fibre": 10.8,
+     "salt": 1.18,
+     "plateGrams": 545
+    },
+    "daughter": {
+     "kcal": 346,
+     "protein": 38.8,
+     "fibre": 3.2,
+     "salt": 0.61,
+     "plateGrams": 385,
+     "assumed": true,
+     "note": "chickpeas left on the tray - she refuses visible pulses. No starch in this dish, so her plate is light; add bread or potatoes for her"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "good",
+    "note": "good hot or cold with lemon"
+   }
+  },
+  {
+   "id": "turkey-black-bean-chilli",
+   "name": "Turkey and black bean chilli",
+   "slot": "dinner",
+   "basePortions": 5,
+   "timeMinutes": 35,
+   "tags": [
+    "batch",
+    "freezes",
+    "leaves-lunch"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Turkey mince, 5%",
+     "grams": 850,
+     "aisle": "meat-fish",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Black beans, tinned",
+     "grams": 480,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins, drained"
+    },
+    {
+     "item": "Kidney beans, tinned",
+     "grams": 240,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tin, drained"
+    },
+    {
+     "item": "Passata",
+     "grams": 850,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Onions",
+     "grams": 300,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "2"
+    },
+    {
+     "item": "Peppers",
+     "grams": 450,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3"
+    },
+    {
+     "item": "Garlic",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "5 cloves"
+    },
+    {
+     "item": "Ground cumin",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tbsp"
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 7,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tbsp"
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 4,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tsp"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 13,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 4,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "replaces 'season hard'; the beans and passata already bring 4.5g"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 180,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "60g a bowl, instead of soured cream"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 631,
+     "protein": 64.6,
+     "fibre": 16.3,
+     "salt": 2.05,
+     "plateGrams": 750,
+     "note": "690g chilli + 60g Skyr; exactly on the plate ceiling"
+    },
+    "cheryl": {
+     "kcal": 467,
+     "protein": 48.7,
+     "fibre": 11.8,
+     "salt": 1.51,
+     "plateGrams": 560,
+     "note": "500g chilli + 60g Skyr"
+    },
+    "daughter": {
+     "kcal": 425,
+     "protein": 44.4,
+     "fibre": 10.6,
+     "salt": 1.36,
+     "plateGrams": 510,
+     "assumed": true,
+     "note": "UNTESTED. Neither the corpus nor the verified week ever builds her a chilli plate, and the black and kidney beans are visible and cannot be lifted out"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "jonKcal": 507,
+    "jonProtein": 49.6,
+    "jonFibre": 13.9,
+    "jonSalt": 1.71,
+    "note": "590g tub; ~720g of the batch is left over after two dinners and two lunches - freeze it"
+   }
+  },
+  {
+   "id": "baked-salmon-lentils",
+   "name": "Baked salmon with lentils and tomatoes",
+   "slot": "dinner",
+   "basePortions": 5,
+   "timeMinutes": 30,
+   "tags": [
+    "batch",
+    "leaves-lunch",
+    "oily-fish"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Salmon fillets, raw",
+     "grams": 850,
+     "aisle": "meat-fish",
+     "packSize": 240,
+     "packUnit": "g",
+     "staple": false,
+     "note": "5 x ~170g"
+    },
+    {
+     "item": "Green lentils, tinned",
+     "grams": 480,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins, drained"
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 500,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "note": "halved"
+    },
+    {
+     "item": "Spinach or kale",
+     "grams": 200,
+     "aisle": "fresh",
+     "packSize": 260,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "5 cloves"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "2 lemons"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 21,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1.5 tbsp"
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 524,
+     "protein": 44,
+     "fibre": 6.4,
+     "salt": 0.93,
+     "plateGrams": 400,
+     "note": "raw sum 425g; salmon loses ~20% in the oven"
+    },
+    "cheryl": {
+     "kcal": 406,
+     "protein": 32.4,
+     "fibre": 6.4,
+     "salt": 0.88,
+     "plateGrams": 368
+    },
+    "daughter": {
+     "kcal": 406,
+     "protein": 35.3,
+     "fibre": 1,
+     "salt": 0.57,
+     "plateGrams": 254,
+     "assumed": true,
+     "note": "salmon and tomatoes only - the green lentils are visible. No starch; her plate is light"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "good",
+    "note": "cold, flaked through the lentils - not reheated"
+   }
+  },
+  {
+   "id": "chicken-pepper-potato-traybake",
+   "name": "Chicken, pepper and potato traybake",
+   "slot": "dinner",
+   "basePortions": 3,
+   "timeMinutes": 45,
+   "tags": [
+    "tray",
+    "no-leftover"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken breast, raw",
+     "grams": 600,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3 breasts, butterflied"
+    },
+    {
+     "item": "New potatoes",
+     "grams": 600,
+     "aisle": "fresh",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "halved; 200g is the tested ceiling on Jon's plate"
+    },
+    {
+     "item": "Peppers",
+     "grams": 480,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3, thickly sliced"
+    },
+    {
+     "item": "Red onion",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 28,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "2 tbsp"
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 4,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tsp"
+    },
+    {
+     "item": "Dried oregano",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 12,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Garlic powder",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 30,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 lemon"
+    },
+    {
+     "item": "Butter beans",
+     "grams": 240,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tin, drained"
+    },
+    {
+     "item": "Tenderstem broccoli",
+     "grams": 200,
+     "aisle": "fresh",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "across the whole tray"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 632,
+     "protein": 64,
+     "fibre": 14,
+     "salt": 1.36,
+     "plateGrams": 700,
+     "note": "raw sum 849g; roasting takes ~18% off"
+    },
+    "cheryl": {
+     "kcal": 502,
+     "protein": 45.6,
+     "fibre": 12.8,
+     "salt": 1.18,
+     "plateGrams": 580
+    },
+    "daughter": {
+     "kcal": 524,
+     "protein": 54.1,
+     "fibre": 5.5,
+     "salt": 0.98,
+     "plateGrams": 530,
+     "assumed": true
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "good",
+    "note": "3 portions, 3 diners. Good cold sliced over salad if there is any spare"
+   }
+  },
+  {
+   "id": "honey-glazed-chicken-wedges",
+   "name": "Honey-glazed chicken with potato wedges",
+   "slot": "dinner",
+   "basePortions": 3,
+   "timeMinutes": 45,
+   "tags": [
+    "tray",
+    "no-leftover",
+    "de-salted"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken thighs, skinless boneless",
+     "grams": 650,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "scaled from the book's 750g so it divides 245/165/240 with nothing left"
+    },
+    {
+     "item": "Potatoes",
+     "grams": 500,
+     "aisle": "fresh",
+     "packSize": 2000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "cut into wedges; raw weight"
+    },
+    {
+     "item": "Reduced-salt soy sauce",
+     "grams": 40,
+     "aisle": "cupboard",
+     "packSize": 150,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "NOT 60ml of ordinary soy - that is 9.6g of salt in the batch and puts Jon's day at 6.75g"
+    },
+    {
+     "item": "Tomato puree",
+     "grams": 30,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Honey",
+     "grams": 32,
+     "aisle": "cupboard",
+     "packSize": 340,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1.5 tbsp"
+    },
+    {
+     "item": "Garlic",
+     "grams": 9,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3 cloves, crushed"
+    },
+    {
+     "item": "Asparagus",
+     "grams": 240,
+     "aisle": "fresh",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Frozen edamame",
+     "grams": 140,
+     "aisle": "frozen",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "Jon 80g, Cheryl 60g"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 4.5,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1 tsp, for the wedges"
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "across the whole potato tray"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 664,
+     "protein": 67.5,
+     "fibre": 9.3,
+     "salt": 2.22,
+     "plateGrams": 562,
+     "note": "245g raw thigh, 200g raw potato, 100g asparagus, 80g edamame"
+    },
+    "cheryl": {
+     "kcal": 458,
+     "protein": 47,
+     "fibre": 6.8,
+     "salt": 1.49,
+     "plateGrams": 393
+    },
+    "daughter": {
+     "kcal": 523,
+     "protein": 54.9,
+     "fibre": 3.7,
+     "salt": 2.09,
+     "plateGrams": 403,
+     "note": "240g chicken, 170g wedges, asparagus if she'll have it. Salt derived from her glaze share"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "good",
+    "note": "3 portions, 3 diners. Good cold sliced; reheated wedges go soft"
+   }
+  },
+  {
+   "id": "salmon-roasted-veg-traybake",
+   "name": "Salmon and roasted vegetable tray bake",
+   "slot": "dinner",
+   "basePortions": 3,
+   "timeMinutes": 40,
+   "tags": [
+    "tray",
+    "no-leftover",
+    "oily-fish"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Salmon fillets, raw",
+     "grams": 540,
+     "aisle": "meat-fish",
+     "packSize": 240,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3 x ~180g"
+    },
+    {
+     "item": "Sweet potato",
+     "grams": 600,
+     "aisle": "fresh",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "skin on - most of the fibre is in it"
+    },
+    {
+     "item": "Courgette",
+     "grams": 250,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1, in 3cm pieces"
+    },
+    {
+     "item": "Red onion",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 6,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "2 cloves"
+    },
+    {
+     "item": "Asparagus",
+     "grams": 160,
+     "aisle": "fresh",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "halved"
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "note": "halved"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 14,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1 tbsp"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 30,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 lemon"
+    },
+    {
+     "item": "Basil",
+     "grams": 10,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Butter beans",
+     "grams": 240,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tin, drained"
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 720,
+     "protein": 50.1,
+     "fibre": 13.1,
+     "salt": 1.31,
+     "plateGrams": 620,
+     "note": "raw sum 728g"
+    },
+    "cheryl": {
+     "kcal": 539,
+     "protein": 37.6,
+     "fibre": 9,
+     "salt": 0.98,
+     "plateGrams": 540
+    },
+    "daughter": {
+     "kcal": 582,
+     "protein": 39.9,
+     "fibre": 4.8,
+     "salt": 0.82,
+     "plateGrams": 384,
+     "assumed": true,
+     "note": "salmon and sweet potato; everything sits separately on the tray"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "good",
+    "note": "cold, flaked through the vegetables"
+   }
+  },
+  {
+   "id": "baked-meatballs-ciabatta",
+   "name": "Baked meatballs with ciabatta",
+   "slot": "dinner",
+   "basePortions": 5,
+   "timeMinutes": 50,
+   "tags": [
+    "batch",
+    "freezes",
+    "leaves-lunch",
+    "hidden-pulse"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Pork mince, 5%",
+     "grams": 375,
+     "aisle": "meat-fish",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Beef mince, 5%",
+     "grams": 375,
+     "aisle": "meat-fish",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Rolled oats",
+     "grams": 63,
+     "aisle": "cupboard",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Onion",
+     "grams": 190,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "finely chopped"
+    },
+    {
+     "item": "Garlic",
+     "grams": 26,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Thyme",
+     "grams": 4,
+     "aisle": "fresh",
+     "packSize": 20,
+     "packUnit": "g",
+     "staple": false,
+     "note": "4 sprigs"
+    },
+    {
+     "item": "Red lentils, dry",
+     "grams": 190,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true,
+     "note": "rinsed, dry weight; into the stock 10 minutes BEFORE the tomatoes or they stay whole"
+    },
+    {
+     "item": "Chopped tomatoes, tinned",
+     "grams": 1200,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "3 tins"
+    },
+    {
+     "item": "Vegetable stock, half strength",
+     "grams": 625,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "one cube to a litre - a full-strength cube puts 2.4g of salt into the batch"
+    },
+    {
+     "item": "Mozzarella",
+     "grams": 75,
+     "aisle": "dairy",
+     "packSize": 125,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Parmesan",
+     "grams": 50,
+     "aisle": "dairy",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 11,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1.5g in the mince, 0.5g in the sauce"
+    },
+    {
+     "item": "Basil",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Wholemeal ciabatta",
+     "grams": 240,
+     "aisle": "bakery",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": false,
+     "note": "50g Jon, none for Cheryl, 140g daughter; wholegrain default applied"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 666,
+     "protein": 57.1,
+     "fibre": 10.8,
+     "salt": 2.04,
+     "plateGrams": 591,
+     "note": "one fifth of the pan + a 50g slice"
+    },
+    "cheryl": {
+     "kcal": 479,
+     "protein": 46,
+     "fibre": 6.6,
+     "salt": 1.31,
+     "plateGrams": 475,
+     "note": "no bread - the lentils replace it"
+    },
+    "daughter": {
+     "kcal": 882,
+     "protein": 65.6,
+     "fibre": 16.7,
+     "salt": 3.03,
+     "plateGrams": 681,
+     "note": "a full portion and two slices"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "jonKcal": 546,
+    "jonProtein": 52.3,
+    "jonFibre": 7.6,
+    "jonSalt": 1.49,
+    "note": "one portion without the bread"
+   }
+  },
+  {
+   "id": "coconut-chicken-rice",
+   "name": "One-pot sticky coconut chicken rice",
+   "slot": "dinner",
+   "basePortions": 3,
+   "timeMinutes": 45,
+   "tags": [
+    "one-pot",
+    "no-leftover",
+    "de-salted"
+   ],
+   "secondPanForDaughter": false,
+   "wholegrainException": "Method, not preference. Brown rice needs 35-45 minutes at ~2.5:1 liquid; this dish cooks jasmine at a deliberately reduced 1.5:1 for 20-25 minutes and the crust is the point. The chicken sits on the rice the whole cook and thighs are shredded at 40 minutes. The gain would be 1.1g of fibre on a 55g dry portion.",
+   "ingredients": [
+    {
+     "item": "Chicken thighs, skinless boneless",
+     "grams": 650,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "scaled from the book's 825g; divides 240/170/240"
+    },
+    {
+     "item": "Jasmine rice, dry",
+     "grams": 140,
+     "aisle": "cupboard",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "splits 55 / 35 / 50 dry"
+    },
+    {
+     "item": "Red curry paste",
+     "grams": 35,
+     "aisle": "cupboard",
+     "packSize": 180,
+     "packUnit": "g",
+     "staple": false,
+     "note": "down from the book's 45g for salt; brands run 5-11g salt per 100g"
+    },
+    {
+     "item": "Coriander",
+     "grams": 18,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false,
+     "note": "6 sprigs, stalks and leaves separated"
+    },
+    {
+     "item": "Reduced-fat coconut milk, tinned",
+     "grams": 190,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "do not cut this - the water comes down, not the coconut milk"
+    },
+    {
+     "item": "Boiling water",
+     "grams": 115,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "115ml, not Centr's 200ml"
+    },
+    {
+     "item": "Fish sauce",
+     "grams": 12,
+     "aisle": "cupboard",
+     "packSize": 150,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "down from the book's 22ml; at 22ml Jon's day is 6.62g of salt"
+    },
+    {
+     "item": "Choy sum, pak choi or tenderstem",
+     "grams": 450,
+     "aisle": "fresh",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "in 6cm lengths"
+    },
+    {
+     "item": "Dry-roasted unsalted peanuts",
+     "grams": 45,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "WEIGH them - 15g is 87 kcal, a casual handful is 40g and 230"
+    },
+    {
+     "item": "Lime",
+     "grams": 65,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Spray oil",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "ml",
+     "staple": true
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 688,
+     "protein": 59.8,
+     "fibre": 4.4,
+     "salt": 2.9,
+     "plateGrams": 472,
+     "note": "240g raw thigh, 55g dry rice, 150g greens, 15g peanuts. Still the saltiest single plate in the corpus"
+    },
+    "cheryl": {
+     "kcal": 462,
+     "protein": 42.2,
+     "fibre": 3.3,
+     "salt": 1.95,
+     "plateGrams": 353
+    },
+    "daughter": {
+     "kcal": 567,
+     "protein": 54.7,
+     "fibre": 2.5,
+     "salt": 2.61,
+     "plateGrams": 405,
+     "note": "240g chicken, 50g dry rice, greens - no chilli, coriander or peanuts. Salt derived from her sauce share"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "good",
+    "note": "3 portions, 3 diners. If there is any spare: cool it fast and refrigerate within the hour, reheat once piping hot. Standing cooked rice is the one real food-safety risk here"
+   }
+  },
+  {
+   "id": "spanish-chicken-butter-beans",
+   "name": "Spanish chicken with braised butter beans and chorizo",
+   "slot": "dinner",
+   "basePortions": 3,
+   "timeMinutes": 35,
+   "tags": [
+    "one-dish",
+    "no-leftover",
+    "high-fibre"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken thighs, skinless boneless",
+     "grams": 500,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "trimmed"
+    },
+    {
+     "item": "Chorizo",
+     "grams": 90,
+     "aisle": "meat-fish",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "down from Centr's 150g; 19 kcal per gram of protein, it is a flavouring"
+    },
+    {
+     "item": "Butter beans",
+     "grams": 480,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins, drained and rinsed"
+    },
+    {
+     "item": "Chicken stock",
+     "grams": 500,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "a full-strength cube is ~2.4g of salt; use half strength to bring the plate down"
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 7,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tbsp"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 5,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1 tsp"
+    },
+    {
+     "item": "Tenderstem broccoli",
+     "grams": 250,
+     "aisle": "fresh",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Wholegrain baguette",
+     "grams": 125,
+     "aisle": "bakery",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "note": "50g Jon, 25g Cheryl, 50g daughter"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 770,
+     "protein": 70.6,
+     "fibre": 17.3,
+     "salt": 3.42,
+     "plateGrams": 690,
+     "note": "raw sum 793g; the broth reduces"
+    },
+    "cheryl": {
+     "kcal": 504,
+     "protein": 46.4,
+     "fibre": 11.7,
+     "salt": 2.4,
+     "plateGrams": 589
+    },
+    "daughter": {
+     "kcal": 613,
+     "protein": 55.9,
+     "fibre": 8.2,
+     "salt": 2.87,
+     "plateGrams": 500,
+     "assumed": true,
+     "note": "beans and broccoli alongside rather than under - nothing stirred together"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "better",
+    "note": "3 portions, 3 diners. If you cook a fourth share it is one of the best leftover lunches here - the beans take up the paprika overnight"
+   }
+  },
+  {
+   "id": "indian-lentil-shakshuka",
+   "name": "Indian lentil shakshuka",
+   "slot": "dinner",
+   "basePortions": 2,
+   "timeMinutes": 30,
+   "tags": [
+    "vegetarian",
+    "for-one-or-two",
+    "high-fibre",
+    "over-plate-ceiling"
+   ],
+   "secondPanForDaughter": true,
+   "ingredients": [
+    {
+     "item": "Green lentils, tinned",
+     "grams": 480,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins, drained and rinsed"
+    },
+    {
+     "item": "Chopped tomatoes, tinned",
+     "grams": 800,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins"
+    },
+    {
+     "item": "Reduced-fat coconut milk, tinned",
+     "grams": 160,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "halved from Centr's 320ml - it was almost all of the saturated fat"
+    },
+    {
+     "item": "Onion",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1, diced"
+    },
+    {
+     "item": "Garlic",
+     "grams": 6,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "2 cloves"
+    },
+    {
+     "item": "Mild curry powder",
+     "grams": 12,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tbsp"
+    },
+    {
+     "item": "Turmeric",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Spinach or kale",
+     "grams": 160,
+     "aisle": "fresh",
+     "packSize": 260,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Eggs",
+     "grams": 275,
+     "aisle": "dairy",
+     "packSize": 330,
+     "packUnit": "g",
+     "staple": true,
+     "note": "5 large, shelled weight; + 2 more for the daughter's separate pan"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 180,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "to serve"
+    },
+    {
+     "item": "Red chilli",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Coriander",
+     "grams": 10,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Spray oil",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 821,
+     "protein": 62.5,
+     "fibre": 21.8,
+     "salt": 3.06,
+     "plateGrams": 1090,
+     "note": "BREACHES the 700-750g plate ceiling. The larger half of the pan plus 3 eggs and 100g of Skyr is ~1,090g - chef-proposals already records this dish at 950-1,000g"
+    },
+    "cheryl": {
+     "kcal": 635,
+     "protein": 47.9,
+     "fibre": 17.9,
+     "salt": 2.42,
+     "plateGrams": 865
+    },
+    "daughter": {
+     "kcal": 277,
+     "protein": 18.6,
+     "fibre": 3.2,
+     "salt": 0.95,
+     "plateGrams": 160,
+     "assumed": true,
+     "note": "SECOND PAN. A tin of whole green lentils in a visible curry sauce has nowhere to hide - two eggs poached separately, here with a 50g slice of wholemeal bread"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "better",
+    "note": "the base reheats like a dhal; the eggs do not. Reheat the base and crack fresh eggs"
+   }
+  },
+  {
+   "id": "chicken-salad",
+   "name": "Chicken salad",
+   "slot": "lunch",
+   "basePortions": 1,
+   "timeMinutes": 3,
+   "tags": [
+    "no-cook",
+    "under-slot",
+    "replaced"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Cooked chicken breast, pre-packed",
+     "grams": 150,
+     "aisle": "meat-fish",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "cooked": true,
+     "note": "COOKED weight. Home-roasted is ~0.12g salt per 100g; a bought pre-packed pack is ~1.0g and would put this lunch at 1.7g"
+    },
+    {
+     "item": "Salad leaves",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true,
+     "note": "'bag of salad leaves' - assumed 60g on the plate"
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Cucumber",
+     "grams": 30,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Olive oil",
+     "grams": 5,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1 tsp"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Mixed beans, tinned",
+     "grams": 60,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "written as optional; they are what make it a complete lunch"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 302,
+     "protein": 51.5,
+     "fibre": 3.3,
+     "salt": 0.4,
+     "plateGrams": 375,
+     "note": "verified week's re-costing. Book said 340/38/6: calories 38 high and protein 13.5g LOW"
+    },
+    "cheryl": {
+     "kcal": 267,
+     "protein": 38.1,
+     "fibre": 3.8,
+     "salt": 0.31,
+     "plateGrams": 281,
+     "assumed": true
+    },
+    "daughter": {
+     "kcal": 242,
+     "protein": 37.5,
+     "fibre": 1.5,
+     "salt": 0.38,
+     "plateGrams": 265,
+     "assumed": true,
+     "note": "single-serve lunch, not a family meal; beans left out"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "n/a",
+    "note": "302 kcal is under the 400-550 lunch band. The verified week replaced it with a cooked chicken and butter bean tub"
+   }
+  },
+  {
+   "id": "prawn-and-skyr",
+   "name": "Prawn and Skyr",
+   "slot": "lunch",
+   "basePortions": 1,
+   "timeMinutes": 2,
+   "tags": [
+    "no-cook",
+    "high-salt"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Ready-cooked king prawns",
+     "grams": 200,
+     "aisle": "meat-fish",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "cooked": true,
+     "note": "COOKED, in brine: ~17g protein and ~1.25g SALT per 100g. The corpus caught the protein half of that in September and missed the salt half"
+    },
+    {
+     "item": "Salad leaves",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true,
+     "note": "'bag of salad leaves' - assumed 60g"
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Cucumber",
+     "grams": 50,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Lemon",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 200,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "afterwards"
+    },
+    {
+     "item": "Frozen raspberries",
+     "grams": 60,
+     "aisle": "frozen",
+     "packSize": 350,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true,
+     "note": "'with berries' is unquantified - assumed 60g"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 345,
+     "protein": 58.6,
+     "fibre": 5.8,
+     "salt": 2.76,
+     "plateGrams": 645
+    },
+    "cheryl": {
+     "kcal": 262,
+     "protein": 44.2,
+     "fibre": 4.8,
+     "salt": 2.07,
+     "plateGrams": 502,
+     "assumed": true
+    },
+    "daughter": {
+     "kcal": 151,
+     "protein": 26.8,
+     "fibre": 1.4,
+     "salt": 1.91,
+     "plateGrams": 280,
+     "assumed": true,
+     "note": "single-serve lunch, not a family meal"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "n/a"
+   }
+  },
+  {
+   "id": "tuna-chickpea-salad",
+   "name": "Tuna and chickpea salad",
+   "slot": "lunch",
+   "basePortions": 1,
+   "timeMinutes": 3,
+   "tags": [
+    "no-cook",
+    "store-cupboard"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Tuna in spring water, tinned",
+     "grams": 110,
+     "aisle": "cupboard",
+     "packSize": 145,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 tin drained. Ordinary tuna is 0.8g salt per 100g; no-added-salt is 0.1g and takes this plate to 0.5g"
+    },
+    {
+     "item": "Chickpeas, tinned",
+     "grams": 120,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "half a tin, drained"
+    },
+    {
+     "item": "Salad leaves",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Cucumber",
+     "grams": 50,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Olive oil",
+     "grams": 5,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "1 tsp"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 337,
+     "protein": 36.3,
+     "fibre": 9.1,
+     "salt": 1.29,
+     "plateGrams": 420
+    },
+    "cheryl": {
+     "kcal": 278,
+     "protein": 29.8,
+     "fibre": 7.6,
+     "salt": 1.06,
+     "plateGrams": 346,
+     "assumed": true
+    },
+    "daughter": {
+     "kcal": 184,
+     "protein": 27.4,
+     "fibre": 1.6,
+     "salt": 1.12,
+     "plateGrams": 265,
+     "assumed": true,
+     "note": "no visible chickpeas; not a family meal"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "n/a"
+   }
+  },
+  {
+   "id": "convenience-fallback",
+   "name": "The convenience fallback",
+   "slot": "lunch",
+   "basePortions": 1,
+   "timeMinutes": 0,
+   "tags": [
+    "no-cook",
+    "bought",
+    "cheryl-default"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Huel Black ready-to-drink",
+     "grams": 500,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "0.70g of salt before anyone eats anything"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 200,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "or a high-protein dessert. Huel's pea and faba protein is low in leucine - pair it with dairy"
+    },
+    {
+     "item": "Apple",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 602,
+     "protein": 57.6,
+     "fibre": 9.8,
+     "salt": 0.9,
+     "plateGrams": 850
+    },
+    "cheryl": {
+     "kcal": 400,
+     "protein": 35,
+     "fibre": 7,
+     "salt": 0.7,
+     "plateGrams": 500,
+     "note": "the bottle on its own is her working-day lunch under v4 - an adherence mechanism, not a nutritional choice"
+    },
+    "daughter": {
+     "kcal": 476,
+     "protein": 35.6,
+     "fibre": 9.8,
+     "salt": 0.7,
+     "plateGrams": 650,
+     "assumed": true,
+     "note": "not a meal she would be given"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "n/a"
+   }
+  },
+  {
+   "id": "roast-broccoli-soup-halloumi",
+   "name": "Roast broccoli soup with halloumi croutons",
+   "slot": "lunch",
+   "basePortions": 6,
+   "timeMinutes": 45,
+   "tags": [
+    "batch",
+    "freezes",
+    "travels",
+    "high-salt"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Broccoli",
+     "grams": 1400,
+     "aisle": "fresh",
+     "packSize": 350,
+     "packUnit": "g",
+     "staple": false,
+     "note": "roughly chopped, stalks included - the stalks are a third of the head"
+    },
+    {
+     "item": "Potatoes",
+     "grams": 900,
+     "aisle": "fresh",
+     "packSize": 2000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "diced"
+    },
+    {
+     "item": "Vegetable or chicken stock",
+     "grams": 2000,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "FULL-STRENGTH stock is 1.6g of salt a bowl on its own. Half strength halves it"
+    },
+    {
+     "item": "Spray oil",
+     "grams": 10,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1g a bowl, standing in for the corpus's banned 'season hard'. The bowl still lands at 4.4g"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 1200,
+     "aisle": "dairy",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": true,
+     "note": "200g a bowl, stirred in OFF the heat"
+    },
+    {
+     "item": "Halloumi",
+     "grams": 360,
+     "aisle": "dairy",
+     "packSize": 225,
+     "packUnit": "g",
+     "staple": false,
+     "note": "60g a bowl; 15 kcal per gram of protein - a flavouring"
+    },
+    {
+     "item": "Honey",
+     "grams": 21,
+     "aisle": "cupboard",
+     "packSize": 340,
+     "packUnit": "g",
+     "staple": false,
+     "note": "half a tsp a bowl"
+    },
+    {
+     "item": "Lemon zest",
+     "grams": 6,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 554,
+     "protein": 47.2,
+     "fibre": 8,
+     "salt": 4.5,
+     "plateGrams": 710
+    },
+    "cheryl": {
+     "kcal": 454,
+     "protein": 37.3,
+     "fibre": 8,
+     "salt": 3.91,
+     "plateGrams": 650
+    },
+    "daughter": {
+     "kcal": 422,
+     "protein": 31.8,
+     "fibre": 8,
+     "salt": 3.56,
+     "plateGrams": 600,
+     "assumed": true
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "note": "6 portions from one cook, ~450g each. Freezes because there is no dairy in the base - that is why the Skyr goes in at the bowl. THE SALT IS THE PROBLEM: 4.4g a bowl, eaten two or three times a week, against a 6g day"
+   }
+  },
+  {
+   "id": "smoky-chicken-chickpea-braise",
+   "name": "Smoky chicken and chickpea braise - the flask lunch",
+   "slot": "lunch",
+   "basePortions": 4,
+   "timeMinutes": 40,
+   "tags": [
+    "batch",
+    "travels",
+    "flask",
+    "leaves-lunch"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken thighs, skinless boneless",
+     "grams": 760,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3cm pieces"
+    },
+    {
+     "item": "Chickpeas, tinned",
+     "grams": 480,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins, drained and rinsed"
+    },
+    {
+     "item": "Red peppers",
+     "grams": 400,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "thickly sliced"
+    },
+    {
+     "item": "Onion",
+     "grams": 200,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "diced"
+    },
+    {
+     "item": "Garlic",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Passata",
+     "grams": 400,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Reduced-salt chicken stock",
+     "grams": 600,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "ml",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 8,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "bloomed in dry fat, not stirred into liquid"
+    },
+    {
+     "item": "Ground cumin",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2.4,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "0.6g a portion; the only salt in the dish"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 40,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "goes in AT THE FLASK, not in the pan"
+    },
+    {
+     "item": "Parsley",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false,
+     "note": "at the flask"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 531,
+     "protein": 51,
+     "fibre": 14,
+     "salt": 1.8,
+     "plateGrams": 654
+    },
+    "cheryl": {
+     "kcal": 443,
+     "protein": 38,
+     "fibre": 14,
+     "salt": 1.7,
+     "plateGrams": 606
+    },
+    "daughter": {
+     "kcal": 382,
+     "protein": 38,
+     "fibre": 8.8,
+     "salt": 1.4,
+     "plateGrams": 504,
+     "note": "the chef's 'table' plate: 150g chicken, 60g chickpeas, over brown basmati or with wholemeal bread"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "note": "it IS the next day - 4 portions from one cook. Flask scalded with boiling water and filled above 75C holds above 60C to 1pm"
+   }
+  },
+  {
+   "id": "tuna-butter-bean-fennel-tub",
+   "name": "Tuna, butter bean and fennel tub",
+   "slot": "lunch",
+   "basePortions": 2,
+   "timeMinutes": 8,
+   "tags": [
+    "no-cook",
+    "travels",
+    "ambient-safe",
+    "store-cupboard"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Tuna in spring water, tinned",
+     "grams": 330,
+     "aisle": "cupboard",
+     "packSize": 145,
+     "packUnit": "g",
+     "staple": false,
+     "note": "3 x 145g tins drained. BUY NO-ADDED-SALT: ordinary tuna takes Jon's tub from 0.89g to 2.22g of salt"
+    },
+    {
+     "item": "Butter beans",
+     "grams": 300,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "drained and rinsed; up from the chef's single tin so Cheryl's share is a real one"
+    },
+    {
+     "item": "Fennel",
+     "grams": 160,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "shaved as thin as you can get it"
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 200,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "note": "halved; go on top, not stirred in"
+    },
+    {
+     "item": "Red onion",
+     "grams": 50,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "paper-thin, into the lemon juice on its own for 5 minutes first"
+    },
+    {
+     "item": "Capers",
+     "grams": 10,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "rinsed - worth 0.1g of salt and costs nothing"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 40,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Parsley",
+     "grams": 16,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 0.4,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 498,
+     "protein": 56.4,
+     "fibre": 11.8,
+     "salt": 0.89,
+     "plateGrams": 600,
+     "note": "verified week's rebalanced figures. The chef's own panel (444/51.5/11.7) runs 5-7% optimistic at his quantities: 422/48.2/10.0"
+    },
+    "cheryl": {
+     "kcal": 393,
+     "protein": 43.5,
+     "fibre": 10.9,
+     "salt": 0.78,
+     "plateGrams": 526
+    },
+    "daughter": {
+     "kcal": 249,
+     "protein": 28.2,
+     "fibre": 5.9,
+     "salt": 0.45,
+     "plateGrams": 300,
+     "assumed": true,
+     "note": "half a tub. The chef states this is a lunchbox and not a family meal"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "better",
+    "note": "two tubs from one assembly - it improves over six hours because the beans and fennel marinate. The only one of the travel lunches safe at ambient temperature"
+   }
+  },
+  {
+   "id": "pitta-poached-chicken-slaw",
+   "name": "Wholemeal pitta, poached chicken, skyr-mustard and pickled slaw",
+   "slot": "lunch",
+   "basePortions": 1,
+   "timeMinutes": 10,
+   "tags": [
+    "travels",
+    "bread",
+    "assembly"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken breast, raw",
+     "grams": 170,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "RAW weight - poached or roasted the night before, sliced cold"
+    },
+    {
+     "item": "Wholemeal pitta",
+     "grams": 65,
+     "aisle": "bakery",
+     "packSize": 390,
+     "packUnit": "g",
+     "staple": false,
+     "note": "pack of 6. Takes the 'one wrap' starch allowance"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 50,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Dijon mustard",
+     "grams": 5,
+     "aisle": "cupboard",
+     "packSize": 185,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Red cabbage",
+     "grams": 80,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "shredded fine, squeezed hard for 30 seconds"
+    },
+    {
+     "item": "Carrot",
+     "grams": 40,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "coarse grated"
+    },
+    {
+     "item": "Red onion",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Cider vinegar",
+     "grams": 15,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": false
+    },
+    {
+     "item": "Sugar",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Rocket or watercress",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": 60,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 432,
+     "protein": 54.9,
+     "fibre": 8.4,
+     "salt": 1.3,
+     "plateGrams": 415,
+     "note": "the lowest plate weight in the whole corpus"
+    },
+    "cheryl": {
+     "kcal": 303,
+     "protein": 37.1,
+     "fibre": 6.3,
+     "salt": 0.9,
+     "plateGrams": 309,
+     "note": "under her lunch size - a weekend one"
+    },
+    "daughter": {
+     "kcal": 361,
+     "protein": 45.2,
+     "fibre": 6.2,
+     "salt": 0.93,
+     "plateGrams": 345,
+     "assumed": true,
+     "note": "same sandwich at 140g chicken, no mustard if she won't. 'It is a chicken sandwich; there is nothing to negotiate'"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "n/a",
+    "note": "assembled in the morning from chicken cooked the night before. Roast 750g of breast on Sunday and this is Tuesday and Wednesday"
+   }
+  },
+  {
+   "id": "dip-box",
+   "name": "The dip box - whipped skyr, cold chicken, rye and raw vegetables",
+   "slot": "lunch",
+   "basePortions": 1,
+   "timeMinutes": 6,
+   "tags": [
+    "no-cook",
+    "travels",
+    "grazing",
+    "low-salt"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken breast, raw",
+     "grams": 160,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "RAW weight - roasted and cold, sliced thick"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 120,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "BEATEN hard with the oil - unbeaten it is chalky"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "not optional - without fat the dip slides off the carrot"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 10,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 2,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "grated to a paste"
+    },
+    {
+     "item": "Dill",
+     "grams": 4,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 0.4,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Rye crispbread",
+     "grams": 25,
+     "aisle": "bakery",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "about two and a half"
+    },
+    {
+     "item": "Cucumber",
+     "grams": 80,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "batons"
+    },
+    {
+     "item": "Carrot",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "batons"
+    },
+    {
+     "item": "Red pepper",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 80,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Walnuts",
+     "grams": 8,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "on top of the dip so they stay dry"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 520,
+     "protein": 57.7,
+     "fibre": 9.4,
+     "salt": 1.1,
+     "plateGrams": 553,
+     "note": "280g of raw vegetables - more than any other lunch in the corpus"
+    },
+    "cheryl": {
+     "kcal": 385,
+     "protein": 41.9,
+     "fibre": 6.9,
+     "salt": 0.8,
+     "plateGrams": 446
+    },
+    "daughter": {
+     "kcal": 385,
+     "protein": 41.9,
+     "fibre": 6.9,
+     "salt": 0.8,
+     "plateGrams": 446,
+     "assumed": true,
+     "note": "the chef says this is exactly the box to make for her on a day out, at 110g of chicken and the same vegetables - costed here as Cheryl's"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "n/a"
+   }
+  },
+  {
+   "id": "mackerel-beetroot-barley-tub",
+   "name": "Tinned mackerel, beetroot and pearl barley with horseradish skyr",
+   "slot": "lunch",
+   "basePortions": 1,
+   "timeMinutes": 10,
+   "tags": [
+    "no-cook",
+    "travels",
+    "oily-fish",
+    "store-cupboard"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Mackerel fillets in spring water, tinned",
+     "grams": 105,
+     "aisle": "cupboard",
+     "packSize": 125,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1 tin drained. 0.9g of salt and not negotiable if you want the tin"
+    },
+    {
+     "item": "Pearl barley, dry",
+     "grams": 30,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "DRY weight - batch 150g on Sunday, it keeps five days. Dress it with the lemon while still warm"
+    },
+    {
+     "item": "Cooked beetroot",
+     "grams": 120,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "cooked": true,
+     "note": "vacuum-packed beetroot is ~0.45g of the plate's salt; boil your own and the plate is ~1.4g"
+    },
+    {
+     "item": "Cucumber",
+     "grams": 80,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "diced"
+    },
+    {
+     "item": "Red onion",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 150,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Hot horseradish",
+     "grams": 10,
+     "aisle": "cupboard",
+     "packSize": 180,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Rocket",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": 60,
+     "packUnit": "g",
+     "staple": false,
+     "note": "on top, away from the beetroot"
+    },
+    {
+     "item": "Dill",
+     "grams": 5,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 509,
+     "protein": 46.5,
+     "fibre": 9.1,
+     "salt": 1.8,
+     "plateGrams": 618,
+     "note": "fibre uncertain by 1-2g: pearl barley is quoted anywhere from 11g to 17g per 100g dry and the chef used 15.6g"
+    },
+    "cheryl": {
+     "kcal": 424,
+     "protein": 39.5,
+     "fibre": 7,
+     "salt": 1.6,
+     "plateGrams": 497,
+     "note": "the whole tin - it doesn't halve well"
+    },
+    "daughter": {
+     "kcal": 509,
+     "protein": 46.5,
+     "fibre": 9.1,
+     "salt": 1.8,
+     "plateGrams": 618,
+     "assumed": true,
+     "note": "the chef states plainly that she would not eat this. Figures repeated from Jon's plate only so the page has a number"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false,
+    "quality": "n/a",
+    "note": "batch the barley, not the tub"
+   }
+  },
+  {
+   "id": "tortilla-chicken-piquillo",
+   "name": "Tortilla with chicken and piquillo peppers",
+   "slot": "lunch",
+   "basePortions": 4,
+   "timeMinutes": 45,
+   "tags": [
+    "batch",
+    "travels",
+    "eggs",
+    "leaves-lunch",
+    "daughter-safe"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Eggs",
+     "grams": 440,
+     "aisle": "dairy",
+     "packSize": 330,
+     "packUnit": "g",
+     "staple": true,
+     "note": "8 large, shelled weight"
+    },
+    {
+     "item": "Waxy potatoes",
+     "grams": 500,
+     "aisle": "fresh",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "Charlotte or similar, skin on, sliced 3mm"
+    },
+    {
+     "item": "Onion",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "sliced thin"
+    },
+    {
+     "item": "Jarred roasted red peppers",
+     "grams": 150,
+     "aisle": "cupboard",
+     "packSize": 290,
+     "packUnit": "g",
+     "staple": false,
+     "note": "drained. 0.6g of the plate's 1.8g salt - peppers you roast yourself take it to 1.2g"
+    },
+    {
+     "item": "Chicken breast, raw",
+     "grams": 500,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "1cm dice"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "for the whole pan - 0.75g a portion"
+    },
+    {
+     "item": "Parsley",
+     "grams": 12,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 240,
+     "aisle": "fresh",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false,
+     "note": "side salad, ~100g a plate"
+    },
+    {
+     "item": "Rocket",
+     "grams": 70,
+     "aisle": "fresh",
+     "packSize": 60,
+     "packUnit": "g",
+     "staple": false,
+     "note": "side salad"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 521,
+     "protein": 48.9,
+     "fibre": 5.9,
+     "salt": 1.8,
+     "plateGrams": 511,
+     "note": "5.9g of fibre is the weakest number in the chef's whole set - take it on a Skyr-bowl day, not a smoothie day"
+    },
+    "cheryl": {
+     "kcal": 396,
+     "protein": 37,
+     "fibre": 4.6,
+     "salt": 1.3,
+     "plateGrams": 390
+    },
+    "daughter": {
+     "kcal": 469,
+     "protein": 47.8,
+     "fibre": 4.9,
+     "salt": 1.7,
+     "plateGrams": 431,
+     "note": "THE daughter recipe: potato, egg, chicken and cheese-coloured pepper, no visible pulse. Nothing about her piece is different"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "note": "a cold wedge in a tub is a complete travel lunch - a tortilla is designed to be eaten at room temperature. 4 portions, 3 eaters"
+   }
+  },
+  {
+   "id": "egg-fried-brown-rice-prawns",
+   "name": "Egg-fried brown rice with prawns, peas and greens",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 30,
+   "tags": [
+    "batch",
+    "eggs",
+    "leaves-lunch",
+    "daughter-safe"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Brown basmati, dry",
+     "grams": 220,
+     "aisle": "cupboard",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "DRY weight. Cook it the night before and chill it uncovered - hot rice steams and you get risotto"
+    },
+    {
+     "item": "Raw peeled king prawns",
+     "grams": 620,
+     "aisle": "frozen",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": false,
+     "note": "RAW, not cooked in brine. Cooked prawns in brine are 1.25g salt per 100g and would take this plate from 1.6g to 2.7g"
+    },
+    {
+     "item": "Eggs",
+     "grams": 440,
+     "aisle": "dairy",
+     "packSize": 330,
+     "packUnit": "g",
+     "staple": true,
+     "note": "8 large, shelled weight"
+    },
+    {
+     "item": "Frozen peas",
+     "grams": 300,
+     "aisle": "frozen",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Pointed/hispi cabbage",
+     "grams": 265,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "shredded"
+    },
+    {
+     "item": "Carrot",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "fine dice"
+    },
+    {
+     "item": "Spring onions",
+     "grams": 75,
+     "aisle": "fresh",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 16,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Ginger",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Rapeseed oil",
+     "grams": 18,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Toasted sesame oil",
+     "grams": 4,
+     "aisle": "cupboard",
+     "packSize": 250,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Reduced-salt soy sauce",
+     "grams": 28,
+     "aisle": "cupboard",
+     "packSize": 150,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "down the hot side of the pan, not into the middle"
+    },
+    {
+     "item": "Lime",
+     "grams": 65,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Frozen edamame",
+     "grams": 200,
+     "aisle": "frozen",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "boiled 4 minutes, into Jon's and Cheryl's bowls only - it never goes in the pan"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 717,
+     "protein": 65.4,
+     "fibre": 12.7,
+     "salt": 1.6,
+     "plateGrams": 652
+    },
+    "cheryl": {
+     "kcal": 483,
+     "protein": 44.1,
+     "fibre": 9.9,
+     "salt": 1.1,
+     "plateGrams": 473
+    },
+    "daughter": {
+     "kcal": 622,
+     "protein": 52,
+     "fibre": 8.6,
+     "salt": 1.4,
+     "plateGrams": 535,
+     "note": "no edamame; it goes into two bowls at the end"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "good",
+    "note": "a full tub is 671 kcal and 58g protein, over the lunch slot - take three-quarters. COOL IT FAST and fridge within the hour; reheat once, piping hot, and not in a flask"
+   }
+  },
+  {
+   "id": "smoked-haddock-egg-kedgeree",
+   "name": "Smoked haddock and egg kedgeree with brown basmati",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 35,
+   "tags": [
+    "batch",
+    "eggs",
+    "white-fish",
+    "leaves-lunch",
+    "daughter-safe"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Brown basmati, dry",
+     "grams": 205,
+     "aisle": "cupboard",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "DRY weight"
+    },
+    {
+     "item": "Undyed smoked haddock",
+     "grams": 230,
+     "aisle": "meat-fish",
+     "packSize": 300,
+     "packUnit": "g",
+     "staple": false,
+     "note": "~1.9g salt per 100g. Half smoked and half fresh is the whole sodium trick - 60g flavours four portions"
+    },
+    {
+     "item": "Fresh haddock, pollock or coley",
+     "grams": 355,
+     "aisle": "meat-fish",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Eggs",
+     "grams": 440,
+     "aisle": "dairy",
+     "packSize": 330,
+     "packUnit": "g",
+     "staple": true,
+     "note": "8 large, shelled. 7 minutes exactly, then cold water"
+    },
+    {
+     "item": "Frozen peas",
+     "grams": 290,
+     "aisle": "frozen",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Onion",
+     "grams": 190,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "diced"
+    },
+    {
+     "item": "Spinach",
+     "grams": 200,
+     "aisle": "fresh",
+     "packSize": 260,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 15,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Mild curry powder",
+     "grams": 11,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Turmeric",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Bay leaf",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 3,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Butter",
+     "grams": 15,
+     "aisle": "dairy",
+     "packSize": 250,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 11,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 45,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Parsley and coriander",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 685,
+     "protein": 63,
+     "fibre": 10.3,
+     "salt": 2,
+     "plateGrams": 554,
+     "note": "every milligram of the 2.0g is the smoked haddock. Commercial smoking varies nearly twofold, so this could be 1.7-2.4g"
+    },
+    "cheryl": {
+     "kcal": 489,
+     "protein": 46.8,
+     "fibre": 8.9,
+     "salt": 1.6,
+     "plateGrams": 412
+    },
+    "daughter": {
+     "kcal": 622,
+     "protein": 50.2,
+     "fibre": 7.6,
+     "salt": 1.5,
+     "plateGrams": 472,
+     "note": "fish flaked on top, never stirred through, so she can see exactly what she is eating"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "good",
+    "note": "the base reheats; the eggs do not. Reheat the rice and fish piping hot and boil a fresh egg. Rice rules apply"
+   }
+  },
+  {
+   "id": "crumbed-cod-crushed-potato",
+   "name": "Parmesan and lemon crumbed cod, crushed potatoes and peas",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 35,
+   "tags": [
+    "white-fish",
+    "leaves-lunch",
+    "daughter-safe"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Cod or pollock loins",
+     "grams": 910,
+     "aisle": "meat-fish",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": false,
+     "note": "4 x 180-200g for dinner PLUS a fifth 170-190g loin - the cold leftover is designed, not an afterthought"
+    },
+    {
+     "item": "Wholemeal breadcrumbs",
+     "grams": 75,
+     "aisle": "bakery",
+     "packSize": 800,
+     "packUnit": "g",
+     "staple": false,
+     "note": "two stale slices, blitzed. Mix the oil through them FIRST"
+    },
+    {
+     "item": "Parmesan",
+     "grams": 38,
+     "aisle": "dairy",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "doing the salt, which is why the fish needs none"
+    },
+    {
+     "item": "Lemons",
+     "grams": 130,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "zest of 2 plus juice"
+    },
+    {
+     "item": "Parsley",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 35,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "20g in the crumb, 15g in the potatoes"
+    },
+    {
+     "item": "Dijon mustard",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 185,
+     "packUnit": "g",
+     "staple": false,
+     "note": "the glue, and the acid"
+    },
+    {
+     "item": "New potatoes",
+     "grams": 800,
+     "aisle": "fresh",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "skin on; includes a bit more for the leftover"
+    },
+    {
+     "item": "Frozen peas",
+     "grams": 540,
+     "aisle": "frozen",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "crushed INTO the potatoes, not served beside them - that is the daughter fix"
+    },
+    {
+     "item": "Mint",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Tenderstem broccoli",
+     "grams": 180,
+     "aisle": "fresh",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "Jon's and Cheryl's plates"
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 1.9,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "in the potato water - 0.5g a portion. None on the fish"
+    },
+    {
+     "item": "Capers",
+     "grams": 5,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "for the next-day potato salad"
+    },
+    {
+     "item": "Red onion",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "for the next-day potato salad"
+    },
+    {
+     "item": "Rocket",
+     "grams": 25,
+     "aisle": "fresh",
+     "packSize": 60,
+     "packUnit": "g",
+     "staple": false,
+     "note": "for the next-day potato salad"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 620,
+     "protein": 57.1,
+     "fibre": 15,
+     "salt": 1.8,
+     "plateGrams": 602,
+     "note": "roughly 400-580ug of iodine from 200g of cod - the reason the recipe exists"
+    },
+    "cheryl": {
+     "kcal": 472,
+     "protein": 43.6,
+     "fibre": 11.7,
+     "salt": 1.4,
+     "plateGrams": 459
+    },
+    "daughter": {
+     "kcal": 519,
+     "protein": 44.5,
+     "fibre": 10.7,
+     "salt": 1.7,
+     "plateGrams": 428,
+     "note": "180g crushed potato WITH 100g of peas already in it - a vegetable inside the starch is dinner"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "jonKcal": 478,
+    "jonProtein": 46.8,
+    "jonFibre": 11.7,
+    "jonSalt": 0.8,
+    "note": "the fifth loin flaked through the leftover potato and peas while both are still warm, plus oil, lemon, capers, onion and rocket. Eaten COLD - reheating cod is the wrong answer"
+   }
+  },
+  {
+   "id": "cod-cannellini-leek-braise",
+   "name": "Cod braised with cannellini, leek and fennel, anchovy gremolata",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 30,
+   "tags": [
+    "white-fish",
+    "leaves-lunch",
+    "high-fibre",
+    "under-600"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Cod, pollock or coley loin",
+     "grams": 750,
+     "aisle": "meat-fish",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": false,
+     "note": "in 4 pieces"
+    },
+    {
+     "item": "Cannellini beans, tinned",
+     "grams": 470,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "2 tins, drained and rinsed. Mash about a quarter against the pan - that is what makes it a braise"
+    },
+    {
+     "item": "Leeks",
+     "grams": 285,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "sliced 1cm; must NOT colour"
+    },
+    {
+     "item": "Fennel",
+     "grams": 190,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "sliced"
+    },
+    {
+     "item": "Spinach",
+     "grams": 300,
+     "aisle": "fresh",
+     "packSize": 260,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 29,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "23g in the pan, 6g raw in the gremolata"
+    },
+    {
+     "item": "Reduced-salt fish or chicken stock",
+     "grams": 390,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "ml",
+     "staple": false
+    },
+    {
+     "item": "White wine",
+     "grams": 90,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "boiled hard for 90 seconds"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 22,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Anchovy fillets in oil",
+     "grams": 14,
+     "aisle": "cupboard",
+     "packSize": 50,
+     "packUnit": "g",
+     "staple": false,
+     "note": "about 4, chopped to a paste. The cleanest sodium trade in the document - glutamate instead of salt"
+    },
+    {
+     "item": "Parsley",
+     "grams": 24,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Wholemeal sourdough",
+     "grams": 90,
+     "aisle": "bakery",
+     "packSize": 800,
+     "packUnit": "g",
+     "staple": false,
+     "note": "40g Jon, none for Cheryl, 50g daughter"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 558,
+     "protein": 60.8,
+     "fibre": 16.2,
+     "salt": 2.1,
+     "plateGrams": 630,
+     "note": "salt breakdown: beans 0.4, bread 0.4, anchovy 0.4, stock 0.3, cod 0.4. Drop the bread and it is 1.7g. There is no added salt to remove"
+    },
+    "cheryl": {
+     "kcal": 393,
+     "protein": 43.7,
+     "fibre": 13.4,
+     "salt": 1.5,
+     "plateGrams": 528,
+     "note": "no bread - the beans are what replace it"
+    },
+    "daughter": {
+     "kcal": 395,
+     "protein": 41.2,
+     "fibre": 10.1,
+     "salt": 1.6,
+     "plateGrams": 418,
+     "note": "60g beans ALONGSIDE rather than under, 50g sourdough to mop. Nothing stirred together"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "jonKcal": 417,
+    "jonProtein": 51.1,
+    "jonFibre": 13.4,
+    "jonSalt": 1.4,
+    "note": "a tubbed portion without the bread, 441g. Cold or barely warmed - hard microwaving turns cod to cotton wool"
+   }
+  },
+  {
+   "id": "sardine-fennel-ragu",
+   "name": "Sicilian sardine and fennel ragu, wholewheat spaghetti, lemon pangrattato",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 35,
+   "tags": [
+    "oily-fish",
+    "leaves-lunch",
+    "high-fibre",
+    "hidden-fish"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Sardines in spring water, tinned",
+     "grams": 540,
+     "aisle": "cupboard",
+     "packSize": 120,
+     "packUnit": "g",
+     "staple": false,
+     "note": "6 x 120g tins drained. HALF mashed to a paste against the pan until nothing is recognisable, half kept as whole fillets"
+    },
+    {
+     "item": "Fennel",
+     "grams": 380,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "diced small, keep the fronds"
+    },
+    {
+     "item": "Onion",
+     "grams": 152,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Chopped tomatoes, tinned",
+     "grams": 400,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Tomato puree",
+     "grams": 32,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "cooked out 90 seconds - raw puree tastes tinny"
+    },
+    {
+     "item": "Raisins",
+     "grams": 32,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true,
+     "note": "the whole recipe: sweetness against the fish oil"
+    },
+    {
+     "item": "Fennel seeds",
+     "grams": 4,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted and crushed"
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Lemon",
+     "grams": 65,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "zest"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 29,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "24g in the ragu, 5g in the pangrattato"
+    },
+    {
+     "item": "Parsley",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 1.5,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "0.4g a portion"
+    },
+    {
+     "item": "Wholemeal breadcrumbs",
+     "grams": 40,
+     "aisle": "bakery",
+     "packSize": 800,
+     "packUnit": "g",
+     "staple": false,
+     "note": "pangrattato - the crunch, and the wholegrain in disguise"
+    },
+    {
+     "item": "Wholewheat spaghetti, dry",
+     "grams": 160,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "55g Jon / 30g Cheryl / 75g daughter, dry"
+    },
+    {
+     "item": "Cannellini beans, tinned",
+     "grams": 240,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1 tin drained, for Jon's and Cheryl's plates only"
+    },
+    {
+     "item": "Parmesan",
+     "grams": 8,
+     "aisle": "dairy",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "the daughter's plate"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 742,
+     "protein": 50,
+     "fibre": 19.7,
+     "salt": 2.2,
+     "plateGrams": 637,
+     "note": "the worst protein-per-calorie dinner in the chef's set, and the same trade the corpus already accepts for the salmon traybake. 19.7g of fibre is right on the 20g-per-sitting ceiling - pair it with a smoothie breakfast, never the Skyr bowl"
+    },
+    "cheryl": {
+     "kcal": 524,
+     "protein": 34.6,
+     "fibre": 15.2,
+     "salt": 1.6,
+     "plateGrams": 500,
+     "note": "her lowest dinner anywhere. On sardine night pair the Huel bottle with a 100g Skyr"
+    },
+    "daughter": {
+     "kcal": 617,
+     "protein": 36.8,
+     "fibre": 13,
+     "salt": 1.8,
+     "plateGrams": 507,
+     "note": "75g dry spaghetti - the full standing portion - the same sauce with the sardines dissolved, no whole fillets, no beans, 8g parmesan. The chef will not promise she won't spot it"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "good",
+    "note": "the sauce is better on day two; the pasta is not. Keep the sauce separate and cook fresh, or eat it cold as a pasta salad with extra lemon"
+   }
+  },
+  {
+   "id": "piri-piri-chicken-crushed-potato",
+   "name": "Piri-piri butterflied chicken, crushed potato and pea, charred hispi",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 40,
+   "tags": [
+    "under-600",
+    "low-salt",
+    "leaves-lunch",
+    "daughter-safe"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Chicken breast, raw",
+     "grams": 750,
+     "aisle": "meat-fish",
+     "packSize": 650,
+     "packUnit": "g",
+     "staple": false,
+     "note": "RAW weight. Butterflied flat to an even 1.5cm - 4 minutes a side and it is done"
+    },
+    {
+     "item": "Red wine vinegar",
+     "grams": 34,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "the whole dish, twice over: it holds water in a lean breast and its sharpness survives the char"
+    },
+    {
+     "item": "Garlic",
+     "grams": 19,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "grated"
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Dried oregano",
+     "grams": 4,
+     "aisle": "cupboard",
+     "packSize": 12,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true,
+     "note": "less in the daughter's share of the marinade"
+    },
+    {
+     "item": "Lemon juice",
+     "grams": 42,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 36,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "20g marinade, 8g potato crush, 8g cabbage"
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2.2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "0.55g a portion"
+    },
+    {
+     "item": "Potatoes",
+     "grams": 600,
+     "aisle": "fresh",
+     "packSize": 2000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "skin on; crushed with a fork, half broken and half whole"
+    },
+    {
+     "item": "Frozen peas",
+     "grams": 330,
+     "aisle": "frozen",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false,
+     "note": "crushed through the potatoes"
+    },
+    {
+     "item": "Pointed/hispi cabbage",
+     "grams": 580,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "quartered through the root, 6 minutes cut side down without moving"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 140,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "with garlic and lemon, for the sauce"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 595,
+     "protein": 69.1,
+     "fibre": 13.6,
+     "salt": 1.15,
+     "plateGrams": 622,
+     "note": "the highest-protein plate in the chef's set and the lowest-salt dinner in the corpus by a wide margin. The vinegar is why both are true at once"
+    },
+    "cheryl": {
+     "kcal": 465,
+     "protein": 50.8,
+     "fibre": 12,
+     "salt": 0.83,
+     "plateGrams": 512,
+     "note": "one of her strongest plates anywhere"
+    },
+    "daughter": {
+     "kcal": 507,
+     "protein": 56.1,
+     "fibre": 10.6,
+     "salt": 0.96,
+     "plateGrams": 484,
+     "note": "180g crushed potato WITH the peas already crushed into it"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "jonKcal": 530,
+    "jonProtein": 63.7,
+    "jonFibre": 11.1,
+    "jonSalt": 0.8,
+    "note": "full leftover portion is 535g; the chef says take three-quarters of it for a lunch inside slot. Cold is genuinely better - the marinade keeps developing"
+   }
+  },
+  {
+   "id": "prawn-pea-barley-orzotto",
+   "name": "Prawn, pea and lemon barley orzotto",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 45,
+   "tags": [
+    "under-600",
+    "high-fibre",
+    "leaves-lunch",
+    "daughter-risk"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Pearl barley, dry",
+     "grams": 205,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "DRY weight. 15.6g fibre per 100g dry against rice's 3.5g. Toast it dry for 2 minutes first"
+    },
+    {
+     "item": "Raw peeled king prawns",
+     "grams": 500,
+     "aisle": "frozen",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": false,
+     "note": "RAW, not cooked in brine. In OFF the heat, lid on, 3 minutes in residual heat only"
+    },
+    {
+     "item": "Prawn shells or reduced-salt stock cube",
+     "grams": 1100,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "ml",
+     "staple": false,
+     "note": "shell stock takes 20 minutes, is free, and is the difference between this and a bowl of barley"
+    },
+    {
+     "item": "Frozen peas",
+     "grams": 400,
+     "aisle": "frozen",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Spinach",
+     "grams": 400,
+     "aisle": "fresh",
+     "packSize": 260,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Onion",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Parmesan",
+     "grams": 32,
+     "aisle": "dairy",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "White wine",
+     "grams": 120,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "ml",
+     "staple": false
+    },
+    {
+     "item": "Lemons",
+     "grams": 130,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "zest and juice of 2; zest at the END, the oils are volatile"
+    },
+    {
+     "item": "Parsley",
+     "grams": 24,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 0.5,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 591,
+     "protein": 61.2,
+     "fibre": 16.4,
+     "salt": 1.8,
+     "plateGrams": 548,
+     "note": "barley fibre uncertain by 1-2g - 11 to 17g per 100g dry depending on pot or pearled"
+    },
+    "cheryl": {
+     "kcal": 471,
+     "protein": 44.9,
+     "fibre": 14.3,
+     "salt": 1.3,
+     "plateGrams": 442
+    },
+    "daughter": {
+     "kcal": 527,
+     "protein": 42.3,
+     "fibre": 16.2,
+     "salt": 1.35,
+     "plateGrams": 441,
+     "note": "THE WEAKEST DAUGHTER PLATE IN THE SET. This figure assumes she eats the prawns. If she does not, her plate is barley, peas and parmesan at about 20g of protein. Lift her portion out BEFORE the prawns go in, or chop her share of the prawns to 5mm and stir them through, or cook this on a night she is out"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "different",
+    "jonKcal": 494,
+    "jonProtein": 45,
+    "jonFibre": 15.3,
+    "jonSalt": 1.2,
+    "note": "reheated prawns go to rubber - that is literally why the laksa was dropped. Batch the barley base for 5 and the prawns for 3; the spare base becomes a cold barley salad with a tin of tuna, tomatoes, rocket and lemon. The dinner leaves a lunch, just not the same lunch"
+   }
+  },
+  {
+   "id": "beef-kofta-bulgur-skyr",
+   "name": "Beef kofta, chilli-tomato sauce, bulgur and skyr",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 35,
+   "tags": [
+    "under-600",
+    "low-salt",
+    "leaves-lunch",
+    "daughter-safe",
+    "hidden-veg"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Beef mince, 5%",
+     "grams": 700,
+     "aisle": "meat-fish",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "mixed HARD for a full minute - worked mince goes sticky and holds without egg or breadcrumb"
+    },
+    {
+     "item": "Onion",
+     "grams": 100,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "grated coarse and squeezed dry - the juice would steam the mince"
+    },
+    {
+     "item": "Garlic",
+     "grams": 23,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Ground cumin",
+     "grams": 12,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true,
+     "note": "8g in the kofta, 4g in the sauce"
+    },
+    {
+     "item": "Ground coriander",
+     "grams": 5,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Cinnamon",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true,
+     "note": "below the threshold where anyone identifies it and exactly at the one where the meat tastes better"
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 3,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Mint and parsley",
+     "grams": 32,
+     "aisle": "fresh",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "0.5g a portion"
+    },
+    {
+     "item": "Passata",
+     "grams": 580,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Red peppers",
+     "grams": 285,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "diced"
+    },
+    {
+     "item": "Spinach",
+     "grams": 190,
+     "aisle": "fresh",
+     "packSize": 260,
+     "packUnit": "g",
+     "staple": false,
+     "note": "stirred in at the end until it disappears completely into the sauce - invisible, and 1.1g of fibre on her plate"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 11,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Bulgur wheat, dry",
+     "grams": 170,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": false,
+     "note": "DRY weight. 18g fibre per 100g dry - the highest of any starch in the corpus. No cooking, 12 minutes in boiling water"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 300,
+     "aisle": "dairy",
+     "packSize": 450,
+     "packUnit": "g",
+     "staple": true,
+     "note": "loosened with lemon, spooned over at the table"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 595,
+     "protein": 61.6,
+     "fibre": 13.8,
+     "salt": 1.24,
+     "plateGrams": 611
+    },
+    "cheryl": {
+     "kcal": 474,
+     "protein": 47.7,
+     "fibre": 12,
+     "salt": 0.92,
+     "plateGrams": 539
+    },
+    "daughter": {
+     "kcal": 558,
+     "protein": 51.6,
+     "fibre": 15.1,
+     "salt": 1.01,
+     "plateGrams": 549,
+     "note": "MORE FIBRE THAN EITHER ADULT because she takes the full 55g bulgur portion - the first time that has been true in this system. ~3.5mg of haem iron from the mince"
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "jonKcal": 589,
+    "jonProtein": 59.6,
+    "jonFibre": 14.5,
+    "jonSalt": 1.21,
+    "note": "the best leftover of the three - kofta and sauce reheat better than they cook. 589 kcal is over the lunch slot, so take about 80%, or eat the bulgur cold as a tabbouleh"
+   }
+  },
+  {
+   "id": "chicken-butter-bean-tub",
+   "name": "Cooked chicken and butter bean tub",
+   "slot": "lunch",
+   "basePortions": 2,
+   "timeMinutes": 5,
+   "tags": [
+    "no-cook",
+    "tub"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Cooked chicken breast, pre-packed",
+     "grams": 300,
+     "aisle": "meat-fish",
+     "packSize": 150,
+     "packUnit": "g",
+     "staple": false,
+     "cooked": true
+    },
+    {
+     "item": "Butter beans",
+     "grams": 260,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "note": "drained and rinsed",
+     "staple": true
+    },
+    {
+     "item": "Salad leaves",
+     "grams": 120,
+     "aisle": "fresh",
+     "packSize": 150,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 120,
+     "aisle": "fresh",
+     "packSize": 300,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Cucumber",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Olive oil",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Lemon",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 457,
+     "protein": 54,
+     "fibre": 8.2,
+     "salt": 1.75,
+     "plateGrams": 502
+    },
+    "cheryl": {
+     "kcal": 354,
+     "protein": 42.4,
+     "fibre": 7.3,
+     "salt": 1.35,
+     "plateGrams": 418
+    },
+    "daughter": {
+     "kcal": 0,
+     "protein": 0,
+     "fibre": 0,
+     "salt": 0,
+     "plateGrams": 0,
+     "assumed": true,
+     "note": "not a family meal"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false
+   }
+  },
+  {
+   "id": "prawn-butter-bean-salad",
+   "name": "Prawn and butter bean salad",
+   "slot": "lunch",
+   "basePortions": 2,
+   "timeMinutes": 6,
+   "tags": [
+    "no-cook",
+    "high-protein"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "King prawns, ready-cooked",
+     "grams": 350,
+     "aisle": "meat-fish",
+     "packSize": 180,
+     "packUnit": "g",
+     "staple": false,
+     "cooked": true
+    },
+    {
+     "item": "Butter beans",
+     "grams": 260,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "note": "drained and rinsed",
+     "staple": true
+    },
+    {
+     "item": "Salad leaves",
+     "grams": 120,
+     "aisle": "fresh",
+     "packSize": 150,
+     "packUnit": "g",
+     "staple": false,
+     "assumed": true
+    },
+    {
+     "item": "Cherry tomatoes",
+     "grams": 100,
+     "aisle": "fresh",
+     "packSize": 300,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Cucumber",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 250,
+     "aisle": "dairy",
+     "packSize": 1000,
+     "packUnit": "g",
+     "note": "whipped, as the dressing",
+     "staple": true
+    },
+    {
+     "item": "Olive oil",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Lemon",
+     "grams": 20,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 535,
+     "protein": 62.3,
+     "fibre": 10,
+     "salt": 1.98,
+     "plateGrams": 562
+    },
+    "cheryl": {
+     "kcal": 401,
+     "protein": 46.5,
+     "fibre": 8.5,
+     "salt": 1.52,
+     "plateGrams": 438
+    },
+    "daughter": {
+     "kcal": 0,
+     "protein": 0,
+     "fibre": 0,
+     "salt": 0,
+     "plateGrams": 0,
+     "assumed": true,
+     "note": "not a family meal"
+    }
+   },
+   "leftover": {
+    "leavesLunch": false
+   }
+  }
+ ]
+}
