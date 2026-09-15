@@ -76,9 +76,22 @@
     margin:13px 0 0;font-weight:700}
   .ing li{margin:3px 0}
   .ing i{font-style:normal;opacity:.7;font-size:.92em}
-  details.more summary{cursor:pointer;list-style:none;font-size:.8rem;color:var(--accent);
-    font-weight:600;margin-top:10px}
+  details.more{margin-top:12px}
+  /* summary stays display:block — iOS Safari stops toggling it if it becomes a flex box */
+  details.more summary{cursor:pointer;list-style:none;font-size:.9rem;color:var(--accent);
+    font-weight:600;position:relative;padding:0 38px 0 14px;line-height:44px;min-height:44px;
+    border:1px solid var(--line);border-radius:11px;background:var(--soft);
+    user-select:none;-webkit-user-select:none}
   details.more summary::-webkit-details-marker{display:none}
+  details.more summary::after{content:"";position:absolute;right:16px;top:50%;
+    width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+    transform:translateY(-7px) rotate(45deg);transition:transform .15s ease}
+  details.more[open] summary::after{transform:translateY(-2px) rotate(225deg)}
+  details.more[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0;
+    border-bottom-color:transparent}
+  details.more .body{border:1px solid var(--line);border-top:none;
+    border-radius:0 0 11px 11px;padding:2px 14px 13px;background:var(--soft)}
+  details.more .body .rh:first-child{margin-top:11px}
 
   .foot{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);
     border-top:1px solid var(--line);padding:10px 16px max(10px,env(safe-area-inset-bottom));
@@ -295,7 +308,7 @@ FIXED["sunday-roast"].recipe = R(
   "<b>No Yorkshire puddings.</b> The potatoes are the starch, and that is what keeps this plate at 720g.");
 
 /* ---------- state ---------- */
-let DATA=null, WEEK=null, current=0;
+let DATA=null, WEEK=null, current=0, TODAY=0;
 const KEY = "plan-" + DEFAULT_WEEK.id;
 const $ = s => document.querySelector(s);
 const clone = o => JSON.parse(JSON.stringify(o));
@@ -497,7 +510,10 @@ function mealCard(d, slot){
   if (r && r.plates.jon.salt >= 3)
     h += '<p class="note warn"><b>' + r.plates.jon.salt + 'g of salt in one plate</b>, against 6g for the day.</p>';
   if (r){
-    h += '<details class="more"><summary>Ingredients and plates</summary>';
+    const hasMethod = (r.method||[]).length > 0;
+    h += '<details class="more"' + (current === TODAY ? ' open' : '') + '><summary>' +
+         (hasMethod ? 'Recipe, ingredients and plates' : 'Ingredients and plates') +
+         '</summary><div class="body">';
     if (r.plateSpec){
       h += '<h3 class="rh">The plates</h3><ul class="ing">';
       [["jon","Yours"],["cheryl","Cheryl"],["daughter","Your daughter"]].forEach(([k,lab]) => {
@@ -516,7 +532,7 @@ function mealCard(d, slot){
       const cls = t.tone === "hot" ? " warn" : "";
       h += '<p class="note' + cls + '">' + t.text + '</p>';
     });
-    h += '</details>';
+    h += '</div></details>';
   }
 
   return h + '</div>';
@@ -677,7 +693,8 @@ function toast(m){
 fetch("recipes.json").then(r => r.json()).then(d => {
   DATA = d; WEEK = load();
   const wd = new Date().getDay();
-  current = (wd >= 1 && wd <= 6) ? wd - 1 : 0;
+  TODAY = (wd >= 1 && wd <= 6) ? wd - 1 : 0;
+  current = TODAY;
   render();
 }).catch(() => {
   $("#day").innerHTML = '<p class="free"><strong>Couldn\'t load the recipes.</strong>' +
