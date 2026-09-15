@@ -1,5 +1,5 @@
 {
- "version": "2026-09-15",
+ "version": "2026-09-15c",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -3004,34 +3004,29 @@
    ],
    "plates": {
     "jon": {
-     "kcal": 520,
+     "kcal": 510,
      "protein": 57.7,
-     "fibre": 9.4,
-     "salt": 1.1,
-     "plateGrams": 553,
+     "fibre": 9,
+     "salt": 1.03,
+     "plateGrams": 575,
      "note": "280g of raw vegetables - more than any other lunch in the corpus"
     },
     "cheryl": {
      "kcal": 385,
      "protein": 41.9,
-     "fibre": 6.9,
-     "salt": 0.8,
+     "fibre": 6.5,
+     "salt": 0.77,
      "plateGrams": 446
     },
-    "daughter": {
-     "kcal": 385,
-     "protein": 41.9,
-     "fibre": 6.9,
-     "salt": 0.8,
-     "plateGrams": 446,
-     "assumed": true,
-     "note": "the chef says this is exactly the box to make for her on a day out, at 110g of chicken and the same vegetables - costed here as Cheryl's"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
     "quality": "n/a"
-   }
+   },
+   "warnings": [
+    "<b>Roast the chicken yourself.</b> Pre-packed cooked chicken takes this box from 1.03g of salt to 2.07g and stops it being the low-salt lunch it is here."
+   ]
   },
   {
    "id": "mackerel-beetroot-barley-tub",
@@ -3663,9 +3658,9 @@
   },
   {
    "id": "crumbed-cod-crushed-potato",
-   "name": "Parmesan and lemon crumbed cod, crushed potatoes and peas",
+   "name": "Parmesan and lemon crumbed haddock, crushed potatoes and peas",
    "slot": "dinner",
-   "basePortions": 4,
+   "basePortions": 5,
    "timeMinutes": 35,
    "tags": [
     "white-fish",
@@ -3675,13 +3670,13 @@
    "secondPanForDaughter": false,
    "ingredients": [
     {
-     "item": "Cod or pollock loins",
+     "item": "Haddock loins, unsmoked",
      "grams": 910,
      "aisle": "meat-fish",
-     "packSize": 400,
+     "packSize": null,
      "packUnit": "g",
      "staple": false,
-     "note": "4 x 180-200g for dinner PLUS a fifth 170-190g loin - the cold leftover is designed, not an afterthought"
+     "note": "5 loins, 180–200g each"
     },
     {
      "item": "Wholemeal breadcrumbs",
@@ -3782,7 +3777,7 @@
     },
     {
      "item": "Capers",
-     "grams": 5,
+     "grams": 10,
      "aisle": "cupboard",
      "packSize": 200,
      "packUnit": "g",
@@ -3791,7 +3786,7 @@
     },
     {
      "item": "Red onion",
-     "grams": 20,
+     "grams": 40,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -3800,7 +3795,7 @@
     },
     {
      "item": "Rocket",
-     "grams": 25,
+     "grams": 50,
      "aisle": "fresh",
      "packSize": 60,
      "packUnit": "g",
@@ -3811,24 +3806,24 @@
    "plates": {
     "jon": {
      "kcal": 620,
-     "protein": 57.1,
+     "protein": 53.2,
      "fibre": 15,
-     "salt": 1.8,
-     "plateGrams": 602,
+     "salt": 1.66,
+     "plateGrams": 640,
      "note": "roughly 400-580ug of iodine from 200g of cod - the reason the recipe exists"
     },
     "cheryl": {
      "kcal": 472,
-     "protein": 43.6,
-     "fibre": 11.7,
-     "salt": 1.4,
+     "protein": 41.5,
+     "fibre": 12.1,
+     "salt": 1.31,
      "plateGrams": 459
     },
     "daughter": {
-     "kcal": 519,
-     "protein": 44.5,
-     "fibre": 10.7,
-     "salt": 1.7,
+     "kcal": 424,
+     "protein": 40.6,
+     "fibre": 9.2,
+     "salt": 1.43,
      "plateGrams": 428,
      "note": "180g crushed potato WITH 100g of peas already in it - a vegetable inside the starch is dinner"
     }
@@ -3836,12 +3831,17 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 478,
+    "jonKcal": 566,
     "jonProtein": 46.8,
     "jonFibre": 11.7,
-    "jonSalt": 0.8,
+    "jonSalt": 1.71,
     "note": "the fifth loin flaked through the leftover potato and peas while both are still warm, plus oil, lemon, capers, onion and rocket. Eaten COLD - reheating cod is the wrong answer"
-   }
+   },
+   "warnings": [
+    "<b>Unsmoked haddock only.</b> Smoked runs 1.9–3.05g of salt per 100g — a 200g portion is 3.8–6.1g, which is the whole day's ceiling in one dinner.",
+    "<b>Pat the loins dry and buy loin-cut.</b> Haddock carries more surface water than cod and a wet surface steams the crumb instead of crisping it.",
+    "<b>10–12 minutes, not 12–14.</b> Tuck the thin tail under rather than trying to time it separately."
+   ]
   },
   {
    "id": "cod-cannellini-leek-braise",
@@ -4324,26 +4324,26 @@
    ],
    "plates": {
     "jon": {
-     "kcal": 595,
+     "kcal": 612,
      "protein": 69.1,
-     "fibre": 13.6,
-     "salt": 1.15,
-     "plateGrams": 622,
+     "fibre": 14.4,
+     "salt": 0.98,
+     "plateGrams": 655,
      "note": "the highest-protein plate in the chef's set and the lowest-salt dinner in the corpus by a wide margin. The vinegar is why both are true at once"
     },
     "cheryl": {
      "kcal": 465,
      "protein": 50.8,
      "fibre": 12,
-     "salt": 0.83,
+     "salt": 0.7,
      "plateGrams": 512,
      "note": "one of her strongest plates anywhere"
     },
     "daughter": {
-     "kcal": 507,
+     "kcal": 462,
      "protein": 56.1,
-     "fibre": 10.6,
-     "salt": 0.96,
+     "fibre": 9.4,
+     "salt": 0.79,
      "plateGrams": 484,
      "note": "180g crushed potato WITH the peas already crushed into it"
     }
@@ -4351,12 +4351,16 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 530,
+    "jonKcal": 559,
     "jonProtein": 63.7,
-    "jonFibre": 11.1,
-    "jonSalt": 0.8,
+    "jonFibre": 9.9,
+    "jonSalt": 0.95,
     "note": "full leftover portion is 535g; the chef says take three-quarters of it for a lunch inside slot. Cold is genuinely better - the marinade keeps developing"
-   }
+   },
+   "warnings": [
+    "<b>Scaling past four portions makes it two batches.</b> At five it is ~937g of butterflied breast and ~725g of hispi — \"one tray and one pan, 40 minutes\" stops being true.",
+    "<b>The weighed salt scales with it.</b> 2.2g at four portions becomes 2.75g at five; it is an absolute figure, not a per-portion one."
+   ]
   },
   {
    "id": "prawn-pea-barley-orzotto",

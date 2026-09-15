@@ -459,7 +459,7 @@ function mealCard(d, slot){
        (r ? '<label style="margin-left:auto">recipe makes ' + r.basePortions + '</label>' : '') +
        '</div>';
 
-  if (d.diners.includes("daughter")){
+  if (d.diners.includes("daughter") && r && r.plates.daughter){
     h += '<div class="dau"><input type="checkbox" id="dau-' + slot + '"' +
          (m.daughter ? " checked" : "") + '><label for="dau-' + slot + '">Daughter eating this</label></div>';
     if (!m.daughter)
@@ -467,6 +467,10 @@ function mealCard(d, slot){
            'placeholder="Something else for her — goes on the list" value="' +
            String(m.alt||"").replace(/"/g,"&quot;") + '"></div>';
   }
+  if (d.diners.includes("daughter") && r && !r.plates.daughter)
+    h += '<p class="note">Not a family meal — nothing here for your daughter.</p>';
+  if (r && (r.warnings||[]).length)
+    h += r.warnings.map(w => '<p class="note warn">' + w + '</p>').join("");
   if (r && r.secondPanForDaughter)
     h += '<p class="note warn"><b>Needs a second pan for her.</b> The brief says that has to be earned.</p>';
   if (r && r.plates.jon.plateGrams > 750)
