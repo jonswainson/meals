@@ -75,6 +75,7 @@
   .rh{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
     margin:13px 0 0;font-weight:700}
   .ing li{margin:3px 0}
+  .ing i{font-style:normal;opacity:.7;font-size:.92em}
   details.more summary{cursor:pointer;list-style:none;font-size:.8rem;color:var(--accent);
     font-weight:600;margin-top:10px}
   details.more summary::-webkit-details-marker{display:none}
@@ -467,6 +468,10 @@ function mealCard(d, slot){
            'placeholder="Something else for her — goes on the list" value="' +
            String(m.alt||"").replace(/"/g,"&quot;") + '"></div>';
   }
+  if (r && r.plates.jon && r.plates.jon.assumed)
+    h += '<p class="note warn">Your plate here is <b>derived, not tested</b> — treat the numbers as an estimate.</p>';
+  if (d.diners.includes("daughter") && r && r.plates.daughter && r.plates.daughter.assumed)
+    h += '<p class="note warn">Your daughter\'s plate is <b>derived and never tested</b> — nobody has built one for this meal.</p>';
   if (d.diners.includes("daughter") && r && !r.plates.daughter)
     h += '<p class="note">Not a family meal — nothing here for your daughter.</p>';
   if (r && (r.warnings||[]).length)
@@ -477,10 +482,22 @@ function mealCard(d, slot){
     h += '<p class="note warn"><b>' + r.plates.jon.plateGrams + 'g on the plate</b>, against a tested ceiling of 750.</p>';
   if (r && r.plates.jon.salt >= 3)
     h += '<p class="note warn"><b>' + r.plates.jon.salt + 'g of salt in one plate</b>, against 6g for the day.</p>';
-  if (r)
-    h += '<details class="more"><summary>Ingredients</summary><ul class="ing"><li>' +
+  if (r){
+    h += '<details class="more"><summary>Ingredients and plates</summary>';
+    if (r.plateSpec){
+      h += '<h3 class="rh">The plates</h3><ul class="ing">';
+      [["jon","Yours"],["cheryl","Cheryl"],["daughter","Your daughter"]].forEach(([k,lab]) => {
+        if (r.plateSpec[k]) h += '<li><b>' + lab + ':</b> ' + r.plateSpec[k] + '</li>';
+      });
+      h += '</ul>';
+      if (r.plateSpec.note) h += '<p class="note">' + r.plateSpec.note + '</p>';
+    }
+    h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' +
       r.ingredients.map(i => i.item + ' — ' + i.grams + (i.packUnit === "ml" ? "ml" : "g") +
-        (i.note ? ', ' + i.note : '')).join('</li><li>') + '</li></ul></details>';
+        state(i) + (i.note ? ', ' + i.note : '') +
+        (i.assumed ? ' <i>· quantity estimated</i>' : '')).join('</li><li>') +
+      '</li></ul></details>';
+  }
 
   return h + '</div>';
 }
@@ -495,6 +512,15 @@ function fixedRecipe(f){
   if (r.note)   h += '<p class="note">' + r.note + '</p>';
   if (r.cheryl) h += '<p class="note"><b>Cheryl:</b> ' + r.cheryl + '</p>';
   return h;
+}
+
+/* standing rule 8: every weight is raw and dry unless it says otherwise */
+function state(i){
+  if (i.cooked) return ' <i>cooked</i>';
+  if (i.aisle === "meat-fish") return ' <i>raw</i>';
+  if (/pasta|rice|lentil|oats|bulgur|barley|couscous|quinoa|breadcrumb/i.test(i.item))
+    return ' <i>dry</i>';
+  return "";
 }
 
 function render(){

@@ -1,5 +1,5 @@
 {
- "version": "2026-09-15c",
+ "version": "2026-09-15d",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -2020,15 +2020,7 @@
      "plateGrams": 281,
      "assumed": true
     },
-    "daughter": {
-     "kcal": 242,
-     "protein": 37.5,
-     "fibre": 1.5,
-     "salt": 0.38,
-     "plateGrams": 265,
-     "assumed": true,
-     "note": "single-serve lunch, not a family meal; beans left out"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
@@ -2130,15 +2122,7 @@
      "plateGrams": 502,
      "assumed": true
     },
-    "daughter": {
-     "kcal": 151,
-     "protein": 26.8,
-     "fibre": 1.4,
-     "salt": 1.91,
-     "plateGrams": 280,
-     "assumed": true,
-     "note": "single-serve lunch, not a family meal"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
@@ -2236,15 +2220,7 @@
      "plateGrams": 346,
      "assumed": true
     },
-    "daughter": {
-     "kcal": 184,
-     "protein": 27.4,
-     "fibre": 1.6,
-     "salt": 1.12,
-     "plateGrams": 265,
-     "assumed": true,
-     "note": "no visible chickpeas; not a family meal"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
@@ -2307,15 +2283,7 @@
      "plateGrams": 500,
      "note": "the bottle on its own is her working-day lunch under v4 - an adherence mechanism, not a nutritional choice"
     },
-    "daughter": {
-     "kcal": 476,
-     "protein": 35.6,
-     "fibre": 9.8,
-     "salt": 0.7,
-     "plateGrams": 650,
-     "assumed": true,
-     "note": "not a meal she would be given"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
@@ -2431,14 +2399,7 @@
      "salt": 3.91,
      "plateGrams": 650
     },
-    "daughter": {
-     "kcal": 422,
-     "protein": 31.8,
-     "fibre": 8,
-     "salt": 3.56,
-     "plateGrams": 600,
-     "assumed": true
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": true,
@@ -2596,14 +2557,7 @@
      "salt": 1.7,
      "plateGrams": 606
     },
-    "daughter": {
-     "kcal": 382,
-     "protein": 38,
-     "fibre": 8.8,
-     "salt": 1.4,
-     "plateGrams": 504,
-     "note": "the chef's 'table' plate: 150g chicken, 60g chickpeas, over brown basmati or with wholemeal bread"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": true,
@@ -2728,15 +2682,7 @@
      "salt": 0.78,
      "plateGrams": 526
     },
-    "daughter": {
-     "kcal": 249,
-     "protein": 28.2,
-     "fibre": 5.9,
-     "salt": 0.45,
-     "plateGrams": 300,
-     "assumed": true,
-     "note": "half a tub. The chef states this is a lunchbox and not a family meal"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
@@ -2859,15 +2805,7 @@
      "plateGrams": 309,
      "note": "under her lunch size - a weekend one"
     },
-    "daughter": {
-     "kcal": 361,
-     "protein": 45.2,
-     "fibre": 6.2,
-     "salt": 0.93,
-     "plateGrams": 345,
-     "assumed": true,
-     "note": "same sandwich at 140g chicken, no mustard if she won't. 'It is a chicken sandwich; there is nothing to negotiate'"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
@@ -3154,15 +3092,7 @@
      "plateGrams": 497,
      "note": "the whole tin - it doesn't halve well"
     },
-    "daughter": {
-     "kcal": 509,
-     "protein": 46.5,
-     "fibre": 9.1,
-     "salt": 1.8,
-     "plateGrams": 618,
-     "assumed": true,
-     "note": "the chef states plainly that she would not eat this. Figures repeated from Jon's plate only so the page has a number"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false,
@@ -3306,14 +3236,7 @@
      "salt": 1.3,
      "plateGrams": 390
     },
-    "daughter": {
-     "kcal": 469,
-     "protein": 47.8,
-     "fibre": 4.9,
-     "salt": 1.7,
-     "plateGrams": 431,
-     "note": "THE daughter recipe: potato, egg, chicken and cheese-coloured pepper, no visible pulse. Nothing about her piece is different"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": true,
@@ -3841,7 +3764,13 @@
     "<b>Unsmoked haddock only.</b> Smoked runs 1.9–3.05g of salt per 100g — a 200g portion is 3.8–6.1g, which is the whole day's ceiling in one dinner.",
     "<b>Pat the loins dry and buy loin-cut.</b> Haddock carries more surface water than cod and a wet surface steams the crumb instead of crisping it.",
     "<b>10–12 minutes, not 12–14.</b> Tuck the thin tail under rather than trying to time it separately."
-   ]
+   ],
+   "plateSpec": {
+    "jon": "200g haddock <i>raw</i> · 200g crushed potato <i>cooked</i> · 120g peas · 100g tenderstem · 20g crumb · 10g parmesan · 5g Dijon",
+    "cheryl": "150g haddock <i>raw</i> · 140g crushed potato <i>cooked</i> · 100g peas · 80g tenderstem · 15g crumb · 8g parmesan",
+    "daughter": "160g haddock <i>raw</i> · 180g crushed potato <i>cooked</i> · 100g peas · the full crumb · no tenderstem",
+    "note": "Her peas are crushed into the potato rather than served beside it. That is the point of the recipe, not a garnish."
+   }
   },
   {
    "id": "cod-cannellini-leek-braise",
@@ -4360,7 +4289,13 @@
    "warnings": [
     "<b>Scaling past four portions makes it two batches.</b> At five it is ~937g of butterflied breast and ~725g of hispi — \"one tray and one pan, 40 minutes\" stops being true.",
     "<b>The weighed salt scales with it.</b> 2.2g at four portions becomes 2.75g at five; it is an absolute figure, not a per-portion one."
-   ]
+   ],
+   "plateSpec": {
+    "jon": "220g chicken <i>raw</i> · 150g crushed potato <i>cooked</i> · 90g peas · 200g charred hispi · 40g skyr sauce",
+    "cheryl": "150g chicken <i>raw</i> · 120g crushed potato <i>cooked</i> · 80g peas · 180g hispi · 40g skyr sauce",
+    "daughter": "180g chicken <i>raw</i> · 112g crushed potato <i>cooked</i> · 68g peas · 100g hispi · 30g skyr sauce",
+    "note": "Her potato and peas are crushed together and served as one — 180g on the plate. The components are separated here so all three plates are counted the same way."
+   }
   },
   {
    "id": "prawn-pea-barley-orzotto",
@@ -4786,15 +4721,7 @@
      "salt": 1.35,
      "plateGrams": 418
     },
-    "daughter": {
-     "kcal": 0,
-     "protein": 0,
-     "fibre": 0,
-     "salt": 0,
-     "plateGrams": 0,
-     "assumed": true,
-     "note": "not a family meal"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false
@@ -4896,15 +4823,7 @@
      "salt": 2.08,
      "plateGrams": 438
     },
-    "daughter": {
-     "kcal": 0,
-     "protein": 0,
-     "fibre": 0,
-     "salt": 0,
-     "plateGrams": 0,
-     "assumed": true,
-     "note": "not a family meal"
-    }
+    "daughter": null
    },
    "leftover": {
     "leavesLunch": false
