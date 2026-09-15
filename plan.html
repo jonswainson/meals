@@ -509,8 +509,14 @@ function mealCard(d, slot){
     h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' +
       r.ingredients.map(i => i.item + ' — ' + i.grams + (i.packUnit === "ml" ? "ml" : "g") +
         state(i) + (i.note ? ', ' + i.note : '') +
-        (i.assumed ? ' <i>· quantity estimated</i>' : '')).join('</li><li>') +
-      '</li></ul></details>';
+        (i.assumed ? ' <i>· quantity estimated</i>' : '')).join('</li><li>') + '</li></ul>';
+    if ((r.method||[]).length)
+      h += '<h3 class="rh">Method</h3><ol class="ing"><li>' + r.method.join('</li><li>') + '</li></ol>';
+    (r.tips||[]).forEach(t => {
+      const cls = t.tone === "hot" ? " warn" : "";
+      h += '<p class="note' + cls + '">' + t.text + '</p>';
+    });
+    h += '</details>';
   }
 
   return h + '</div>';
