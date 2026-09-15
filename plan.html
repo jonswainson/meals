@@ -71,7 +71,9 @@
     border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
   .note{font-size:.82rem;color:var(--muted);margin:9px 0 0;line-height:1.45}
   .note.warn{color:var(--warn)}
-  .ing{margin:9px 0 0;padding-left:18px;font-size:.85rem;color:var(--muted)}
+  .ing{margin:9px 0 0;padding-left:18px;font-size:.87rem;color:var(--muted)}
+  .rh{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+    margin:13px 0 0;font-weight:700}
   .ing li{margin:3px 0}
   details.more summary{cursor:pointer;list-style:none;font-size:.8rem;color:var(--accent);
     font-weight:600;margin-top:10px}
@@ -236,6 +238,55 @@ FIXED["sunday-roast"].ing    = {household:[
 /* Cheryl's Skyr and banana move into lunch because she's teaching at 2:30 */
 const CHERYL_LUNCH_ING = [I("Plain Skyr",100,"dairy",1000,true), I("Bananas",40,"fresh")];
 
+
+/* ---------- how to make the fixed items ---------- */
+const R = (ing, method, cheryl, note) => ({ing, method, cheryl, note});
+FIXED["berry-oat"].recipe = R(
+  ["200g Skyr · 32g whey · 150ml milk","100g frozen mixed berries","30g porridge oats · 12g chia seeds"],
+  ["Whey in first, then everything else — powder sitting on the blades goes lumpy.",
+   "The KitchenAid handles whole oats in any order. No pre-blitzing."],
+  "200g Skyr, 32g whey, <b>100ml</b> milk, 100g berries, <b>15g</b> oats, 12g chia. 450 kcal, 54g.");
+
+FIXED["skyr-bowl"].recipe = R(
+  ["250g Skyr (plain or raspberry)","32g whey · 20ml milk","100g frozen raspberries",
+   "12g chia · 15g walnuts or almonds · 10g pumpkin seeds","60g banana, weighed"],
+  ["<b>Whey powder in first, then the Skyr, then stir.</b> The other way round and you spend five minutes chasing lumps.",
+   "Berries and banana on top. <b>Seeds and nuts last</b>, so they stay crunchy.",
+   "If the bowl is too solid to eat, give the frozen raspberries five minutes to soften."],
+  "200g Skyr, 32g whey, 20ml milk, 100g raspberries, 10g chia, 10g nuts, 30g banana. 427 kcal, 52g.");
+
+FIXED["huel-milbona"].recipe = R(
+  ["Huel Black bottle — 06:15, in the car","Milbona high-protein drink — 07:15, on the train"],
+  ["Both go in the bag the night before. <b>Nothing gets made after 05:15.</b>"],
+  "Cheryl has the berry and oat smoothie at home.");
+
+FIXED["banana-skyr"].recipe = R(["120g banana, weighed and peeled","100g plain Skyr"], [],
+  "<b>Nothing at 2:30 — she's teaching.</b> Her Skyr and banana go in with lunch instead.",
+  "<b>Weigh the banana.</b> Yours came in at 196g last time, 70 calories more than the recipe means.");
+
+FIXED["banana-skyr-150"].recipe = R(["120g banana, weighed and peeled","150g plain Skyr"], [],
+  "<b>Nothing at 2:30 — she's teaching.</b>",
+  "The bigger Skyr is here because Friday is the tightest day for protein.");
+
+FIXED["huel-bar"].recipe = R(["One bar, in the bag before you leave"], [], null, null);
+
+FIXED["whey-pear"].recipe = R(["20g whey in water","1 large pear"], [],
+  null, "<b>Weigh the whey into a shaker the night before and put the pear in the bag.</b> The pear is there for the fibre, which is what this day is short of.");
+
+FIXED["ms-bought"].recipe = R(
+  ["M&S hot smoked sweet chilli salmon — <b>the whole pack, not half</b>","M&S chicken Caesar box, 250g"],
+  [], "Cheryl has the Huel Black bottle — the one day this week she does.",
+  "50g of protein between them, and almost no fibre at all, which is why this day lands near 25g.");
+
+FIXED["huel-bottle"].recipe = R(["One bottle, from the fridge"], [], null, null);
+
+FIXED["sunday-roast"].recipe = R(
+  ["180g beef, reheated in the gravy","200g roast potatoes","100g carrots · 100g broccoli · 80g cabbage","60ml gravy"],
+  ["Potatoes and vegetables fresh; only the meat is reheated.",
+   "Reheat it <b>in</b> the gravy rather than dry — roast meat reheated on its own goes grey and tough."],
+  "~120g meat, 130g potatoes, the full share of vegetables. 470 kcal, 45g.",
+  "<b>No Yorkshire puddings.</b> The potatoes are the starch, and that is what keeps this plate at 720g.");
+
 /* ---------- state ---------- */
 let DATA=null, WEEK=null, current=0;
 const KEY = "plan-" + DEFAULT_WEEK.id;
@@ -372,11 +423,11 @@ function mealCard(d, slot){
 
   if (typeof m === "string"){
     const f = FIXED[m];
-    return h + '<h2>' + f.name + '</h2>' + macroRow(f.jon) + '</div>';
+    return h + '<h2>' + f.name + '</h2>' + macroRow(f.jon) + fixedRecipe(f) + '</div>';
   }
   if (m.kind === "fixed"){
     const f = FIXED[m.id];
-    h += '<h2>' + f.name + '</h2>' + macroRow(f.jon);
+    h += '<h2>' + f.name + '</h2>' + macroRow(f.jon) + fixedRecipe(f);
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
     return h + '</div>';
@@ -428,6 +479,18 @@ function mealCard(d, slot){
         (i.note ? ', ' + i.note : '')).join('</li><li>') + '</li></ul></details>';
 
   return h + '</div>';
+}
+
+function fixedRecipe(f){
+  const r = f.recipe; if (!r) return "";
+  let h = "";
+  if (r.ing && r.ing.length)
+    h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' + r.ing.join('</li><li>') + '</li></ul>';
+  if (r.method && r.method.length)
+    h += '<h3 class="rh">Method</h3><ol class="ing"><li>' + r.method.join('</li><li>') + '</li></ol>';
+  if (r.note)   h += '<p class="note">' + r.note + '</p>';
+  if (r.cheryl) h += '<p class="note"><b>Cheryl:</b> ' + r.cheryl + '</p>';
+  return h;
 }
 
 function render(){

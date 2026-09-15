@@ -1,5 +1,5 @@
 {
- "version": "2026-09-14c",
+ "version": "2026-09-15",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -4882,14 +4882,14 @@
      "kcal": 535,
      "protein": 62.3,
      "fibre": 10,
-     "salt": 1.98,
+     "salt": 2.77,
      "plateGrams": 562
     },
     "cheryl": {
      "kcal": 401,
      "protein": 46.5,
      "fibre": 8.5,
-     "salt": 1.52,
+     "salt": 2.08,
      "plateGrams": 438
     },
     "daughter": {
