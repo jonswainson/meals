@@ -153,6 +153,12 @@ const FIXED = {
                    daughter:{kcal:531,protein:43.2,fibre:6.3,salt:1.0,plateGrams:450}}
 };
 
+/* how long the fixed items take */
+Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
+  "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"ms-bought":0,
+  "huel-bottle":0,"sunday-roast":20})
+  .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
+
 /* Cheryl's Skyr moved into lunch — she's teaching at 2:30 */
 const CHERYL_LUNCH_SKYR = {kcal:63,protein:11,fibre:0,salt:0.05};
 
@@ -405,16 +411,24 @@ function renderTotals(d){
   el.innerHTML = h;
 }
 
-const macroRow = p =>
+const macroRow = (p, r) =>
   '<div class="macros"><div><b>' + Math.round(p.kcal) + '</b> <span>kcal</span></div>' +
   '<div><b>' + p.protein + 'g</b> <span>protein</span></div>' +
   '<div><b>' + p.fibre + 'g</b> <span>fibre</span></div>' +
-  '<div><b>' + p.salt + 'g</b> <span>salt</span></div></div>';
+  '<div><b>' + p.salt + 'g</b> <span>salt</span></div>' +
+  (r && typeof r.timeMinutes === "number"
+     ? '<div>' + (r.timeMinutes === 0
+         ? '<b>No cooking</b>'
+         : '<b>' + r.timeMinutes + ' min</b> <span>' +
+           (r.handsOnMinutes ? r.handsOnMinutes + ' hands-on' : 'to cook') + '</span>') + '</div>'
+     : '') + '</div>';
 
 const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot)
   .sort((a,b) => a.name.localeCompare(b.name))
   .map(r => '<option value="' + r.id + '"' + (r.id===sel?" selected":"") + '>' +
-    r.name + ' — ' + Math.round(r.plates.jon.kcal) + ' kcal, ' + r.plates.jon.protein + 'g</option>')
+    r.name + ' — ' + Math.round(r.plates.jon.kcal) + ' kcal, ' + r.plates.jon.protein + 'g' +
+    (typeof r.timeMinutes === "number" ? ', ' + (r.timeMinutes === 0 ? "no cooking" : r.timeMinutes + ' min') : '') +
+    '</option>')
   .join("");
 
 function mealCard(d, slot){
@@ -424,11 +438,11 @@ function mealCard(d, slot){
 
   if (typeof m === "string"){
     const f = FIXED[m];
-    return h + '<h2>' + f.name + '</h2>' + macroRow(f.jon) + fixedRecipe(f) + '</div>';
+    return h + '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f) + '</div>';
   }
   if (m.kind === "fixed"){
     const f = FIXED[m.id];
-    h += '<h2>' + f.name + '</h2>' + macroRow(f.jon) + fixedRecipe(f);
+    h += '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f);
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
     return h + '</div>';
@@ -438,7 +452,7 @@ function mealCard(d, slot){
     const r = (src && src.dinner.kind === "recipe") ? recipe(src.dinner.id) : null;
     h += '<h2>' + (r ? src.title + "'s " + r.name.toLowerCase() : "Leftovers") + '</h2>';
     if (r){
-      h += macroRow(r.plates.jon);
+      h += macroRow(r.plates.jon, r);
       const eaten = src.diners.filter(p => p !== "daughter" || src.dinner.daughter).length;
       const left  = src.dinner.portions - eaten;
       const need  = d.diners.filter(p => p !== "daughter").length;
@@ -452,7 +466,7 @@ function mealCard(d, slot){
   }
 
   const r = recipe(m.id);
-  h += '<h2>' + (r ? r.name : "—") + '</h2>' + (r ? macroRow(r.plates.jon) : "");
+  h += '<h2>' + (r ? r.name : "—") + '</h2>' + (r ? macroRow(r.plates.jon, r) : "");
   h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) + '</select>';
   h += '<div class="ctrl"><label>Portions</label><div class="step">' +
        '<button class="dec" data-slot="' + slot + '">−</button><span>' + m.portions + '</span>' +
