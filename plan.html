@@ -173,7 +173,11 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
 
 /* Cheryl's Skyr moved into lunch — she's teaching at 2:30 */
-const CHERYL_LUNCH_SKYR = {kcal:63,protein:11,fibre:0,salt:0.05};
+/* Her 2:30 feed, moved into lunch because she teaches. 100g Skyr + 40g banana -
+   the same pair CHERYL_LUNCH_ING has been buying all along. The banana was dropped
+   from the macros when the feed moved, which ran her ~38 kcal light every day. */
+const CHERYL_LUNCH_ADDON = {kcal:101,protein:11.5,fibre:0.7,salt:0.08,
+                            label:"100g Skyr and a 40g banana"};
 
 const TARGETS = {
   jon:    {kcal:1900, band:50, protein:170, salt:6},
@@ -281,11 +285,11 @@ FIXED["huel-milbona"].recipe = R(
   "Cheryl has the berry and oat smoothie at home.");
 
 FIXED["banana-skyr"].recipe = R(["120g banana, weighed and peeled","100g plain Skyr"], [],
-  "<b>Nothing at 2:30 — she's teaching.</b> Her Skyr and banana go in with lunch instead.",
+  null,
   "<b>Weigh the banana.</b> Yours came in at 196g last time, 70 calories more than the recipe means.");
 
 FIXED["banana-skyr-150"].recipe = R(["120g banana, weighed and peeled","150g plain Skyr"], [],
-  "<b>Nothing at 2:30 — she's teaching.</b>",
+  null,
   "The bigger Skyr is here because Friday is the tightest day for protein.");
 
 FIXED["huel-bar"].recipe = R(["One bar, in the bag before you leave"], [], null, null);
@@ -338,14 +342,14 @@ function mealFor(d, slot, who){
     const id = (who === "cheryl" && m.cheryl) ? m.cheryl : m.id;
     const f = FIXED[id]; if (!f) return ZERO;
     let v = f[who] || ZERO;
-    if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_SKYR);
+    if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_ADDON);
     return v;
   }
   if (m.kind === "recipe"){
     const r = recipe(m.id); if (!r) return ZERO;
     if (who === "daughter" && !m.daughter) return ZERO;
     let v = r.plates[who] || ZERO;
-    if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_SKYR);
+    if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_ADDON);
     return v;
   }
   if (m.kind === "leftover"){
@@ -354,7 +358,7 @@ function mealFor(d, slot, who){
     const r = recipe(src.dinner.id); if (!r) return ZERO;
     if (who === "daughter") return ZERO;
     let v = leftoverPlate(r, who);
-    if (who === "cheryl") v = add(v, CHERYL_LUNCH_SKYR);
+    if (who === "cheryl") v = add(v, CHERYL_LUNCH_ADDON);
     return v;
   }
   return ZERO;
@@ -452,6 +456,20 @@ const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot)
     '</option>')
   .join("");
 
+/* Nothing about who eats what should have to be inferred from an absence. */
+function slotNote(d, slot){
+  if (!d.diners.includes("cheryl")) return "";
+  if (slot === "afternoon")
+    return '<p class="note"><b>Yours only.</b> Cheryl is teaching at 2:30, so her Skyr and ' +
+           'banana go with her lunch instead. Nothing here for her.</p>';
+  if (slot === "lunch")
+    return '<p class="note"><b>Cheryl has ' + CHERYL_LUNCH_ADDON.label + ' with this</b>, ' +
+           'on top of whatever the lunch is — her 2:30 feed, moved because she is teaching. ' +
+           'Already counted in her figures and already on the shopping list.</p>';
+  return "";
+}
+const closeCard = (h, d, slot) => h + slotNote(d, slot) + '</div>';
+
 function mealCard(d, slot){
   const m = d[slot];
   const label = slot === "afternoon" ? "2:30" : slot[0].toUpperCase() + slot.slice(1);
@@ -459,14 +477,14 @@ function mealCard(d, slot){
 
   if (typeof m === "string"){
     const f = FIXED[m];
-    return h + '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f) + '</div>';
+    return closeCard(h + '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f), d, slot);
   }
   if (m.kind === "fixed"){
     const f = FIXED[m.id];
     h += '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f);
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
-    return h + '</div>';
+    return closeCard(h, d, slot);
   }
   if (m.kind === "leftover"){
     const src = day(m.from);
@@ -502,7 +520,7 @@ function mealCard(d, slot){
         (left < need ? ' <b>Not enough — raise ' + src.label + "'s portions.</b>" : '') + '</p>';
     }
     h += '<p class="note">Follows whatever ' + (src ? src.label : "that day") + "'s dinner ends up being.</p>";
-    return h + '</div>';
+    return closeCard(h, d, slot);
   }
 
   const r = recipe(m.id);
@@ -562,7 +580,7 @@ function mealCard(d, slot){
     h += '</div></details>';
   }
 
-  return h + '</div>';
+  return closeCard(h, d, slot);
 }
 
 function fixedRecipe(f){
