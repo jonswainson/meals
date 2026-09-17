@@ -78,6 +78,15 @@
     margin:13px 0 0;font-weight:700}
   .ing li{margin:3px 0}
   .ing i{font-style:normal;opacity:.7;font-size:.92em}
+  .splitwrap{overflow-x:auto;margin-top:9px}
+  table.split{width:100%;border-collapse:collapse;font-size:.85rem}
+  table.split th,table.split td{text-align:right;padding:6px 5px;border-bottom:1px solid var(--line);
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  table.split th:first-child,table.split td:first-child{text-align:left;white-space:normal;
+    color:var(--muted);font-variant-numeric:normal}
+  table.split thead th{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--muted);font-weight:700}
+  table.split tbody td b{color:var(--fg)}
   details.more{margin-top:12px}
   /* summary stays display:block — iOS Safari stops toggling it if it becomes a flex box */
   details.more summary{cursor:pointer;list-style:none;font-size:.9rem;color:var(--accent);
@@ -639,8 +648,17 @@ function mealCard(d, slot){
       h += '</ul>';
       if (r.plateSpec.note) h += '<p class="note">' + r.plateSpec.note + '</p>';
     }
-    h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' +
-      r.ingredients.map(i => i.item + ' — ' + i.grams + (i.packUnit === "ml" ? "ml" : "g") +
+    h += splitBlock(r, d.diners.includes("daughter") && m.daughter);
+
+    /* the list has to be what THIS cook needs, not what the recipe's base batch needs */
+    const sc = m.portions / r.basePortions;
+    const amt = g => { const v = g * sc; return v >= 10 ? Math.round(v) : Math.round(v*10)/10; };
+    h += '<h3 class="rh">Ingredients</h3>' +
+      (sc !== 1 ? '<p class="note">Scaled to <b>' + m.portions + ' portion' +
+        (m.portions === 1 ? '' : 's') + '</b> \u2014 the recipe is written for ' + r.basePortions +
+        '. <b>The method below still quotes the full recipe\'s weights</b>, so follow these.</p>' : '') +
+      '<ul class="ing"><li>' +
+      r.ingredients.map(i => i.item + ' — ' + amt(i.grams) + (i.packUnit === "ml" ? "ml" : "g") +
         state(i) + (i.note ? ', ' + i.note : '') +
         (i.assumed ? ' <i>· quantity estimated</i>' : '')).join('</li><li>') + '</li></ul>';
     if ((r.method||[]).length)
@@ -664,6 +682,39 @@ function fixedRecipe(f){
     h += '<h3 class="rh">Method</h3><ol class="ing"><li>' + r.method.join('</li><li>') + '</li></ol>';
   if (r.note)   h += '<p class="note">' + r.note + '</p>';
   if (r.cheryl) h += '<p class="note"><b>Cheryl:</b> ' + r.cheryl + '</p>';
+  return h;
+}
+
+/* Who gets how much. One-pot dishes are served by weight out of the pan; assembled
+   ones are split component by component. Derived rows are marked - see plateSplit. */
+function splitBlock(r, eats){
+  const s = r.plateSplit; if (!s) return "";
+  const who = [["jon","You"],["cheryl","Cheryl"],["daughter","Daughter"]]
+    .filter(([k]) => s.grams[k] !== undefined && (k !== "daughter" || eats));
+  if (!who.length) return "";
+  let h = '<h3 class="rh">How much each</h3>';
+  if (s.servedByWeight){
+    h += '<ul class="ing"><li>' + who.map(([k,lab]) =>
+      '<b>' + lab + ' \u2014 ' + s.grams[k] + 'g</b> onto the plate').join('</li><li>') + '</li></ul>';
+    return h + '<p class="note">Served as one thing \u2014 weigh the plate rather than counting ' +
+           'components. Where the recipe adds bread or a spoon of something alongside, that is ' +
+           'inside these weights.</p>';
+  }
+  if (!(s.components || []).length) return "";   /* the plates block above already spells it out */
+  h += '<div class="splitwrap"><table class="split"><thead><tr><th></th>' +
+       who.map(([,lab]) => '<th>' + lab + '</th>').join('') + '</tr></thead><tbody>';
+  s.components.forEach(c => {
+    h += '<tr><td>' + c.item.split(",")[0] + '</td>' +
+         who.map(([k]) => '<td>' + (c[k] ? '<b>' + c[k] + '</b>g' : '\u2014') + '</td>').join('') +
+         '</tr>';
+  });
+  h += '<tr><td>On the plate</td>' + who.map(([k]) =>
+         '<td>' + s.grams[k] + 'g</td>').join('') + '</tr></tbody></table></div>';
+  const src = s.source === "stated" ? '.'
+    : s.source === "part-stated"
+      ? '. Some are the recipe\'s own; <b>the rest are derived</b> from each plate\'s macros.'
+      : '. <b>All derived</b> from each plate\'s macros \u2014 the recipe never stated a split.';
+  h += '<p class="note">Raw and dry weights, as everywhere else' + src + '</p>';
   return h;
 }
 

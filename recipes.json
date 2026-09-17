@@ -1,5 +1,5 @@
 {
- "version": "2026-09-17e",
+ "version": "2026-09-17g",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -216,7 +216,74 @@
      "tone": "hot",
      "text": "Eat the leftovers cold, in a wrap or over salad. Reheating toughens the chicken and turns the peppers limp."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 624,
+     "cheryl": 443,
+     "daughter": 335
+    },
+    "components": [
+     {
+      "item": "Chicken breast, raw",
+      "jon": 240,
+      "cheryl": 150,
+      "daughter": 205,
+      "derived": true
+     },
+     {
+      "item": "Red and yellow peppers",
+      "jon": 170,
+      "cheryl": 120,
+      "daughter": 90,
+      "derived": true
+     },
+     {
+      "item": "Onions",
+      "jon": 80,
+      "cheryl": 55,
+      "daughter": 45,
+      "derived": true
+     },
+     {
+      "item": "Wholemeal wraps",
+      "jon": 95,
+      "cheryl": 70,
+      "daughter": 50,
+      "derived": true
+     },
+     {
+      "item": "Cheddar, grated",
+      "jon": 25,
+      "cheryl": 20,
+      "daughter": 15,
+      "derived": true
+     },
+     {
+      "item": "Salsa",
+      "jon": 40,
+      "cheryl": 30,
+      "daughter": 20,
+      "derived": true
+     },
+     {
+      "item": "Black beans, tinned",
+      "jon": 65,
+      "cheryl": 45,
+      "daughter": 35,
+      "derived": true
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 25,
+      "cheryl": 15,
+      "daughter": 20,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "bolognese-hidden-lentils",
@@ -422,7 +489,15 @@
      "tone": "go",
      "text": "It reheats better than the day it was made."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 677,
+     "cheryl": 480,
+     "daughter": 566
+    }
+   }
   },
   {
    "id": "loaded-jacket-potatoes",
@@ -580,7 +655,67 @@
      "tone": "hot",
      "text": "Cook only the number you will eat. A reheated jacket goes leathery."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 700,
+     "cheryl": 500,
+     "daughter": 435
+    },
+    "components": [
+     {
+      "item": "Baking potatoes",
+      "jon": 355,
+      "cheryl": 250,
+      "daughter": 220,
+      "derived": true
+     },
+     {
+      "item": "Tuna in spring water, tinned",
+      "jon": 45,
+      "cheryl": 35,
+      "daughter": 30,
+      "derived": true
+     },
+     {
+      "item": "Sweetcorn, tinned",
+      "jon": 35,
+      "cheryl": 25,
+      "daughter": 20,
+      "derived": true
+     },
+     {
+      "item": "Baked beans",
+      "jon": 130,
+      "cheryl": 90,
+      "daughter": 80,
+      "derived": true
+     },
+     {
+      "item": "Cheddar, grated",
+      "jon": 25,
+      "cheryl": 20,
+      "daughter": 15,
+      "derived": true
+     },
+     {
+      "item": "Cottage cheese",
+      "jon": 95,
+      "cheryl": 70,
+      "daughter": 35,
+      "derived": true
+     },
+     {
+      "item": "Salad leaves",
+      "jon": 45,
+      "cheryl": 30,
+      "daughter": 25,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "harissa-chicken-chickpeas",
@@ -734,7 +869,60 @@
      "tone": "plain",
      "text": "Good either way the next day: it reheats well and is arguably better cold as a salad with lemon."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 480,
+     "cheryl": 545,
+     "daughter": 385
+    },
+    "components": [
+     {
+      "item": "Chicken thighs, skinless boneless",
+      "jon": 235,
+      "cheryl": 190,
+      "daughter": 175,
+      "derived": true
+     },
+     {
+      "item": "Chickpeas, tinned",
+      "jon": 100,
+      "cheryl": 110,
+      "daughter": 80,
+      "derived": true
+     },
+     {
+      "item": "Peppers",
+      "jon": 165,
+      "cheryl": 185,
+      "daughter": 130,
+      "derived": true
+     },
+     {
+      "item": "Red onions",
+      "jon": 60,
+      "cheryl": 70,
+      "daughter": 50,
+      "derived": true
+     },
+     {
+      "item": "Harissa",
+      "jon": 20,
+      "cheryl": 20,
+      "daughter": 15,
+      "derived": true
+     },
+     {
+      "item": "Spinach",
+      "jon": 50,
+      "cheryl": 60,
+      "daughter": 40,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "turkey-black-bean-chilli",
@@ -933,7 +1121,15 @@
      "tone": "hot",
      "text": "The black and kidney beans are visible and cannot be lifted out, so the daughter's plate here is untested."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 750,
+     "cheryl": 560,
+     "daughter": 510
+    }
+   }
   },
   {
    "id": "baked-salmon-lentils",
@@ -1083,7 +1279,46 @@
      "tone": "hot",
      "text": "The leftovers go cold, flaked through the lentils as a salad. Not reheated."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 400,
+     "cheryl": 368,
+     "daughter": 254
+    },
+    "components": [
+     {
+      "item": "Salmon fillets, raw",
+      "jon": 200,
+      "cheryl": 150,
+      "daughter": 160,
+      "derived": true
+     },
+     {
+      "item": "Green lentils, tinned",
+      "jon": 115,
+      "cheryl": 105,
+      "daughter": 70,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 115,
+      "cheryl": 110,
+      "daughter": 75,
+      "derived": true
+     },
+     {
+      "item": "Spinach or kale",
+      "jon": 45,
+      "cheryl": 45,
+      "daughter": 30,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "chicken-pepper-potato-traybake",
@@ -1252,7 +1487,60 @@
      "tone": "plain",
      "text": "Good cold the next day, sliced over salad. Reheating dries the breast."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 700,
+     "cheryl": 580,
+     "daughter": 530
+    },
+    "components": [
+     {
+      "item": "Chicken breast, raw",
+      "jon": 235,
+      "cheryl": 165,
+      "daughter": 200,
+      "derived": true
+     },
+     {
+      "item": "New potatoes",
+      "jon": 230,
+      "cheryl": 190,
+      "daughter": 175,
+      "derived": true
+     },
+     {
+      "item": "Peppers",
+      "jon": 185,
+      "cheryl": 155,
+      "daughter": 140,
+      "derived": true
+     },
+     {
+      "item": "Red onions",
+      "jon": 60,
+      "cheryl": 50,
+      "daughter": 45,
+      "derived": true
+     },
+     {
+      "item": "Butter beans",
+      "jon": 95,
+      "cheryl": 75,
+      "daughter": 70,
+      "derived": true
+     },
+     {
+      "item": "Tenderstem broccoli",
+      "jon": 75,
+      "cheryl": 65,
+      "daughter": 60,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "honey-glazed-chicken-wedges",
@@ -1424,7 +1712,46 @@
      "tone": "plain",
      "text": "Good cold the next day, sliced, with the wedges left behind. Reheated wedges go soft."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "part-stated",
+    "grams": {
+     "jon": 562,
+     "cheryl": 393,
+     "daughter": 403
+    },
+    "components": [
+     {
+      "item": "Chicken thighs, skinless boneless",
+      "jon": 245,
+      "cheryl": 165,
+      "daughter": 240,
+      "derived": true
+     },
+     {
+      "item": "Potatoes",
+      "jon": 200,
+      "cheryl": 130,
+      "daughter": 170,
+      "derived": true
+     },
+     {
+      "item": "Asparagus",
+      "jon": 100,
+      "cheryl": 70,
+      "daughter": 70,
+      "derived": true
+     },
+     {
+      "item": "Frozen edamame",
+      "jon": 80,
+      "cheryl": 60,
+      "daughter": 0,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "salmon-roasted-veg-traybake",
@@ -1595,7 +1922,67 @@
      "tone": "plain",
      "text": "Cold the next day, flaked through the vegetables with lemon. Not reheated."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 620,
+     "cheryl": 540,
+     "daughter": 384
+    },
+    "components": [
+     {
+      "item": "Salmon fillets, raw",
+      "jon": 210,
+      "cheryl": 160,
+      "daughter": 170,
+      "derived": true
+     },
+     {
+      "item": "Sweet potato",
+      "jon": 240,
+      "cheryl": 210,
+      "daughter": 150,
+      "derived": true
+     },
+     {
+      "item": "Courgette",
+      "jon": 100,
+      "cheryl": 85,
+      "daughter": 60,
+      "derived": true
+     },
+     {
+      "item": "Red onions",
+      "jon": 60,
+      "cheryl": 50,
+      "daughter": 35,
+      "derived": true
+     },
+     {
+      "item": "Asparagus",
+      "jon": 65,
+      "cheryl": 55,
+      "daughter": 40,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 60,
+      "cheryl": 50,
+      "daughter": 35,
+      "derived": true
+     },
+     {
+      "item": "Butter beans",
+      "jon": 95,
+      "cheryl": 85,
+      "daughter": 60,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "baked-meatballs-ciabatta",
@@ -1808,7 +2195,15 @@
      "tone": "plain",
      "text": "The bread is the calories, not the meatballs. One 50g slice of wholemeal ciabatta still wipes the plate, which is the stated point of it."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 591,
+     "cheryl": 475,
+     "daughter": 681
+    }
+   }
   },
   {
    "id": "coconut-chicken-rice",
@@ -1998,7 +2393,46 @@
    ],
    "warnings": [
     "<b>2.1g of salt in the leftover lunch.</b> This is the saltiest plate in the corpus and the tub carries it across. Pair it with a low-salt dinner, not the jacket potato or the soup."
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "part-stated",
+    "grams": {
+     "jon": 472,
+     "cheryl": 353,
+     "daughter": 405
+    },
+    "components": [
+     {
+      "item": "Chicken thighs, skinless boneless",
+      "jon": 240,
+      "cheryl": 170,
+      "daughter": 240,
+      "derived": true
+     },
+     {
+      "item": "Jasmine rice, dry",
+      "jon": 55,
+      "cheryl": 35,
+      "daughter": 50,
+      "derived": true
+     },
+     {
+      "item": "Reduced-fat coconut milk, tinned",
+      "jon": 75,
+      "cheryl": 55,
+      "daughter": 60,
+      "derived": true
+     },
+     {
+      "item": "Choy sum, pak choi or tenderstem",
+      "jon": 150,
+      "cheryl": 140,
+      "daughter": 160,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "spanish-chicken-butter-beans",
@@ -2155,7 +2589,15 @@
      "tone": "go",
      "text": "Better the next day — the beans take up the paprika and the chorizo fat overnight."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 690,
+     "cheryl": 589,
+     "daughter": 500
+    }
+   }
   },
   {
    "id": "indian-lentil-shakshuka",
@@ -2347,7 +2789,15 @@
      "tone": "plain",
      "text": "This is the one dish that needs a second pan: poach the daughter two eggs separately. A tin of whole green lentils in a visible curry sauce has nowhere to hide."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 1090,
+     "cheryl": 865,
+     "daughter": 160
+    }
+   }
   },
   {
    "id": "chicken-salad",
@@ -2468,7 +2918,47 @@
      "tone": "plain",
      "text": "At 302 kcal it sits under the 400–550 lunch band. The verified week replaced it with the cooked chicken and butter bean tub."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 375,
+     "cheryl": 281
+    },
+    "components": [
+     {
+      "item": "Cooked chicken breast, pre-packed",
+      "jon": 85,
+      "cheryl": 65,
+      "derived": true
+     },
+     {
+      "item": "Salad leaves",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Cucumber",
+      "jon": 15,
+      "cheryl": 15,
+      "derived": true
+     },
+     {
+      "item": "Mixed beans, tinned",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "prawn-and-skyr",
@@ -2583,7 +3073,53 @@
      "tone": "go",
      "text": "Dairy-free at the savoury end, which is why the Skyr can follow it without repeating itself."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 645,
+     "cheryl": 502
+    },
+    "components": [
+     {
+      "item": "Ready-cooked king prawns",
+      "jon": 115,
+      "cheryl": 85,
+      "derived": true
+     },
+     {
+      "item": "Salad leaves",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Cucumber",
+      "jon": 30,
+      "cheryl": 20,
+      "derived": true
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 115,
+      "cheryl": 85,
+      "derived": true
+     },
+     {
+      "item": "Frozen raspberries",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "tuna-chickpea-salad",
@@ -2695,7 +3231,47 @@
      "tone": "plain",
      "text": "Half a tin of chickpeas is doing most of the fibre here, and it is a store-cupboard lunch on purpose."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 420,
+     "cheryl": 346
+    },
+    "components": [
+     {
+      "item": "Tuna in spring water, tinned",
+      "jon": 60,
+      "cheryl": 50,
+      "derived": true
+     },
+     {
+      "item": "Chickpeas, tinned",
+      "jon": 65,
+      "cheryl": 55,
+      "derived": true
+     },
+     {
+      "item": "Salad leaves",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Cucumber",
+      "jon": 25,
+      "cheryl": 25,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "convenience-fallback",
@@ -2772,7 +3348,14 @@
      "tone": "plain",
      "text": "This is Cheryl's working-day default. A sealed bottle in a car between driving lessons is an adherence mechanism, not a nutritional choice."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 850,
+     "cheryl": 500
+    }
+   }
   },
   {
    "id": "roast-broccoli-soup-halloumi",
@@ -2932,7 +3515,14 @@
      "tone": "plain",
      "text": "Halloumi is the chorizo of this recipe — about 15 calories per gram of protein. 60g still gives you four or five croutons, which is all you want."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 710,
+     "cheryl": 650
+    }
+   }
   },
   {
    "id": "smoky-chicken-chickpea-braise",
@@ -3128,7 +3718,14 @@
      "tone": "go",
      "text": "The browning and the lemon are load-bearing and the salt is not. Searing makes you read a dish as savoury; acid at the end makes you read it as seasoned."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 654,
+     "cheryl": 606
+    }
+   }
   },
   {
    "id": "tuna-butter-bean-fennel-tub",
@@ -3272,7 +3869,47 @@
      "tone": "plain",
      "text": "No added salt anywhere — the tuna and the capers are carrying it."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 600,
+     "cheryl": 526
+    },
+    "components": [
+     {
+      "item": "Tuna in spring water, tinned",
+      "jon": 175,
+      "cheryl": 155,
+      "derived": true
+     },
+     {
+      "item": "Butter beans",
+      "jon": 160,
+      "cheryl": 140,
+      "derived": true
+     },
+     {
+      "item": "Fennel",
+      "jon": 85,
+      "cheryl": 75,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 105,
+      "cheryl": 95,
+      "derived": true
+     },
+     {
+      "item": "Red onions",
+      "jon": 25,
+      "cheryl": 25,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "pitta-poached-chicken-slaw",
@@ -3415,7 +4052,59 @@
      "tone": "plain",
      "text": "170g is the raw weight of the chicken, poached or roasted the night before. Roast 750g of breast on Sunday and this is Tuesday and Wednesday."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 415,
+     "cheryl": 309
+    },
+    "components": [
+     {
+      "item": "Chicken breast, raw",
+      "jon": 100,
+      "cheryl": 70,
+      "derived": true
+     },
+     {
+      "item": "Wholemeal pitta",
+      "jon": 35,
+      "cheryl": 30,
+      "derived": true
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 30,
+      "cheryl": 20,
+      "derived": true
+     },
+     {
+      "item": "Red cabbage",
+      "jon": 45,
+      "cheryl": 35,
+      "derived": true
+     },
+     {
+      "item": "Carrots",
+      "jon": 25,
+      "cheryl": 15,
+      "derived": true
+     },
+     {
+      "item": "Red onions",
+      "jon": 10,
+      "cheryl": 10,
+      "derived": true
+     },
+     {
+      "item": "Rocket or watercress",
+      "jon": 10,
+      "cheryl": 10,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "dip-box",
@@ -3586,7 +4275,59 @@
      "tone": "plain",
      "text": "280g of raw vegetables, which is more than any other lunch here carries."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 575,
+     "cheryl": 446
+    },
+    "components": [
+     {
+      "item": "Chicken breast, raw",
+      "jon": 95,
+      "cheryl": 65,
+      "derived": true
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 70,
+      "cheryl": 50,
+      "derived": true
+     },
+     {
+      "item": "Rye crispbread",
+      "jon": 15,
+      "cheryl": 10,
+      "derived": true
+     },
+     {
+      "item": "Cucumber",
+      "jon": 45,
+      "cheryl": 35,
+      "derived": true
+     },
+     {
+      "item": "Carrots",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Red peppers",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 45,
+      "cheryl": 35,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "mackerel-beetroot-barley-tub",
@@ -3739,7 +4480,59 @@
      "tone": "plain",
      "text": "Batch the barley on Sunday, not the tub. 150g dry keeps five days."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 618,
+     "cheryl": 497
+    },
+    "components": [
+     {
+      "item": "Mackerel fillets in spring water, tinned",
+      "jon": 60,
+      "cheryl": 45,
+      "derived": true
+     },
+     {
+      "item": "Pearl barley, dry",
+      "jon": 15,
+      "cheryl": 15,
+      "derived": true
+     },
+     {
+      "item": "Cooked beetroot",
+      "jon": 65,
+      "cheryl": 55,
+      "derived": true
+     },
+     {
+      "item": "Cucumber",
+      "jon": 45,
+      "cheryl": 35,
+      "derived": true
+     },
+     {
+      "item": "Red onions",
+      "jon": 10,
+      "cheryl": 10,
+      "derived": true
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 80,
+      "cheryl": 70,
+      "derived": true
+     },
+     {
+      "item": "Rocket",
+      "jon": 10,
+      "cheryl": 10,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "tortilla-chicken-piquillo",
@@ -3922,7 +4715,59 @@
      "tone": "go",
      "text": "The jarred peppers are 0.6g of the plate's 1.8g of salt. Peppers you roast yourself take it to 1.2g."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 511,
+     "cheryl": 390
+    },
+    "components": [
+     {
+      "item": "Eggs",
+      "jon": 125,
+      "cheryl": 95,
+      "derived": true
+     },
+     {
+      "item": "Waxy potatoes",
+      "jon": 140,
+      "cheryl": 110,
+      "derived": true
+     },
+     {
+      "item": "Onions",
+      "jon": 45,
+      "cheryl": 30,
+      "derived": true
+     },
+     {
+      "item": "Jarred roasted red peppers",
+      "jon": 45,
+      "cheryl": 30,
+      "derived": true
+     },
+     {
+      "item": "Chicken breast, raw",
+      "jon": 140,
+      "cheryl": 110,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 70,
+      "cheryl": 50,
+      "derived": true
+     },
+     {
+      "item": "Rocket",
+      "jon": 20,
+      "cheryl": 15,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "egg-fried-brown-rice-prawns",
@@ -4129,7 +4974,15 @@
      "tone": "hot",
      "text": "Cool it fast and fridge within the hour. Reheat once, piping hot, and not in a flask."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 652,
+     "cheryl": 473,
+     "daughter": 535
+    }
+   }
   },
   {
    "id": "smoked-haddock-egg-kedgeree",
@@ -4343,7 +5196,15 @@
      "tone": "hot",
      "text": "The base reheats; the eggs do not. Reheat the rice and fish piping hot and boil a fresh egg."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 554,
+     "cheryl": 412,
+     "daughter": 472
+    }
+   }
   },
   {
    "id": "crumbed-cod-crushed-potato",
@@ -4583,7 +5444,17 @@
      "tone": "plain",
      "text": "The crumb is doing the salt as well as the crunch, which is why the fish itself needs none."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "stated",
+    "fromSpec": true,
+    "grams": {
+     "jon": 640,
+     "cheryl": 459,
+     "daughter": 428
+    }
+   }
   },
   {
    "id": "cod-cannellini-leek-braise",
@@ -4778,7 +5649,15 @@
      "tone": "plain",
      "text": "The daughter's beans go alongside rather than under, with nothing stirred together — the same principle the Spanish chicken already uses."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 630,
+     "cheryl": 528,
+     "daughter": 418
+    }
+   }
   },
   {
    "id": "sardine-fennel-ragu",
@@ -5009,7 +5888,15 @@
      "tone": "go",
      "text": "The sauce is better on day two; the pasta is not. Keep the sauce separate and cook fresh spaghetti, or eat it cold as a pasta salad with extra lemon."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 637,
+     "cheryl": 500,
+     "daughter": 507
+    }
+   }
   },
   {
    "id": "piri-piri-chicken-crushed-potato",
@@ -5230,7 +6117,17 @@
      "tone": "plain",
      "text": "Cold is genuinely better the next day; the marinade keeps developing in the fridge."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "stated",
+    "fromSpec": true,
+    "grams": {
+     "jon": 655,
+     "cheryl": 512,
+     "daughter": 484
+    }
+   }
   },
   {
    "id": "prawn-pea-barley-orzotto",
@@ -5425,7 +6322,15 @@
      "tone": "plain",
      "text": "No added salt if you use shell stock — the prawns and the parmesan bring 1.8g."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": true,
+    "grams": {
+     "jon": 548,
+     "cheryl": 442,
+     "daughter": 441
+    }
+   }
   },
   {
    "id": "beef-kofta-bulgur-skyr",
@@ -5650,7 +6555,67 @@
      "tone": "plain",
      "text": "Kofta and sauce reheat better than they cook. A full tub is over the lunch slot, so take about 80% of it."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 611,
+     "cheryl": 539,
+     "daughter": 549
+    },
+    "components": [
+     {
+      "item": "Beef mince, 5%",
+      "jon": 200,
+      "cheryl": 155,
+      "daughter": 170,
+      "derived": true
+     },
+     {
+      "item": "Onions",
+      "jon": 25,
+      "cheryl": 25,
+      "daughter": 25,
+      "derived": true
+     },
+     {
+      "item": "Passata",
+      "jon": 155,
+      "cheryl": 140,
+      "daughter": 140,
+      "derived": true
+     },
+     {
+      "item": "Red peppers",
+      "jon": 75,
+      "cheryl": 70,
+      "daughter": 70,
+      "derived": true
+     },
+     {
+      "item": "Spinach",
+      "jon": 50,
+      "cheryl": 45,
+      "daughter": 45,
+      "derived": true
+     },
+     {
+      "item": "Bulgur wheat, dry",
+      "jon": 45,
+      "cheryl": 40,
+      "daughter": 40,
+      "derived": true
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 85,
+      "cheryl": 65,
+      "daughter": 70,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "chicken-butter-bean-tub",
@@ -5758,7 +6723,47 @@
      "tone": "go",
      "text": "The butter beans are what make this a lunch rather than a salad — fibre and satiety, not protein, and they are the cheapest of both in the shop."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 502,
+     "cheryl": 418
+    },
+    "components": [
+     {
+      "item": "Cooked chicken breast, pre-packed",
+      "jon": 170,
+      "cheryl": 130,
+      "derived": true
+     },
+     {
+      "item": "Butter beans",
+      "jon": 140,
+      "cheryl": 120,
+      "derived": true
+     },
+     {
+      "item": "Salad leaves",
+      "jon": 65,
+      "cheryl": 55,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 65,
+      "cheryl": 55,
+      "derived": true
+     },
+     {
+      "item": "Cucumber",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     }
+    ]
+   }
   },
   {
    "id": "prawn-butter-bean-salad",
@@ -5876,7 +6881,53 @@
      "tone": "go",
      "text": "The whipped Skyr is the dressing rather than a garnish, which is what lets this carry its protein without any oil-heavy mayonnaise."
     }
-   ]
+   ],
+   "plateSplit": {
+    "servedByWeight": false,
+    "source": "derived",
+    "grams": {
+     "jon": 562,
+     "cheryl": 438
+    },
+    "components": [
+     {
+      "item": "King prawns, ready-cooked",
+      "jon": 200,
+      "cheryl": 150,
+      "derived": true
+     },
+     {
+      "item": "Butter beans",
+      "jon": 145,
+      "cheryl": 115,
+      "derived": true
+     },
+     {
+      "item": "Salad leaves",
+      "jon": 65,
+      "cheryl": 55,
+      "derived": true
+     },
+     {
+      "item": "Cherry tomatoes",
+      "jon": 55,
+      "cheryl": 45,
+      "derived": true
+     },
+     {
+      "item": "Cucumber",
+      "jon": 35,
+      "cheryl": 25,
+      "derived": true
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 145,
+      "cheryl": 105,
+      "derived": true
+     }
+    ]
+   }
   }
  ],
  "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8."
