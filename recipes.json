@@ -1,5 +1,5 @@
 {
- "version": "2026-09-15e",
+ "version": "2026-09-17a",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -182,7 +182,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "good",
-    "note": "eat cold in a wrap or over salad; reheating toughens the chicken"
+    "note": "eat cold in a wrap or over salad; reheating toughens the chicken",
+    "portions": {
+     "jon": {
+      "grams": 520,
+      "kcal": 502,
+      "protein": 54.2,
+      "fibre": 12.2,
+      "salt": 1.38,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 395,
+      "kcal": 385,
+      "protein": 36.6,
+      "fibre": 9.3,
+      "salt": 1.15,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Get the pan properly hot before anything goes in, then the chicken in a single layer — <b>don't crowd it or it steams instead of colouring</b>. At this quantity that is two batches, 6 minutes each.",
@@ -365,7 +383,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "note": "reheats better than day one"
+    "note": "reheats better than day one",
+    "portions": {
+     "jon": {
+      "grams": 480,
+      "kcal": 501,
+      "protein": 39.6,
+      "fibre": 9.1,
+      "salt": 0.97,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 380,
+      "kcal": 386,
+      "protein": 31.6,
+      "fibre": 6.7,
+      "salt": 0.79,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Onion and grated carrot into the oil for 6 minutes, then the garlic for one minute more.",
@@ -660,7 +696,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "good",
-    "note": "good hot or cold with lemon"
+    "note": "good hot or cold with lemon",
+    "portions": {
+     "jon": {
+      "grams": 455,
+      "kcal": 499,
+      "protein": 49.1,
+      "fibre": 10.2,
+      "salt": 1.18,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 455,
+      "kcal": 385,
+      "protein": 34.7,
+      "fibre": 9.0,
+      "salt": 0.99,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Oven to 200°C. Toss everything except the spinach and the lemon across <b>two roasting trays — two isn't optional, nothing browns in a crowded one</b>.",
@@ -840,11 +894,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 507,
-    "jonProtein": 49.6,
-    "jonFibre": 13.9,
-    "jonSalt": 1.71,
-    "note": "590g tub; ~720g of the batch is left over after two dinners and two lunches - freeze it"
+    "note": "590g tub; ~720g of the batch is left over after two dinners and two lunches - freeze it",
+    "portions": {
+     "jon": {
+      "grams": 590,
+      "kcal": 507,
+      "protein": 49.6,
+      "fibre": 13.9,
+      "salt": 1.71,
+      "source": "costed"
+     },
+     "cheryl": {
+      "grams": 450,
+      "kcal": 386,
+      "protein": 37.9,
+      "fibre": 10.6,
+      "salt": 1.33,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Onion and peppers into the oil for 5 minutes. Garlic and spices for one minute — <b>the spices need dry heat before any liquid</b>.",
@@ -980,7 +1048,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "good",
-    "note": "cold, flaked through the lentils - not reheated"
+    "note": "cold, flaked through the lentils - not reheated",
+    "portions": {
+     "jon": {
+      "grams": 380,
+      "kcal": 498,
+      "protein": 41.8,
+      "fibre": 6.1,
+      "salt": 0.88,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 350,
+      "kcal": 386,
+      "protein": 30.8,
+      "fibre": 6.1,
+      "salt": 0.84,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Oven to 200°C. Tomatoes, garlic and oil into a dish for 10 minutes, until they start to burst.",
@@ -1664,11 +1750,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 546,
-    "jonProtein": 52.3,
-    "jonFibre": 7.6,
-    "jonSalt": 1.49,
-    "note": "one portion without the bread"
+    "note": "one portion without the bread",
+    "portions": {
+     "jon": {
+      "grams": 550,
+      "kcal": 546,
+      "protein": 52.3,
+      "fibre": 7.6,
+      "salt": 1.49,
+      "source": "costed"
+     },
+     "cheryl": {
+      "grams": 380,
+      "kcal": 383,
+      "protein": 36.8,
+      "fibre": 5.3,
+      "salt": 1.05,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Brown the ready-made meatballs — about 750g — in the oil in an ovenproof pan, turning them until they have colour on most sides, then set them aside. <b>No salt goes in anywhere in this dish</b>: ready-made meatballs carry roughly 1.0–1.3g of salt per 100g against 0.1g for plain mince, so the 1.5g that used to be weighed into the mince and the 0.5g into the sauce are both gone.",
@@ -2731,7 +2831,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "note": "6 portions from one cook, ~450g each. Freezes because there is no dairy in the base - that is why the Skyr goes in at the bowl. THE SALT IS THE PROBLEM: 4.4g a bowl, eaten two or three times a week, against a 6g day"
+    "note": "6 portions from one cook, ~450g each. Freezes because there is no dairy in the base - that is why the Skyr goes in at the bowl. THE SALT IS THE PROBLEM: 4.4g a bowl, eaten two or three times a week, against a 6g day",
+    "portions": {
+     "jon": {
+      "grams": 640,
+      "kcal": 499,
+      "protein": 42.5,
+      "fibre": 7.2,
+      "salt": 4.06,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 550,
+      "kcal": 384,
+      "protein": 31.6,
+      "fibre": 6.8,
+      "salt": 3.31,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Oven to 200°C. Broccoli on trays in a single layer, sprayed, 15 minutes — two trays at this quantity. <b>This step is the entire recipe</b>: roasted broccoli soup and boiled broccoli soup are different foods, and only one of them is worth eating.",
@@ -2914,7 +3032,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "note": "it IS the next day - 4 portions from one cook. Flask scalded with boiling water and filled above 75C holds above 60C to 1pm"
+    "note": "it IS the next day - 4 portions from one cook. Flask scalded with boiling water and filled above 75C holds above 60C to 1pm",
+    "portions": {
+     "jon": {
+      "grams": 615,
+      "kcal": 499,
+      "protein": 48.0,
+      "fibre": 13.2,
+      "salt": 1.69,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 525,
+      "kcal": 384,
+      "protein": 32.9,
+      "fibre": 12.1,
+      "salt": 1.47,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Oil into a wide pan over high heat, chicken in one layer — two batches at this quantity, <b>4 minutes a side without moving it</b>. This browning is most of the flavour and it is the step people skip. Out onto a plate.",
@@ -3689,7 +3825,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "note": "a cold wedge in a tub is a complete travel lunch - a tortilla is designed to be eaten at room temperature. 4 portions, 3 eaters"
+    "note": "a cold wedge in a tub is a complete travel lunch - a tortilla is designed to be eaten at room temperature. 4 portions, 3 eaters",
+    "portions": {
+     "jon": {
+      "grams": 490,
+      "kcal": 500,
+      "protein": 46.9,
+      "fibre": 5.7,
+      "salt": 1.73,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 380,
+      "kcal": 386,
+      "protein": 36.1,
+      "fibre": 4.5,
+      "salt": 1.27,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Oil in the pan on medium-low. Potatoes and onion in with 1.5g of the weighed salt, <b>lid on, 15 minutes, stirred gently twice</b>. You are steaming them soft, not frying them crisp — a tortilla potato should collapse slightly under the fork, and if it colours the heat is too high.",
@@ -3874,7 +4028,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "good",
-    "note": "a full tub is 671 kcal and 58g protein, over the lunch slot - take three-quarters. COOL IT FAST and fridge within the hour; reheat once, piping hot, and not in a flask"
+    "note": "a full tub is 671 kcal and 58g protein, over the lunch slot - take three-quarters. COOL IT FAST and fridge within the hour; reheat once, piping hot, and not in a flask",
+    "portions": {
+     "jon": {
+      "grams": 455,
+      "kcal": 500,
+      "protein": 45.6,
+      "fibre": 8.9,
+      "salt": 1.12,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 375,
+      "kcal": 383,
+      "protein": 35.0,
+      "fibre": 7.8,
+      "salt": 0.87,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "<b>The rice must be cold and dry.</b> Cook the brown basmati the night before, spread it on a tray and fridge it uncovered. Hot rice steams and you get risotto — this is the single thing that separates egg-fried rice from wet rice with egg in it.",
@@ -4070,7 +4242,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "good",
-    "note": "the base reheats; the eggs do not. Reheat the rice and fish piping hot and boil a fresh egg. Rice rules apply"
+    "note": "the base reheats; the eggs do not. Reheat the rice and fish piping hot and boil a fresh egg. Rice rules apply",
+    "portions": {
+     "jon": {
+      "grams": 405,
+      "kcal": 501,
+      "protein": 46.1,
+      "fibre": 7.5,
+      "salt": 1.46,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 325,
+      "kcal": 386,
+      "protein": 36.9,
+      "fibre": 7.0,
+      "salt": 1.26,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Eggs into boiling water for <b>7 minutes exactly</b>, then straight into cold water. Seven minutes gives a yolk set at the edge and still fudgy in the middle, which is what makes kedgeree taste rich; nine gives a grey ring and a dry crumb.",
@@ -4273,11 +4463,32 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 566,
-    "jonProtein": 46.8,
-    "jonFibre": 11.7,
-    "jonSalt": 1.71,
-    "note": "the fifth loin flaked through the leftover potato and peas while both are still warm, plus oil, lemon, capers, onion and rocket. Eaten COLD - reheating cod is the wrong answer"
+    "note": "the fifth loin flaked through the leftover potato and peas while both are still warm, plus oil, lemon, capers, onion and rocket. Eaten COLD - reheating cod is the wrong answer",
+    "portions": {
+     "jon": {
+      "grams": 585,
+      "kcal": 566,
+      "protein": 46.8,
+      "fibre": 11.7,
+      "salt": 1.71,
+      "source": "costed",
+      "overBand": {
+       "grams": 515,
+       "kcal": 499,
+       "protein": 42.8,
+       "fibre": 12.1,
+       "salt": 1.34
+      }
+     },
+     "cheryl": {
+      "grams": 375,
+      "kcal": 386,
+      "protein": 33.9,
+      "fibre": 9.9,
+      "salt": 1.07,
+      "source": "derived"
+     }
+    }
    },
    "warnings": [
     "<b>Unsmoked haddock only.</b> Smoked runs 1.9–3.05g of salt per 100g — a 200g portion is 3.8–6.1g, which is the whole day's ceiling in one dinner.",
@@ -4465,11 +4676,25 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 417,
-    "jonProtein": 51.1,
-    "jonFibre": 13.4,
-    "jonSalt": 1.4,
-    "note": "a tubbed portion without the bread, 441g. Cold or barely warmed - hard microwaving turns cod to cotton wool"
+    "note": "a tubbed portion without the bread, 441g. Cold or barely warmed - hard microwaving turns cod to cotton wool",
+    "portions": {
+     "jon": {
+      "grams": 565,
+      "kcal": 417,
+      "protein": 51.1,
+      "fibre": 13.4,
+      "salt": 1.4,
+      "source": "costed"
+     },
+     "cheryl": {
+      "grams": 515,
+      "kcal": 383,
+      "protein": 42.6,
+      "fibre": 13.1,
+      "salt": 1.46,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Oil in a wide pan. Leek and fennel with the lid on for 8 minutes on medium-low until completely soft and sweet. <b>They must not colour</b> — this is the sweet base the whole dish sits on, and browned leek tastes of something else entirely.",
@@ -4690,7 +4915,17 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "good",
-    "note": "the sauce is better on day two; the pasta is not. Keep the sauce separate and cook fresh, or eat it cold as a pasta salad with extra lemon"
+    "note": "the sauce is better on day two; the pasta is not. Keep the sauce separate and cook fresh, or eat it cold as a pasta salad with extra lemon",
+    "portions": {
+     "jon": {
+      "source": "not-scalable",
+      "why": "The pasta is cooked fresh and only the sauce is kept, so the tub is not a smaller copy of the plate. Weigh the sauce, cook pasta to it."
+     },
+     "cheryl": {
+      "source": "not-scalable",
+      "why": "The pasta is cooked fresh and only the sauce is kept, so the tub is not a smaller copy of the plate. Weigh the sauce, cook pasta to it."
+     }
+    }
    },
    "method": [
     "Pangrattato first, in a dry pan you will reuse: breadcrumbs and 5g of the oil over medium heat, <b>stirred constantly for 4 minutes until deep brown and hard</b>. Lemon zest off the heat, then out into a bowl. This is the crunch and it is the entire reason the dish doesn't feel soft and samey.",
@@ -4877,11 +5112,32 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 559,
-    "jonProtein": 63.7,
-    "jonFibre": 9.9,
-    "jonSalt": 0.95,
-    "note": "full leftover portion is 535g; the chef says take three-quarters of it for a lunch inside slot. Cold is genuinely better - the marinade keeps developing"
+    "note": "full leftover portion is 535g; the chef says take three-quarters of it for a lunch inside slot. Cold is genuinely better - the marinade keeps developing",
+    "portions": {
+     "jon": {
+      "grams": 600,
+      "kcal": 559,
+      "protein": 63.7,
+      "fibre": 9.9,
+      "salt": 0.95,
+      "source": "costed",
+      "overBand": {
+       "grams": 535,
+       "kcal": 500,
+       "protein": 56.4,
+       "fibre": 11.8,
+       "salt": 0.8
+      }
+     },
+     "cheryl": {
+      "grams": 425,
+      "kcal": 386,
+      "protein": 42.2,
+      "fibre": 10.0,
+      "salt": 0.58,
+      "source": "derived"
+     }
+    }
    },
    "warnings": [
     "<b>Scaling past four portions makes it two batches.</b> At five it is ~937g of butterflied breast and ~725g of hispi — \"one tray and one pan, 40 minutes\" stops being true.",
@@ -5070,11 +5326,21 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "different",
-    "jonKcal": 494,
-    "jonProtein": 45,
-    "jonFibre": 15.3,
-    "jonSalt": 1.2,
-    "note": "reheated prawns go to rubber - that is literally why the laksa was dropped. Batch the barley base for 5 and the prawns for 3; the spare base becomes a cold barley salad with a tin of tuna, tomatoes, rocket and lemon. The dinner leaves a lunch, just not the same lunch"
+    "note": "reheated prawns go to rubber - that is literally why the laksa was dropped. Batch the barley base for 5 and the prawns for 3; the spare base becomes a cold barley salad with a tin of tuna, tomatoes, rocket and lemon. The dinner leaves a lunch, just not the same lunch",
+    "portions": {
+     "jon": {
+      "grams": 460,
+      "kcal": 494,
+      "protein": 45,
+      "fibre": 15.3,
+      "salt": 1.2,
+      "source": "costed"
+     },
+     "cheryl": {
+      "source": "not-scalable",
+      "why": "The lunch is a different dish - cold barley salad with tuna - because reheated prawns go to rubber. Her portion has never been built."
+     }
+    }
    },
    "method": [
     "Shell stock first if you can buy the prawns shell-on: shells and heads with half an onion and a bay leaf, simmered 20 minutes. It is free, it takes twenty minutes, and it is the difference between this dish and a bowl of barley. Otherwise water and a reduced-salt cube.",
@@ -5276,11 +5542,32 @@
    "leftover": {
     "leavesLunch": true,
     "quality": "better",
-    "jonKcal": 589,
-    "jonProtein": 59.6,
-    "jonFibre": 14.5,
-    "jonSalt": 1.21,
-    "note": "the best leftover of the three - kofta and sauce reheat better than they cook. 589 kcal is over the lunch slot, so take about 80%, or eat the bulgur cold as a tabbouleh"
+    "note": "the best leftover of the three - kofta and sauce reheat better than they cook. 589 kcal is over the lunch slot, so take about 80%, or eat the bulgur cold as a tabbouleh",
+    "portions": {
+     "jon": {
+      "grams": 605,
+      "kcal": 589,
+      "protein": 59.6,
+      "fibre": 14.5,
+      "salt": 1.21,
+      "source": "costed",
+      "overBand": {
+       "grams": 515,
+       "kcal": 502,
+       "protein": 51.9,
+       "fibre": 11.6,
+       "salt": 1.05
+      }
+     },
+     "cheryl": {
+      "grams": 440,
+      "kcal": 387,
+      "protein": 38.9,
+      "fibre": 9.8,
+      "salt": 0.75,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Mince, the grated and squeezed onion, garlic, spices, herbs and the 2g of weighed salt in a bowl. <b>Mix it hard for a full minute</b> — properly worked mince goes sticky and holds together without egg or breadcrumb, and under-mixed kofta falls apart in the pan. Roll into 16 fat fingers and rest them in the fridge 15 minutes if you have it.",
@@ -5534,5 +5821,6 @@
     }
    ]
   }
- ]
+ ],
+ "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8."
 }

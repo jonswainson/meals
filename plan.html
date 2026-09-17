@@ -360,20 +360,13 @@ function mealFor(d, slot, who){
   return ZERO;
 }
 
-/* A leftover lunch is a smaller portion than the dinner it came from, and some
-   recipes have that costed. Where they do, use it; the dinner plate is not the
-   answer just because it is the number that happens to be to hand. */
+/* A leftover lunch is a weighed portion of the same dish, not the dinner plate.
+   recipes.json carries the weight and the macros for each person; see leftoverMethod. */
+const leftoverPortion = (r, who) => ((r.leftover||{}).portions||{})[who] || null;
 function leftoverPlate(r, who){
-  const lo = r.leftover || {};
-  if (who === "jon" && typeof lo.jonKcal === "number")
-    return {kcal:lo.jonKcal, protein:lo.jonProtein, fibre:lo.jonFibre, salt:lo.jonSalt};
-  return r.plates[who] || ZERO;
+  const x = leftoverPortion(r, who);
+  return (x && x.source !== "not-scalable") ? x : (r.plates[who] || ZERO);
 }
-const leftoverCosted = r => typeof ((r.leftover||{}).jonKcal) === "number";
-/* the costed figure and the note disagree on these: the note says take a fraction,
-   the figure looks like the un-reduced portion. Say so rather than pick one. */
-const leftoverDisputed = r => leftoverCosted(r) &&
-  /three[- ]quarters|\b80%|\bhalf\b/i.test((r.leftover||{}).note || "");
 
 const dayTotal = (d, who) => d.free ? ZERO :
   ["breakfast","lunch","afternoon","dinner"].reduce((a,s) => add(a, mealFor(d,s,who)), ZERO);
@@ -483,16 +476,22 @@ function mealCard(d, slot){
       h += macroRow(leftoverPlate(r, "jon"), {timeMinutes: 0});
 
       const lo = r.leftover || {};
+      const pj = leftoverPortion(r, "jon"), pc = leftoverPortion(r, "cheryl");
       h += '<h3 class="rh">How much to weigh out</h3>';
-      if (lo.note) h += '<p class="note"><b>' + lo.note + '</b></p>';
-      if (!leftoverCosted(r))
-        h += '<p class="note warn">No lunch portion has been costed for this one, so the ' +
-             'figures above are <b>the dinner plate</b>. Treat them as the top of the range.</p>';
-      if (leftoverDisputed(r))
-        h += '<p class="note warn">The costed figure and the note disagree here — the note ' +
-             'says take a fraction, the figure looks like the whole portion. <b>Follow the note.</b></p>';
-      h += '<p class="note">Cheryl\'s figure is still her dinner plate. No leftover lunch ' +
-           'has been costed for her on any recipe.</p>';
+      const weigh = (x, lab) => {
+        if (!x) return '<li><b>' + lab + ':</b> no weight recorded — if this recipe should ' +
+                       'have one, your copy of the data is stale. Reload the page.</li>';
+        if (x.source === "not-scalable")
+          return '<li><b>' + lab + ':</b> can\'t be weighed off this recipe — ' + x.why + '</li>';
+        return '<li><b>' + lab + ' — ' + x.grams + 'g</b> · ' + x.kcal + ' kcal · ' +
+               x.protein + 'g protein' + (x.source === "derived" ? ' <i>· derived</i>' : '') + '</li>';
+      };
+      h += '<ul class="ing">' + weigh(pj, "You") + weigh(pc, "Cheryl") + '</ul>';
+      if (pj && pj.overBand)
+        h += '<p class="note warn">That costed portion is <b>' + pj.kcal + ' kcal</b>, over the ' +
+             '550 top of the lunch slot. <b>Take ' + pj.overBand.grams + 'g</b> instead — ' +
+             pj.overBand.kcal + ' kcal, ' + pj.overBand.protein + 'g protein.</p>';
+      if (lo.note) h += '<p class="note">' + lo.note + '</p>';
 
       const eaten = src.diners.filter(p => p !== "daughter" || src.dinner.daughter).length;
       const left  = src.dinner.portions - eaten;
@@ -718,7 +717,9 @@ function toast(m){
 }
 
 /* ---------- boot ---------- */
-fetch("recipes.json").then(r => r.json()).then(d => {
+/* no-cache forces a revalidation: without it a phone that has the page open keeps an
+   old recipes.json and silently falls back to stale figures. */
+fetch("recipes.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
   DATA = d; WEEK = load();
   const wd = new Date().getDay();
   TODAY = (wd >= 1 && wd <= 6) ? wd - 1 : 0;
