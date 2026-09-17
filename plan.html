@@ -353,12 +353,27 @@ function mealFor(d, slot, who){
     if (!src || !src.dinner || src.dinner.kind !== "recipe") return ZERO;
     const r = recipe(src.dinner.id); if (!r) return ZERO;
     if (who === "daughter") return ZERO;
-    let v = r.plates[who] || ZERO;
+    let v = leftoverPlate(r, who);
     if (who === "cheryl") v = add(v, CHERYL_LUNCH_SKYR);
     return v;
   }
   return ZERO;
 }
+
+/* A leftover lunch is a smaller portion than the dinner it came from, and some
+   recipes have that costed. Where they do, use it; the dinner plate is not the
+   answer just because it is the number that happens to be to hand. */
+function leftoverPlate(r, who){
+  const lo = r.leftover || {};
+  if (who === "jon" && typeof lo.jonKcal === "number")
+    return {kcal:lo.jonKcal, protein:lo.jonProtein, fibre:lo.jonFibre, salt:lo.jonSalt};
+  return r.plates[who] || ZERO;
+}
+const leftoverCosted = r => typeof ((r.leftover||{}).jonKcal) === "number";
+/* the costed figure and the note disagree on these: the note says take a fraction,
+   the figure looks like the un-reduced portion. Say so rather than pick one. */
+const leftoverDisputed = r => leftoverCosted(r) &&
+  /three[- ]quarters|\b80%|\bhalf\b/i.test((r.leftover||{}).note || "");
 
 const dayTotal = (d, who) => d.free ? ZERO :
   ["breakfast","lunch","afternoon","dinner"].reduce((a,s) => add(a, mealFor(d,s,who)), ZERO);
@@ -465,7 +480,20 @@ function mealCard(d, slot){
     const r = (src && src.dinner.kind === "recipe") ? recipe(src.dinner.id) : null;
     h += '<h2>' + (r ? src.title + "'s " + r.name.toLowerCase() : "Leftovers") + '</h2>';
     if (r){
-      h += macroRow(r.plates.jon, r);
+      h += macroRow(leftoverPlate(r, "jon"), {timeMinutes: 0});
+
+      const lo = r.leftover || {};
+      h += '<h3 class="rh">How much to weigh out</h3>';
+      if (lo.note) h += '<p class="note"><b>' + lo.note + '</b></p>';
+      if (!leftoverCosted(r))
+        h += '<p class="note warn">No lunch portion has been costed for this one, so the ' +
+             'figures above are <b>the dinner plate</b>. Treat them as the top of the range.</p>';
+      if (leftoverDisputed(r))
+        h += '<p class="note warn">The costed figure and the note disagree here — the note ' +
+             'says take a fraction, the figure looks like the whole portion. <b>Follow the note.</b></p>';
+      h += '<p class="note">Cheryl\'s figure is still her dinner plate. No leftover lunch ' +
+           'has been costed for her on any recipe.</p>';
+
       const eaten = src.diners.filter(p => p !== "daughter" || src.dinner.daughter).length;
       const left  = src.dinner.portions - eaten;
       const need  = d.diners.filter(p => p !== "daughter").length;
