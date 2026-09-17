@@ -1,5 +1,5 @@
 {
- "version": "2026-09-17g",
+ "version": "2026-09-17h",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -474,7 +474,7 @@
     "Onion and grated carrot into the oil for 6 minutes, then the garlic for one minute more.",
     "Mince in and <b>browned properly — 6 or 7 minutes without constant stirring</b>. Colour is flavour.",
     "Purée in and cooked out for a minute, then the tomatoes, the rinsed dry lentils, the herbs, the Worcestershire sauce and the water.",
-    "Simmer 25–30 minutes, stirring now and then — <b>the lentils catch if left alone</b>. Weigh 3g of salt into the whole pan at the end rather than seasoning by eye."
+    "Simmer 25–30 minutes, stirring now and then — <b>the lentils catch if left alone</b>. Weigh {{3}}g of salt into the whole pan at the end rather than seasoning by eye."
    ],
    "tips": [
     {
@@ -638,7 +638,7 @@
     "note": "a reheated jacket goes leathery - cook the number you will eat"
    },
    "method": [
-    "Oven to 200°C. Prick the potatoes and rub them with the oil and the 2g of coarse salt.",
+    "Oven to 200°C. Prick the potatoes and rub them with the oil and the {{2}}g of coarse salt.",
     "Straight onto the shelf for 60–75 minutes. <b>No foil — foil steams them and you lose the skin.</b>",
     "Everything else onto the table and people build their own."
    ],
@@ -1105,7 +1105,7 @@
    "method": [
     "Onion and peppers into the oil for 5 minutes. Garlic and spices for one minute — <b>the spices need dry heat before any liquid</b>.",
     "Turkey in, broken up and browned, 5 minutes.",
-    "Beans, passata and a tin of water in, then simmer 20 minutes minimum. <b>Weigh 4g of salt into the whole batch at the end</b> rather than seasoning by eye — the beans and the passata already bring about 4.5g of their own.",
+    "Beans, passata and a tin of water in, then simmer 20 minutes minimum. <b>Weigh {{4}}g of salt into the whole batch at the end</b> rather than seasoning by eye — the beans and the passata already bring about 4.5g of their own.",
     "Skyr on top of each bowl instead of soured cream."
    ],
    "tips": [
@@ -1266,7 +1266,7 @@
    },
    "method": [
     "Oven to 200°C. Tomatoes, garlic and oil into a dish for 10 minutes, until they start to burst.",
-    "Stir in the drained lentils and sit the salmon on top, skin-side up, with <b>2g of salt weighed across the whole dish</b> rather than seasoned by eye.",
+    "Stir in the drained lentils and sit the salmon on top, skin-side up, with <b>{{2}}g of salt weighed across the whole dish</b> rather than seasoned by eye.",
     "12–14 minutes. Done when it flakes under light pressure — <b>err early, it keeps cooking out of the oven</b>.",
     "Greens through the hot lentils, lemon over everything."
    ],
@@ -1469,7 +1469,7 @@
     "note": "3 portions, 3 diners. Good cold sliced over salad if there is any spare"
    },
    "method": [
-    "Oven to 200°C. <b>Potatoes in first, on their own</b>, tossed in half the oil and half of the 2g of weighed salt. 20 minutes.",
+    "Oven to 200°C. <b>Potatoes in first, on their own</b>, tossed in half the oil and half of the {{2}}g of weighed salt. 20 minutes.",
     "Meanwhile rub the chicken with the remaining oil, the spices and the rest of the salt. <b>Butterfly the breasts or bash them to an even thickness</b> — an untouched breast is thick at one end and thin at the other, and the thin end is dry before the thick end is cooked.",
     "After 20 minutes add the peppers and onion, sit the chicken on top, and back in for 20–22 minutes.",
     "Lemon over everything. Rest the chicken 5 minutes before slicing."
@@ -1694,8 +1694,8 @@
     }
    },
    "method": [
-    "<b>40ml of reduced-salt soy</b>, the tomato purée, the honey and the crushed garlic in a bag or bowl with the chicken, 15 minutes minimum — the honey needs that long to do anything. Not 60ml of ordinary soy: that is 9.6g of salt in the batch and it puts Jon's day at 6.75g.",
-    "Oven to 200°C. Wedges tossed in the teaspoon of oil and <b>1g of salt weighed across the whole potato tray</b>, on their own tray, 25 minutes.",
+    "<b>{{53}}ml of reduced-salt soy</b>, the tomato purée, the honey and the crushed garlic in a bag or bowl with the chicken, 15 minutes minimum — the honey needs that long to do anything. Not {{80}}ml of ordinary soy: that is {{12.8}}g of salt in the batch and it puts Jon's day at 6.75g.",
+    "Oven to 200°C. Wedges tossed in the teaspoon of oil and <b>{{1}}g of salt weighed across the whole potato tray</b>, on their own tray, 25 minutes.",
     "Chicken into an ovenproof dish with its marinade for 35 minutes, started at the same time as the wedges.",
     "Asparagus onto the wedge tray for the last 5–8 minutes. Edamame from frozen into boiling water for 4."
    ],
@@ -1904,7 +1904,7 @@
     "note": "cold, flaked through the vegetables"
    },
    "method": [
-    "Oven to 200°C. Sweet potato with half the oil and half of the 2g of weighed salt, <b>10 minutes on its own</b>, skin on.",
+    "Oven to 200°C. Sweet potato with half the oil and half of the {{2}}g of weighed salt, <b>10 minutes on its own</b>, skin on.",
     "Courgette, red onion and garlic in with the remaining oil. 10 more minutes.",
     "Salmon on top with the rest of the salt, asparagus and tomatoes around it. 10–12 minutes — <b>done when it flakes under light pressure; err early</b>.",
     "Butter beans stirred through the hot tray for the last 2 minutes. Lemon and basil over everything."
@@ -2176,7 +2176,7 @@
     }
    },
    "method": [
-    "Brown the ready-made meatballs — about 750g — in the oil in an ovenproof pan, turning them until they have colour on most sides, then set them aside. <b>No salt goes in anywhere in this dish</b>: ready-made meatballs carry roughly 1.0–1.3g of salt per 100g against 0.1g for plain mince, so the 1.5g that used to be weighed into the mince and the 0.5g into the sauce are both gone.",
+    "Brown the ready-made meatballs — about {{750}}g — in the oil in an ovenproof pan, turning them until they have colour on most sides, then set them aside. <b>No salt goes in anywhere in this dish</b>: ready-made meatballs carry roughly 1.0–1.3g of salt per 100g against 0.1g for plain mince, so the 1.5g that used to be weighed into the mince and the 0.5g into the sauce are both gone.",
     "Onion, garlic and thyme into the same pan until soft, scraping up what the meatballs left behind.",
     "Lentils and the stock in first — <b>simmer 10 minutes before the tomatoes go anywhere near them</b>. Tomato acidity stops red lentils breaking down, and lentils that stay whole are lentils your daughter spots. Water or quarter-strength stock only; a full-strength cube is 2.4g of salt into the batch.",
     "Tomatoes and basil in, simmered uncovered 15–20 minutes until reduced by a quarter.",
@@ -2367,8 +2367,8 @@
    },
    "method": [
     "Heavy pot over medium-high, sprayed. Chicken 2 minutes a side until lightly golden, then out and kept warm.",
-    "<b>35g of red curry paste</b> and the coriander stalks into the same pot for 1–2 minutes until fragrant — down from the book's 45g, because brands run 5–11g of salt per 100g.",
-    "Rice in, stirred to coat. Then <b>12ml of fish sauce</b>, the 190ml of coconut milk and the 115ml of boiling water. At the book's 22ml of fish sauce Jon's day is 6.62g of salt.",
+    "<b>{{47}}g of red curry paste</b> and the coriander stalks into the same pot for 1–2 minutes until fragrant — down from the book's 45g, because brands run 5–11g of salt per 100g.",
+    "Rice in, stirred to coat. Then <b>{{16}}ml of fish sauce</b>, the {{253}}ml of coconut milk and the {{153}}ml of boiling water. At the book's 22ml of fish sauce Jon's day is 6.62g of salt.",
     "Chicken back on top in a single layer. Bring to the boil, then the lowest simmer, lid on, 20–25 minutes until a crust forms on the bottom. <b>Don't lift the lid.</b>",
     "Fork the rice through gently, greens over the top, lid back on, 5 minutes off the heat to steam.",
     "Slice the chicken. Coriander leaves, the weighed peanuts, lime, chilli oil if you want it."
@@ -2767,7 +2767,7 @@
    },
    "method": [
     "Onion into a sprayed pan, low-medium, 3 minutes. Garlic and both spices for one minute — <b>dry heat before any liquid or the curry powder stays raw and dusty</b>.",
-    "Lentils, tomatoes and coconut milk in, scraping the bottom of the pan, with <b>2g of salt weighed into the pan</b> rather than seasoned by eye. Simmer 10–15 minutes until it thickens and stops being watery.",
+    "Lentils, tomatoes and coconut milk in, scraping the bottom of the pan, with <b>{{2}}g of salt weighed into the pan</b> rather than seasoned by eye. Simmer 10–15 minutes until it thickens and stops being watery.",
     "Spinach stirred through until it wilts.",
     "Make five wells, crack the eggs in, lid on, 5 minutes for soft yolks.",
     "Skyr spooned on at the table, then chilli and coriander."
@@ -3336,7 +3336,7 @@
     "quality": "n/a"
    },
    "method": [
-    "Nothing is prepared: the Huel Black bottle, a 200g pot of plain Skyr or a high-protein dessert, and an apple.",
+    "Nothing is prepared: the Huel Black bottle, a {{200}}g pot of plain Skyr or a high-protein dessert, and an apple.",
     "<b>Take the dairy with it, not instead of it.</b> Huel's protein is pea and faba, which carries less leucine than dairy, so the bottle is not a complete feed on its own."
    ],
    "tips": [
@@ -3494,7 +3494,7 @@
    "method": [
     "Oven to 200°C. Broccoli on trays in a single layer, sprayed, 15 minutes — two trays at this quantity. <b>This step is the entire recipe</b>: roasted broccoli soup and boiled broccoli soup are different foods, and only one of them is worth eating.",
     "Potatoes and stock into a big pan at the same time, simmered 15 minutes until tender. <b>Half-strength stock</b> — full strength is 1.6g of salt a bowl on its own.",
-    "Roasted broccoli in for 5 more minutes, then blend smooth. <b>6g of salt weighed into the whole batch</b>, which is 1g a bowl, and plenty of pepper. Blended vegetable soup wants intensity, but it gets it weighed rather than seasoned by eye.",
+    "Roasted broccoli in for 5 more minutes, then blend smooth. <b>{{6}}g of salt weighed into the whole batch</b>, which is 1g a bowl, and plenty of pepper. Blended vegetable soup wants intensity, but it gets it weighed rather than seasoned by eye.",
     "Cool fast and portion it here: six tubs, roughly 450g each. Three days in the fridge, three months in the freezer.",
     "At the bowl: reheat a portion, then <b>stir the Skyr in off the heat — boiled Skyr splits</b>. Halloumi in a dry non-stick pan for 3–4 minutes with the honey drizzled over for the last 30 seconds until sticky. Croutons on top, lemon zest grated over."
    ],
@@ -3702,7 +3702,7 @@
    "method": [
     "Oil into a wide pan over high heat, chicken in one layer — two batches at this quantity, <b>4 minutes a side without moving it</b>. This browning is most of the flavour and it is the step people skip. Out onto a plate.",
     "Onion into the same pan for 5 minutes, scraping the brown off the base. Garlic and all three spices for 60 seconds — <b>dry heat before any liquid or the paprika stays raw and chalky</b>.",
-    "Peppers, passata, stock, chickpeas, the 2.4g of weighed salt and the chicken back in with anything it has leaked. Simmer uncovered 20 minutes until it thickens and a spoon leaves a trail.",
+    "Peppers, passata, stock, chickpeas, the {{2.4}}g of weighed salt and the chicken back in with anything it has leaked. Simmer uncovered 20 minutes until it thickens and a spoon leaves a trail.",
     "Cool fast and portion into four tubs. <b>The lemon and parsley go in at the flask in the morning, not now</b> — a squeeze of acid that has sat in the fridge for three days tastes of nothing."
    ],
    "tips": [
@@ -4034,7 +4034,7 @@
     "note": "assembled in the morning from chicken cooked the night before. Roast 750g of breast on Sunday and this is Tuesday and Wednesday"
    },
    "method": [
-    "Slaw first, at least an hour ahead: cabbage, carrot, onion, cider vinegar and the 2g of sugar into a tub and <b>squeezed hard with your hands for thirty seconds</b>. The squeezing is the recipe — it breaks the cabbage cells so it pickles in an hour instead of a day, and it takes the raw cabbage smell out.",
+    "Slaw first, at least an hour ahead: cabbage, carrot, onion, cider vinegar and the {{2}}g of sugar into a tub and <b>squeezed hard with your hands for thirty seconds</b>. The squeezing is the recipe — it breaks the cabbage cells so it pickles in an hour instead of a day, and it takes the raw cabbage smell out.",
     "Skyr and Dijon whisked together with plenty of black pepper. This is the sauce and it is 35 calories.",
     "Warm the wholemeal pitta for 20 seconds so it opens without tearing. <b>Sauce inside both walls first — it waterproofs the bread.</b> Then the cold sliced chicken, then the slaw, then the leaves at the very top.",
     "Slaw in the sandwich, not in a separate tub. The vinegar has already done its damage by the time it is packed."
@@ -4259,7 +4259,7 @@
     "<b>Roast the chicken yourself.</b> Pre-packed cooked chicken takes this box from 1.03g of salt to 2.07g and stops it being the low-salt lunch it is here."
    ],
    "method": [
-    "Beat the Skyr hard with the oil, lemon, garlic paste and the 0.4g of weighed salt for thirty seconds. <b>Beating it is the whole point</b> — 0% skyr straight from the pot is dense and chalky; whipped with a little oil it goes glossy and holds a dip. Dill and pepper last.",
+    "Beat the Skyr hard with the oil, lemon, garlic paste and the {{0.4}}g of weighed salt for thirty seconds. <b>Beating it is the whole point</b> — 0% skyr straight from the pot is dense and chalky; whipped with a little oil it goes glossy and holds a dip. Dill and pepper last.",
     "Everything into a box with the dip in the middle in its own pot, and <b>the walnuts on top of the dip so they stay dry</b>."
    ],
    "tips": [
@@ -4696,7 +4696,7 @@
     }
    },
    "method": [
-    "Oil in the pan on medium-low. Potatoes and onion in with 1.5g of the weighed salt, <b>lid on, 15 minutes, stirred gently twice</b>. You are steaming them soft, not frying them crisp — a tortilla potato should collapse slightly under the fork, and if it colours the heat is too high.",
+    "Oil in the pan on medium-low. Potatoes and onion in with {{1.5}}g of the weighed salt, <b>lid on, 15 minutes, stirred gently twice</b>. You are steaming them soft, not frying them crisp — a tortilla potato should collapse slightly under the fork, and if it colours the heat is too high.",
     "Push them to one side, chicken in with the paprika and the rest of the salt for 5 minutes until it is just white. Peppers in. Off the heat for 3 minutes.",
     "Eggs beaten hard with the parsley and poured over. <b>Stir once, then leave it alone.</b> Low heat, 8–10 minutes, until the sides are set and the middle still wobbles.",
     "Under a hot grill for 3–4 minutes to set the top, or flip it if you are confident. <b>Out of the pan within a minute</b> — carryover heat will overcook it in the pan and a dry tortilla is a sad thing.",
@@ -5174,7 +5174,7 @@
    },
    "method": [
     "Eggs into boiling water for <b>7 minutes exactly</b>, then straight into cold water. Seven minutes gives a yolk set at the edge and still fudgy in the middle, which is what makes kedgeree taste rich; nine gives a grey ring and a dry crumb.",
-    "Both lots of fish into a wide pan, just covered with water, bay leaf in. Bring it barely to a tremble and <b>take it off the heat immediately</b> — it poaches through in 4 minutes in the residual heat. Lift out, flake into big pieces, and keep 250ml of the poaching liquid.",
+    "Both lots of fish into a wide pan, just covered with water, bay leaf in. Bring it barely to a tremble and <b>take it off the heat immediately</b> — it poaches through in 4 minutes in the residual heat. Lift out, flake into big pieces, and keep {{250}}ml of the poaching liquid.",
     "Butter and oil, onion 6 minutes. Garlic, curry powder and turmeric for 60 seconds in dry heat.",
     "Brown basmati in, stirred to coat, then the reserved poaching liquid and water to the packet's ratio — <b>that liquid is smoky and free and it is where the 'no added salt' gets away with it</b>. Lid on, simmer 25 minutes.",
     "Peas and spinach forked through in the last 3 minutes. <b>Fish on top, not stirred in</b>, lid on, 2 minutes off the heat to warm through. Eggs halved on top, then lemon, herbs and pepper."
@@ -5420,7 +5420,7 @@
     "note": "Her peas are crushed into the potato rather than served beside it. That is the point of the recipe, not a garnish."
    },
    "method": [
-    "Oven to 210°C. New potatoes into cold water with <b>1.9g of salt weighed into the potato water</b> — 0.5g a portion, and none at all on the fish. Boiled 18 minutes, until a knife goes in with no resistance.",
+    "Oven to 210°C. New potatoes into cold water with <b>{{1.9}}g of salt weighed into the potato water</b> — 0.5g a portion, and none at all on the fish. Boiled 18 minutes, until a knife goes in with no resistance.",
     "Crumb: wholemeal breadcrumbs, parmesan, lemon zest, parsley and plenty of black pepper mixed dry. <b>Mix the oil through the breadcrumbs first, until they look like damp sand</b> — oil added to a wet crumb steams instead of crisping.",
     "<b>Pat the haddock loins dry.</b> Haddock carries more surface water than cod and a wet surface steams the crumb. A thin smear of Dijon on top of each loin as the glue and the acid, then the crumb pressed on firmly.",
     "<b>10–12 minutes, not 12–14.</b> Tuck the thin tail under rather than trying to time it separately, and take them out when they flake under light pressure — err early, they carry on cooking on the tray.",
@@ -5864,10 +5864,10 @@
     }
    },
    "method": [
-    "Pangrattato first, in a dry pan you will reuse: breadcrumbs and 5g of the oil over medium heat, <b>stirred constantly for 4 minutes until deep brown and hard</b>. Lemon zest off the heat, then out into a bowl. This is the crunch and it is the entire reason the dish doesn't feel soft and samey.",
+    "Pangrattato first, in a dry pan you will reuse: breadcrumbs and {{5}}g of the oil over medium heat, <b>stirred constantly for 4 minutes until deep brown and hard</b>. Lemon zest off the heat, then out into a bowl. This is the crunch and it is the entire reason the dish doesn't feel soft and samey.",
     "Same pan, the rest of the oil, fennel and onion on medium-low <b>for 10 minutes with a lid on</b> — fennel needs that to go from aggressive to sweet. Garlic, toasted fennel seeds and chilli for a minute.",
     "Tomato purée in and cooked out for 90 seconds until it darkens — <b>raw purée tastes tinny</b>.",
-    "<b>Half the sardines in, mashed hard against the base of the pan with a wooden spoon for a full minute, until there is nothing recognisable left.</b> Then the tomatoes, the raisins, the 1.5g of weighed salt and 100ml of water. Simmer 15 minutes.",
+    "<b>Half the sardines in, mashed hard against the base of the pan with a wooden spoon for a full minute, until there is nothing recognisable left.</b> Then the tomatoes, the raisins, the {{1.5}}g of weighed salt and {{100}}ml of water. Simmer 15 minutes.",
     "Wholewheat spaghetti cooked, drained and <b>finished in the sauce for 60 seconds with a splash of its water</b> — never sauce spooned on top; the starch in the pasta water is what makes the sauce cling.",
     "The remaining whole sardine fillets laid on the adults' plates, warmed by the pasta. Lemon zest, parsley, fennel fronds and pangrattato over everything."
    ],
@@ -6094,8 +6094,8 @@
     "note": "Her potato and peas are crushed together and served as one — 180g on the plate. The components are separated here so all three plates are counted the same way."
    },
    "method": [
-    "Marinade mixed or blitzed — vinegar, grated garlic, paprika, oregano, chilli, lemon, oil and the 2.2g of weighed salt — and the chicken in it for <b>at least 2 hours, up to 24</b>. The vinegar is doing two jobs: flavour, and denaturing the surface protein so a very lean breast holds moisture under high heat. That is why this can be breast and not thigh.",
-    "Potatoes boiled 18 minutes, drained and crushed with a fork and 8g of the oil — <b>half broken, half whole</b>. Peas boiled 3 minutes and crushed through with them.",
+    "Marinade mixed or blitzed — vinegar, grated garlic, paprika, oregano, chilli, lemon, oil and the {{2.2}}g of weighed salt — and the chicken in it for <b>at least 2 hours, up to 24</b>. The vinegar is doing two jobs: flavour, and denaturing the surface protein so a very lean breast holds moisture under high heat. That is why this can be breast and not thigh.",
+    "Potatoes boiled 18 minutes, drained and crushed with a fork and {{8}}g of the oil — <b>half broken, half whole</b>. Peas boiled 3 minutes and crushed through with them.",
     "Hispi quarters cut side down in a dry hot pan or on a hot tray with the remaining oil, <b>6 minutes without moving them</b>. You want black edges: char on brassica is not a mistake, it is the flavour.",
     "Chicken onto a screaming hot griddle or under a high grill, <b>4 minutes a side</b>, basted once with the leftover marinade in the last minute. Butterflied, it is done in 8 minutes total. Rest 5 minutes.",
     "Skyr, garlic and lemon whisked for the sauce. Any resting juices poured back over the chicken."
@@ -6532,9 +6532,9 @@
     }
    },
    "method": [
-    "Mince, the grated and squeezed onion, garlic, spices, herbs and the 2g of weighed salt in a bowl. <b>Mix it hard for a full minute</b> — properly worked mince goes sticky and holds together without egg or breadcrumb, and under-mixed kofta falls apart in the pan. Roll into 16 fat fingers and rest them in the fridge 15 minutes if you have it.",
+    "Mince, the grated and squeezed onion, garlic, spices, herbs and the {{2}}g of weighed salt in a bowl. <b>Mix it hard for a full minute</b> — properly worked mince goes sticky and holds together without egg or breadcrumb, and under-mixed kofta falls apart in the pan. Roll into 16 fat fingers and rest them in the fridge 15 minutes if you have it.",
     "Bulgur into a bowl, boiling water to 2cm above it, a plate on top, 12 minutes. Fork it through. Done.",
-    "Sauce: peppers in the oil for 6 minutes, cumin and chilli for 60 seconds, passata in, then simmer 12 minutes uncovered until it darkens and thickens. <b>Spinach in at the end and stirred until it disappears completely into the sauce</b> — at 190g across four portions it is invisible, and it is fibre and folate on the daughter's plate.",
+    "Sauce: peppers in the oil for 6 minutes, cumin and chilli for 60 seconds, passata in, then simmer 12 minutes uncovered until it darkens and thickens. <b>Spinach in at the end and stirred until it disappears completely into the sauce</b> — at {{190}}g across four portions it is invisible, and it is fibre and folate on the daughter's plate.",
     "Kofta browned hard in a dry non-stick pan, <b>4 minutes a side and not turned early</b>, then into the sauce for 5 minutes to finish.",
     "Skyr loosened with lemon and spooned over at the table. Mint on top."
    ],

@@ -84,6 +84,8 @@
     white-space:nowrap;font-variant-numeric:tabular-nums}
   table.split th:first-child,table.split td:first-child{text-align:left;white-space:normal;
     color:var(--muted);font-variant-numeric:normal}
+  table.split .pc{font-size:.7rem;color:var(--muted);font-weight:400}
+  table.split tr.cooked td{border-bottom:none;color:var(--muted);padding-top:8px}
   table.split thead th{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;
     color:var(--muted);font-weight:700}
   table.split tbody td b{color:var(--fg)}
@@ -656,13 +658,18 @@ function mealCard(d, slot){
     h += '<h3 class="rh">Ingredients</h3>' +
       (sc !== 1 ? '<p class="note">Scaled to <b>' + m.portions + ' portion' +
         (m.portions === 1 ? '' : 's') + '</b> \u2014 the recipe is written for ' + r.basePortions +
-        '. <b>The method below still quotes the full recipe\'s weights</b>, so follow these.</p>' : '') +
+        '. The method scales with it.</p>' : '') +
       '<ul class="ing"><li>' +
       r.ingredients.map(i => i.item + ' — ' + amt(i.grams) + (i.packUnit === "ml" ? "ml" : "g") +
         state(i) + (i.note ? ', ' + i.note : '') +
         (i.assumed ? ' <i>· quantity estimated</i>' : '')).join('</li><li>') + '</li></ul>';
-    if ((r.method||[]).length)
-      h += '<h3 class="rh">Method</h3><ol class="ing"><li>' + r.method.join('</li><li>') + '</li></ol>';
+    if ((r.method||[]).length){
+      /* {{n}} marks a quantity that belongs to this batch. Day totals, per-100g rates and
+         per-portion figures are left as bare numbers and never scale. */
+      const meth = r.method.map(t =>
+        t.replace(/\{\{([\d.]+)\}\}/g, (_, v) => amt(parseFloat(v))));
+      h += '<h3 class="rh">Method</h3><ol class="ing"><li>' + meth.join('</li><li>') + '</li></ol>';
+    }
     (r.tips||[]).forEach(t => {
       const cls = t.tone === "hot" ? " warn" : "";
       h += '<p class="note' + cls + '">' + t.text + '</p>';
@@ -704,17 +711,22 @@ function splitBlock(r, eats){
   h += '<div class="splitwrap"><table class="split"><thead><tr><th></th>' +
        who.map(([,lab]) => '<th>' + lab + '</th>').join('') + '</tr></thead><tbody>';
   s.components.forEach(c => {
+    const tot = who.reduce((a,[k]) => a + (c[k]||0), 0) || 1;
     h += '<tr><td>' + c.item.split(",")[0] + '</td>' +
-         who.map(([k]) => '<td>' + (c[k] ? '<b>' + c[k] + '</b>g' : '\u2014') + '</td>').join('') +
-         '</tr>';
+         who.map(([k]) => '<td>' + (c[k]
+           ? '<b>' + c[k] + '</b>g<br><span class="pc">' + Math.round(c[k]/tot*100) + '%</span>'
+           : '\u2014') + '</td>').join('') + '</tr>';
   });
-  h += '<tr><td>On the plate</td>' + who.map(([k]) =>
+  h += '<tr class="cooked"><td>On the plate, cooked</td>' + who.map(([k]) =>
          '<td>' + s.grams[k] + 'g</td>').join('') + '</tr></tbody></table></div>';
   const src = s.source === "stated" ? '.'
     : s.source === "part-stated"
       ? '. Some are the recipe\'s own; <b>the rest are derived</b> from each plate\'s macros.'
       : '. <b>All derived</b> from each plate\'s macros \u2014 the recipe never stated a split.';
-  h += '<p class="note">Raw and dry weights, as everywhere else' + src + '</p>';
+  h += '<p class="note"><b>The gram figures are raw and dry</b> \u2014 weigh them before anything ' +
+       'goes near the heat. <b>Once it is cooked, use the percentages instead:</b> weigh what comes ' +
+       'out of the pan and split it in those proportions. The proportions hold whatever the food ' +
+       'loses; the raw grams do not. The bottom row is the finished plate' + src + '</p>';
   return h;
 }
 
