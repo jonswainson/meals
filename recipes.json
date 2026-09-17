@@ -1,5 +1,5 @@
 {
- "version": "2026-09-17a",
+ "version": "2026-09-17b",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -599,7 +599,7 @@
      "item": "Chicken thighs, skinless boneless",
      "grams": 1000,
      "aisle": "meat-fish",
-     "packSize": 650,
+     "packSize": 900,
      "packUnit": "g",
      "staple": false,
      "note": "halved"
@@ -1272,7 +1272,7 @@
      "item": "Chicken thighs, skinless boneless",
      "grams": 650,
      "aisle": "meat-fish",
-     "packSize": 650,
+     "packSize": 900,
      "packUnit": "g",
      "staple": false,
      "note": "scaled from the book's 750g so it divides 245/165/240 with nothing left"
@@ -1810,7 +1810,7 @@
      "item": "Chicken thighs, skinless boneless",
      "grams": 650,
      "aisle": "meat-fish",
-     "packSize": 650,
+     "packSize": 900,
      "packUnit": "g",
      "staple": false,
      "note": "scaled from the book's 825g; divides 240/170/240"
@@ -1979,7 +1979,7 @@
      "item": "Chicken thighs, skinless boneless",
      "grams": 500,
      "aisle": "meat-fish",
-     "packSize": 650,
+     "packSize": 900,
      "packUnit": "g",
      "staple": false,
      "note": "trimmed"
@@ -2895,7 +2895,7 @@
      "item": "Chicken thighs, skinless boneless",
      "grams": 760,
      "aisle": "meat-fish",
-     "packSize": 650,
+     "packSize": 900,
      "packUnit": "g",
      "staple": false,
      "note": "3cm pieces"
