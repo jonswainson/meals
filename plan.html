@@ -84,6 +84,11 @@
     white-space:nowrap;font-variant-numeric:tabular-nums}
   table.split th:first-child,table.split td:first-child{text-align:left;white-space:normal;
     color:var(--muted);font-variant-numeric:normal}
+  .ratio{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:10px;
+    padding:11px 13px;border:1px solid var(--line);border-radius:11px;background:var(--soft)}
+  .ratio b{font-size:1.45rem;letter-spacing:.06em;color:var(--accent);
+    font-variant-numeric:tabular-nums;line-height:1}
+  .ratio span{font-size:.78rem;color:var(--muted)}
   table.split .pc{font-size:.7rem;color:var(--muted);font-weight:400}
   table.split tr.cooked td{border-bottom:none;color:var(--muted);padding-top:8px}
   table.split thead th{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;
@@ -694,12 +699,34 @@ function fixedRecipe(f){
 
 /* Who gets how much. One-pot dishes are served by weight out of the pan; assembled
    ones are split component by component. Derived rows are marked - see plateSplit. */
+/* One ratio you can hold in your head at the hob. Every recipe in the corpus reduces
+   to one within 5% - mostly 3:2:2 for a family dinner and 4:3 for a two-person lunch. */
+function ratioOf(vals, maxn){
+  const tot = vals.reduce((a,b) => a+b, 0) || 1, sh = vals.map(v => v/tot);
+  let best = null;
+  for (let n = 2; n <= (maxn||8); n++){
+    const rr = sh.map(x => Math.round(x*n));
+    if (rr.reduce((a,b) => a+b, 0) !== n) continue;
+    if (rr.some((v,i) => v === 0 && sh[i] > 0.1)) continue;
+    const err = Math.max.apply(null, rr.map((v,i) => Math.abs(v/n - sh[i])));
+    if (!best || err < best.err - 1e-9) best = {err, rr, n};
+  }
+  return best;
+}
+
 function splitBlock(r, eats){
   const s = r.plateSplit; if (!s) return "";
   const who = [["jon","You"],["cheryl","Cheryl"],["daughter","Daughter"]]
     .filter(([k]) => s.grams[k] !== undefined && (k !== "daughter" || eats));
   if (!who.length) return "";
   let h = '<h3 class="rh">How much each</h3>';
+  const rat = ratioOf(who.map(([k]) => s.grams[k]));
+  if (rat)
+    h += '<div class="ratio"><b>' + rat.rr.join(' : ') + '</b>' +
+         '<span>' + who.map(([,lab]) => lab.toLowerCase()).join(' &middot; ') +
+         '</span></div><p class="note">Eyeball it in those proportions \u2014 no scales, no sums. ' +
+         'It runs you slightly generous, so <b>weigh your own plate on a tight day</b> and share ' +
+         'the rest out by eye. The weights below are the exact version.</p>';
   if (s.servedByWeight){
     h += '<ul class="ing"><li>' + who.map(([k,lab]) =>
       '<b>' + lab + ' \u2014 ' + s.grams[k] + 'g</b> onto the plate').join('</li><li>') + '</li></ul>';
@@ -710,23 +737,27 @@ function splitBlock(r, eats){
   if (!(s.components || []).length) return "";   /* the plates block above already spells it out */
   h += '<div class="splitwrap"><table class="split"><thead><tr><th></th>' +
        who.map(([,lab]) => '<th>' + lab + '</th>').join('') + '</tr></thead><tbody>';
+  const odd = [];
   s.components.forEach(c => {
     const tot = who.reduce((a,[k]) => a + (c[k]||0), 0) || 1;
+    if (rat && who.some(([k],i) => Math.abs((c[k]||0)/tot - rat.rr[i]/rat.n) > 0.12))
+      odd.push(c.item.split(",")[0].toLowerCase());
     h += '<tr><td>' + c.item.split(",")[0] + '</td>' +
-         who.map(([k]) => '<td>' + (c[k]
-           ? '<b>' + c[k] + '</b>g<br><span class="pc">' + Math.round(c[k]/tot*100) + '%</span>'
-           : '\u2014') + '</td>').join('') + '</tr>';
+         who.map(([k]) => '<td>' + (c[k] ? '<b>' + c[k] + '</b>g' : '\u2014') + '</td>').join('') +
+         '</tr>';
   });
-  h += '<tr class="cooked"><td>On the plate, cooked</td>' + who.map(([k]) =>
+  h += '<tr class="cooked"><td>On the plate, finished</td>' + who.map(([k]) =>
          '<td>' + s.grams[k] + 'g</td>').join('') + '</tr></tbody></table></div>';
   const src = s.source === "stated" ? '.'
     : s.source === "part-stated"
       ? '. Some are the recipe\'s own; <b>the rest are derived</b> from each plate\'s macros.'
       : '. <b>All derived</b> from each plate\'s macros \u2014 the recipe never stated a split.';
-  h += '<p class="note"><b>The gram figures are raw and dry</b> \u2014 weigh them before anything ' +
-       'goes near the heat. <b>Once it is cooked, use the percentages instead:</b> weigh what comes ' +
-       'out of the pan and split it in those proportions. The proportions hold whatever the food ' +
-       'loses; the raw grams do not. The bottom row is the finished plate' + src + '</p>';
+  if (odd.length)
+    h += '<p class="note warn"><b>The ratio does not fit the ' + odd.join(' or the ') +
+         '</b> \u2014 use the row above for that one.</p>';
+  h += '<p class="note"><b>The gram figures are raw and dry</b>, so they only work before cooking. ' +
+       'After it is cooked, go by the ratio \u2014 proportions survive the pan, raw weights do not. ' +
+       'The bottom row is the finished plate' + src + '</p>';
   return h;
 }
 
