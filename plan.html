@@ -22,6 +22,8 @@
   .title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 16px 8px}
   h1{font-size:1.1rem;margin:0;letter-spacing:-.01em}
   .title a{color:var(--accent);font-size:.82rem;text-decoration:none;white-space:nowrap}
+  .flip{font:inherit;font-size:.74rem;font-weight:600;color:var(--accent);background:var(--soft);
+    border:1px solid var(--line);border-radius:8px;padding:5px 9px;cursor:pointer;white-space:nowrap}
   nav{display:flex;gap:4px;padding:0 10px 8px;overflow-x:auto;scrollbar-width:none}
   nav::-webkit-scrollbar{display:none}
   nav button{flex:1 0 auto;min-width:54px;font:inherit;font-size:.88rem;font-weight:600;
@@ -112,7 +114,8 @@
 
 <header>
   <div class="title">
-    <h1>The week</h1>
+    <h1 id="wk">The week</h1>
+    <button id="flip" class="flip"></button>
     <a href="./">Shopping list →</a>
   </div>
   <nav id="tabs"></nav>
@@ -160,6 +163,10 @@ const FIXED = {
   "huel-bottle":  {name:"Huel Black bottle", bought:true,
                    jon:{kcal:400,protein:35,fibre:6,salt:0.7},
                    cheryl:{kcal:400,protein:35,fibre:6,salt:0.7}},
+  "prawns-pear": {name:"M&S king prawns + a large pear, 19:30 on the train", bought:true,
+    jon:{kcal:220,protein:34.4,fibre:5,salt:1.9}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+  "work-pizza": {name:"Pizza provided at work, 17:45", bought:true,
+    jon:{kcal:750,protein:30,fibre:3.25,salt:2.7}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "sunday-roast": {name:"Sunday's roast", bought:true,
                    jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.5,plateGrams:720},
                    cheryl:{kcal:470,protein:44.8,fibre:8.8,salt:1.1,plateGrams:520},
@@ -169,7 +176,7 @@ const FIXED = {
 /* how long the fixed items take */
 Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
   "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"ms-bought":0,
-  "huel-bottle":0,"sunday-roast":20})
+  "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
 
 /* Cheryl's Skyr moved into lunch — she's teaching at 2:30 */
@@ -187,6 +194,7 @@ const TARGETS = {
 /* ---------- the week ---------- */
 const DEFAULT_WEEK = {
   id:"2026-09-14",
+  label:"14–18 Sept",
   days:[
     {id:"mon",label:"Mon",title:"Monday",tags:"Home · trains · leg day",
      diners:["jon","cheryl","daughter"],
@@ -222,6 +230,50 @@ const DEFAULT_WEEK = {
   ]
 };
 
+
+const WEEK_0921 = {
+  id:"2026-09-21",
+  label:"21–25 Sept",
+  days:[
+    {id:"mon",label:"Mon",title:"Monday",tags:"Home · trains · leg day",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"prawn-butter-bean-salad",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"sunday-roast"}},
+    {id:"tue",label:"Tue",title:"Tuesday",tags:"Home · rest day",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"piri-piri-chicken-crushed-potato",portions:5,daughter:true,alt:""}},
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"London · 05:15–22:15 · yours only",
+     diners:["jon"],
+     breakfast:"huel-milbona", afternoon:"prawns-pear",
+     lunch:{kind:"fixed",id:"ms-bought"},
+     dinner:{kind:"fixed",id:"work-pizza"}},
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Home · trains",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"leftover",from:"tue"},
+     dinner:{kind:"recipe",id:"crumbed-cod-crushed-potato",portions:5,daughter:true,alt:""}},
+    {id:"fri",label:"Fri",title:"Friday",tags:"Home · trains · leg day · measurement morning",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr-150",
+     lunch:{kind:"leftover",from:"thu"},
+     dinner:{kind:"recipe",id:"loaded-jacket-potatoes",portions:3,daughter:true,alt:""}},
+    {id:"sat",label:"Sat",free:true}
+  ]
+};
+
+/* This week stays live until Friday's cooking is done; next week takes over on
+   Saturday, which is when the shop happens. Either is reachable from the header. */
+const WEEKS = [DEFAULT_WEEK, WEEK_0921];
+function pickWeek(){
+  let i;
+  try { const c = localStorage.getItem("week-choice");
+        if (c !== null) i = WEEKS.findIndex(w => w.id === c); } catch(e){}
+  if (i === undefined || i < 0) i = (Date.now() >= new Date(2026,8,19).getTime()) ? 1 : 0;
+  return WEEKS[i];
+}
 
 /* ---------- ingredients for the fixed items, so they reach the list ---------- */
 const I = (item,grams,aisle,packSize,staple,unit) =>
@@ -311,9 +363,24 @@ FIXED["sunday-roast"].recipe = R(
   "~120g meat, 130g potatoes, the full share of vegetables. 470 kcal, 45g.",
   "<b>No Yorkshire puddings.</b> The potatoes are the starch, and that is what keeps this plate at 720g.");
 
+FIXED["prawns-pear"].recipe = R(
+  ["150g M&S cooked king prawns","1 large pear"], [],
+  null,
+  "<b>Buy the prawns at King's Cross on the way to the train, not with lunch.</b> Seven hours at " +
+  "ambient is the one thing not to do with cooked prawns. Bought 19:15, eaten 19:30.<br><br>" +
+  "This is the 2:30 feed moved, <b>not a fifth slot</b> and not a second Huel. Wednesday is a rest day.");
+
+FIXED["work-pizza"].recipe = R(
+  ["Three slices, meat-topped"], [],
+  null,
+  "<b>Take the meat slices and skip the garlic bread.</b> Worth more than anything the plan can do " +
+  "here — roughly 10g of protein and 1.5g of salt.<br><br>" +
+  "<b>These figures are the softest in the week</b> — three slices of a 12-inch meat pizza, assumed. " +
+  "The day runs ~180 kcal over and misses on fibre and salt, and that is accepted.");
+
 /* ---------- state ---------- */
 let DATA=null, WEEK=null, current=0, TODAY=0;
-const KEY = "plan-" + DEFAULT_WEEK.id;
+let BASE = DEFAULT_WEEK, KEY = "plan-" + DEFAULT_WEEK.id;
 const $ = s => document.querySelector(s);
 const clone = o => JSON.parse(JSON.stringify(o));
 const recipe = id => DATA.recipes.find(r => r.id === id);
@@ -322,8 +389,8 @@ const day = id => WEEK.days.find(d => d.id === id);
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(WEEK)); }catch(e){} }
 function load(){
   try{ const s = localStorage.getItem(KEY);
-       if (s){ const w = JSON.parse(s); if (w && w.id === DEFAULT_WEEK.id) return w; } }catch(e){}
-  return clone(DEFAULT_WEEK);
+       if (s){ const w = JSON.parse(s); if (w && w.id === BASE.id) return w; } }catch(e){}
+  return clone(BASE);
 }
 
 /* ---------- nutrition ---------- */
@@ -369,7 +436,8 @@ function mealFor(d, slot, who){
 const leftoverPortion = (r, who) => ((r.leftover||{}).portions||{})[who] || null;
 function leftoverPlate(r, who){
   const x = leftoverPortion(r, who);
-  return (x && x.source !== "not-scalable") ? x : (r.plates[who] || ZERO);
+  if (!x || x.source === "not-scalable") return r.plates[who] || ZERO;
+  return x.overBand || x;   /* count what the card tells him to take */
 }
 
 const dayTotal = (d, who) => d.free ? ZERO :
@@ -422,14 +490,15 @@ function renderTotals(d){
     return;
   }
   let h = "";
-  ["jon","cheryl"].forEach(who => {
+  const eating = ["jon","cheryl"].filter(w => d.diners.includes(w));
+  eating.forEach(who => {
     const {v, problems} = status(d, who);
     h += '<div class="trow"><span class="who">' + (who==="jon"?"Jon":"Cheryl") + '</span>' +
       '<span class="' + (problems.length?"amber":"ok") + '"><b>' + Math.round(v.kcal) +
       '</b> kcal · <b>' + n1(v.protein) + 'g</b> protein · ' + n1(v.fibre) + 'g fibre · ' +
       n1(v.salt) + 'g salt</span></div>';
   });
-  ["jon","cheryl"].forEach(who => {
+  eating.forEach(who => {
     const line = fixLine(who, status(d, who).problems);
     if (line) h += '<p class="fix">' + line + '</p>';
   });
@@ -505,6 +574,9 @@ function mealCard(d, slot){
                x.protein + 'g protein' + (x.source === "derived" ? ' <i>· derived</i>' : '') + '</li>';
       };
       h += '<ul class="ing">' + weigh(pj, "You") + weigh(pc, "Cheryl") + '</ul>';
+      if (pj && pj.salt >= 2)
+        h += '<p class="note warn"><b>' + pj.salt + 'g of salt in this tub</b>, against 6g for ' +
+             'the day. Put it with a low-salt dinner.</p>';
       if (pj && pj.overBand)
         h += '<p class="note warn">That costed portion is <b>' + pj.kcal + ' kcal</b>, over the ' +
              '550 top of the lunch slot. <b>Take ' + pj.overBand.grams + 'g</b> instead — ' +
@@ -718,7 +790,8 @@ function buildList(){
 
 $("#build").onclick = () => {
   const list = buildList();
-  try { localStorage.setItem("list-" + WEEK.id, JSON.stringify(list)); } catch(e){}
+  try { localStorage.setItem("list-" + WEEK.id, JSON.stringify(list));
+        localStorage.setItem("list-current", WEEK.id); } catch(e){}
   toast(list.items.length + " items — opening the list");
   setTimeout(() => { location.href = "./?w=" + WEEK.id; }, 650);
 };
@@ -738,14 +811,31 @@ function toast(m){
 /* no-cache forces a revalidation: without it a phone that has the page open keeps an
    old recipes.json and silently falls back to stale figures. */
 fetch("recipes.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
-  DATA = d; WEEK = load();
-  const wd = new Date().getDay();
-  TODAY = (wd >= 1 && wd <= 6) ? wd - 1 : 0;
-  current = TODAY;
+  DATA = d;
+  BASE = pickWeek(); KEY = "plan-" + BASE.id; WEEK = load();
+
+  /* "today" only means something on the week that actually contains today */
+  const start = new Date(BASE.id + "T00:00:00");
+  const days  = Math.floor((Date.now() - start.getTime()) / 86400000);
+  const wd    = new Date().getDay();
+  TODAY = (days >= 0 && days < 6 && wd >= 1 && wd <= 6) ? wd - 1 : -1;
+  current = TODAY < 0 ? 0 : TODAY;
+
+  const other = WEEKS[WEEKS.indexOf(BASE) === 0 ? 1 : 0];
+  $("#wk").textContent = BASE.label;   /* the range is the identity; it must fit one line */
+  document.title = "The week \u00b7 " + BASE.label;
+  $("#flip").textContent = other.label + " →";
+  $("#flip").onclick = () => {
+    try { localStorage.setItem("week-choice", other.id); } catch(e){}
+    location.reload();
+  };
   render();
-}).catch(() => {
-  $("#day").innerHTML = '<p class="free"><strong>Couldn\'t load the recipes.</strong>' +
-    'Check the connection and reload.</p>';
+}).catch(err => {
+  /* this used to swallow programming errors as "check your connection" */
+  console.error("planner boot failed:", err);
+  $("#day").innerHTML = '<p class="free"><strong>Couldn\'t load the week.</strong>' +
+    'Check the connection and reload. If it keeps happening the page is broken, ' +
+    'not your signal \u2014 the console says which.</p>';
 });
 </script>
 

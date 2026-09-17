@@ -1,5 +1,5 @@
 {
- "version": "2026-09-17b",
+ "version": "2026-09-17e",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -269,7 +269,7 @@
      "note": "1.5 tbsp"
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 180,
      "aisle": "fresh",
      "packSize": null,
@@ -278,7 +278,7 @@
      "note": "1 large"
     },
     {
-     "item": "Carrot",
+     "item": "Carrots",
      "grams": 120,
      "aisle": "fresh",
      "packSize": null,
@@ -586,7 +586,7 @@
    "id": "harissa-chicken-chickpeas",
    "name": "Harissa chicken, chickpeas and peppers",
    "slot": "dinner",
-   "basePortions": 5,
+   "basePortions": 4,
    "timeMinutes": 35,
    "tags": [
     "batch",
@@ -597,16 +597,16 @@
    "ingredients": [
     {
      "item": "Chicken thighs, skinless boneless",
-     "grams": 1000,
+     "grams": 800,
      "aisle": "meat-fish",
      "packSize": 900,
      "packUnit": "g",
      "staple": false,
-     "note": "halved"
+     "note": "one 900g pack, 800g used - 4 portions at 200g"
     },
     {
      "item": "Chickpeas, tinned",
-     "grams": 480,
+     "grams": 384,
      "aisle": "cupboard",
      "packSize": 400,
      "packUnit": "g",
@@ -615,7 +615,7 @@
     },
     {
      "item": "Peppers",
-     "grams": 800,
+     "grams": 640,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -624,7 +624,7 @@
     },
     {
      "item": "Red onions",
-     "grams": 300,
+     "grams": 240,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -633,7 +633,7 @@
     },
     {
      "item": "Harissa",
-     "grams": 90,
+     "grams": 72,
      "aisle": "cupboard",
      "packSize": 180,
      "packUnit": "g",
@@ -642,7 +642,7 @@
     },
     {
      "item": "Olive oil",
-     "grams": 28,
+     "grams": 22,
      "aisle": "cupboard",
      "packSize": 500,
      "packUnit": "ml",
@@ -651,7 +651,7 @@
     },
     {
      "item": "Spinach",
-     "grams": 250,
+     "grams": 200,
      "aisle": "fresh",
      "packSize": 260,
      "packUnit": "g",
@@ -659,7 +659,7 @@
     },
     {
      "item": "Lemon juice",
-     "grams": 30,
+     "grams": 24,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -1126,7 +1126,7 @@
      "note": "3, thickly sliced"
     },
     {
-     "item": "Red onion",
+     "item": "Red onions",
      "grams": 150,
      "aisle": "fresh",
      "packSize": null,
@@ -1258,7 +1258,7 @@
    "id": "honey-glazed-chicken-wedges",
    "name": "Honey-glazed chicken with potato wedges",
    "slot": "dinner",
-   "basePortions": 3,
+   "basePortions": 4,
    "timeMinutes": 45,
    "handsOnMinutes": 15,
    "tags": [
@@ -1270,16 +1270,16 @@
    "ingredients": [
     {
      "item": "Chicken thighs, skinless boneless",
-     "grams": 650,
+     "grams": 867,
      "aisle": "meat-fish",
      "packSize": 900,
      "packUnit": "g",
      "staple": false,
-     "note": "scaled from the book's 750g so it divides 245/165/240 with nothing left"
+     "note": "one 900g pack, 867g used - three plates (245/165/240) and a lunch"
     },
     {
      "item": "Potatoes",
-     "grams": 500,
+     "grams": 667,
      "aisle": "fresh",
      "packSize": 2000,
      "packUnit": "g",
@@ -1288,7 +1288,7 @@
     },
     {
      "item": "Reduced-salt soy sauce",
-     "grams": 40,
+     "grams": 53,
      "aisle": "cupboard",
      "packSize": 150,
      "packUnit": "ml",
@@ -1297,7 +1297,7 @@
     },
     {
      "item": "Tomato puree",
-     "grams": 30,
+     "grams": 40,
      "aisle": "cupboard",
      "packSize": 200,
      "packUnit": "g",
@@ -1305,7 +1305,7 @@
     },
     {
      "item": "Honey",
-     "grams": 32,
+     "grams": 43,
      "aisle": "cupboard",
      "packSize": 340,
      "packUnit": "g",
@@ -1314,7 +1314,7 @@
     },
     {
      "item": "Garlic",
-     "grams": 9,
+     "grams": 12,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -1323,7 +1323,7 @@
     },
     {
      "item": "Asparagus",
-     "grams": 240,
+     "grams": 320,
      "aisle": "fresh",
      "packSize": 200,
      "packUnit": "g",
@@ -1331,7 +1331,7 @@
     },
     {
      "item": "Frozen edamame",
-     "grams": 140,
+     "grams": 187,
      "aisle": "frozen",
      "packSize": 500,
      "packUnit": "g",
@@ -1340,7 +1340,7 @@
     },
     {
      "item": "Olive oil",
-     "grams": 4.5,
+     "grams": 6,
      "aisle": "cupboard",
      "packSize": 500,
      "packUnit": "ml",
@@ -1383,9 +1383,27 @@
     }
    },
    "leftover": {
-    "leavesLunch": false,
+    "leavesLunch": true,
     "quality": "good",
-    "note": "3 portions, 3 diners. Good cold sliced; reheated wedges go soft"
+    "note": "The fourth portion the 900g pack now pays for. The wedges go soft overnight - eat it cold with the chicken sliced over, rather than reheating the lot. Weight below.",
+    "portions": {
+     "jon": {
+      "grams": 425,
+      "kcal": 502,
+      "protein": 51.0,
+      "fibre": 7.0,
+      "salt": 1.68,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 330,
+      "kcal": 385,
+      "protein": 39.5,
+      "fibre": 5.7,
+      "salt": 1.25,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "<b>40ml of reduced-salt soy</b>, the tomato purée, the honey and the crushed garlic in a bag or bowl with the chicken, 15 minutes minimum — the honey needs that long to do anything. Not 60ml of ordinary soy: that is 9.6g of salt in the batch and it puts Jon's day at 6.75g.",
@@ -1449,7 +1467,7 @@
      "note": "1, in 3cm pieces"
     },
     {
-     "item": "Red onion",
+     "item": "Red onions",
      "grams": 150,
      "aisle": "fresh",
      "packSize": null,
@@ -1618,7 +1636,7 @@
      "staple": true
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 190,
      "aisle": "fresh",
      "packSize": null,
@@ -1796,7 +1814,7 @@
    "id": "coconut-chicken-rice",
    "name": "One-pot sticky coconut chicken rice",
    "slot": "dinner",
-   "basePortions": 3,
+   "basePortions": 4,
    "timeMinutes": 45,
    "tags": [
     "one-pot",
@@ -1808,16 +1826,16 @@
    "ingredients": [
     {
      "item": "Chicken thighs, skinless boneless",
-     "grams": 650,
+     "grams": 867,
      "aisle": "meat-fish",
      "packSize": 900,
      "packUnit": "g",
      "staple": false,
-     "note": "scaled from the book's 825g; divides 240/170/240"
+     "note": "one 900g pack, 867g used - three plates (240/170/240) and a lunch"
     },
     {
      "item": "Jasmine rice, dry",
-     "grams": 140,
+     "grams": 187,
      "aisle": "cupboard",
      "packSize": 1000,
      "packUnit": "g",
@@ -1826,7 +1844,7 @@
     },
     {
      "item": "Red curry paste",
-     "grams": 35,
+     "grams": 47,
      "aisle": "cupboard",
      "packSize": 180,
      "packUnit": "g",
@@ -1835,7 +1853,7 @@
     },
     {
      "item": "Coriander",
-     "grams": 18,
+     "grams": 24,
      "aisle": "fresh",
      "packSize": 30,
      "packUnit": "g",
@@ -1844,7 +1862,7 @@
     },
     {
      "item": "Reduced-fat coconut milk, tinned",
-     "grams": 190,
+     "grams": 253,
      "aisle": "cupboard",
      "packSize": 400,
      "packUnit": "ml",
@@ -1853,7 +1871,7 @@
     },
     {
      "item": "Boiling water",
-     "grams": 115,
+     "grams": 153,
      "aisle": "cupboard",
      "packSize": null,
      "packUnit": "ml",
@@ -1862,7 +1880,7 @@
     },
     {
      "item": "Fish sauce",
-     "grams": 12,
+     "grams": 16,
      "aisle": "cupboard",
      "packSize": 150,
      "packUnit": "ml",
@@ -1871,7 +1889,7 @@
     },
     {
      "item": "Choy sum, pak choi or tenderstem",
-     "grams": 450,
+     "grams": 600,
      "aisle": "fresh",
      "packSize": 200,
      "packUnit": "g",
@@ -1880,7 +1898,7 @@
     },
     {
      "item": "Dry-roasted unsalted peanuts",
-     "grams": 45,
+     "grams": 60,
      "aisle": "cupboard",
      "packSize": 200,
      "packUnit": "g",
@@ -1888,8 +1906,8 @@
      "note": "WEIGH them - 15g is 87 kcal, a casual handful is 40g and 230"
     },
     {
-     "item": "Lime",
-     "grams": 65,
+     "item": "Limes",
+     "grams": 87,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -1897,7 +1915,7 @@
     },
     {
      "item": "Spray oil",
-     "grams": 3,
+     "grams": 4,
      "aisle": "cupboard",
      "packSize": 200,
      "packUnit": "ml",
@@ -1930,9 +1948,27 @@
     }
    },
    "leftover": {
-    "leavesLunch": false,
+    "leavesLunch": true,
     "quality": "good",
-    "note": "3 portions, 3 diners. If there is any spare: cool it fast and refrigerate within the hour, reheat once piping hot. Standing cooked rice is the one real food-safety risk here"
+    "note": "The fourth portion the 900g pack now pays for. RICE RULES: cool it fast, in the fridge within the hour, reheat ONCE and piping hot - never in a flask. Weight below.",
+    "portions": {
+     "jon": {
+      "grams": 345,
+      "kcal": 503,
+      "protein": 43.7,
+      "fibre": 3.2,
+      "salt": 2.12,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 295,
+      "kcal": 386,
+      "protein": 35.3,
+      "fibre": 2.8,
+      "salt": 1.63,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Heavy pot over medium-high, sprayed. Chicken 2 minutes a side until lightly golden, then out and kept warm.",
@@ -1959,13 +1995,16 @@
      "tone": "hot",
      "text": "Any spare: cool it fast, refrigerate within the hour, reheat once and piping hot. Standing cooked rice is the one real food-safety risk here."
     }
+   ],
+   "warnings": [
+    "<b>2.1g of salt in the leftover lunch.</b> This is the saltiest plate in the corpus and the tub carries it across. Pair it with a low-salt dinner, not the jacket potato or the soup."
    ]
   },
   {
    "id": "spanish-chicken-butter-beans",
    "name": "Spanish chicken with braised butter beans and chorizo",
    "slot": "dinner",
-   "basePortions": 3,
+   "basePortions": 5,
    "timeMinutes": 35,
    "handsOnMinutes": 5,
    "tags": [
@@ -1977,16 +2016,16 @@
    "ingredients": [
     {
      "item": "Chicken thighs, skinless boneless",
-     "grams": 500,
+     "grams": 833,
      "aisle": "meat-fish",
      "packSize": 900,
      "packUnit": "g",
      "staple": false,
-     "note": "trimmed"
+     "note": "one 900g pack, 833g used - three plates and two lunches"
     },
     {
      "item": "Chorizo",
-     "grams": 90,
+     "grams": 150,
      "aisle": "meat-fish",
      "packSize": 200,
      "packUnit": "g",
@@ -1995,7 +2034,7 @@
     },
     {
      "item": "Butter beans",
-     "grams": 480,
+     "grams": 800,
      "aisle": "cupboard",
      "packSize": 400,
      "packUnit": "g",
@@ -2004,7 +2043,7 @@
     },
     {
      "item": "Chicken stock",
-     "grams": 500,
+     "grams": 833,
      "aisle": "cupboard",
      "packSize": null,
      "packUnit": "ml",
@@ -2013,7 +2052,7 @@
     },
     {
      "item": "Smoked paprika",
-     "grams": 7,
+     "grams": 12,
      "aisle": "cupboard",
      "packSize": 45,
      "packUnit": "g",
@@ -2022,7 +2061,7 @@
     },
     {
      "item": "Olive oil",
-     "grams": 5,
+     "grams": 8,
      "aisle": "cupboard",
      "packSize": 500,
      "packUnit": "ml",
@@ -2031,7 +2070,7 @@
     },
     {
      "item": "Tenderstem broccoli",
-     "grams": 250,
+     "grams": 417,
      "aisle": "fresh",
      "packSize": 200,
      "packUnit": "g",
@@ -2039,7 +2078,7 @@
     },
     {
      "item": "Wholegrain baguette",
-     "grams": 125,
+     "grams": 208,
      "aisle": "bakery",
      "packSize": 250,
      "packUnit": "g",
@@ -2074,9 +2113,27 @@
     }
    },
    "leftover": {
-    "leavesLunch": false,
-    "quality": "better",
-    "note": "3 portions, 3 diners. If you cook a fourth share it is one of the best leftover lunches here - the beans take up the paprika overnight"
+    "leavesLunch": true,
+    "quality": "good",
+    "note": "Two of the five portions the 900g pack now pays for. Reheats well - the beans improve. Weight below.",
+    "portions": {
+     "jon": {
+      "grams": 450,
+      "kcal": 502,
+      "protein": 46.0,
+      "fibre": 11.3,
+      "salt": 2.23,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 450,
+      "kcal": 385,
+      "protein": 35.4,
+      "fibre": 8.9,
+      "salt": 1.83,
+      "source": "derived"
+     }
+    }
    },
    "method": [
     "Oven to 200°C. Chicken and chorizo in a single layer in an oven dish, sprayed with the oil and dusted with the paprika, then tossed.",
@@ -2142,7 +2199,7 @@
      "note": "halved from Centr's 320ml - it was almost all of the saturated fat"
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 150,
      "aisle": "fresh",
      "packSize": null,
@@ -2464,7 +2521,7 @@
      "assumed": true
     },
     {
-     "item": "Lemon",
+     "item": "Lemons",
      "grams": 15,
      "aisle": "fresh",
      "packSize": null,
@@ -2919,7 +2976,7 @@
      "note": "thickly sliced"
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 200,
      "aisle": "fresh",
      "packSize": null,
@@ -3124,7 +3181,7 @@
      "note": "halved; go on top, not stirred in"
     },
     {
-     "item": "Red onion",
+     "item": "Red onions",
      "grams": 50,
      "aisle": "fresh",
      "packSize": null,
@@ -3274,7 +3331,7 @@
      "note": "shredded fine, squeezed hard for 30 seconds"
     },
     {
-     "item": "Carrot",
+     "item": "Carrots",
      "grams": 40,
      "aisle": "fresh",
      "packSize": null,
@@ -3283,7 +3340,7 @@
      "note": "coarse grated"
     },
     {
-     "item": "Red onion",
+     "item": "Red onions",
      "grams": 20,
      "aisle": "fresh",
      "packSize": null,
@@ -3453,7 +3510,7 @@
      "note": "batons"
     },
     {
-     "item": "Carrot",
+     "item": "Carrots",
      "grams": 60,
      "aisle": "fresh",
      "packSize": null,
@@ -3462,7 +3519,7 @@
      "note": "batons"
     },
     {
-     "item": "Red pepper",
+     "item": "Red peppers",
      "grams": 60,
      "aisle": "fresh",
      "packSize": null,
@@ -3583,7 +3640,7 @@
      "note": "diced"
     },
     {
-     "item": "Red onion",
+     "item": "Red onions",
      "grams": 20,
      "aisle": "fresh",
      "packSize": null,
@@ -3718,7 +3775,7 @@
      "note": "Charlotte or similar, skin on, sliced 3mm"
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 150,
      "aisle": "fresh",
      "packSize": null,
@@ -3926,7 +3983,7 @@
      "note": "shredded"
     },
     {
-     "item": "Carrot",
+     "item": "Carrots",
      "grams": 150,
      "aisle": "fresh",
      "packSize": null,
@@ -3984,7 +4041,7 @@
      "note": "down the hot side of the pan, not into the middle"
     },
     {
-     "item": "Lime",
+     "item": "Limes",
      "grams": 65,
      "aisle": "fresh",
      "packSize": null,
@@ -4133,7 +4190,7 @@
      "staple": false
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 190,
      "aisle": "fresh",
      "packSize": null,
@@ -4417,7 +4474,7 @@
      "note": "for the next-day potato salad"
     },
     {
-     "item": "Red onion",
+     "item": "Red onions",
      "grams": 40,
      "aisle": "fresh",
      "packSize": null,
@@ -4756,7 +4813,7 @@
      "note": "diced small, keep the fronds"
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 152,
      "aisle": "fresh",
      "packSize": null,
@@ -4815,7 +4872,7 @@
      "staple": true
     },
     {
-     "item": "Lemon",
+     "item": "Lemons",
      "grams": 65,
      "aisle": "fresh",
      "packSize": null,
@@ -5233,7 +5290,7 @@
      "staple": false
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 150,
      "aisle": "fresh",
      "packSize": null,
@@ -5395,7 +5452,7 @@
      "note": "mixed HARD for a full minute - worked mince goes sticky and holds without egg or breadcrumb"
     },
     {
-     "item": "Onion",
+     "item": "Onions",
      "grams": 100,
      "aisle": "fresh",
      "packSize": null,
@@ -5659,7 +5716,7 @@
      "staple": true
     },
     {
-     "item": "Lemon",
+     "item": "Lemons",
      "grams": 20,
      "aisle": "fresh",
      "packSize": null,
@@ -5776,7 +5833,7 @@
      "staple": true
     },
     {
-     "item": "Lemon",
+     "item": "Lemons",
      "grams": 20,
      "aisle": "fresh",
      "packSize": null,
