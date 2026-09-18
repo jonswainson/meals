@@ -47,6 +47,19 @@
 
   .meal{background:var(--card);border:1px solid var(--line);border-radius:12px;
     margin:12px;padding:14px 16px}
+  details.meal > summary{list-style:none;cursor:pointer;position:relative;padding-right:26px;
+    user-select:none;-webkit-user-select:none}
+  details.meal > summary::-webkit-details-marker{display:none}
+  details.meal > summary::after{content:"";position:absolute;right:2px;top:7px;width:9px;height:9px;
+    border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+    transform:rotate(45deg);transition:transform .15s ease}
+  details.meal[open] > summary::after{transform:rotate(225deg)}
+  details.meal > summary .macros{margin-bottom:0}
+  details.meal[open] > summary .macros{margin-bottom:2px}
+  /* the 2:30 is one person's, and should not look like the meals they share */
+  details.meal.solo{background:none;border-style:dashed}
+  details.meal.solo > summary .slot{color:var(--muted)}
+  details.meal.solo > summary h2{font-weight:600;color:var(--muted)}
   .slot{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;
     color:var(--accent);font-weight:700;margin:0 0 5px}
   h2{font-size:1rem;margin:0 0 8px;letter-spacing:-.005em}
@@ -561,7 +574,15 @@ function slotNote(d, slot){
            'Already counted in her figures and already on the shopping list.</p>';
   return "";
 }
-const closeCard = (h, d, slot) => h + slotNote(d, slot) + '</div>';
+const closeCard = (h, d, slot) => h + slotNote(d, slot) + '</div></details>';
+/* Collapsed by default: slot, name and the macro row are all you need when you are
+   looking at the week. One tap gets the rest. */
+const OPEN = new Set();          /* which cards the user has opened, kept across re-renders */
+const cardHead = (d, slot, label, name, macros, cls) =>
+  '<details class="meal' + (cls || '') + '" data-card="' + d.id + '/' + slot + '"' +
+  (OPEN.has(d.id + '/' + slot) ? ' open' : '') + '><summary>' +
+  '<div class="slot">' + label + '</div><h2>' + name + '</h2>' + (macros || '') +
+  '</summary><div class="mbody">';
 
 /* Jon is 1 share, Cheryl 0.75. The daughter is not modelled on the fixed items. */
 const sharesFor = (d, slot) =>
@@ -569,16 +590,21 @@ const sharesFor = (d, slot) =>
 
 function mealCard(d, slot){
   const m = d[slot];
-  const label = slot === "afternoon" ? "2:30" : slot[0].toUpperCase() + slot.slice(1);
-  let h = '<div class="meal"><p class="slot">' + label + '</p>';
+  const solo = slot === "afternoon" && d.diners.includes("cheryl");
+  const label = (slot === "afternoon" ? "2:30" : slot[0].toUpperCase() + slot.slice(1)) +
+                (solo ? ' \u2014 Jon only' : '');
+  const cls = solo ? ' solo' : '';
+  let h;
 
   if (typeof m === "string"){
     const f = FIXED[m];
-    return closeCard(h + '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f, sharesFor(d, slot)), d, slot);
+    h = cardHead(d, slot, label, f.name, macroRow(f.jon, f), cls);
+    return closeCard(h + fixedRecipe(f, sharesFor(d, slot)), d, slot);
   }
   if (m.kind === "fixed"){
     const f = FIXED[m.id];
-    h += '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f, sharesFor(d, slot));
+    h = cardHead(d, slot, label, f.name, macroRow(f.jon, f), cls);
+    h += fixedRecipe(f, sharesFor(d, slot));
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
     return closeCard(h, d, slot);
@@ -586,9 +612,9 @@ function mealCard(d, slot){
   if (m.kind === "leftover"){
     const src = day(m.from);
     const r = (src && src.dinner.kind === "recipe") ? recipe(src.dinner.id) : null;
-    h += '<h2>' + (r ? src.title + "'s " + r.name.toLowerCase() : "Leftovers") + '</h2>';
+    h = cardHead(d, slot, label, r ? src.title + "'s " + r.name.toLowerCase() : "Leftovers",
+                 r ? macroRow(leftoverPlate(r, "jon"), {timeMinutes: 0}) : "", cls);
     if (r){
-      h += macroRow(leftoverPlate(r, "jon"), {timeMinutes: 0});
 
       const lo = r.leftover || {};
       const pj = leftoverPortion(r, "jon"), pc = leftoverPortion(r, "cheryl");
@@ -624,7 +650,7 @@ function mealCard(d, slot){
   }
 
   const r = recipe(m.id);
-  h += '<h2>' + (r ? r.name : "—") + '</h2>' + (r ? macroRow(r.plates.jon, r) : "");
+  h = cardHead(d, slot, label, r ? r.name : "\u2014", r ? macroRow(r.plates.jon, r) : "", cls);
   h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) + '</select>';
   h += '<div class="ctrl"><label>Portions</label><div class="step">' +
        '<button class="dec" data-slot="' + slot + '">−</button><span>' + m.portions + '</span>' +
@@ -792,6 +818,10 @@ function state(i){
 }
 
 function render(){
+  /* remember what is open before the DOM is replaced */
+  document.querySelectorAll("details.meal").forEach(el => {
+    if (el.open) OPEN.add(el.dataset.card); else OPEN.delete(el.dataset.card);
+  });
   const d = WEEK.days[current];
   renderTabs(); renderTotals(d);
   const el = $("#day");
