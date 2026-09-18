@@ -200,7 +200,7 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
    the same pair CHERYL_LUNCH_ING has been buying all along. The banana was dropped
    from the macros when the feed moved, which ran her ~38 kcal light every day. */
 const CHERYL_LUNCH_ADDON = {kcal:133,protein:9.3,fibre:1.7,salt:0.11,
-                            label:"three-quarters of your 2:30 \u2014 90g banana and 75g Skyr"};
+                            label:"three-quarters of Jon's 2:30 \u2014 90g banana and 75g Skyr"};
 
 const TARGETS = {
   jon:    {kcal:1900, band:50, protein:170, salt:6},
@@ -343,7 +343,7 @@ FIXED["berry-oat"].recipe = R(
   ["200g Skyr · 32g whey · 150ml milk","100g frozen mixed berries","30g porridge oats · 12g chia seeds"],
   ["Whey in first, then everything else — powder sitting on the blades goes lumpy.",
    "The KitchenAid handles whole oats in any order. No pre-blitzing."],
-  "<b>The smaller glass</b> \u2014 three-quarters of what goes in yours, which is why the jug is " +
+  "<b>The smaller glass</b> \u2014 three-quarters of what goes in Jon's, which is why the jug is " +
   "poured 4:3 and not in half. About 400 kcal and 43g.");
 
 FIXED["skyr-bowl"].recipe = R(
@@ -352,7 +352,7 @@ FIXED["skyr-bowl"].recipe = R(
   ["<b>Whey powder in first, then the Skyr, then stir.</b> The other way round and you spend five minutes chasing lumps.",
    "Berries and banana on top. <b>Seeds and nuts last</b>, so they stay crunchy.",
    "If the bowl is too solid to eat, give the frozen raspberries five minutes to soften."],
-  "<b>The smaller helping</b> \u2014 three-quarters of yours, not three-quarters of what you made. " +
+  "<b>The smaller helping</b> \u2014 three-quarters of Jon's, not three-quarters of the whole bowl. " +
   "About 440 kcal and 46g.");
 
 FIXED["huel-milbona"].recipe = R(
@@ -362,7 +362,7 @@ FIXED["huel-milbona"].recipe = R(
 
 FIXED["banana-skyr"].recipe = R(["120g banana, weighed and peeled","100g plain Skyr"], [],
   null,
-  "<b>Weigh the banana.</b> Yours came in at 196g last time, 70 calories more than the recipe means.");
+  "<b>Weigh the banana.</b> Jon's came in at 196g last time, 70 calories more than the recipe means.");
 
 FIXED["banana-skyr-150"].recipe = R(["120g banana, weighed and peeled","150g plain Skyr"], [],
   null,
@@ -384,7 +384,7 @@ FIXED["sunday-roast"].recipe = R(
   ["180g beef, reheated in the gravy","200g roast potatoes","100g carrots · 100g broccoli · 80g cabbage","60ml gravy"],
   ["Potatoes and vegetables fresh; only the meat is reheated.",
    "Reheat it <b>in</b> the gravy rather than dry — roast meat reheated on its own goes grey and tough."],
-  "<b>Three-quarters of yours</b>, straight off the same plates \u2014 about 525 kcal and 53g.",
+  "<b>Three-quarters of Jon's</b>, straight off the same plates \u2014 about 525 kcal and 53g.",
   "<b>No Yorkshire puddings.</b> The potatoes are the starch, and that is what keeps this plate at 720g.");
 
 FIXED["prawns-pear"].recipe = R(
@@ -553,7 +553,7 @@ const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot)
 function slotNote(d, slot){
   if (!d.diners.includes("cheryl")) return "";
   if (slot === "afternoon")
-    return '<p class="note"><b>Yours only.</b> Cheryl is teaching at 2:30, so her Skyr and ' +
+    return '<p class="note"><b>Jon only.</b> Cheryl is teaching at 2:30, so her Skyr and ' +
            'banana go with her lunch instead. Nothing here for her.</p>';
   if (slot === "lunch")
     return '<p class="note"><b>Cheryl has ' + CHERYL_LUNCH_ADDON.label + ' with this</b>, ' +
@@ -601,7 +601,7 @@ function mealCard(d, slot){
         return '<li><b>' + lab + ' — ' + x.grams + 'g</b> · ' + x.kcal + ' kcal · ' +
                x.protein + 'g protein' + (x.source === "derived" ? ' <i>· derived</i>' : '') + '</li>';
       };
-      h += '<ul class="ing">' + weigh(pj, "You") + weigh(pc, "Cheryl") + '</ul>';
+      h += '<ul class="ing">' + weigh(pj, "Jon") + weigh(pc, "Cheryl") + '</ul>';
       if (pj && pj.salt >= 2)
         h += '<p class="note warn"><b>' + pj.salt + 'g of salt in this tub</b>, against 6g for ' +
              'the day. Put it with a low-salt dinner.</p>';
@@ -641,7 +641,7 @@ function mealCard(d, slot){
            String(m.alt||"").replace(/"/g,"&quot;") + '"></div>';
   }
   if (r && r.plates.jon && r.plates.jon.assumed)
-    h += '<p class="note warn">Your plate here is <b>derived, not tested</b> — treat the numbers as an estimate.</p>';
+    h += '<p class="note warn">Jon\'s plate here is <b>derived, not tested</b> — treat the numbers as an estimate.</p>';
   if (d.diners.includes("daughter") && r && r.plates.daughter && r.plates.daughter.assumed)
     h += '<p class="note warn">Your daughter\'s plate is <b>derived and never tested</b> — nobody has built one for this meal.</p>';
   if (d.diners.includes("daughter") && r && !r.plates.daughter)
@@ -710,7 +710,7 @@ function fixedRecipe(f, shares){
         return item + ' \u2014 ' + (v >= 10 ? Math.round(v) : Math.round(v*10)/10) + (unit || 'g');
       }).join('</li><li>') + '</li></ul>';
     if (n > 1)
-      h += '<p class="note"><b>One lot, poured 4 : 3.</b> The bigger one is yours. ' +
+      h += '<p class="note"><b>One lot, poured 4 : 3.</b> The bigger one is Jon\'s. ' +
            'Nothing is made twice.</p>';
   } else if (r.ing && r.ing.length)
     h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' + r.ing.join('</li><li>') + '</li></ul>';
@@ -737,7 +737,7 @@ function ratioOf(vals){
 
 function splitBlock(r, eats){
   const s = r.plateSplit; if (!s) return "";
-  const who = [["jon","You"],["cheryl","Cheryl"],["daughter","Daughter"]]
+  const who = [["jon","Jon"],["cheryl","Cheryl"],["daughter","Daughter"]]
     .filter(([k]) => s.grams[k] !== undefined && (k !== "daughter" || eats));
   if (!who.length) return "";
   let h = '<h3 class="rh">How much each</h3>';
@@ -746,8 +746,8 @@ function splitBlock(r, eats){
     h += '<div class="ratio"><b>' + rat.rr.join(' : ') + '</b>' +
          '<span>' + who.map(([,lab]) => lab.toLowerCase()).join(' &middot; ') +
          '</span></div><p class="note">Eyeball it in those proportions \u2014 no scales, no sums. ' +
-         'It runs you slightly generous, so <b>weigh your own plate on a tight day</b> and share ' +
-         'the rest out by eye. The weights below are the exact version.</p>';
+         'It runs Jon slightly generous, so <b>weigh his plate on a tight day</b> and share the ' +
+         'rest out by eye. The weights below are the exact version.</p>';
   if (s.servedByWeight){
     h += '<ul class="ing"><li>' + who.map(([k,lab]) =>
       '<b>' + lab + ' \u2014 ' + s.grams[k] + 'g</b> onto the plate').join('</li><li>') + '</li></ul>';
