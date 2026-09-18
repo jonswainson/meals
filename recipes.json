@@ -1,5 +1,5 @@
 {
- "version": "2026-09-17h",
+ "version": "2026-09-18a",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -163,20 +163,20 @@
      "plateGrams": 624
     },
     "cheryl": {
-     "kcal": 432,
-     "protein": 41.1,
-     "fibre": 10.4,
-     "salt": 1.29,
-     "plateGrams": 443
+     "kcal": 452,
+     "protein": 48.8,
+     "fibre": 11.0,
+     "salt": 1.2,
+     "plateGrams": 468
     },
     "daughter": {
-     "kcal": 466,
-     "protein": 55.9,
-     "fibre": 4.5,
-     "salt": 1.6,
+     "kcal": 323,
+     "protein": 34.9,
+     "fibre": 7.9,
+     "salt": 0.9,
      "plateGrams": 335,
-     "assumed": true,
-     "note": "corpus describes her plate but gives no figures"
+     "note": "corpus describes her plate but gives no figures",
+     "assumed": true
     }
    },
    "leftover": {
@@ -219,68 +219,60 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 624,
-     "cheryl": 443,
+     "cheryl": 468,
      "daughter": 335
     },
     "components": [
      {
       "item": "Chicken breast, raw",
-      "jon": 240,
-      "cheryl": 150,
-      "daughter": 205,
-      "derived": true
+      "jon": 260,
+      "cheryl": 195,
+      "daughter": 140
      },
      {
       "item": "Red and yellow peppers",
       "jon": 170,
-      "cheryl": 120,
-      "daughter": 90,
-      "derived": true
+      "cheryl": 125,
+      "daughter": 90
      },
      {
       "item": "Onions",
       "jon": 80,
-      "cheryl": 55,
-      "daughter": 45,
-      "derived": true
+      "cheryl": 60,
+      "daughter": 40
      },
      {
       "item": "Wholemeal wraps",
       "jon": 95,
       "cheryl": 70,
-      "daughter": 50,
-      "derived": true
+      "daughter": 50
      },
      {
       "item": "Cheddar, grated",
       "jon": 25,
       "cheryl": 20,
-      "daughter": 15,
-      "derived": true
+      "daughter": 15
      },
      {
       "item": "Salsa",
       "jon": 40,
       "cheryl": 30,
-      "daughter": 20,
-      "derived": true
+      "daughter": 20
      },
      {
       "item": "Black beans, tinned",
       "jon": 65,
       "cheryl": 45,
-      "daughter": 35,
-      "derived": true
+      "daughter": 35
      },
      {
       "item": "Plain Skyr",
       "jon": 25,
-      "cheryl": 15,
-      "daughter": 20,
-      "derived": true
+      "cheryl": 20,
+      "daughter": 15
      }
     ]
    }
@@ -431,20 +423,20 @@
      "plateGrams": 677
     },
     "cheryl": {
-     "kcal": 487,
-     "protein": 39.9,
-     "fibre": 8.5,
-     "salt": 1,
-     "plateGrams": 480
+     "kcal": 530,
+     "protein": 41.9,
+     "fibre": 9.6,
+     "salt": 1.0,
+     "plateGrams": 508
     },
     "daughter": {
-     "kcal": 651,
-     "protein": 47.4,
-     "fibre": 11.6,
-     "salt": 1.26,
+     "kcal": 590,
+     "protein": 46.7,
+     "fibre": 10.7,
+     "salt": 1.1,
      "plateGrams": 566,
-     "assumed": true,
-     "note": "0.8 of a portion with 75g dry pasta"
+     "note": "0.8 of a portion with 75g dry pasta",
+     "assumed": true
     }
    },
    "leftover": {
@@ -494,7 +486,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 677,
-     "cheryl": 480,
+     "cheryl": 508,
      "daughter": 566
     }
    }
@@ -617,17 +609,17 @@
      "note": "raw sum 757g; a baked potato loses ~20% water"
     },
     "cheryl": {
-     "kcal": 445,
-     "protein": 39.6,
-     "fibre": 6.8,
-     "salt": 2.5,
-     "plateGrams": 500
+     "kcal": 486,
+     "protein": 39.8,
+     "fibre": 8.8,
+     "salt": 2.7,
+     "plateGrams": 525
     },
     "daughter": {
-     "kcal": 601,
-     "protein": 19.8,
+     "kcal": 403,
+     "protein": 33.0,
      "fibre": 7.3,
-     "salt": 2.42,
+     "salt": 2.2,
      "plateGrams": 435,
      "assumed": true
     }
@@ -658,61 +650,54 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 700,
-     "cheryl": 500,
+     "cheryl": 525,
      "daughter": 435
     },
     "components": [
      {
       "item": "Baking potatoes",
-      "jon": 355,
-      "cheryl": 250,
-      "daughter": 220,
-      "derived": true
+      "jon": 350,
+      "cheryl": 260,
+      "daughter": 215
      },
      {
       "item": "Tuna in spring water, tinned",
       "jon": 45,
       "cheryl": 35,
-      "daughter": 30,
-      "derived": true
+      "daughter": 30
      },
      {
       "item": "Sweetcorn, tinned",
       "jon": 35,
       "cheryl": 25,
-      "daughter": 20,
-      "derived": true
+      "daughter": 20
      },
      {
       "item": "Baked beans",
-      "jon": 130,
-      "cheryl": 90,
-      "daughter": 80,
-      "derived": true
+      "jon": 125,
+      "cheryl": 95,
+      "daughter": 80
      },
      {
       "item": "Cheddar, grated",
       "jon": 25,
       "cheryl": 20,
-      "daughter": 15,
-      "derived": true
+      "daughter": 15
      },
      {
       "item": "Cottage cheese",
-      "jon": 95,
-      "cheryl": 70,
-      "daughter": 35,
-      "derived": true
+      "jon": 85,
+      "cheryl": 65,
+      "daughter": 50
      },
      {
       "item": "Salad leaves",
-      "jon": 45,
+      "jon": 40,
       "cheryl": 30,
-      "daughter": 25,
-      "derived": true
+      "daughter": 25
      }
     ]
    }
@@ -812,20 +797,20 @@
      "note": "one fifth of the tray"
     },
     "cheryl": {
-     "kcal": 461,
-     "protein": 41.6,
-     "fibre": 10.8,
-     "salt": 1.18,
-     "plateGrams": 545
+     "kcal": 394,
+     "protein": 38.8,
+     "fibre": 8.1,
+     "salt": 0.9,
+     "plateGrams": 360
     },
     "daughter": {
-     "kcal": 346,
-     "protein": 38.8,
-     "fibre": 3.2,
-     "salt": 0.61,
+     "kcal": 422,
+     "protein": 41.5,
+     "fibre": 8.7,
+     "salt": 1.0,
      "plateGrams": 385,
-     "assumed": true,
-     "note": "chickpeas left on the tray - she refuses visible pulses. No starch in this dish, so her plate is light; add bread or potatoes for her"
+     "note": "chickpeas left on the tray - she refuses visible pulses. No starch in this dish, so her plate is light; add bread or potatoes for her",
+     "assumed": true
     }
    },
    "leftover": {
@@ -872,54 +857,48 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 480,
-     "cheryl": 545,
+     "cheryl": 360,
      "daughter": 385
     },
     "components": [
      {
       "item": "Chicken thighs, skinless boneless",
       "jon": 235,
-      "cheryl": 190,
-      "daughter": 175,
-      "derived": true
+      "cheryl": 175,
+      "daughter": 190
      },
      {
       "item": "Chickpeas, tinned",
-      "jon": 100,
-      "cheryl": 110,
-      "daughter": 80,
-      "derived": true
+      "jon": 115,
+      "cheryl": 85,
+      "daughter": 90
      },
      {
       "item": "Peppers",
-      "jon": 165,
-      "cheryl": 185,
-      "daughter": 130,
-      "derived": true
+      "jon": 190,
+      "cheryl": 140,
+      "daughter": 150
      },
      {
       "item": "Red onions",
-      "jon": 60,
-      "cheryl": 70,
-      "daughter": 50,
-      "derived": true
+      "jon": 70,
+      "cheryl": 55,
+      "daughter": 55
      },
      {
       "item": "Harissa",
       "jon": 20,
-      "cheryl": 20,
-      "daughter": 15,
-      "derived": true
+      "cheryl": 15,
+      "daughter": 15
      },
      {
       "item": "Spinach",
-      "jon": 50,
-      "cheryl": 60,
-      "daughter": 40,
-      "derived": true
+      "jon": 60,
+      "cheryl": 45,
+      "daughter": 45
      }
     ]
    }
@@ -1062,21 +1041,20 @@
      "note": "690g chilli + 60g Skyr; exactly on the plate ceiling"
     },
     "cheryl": {
-     "kcal": 467,
-     "protein": 48.7,
-     "fibre": 11.8,
-     "salt": 1.51,
-     "plateGrams": 560,
-     "note": "500g chilli + 60g Skyr"
+     "kcal": 473,
+     "protein": 48.4,
+     "fibre": 12.2,
+     "salt": 1.5,
+     "plateGrams": 562
     },
     "daughter": {
-     "kcal": 425,
-     "protein": 44.4,
-     "fibre": 10.6,
-     "salt": 1.36,
+     "kcal": 429,
+     "protein": 43.9,
+     "fibre": 11.1,
+     "salt": 1.4,
      "plateGrams": 510,
-     "assumed": true,
-     "note": "UNTESTED. Neither the corpus nor the verified week ever builds her a chilli plate, and the black and kidney beans are visible and cannot be lifted out"
+     "note": "UNTESTED. Neither the corpus nor the verified week ever builds her a chilli plate, and the black and kidney beans are visible and cannot be lifted out",
+     "assumed": true
     }
    },
    "leftover": {
@@ -1126,7 +1104,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 750,
-     "cheryl": 560,
+     "cheryl": 562,
      "daughter": 510
     }
    }
@@ -1225,20 +1203,20 @@
      "note": "raw sum 425g; salmon loses ~20% in the oven"
     },
     "cheryl": {
-     "kcal": 406,
-     "protein": 32.4,
-     "fibre": 6.4,
-     "salt": 0.88,
-     "plateGrams": 368
+     "kcal": 393,
+     "protein": 33.0,
+     "fibre": 4.8,
+     "salt": 0.7,
+     "plateGrams": 300
     },
     "daughter": {
-     "kcal": 406,
-     "protein": 35.3,
-     "fibre": 1,
-     "salt": 0.57,
+     "kcal": 333,
+     "protein": 27.9,
+     "fibre": 4.1,
+     "salt": 0.6,
      "plateGrams": 254,
-     "assumed": true,
-     "note": "salmon and tomatoes only - the green lentils are visible. No starch; her plate is light"
+     "note": "salmon and tomatoes only - the green lentils are visible. No starch; her plate is light",
+     "assumed": true
     }
    },
    "leftover": {
@@ -1282,40 +1260,36 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 400,
-     "cheryl": 368,
+     "cheryl": 300,
      "daughter": 254
     },
     "components": [
      {
       "item": "Salmon fillets, raw",
-      "jon": 200,
-      "cheryl": 150,
-      "daughter": 160,
-      "derived": true
+      "jon": 215,
+      "cheryl": 160,
+      "daughter": 135
      },
      {
       "item": "Green lentils, tinned",
-      "jon": 115,
-      "cheryl": 105,
-      "daughter": 70,
-      "derived": true
+      "jon": 120,
+      "cheryl": 90,
+      "daughter": 75
      },
      {
       "item": "Cherry tomatoes",
-      "jon": 115,
-      "cheryl": 110,
-      "daughter": 75,
-      "derived": true
+      "jon": 125,
+      "cheryl": 95,
+      "daughter": 80
      },
      {
       "item": "Spinach or kale",
-      "jon": 45,
-      "cheryl": 45,
-      "daughter": 30,
-      "derived": true
+      "jon": 50,
+      "cheryl": 40,
+      "daughter": 30
      }
     ]
    }
@@ -1448,17 +1422,17 @@
      "note": "raw sum 849g; roasting takes ~18% off"
     },
     "cheryl": {
-     "kcal": 502,
-     "protein": 45.6,
-     "fibre": 12.8,
-     "salt": 1.18,
-     "plateGrams": 580
+     "kcal": 474,
+     "protein": 48.0,
+     "fibre": 10.5,
+     "salt": 1.0,
+     "plateGrams": 525
     },
     "daughter": {
-     "kcal": 524,
-     "protein": 54.1,
-     "fibre": 5.5,
-     "salt": 0.98,
+     "kcal": 479,
+     "protein": 48.5,
+     "fibre": 10.6,
+     "salt": 1.0,
      "plateGrams": 530,
      "assumed": true
     }
@@ -1490,54 +1464,48 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 700,
-     "cheryl": 580,
+     "cheryl": 525,
      "daughter": 530
     },
     "components": [
      {
       "item": "Chicken breast, raw",
-      "jon": 235,
-      "cheryl": 165,
-      "daughter": 200,
-      "derived": true
+      "jon": 240,
+      "cheryl": 180,
+      "daughter": 180
      },
      {
       "item": "New potatoes",
-      "jon": 230,
-      "cheryl": 190,
-      "daughter": 175,
-      "derived": true
+      "jon": 240,
+      "cheryl": 180,
+      "daughter": 180
      },
      {
       "item": "Peppers",
-      "jon": 185,
-      "cheryl": 155,
-      "daughter": 140,
-      "derived": true
+      "jon": 190,
+      "cheryl": 145,
+      "daughter": 145
      },
      {
       "item": "Red onions",
       "jon": 60,
-      "cheryl": 50,
-      "daughter": 45,
-      "derived": true
+      "cheryl": 45,
+      "daughter": 45
      },
      {
       "item": "Butter beans",
       "jon": 95,
-      "cheryl": 75,
-      "daughter": 70,
-      "derived": true
+      "cheryl": 70,
+      "daughter": 70
      },
      {
       "item": "Tenderstem broccoli",
-      "jon": 75,
-      "cheryl": 65,
-      "daughter": 60,
-      "derived": true
+      "jon": 80,
+      "cheryl": 60,
+      "daughter": 60
      }
     ]
    }
@@ -1655,17 +1623,17 @@
      "note": "245g raw thigh, 200g raw potato, 100g asparagus, 80g edamame"
     },
     "cheryl": {
-     "kcal": 458,
-     "protein": 47,
-     "fibre": 6.8,
-     "salt": 1.49,
-     "plateGrams": 393
+     "kcal": 498,
+     "protein": 50.6,
+     "fibre": 7.0,
+     "salt": 1.7,
+     "plateGrams": 422
     },
     "daughter": {
-     "kcal": 523,
-     "protein": 54.9,
-     "fibre": 3.7,
-     "salt": 2.09,
+     "kcal": 476,
+     "protein": 48.4,
+     "fibre": 6.7,
+     "salt": 1.6,
      "plateGrams": 403,
      "note": "240g chicken, 170g wedges, asparagus if she'll have it. Salt derived from her glaze share"
     }
@@ -1715,40 +1683,36 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "part-stated",
+    "source": "ratio",
     "grams": {
      "jon": 562,
-     "cheryl": 393,
+     "cheryl": 422,
      "daughter": 403
     },
     "components": [
      {
       "item": "Chicken thighs, skinless boneless",
-      "jon": 245,
-      "cheryl": 165,
-      "daughter": 240,
-      "derived": true
+      "jon": 265,
+      "cheryl": 200,
+      "daughter": 190
      },
      {
       "item": "Potatoes",
-      "jon": 200,
-      "cheryl": 130,
-      "daughter": 170,
-      "derived": true
+      "jon": 205,
+      "cheryl": 150,
+      "daughter": 145
      },
      {
       "item": "Asparagus",
-      "jon": 100,
-      "cheryl": 70,
-      "daughter": 70,
-      "derived": true
+      "jon": 95,
+      "cheryl": 75,
+      "daughter": 70
      },
      {
       "item": "Frozen edamame",
-      "jon": 80,
-      "cheryl": 60,
-      "daughter": 0,
-      "derived": true
+      "jon": 55,
+      "cheryl": 45,
+      "daughter": 40
      }
     ]
    }
@@ -1882,20 +1846,20 @@
      "note": "raw sum 728g"
     },
     "cheryl": {
-     "kcal": 539,
+     "kcal": 540,
      "protein": 37.6,
-     "fibre": 9,
-     "salt": 0.98,
-     "plateGrams": 540
+     "fibre": 9.8,
+     "salt": 1.0,
+     "plateGrams": 465
     },
     "daughter": {
-     "kcal": 582,
-     "protein": 39.9,
-     "fibre": 4.8,
-     "salt": 0.82,
+     "kcal": 446,
+     "protein": 31.0,
+     "fibre": 8.1,
+     "salt": 0.8,
      "plateGrams": 384,
-     "assumed": true,
-     "note": "salmon and sweet potato; everything sits separately on the tray"
+     "note": "salmon and sweet potato; everything sits separately on the tray",
+     "assumed": true
     }
    },
    "leftover": {
@@ -1925,61 +1889,54 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 620,
-     "cheryl": 540,
+     "cheryl": 465,
      "daughter": 384
     },
     "components": [
      {
       "item": "Salmon fillets, raw",
-      "jon": 210,
-      "cheryl": 160,
-      "daughter": 170,
-      "derived": true
+      "jon": 230,
+      "cheryl": 170,
+      "daughter": 140
      },
      {
       "item": "Sweet potato",
-      "jon": 240,
-      "cheryl": 210,
-      "daughter": 150,
-      "derived": true
+      "jon": 255,
+      "cheryl": 190,
+      "daughter": 155
      },
      {
       "item": "Courgette",
-      "jon": 100,
-      "cheryl": 85,
-      "daughter": 60,
-      "derived": true
+      "jon": 105,
+      "cheryl": 80,
+      "daughter": 65
      },
      {
       "item": "Red onions",
-      "jon": 60,
-      "cheryl": 50,
-      "daughter": 35,
-      "derived": true
+      "jon": 65,
+      "cheryl": 45,
+      "daughter": 40
      },
      {
       "item": "Asparagus",
-      "jon": 65,
-      "cheryl": 55,
-      "daughter": 40,
-      "derived": true
+      "jon": 70,
+      "cheryl": 50,
+      "daughter": 40
      },
      {
       "item": "Cherry tomatoes",
-      "jon": 60,
-      "cheryl": 50,
-      "daughter": 35,
-      "derived": true
+      "jon": 65,
+      "cheryl": 45,
+      "daughter": 40
      },
      {
       "item": "Butter beans",
-      "jon": 95,
-      "cheryl": 85,
-      "daughter": 60,
-      "derived": true
+      "jon": 100,
+      "cheryl": 75,
+      "daughter": 65
      }
     ]
    }
@@ -2136,18 +2093,17 @@
      "note": "one fifth of the pan + a 50g slice"
     },
     "cheryl": {
-     "kcal": 479,
-     "protein": 46,
-     "fibre": 6.6,
-     "salt": 1.31,
-     "plateGrams": 475,
-     "note": "no bread - the lentils replace it"
+     "kcal": 500,
+     "protein": 42.8,
+     "fibre": 8.1,
+     "salt": 1.5,
+     "plateGrams": 443
     },
     "daughter": {
-     "kcal": 882,
-     "protein": 65.6,
-     "fibre": 16.7,
-     "salt": 3.03,
+     "kcal": 767,
+     "protein": 65.8,
+     "fibre": 12.4,
+     "salt": 2.4,
      "plateGrams": 681,
      "note": "a full portion and two slices"
     }
@@ -2200,7 +2156,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 591,
-     "cheryl": 475,
+     "cheryl": 443,
      "daughter": 681
     }
    }
@@ -2327,17 +2283,17 @@
      "note": "240g raw thigh, 55g dry rice, 150g greens, 15g peanuts. Still the saltiest single plate in the corpus"
     },
     "cheryl": {
-     "kcal": 462,
-     "protein": 42.2,
+     "kcal": 516,
+     "protein": 44.8,
      "fibre": 3.3,
-     "salt": 1.95,
-     "plateGrams": 353
+     "salt": 2.2,
+     "plateGrams": 354
     },
     "daughter": {
-     "kcal": 567,
-     "protein": 54.7,
-     "fibre": 2.5,
-     "salt": 2.61,
+     "kcal": 590,
+     "protein": 51.3,
+     "fibre": 3.8,
+     "salt": 2.5,
      "plateGrams": 405,
      "note": "240g chicken, 50g dry rice, greens - no chilli, coriander or peanuts. Salt derived from her sauce share"
     }
@@ -2396,40 +2352,36 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "part-stated",
+    "source": "ratio",
     "grams": {
      "jon": 472,
-     "cheryl": 353,
+     "cheryl": 354,
      "daughter": 405
     },
     "components": [
      {
       "item": "Chicken thighs, skinless boneless",
-      "jon": 240,
-      "cheryl": 170,
-      "daughter": 240,
-      "derived": true
+      "jon": 250,
+      "cheryl": 185,
+      "daughter": 215
      },
      {
       "item": "Jasmine rice, dry",
       "jon": 55,
-      "cheryl": 35,
-      "daughter": 50,
-      "derived": true
+      "cheryl": 40,
+      "daughter": 45
      },
      {
       "item": "Reduced-fat coconut milk, tinned",
       "jon": 75,
       "cheryl": 55,
-      "daughter": 60,
-      "derived": true
+      "daughter": 60
      },
      {
       "item": "Choy sum, pak choi or tenderstem",
-      "jon": 150,
-      "cheryl": 140,
-      "daughter": 160,
-      "derived": true
+      "jon": 175,
+      "cheryl": 130,
+      "daughter": 150
      }
     ]
    }
@@ -2530,20 +2482,20 @@
      "note": "raw sum 793g; the broth reduces"
     },
     "cheryl": {
-     "kcal": 504,
-     "protein": 46.4,
-     "fibre": 11.7,
-     "salt": 2.4,
-     "plateGrams": 589
+     "kcal": 578,
+     "protein": 52.9,
+     "fibre": 13.0,
+     "salt": 2.6,
+     "plateGrams": 518
     },
     "daughter": {
-     "kcal": 613,
-     "protein": 55.9,
-     "fibre": 8.2,
-     "salt": 2.87,
+     "kcal": 558,
+     "protein": 51.2,
+     "fibre": 12.5,
+     "salt": 2.5,
      "plateGrams": 500,
-     "assumed": true,
-     "note": "beans and broccoli alongside rather than under - nothing stirred together"
+     "note": "beans and broccoli alongside rather than under - nothing stirred together",
+     "assumed": true
     }
    },
    "leftover": {
@@ -2594,7 +2546,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 690,
-     "cheryl": 589,
+     "cheryl": 518,
      "daughter": 500
     }
    }
@@ -2744,20 +2696,20 @@
      "note": "BREACHES the 700-750g plate ceiling. The larger half of the pan plus 3 eggs and 100g of Skyr is ~1,090g - chef-proposals already records this dish at 950-1,000g"
     },
     "cheryl": {
-     "kcal": 635,
-     "protein": 47.9,
-     "fibre": 17.9,
-     "salt": 2.42,
-     "plateGrams": 865
+     "kcal": 616,
+     "protein": 46.9,
+     "fibre": 16.4,
+     "salt": 2.3,
+     "plateGrams": 818
     },
     "daughter": {
-     "kcal": 277,
-     "protein": 18.6,
+     "kcal": 121,
+     "protein": 9.2,
      "fibre": 3.2,
-     "salt": 0.95,
+     "salt": 0.4,
      "plateGrams": 160,
-     "assumed": true,
-     "note": "SECOND PAN. A tin of whole green lentils in a visible curry sauce has nowhere to hide - two eggs poached separately, here with a 50g slice of wholemeal bread"
+     "note": "SECOND PAN. A tin of whole green lentils in a visible curry sauce has nowhere to hide - two eggs poached separately, here with a 50g slice of wholemeal bread",
+     "assumed": true
     }
    },
    "leftover": {
@@ -2794,7 +2746,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 1090,
-     "cheryl": 865,
+     "cheryl": 818,
      "daughter": 160
     }
    }
@@ -2887,12 +2839,11 @@
      "note": "verified week's re-costing. Book said 340/38/6: calories 38 high and protein 13.5g LOW"
     },
     "cheryl": {
-     "kcal": 267,
-     "protein": 38.1,
-     "fibre": 3.8,
-     "salt": 0.31,
-     "plateGrams": 281,
-     "assumed": true
+     "kcal": 226,
+     "protein": 38.6,
+     "fibre": 2.5,
+     "salt": 0.3,
+     "plateGrams": 281
     },
     "daughter": null
    },
@@ -2921,7 +2872,7 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 375,
      "cheryl": 281
@@ -2930,32 +2881,27 @@
      {
       "item": "Cooked chicken breast, pre-packed",
       "jon": 85,
-      "cheryl": 65,
-      "derived": true
+      "cheryl": 65
      },
      {
       "item": "Salad leaves",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Cherry tomatoes",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Cucumber",
       "jon": 15,
-      "cheryl": 15,
-      "derived": true
+      "cheryl": 15
      },
      {
       "item": "Mixed beans, tinned",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      }
     ]
    }
@@ -3047,12 +2993,11 @@
      "plateGrams": 645
     },
     "cheryl": {
-     "kcal": 262,
-     "protein": 44.2,
-     "fibre": 4.8,
-     "salt": 2.07,
-     "plateGrams": 502,
-     "assumed": true
+     "kcal": 259,
+     "protein": 44.0,
+     "fibre": 4.3,
+     "salt": 2.1,
+     "plateGrams": 484
     },
     "daughter": null
    },
@@ -3076,47 +3021,41 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 645,
-     "cheryl": 502
+     "cheryl": 484
     },
     "components": [
      {
       "item": "Ready-cooked king prawns",
       "jon": 115,
-      "cheryl": 85,
-      "derived": true
+      "cheryl": 85
      },
      {
       "item": "Salad leaves",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Cherry tomatoes",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Cucumber",
       "jon": 30,
-      "cheryl": 20,
-      "derived": true
+      "cheryl": 20
      },
      {
       "item": "Plain Skyr",
       "jon": 115,
-      "cheryl": 85,
-      "derived": true
+      "cheryl": 85
      },
      {
       "item": "Frozen raspberries",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      }
     ]
    }
@@ -3205,12 +3144,11 @@
      "plateGrams": 420
     },
     "cheryl": {
-     "kcal": 278,
-     "protein": 29.8,
-     "fibre": 7.6,
-     "salt": 1.06,
-     "plateGrams": 346,
-     "assumed": true
+     "kcal": 253,
+     "protein": 27.2,
+     "fibre": 6.8,
+     "salt": 1.0,
+     "plateGrams": 315
     },
     "daughter": null
    },
@@ -3234,41 +3172,36 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 420,
-     "cheryl": 346
+     "cheryl": 315
     },
     "components": [
      {
       "item": "Tuna in spring water, tinned",
-      "jon": 60,
-      "cheryl": 50,
-      "derived": true
+      "jon": 65,
+      "cheryl": 45
      },
      {
       "item": "Chickpeas, tinned",
-      "jon": 65,
-      "cheryl": 55,
-      "derived": true
+      "jon": 70,
+      "cheryl": 50
      },
      {
       "item": "Salad leaves",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Cherry tomatoes",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Cucumber",
-      "jon": 25,
-      "cheryl": 25,
-      "derived": true
+      "jon": 30,
+      "cheryl": 20
      }
     ]
    }
@@ -3322,12 +3255,11 @@
      "plateGrams": 850
     },
     "cheryl": {
-     "kcal": 400,
-     "protein": 35,
-     "fibre": 7,
+     "kcal": 452,
+     "protein": 43.2,
+     "fibre": 7.4,
      "salt": 0.7,
-     "plateGrams": 500,
-     "note": "the bottle on its own is her working-day lunch under v4 - an adherence mechanism, not a nutritional choice"
+     "plateGrams": 638
     },
     "daughter": null
    },
@@ -3353,7 +3285,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 850,
-     "cheryl": 500
+     "cheryl": 638
     }
    }
   },
@@ -3460,11 +3392,11 @@
      "plateGrams": 710
     },
     "cheryl": {
-     "kcal": 454,
-     "protein": 37.3,
-     "fibre": 8,
-     "salt": 3.91,
-     "plateGrams": 650
+     "kcal": 416,
+     "protein": 35.4,
+     "fibre": 6.0,
+     "salt": 3.4,
+     "plateGrams": 532
     },
     "daughter": null
    },
@@ -3520,7 +3452,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 710,
-     "cheryl": 650
+     "cheryl": 532
     }
    }
   },
@@ -3668,11 +3600,11 @@
      "plateGrams": 654
     },
     "cheryl": {
-     "kcal": 443,
-     "protein": 38,
-     "fibre": 14,
-     "salt": 1.7,
-     "plateGrams": 606
+     "kcal": 398,
+     "protein": 38.2,
+     "fibre": 10.5,
+     "salt": 1.4,
+     "plateGrams": 490
     },
     "daughter": null
    },
@@ -3723,7 +3655,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 654,
-     "cheryl": 606
+     "cheryl": 490
     }
    }
   },
@@ -3838,11 +3770,11 @@
      "note": "verified week's rebalanced figures. The chef's own panel (444/51.5/11.7) runs 5-7% optimistic at his quantities: 422/48.2/10.0"
     },
     "cheryl": {
-     "kcal": 393,
-     "protein": 43.5,
-     "fibre": 10.9,
-     "salt": 0.78,
-     "plateGrams": 526
+     "kcal": 374,
+     "protein": 42.3,
+     "fibre": 8.9,
+     "salt": 0.7,
+     "plateGrams": 450
     },
     "daughter": null
    },
@@ -3872,41 +3804,36 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 600,
-     "cheryl": 526
+     "cheryl": 450
     },
     "components": [
      {
       "item": "Tuna in spring water, tinned",
-      "jon": 175,
-      "cheryl": 155,
-      "derived": true
+      "jon": 190,
+      "cheryl": 140
      },
      {
       "item": "Butter beans",
-      "jon": 160,
-      "cheryl": 140,
-      "derived": true
+      "jon": 170,
+      "cheryl": 130
      },
      {
       "item": "Fennel",
-      "jon": 85,
-      "cheryl": 75,
-      "derived": true
+      "jon": 90,
+      "cheryl": 70
      },
      {
       "item": "Cherry tomatoes",
-      "jon": 105,
-      "cheryl": 95,
-      "derived": true
+      "jon": 115,
+      "cheryl": 85
      },
      {
       "item": "Red onions",
-      "jon": 25,
-      "cheryl": 25,
-      "derived": true
+      "jon": 30,
+      "cheryl": 20
      }
     ]
    }
@@ -4019,12 +3946,11 @@
      "note": "the lowest plate weight in the whole corpus"
     },
     "cheryl": {
-     "kcal": 303,
-     "protein": 37.1,
+     "kcal": 324,
+     "protein": 41.2,
      "fibre": 6.3,
-     "salt": 0.9,
-     "plateGrams": 309,
-     "note": "under her lunch size - a weekend one"
+     "salt": 1.0,
+     "plateGrams": 311
     },
     "daughter": null
    },
@@ -4055,53 +3981,46 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 415,
-     "cheryl": 309
+     "cheryl": 311
     },
     "components": [
      {
       "item": "Chicken breast, raw",
-      "jon": 100,
-      "cheryl": 70,
-      "derived": true
+      "jon": 95,
+      "cheryl": 75
      },
      {
       "item": "Wholemeal pitta",
       "jon": 35,
-      "cheryl": 30,
-      "derived": true
+      "cheryl": 30
      },
      {
       "item": "Plain Skyr",
       "jon": 30,
-      "cheryl": 20,
-      "derived": true
+      "cheryl": 20
      },
      {
       "item": "Red cabbage",
       "jon": 45,
-      "cheryl": 35,
-      "derived": true
+      "cheryl": 35
      },
      {
       "item": "Carrots",
       "jon": 25,
-      "cheryl": 15,
-      "derived": true
+      "cheryl": 15
      },
      {
       "item": "Red onions",
       "jon": 10,
-      "cheryl": 10,
-      "derived": true
+      "cheryl": 10
      },
      {
       "item": "Rocket or watercress",
       "jon": 10,
-      "cheryl": 10,
-      "derived": true
+      "cheryl": 10
      }
     ]
    }
@@ -4243,11 +4162,11 @@
      "note": "280g of raw vegetables - more than any other lunch in the corpus"
     },
     "cheryl": {
-     "kcal": 385,
-     "protein": 41.9,
-     "fibre": 6.5,
-     "salt": 0.77,
-     "plateGrams": 446
+     "kcal": 382,
+     "protein": 43.3,
+     "fibre": 6.8,
+     "salt": 0.8,
+     "plateGrams": 431
     },
     "daughter": null
    },
@@ -4278,53 +4197,46 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 575,
-     "cheryl": 446
+     "cheryl": 431
     },
     "components": [
      {
       "item": "Chicken breast, raw",
-      "jon": 95,
-      "cheryl": 65,
-      "derived": true
+      "jon": 90,
+      "cheryl": 70
      },
      {
       "item": "Plain Skyr",
       "jon": 70,
-      "cheryl": 50,
-      "derived": true
+      "cheryl": 50
      },
      {
       "item": "Rye crispbread",
       "jon": 15,
-      "cheryl": 10,
-      "derived": true
+      "cheryl": 10
      },
      {
       "item": "Cucumber",
       "jon": 45,
-      "cheryl": 35,
-      "derived": true
+      "cheryl": 35
      },
      {
       "item": "Carrots",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Red peppers",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Cherry tomatoes",
       "jon": 45,
-      "cheryl": 35,
-      "derived": true
+      "cheryl": 35
      }
     ]
    }
@@ -4448,12 +4360,11 @@
      "note": "fibre uncertain by 1-2g: pearl barley is quoted anywhere from 11g to 17g per 100g dry and the chef used 15.6g"
     },
     "cheryl": {
-     "kcal": 424,
-     "protein": 39.5,
-     "fibre": 7,
-     "salt": 1.6,
-     "plateGrams": 497,
-     "note": "the whole tin - it doesn't halve well"
+     "kcal": 382,
+     "protein": 34.9,
+     "fibre": 6.8,
+     "salt": 1.4,
+     "plateGrams": 464
     },
     "daughter": null
    },
@@ -4483,53 +4394,46 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 618,
-     "cheryl": 497
+     "cheryl": 464
     },
     "components": [
      {
       "item": "Mackerel fillets in spring water, tinned",
       "jon": 60,
-      "cheryl": 45,
-      "derived": true
+      "cheryl": 45
      },
      {
       "item": "Pearl barley, dry",
       "jon": 15,
-      "cheryl": 15,
-      "derived": true
+      "cheryl": 15
      },
      {
       "item": "Cooked beetroot",
-      "jon": 65,
-      "cheryl": 55,
-      "derived": true
+      "jon": 70,
+      "cheryl": 50
      },
      {
       "item": "Cucumber",
       "jon": 45,
-      "cheryl": 35,
-      "derived": true
+      "cheryl": 35
      },
      {
       "item": "Red onions",
       "jon": 10,
-      "cheryl": 10,
-      "derived": true
+      "cheryl": 10
      },
      {
       "item": "Plain Skyr",
-      "jon": 80,
-      "cheryl": 70,
-      "derived": true
+      "jon": 85,
+      "cheryl": 65
      },
      {
       "item": "Rocket",
       "jon": 10,
-      "cheryl": 10,
-      "derived": true
+      "cheryl": 10
      }
     ]
    }
@@ -4664,11 +4568,11 @@
      "note": "5.9g of fibre is the weakest number in the chef's whole set - take it on a Skyr-bowl day, not a smoothie day"
     },
     "cheryl": {
-     "kcal": 396,
-     "protein": 37,
-     "fibre": 4.6,
-     "salt": 1.3,
-     "plateGrams": 390
+     "kcal": 391,
+     "protein": 36.7,
+     "fibre": 4.4,
+     "salt": 1.4,
+     "plateGrams": 383
     },
     "daughter": null
    },
@@ -4718,53 +4622,46 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 511,
-     "cheryl": 390
+     "cheryl": 383
     },
     "components": [
      {
       "item": "Eggs",
       "jon": 125,
-      "cheryl": 95,
-      "derived": true
+      "cheryl": 95
      },
      {
       "item": "Waxy potatoes",
-      "jon": 140,
-      "cheryl": 110,
-      "derived": true
+      "jon": 145,
+      "cheryl": 105
      },
      {
       "item": "Onions",
       "jon": 45,
-      "cheryl": 30,
-      "derived": true
+      "cheryl": 30
      },
      {
       "item": "Jarred roasted red peppers",
       "jon": 45,
-      "cheryl": 30,
-      "derived": true
+      "cheryl": 30
      },
      {
       "item": "Chicken breast, raw",
-      "jon": 140,
-      "cheryl": 110,
-      "derived": true
+      "jon": 145,
+      "cheryl": 105
      },
      {
       "item": "Cherry tomatoes",
       "jon": 70,
-      "cheryl": 50,
-      "derived": true
+      "cheryl": 50
      },
      {
       "item": "Rocket",
       "jon": 20,
-      "cheryl": 15,
-      "derived": true
+      "cheryl": 15
      }
     ]
    }
@@ -4912,17 +4809,17 @@
      "plateGrams": 652
     },
     "cheryl": {
-     "kcal": 483,
-     "protein": 44.1,
-     "fibre": 9.9,
-     "salt": 1.1,
-     "plateGrams": 473
+     "kcal": 538,
+     "protein": 49.1,
+     "fibre": 9.5,
+     "salt": 1.2,
+     "plateGrams": 489
     },
     "daughter": {
-     "kcal": 622,
-     "protein": 52,
-     "fibre": 8.6,
-     "salt": 1.4,
+     "kcal": 588,
+     "protein": 53.7,
+     "fibre": 10.4,
+     "salt": 1.3,
      "plateGrams": 535,
      "note": "no edamame; it goes into two bowls at the end"
     }
@@ -4979,7 +4876,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 652,
-     "cheryl": 473,
+     "cheryl": 489,
      "daughter": 535
     }
    }
@@ -5134,17 +5031,17 @@
      "note": "every milligram of the 2.0g is the smoked haddock. Commercial smoking varies nearly twofold, so this could be 1.7-2.4g"
     },
     "cheryl": {
-     "kcal": 489,
-     "protein": 46.8,
-     "fibre": 8.9,
-     "salt": 1.6,
-     "plateGrams": 412
+     "kcal": 514,
+     "protein": 47.2,
+     "fibre": 7.7,
+     "salt": 1.5,
+     "plateGrams": 416
     },
     "daughter": {
-     "kcal": 622,
-     "protein": 50.2,
-     "fibre": 7.6,
-     "salt": 1.5,
+     "kcal": 584,
+     "protein": 53.7,
+     "fibre": 8.8,
+     "salt": 1.7,
      "plateGrams": 472,
      "note": "fish flaked on top, never stirred through, so she can see exactly what she is eating"
     }
@@ -5201,7 +5098,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 554,
-     "cheryl": 412,
+     "cheryl": 416,
      "daughter": 472
     }
    }
@@ -5363,17 +5260,17 @@
      "note": "roughly 400-580ug of iodine from 200g of cod - the reason the recipe exists"
     },
     "cheryl": {
-     "kcal": 472,
-     "protein": 41.5,
-     "fibre": 12.1,
-     "salt": 1.31,
-     "plateGrams": 459
+     "kcal": 465,
+     "protein": 39.9,
+     "fibre": 11.2,
+     "salt": 1.2,
+     "plateGrams": 480
     },
     "daughter": {
-     "kcal": 424,
-     "protein": 40.6,
-     "fibre": 9.2,
-     "salt": 1.43,
+     "kcal": 415,
+     "protein": 35.6,
+     "fibre": 10.0,
+     "salt": 1.1,
      "plateGrams": 428,
      "note": "180g crushed potato WITH 100g of peas already in it - a vegetable inside the starch is dinner"
     }
@@ -5413,12 +5310,6 @@
     "<b>Pat the loins dry and buy loin-cut.</b> Haddock carries more surface water than cod and a wet surface steams the crumb instead of crisping it.",
     "<b>10–12 minutes, not 12–14.</b> Tuck the thin tail under rather than trying to time it separately."
    ],
-   "plateSpec": {
-    "jon": "200g haddock <i>raw</i> · 200g crushed potato <i>cooked</i> · 120g peas · 100g tenderstem · 20g crumb · 10g parmesan · 5g Dijon",
-    "cheryl": "150g haddock <i>raw</i> · 140g crushed potato <i>cooked</i> · 100g peas · 80g tenderstem · 15g crumb · 8g parmesan",
-    "daughter": "160g haddock <i>raw</i> · 180g crushed potato <i>cooked</i> · 100g peas · the full crumb · no tenderstem",
-    "note": "Her peas are crushed into the potato rather than served beside it. That is the point of the recipe, not a garnish."
-   },
    "method": [
     "Oven to 210°C. New potatoes into cold water with <b>{{1.9}}g of salt weighed into the potato water</b> — 0.5g a portion, and none at all on the fish. Boiled 18 minutes, until a knife goes in with no resistance.",
     "Crumb: wholemeal breadcrumbs, parmesan, lemon zest, parsley and plenty of black pepper mixed dry. <b>Mix the oil through the breadcrumbs first, until they look like damp sand</b> — oil added to a wet crumb steams instead of crisping.",
@@ -5447,13 +5338,38 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "stated",
-    "fromSpec": true,
+    "source": "ratio",
     "grams": {
      "jon": 640,
-     "cheryl": 459,
+     "cheryl": 480,
      "daughter": 428
-    }
+    },
+    "components": [
+     {
+      "item": "Haddock loins, unsmoked",
+      "jon": 225,
+      "cheryl": 170,
+      "daughter": 150
+     },
+     {
+      "item": "New potatoes",
+      "jon": 200,
+      "cheryl": 150,
+      "daughter": 135
+     },
+     {
+      "item": "Frozen peas",
+      "jon": 135,
+      "cheryl": 100,
+      "daughter": 90
+     },
+     {
+      "item": "Tenderstem broccoli",
+      "jon": 45,
+      "cheryl": 35,
+      "daughter": 30
+     }
+    ]
    }
   },
   {
@@ -5585,18 +5501,17 @@
      "note": "salt breakdown: beans 0.4, bread 0.4, anchovy 0.4, stock 0.3, cod 0.4. Drop the bread and it is 1.7g. There is no added salt to remove"
     },
     "cheryl": {
-     "kcal": 393,
-     "protein": 43.7,
-     "fibre": 13.4,
-     "salt": 1.5,
-     "plateGrams": 528,
-     "note": "no bread - the beans are what replace it"
+     "kcal": 418,
+     "protein": 45.6,
+     "fibre": 12.1,
+     "salt": 1.6,
+     "plateGrams": 472
     },
     "daughter": {
-     "kcal": 395,
-     "protein": 41.2,
-     "fibre": 10.1,
-     "salt": 1.6,
+     "kcal": 370,
+     "protein": 40.3,
+     "fibre": 10.7,
+     "salt": 1.4,
      "plateGrams": 418,
      "note": "60g beans ALONGSIDE rather than under, 50g sourdough to mop. Nothing stirred together"
     }
@@ -5654,7 +5569,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 630,
-     "cheryl": 528,
+     "cheryl": 472,
      "daughter": 418
     }
    }
@@ -5832,17 +5747,16 @@
      "note": "the worst protein-per-calorie dinner in the chef's set, and the same trade the corpus already accepts for the salmon traybake. 19.7g of fibre is right on the 20g-per-sitting ceiling - pair it with a smoothie breakfast, never the Skyr bowl"
     },
     "cheryl": {
-     "kcal": 524,
-     "protein": 34.6,
-     "fibre": 15.2,
-     "salt": 1.6,
-     "plateGrams": 500,
-     "note": "her lowest dinner anywhere. On sardine night pair the Huel bottle with a 100g Skyr"
+     "kcal": 556,
+     "protein": 37.5,
+     "fibre": 14.8,
+     "salt": 1.7,
+     "plateGrams": 478
     },
     "daughter": {
-     "kcal": 617,
-     "protein": 36.8,
-     "fibre": 13,
+     "kcal": 591,
+     "protein": 39.8,
+     "fibre": 15.7,
      "salt": 1.8,
      "plateGrams": 507,
      "note": "75g dry spaghetti - the full standing portion - the same sauce with the sardines dissolved, no whole fillets, no beans, 8g parmesan. The chef will not promise she won't spot it"
@@ -5893,7 +5807,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 637,
-     "cheryl": 500,
+     "cheryl": 478,
      "daughter": 507
     }
    }
@@ -6037,18 +5951,17 @@
      "note": "the highest-protein plate in the chef's set and the lowest-salt dinner in the corpus by a wide margin. The vinegar is why both are true at once"
     },
     "cheryl": {
-     "kcal": 465,
-     "protein": 50.8,
-     "fibre": 12,
+     "kcal": 459,
+     "protein": 51.8,
+     "fibre": 10.8,
      "salt": 0.7,
-     "plateGrams": 512,
-     "note": "one of her strongest plates anywhere"
+     "plateGrams": 491
     },
     "daughter": {
-     "kcal": 462,
-     "protein": 56.1,
-     "fibre": 9.4,
-     "salt": 0.79,
+     "kcal": 452,
+     "protein": 51.1,
+     "fibre": 10.6,
+     "salt": 0.7,
      "plateGrams": 484,
      "note": "180g crushed potato WITH the peas already crushed into it"
     }
@@ -6087,12 +6000,6 @@
     "<b>Scaling past four portions makes it two batches.</b> At five it is ~937g of butterflied breast and ~725g of hispi — \"one tray and one pan, 40 minutes\" stops being true.",
     "<b>The weighed salt scales with it.</b> 2.2g at four portions becomes 2.75g at five; it is an absolute figure, not a per-portion one."
    ],
-   "plateSpec": {
-    "jon": "220g chicken <i>raw</i> · 150g crushed potato <i>cooked</i> · 90g peas · 200g charred hispi · 40g skyr sauce",
-    "cheryl": "150g chicken <i>raw</i> · 120g crushed potato <i>cooked</i> · 80g peas · 180g hispi · 40g skyr sauce",
-    "daughter": "180g chicken <i>raw</i> · 112g crushed potato <i>cooked</i> · 68g peas · 100g hispi · 30g skyr sauce",
-    "note": "Her potato and peas are crushed together and served as one — 180g on the plate. The components are separated here so all three plates are counted the same way."
-   },
    "method": [
     "Marinade mixed or blitzed — vinegar, grated garlic, paprika, oregano, chilli, lemon, oil and the {{2.2}}g of weighed salt — and the chicken in it for <b>at least 2 hours, up to 24</b>. The vinegar is doing two jobs: flavour, and denaturing the surface protein so a very lean breast holds moisture under high heat. That is why this can be breast and not thigh.",
     "Potatoes boiled 18 minutes, drained and crushed with a fork and {{8}}g of the oil — <b>half broken, half whole</b>. Peas boiled 3 minutes and crushed through with them.",
@@ -6120,13 +6027,44 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "stated",
-    "fromSpec": true,
+    "source": "ratio",
     "grams": {
      "jon": 655,
-     "cheryl": 512,
+     "cheryl": 491,
      "daughter": 484
-    }
+    },
+    "components": [
+     {
+      "item": "Chicken breast, raw",
+      "jon": 225,
+      "cheryl": 170,
+      "daughter": 165
+     },
+     {
+      "item": "Potatoes",
+      "jon": 180,
+      "cheryl": 135,
+      "daughter": 135
+     },
+     {
+      "item": "Frozen peas",
+      "jon": 100,
+      "cheryl": 75,
+      "daughter": 75
+     },
+     {
+      "item": "Pointed/hispi cabbage",
+      "jon": 175,
+      "cheryl": 130,
+      "daughter": 130
+     },
+     {
+      "item": "Plain Skyr",
+      "jon": 40,
+      "cheryl": 30,
+      "daughter": 30
+     }
+    ]
    }
   },
   {
@@ -6262,17 +6200,17 @@
      "note": "barley fibre uncertain by 1-2g - 11 to 17g per 100g dry depending on pot or pearled"
     },
     "cheryl": {
-     "kcal": 471,
-     "protein": 44.9,
-     "fibre": 14.3,
-     "salt": 1.3,
-     "plateGrams": 442
+     "kcal": 443,
+     "protein": 45.9,
+     "fibre": 12.3,
+     "salt": 1.4,
+     "plateGrams": 411
     },
     "daughter": {
-     "kcal": 527,
-     "protein": 42.3,
-     "fibre": 16.2,
-     "salt": 1.35,
+     "kcal": 476,
+     "protein": 49.3,
+     "fibre": 13.2,
+     "salt": 1.4,
      "plateGrams": 441,
      "note": "THE WEAKEST DAUGHTER PLATE IN THE SET. This figure assumes she eats the prawns. If she does not, her plate is barley, peas and parmesan at about 20g of protein. Lift her portion out BEFORE the prawns go in, or chop her share of the prawns to 5mm and stir them through, or cook this on a night she is out"
     }
@@ -6327,7 +6265,7 @@
     "servedByWeight": true,
     "grams": {
      "jon": 548,
-     "cheryl": 442,
+     "cheryl": 411,
      "daughter": 441
     }
    }
@@ -6486,17 +6424,17 @@
      "plateGrams": 611
     },
     "cheryl": {
-     "kcal": 474,
-     "protein": 47.7,
-     "fibre": 12,
-     "salt": 0.92,
-     "plateGrams": 539
+     "kcal": 446,
+     "protein": 46.2,
+     "fibre": 10.4,
+     "salt": 0.9,
+     "plateGrams": 458
     },
     "daughter": {
-     "kcal": 558,
-     "protein": 51.6,
-     "fibre": 15.1,
-     "salt": 1.01,
+     "kcal": 535,
+     "protein": 55.3,
+     "fibre": 12.4,
+     "salt": 1.1,
      "plateGrams": 549,
      "note": "MORE FIBRE THAN EITHER ADULT because she takes the full 55g bulgur portion - the first time that has been true in this system. ~3.5mg of haem iron from the mince"
     }
@@ -6558,61 +6496,54 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 611,
-     "cheryl": 539,
+     "cheryl": 458,
      "daughter": 549
     },
     "components": [
      {
       "item": "Beef mince, 5%",
       "jon": 200,
-      "cheryl": 155,
-      "daughter": 170,
-      "derived": true
+      "cheryl": 150,
+      "daughter": 180
      },
      {
       "item": "Onions",
-      "jon": 25,
-      "cheryl": 25,
-      "daughter": 25,
-      "derived": true
+      "jon": 30,
+      "cheryl": 20,
+      "daughter": 25
      },
      {
       "item": "Passata",
-      "jon": 155,
-      "cheryl": 140,
-      "daughter": 140,
-      "derived": true
+      "jon": 165,
+      "cheryl": 125,
+      "daughter": 150
      },
      {
       "item": "Red peppers",
-      "jon": 75,
-      "cheryl": 70,
-      "daughter": 70,
-      "derived": true
+      "jon": 80,
+      "cheryl": 60,
+      "daughter": 75
      },
      {
       "item": "Spinach",
-      "jon": 50,
-      "cheryl": 45,
-      "daughter": 45,
-      "derived": true
+      "jon": 55,
+      "cheryl": 40,
+      "daughter": 50
      },
      {
       "item": "Bulgur wheat, dry",
-      "jon": 45,
-      "cheryl": 40,
-      "daughter": 40,
-      "derived": true
+      "jon": 50,
+      "cheryl": 35,
+      "daughter": 45
      },
      {
       "item": "Plain Skyr",
       "jon": 85,
       "cheryl": 65,
-      "daughter": 70,
-      "derived": true
+      "daughter": 75
      }
     ]
    }
@@ -6698,11 +6629,11 @@
      "plateGrams": 502
     },
     "cheryl": {
-     "kcal": 354,
-     "protein": 42.4,
-     "fibre": 7.3,
-     "salt": 1.35,
-     "plateGrams": 418
+     "kcal": 343,
+     "protein": 40.5,
+     "fibre": 6.1,
+     "salt": 1.3,
+     "plateGrams": 376
     },
     "daughter": null
    },
@@ -6726,41 +6657,36 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 502,
-     "cheryl": 418
+     "cheryl": 376
     },
     "components": [
      {
       "item": "Cooked chicken breast, pre-packed",
       "jon": 170,
-      "cheryl": 130,
-      "derived": true
+      "cheryl": 130
      },
      {
       "item": "Butter beans",
-      "jon": 140,
-      "cheryl": 120,
-      "derived": true
+      "jon": 150,
+      "cheryl": 110
      },
      {
       "item": "Salad leaves",
-      "jon": 65,
-      "cheryl": 55,
-      "derived": true
+      "jon": 70,
+      "cheryl": 50
      },
      {
       "item": "Cherry tomatoes",
-      "jon": 65,
-      "cheryl": 55,
-      "derived": true
+      "jon": 70,
+      "cheryl": 50
      },
      {
       "item": "Cucumber",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      }
     ]
    }
@@ -6856,10 +6782,10 @@
     },
     "cheryl": {
      "kcal": 401,
-     "protein": 46.5,
-     "fibre": 8.5,
-     "salt": 2.08,
-     "plateGrams": 438
+     "protein": 46.7,
+     "fibre": 7.5,
+     "salt": 2.1,
+     "plateGrams": 422
     },
     "daughter": null
    },
@@ -6884,51 +6810,46 @@
    ],
    "plateSplit": {
     "servedByWeight": false,
-    "source": "derived",
+    "source": "ratio",
     "grams": {
      "jon": 562,
-     "cheryl": 438
+     "cheryl": 422
     },
     "components": [
      {
       "item": "King prawns, ready-cooked",
       "jon": 200,
-      "cheryl": 150,
-      "derived": true
+      "cheryl": 150
      },
      {
       "item": "Butter beans",
-      "jon": 145,
-      "cheryl": 115,
-      "derived": true
+      "jon": 150,
+      "cheryl": 110
      },
      {
       "item": "Salad leaves",
-      "jon": 65,
-      "cheryl": 55,
-      "derived": true
+      "jon": 70,
+      "cheryl": 50
      },
      {
       "item": "Cherry tomatoes",
       "jon": 55,
-      "cheryl": 45,
-      "derived": true
+      "cheryl": 45
      },
      {
       "item": "Cucumber",
       "jon": 35,
-      "cheryl": 25,
-      "derived": true
+      "cheryl": 25
      },
      {
       "item": "Plain Skyr",
       "jon": 145,
-      "cheryl": 105,
-      "derived": true
+      "cheryl": 105
      }
     ]
    }
   }
  ],
- "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8."
+ "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8.",
+ "portionRule": "One recipe, one set of ingredients, one ratio. Jon's plate is the recipe's portion; Cheryl has three-quarters of it (4:3); the daughter's share is whatever her plate weight has always been, of the same food. Nothing is made twice and nobody gets a different version. Set 18 September 2026 after Cheryl had spent a week making two smoothies."
 }

@@ -151,13 +151,13 @@
 const FIXED = {
   "berry-oat":    {name:"Berry and oat smoothie",
                    jon:{kcal:531,protein:57.6,fibre:10.8,salt:0.4},
-                   cheryl:{kcal:450,protein:54.1,fibre:9.5,salt:0.35}},
+                   cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
   "skyr-bowl":    {name:"The Skyr bowl",
                    jon:{kcal:587,protein:61.5,fibre:13.3,salt:0.4},
-                   cheryl:{kcal:427,protein:51.6,fibre:11.1,salt:0.3}},
+                   cheryl:{kcal:440,protein:46.1,fibre:10.0,salt:0.30}},
   "huel-milbona": {name:"Huel Black, then a Milbona on the train",
                    jon:{kcal:615,protein:70,fibre:7.5,salt:1.2},
-                   cheryl:{kcal:450,protein:54.1,fibre:9.5,salt:0.35}},
+                   cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
   "banana-skyr":  {name:"120g banana + 100g Skyr",
                    jon:{kcal:177,protein:12.4,fibre:2.2,salt:0.15},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
@@ -185,7 +185,7 @@ const FIXED = {
     jon:{kcal:750,protein:30,fibre:3.25,salt:2.7}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "sunday-roast": {name:"Sunday's roast", bought:true,
                    jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.5,plateGrams:720},
-                   cheryl:{kcal:470,protein:44.8,fibre:8.8,salt:1.1,plateGrams:520},
+                   cheryl:{kcal:524,protein:53.1,fibre:8.3,salt:1.12,plateGrams:540},
                    daughter:{kcal:531,protein:43.2,fibre:6.3,salt:1.0,plateGrams:450}}
 };
 
@@ -199,8 +199,8 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
 /* Her 2:30 feed, moved into lunch because she teaches. 100g Skyr + 40g banana -
    the same pair CHERYL_LUNCH_ING has been buying all along. The banana was dropped
    from the macros when the feed moved, which ran her ~38 kcal light every day. */
-const CHERYL_LUNCH_ADDON = {kcal:101,protein:11.5,fibre:0.7,salt:0.08,
-                            label:"100g Skyr and a 40g banana"};
+const CHERYL_LUNCH_ADDON = {kcal:133,protein:9.3,fibre:1.7,salt:0.11,
+                            label:"three-quarters of your 2:30 \u2014 90g banana and 75g Skyr"};
 
 const TARGETS = {
   jon:    {kcal:1900, band:50, protein:170, salt:6},
@@ -328,16 +328,23 @@ FIXED["sunday-roast"].ing    = {household:[
   I("Carrots",250,"fresh",500), I("Broccoli",250,"fresh"), I("Savoy cabbage",200,"fresh"),
   I("Gravy granules",30,"cupboard",200,true)]};
 /* Cheryl's Skyr and banana move into lunch because she's teaching at 2:30 */
-const CHERYL_LUNCH_ING = [I("Plain Skyr",100,"dairy",1000,true), I("Bananas",40,"fresh")];
+const CHERYL_LUNCH_ING = [I("Plain Skyr",75,"dairy",1000,true), I("Bananas",90,"fresh")];
 
 
 /* ---------- how to make the fixed items ---------- */
 const R = (ing, method, cheryl, note) => ({ing, method, cheryl, note});
+FIXED["berry-oat"].mix = [["Skyr",200],["Whey",32],["Milk",150,"ml"],
+  ["Frozen mixed berries",100],["Porridge oats",30],["Chia seeds",12]];
+FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",20,"ml"],
+  ["Frozen raspberries",100],["Chia seeds",12],["Walnuts or almonds",15],
+  ["Pumpkin seeds",10],["Banana, weighed",60]];
+
 FIXED["berry-oat"].recipe = R(
   ["200g Skyr · 32g whey · 150ml milk","100g frozen mixed berries","30g porridge oats · 12g chia seeds"],
   ["Whey in first, then everything else — powder sitting on the blades goes lumpy.",
    "The KitchenAid handles whole oats in any order. No pre-blitzing."],
-  "200g Skyr, 32g whey, <b>100ml</b> milk, 100g berries, <b>15g</b> oats, 12g chia. 450 kcal, 54g.");
+  "<b>The smaller glass</b> \u2014 three-quarters of what goes in yours, which is why the jug is " +
+  "poured 4:3 and not in half. About 400 kcal and 43g.");
 
 FIXED["skyr-bowl"].recipe = R(
   ["250g Skyr (plain or raspberry)","32g whey · 20ml milk","100g frozen raspberries",
@@ -345,12 +352,13 @@ FIXED["skyr-bowl"].recipe = R(
   ["<b>Whey powder in first, then the Skyr, then stir.</b> The other way round and you spend five minutes chasing lumps.",
    "Berries and banana on top. <b>Seeds and nuts last</b>, so they stay crunchy.",
    "If the bowl is too solid to eat, give the frozen raspberries five minutes to soften."],
-  "200g Skyr, 32g whey, 20ml milk, 100g raspberries, 10g chia, 10g nuts, 30g banana. 427 kcal, 52g.");
+  "<b>The smaller helping</b> \u2014 three-quarters of yours, not three-quarters of what you made. " +
+  "About 440 kcal and 46g.");
 
 FIXED["huel-milbona"].recipe = R(
   ["Huel Black bottle — 06:15, in the car","Milbona high-protein drink — 07:15, on the train"],
   ["Both go in the bag the night before. <b>Nothing gets made after 05:15.</b>"],
-  "Cheryl has the berry and oat smoothie at home.");
+  "Cheryl has <b>three-quarters of the berry and oat smoothie</b> at home \u2014 the same recipe, her share of it.");
 
 FIXED["banana-skyr"].recipe = R(["120g banana, weighed and peeled","100g plain Skyr"], [],
   null,
@@ -376,7 +384,7 @@ FIXED["sunday-roast"].recipe = R(
   ["180g beef, reheated in the gravy","200g roast potatoes","100g carrots · 100g broccoli · 80g cabbage","60ml gravy"],
   ["Potatoes and vegetables fresh; only the meat is reheated.",
    "Reheat it <b>in</b> the gravy rather than dry — roast meat reheated on its own goes grey and tough."],
-  "~120g meat, 130g potatoes, the full share of vegetables. 470 kcal, 45g.",
+  "<b>Three-quarters of yours</b>, straight off the same plates \u2014 about 525 kcal and 53g.",
   "<b>No Yorkshire puddings.</b> The potatoes are the starch, and that is what keeps this plate at 720g.");
 
 FIXED["prawns-pear"].recipe = R(
@@ -555,6 +563,10 @@ function slotNote(d, slot){
 }
 const closeCard = (h, d, slot) => h + slotNote(d, slot) + '</div>';
 
+/* Jon is 1 share, Cheryl 0.75. The daughter is not modelled on the fixed items. */
+const sharesFor = (d, slot) =>
+  1 + (d.diners.includes("cheryl") && slot !== "afternoon" ? 0.75 : 0);
+
 function mealCard(d, slot){
   const m = d[slot];
   const label = slot === "afternoon" ? "2:30" : slot[0].toUpperCase() + slot.slice(1);
@@ -562,11 +574,11 @@ function mealCard(d, slot){
 
   if (typeof m === "string"){
     const f = FIXED[m];
-    return closeCard(h + '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f), d, slot);
+    return closeCard(h + '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f, sharesFor(d, slot)), d, slot);
   }
   if (m.kind === "fixed"){
     const f = FIXED[m.id];
-    h += '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f);
+    h += '<h2>' + f.name + '</h2>' + macroRow(f.jon, f) + fixedRecipe(f, sharesFor(d, slot));
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
     return closeCard(h, d, slot);
@@ -685,10 +697,22 @@ function mealCard(d, slot){
   return closeCard(h, d, slot);
 }
 
-function fixedRecipe(f){
+/* One recipe, one ratio. Jon is one share, Cheryl three-quarters of one. If they are
+   both having it, the mix is made once at 1.75 shares and poured 4:3. */
+function fixedRecipe(f, shares){
   const r = f.recipe; if (!r) return "";
   let h = "";
-  if (r.ing && r.ing.length)
+  if (f.mix){
+    const n = shares || 1;
+    h += '<h3 class="rh">' + (n > 1 ? 'Make this much' : 'Ingredients') + '</h3><ul class="ing"><li>' +
+      f.mix.map(([item, g, unit]) => {
+        const v = g * n;
+        return item + ' \u2014 ' + (v >= 10 ? Math.round(v) : Math.round(v*10)/10) + (unit || 'g');
+      }).join('</li><li>') + '</li></ul>';
+    if (n > 1)
+      h += '<p class="note"><b>One lot, poured 4 : 3.</b> The bigger one is yours. ' +
+           'Nothing is made twice.</p>';
+  } else if (r.ing && r.ing.length)
     h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' + r.ing.join('</li><li>') + '</li></ul>';
   if (r.method && r.method.length)
     h += '<h3 class="rh">Method</h3><ol class="ing"><li>' + r.method.join('</li><li>') + '</li></ol>';
@@ -699,19 +723,16 @@ function fixedRecipe(f){
 
 /* Who gets how much. One-pot dishes are served by weight out of the pan; assembled
    ones are split component by component. Derived rows are marked - see plateSplit. */
-/* One ratio you can hold in your head at the hob. Every recipe in the corpus reduces
-   to one within 5% - mostly 3:2:2 for a family dinner and 4:3 for a two-person lunch. */
-function ratioOf(vals, maxn){
-  const tot = vals.reduce((a,b) => a+b, 0) || 1, sh = vals.map(v => v/tot);
-  let best = null;
-  for (let n = 2; n <= (maxn||8); n++){
-    const rr = sh.map(x => Math.round(x*n));
-    if (rr.reduce((a,b) => a+b, 0) !== n) continue;
-    if (rr.some((v,i) => v === 0 && sh[i] > 0.1)) continue;
-    const err = Math.max.apply(null, rr.map((v,i) => Math.abs(v/n - sh[i])));
-    if (!best || err < best.err - 1e-9) best = {err, rr, n};
-  }
-  return best;
+/* The rule, not a best fit: Jon is 4, Cheryl is 3 — she has three-quarters of whatever he
+   has, always. Only the daughter's share moves, and it rounds against Jon's 4. Keeping the
+   first two numbers fixed is the whole point: there is one ratio to remember, not thirty-four. */
+function ratioOf(vals){
+  if (!vals.length) return null;
+  const rr = [4];
+  if (vals.length > 1) rr.push(3);                                  /* Cheryl, by the rule */
+  for (let i = 2; i < vals.length; i++)                             /* the daughter */
+    rr.push(Math.max(1, Math.round(vals[i] / vals[0] * 4)));
+  return {rr, n: rr.reduce((x,y) => x+y, 0)};
 }
 
 function splitBlock(r, eats){
@@ -748,10 +769,10 @@ function splitBlock(r, eats){
   });
   h += '<tr class="cooked"><td>On the plate, finished</td>' + who.map(([k]) =>
          '<td>' + s.grams[k] + 'g</td>').join('') + '</tr></tbody></table></div>';
-  const src = s.source === "stated" ? '.'
-    : s.source === "part-stated"
-      ? '. Some are the recipe\'s own; <b>the rest are derived</b> from each plate\'s macros.'
-      : '. <b>All derived</b> from each plate\'s macros \u2014 the recipe never stated a split.';
+  const src = s.source === "ratio"
+    ? '. <b>One recipe, one ratio</b> \u2014 every ingredient splits the same way, so nothing is ' +
+      'cooked twice and nobody gets a different version.'
+    : '.';
   if (odd.length)
     h += '<p class="note warn"><b>The ratio does not fit the ' + odd.join(' or the ') +
          '</b> \u2014 use the row above for that one.</p>';
