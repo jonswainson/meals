@@ -621,6 +621,8 @@ function mealCard(d, slot){
                x.protein + 'g protein' + (x.source === "derived" ? ' <i>· derived</i>' : '') + '</li>';
       };
       h += '<ul class="ing">' + weigh(pj, "Jon") + weigh(pc, "Cheryl") + '</ul>';
+      h += '<p class="note"><b>Cooked weights</b> \u2014 this is the finished dish, so it goes ' +
+           'straight from the fridge onto the scales. No conversion.</p>';
       if (pj && pj.salt >= 2)
         h += '<p class="note warn"><b>' + pj.salt + 'g of salt in this tub</b>, against 6g for ' +
              'the day. Put it with a low-salt dinner.</p>';
@@ -795,9 +797,11 @@ function splitBlock(r, eats){
   if (odd.length)
     h += '<p class="note warn"><b>The ratio does not fit the ' + odd.join(' or the ') +
          '</b> \u2014 use the row above for that one.</p>';
-  h += '<p class="note"><b>The gram figures are raw and dry</b>, so they only work before cooking. ' +
-       'After it is cooked, go by the ratio \u2014 proportions survive the pan, raw weights do not. ' +
-       'The bottom row is the finished plate' + src + '</p>';
+  h += '<p class="note"><b>The gram figures are the ingredient list\'s own</b> \u2014 raw, dry or ' +
+       'drained, whichever that line says. If the dish gets cooked, weigh them before it does or ' +
+       'use the ratio afterwards: proportions survive the pan, weights do not. Cold tubs need ' +
+       'neither \u2014 what you weigh in is what you eat. The bottom row is the finished plate' +
+       src + '</p>';
   return h;
 }
 
