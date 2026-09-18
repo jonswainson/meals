@@ -205,6 +205,12 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
 /* Her 2:30 feed, moved into lunch because she teaches. 100g Skyr + 40g banana -
    the same pair CHERYL_LUNCH_ING has been buying all along. The banana was dropped
    from the macros when the feed moved, which ran her ~38 kcal light every day. */
+/* Breakfasts and afternoon feeds were the only slots with no way to change them. */
+const SLOT_OPTIONS = {
+  breakfast: ["berry-oat","skyr-bowl","huel-milbona","huel-bottle"],
+  afternoon: ["banana-skyr","banana-skyr-150","huel-bar","whey-pear","prawns-pear","none"]
+};
+
 const CHERYL_LUNCH_ADDON = {kcal:133,protein:9.3,fibre:1.7,salt:0.11,
                             label:"three-quarters of Jon's 2:30 \u2014 90g banana and 75g Skyr"};
 
@@ -262,20 +268,20 @@ const WEEK_0921 = {
      breakfast:"berry-oat", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"prawn-butter-bean-salad",portions:2,daughter:false,alt:""},
      dinner:{kind:"fixed",id:"sunday-roast"}},
-    {id:"tue",label:"Tue",title:"Tuesday",tags:"Home · rest day",
-     diners:["jon","cheryl","daughter"],
-     breakfast:"skyr-bowl", afternoon:"banana-skyr",
-     lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
-     dinner:{kind:"recipe",id:"piri-piri-chicken-crushed-potato",portions:5,daughter:true,alt:""}},
-    {id:"wed",label:"Wed",title:"Wednesday",tags:"London · 05:15–22:15 · yours only",
+    {id:"tue",label:"Tue",title:"Tuesday",tags:"London · 05:15–22:15 · Jon only",
      diners:["jon"],
      breakfast:"huel-milbona", afternoon:"prawns-pear",
      lunch:{kind:"fixed",id:"ms-bought"},
      dinner:{kind:"fixed",id:"work-pizza"}},
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Home · rest day",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"piri-piri-chicken-crushed-potato",portions:5,daughter:true,alt:""}},
     {id:"thu",label:"Thu",title:"Thursday",tags:"Home · trains",
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
-     lunch:{kind:"leftover",from:"tue"},
+     lunch:{kind:"leftover",from:"wed"},
      dinner:{kind:"recipe",id:"crumbed-cod-crushed-potato",portions:5,daughter:true,alt:""}},
     {id:"fri",label:"Fri",title:"Friday",tags:"Home · trains · leg day · measurement morning",
      diners:["jon","cheryl","daughter"],
@@ -301,24 +307,26 @@ function pickWeek(){
 const I = (item,grams,aisle,packSize,staple,unit) =>
   ({item, grams, aisle, packSize:packSize||null, packUnit:unit||"g", staple:!!staple});
 
+/* One recipe, one ratio - so what the shop needs for Cheryl is Jon's list at 0.75,
+   not a second set of quantities. Hand-written cheryl lists are what had her making
+   two smoothies; leaving them here would have kept the shop buying for two. */
+const share = (list, f) => list.map(i =>
+  Object.assign({}, i, {grams: Math.round(i.grams * f * 10) / 10}));
+
 FIXED["berry-oat"].ing = {
   jon:   [I("Plain Skyr",200,"dairy",1000,true), I("Whey protein powder",32,"cupboard",1000,true),
           I("Semi-skimmed milk",150,"dairy",2000,true,"ml"), I("Frozen mixed berries",100,"frozen",500),
-          I("Rolled oats",30,"cupboard",1000,true), I("Chia seeds",12,"cupboard",300,true)],
-  cheryl:[I("Plain Skyr",200,"dairy",1000,true), I("Whey protein powder",32,"cupboard",1000,true),
-          I("Semi-skimmed milk",100,"dairy",2000,true,"ml"), I("Frozen mixed berries",100,"frozen",500),
-          I("Rolled oats",15,"cupboard",1000,true), I("Chia seeds",12,"cupboard",300,true)]
+          I("Rolled oats",30,"cupboard",1000,true), I("Chia seeds",12,"cupboard",300,true)]
 };
+FIXED["berry-oat"].ing.cheryl = share(FIXED["berry-oat"].ing.jon, 0.75);
+
 FIXED["skyr-bowl"].ing = {
   jon:   [I("Plain Skyr",250,"dairy",1000,true), I("Whey protein powder",32,"cupboard",1000,true),
           I("Semi-skimmed milk",20,"dairy",2000,true,"ml"), I("Frozen raspberries",100,"frozen",500),
           I("Chia seeds",12,"cupboard",300,true), I("Walnuts",15,"cupboard",200,true),
-          I("Pumpkin seeds",10,"cupboard",200,true), I("Bananas",60,"fresh")],
-  cheryl:[I("Plain Skyr",200,"dairy",1000,true), I("Whey protein powder",32,"cupboard",1000,true),
-          I("Semi-skimmed milk",20,"dairy",2000,true,"ml"), I("Frozen raspberries",100,"frozen",500),
-          I("Chia seeds",10,"cupboard",300,true), I("Walnuts",10,"cupboard",200,true),
-          I("Bananas",30,"fresh")]
+          I("Pumpkin seeds",10,"cupboard",200,true), I("Bananas",60,"fresh")]
 };
+FIXED["skyr-bowl"].ing.cheryl = share(FIXED["skyr-bowl"].ing.jon, 0.75);
 FIXED["huel-milbona"].ing = {
   jon:   [I("Huel Black ready-to-drink",1,"cupboard",1,true,"bottle"),
           I("Milbona high-protein drink (Lidl)",1,"cupboard",1,false,"bottle")],
@@ -547,6 +555,13 @@ const macroRow = (p, r) =>
            (r.handsOnMinutes ? r.handsOnMinutes + ' hands-on' : 'to cook') + '</span>') + '</div>'
      : '') + '</div>';
 
+const fixedOptionsFor = (slot, sel) => (SLOT_OPTIONS[slot] || [])
+  .map(id => {
+    const f = FIXED[id]; if (!f) return "";
+    return '<option value="' + id + '"' + (id === sel ? " selected" : "") + '>' + f.name +
+      (f.jon.kcal ? ' \u2014 ' + f.jon.kcal + ' kcal, ' + f.jon.protein + 'g' : '') + '</option>';
+  }).join("");
+
 const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot)
   .sort((a,b) => a.name.localeCompare(b.name))
   .map(r => '<option value="' + r.id + '"' + (r.id===sel?" selected":"") + '>' +
@@ -592,6 +607,8 @@ function mealCard(d, slot){
   if (typeof m === "string"){
     const f = FIXED[m];
     h = cardHead(d, slot, label, f.name, macroRow(f.jon, f), cls);
+    if ((SLOT_OPTIONS[slot] || []).length)
+      h += '<select class="fswap" data-slot="' + slot + '">' + fixedOptionsFor(slot, m) + '</select>';
     return closeCard(h + fixedRecipe(f, sharesFor(d, slot)), d, slot);
   }
   if (m.kind === "fixed"){
@@ -834,6 +851,12 @@ function render(){
 }
 
 function wire(d){
+  document.querySelectorAll("select.fswap").forEach(sel => {
+    sel.onchange = () => {
+      d[sel.dataset.slot] = sel.value;
+      save(); render(); toast(FIXED[sel.value].name + " in");
+    };
+  });
   document.querySelectorAll("select.swap").forEach(sel => {
     sel.onchange = () => {
       const m = d[sel.dataset.slot], r = recipe(sel.value);
