@@ -107,22 +107,15 @@
   table.split thead th{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;
     color:var(--muted);font-weight:700}
   table.split tbody td b{color:var(--fg)}
-  details.more{margin-top:12px}
-  /* summary stays display:block — iOS Safari stops toggling it if it becomes a flex box */
-  details.more summary{cursor:pointer;list-style:none;font-size:.9rem;color:var(--accent);
-    font-weight:600;position:relative;padding:0 38px 0 14px;line-height:44px;min-height:44px;
-    border:1px solid var(--line);border-radius:11px;background:var(--soft);
-    user-select:none;-webkit-user-select:none}
-  details.more summary::-webkit-details-marker{display:none}
-  details.more summary::after{content:"";position:absolute;right:16px;top:50%;
-    width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
-    transform:translateY(-7px) rotate(45deg);transition:transform .15s ease}
-  details.more[open] summary::after{transform:translateY(-2px) rotate(225deg)}
-  details.more[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0;
-    border-bottom-color:transparent}
-  details.more .body{border:1px solid var(--line);border-top:none;
+  /* No longer a disclosure - the whole meal card collapses now, so this is just a
+     labelled panel. Same look as the old open state, without the chevron. */
+  .more{margin-top:12px}
+  .more .mhead{font-size:.9rem;color:var(--accent);font-weight:600;padding:0 14px;
+    line-height:44px;min-height:44px;background:var(--soft);
+    border:1px solid var(--line);border-bottom-color:transparent;border-radius:11px 11px 0 0}
+  .more .body{border:1px solid var(--line);border-top:none;
     border-radius:0 0 11px 11px;padding:2px 14px 13px;background:var(--soft)}
-  details.more .body .rh:first-child{margin-top:11px}
+  .more .body .rh:first-child{margin-top:11px}
 
   .foot{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);
     border-top:1px solid var(--line);padding:10px 16px max(10px,env(safe-area-inset-bottom));
@@ -682,9 +675,9 @@ function mealCard(d, slot){
     h += '<p class="note warn"><b>' + r.plates.jon.salt + 'g of salt in one plate</b>, against 6g for the day.</p>';
   if (r){
     const hasMethod = (r.method||[]).length > 0;
-    h += '<details class="more"' + (current === TODAY ? ' open' : '') + '><summary>' +
+    h += '<div class="more"><div class="mhead">' +
          (hasMethod ? 'Recipe, ingredients and plates' : 'Ingredients and plates') +
-         '</summary><div class="body">';
+         '</div><div class="body">';
     if (r.plateSpec){
       h += '<h3 class="rh">The plates</h3><ul class="ing">';
       [["jon","Yours"],["cheryl","Cheryl"],["daughter","Your daughter"]].forEach(([k,lab]) => {
@@ -717,7 +710,7 @@ function mealCard(d, slot){
       const cls = t.tone === "hot" ? " warn" : "";
       h += '<p class="note' + cls + '">' + t.text + '</p>';
     });
-    h += '</div></details>';
+    h += '</div></div>';
   }
 
   return closeCard(h, d, slot);
