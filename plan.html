@@ -185,6 +185,12 @@ const FIXED = {
   "huel-bottle":  {name:"Huel Black bottle", bought:true,
                    jon:{kcal:400,protein:35,fibre:6,salt:0.7},
                    cheryl:{kcal:400,protein:35,fibre:6,salt:0.7}},
+  "cottage-rye": {name:"Cottage cheese, lemon and pepper on rye",
+    jon:{kcal:226,protein:21,fibre:3.7,salt:1.35}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+  "eggs-dukkah": {name:"Two boiled eggs, cumin dukkah and Skyr",
+    jon:{kcal:230,protein:23.3,fibre:0.6,salt:0.49}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+  "biltong-apple": {name:"Biltong, apple and walnuts",
+    jon:{kcal:221,protein:14.6,fibre:3.4,salt:0.94}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "prawns-pear": {name:"M&S king prawns + a large pear, 19:30 on the train", bought:true,
     jon:{kcal:220,protein:34.4,fibre:5,salt:1.9}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "work-pizza": {name:"Pizza provided at work, 17:45", bought:true,
@@ -198,7 +204,7 @@ const FIXED = {
 /* how long the fixed items take */
 Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
   "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"ms-bought":0,
-  "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0})
+  "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
 
 /* Cheryl's Skyr moved into lunch — she's teaching at 2:30 */
@@ -208,7 +214,8 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
 /* Breakfasts and afternoon feeds were the only slots with no way to change them. */
 const SLOT_OPTIONS = {
   breakfast: ["berry-oat","skyr-bowl","huel-milbona","huel-bottle"],
-  afternoon: ["banana-skyr","banana-skyr-150","huel-bar","whey-pear","prawns-pear","none"]
+  afternoon: ["banana-skyr","banana-skyr-150","cottage-rye","eggs-dukkah","biltong-apple",
+              "huel-bar","whey-pear","prawns-pear","none"]
 };
 
 const CHERYL_LUNCH_ADDON = {kcal:133,protein:9.3,fibre:1.7,salt:0.11,
@@ -336,6 +343,12 @@ FIXED["banana-skyr"].ing     = {jon:[I("Bananas",120,"fresh"), I("Plain Skyr",10
 FIXED["banana-skyr-150"].ing = {jon:[I("Bananas",120,"fresh"), I("Plain Skyr",150,"dairy",1000,true)]};
 FIXED["huel-bar"].ing        = {jon:[I("Huel protein bar",1,"cupboard",1,false,"bar")]};
 FIXED["whey-pear"].ing       = {jon:[I("Whey protein powder",20,"cupboard",1000,true), I("Pears",170,"fresh",null,false)]};
+FIXED["cottage-rye"].ing   = {jon:[I("Plain cottage cheese",150,"dairy",300),
+  I("Rye crispbread",20,"cupboard",200,true), I("Chives",5,"fresh"), I("Lemons",15,"fresh")]};
+FIXED["eggs-dukkah"].ing   = {jon:[I("Eggs",110,"dairy",null,true), I("Plain Skyr",80,"dairy",1000,true),
+  I("Dukkah",3,"cupboard",100,true), I("Lemons",5,"fresh")]};
+FIXED["biltong-apple"].ing = {jon:[I("Biltong",25,"cupboard",70), I("Apples",150,"fresh"),
+  I("Walnuts",10,"cupboard",200,true)]};
 FIXED["huel-bottle"].ing     = {cheryl:[I("Huel Black ready-to-drink",1,"cupboard",1,true,"bottle")]};
 FIXED["sunday-roast"].ing    = {household:[
   I("Potatoes, floury (Maris Piper or King Edward)",530,"fresh",2500),
@@ -400,6 +413,31 @@ FIXED["sunday-roast"].recipe = R(
    "Reheat it <b>in</b> the gravy rather than dry — roast meat reheated on its own goes grey and tough."],
   "<b>Three-quarters of Jon's</b>, straight off the same plates \u2014 about 525 kcal and 53g.",
   "<b>No Yorkshire puddings.</b> The potatoes are the starch, and that is what keeps this plate at 720g.");
+
+FIXED["cottage-rye"].recipe = R(
+  ["150g plain cottage cheese","20g rye crispbread (about two)",
+   "Zest of half a lemon · 5g chives · a lot of cracked black pepper · a pinch of chilli flakes"],
+  ["Zest, not juice — the oil in the zest is what you are after. Pepper cracked, not ground."],
+  null,
+  "<b>1.35g of salt</b> — cottage cheese 0.75g, crispbread 0.6g. Not on a kedgeree or mackerel " +
+  "day. Reduced-salt cottage cheese takes it to about 1.0g.<br><br>It is here for variety: this " +
+  "house eats 350g of Skyr a day and palate fatigue is a real failure mode.");
+
+FIXED["eggs-dukkah"].recipe = R(
+  ["2 large eggs (110g shelled)","80g plain Skyr, for dipping","3g dukkah — no salt in it","A squeeze of lemon"],
+  ["<b>Eight minutes, not seven.</b> These go in a bag and a soft yolk in a bag is a mess.",
+   "Boil six on Sunday — they keep a week in the shell."],
+  null,
+  "Two eggs is roughly 294mg of choline, 22\u00b5g of selenium and 50\u00b5g of iodine.");
+
+FIXED["biltong-apple"].recipe = R(
+  ["25g biltong","150g apple, weighed with the core out","10g walnuts — about four halves"],
+  [],
+  null,
+  "<b>No fridge, no cold pack, no plan</b> — this is the one that survives a rucksack. " +
+  "<b>Weigh the walnuts:</b> four whole ones is 25g and 172 calories.<br><br>" +
+  "<b>0.94g of salt</b> and it is the biltong — cured meat, around 3.7g per 100g. " +
+  "What you get for it is 50g of protein per 100g.");
 
 FIXED["prawns-pear"].recipe = R(
   ["150g M&S cooked king prawns","1 large pear"], [],
