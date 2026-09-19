@@ -909,7 +909,7 @@ const fixedTail = (slot, sel) => (FIXED_FOR_SLOT[slot] || []).map(id => {
     (f.jon.kcal ? ' \u2014 ' + f.jon.kcal + ' kcal, ' + f.jon.protein + 'g' : '') + '</option>';
 }).join("");
 
-const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot)
+const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot && (!r.retired || r.id === sel))
   .sort((a,b) => a.name.localeCompare(b.name))
   .map(r => '<option value="' + r.id + '"' + (r.id===sel?" selected":"") + '>' +
     r.name + ' — ' + Math.round(r.plates.jon.kcal) + ' kcal, ' + r.plates.jon.protein + 'g' +
@@ -926,6 +926,19 @@ function prepBlock(r){
           (PREP_LABEL[pr.when] || pr.when) + '.</b> ' + pr.note + '</p>';
   if (pr.pan) h += '<p class="note"><b>There is a pan in this one.</b> ' + pr.pan + '</p>';
   return h;
+}
+
+/* Chef's rule, 19 September: every dish wants one crisp element. Nineteen of thirty-six had
+   none, and the dishes the family already likes are, without exception, the ones that do. */
+const CRISP = /crispbread|crouton|pangrattato|breadcrumb|walnut|almond|peanut|pumpkin seed|seeds|nuts|crackling|cornichon|crisp|toasted|pitta|crispy/i;
+function crispNote(r){
+  if (!r || r.retired || !(r.ingredients||[]).length) return "";
+  const has = r.ingredients.some(i => CRISP.test(i.item)) ||
+              (r.method||[]).some(m => /crisp|toasted|crunch|charred/i.test(m));
+  return has ? "" :
+    '<p class="note"><b>Nothing crisp in this one.</b> 8\u201315g of toasted seed, nut or ' +
+    'breadcrumb over the top is 50\u2013100 kcal and it is the difference between a plate you ' +
+    'eat and one you finish.</p>';
 }
 
 /* Nothing about who eats what should have to be inferred from an absence. */
@@ -1053,6 +1066,9 @@ function mealCard(d, slot){
     h += '<p class="note warn">Your daughter\'s plate is <b>derived and never tested</b> — nobody has built one for this meal.</p>';
   if (d.diners.includes("daughter") && r && !r.plates.daughter)
     h += '<p class="note">Not a family meal — nothing here for your daughter.</p>';
+  if (r && r.retired)
+    h += '<p class="note warn"><b>Retired.</b> ' + (r.retiredWhy || '') +
+         ' It is still here because it is in this plan \u2014 swap it and it leaves the list.</p>';
   if (r && (r.warnings||[]).length)
     h += r.warnings.map(w => '<p class="note warn">' + w + '</p>').join("");
   if (r && r.secondPanForDaughter)
@@ -1075,6 +1091,7 @@ function mealCard(d, slot){
       if (r.plateSpec.note) h += '<p class="note">' + r.plateSpec.note + '</p>';
     }
     if (slot === "lunch") h += prepBlock(r);
+    h += crispNote(r);
     h += splitBlock(r, d.diners.includes("daughter") && m.daughter);
 
     /* the list has to be what THIS cook needs, not what the recipe's base batch needs */

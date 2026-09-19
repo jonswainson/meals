@@ -1,5 +1,5 @@
 {
- "version": "2026-09-19g",
+ "version": "2026-09-19k",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -205,7 +205,8 @@
    "method": [
     "Get the pan properly hot before anything goes in, then the chicken in a single layer — <b>don't crowd it or it steams instead of colouring</b>. At this quantity that is two batches, 6 minutes each.",
     "Peppers and onion in for 4–5 minutes, keeping some bite.",
-    "Spices in for the last minute <b>with a splash of water so they toast rather than burn</b>, then the limes squeezed over the pan."
+    "Spices in for the last minute <b>with a splash of water so they toast rather than burn</b>, then the limes squeezed over the pan.",
+    "<b>Lime squeezed over off the heat, at the table.</b> Lime cooked into the pan is lime you cannot taste - the aromatics go with the steam."
    ],
    "tips": [
     {
@@ -537,15 +538,16 @@
      "packSize": 145,
      "packUnit": "g",
      "staple": false,
-     "note": "1 tin drained; no-added-salt saves 0.8g"
+     "note": "NO-ADDED-SALT tuna - saves about 0.8g across the plate"
     },
     {
      "item": "Light mayonnaise",
-     "grams": 35,
+     "grams": 60,
      "aisle": "cupboard",
      "packSize": 500,
      "packUnit": "g",
-     "staple": false
+     "staple": false,
+     "note": "cut with skyr and Dijon rather than used neat"
     },
     {
      "item": "Sweetcorn, tinned",
@@ -562,21 +564,14 @@
      "aisle": "cupboard",
      "packSize": 415,
      "packUnit": "g",
-     "staple": true
+     "staple": true,
+     "note": "reduced-salt - about 0.5g saved"
     },
     {
      "item": "Cheddar, grated",
      "grams": 60,
      "aisle": "dairy",
      "packSize": 200,
-     "packUnit": "g",
-     "staple": false
-    },
-    {
-     "item": "Cottage cheese",
-     "grams": 200,
-     "aisle": "dairy",
-     "packSize": 300,
      "packUnit": "g",
      "staple": false
     },
@@ -597,29 +592,73 @@
      "staple": false,
      "assumed": true,
      "note": "'salad' is unquantified in the corpus"
+    },
+    {
+     "item": "Plain Skyr",
+     "grams": 60,
+     "aisle": "dairy",
+     "packSize": 1000,
+     "packUnit": "g",
+     "staple": true,
+     "note": "into the mayo, not on top"
+    },
+    {
+     "item": "Dijon mustard",
+     "grams": 15,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Cornichons",
+     "grams": 45,
+     "aisle": "cupboard",
+     "packSize": 300,
+     "packUnit": "g",
+     "staple": true,
+     "note": "finely diced, into the tuna mayo"
+    },
+    {
+     "item": "Red onions",
+     "grams": 30,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "soaked in lemon 5 minutes first"
+    },
+    {
+     "item": "Smoked mackerel fillets",
+     "grams": 80,
+     "aisle": "meat-fish",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false,
+     "note": "80g across the whole tray, flaked over - it is the protein the cottage cheese was carrying, with flavour"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 648,
-     "protein": 53.1,
-     "fibre": 11.7,
-     "salt": 3.62,
+     "kcal": 731,
+     "protein": 53.5,
+     "fibre": 12.0,
+     "salt": 2.93,
      "plateGrams": 700,
      "note": "raw sum 757g; a baked potato loses ~20% water"
     },
     "cheryl": {
-     "kcal": 486,
-     "protein": 39.8,
-     "fibre": 8.8,
-     "salt": 2.7,
+     "kcal": 548,
+     "protein": 40.1,
+     "fibre": 9.0,
+     "salt": 2.2,
      "plateGrams": 525
     },
     "daughter": {
-     "kcal": 403,
-     "protein": 33.0,
-     "fibre": 7.3,
-     "salt": 2.2,
+     "kcal": 454,
+     "protein": 33.2,
+     "fibre": 7.5,
+     "salt": 1.82,
      "plateGrams": 435,
      "assumed": true
     }
@@ -632,7 +671,8 @@
    "method": [
     "Oven to 200°C. Prick the potatoes and rub them with the oil and the {{2}}g of coarse salt.",
     "Straight onto the shelf for 60–75 minutes. <b>No foil — foil steams them and you lose the skin.</b>",
-    "Everything else onto the table and people build their own."
+    "Everything else onto the table and people build their own.",
+    "<b>Two toppings, not five.</b> Tuna mayo made properly - mayo cut with the skyr and the Dijon, cornichon and lemon-soaked onion through it - and the mackerel flaked over. The old build put tuna mayo, beans, cottage cheese, cheddar and salad on one potato: three wet white things competing and nothing with a texture except the skin."
    ],
    "tips": [
     {
@@ -700,7 +740,8 @@
       "daughter": 25
      }
     ]
-   }
+   },
+   "recosted": "cottage cheese out, 80g smoked mackerel in, no-added-salt tuna, reduced-salt beans, mayo cut with skyr and Dijon. 648->731 kcal, salt 3.62->2.93"
   },
   {
    "id": "harissa-chicken-chickpeas",
@@ -978,13 +1019,13 @@
      "note": "5 cloves"
     },
     {
-     "item": "Ground cumin",
-     "grams": 6,
+     "item": "Cumin seed, whole",
+     "grams": 16,
      "aisle": "cupboard",
      "packSize": 45,
      "packUnit": "g",
      "staple": true,
-     "note": "1 tbsp"
+     "note": "TOASTED IN THE DRY PAN AND CRUSHED - 6g of jar cumin in 3.2kg is below the threshold you can taste"
     },
     {
      "item": "Smoked paprika",
@@ -1029,29 +1070,56 @@
      "packUnit": "g",
      "staple": true,
      "note": "60g a bowl, instead of soured cream"
+    },
+    {
+     "item": "Chipotle paste",
+     "grams": 12,
+     "aisle": "cupboard",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": true,
+     "note": "smoke that is not smoked paprika"
+    },
+    {
+     "item": "Dark chocolate, 70%",
+     "grams": 10,
+     "aisle": "cupboard",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": true,
+     "note": "in at the end - depth, not sweetness"
+    },
+    {
+     "item": "Limes",
+     "grams": 60,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "juice in off the heat"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 631,
-     "protein": 64.6,
-     "fibre": 16.3,
-     "salt": 2.05,
+     "kcal": 640,
+     "protein": 65.0,
+     "fibre": 16.7,
+     "salt": 2.15,
      "plateGrams": 750,
      "note": "690g chilli + 60g Skyr; exactly on the plate ceiling"
     },
     "cheryl": {
-     "kcal": 473,
-     "protein": 48.4,
-     "fibre": 12.2,
-     "salt": 1.5,
+     "kcal": 480,
+     "protein": 48.7,
+     "fibre": 12.5,
+     "salt": 1.57,
      "plateGrams": 562
     },
     "daughter": {
-     "kcal": 429,
-     "protein": 43.9,
-     "fibre": 11.1,
-     "salt": 1.4,
+     "kcal": 435,
+     "protein": 44.2,
+     "fibre": 11.4,
+     "salt": 1.47,
      "plateGrams": 510,
      "note": "UNTESTED. Neither the corpus nor the verified week ever builds her a chilli plate, and the black and kidney beans are visible and cannot be lifted out",
      "assumed": true
@@ -1081,10 +1149,12 @@
     }
    },
    "method": [
+    "<b>Cumin seed toasted whole in the dry pan until it smells of cumin, then crushed.</b> Thirty seconds, and it is the single biggest change to this dish.",
     "Onion and peppers into the oil for 5 minutes. Garlic and spices for one minute — <b>the spices need dry heat before any liquid</b>.",
     "Turkey in, broken up and browned, 5 minutes.",
     "Beans, passata and a tin of water in, then simmer 20 minutes minimum. <b>Weigh {{4}}g of salt into the whole batch at the end</b> rather than seasoning by eye — the beans and the passata already bring about 4.5g of their own.",
-    "Skyr on top of each bowl instead of soured cream."
+    "Skyr on top of each bowl instead of soured cream.",
+    "<b>Chocolate and the lime juice in off the heat.</b> The chilli had no acid in it at all, which is why it tasted like mince stew - and this is the one dish in the house built entirely from tins, so it needs acid more than any of them."
    ],
    "tips": [
     {
@@ -1107,7 +1177,8 @@
      "cheryl": 562,
      "daughter": 510
     }
-   }
+   },
+   "recosted": "toasted whole cumin, chipotle, chocolate and lime (19 Sept chef review)"
   },
   {
    "id": "baked-salmon-lentils",
@@ -2396,12 +2467,12 @@
     },
     {
      "item": "Chorizo",
-     "grams": 150,
+     "grams": 90,
      "aisle": "meat-fish",
      "packSize": 200,
      "packUnit": "g",
      "staple": false,
-     "note": "down from Centr's 150g; 19 kcal per gram of protein, it is a flavouring"
+     "note": "90g, not 150 - its own tip already said so. It is a seasoning, not a protein"
     },
     {
      "item": "Butter beans",
@@ -2455,29 +2526,38 @@
      "packUnit": "g",
      "staple": false,
      "note": "50g Jon, 25g Cheryl, 50g daughter"
+    },
+    {
+     "item": "Sherry vinegar",
+     "grams": 25,
+     "aisle": "cupboard",
+     "packSize": 350,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "in at the end - this dish had no acid at all"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 770,
-     "protein": 70.6,
+     "kcal": 716,
+     "protein": 67.7,
      "fibre": 17.3,
-     "salt": 3.42,
+     "salt": 3.12,
      "plateGrams": 690,
      "note": "raw sum 793g; the broth reduces"
     },
     "cheryl": {
-     "kcal": 578,
-     "protein": 52.9,
+     "kcal": 537,
+     "protein": 50.7,
      "fibre": 13.0,
-     "salt": 2.6,
+     "salt": 2.37,
      "plateGrams": 518
     },
     "daughter": {
-     "kcal": 558,
-     "protein": 51.2,
+     "kcal": 519,
+     "protein": 49.1,
      "fibre": 12.5,
-     "salt": 2.5,
+     "salt": 2.28,
      "plateGrams": 500,
      "note": "beans and broccoli alongside rather than under - nothing stirred together",
      "assumed": true
@@ -2511,7 +2591,8 @@
     "15 minutes, until just starting to brown.",
     "Out. Beans and stock in, broccoli laid on top, back in for 15 minutes. <b>Use half-strength stock and add no salt</b> — a full-strength cube is about 2.4g of salt into the dish, and this is already one of the saltiest plates here.",
     "Chicken and broccoli out to rest. <b>Mash a few of the beans into the broth to thicken it</b> — that step is the difference between a braise and a bowl of soup.",
-    "Beans into the bowls, sliced chicken and broccoli on top, wholegrain baguette on the table."
+    "Beans into the bowls, sliced chicken and broccoli on top, wholegrain baguette on the table.",
+    "<b>Sherry vinegar in off the heat.</b> Smoked paprika, chorizo and beans are all deep, soft and savoury; without acid the whole plate sits in one register."
    ],
    "tips": [
     {
@@ -2534,7 +2615,8 @@
      "cheryl": 518,
      "daughter": 500
     }
-   }
+   },
+   "recosted": "chorizo 150g to 90g, sherry vinegar added (19 Sept chef review)"
   },
   {
    "id": "indian-lentil-shakshuka",
@@ -2734,7 +2816,9 @@
      "cheryl": 818,
      "daughter": 160
     }
-   }
+   },
+   "retired": true,
+   "retiredWhy": "Retired 19 Sept AS A FAMILY DINNER. A 1,090g plate against a tested 750g ceiling, over the fibre ceiling, and the only recipe here that needs a second pan. The flavours are worth keeping as a two-person supper at about 700g - that is a rebuild, not a tweak."
   },
   {
    "id": "chicken-salad",
@@ -2896,7 +2980,9 @@
    },
    "warnings": [
     "<b>Salt was recorded at 0.4g and is really about 1.7g.</b> 150g of pre-packed cooked chicken carries it; the identical ingredient in the butter bean tub was costed correctly all along."
-   ]
+   ],
+   "retired": true,
+   "retiredWhy": "Retired 19 Sept. Under the 400-550 lunch band at 302 kcal whichever figure you believe, its salt was recorded at a fifth of the truth, and the cooked chicken and butter bean tub replaced it months ago."
   },
   {
    "id": "prawn-and-skyr",
@@ -3054,7 +3140,9 @@
    "prep": {
     "when": "same-day",
     "note": "Assembled cold."
-   }
+   },
+   "retired": true,
+   "retiredWhy": "Retired 19 Sept. 645g of cold, wet, zero-fat food in two courses with nothing crisp, warm, browned or sweet anywhere, and 2.76g of salt for 345 kcal. The architecture is wrong rather than the seasoning, so there is no fix."
   },
   {
    "id": "tuna-chickpea-salad",
@@ -3326,13 +3414,31 @@
      "note": "diced"
     },
     {
-     "item": "Vegetable or chicken stock",
+     "item": "Water",
      "grams": 2000,
      "aisle": "cupboard",
      "packSize": null,
      "packUnit": "ml",
      "staple": false,
-     "note": "FULL-STRENGTH stock is 1.6g of salt a bowl on its own. Half strength halves it"
+     "note": "water, not stock - the savour comes from a parmesan rind and dried porcini instead"
+    },
+    {
+     "item": "Parmesan rind",
+     "grams": 40,
+     "aisle": "dairy",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "simmered in and fished out"
+    },
+    {
+     "item": "Dried porcini",
+     "grams": 15,
+     "aisle": "cupboard",
+     "packSize": 30,
+     "packUnit": "g",
+     "staple": true,
+     "note": "soaked, chopped, liquor in too"
     },
     {
      "item": "Spray oil",
@@ -3353,12 +3459,12 @@
     },
     {
      "item": "Plain Skyr",
-     "grams": 1200,
+     "grams": 900,
      "aisle": "dairy",
      "packSize": 1000,
      "packUnit": "g",
      "staple": true,
-     "note": "200g a bowl, stirred in OFF the heat"
+     "note": "150g a bowl, DOLLOPED ON TOP - never stirred through"
     },
     {
      "item": "Halloumi",
@@ -3389,17 +3495,17 @@
    ],
    "plates": {
     "jon": {
-     "kcal": 554,
-     "protein": 47.2,
-     "fibre": 8,
-     "salt": 4.5,
+     "kcal": 523,
+     "protein": 41.7,
+     "fibre": 8.0,
+     "salt": 3.8,
      "plateGrams": 710
     },
     "cheryl": {
-     "kcal": 416,
-     "protein": 35.4,
+     "kcal": 393,
+     "protein": 31.3,
      "fibre": 6.0,
-     "salt": 3.4,
+     "salt": 2.88,
      "plateGrams": 532
     },
     "daughter": null
@@ -3432,7 +3538,7 @@
     "Potatoes and stock into a big pan at the same time, simmered 15 minutes until tender. <b>Half-strength stock</b> — full strength is 1.6g of salt a bowl on its own.",
     "Roasted broccoli in for 5 more minutes, then blend smooth. <b>{{6}}g of salt weighed into the whole batch</b>, which is 1g a bowl, and plenty of pepper. Blended vegetable soup wants intensity, but it gets it weighed rather than seasoned by eye.",
     "Cool fast and portion it here: six tubs, roughly 450g each. Three days in the fridge, three months in the freezer.",
-    "At the bowl: reheat a portion, then <b>stir the Skyr in off the heat — boiled Skyr splits</b>. Halloumi in a dry non-stick pan for 3–4 minutes with the honey drizzled over for the last 30 seconds until sticky. Croutons on top, lemon zest grated over."
+    "At the bowl: reheat a portion, then <b>150g of skyr dolloped on top, not stirred through</b> - stirred, it turns the whole bowl sour against the brassica; on top you get sour and sweet in the same spoonful. Halloumi in a dry non-stick pan 3-4 minutes with the honey over for the last 30 seconds. Croutons and lemon zest on."
    ],
    "tips": [
     {
@@ -3463,7 +3569,8 @@
     "when": "weekend",
     "note": "Six tubs from one 45-minute cook. Three days in the fridge, three months in the freezer. At lunch the soup is reheated; see the pan note below for the croutons.",
     "pan": "The halloumi croutons are four minutes in a dry pan at the bowl. That is the only lunch in the corpus with a pan in it. Nothing raw, nothing prepped - if that is too much on a given day, take the soup plain and the croutons are 120 kcal you did not eat."
-   }
+   },
+   "recosted": "stock out, skyr 200g to 150g and dolloped (19 Sept chef review)"
   },
   {
    "id": "smoky-chicken-chickpea-braise",
@@ -4265,7 +4372,7 @@
   },
   {
    "id": "mackerel-beetroot-barley-tub",
-   "name": "Tinned mackerel, beetroot and pearl barley with horseradish skyr",
+   "name": "Mackerel and beetroot with dill and horseradish cream",
    "slot": "lunch",
    "basePortions": 1,
    "timeMinutes": 10,
@@ -4324,15 +4431,16 @@
     },
     {
      "item": "Plain Skyr",
-     "grams": 150,
+     "grams": 110,
      "aisle": "dairy",
      "packSize": 450,
      "packUnit": "g",
-     "staple": true
+     "staple": true,
+     "note": "BEATEN HARD with the oil until glossy - unbeaten it is a pool, not a cream"
     },
     {
      "item": "Hot horseradish",
-     "grams": 10,
+     "grams": 15,
      "aisle": "cupboard",
      "packSize": 180,
      "packUnit": "g",
@@ -4370,22 +4478,40 @@
      "packSize": 500,
      "packUnit": "ml",
      "staple": true
+    },
+    {
+     "item": "Rye crispbread",
+     "grams": 15,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "crumbled over at the tub, not packed in"
+    },
+    {
+     "item": "Cornichons",
+     "grams": 15,
+     "aisle": "cupboard",
+     "packSize": 300,
+     "packUnit": "g",
+     "staple": true,
+     "note": "chopped, over the top"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 509,
-     "protein": 46.5,
-     "fibre": 9.1,
-     "salt": 1.8,
+     "kcal": 541,
+     "protein": 43.9,
+     "fibre": 10.7,
+     "salt": 2.25,
      "plateGrams": 618,
      "note": "fibre uncertain by 1-2g: pearl barley is quoted anywhere from 11g to 17g per 100g dry and the chef used 15.6g"
     },
     "cheryl": {
-     "kcal": 382,
-     "protein": 34.9,
-     "fibre": 6.8,
-     "salt": 1.4,
+     "kcal": 406,
+     "protein": 32.9,
+     "fibre": 8.0,
+     "salt": 1.74,
      "plateGrams": 464
     },
     "daughter": null
@@ -4397,8 +4523,9 @@
    },
    "method": [
     "Pearl barley in plenty of water for 30 minutes, drained, and <b>dressed with the lemon while it is still warm</b> — warm grain absorbs dressing, cold grain repels it. That is the single difference between a good grain tub and a dry one.",
-    "Skyr, horseradish and black pepper whisked together.",
-    "Layered in the tub in this order: barley at the bottom, then beetroot and cucumber, then the skyr, then the flaked mackerel, then rocket and dill on top. <b>Beetroot away from the rocket</b> or you arrive with pink leaves."
+    "<b>Beat the skyr, horseradish, the oil and black pepper together hard</b> until it thickens and turns glossy. This is the difference between a cream and a pool - unbeaten 0% skyr slides off everything it touches.",
+    "Layered in the tub in this order: barley at the bottom, then beetroot and cucumber, then the skyr, then the flaked mackerel, then rocket and dill on top. <b>Beetroot away from the rocket</b> or you arrive with pink leaves.",
+    "<b>Rye crispbread crumbled over and the cornichons on last</b>, at the tub rather than in it, or they soften. This is the only crunch in the box."
    ],
    "tips": [
     {
@@ -4462,7 +4589,8 @@
    "prep": {
     "when": "night-before",
     "note": "<b>The barley is 30 minutes on the hob</b> - do it then, and dress it while it is still warm."
-   }
+   },
+   "recosted": "skyr beaten and cut to 110g, horseradish to 15g, rye and cornichons added"
   },
   {
    "id": "tortilla-chicken-piquillo",
@@ -5396,7 +5524,9 @@
       "daughter": 30
      }
     ]
-   }
+   },
+   "idWas": "crumbed-cod-crushed-potato",
+   "note": "id still reads 'cod'; the recipe has been haddock throughout since the substitution"
   },
   {
    "id": "cod-cannellini-leek-braise",
@@ -5807,7 +5937,7 @@
     "Pangrattato first, in a dry pan you will reuse: breadcrumbs and {{5}}g of the oil over medium heat, <b>stirred constantly for 4 minutes until deep brown and hard</b>. Lemon zest off the heat, then out into a bowl. This is the crunch and it is the entire reason the dish doesn't feel soft and samey.",
     "Same pan, the rest of the oil, fennel and onion on medium-low <b>for 10 minutes with a lid on</b> — fennel needs that to go from aggressive to sweet. Garlic, toasted fennel seeds and chilli for a minute.",
     "Tomato purée in and cooked out for 90 seconds until it darkens — <b>raw purée tastes tinny</b>.",
-    "<b>Half the sardines in, mashed hard against the base of the pan with a wooden spoon for a full minute, until there is nothing recognisable left.</b> Then the tomatoes, the raisins, the {{1.5}}g of weighed salt and {{100}}ml of water. Simmer 15 minutes.",
+    "<b><b>All the sardines in, mashed hard</b> against the base of the pan with a wooden spoon for a full minute, until there is nothing recognisable left. <b>All of them, not half</b> - whole fillets left in the sauce are the thing people push to the side of the plate, and dissolved sardine is savour rather than fish.</b> Then the tomatoes, the raisins, the {{1.5}}g of weighed salt and {{100}}ml of water. Simmer 15 minutes.",
     "Wholewheat spaghetti cooked, drained and <b>finished in the sauce for 60 seconds with a splash of its water</b> — never sauce spooned on top; the starch in the pasta water is what makes the sauce cling.",
     "The remaining whole sardine fillets laid on the adults' plates, warmed by the pasta. Lemon zest, parsley, fennel fronds and pangrattato over everything."
    ],
@@ -6734,13 +6864,14 @@
    "secondPanForDaughter": false,
    "ingredients": [
     {
-     "item": "King prawns, ready-cooked",
+     "item": "Raw king prawns",
      "grams": 350,
      "aisle": "meat-fish",
      "packSize": 180,
      "packUnit": "g",
      "staple": false,
-     "cooked": true
+     "cooked": true,
+     "note": "POACHED WITH THE WEEKEND BATCH and cooled - not bought ready-cooked. Ready-cooked prawns sit in brine at about 1.25g of salt per 100g"
     },
     {
      "item": "Butter beans",
@@ -6805,16 +6936,16 @@
    "plates": {
     "jon": {
      "kcal": 535,
-     "protein": 62.3,
-     "fibre": 10,
-     "salt": 2.77,
+     "protein": 67.3,
+     "fibre": 10.0,
+     "salt": 1.07,
      "plateGrams": 562
     },
     "cheryl": {
      "kcal": 401,
-     "protein": 46.7,
+     "protein": 50.5,
      "fibre": 7.5,
-     "salt": 2.1,
+     "salt": 0.82,
      "plateGrams": 422
     },
     "daughter": null
@@ -6880,8 +7011,9 @@
    },
    "prep": {
     "when": "night-before",
-    "note": "The prawns are bought ready-cooked."
-   }
+    "note": "The prawns are poached with the weekend batch and cooled. Built the night before."
+   },
+   "recosted": "raw prawns poached ahead instead of bought in brine (19 Sept chef review)"
   },
   {
    "id": "chicken-bean-spinach-pot",
@@ -7008,11 +7140,12 @@
      "plateGrams": 525
     },
     "daughter": {
-     "kcal": 443,
+     "kcal": 442,
      "protein": 49.2,
      "fibre": 12.8,
      "salt": 1.2,
-     "plateGrams": 525
+     "plateGrams": 525,
+     "note": "her share is the corpus median, 75% of Jon's - it was a straight copy of Cheryl's"
     }
    },
    "leftover": {
@@ -7201,10 +7334,11 @@
     },
     "daughter": {
      "kcal": 536,
-     "protein": 53,
+     "protein": 53.0,
      "fibre": 13.5,
-     "salt": 1.13,
-     "plateGrams": 488
+     "salt": 1.12,
+     "plateGrams": 488,
+     "note": "her share is the corpus median, 75% of Jon's - it was a straight copy of Cheryl's"
     }
    },
    "leftover": {
