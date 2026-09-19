@@ -1,5 +1,5 @@
 {
- "version": "2026-09-19c",
+ "version": "2026-09-19e",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -6894,6 +6894,383 @@
     "when": "night-before",
     "note": "The prawns are bought ready-cooked."
    }
+  },
+  {
+   "id": "chicken-bean-spinach-pot",
+   "name": "Chicken, bean and spinach pot",
+   "slot": "dinner",
+   "basePortions": 3,
+   "timeMinutes": 15,
+   "handsOnMinutes": 15,
+   "tags": [
+    "quick",
+    "one-pan",
+    "leaves-lunch"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Cooked chicken breast, pre-packed",
+     "grams": 375,
+     "aisle": "meat-fish",
+     "packSize": 150,
+     "packUnit": "g",
+     "staple": false,
+     "note": "cooked weight - this is the leftover-or-packet dinner, not a cook-the-chicken one"
+    },
+    {
+     "item": "Butter beans",
+     "grams": 588,
+     "aisle": "cupboard",
+     "packSize": 400,
+     "packUnit": "g",
+     "staple": true,
+     "note": "3 tins, drained and RINSED - the tin liquid is where the salt is"
+    },
+    {
+     "item": "Passata",
+     "grams": 500,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Spinach",
+     "grams": 325,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "fresh, goes in at the end in handfuls"
+    },
+    {
+     "item": "Onions",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 15,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "5 cloves"
+    },
+    {
+     "item": "Olive oil",
+     "grams": 13,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Smoked paprika",
+     "grams": 6,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Chilli flakes",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 35,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Dried oregano",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 45,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Lemons",
+     "grams": 35,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "squeezed in off the heat - this is doing the job salt would"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 590,
+     "protein": 65.6,
+     "fibre": 17,
+     "salt": 1.6,
+     "plateGrams": 700,
+     "note": "150g cooked chicken, 235g beans, 200g passata, 130g spinach"
+    },
+    "cheryl": {
+     "kcal": 443,
+     "protein": 49.2,
+     "fibre": 12.8,
+     "salt": 1.2,
+     "plateGrams": 525
+    },
+    "daughter": {
+     "kcal": 443,
+     "protein": 49.2,
+     "fibre": 12.8,
+     "salt": 1.2,
+     "plateGrams": 525
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "note": "Double the lot and it reheats better than it cooks - the beans hold and the sauce thickens overnight. ADD THE SPINACH FRESH to the second portion rather than reheating it, or it goes grey.",
+    "portions": {
+     "jon": {
+      "grams": 595,
+      "kcal": 501,
+      "protein": 55.8,
+      "fibre": 14.4,
+      "salt": 1.36,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 455,
+      "kcal": 384,
+      "protein": 42.6,
+      "fibre": 11.1,
+      "salt": 1.04,
+      "source": "derived"
+     }
+    }
+   },
+   "warnings": [
+    "<b>The beans are the starch.</b> A drained tin carries about the same carbohydrate as 55g of dry rice, so <b>no pasta, no bread, no potato alongside</b>. This is a complete plate on its own.",
+    "<b>17g of fibre on Jon's plate, against a 20g single-sitting ceiling.</b> Don't add more beans.",
+    "<b>Salt assumes the chicken is cooked at home.</b> Pre-packed cooked chicken runs about 1g per 100g against 0.2g roasted here, which would put Jon's plate near 2.8g instead of 1.6g.",
+    "<b>Rebuilt, not original.</b> This was in the file lost on 16 September and was reconstructed from the standing rules. Check it against what you actually made."
+   ],
+   "method": [
+    "<b>Onion and garlic</b> in the oil, medium heat, 4 minutes until soft.",
+    "<b>Paprika, chilli and oregano</b> in for 30 seconds, until you can smell them.",
+    "<b>Passata and a splash of water.</b> Simmer 5 minutes.",
+    "<b>Beans and chicken in.</b> Warm through 3-4 minutes. The chicken is already cooked, so you are heating it rather than cooking it - don't let it sit and go stringy.",
+    "<b>Spinach in handfuls</b>, stirring until each one collapses. About 2 minutes.",
+    "<b>Lemon and black pepper off the heat.</b>"
+   ],
+   "tips": [
+    {
+     "tone": "go",
+     "text": "The lemon is doing the job salt would. Acid at the end makes a tomato sauce taste finished without touching the 6g ceiling."
+    },
+    {
+     "tone": "plain",
+     "text": "15g of grated parmesan on top is 60 kcal and 5g of protein if the day has room."
+    },
+    {
+     "tone": "hot",
+     "text": "If the beans are a problem for your daughter, ladle her sauce out at the end of step 3 before they go in, and serve it over pasta. That is a deviation from the one-recipe rule and the only one in the corpus - her figures above assume she eats it as made."
+    }
+   ]
+  },
+  {
+   "id": "crispy-duck-lentils-red-cabbage",
+   "name": "Crispy duck with puy lentils and braised red cabbage",
+   "slot": "dinner",
+   "basePortions": 4,
+   "timeMinutes": 195,
+   "handsOnMinutes": 35,
+   "tags": [
+    "slow",
+    "leaves-lunch",
+    "weekend"
+   ],
+   "secondPanForDaughter": false,
+   "ingredients": [
+    {
+     "item": "Whole duck",
+     "grams": 2200,
+     "aisle": "meat-fish",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "about 2.2kg raw on the bone - yields roughly 800g of meat. THAW 24-36 HOURS IN THE FRIDGE"
+    },
+    {
+     "item": "Puy lentils, dry",
+     "grams": 240,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Red cabbage",
+     "grams": 600,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Tenderstem broccoli",
+     "grams": 480,
+     "aisle": "fresh",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Onions",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Garlic",
+     "grams": 15,
+     "aisle": "cupboard",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "5 cloves"
+    },
+    {
+     "item": "Apples",
+     "grams": 150,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false,
+     "note": "grated into the cabbage"
+    },
+    {
+     "item": "Red wine vinegar",
+     "grams": 40,
+     "aisle": "cupboard",
+     "packSize": 500,
+     "packUnit": "ml",
+     "staple": true
+    },
+    {
+     "item": "Reduced-salt chicken stock",
+     "grams": 700,
+     "aisle": "cupboard",
+     "packSize": 1000,
+     "packUnit": "ml",
+     "staple": true,
+     "note": "half strength for the lentils"
+    },
+    {
+     "item": "Thyme",
+     "grams": 5,
+     "aisle": "fresh",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": false
+    },
+    {
+     "item": "Bay leaf",
+     "grams": 1,
+     "aisle": "cupboard",
+     "packSize": 10,
+     "packUnit": "g",
+     "staple": true
+    },
+    {
+     "item": "Salt, weighed",
+     "grams": 2,
+     "aisle": "cupboard",
+     "packSize": 750,
+     "packUnit": "g",
+     "staple": true,
+     "note": "1g on the skin, 1g across the lentils. The skin salt is what dries it out and crisps it"
+    }
+   ],
+   "plates": {
+    "jon": {
+     "kcal": 714,
+     "protein": 70.7,
+     "fibre": 18,
+     "salt": 1.5,
+     "plateGrams": 650,
+     "note": "200g duck meat, 180g cooked lentils, 150g red cabbage, 120g tenderstem"
+    },
+    "cheryl": {
+     "kcal": 536,
+     "protein": 53,
+     "fibre": 13.5,
+     "salt": 1.13,
+     "plateGrams": 488
+    },
+    "daughter": {
+     "kcal": 536,
+     "protein": 53,
+     "fibre": 13.5,
+     "salt": 1.13,
+     "plateGrams": 488
+    }
+   },
+   "leftover": {
+    "leavesLunch": true,
+    "quality": "better",
+    "note": "The fourth portion. Duck and lentils are better cold than warm - shred the meat through the lentils with extra vinegar and eat it as a salad. Reheating duck makes it tough.",
+    "portions": {
+     "jon": {
+      "grams": 455,
+      "kcal": 500,
+      "protein": 49.5,
+      "fibre": 12.6,
+      "salt": 1.05,
+      "source": "derived"
+     },
+     "cheryl": {
+      "grams": 350,
+      "kcal": 385,
+      "protein": 38.1,
+      "fibre": 9.7,
+      "salt": 0.81,
+      "source": "derived"
+     }
+    }
+   },
+   "warnings": [
+    "<b>Thaw it properly: 24 to 36 hours in the fridge for a whole bird.</b> Not on the worktop, not in water. Start it two days before you want to eat it.",
+    "<b>The rendered fat is the whole calorie risk and there is a lot of it</b> - 250-350g comes out of a duck this size. Pour it off as it renders and keep it for another day. <b>This is why the plate has lentils and not potatoes:</b> potatoes roasted in duck fat would put Jon's plate near 1,000 kcal.",
+    "<b>The skin is not in the numbers.</b> 100g of crisp duck skin is around 450 kcal. Jon's 714 assumes meat with a little skin on it, not a crisp half-bird.",
+    "<b>18g of fibre, against a 20g single-sitting ceiling.</b> Take it on a Skyr-bowl morning, never after the sardine ragu or the shakshuka."
+   ],
+   "method": [
+    "<b>The day before, if you can.</b> Duck out of its wrapping, patted bone dry, skin scored in a diamond through the fat but <b>not into the meat</b>. Rub 1g of the weighed salt over the skin and leave it uncovered on a rack in the fridge overnight. Dry skin is crisp skin; this step does more than anything in the oven.",
+    "Oven to 150\\u00b0C. Duck breast-up on a rack over a deep tray, <b>2 hours</b>. Prick the fat pads along the sides every 40 minutes and pour the fat off the tray whenever it collects.",
+    "<b>Lentils:</b> onion, garlic and thyme softened in a spoon of the duck fat, lentils in, then the half-strength stock and the bay. Simmer 25 minutes until they hold their shape, then the other 1g of salt. Not soft - puy lentils that collapse are the wrong texture against duck.",
+    "<b>Red cabbage:</b> shredded fine, into a pan with the grated apple and the vinegar, lid on, 30 minutes on low, stirred now and then. The vinegar keeps the colour; without it the cabbage goes the colour of a bruise.",
+    "<b>Oven to 220\\u00b0C for the last 20-25 minutes</b> to blister the skin. Watch it - it goes from brown to black faster than you expect at that temperature.",
+    "<b>Rest 20 minutes before carving</b>, loosely covered. Duck tightens if you cut it hot.",
+    "Tenderstem in at the very end, 4 minutes in boiling water. Lentils on the plate, duck on top, cabbage beside, and a spoon of the lentil liquor over."
+   ],
+   "tips": [
+    {
+     "tone": "go",
+     "text": "Keep the rendered fat. It is the best thing in the house for roast potatoes and it keeps months in the fridge - just not on this plate."
+    },
+    {
+     "tone": "plain",
+     "text": "Puy rather than green lentils: they hold their shape against a rich meat where green ones turn to mush."
+    },
+    {
+     "tone": "hot",
+     "text": "A whole duck is 2 to 2.2kg raw and yields only about 800g of meat. That is three plates and one lunch, not more - do not plan a second meal off it."
+    }
+   ]
   }
  ],
  "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8.",

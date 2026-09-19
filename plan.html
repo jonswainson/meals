@@ -167,6 +167,8 @@ const FIXED = {
     jon:{kcal:603,protein:29.5,fibre:11.4,salt:0.3}, cheryl:{kcal:452,protein:22.1,fibre:8.6,salt:0.23}},
   "gingerbread":  {name:"Gingerbread smoothie",
     jon:{kcal:606,protein:50,fibre:8.8,salt:0.55}, cheryl:{kcal:455,protein:37.5,fibre:6.6,salt:0.41}},
+  "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
+    jon:{kcal:459,protein:54,fibre:6,salt:4.2}, cheryl:{kcal:344,protein:40.5,fibre:4.5,salt:3.15}},
   "skyr-bowl":    {name:"The Skyr bowl",
                    jon:{kcal:587,protein:61.5,fibre:13.3,salt:0.4},
                    cheryl:{kcal:440,protein:46.1,fibre:10.0,salt:0.30}},
@@ -189,10 +191,30 @@ const FIXED = {
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "cheat-meal":   {name:"Cheat meal \u2014 untracked",
     jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true, bought:true},
-  "roast-sunday": {name:"Sunday roast, cooked", bought:true,
-    jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.5,plateGrams:720},
+  "roast-beef": {name:"Sunday roast \u2014 Beef", bought:true,
+    jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.50,plateGrams:720},
     cheryl:{kcal:524,protein:53.1,fibre:8.3,salt:1.12,plateGrams:540},
-    daughter:{kcal:531,protein:43.2,fibre:6.3,salt:1,plateGrams:450}},
+    daughter:{kcal:436,protein:44.2,fibre:6.9,salt:0.94,plateGrams:450}},
+  "roast-pork": {name:"Sunday roast \u2014 Pork", bought:true,
+    jon:{kcal:707,protein:71.0,fibre:11.1,salt:1.50,plateGrams:720},
+    cheryl:{kcal:530,protein:53.2,fibre:8.3,salt:1.12,plateGrams:540},
+    daughter:{kcal:442,protein:44.4,fibre:6.9,salt:0.94,plateGrams:450}},
+  "roast-chicken": {name:"Sunday roast \u2014 Chicken", bought:true,
+    jon:{kcal:646,protein:64.9,fibre:11.1,salt:1.50,plateGrams:720},
+    cheryl:{kcal:484,protein:48.7,fibre:8.3,salt:1.12,plateGrams:540},
+    daughter:{kcal:404,protein:40.6,fibre:6.9,salt:0.94,plateGrams:450}},
+  "roast-turkey": {name:"Sunday roast \u2014 Turkey", bought:true,
+    jon:{kcal:631,protein:68.8,fibre:11.1,salt:1.50,plateGrams:720},
+    cheryl:{kcal:473,protein:51.6,fibre:8.3,salt:1.12,plateGrams:540},
+    daughter:{kcal:394,protein:43.0,fibre:6.9,salt:0.94,plateGrams:450}},
+  "roast-lamb": {name:"Sunday roast \u2014 Lamb", bought:true,
+    jon:{kcal:745,protein:69.2,fibre:11.1,salt:1.50,plateGrams:720},
+    cheryl:{kcal:559,protein:51.9,fibre:8.3,salt:1.12,plateGrams:540},
+    daughter:{kcal:466,protein:43.2,fibre:6.9,salt:0.94,plateGrams:450}},
+  "roast-ham": {name:"Sunday roast \u2014 Roast ham", bought:true,
+    jon:{kcal:703,protein:62.5,fibre:11.1,salt:5.82,plateGrams:720},
+    cheryl:{kcal:527,protein:46.9,fibre:8.3,salt:4.37,plateGrams:540},
+    daughter:{kcal:439,protein:39.1,fibre:6.9,salt:3.64,plateGrams:450}},
   "own-thing":    {name:"Something else \u2014 our own thing",
     jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true},
   "none":         {name:"Nothing",
@@ -221,8 +243,8 @@ const FIXED = {
 };
 
 /* how long the fixed items take */
-Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":15,"gingerbread":5,"milbona":0,"huel-milbona":0,"banana-skyr":1,
-  "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"own-thing":0,"cheat-meal":0,"roast-sunday":90,"ms-bought":0,
+Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":15,"gingerbread":5,"bacon-cottage":10,"milbona":0,"huel-milbona":0,"banana-skyr":1,
+  "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"own-thing":0,"cheat-meal":0,"roast-beef":90,"roast-pork":90,"roast-chicken":90,"roast-turkey":90,"roast-lamb":90,"roast-ham":90,"ms-bought":0,
   "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
 
@@ -239,10 +261,11 @@ const SMOOTHIES = ["berry-oat","cherry-berry","gingerbread","almond-blueberry"];
 /* Fixed lunches and dinners - the roast, the bought ones - had no picker at all, so the
    roast night was the one night you could not say "we'll do our own thing". */
 const FIXED_FOR_SLOT = {lunch:["ms-bought","huel-bottle"],
-                        dinner:["roast-sunday","sunday-roast","work-pizza","cheat-meal"]};
+                        dinner:["roast-beef","roast-pork","roast-chicken","roast-turkey","roast-lamb","roast-ham","sunday-roast","work-pizza","cheat-meal"]};
 
 const SLOT_OPTIONS = {
-  breakfast: ["berry-oat","cherry-berry","gingerbread","almond-blueberry","pb-banana-oats","skyr-bowl",
+  breakfast: ["berry-oat","cherry-berry","gingerbread","almond-blueberry","bacon-cottage",
+              "pb-banana-oats","skyr-bowl",
               "huel-milbona","huel-bottle","own-thing"],
   afternoon: ["banana-skyr","banana-skyr-150","milbona","cottage-rye","eggs-dukkah","biltong-apple",
               "huel-bar","whey-pear","prawns-pear","none","own-thing"]
@@ -270,7 +293,7 @@ const DEFAULT_WEEK = {
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"tuna-butter-bean-fennel-tub",portions:2,daughter:false,alt:""},
-     dinner:{kind:"fixed",id:"roast-sunday"}},
+     dinner:{kind:"fixed",id:"roast-beef"}},
     {id:"mon",label:"Mon",title:"Monday",tags:"Home \u00b7 trains \u00b7 leg day",
      diners:["jon","cheryl","daughter"],
      breakfast:"berry-oat", afternoon:"banana-skyr",
@@ -312,7 +335,7 @@ const WEEK_0926 = {
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"mackerel-beetroot-barley-tub",portions:2,daughter:false,alt:""},
-     dinner:{kind:"fixed",id:"roast-sunday"}},
+     dinner:{kind:"fixed",id:"roast-beef"}},
     {id:"mon",label:"Mon",title:"Monday",tags:"Home \u00b7 trains \u00b7 leg day",
      diners:["jon","cheryl","daughter"],
      breakfast:"berry-oat", afternoon:"banana-skyr",
@@ -362,6 +385,12 @@ const I = (item,grams,aisle,packSize,staple,unit) =>
    two smoothies; leaving them here would have kept the shop buying for two. */
 const share = (list, f) => list.map(i =>
   Object.assign({}, i, {grams: Math.round(i.grams * f * 10) / 10}));
+
+FIXED["bacon-cottage"].ing = {
+  jon:[I("Back bacon",75,"meat-fish",250), I("Plain cottage cheese",200,"dairy",300),
+       I("High-protein wraps",1,"bakery",6,false,"wrap"), I("Mushrooms",70,"fresh",250),
+       I("Tomatoes",70,"fresh")]};
+FIXED["bacon-cottage"].ing.cheryl = share(FIXED["bacon-cottage"].ing.jon, 0.75);
 
 FIXED["gingerbread"].ing = {
   jon:[I("Semi-skimmed milk",250,"dairy",2000,true,"ml"), I("Whey protein powder",40,"cupboard",1000,true),
@@ -424,14 +453,18 @@ FIXED["huel-bottle"].ing     = {cheryl:[I("Huel Black ready-to-drink",1,"cupboar
 /* Sunday cooks the joint; Monday reheats the meat with fresh veg. Two sets of
    accompaniments, one joint. Before the weekend was in the planner the joint was
    outside the shop entirely - with a Saturday-to-Friday week it has to be in it. */
-FIXED["roast-sunday"].ing    = {household:[
-  I("Roasting joint",1200,"meat-fish",null,false),
-  I("Potatoes, floury (Maris Piper or King Edward)",700,"fresh",2500),
-  I("Carrots",300,"fresh",500), I("Broccoli",300,"fresh"), I("Savoy cabbage",250,"fresh"),
-  I("Gravy granules",30,"cupboard",200,true)]};
-FIXED["roast-sunday"].ing.household[0].assumed = true;
-FIXED["roast-sunday"].ing.household[0].note =
-  "assumed beef and assumed weight - enough for Sunday's three plates and Monday's dinner";
+["beef","pork","chicken","turkey","lamb","ham"].forEach(cut => {
+  const joint = I(cut === "ham" ? "Gammon or roast ham joint"
+                : cut === "chicken" ? "Whole chicken or crown"
+                : cut.charAt(0).toUpperCase() + cut.slice(1) + " roasting joint",
+                1200, "meat-fish", null, false);
+  joint.assumed = true;
+  joint.note = "weight assumed - enough for Sunday's three plates and Monday's dinner";
+  FIXED["roast-" + cut].ing = {household:[joint,
+    I("Potatoes, floury (Maris Piper or King Edward)",700,"fresh",2500),
+    I("Carrots",300,"fresh",500), I("Broccoli",300,"fresh"), I("Savoy cabbage",250,"fresh"),
+    I("Gravy granules",30,"cupboard",200,true)]};
+});
 
 FIXED["sunday-roast"].ing    = {household:[
   I("Potatoes, floury (Maris Piper or King Edward)",530,"fresh",2500),
@@ -443,6 +476,8 @@ const CHERYL_LUNCH_ING = [I("Plain Skyr",75,"dairy",1000,true), I("Bananas",90,"
 
 /* ---------- how to make the fixed items ---------- */
 const R = (ing, method, cheryl, note) => ({ing, method, cheryl, note});
+FIXED["bacon-cottage"].mix = [["Back bacon (3 rashers)",75],["Cottage cheese",200],
+  ["High-protein wrap",60],["Mushrooms",70],["Tomatoes",70]];
 FIXED["gingerbread"].mix = [["Reduced-fat milk",250,"ml"],["Vanilla protein powder",40],
   ["Rolled oats",30],["Maple syrup",14],["Whole roasted almonds",30],
   ["Ground cinnamon",1.3],["Ground nutmeg",0.5],["Ground ginger",0.5]];
@@ -461,6 +496,19 @@ FIXED["berry-oat"].mix = [["Skyr",200],["Whey",32],["Milk",150,"ml"],
 FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",20,"ml"],
   ["Frozen raspberries",100],["Chia seeds",12],["Walnuts or almonds",15],
   ["Pumpkin seeds",10],["Banana, weighed",60]];
+
+FIXED["bacon-cottage"].recipe = R(
+  ["3 rashers back bacon, grilled","200g cottage cheese","1 high-protein wrap",
+   "Mushrooms and tomatoes, grilled alongside"],
+  ["Bacon under the grill rather than in a pan \u2014 the fat runs off instead of being cooked back in.",
+   "Mushrooms and tomatoes on the same tray. Nothing else needs doing."],
+  null,
+  "<b>The leanest breakfast here and one of the highest in protein \u2014 459 kcal for 54g.</b> " +
+  "The only savoury one, and the only one that leaves 1,440 calories for the rest of the day.<br><br>" +
+  "<b>But it is by far the saltiest: about 4.2g, which is 70% of the day\'s 6g ceiling before " +
+  "lunch.</b> Roughly 2.2g bacon, 1.0g cottage cheese, 1.0g wrap. <b>Take it on a low-salt dinner " +
+  "day \u2014 never with the jacket potato, the kedgeree or the coconut rice.</b> Two rashers instead " +
+  "of three saves 0.7g but drops protein to 47.7g, out of the band. Salt here is an estimate.");
 
 FIXED["gingerbread"].recipe = R(
   ["250ml reduced-fat milk \u00b7 40g vanilla protein powder","\u2153 cup rolled oats (~30g)",
@@ -566,14 +614,21 @@ FIXED["cheat-meal"].recipe = R(
   "on whichever night it actually happens and Saturday goes back to a normal dinner.<br><br>" +
   "The day it lands on is reported but not scored, and nothing for it reaches the shopping list.");
 
-FIXED["roast-sunday"].recipe = R(
-  ["The joint \u00b7 roast potatoes \u00b7 carrots, broccoli, cabbage \u00b7 gravy"],
-  ["Cook enough for Monday's lunch and Monday's dinner as well \u2014 three meals out of one oven " +
-   "is what makes the start of the week work."],
-  "<b>Three-quarters of Jon's</b>, off the same plates.",
-  "<b>These are the beef figures, and the joint has never been confirmed.</b> Chicken, pork or " +
-  "lamb move the protein by up to 15g at about the same calories, so Sunday and Monday both shift " +
-  "if it is not beef.");
+const ROASTS = ["roast-beef","roast-pork","roast-chicken","roast-turkey","roast-lamb","roast-ham"];
+ROASTS.forEach(id => {
+  const cut = FIXED[id].name.split("\u2014 ")[1].toLowerCase();
+  FIXED[id].recipe = R(
+    ["The " + cut + " joint \u00b7 200g roast potatoes \u00b7 100g carrots, 100g broccoli, 80g cabbage \u00b7 60ml gravy"],
+    ["Cook enough for Monday as well \u2014 two dinners out of one oven is what makes the week start."],
+    "<b>Three-quarters of Jon's</b>, off the same plates.",
+    (id === "roast-ham"
+      ? "<b>5.8g of salt on one plate, against 6g for the whole day.</b> Ham is cured; that is what " +
+        "curing is. Everything else on Sunday has to be close to salt-free, and Monday's leftovers " +
+        "carry the same load. The other five joints are all 1.5g."
+      : "<b>Accompaniments are the same whatever the joint</b> \u2014 only the 180g of meat moves. " +
+        "Anchored on the costed beef plate.") +
+    "<br><br><b>Monday's dinner follows this choice automatically.</b>");
+});
 
 FIXED["own-thing"].recipe = R(
   [], [], null,
@@ -648,6 +703,16 @@ const recipe = id => DATA.recipes.find(r => r.id === id);
 /* "our own thing" needs to be pickable in the recipe slots too, and swappable back out,
    so it goes in as a real entry with nothing in it rather than a special case. */
 const ZEROPLATE = {kcal:0,protein:0,fibre:0,salt:0,plateGrams:0};
+/* Monday is the same joint reheated, so it follows Sunday rather than holding its own
+   figures. Pick lamb on Sunday and Monday is lamb. */
+/* Monday's "off Sunday's joint" resolves to whichever joint Sunday is actually cooking. */
+const followRoast = id => (id === "sunday-roast" && roastOn("sun")) || id;
+
+function roastOn(dayId){
+  const dd = WEEK && WEEK.days && WEEK.days.find(x => x.id === dayId);
+  const m = dd && dd.dinner;
+  return (m && m.kind === "fixed" && /^roast-/.test(m.id)) ? m.id : null;
+}
 const freeMeal = slot => ({
   id:"own-" + slot, name:"Something else \u2014 our own thing", slot, free:true,
   basePortions:1, timeMinutes:0, tags:["free"], ingredients:[], method:[], tips:[],
@@ -660,8 +725,30 @@ const day = id => WEEK.days.find(d => d.id === id);
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(WEEK)); }catch(e){} }
 function load(){
   try{ const s = localStorage.getItem(KEY);
-       if (s){ const w = JSON.parse(s); if (w && w.id === BASE.id) return w; } }catch(e){}
+       if (s){ const w = JSON.parse(s); if (w && w.id === BASE.id) return heal(w); } }catch(e){}
   return clone(BASE);
+}
+
+/* A saved plan on someone's phone can point at an id that has since been renamed or
+   removed - roast-sunday became six joints, for one. Anything unrecognised falls back
+   to what the week ships with rather than rendering an undefined meal. */
+function heal(w){
+  const base = {}; BASE.days.forEach(d => base[d.id] = d);
+  let fixed = 0;
+  w.days.forEach(d => {
+    const b = base[d.id]; if (!b) return;
+    ["breakfast","lunch","afternoon","dinner"].forEach(sl => {
+      const m = d[sl];
+      const bad =
+        (typeof m === "string" && !FIXED[m]) ||
+        (m && m.kind === "fixed"  && !FIXED[m.id]) ||
+        (m && m.kind === "recipe" && !recipe(m.id)) ||
+        (m && m.kind === "leftover" && !w.days.some(x => x.id === m.from));
+      if (bad){ d[sl] = clone(b[sl]); fixed++; }
+    });
+  });
+  if (fixed) console.warn("healed " + fixed + " stale meal reference(s) in the saved plan");
+  return w;
 }
 
 /* ---------- nutrition ---------- */
@@ -677,7 +764,7 @@ function mealFor(d, slot, who){
   if (!m) return ZERO;
 
   if (m.kind === "fixed"){
-    const id = (who === "cheryl" && m.cheryl) ? m.cheryl : m.id;
+    const id = followRoast((who === "cheryl" && m.cheryl) ? m.cheryl : m.id);
     const f = FIXED[id]; if (!f) return ZERO;
     let v = f[who] || ZERO;
     if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_ADDON);
@@ -876,12 +963,17 @@ function mealCard(d, slot){
     return closeCard(h + fixedRecipe(f, sharesFor(d, slot)), d, slot);
   }
   if (m.kind === "fixed"){
-    const f = FIXED[m.id];
-    h = cardHead(d, slot, label, f.name, macroRow(f.jon, f), cls);
+    const rid = followRoast(m.id), f = FIXED[rid];
+    const nm = (rid !== m.id)
+      ? "Monday, off Sunday's joint \u2014 " + f.name.split("\u2014 ")[1] : f.name;
+    h = cardHead(d, slot, label, nm, macroRow(f.jon, f), cls);
     if (FIXED_FOR_SLOT[slot])
       h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) +
            fixedTail(slot, m.id) + '</select>';
-    h += fixedRecipe(f, sharesFor(d, slot));
+    h += fixedRecipe(FIXED[m.id], sharesFor(d, slot));
+    if (rid !== m.id)
+      h += '<p class="note prep"><b>Following Sunday.</b> Change the joint there and this changes ' +
+           'with it \u2014 it is the same meat, reheated in the gravy.</p>';
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
     return closeCard(h, d, slot);
