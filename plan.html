@@ -161,15 +161,15 @@ const FIXED = {
                    jon:{kcal:531,protein:57.6,fibre:10.8,salt:0.4},
                    cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
   "cherry-berry":  {name:"Cherry berry smoothie",
-    jon:{kcal:544,protein:50.1,fibre:9.6,salt:0.57}, cheryl:{kcal:408,protein:37.6,fibre:7.2,salt:0.43}},
+    jon:{kcal:480,protein:48.3,fibre:9.6,salt:0.57}, cheryl:{kcal:360,protein:36.2,fibre:7.2,salt:0.43}},
   "almond-blueberry": {name:"Almond and blueberry smoothie",
-    jon:{kcal:616,protein:49.3,fibre:9.8,salt:0.85}, cheryl:{kcal:462,protein:37,fibre:7.4,salt:0.64}},
+    jon:{kcal:532,protein:46.6,fibre:9.8,salt:0.85}, cheryl:{kcal:399,protein:35.0,fibre:7.4,salt:0.64}},
   "pb-banana-oats": {name:"Peanut butter, banana and blueberry oats",
-    jon:{kcal:603,protein:29.5,fibre:11.4,salt:0.3}, cheryl:{kcal:452,protein:22.1,fibre:8.6,salt:0.23}},
+    jon:{kcal:658,protein:30.8,fibre:11.4,salt:0.30}, cheryl:{kcal:494,protein:23.1,fibre:8.6,salt:0.22}},
   "gingerbread":  {name:"Gingerbread smoothie",
     jon:{kcal:606,protein:50,fibre:8.8,salt:0.55}, cheryl:{kcal:455,protein:37.5,fibre:6.6,salt:0.41}},
   "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
-    jon:{kcal:459,protein:54,fibre:6,salt:4.2}, cheryl:{kcal:344,protein:40.5,fibre:4.5,salt:3.15}},
+    jon:{kcal:544,protein:57.2,fibre:6.0,salt:4.20}, cheryl:{kcal:408,protein:42.9,fibre:4.5,salt:3.15}},
   "skyr-bowl":    {name:"The Skyr bowl",
                    jon:{kcal:587,protein:61.5,fibre:13.3,salt:0.4},
                    cheryl:{kcal:440,protein:46.1,fibre:10.0,salt:0.30}},
@@ -214,9 +214,9 @@ const FIXED = {
     cheryl:{kcal:559,protein:51.9,fibre:8.3,salt:1.12,plateGrams:540},
     daughter:{kcal:466,protein:43.2,fibre:6.9,salt:0.94,plateGrams:450}},
   "roast-ham": {name:"Sunday roast \u2014 Roast ham", bought:true,
-    jon:{kcal:703,protein:62.5,fibre:11.1,salt:5.82,plateGrams:720},
-    cheryl:{kcal:527,protein:46.9,fibre:8.3,salt:4.37,plateGrams:540},
-    daughter:{kcal:439,protein:39.1,fibre:6.9,salt:3.64,plateGrams:450}},
+    jon:{kcal:703,protein:62.5,fibre:11.1,salt:6.46,plateGrams:720},
+    cheryl:{kcal:527,protein:46.9,fibre:8.3,salt:4.85,plateGrams:540},
+    daughter:{kcal:439,protein:39.1,fibre:6.9,salt:4.04,plateGrams:450}},
   "own-thing":    {name:"Something else \u2014 our own thing",
     jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true},
   "none":         {name:"Nothing",
@@ -455,11 +455,14 @@ FIXED["huel-bottle"].ing     = {cheryl:[I("Huel Black ready-to-drink",1,"cupboar
 /* Sunday cooks the joint; Monday reheats the meat with fresh veg. Two sets of
    accompaniments, one joint. Before the weekend was in the planner the joint was
    outside the shop entirely - with a Saturday-to-Friday week it has to be in it. */
+/* A 1.2kg whole chicken yields about 500g of cooked meat; the weekend needs 1,020g
+   across Sunday and Monday. Bone-in birds need far more raw weight than a rolled joint. */
+const JOINT = {beef:1200, pork:1250, lamb:1350, ham:1400, turkey:1600, chicken:2400};
 ["beef","pork","chicken","turkey","lamb","ham"].forEach(cut => {
   const joint = I(cut === "ham" ? "Gammon or roast ham joint"
                 : cut === "chicken" ? "Whole chicken or crown"
                 : cut.charAt(0).toUpperCase() + cut.slice(1) + " roasting joint",
-                1200, "meat-fish", null, false);
+                JOINT[cut], "meat-fish", null, false);
   joint.assumed = true;
   joint.note = "weight assumed - enough for Sunday's three plates and Monday's dinner";
   FIXED["roast-" + cut].ing = {household:[joint,
