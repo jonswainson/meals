@@ -767,7 +767,8 @@ function heal(w){
         (m && m.kind === "fixed"  && !FIXED[m.id]) ||
         (m && m.kind === "recipe" && !recipe(m.id)) ||
         (m && m.kind === "leftover" && !w.days.some(x => x.id === m.from));
-      if (bad){ d[sl] = clone(b[sl]); fixed++; }
+      if (bad){ d[sl] = clone(b[sl]); fixed++; return; }
+      if (m && m.wasFrom && !w.days.some(x => x.id === m.wasFrom)) delete m.wasFrom;
     });
   });
   if (fixed) console.warn("healed " + fixed + " stale meal reference(s) in the saved plan");
@@ -1007,6 +1008,17 @@ const fixedTail = (slot, sel) => (FIXED_FOR_SLOT[slot] || []).map(id => {
     (f.jon.kcal ? ' \u2014 ' + f.jon.kcal + ' kcal, ' + f.jon.protein + 'g' : '') + '</option>';
 }).join("");
 
+/* A leftover lunch was the one card in the week with no picker at all - the only meal
+   you could not say "we'll do our own thing" about. It gets the full lunch list, and this
+   option to come back, which is why the replacement remembers where it came from. */
+function leftoverOption(from, selected){
+  const src = day(from); if (!src) return "";
+  const dn = src.dinner;
+  const r  = (dn && dn.kind === "recipe") ? recipe(dn.id) : null;
+  return '<option value="__leftover"' + (selected ? " selected" : "") + '>Leftovers \u2014 ' +
+    src.title + "'s " + (r ? r.name.toLowerCase() : "dinner") + '</option>';
+}
+
 const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot && (!r.retired || r.id === sel))
   .sort((a,b) => a.name.localeCompare(b.name))
   .map(r => '<option value="' + r.id + '"' + (r.id===sel?" selected":"") + '>' +
@@ -1087,8 +1099,10 @@ function mealCard(d, slot){
       ? "Monday, off Sunday's joint \u2014 " + f.name.split("\u2014 ")[1] : f.name;
     h = cardHead(d, slot, label, nm, macroRow(f.jon, f), cls);
     if (FIXED_FOR_SLOT[slot])
-      h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) +
-           fixedTail(slot, m.id) + '</select>';
+      h += '<select class="swap" data-slot="' + slot + '"' +
+           (m.wasFrom ? ' data-from="' + m.wasFrom + '"' : '') + '>' +
+           (m.wasFrom ? leftoverOption(m.wasFrom, false) : '') +
+           optionsFor(slot, m.id) + fixedTail(slot, m.id) + '</select>';
     if (!f.free) h += slotGap(slot, f.jon.kcal);
     h += fixedRecipe(FIXED[m.id], sharesFor(d, slot));
     if (rid !== m.id)
@@ -1103,6 +1117,9 @@ function mealCard(d, slot){
     const r = (src && src.dinner.kind === "recipe") ? recipe(src.dinner.id) : null;
     h = cardHead(d, slot, label, r ? src.title + "'s " + r.name.toLowerCase() : "Leftovers",
                  r ? macroRow(leftoverPlate(r, "jon"), {timeMinutes: 0}) : "", cls);
+    h += '<select class="swap" data-slot="' + slot + '" data-from="' + m.from + '">' +
+         leftoverOption(m.from, true) + optionsFor(slot, null) + fixedTail(slot, null) +
+         '</select>';
     if (r){
 
       const lo = r.leftover || {};
@@ -1144,13 +1161,27 @@ function mealCard(d, slot){
 
   const r = recipe(m.id);
   h = cardHead(d, slot, label, r ? r.name : "\u2014", r ? macroRow(r.plates.jon, r) : "", cls);
-  h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) +
-       fixedTail(slot, m.id) + '</select>';
+  h += '<select class="swap" data-slot="' + slot + '"' +
+       (m.wasFrom ? ' data-from="' + m.wasFrom + '"' : '') + '>' +
+       (m.wasFrom ? leftoverOption(m.wasFrom, false) : '') +
+       optionsFor(slot, m.id) + fixedTail(slot, m.id) + '</select>';
   h += '<div class="ctrl"><label>Portions</label><div class="step">' +
        '<button class="dec" data-slot="' + slot + '">−</button><span>' + m.portions + '</span>' +
        '<button class="inc" data-slot="' + slot + '">+</button></div>' +
        (r ? '<label style="margin-left:auto">recipe makes ' + r.basePortions + '</label>' : '') +
        '</div>';
+
+  /* Swapping a leftover lunch away leaves the dinner still cooking for it, and nothing
+     else in the week points back, so the spare portions would go unremarked. */
+  if (slot === "dinner" && r){
+    const eaten = d.diners.filter(p => p !== "daughter" || m.daughter).length;
+    const spare = m.portions - eaten;
+    const claimed = WEEK.days.some(x => x.lunch && x.lunch.kind === "leftover" && x.lunch.from === d.id);
+    if (spare > 0 && !claimed)
+      h += '<p class="note warn"><b>' + spare + ' portion' + (spare > 1 ? 's' : '') +
+           ' spare</b> \u2014 this makes ' + m.portions + ', ' + eaten + ' eaten tonight, and no ' +
+           'lunch this week is taking the rest. Drop the portions or the shopping list buys for them.</p>';
+  }
 
   if (d.diners.includes("daughter") && r && r.plates.daughter){
     h += '<div class="dau"><input type="checkbox" id="dau-' + slot + '"' +
@@ -1358,15 +1389,22 @@ function wire(d){
   document.querySelectorAll("select.swap").forEach(sel => {
     sel.onchange = () => {
       const slot = sel.dataset.slot, id = sel.value;
+      const from = sel.dataset.from || null;
+      if (id === "__leftover"){            /* back to the tub it started as */
+        d[slot] = {kind:"leftover", from};
+        save(); render(); toast("Back to " + (day(from) ? day(from).title + "'s" : "the") + " leftovers");
+        return;
+      }
       if (FIXED[id]){                      /* the roast, the bought ones */
         d[slot] = {kind:"fixed", id};
+        if (from) d[slot].wasFrom = from;
         save(); render(); toast(FIXED[id].name + " in");
         return;
       }
       const r = recipe(id), was = d[slot];
       const m = (was && was.kind === "recipe") ? was
               : {kind:"recipe", id, portions:1, daughter:false, alt:""};
-      m.id = id; d[slot] = m;
+      m.id = id; if (from) m.wasFrom = from; d[slot] = m;
       const diners = d.diners.filter(p => p !== "daughter" || m.daughter).length;
       if (m.portions < diners) m.portions = diners;
       save(); render(); toast(r.name + " in");
