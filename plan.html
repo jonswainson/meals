@@ -165,14 +165,14 @@ const FIXED = {
   "almond-blueberry": {name:"Almond and blueberry smoothie",
     jon:{kcal:532,protein:46.6,fibre:9.8,salt:0.85}, cheryl:{kcal:399,protein:35.0,fibre:7.4,salt:0.64}},
   "pb-banana-oats": {name:"Peanut butter, banana and blueberry oats",
-    jon:{kcal:658,protein:30.8,fibre:11.4,salt:0.30}, cheryl:{kcal:494,protein:23.1,fibre:8.6,salt:0.22}},
+    jon:{kcal:540,protein:31.4,fibre:10.2,salt:0.25}, cheryl:{kcal:405,protein:23.5,fibre:7.6,salt:0.19}},
   "gingerbread":  {name:"Gingerbread smoothie",
-    jon:{kcal:606,protein:50,fibre:8.8,salt:0.55}, cheryl:{kcal:455,protein:37.5,fibre:6.6,salt:0.41}},
+    jon:{kcal:537,protein:50.7,fibre:7.3,salt:0.52}, cheryl:{kcal:403,protein:38.0,fibre:5.5,salt:0.39}},
   "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
     jon:{kcal:544,protein:57.2,fibre:6.0,salt:4.20}, cheryl:{kcal:408,protein:42.9,fibre:4.5,salt:3.15}},
   "skyr-bowl":    {name:"The Skyr bowl",
-                   jon:{kcal:587,protein:61.5,fibre:13.3,salt:0.4},
-                   cheryl:{kcal:440,protein:46.1,fibre:10.0,salt:0.30}},
+                   jon:{kcal:522,protein:59.7,fibre:12.1,salt:0.52},
+                   cheryl:{kcal:392,protein:44.8,fibre:9.1,salt:0.39}},
   "huel-milbona": {name:"Huel Black, then a Milbona on the train",
                    jon:{kcal:615,protein:70,fibre:7.5,salt:1.2},
                    cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
@@ -187,9 +187,9 @@ const FIXED = {
   "huel-bar":     {name:"Huel protein bar",
                    jon:{kcal:205,protein:15,fibre:3,salt:0.4},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
-  "whey-pear":    {name:"20g whey in water + a large pear",
-                   jon:{kcal:151,protein:15.6,fibre:5.9,salt:0.1},
-                   cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+  "whey-pear":    {name:"30g whey in water + a large pear",
+                   jon:{kcal:182,protein:23.6,fibre:5.9,salt:0.13},
+                   cheryl:{kcal:136,protein:17.7,fibre:4.4,salt:0.10}},
   "cheat-meal":   {name:"Cheat meal \u2014 untracked",
     jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0},
     free:true, bought:true, assumedKcal:1200, assumedCheryl:900},
@@ -390,21 +390,21 @@ const share = (list, f) => list.map(i =>
 
 FIXED["bacon-cottage"].ing = {
   jon:[I("Back bacon",75,"meat-fish",250), I("Plain cottage cheese",200,"dairy",300),
-       I("High-protein wraps",1,"bakery",6,false,"wrap"), I("Mushrooms",70,"fresh",250),
+       I("High-protein wraps",60,"bakery",360,false,"g","one wrap, about 60g"), I("Mushrooms",70,"fresh",250),
        I("Tomatoes",70,"fresh")]};
 FIXED["bacon-cottage"].ing.cheryl = share(FIXED["bacon-cottage"].ing.jon, 0.75);
 
 FIXED["gingerbread"].ing = {
-  jon:[I("Semi-skimmed milk",250,"dairy",2000,true,"ml"), I("Whey protein powder",40,"cupboard",1000,true),
-       I("Rolled oats",30,"cupboard",1000,true), I("Maple syrup",14,"cupboard",250,true),
-       I("Whole almonds",30,"cupboard",200,true), I("Ground cinnamon",1.3,"cupboard",45,true),
+  jon:[I("Semi-skimmed milk",250,"dairy",2000,true,"ml"), I("Whey protein powder",44,"cupboard",1000,true),
+       I("Rolled oats",30,"cupboard",1000,true), I("Maple syrup",5,"cupboard",250,true),
+       I("Whole almonds",18,"cupboard",200,true), I("Ground cinnamon",1.3,"cupboard",45,true),
        I("Ground nutmeg",0.5,"cupboard",30,true), I("Ground ginger",0.5,"cupboard",45,true)]};
 FIXED["gingerbread"].ing.cheryl = share(FIXED["gingerbread"].ing.jon, 0.75);
 
 FIXED["pb-banana-oats"].ing = {
   jon:[I("Rolled oats",50,"cupboard",1000,true), I("Whey protein powder",25,"cupboard",1000,true),
-       I("Bananas",120,"fresh"), I("Maple syrup",14,"cupboard",250,true),
-       I("Walnuts",15,"cupboard",200,true), I("Crunchy peanut butter",16,"cupboard",340,true),
+       I("Bananas",90,"fresh"), I("Maple syrup",7,"cupboard",250,true),
+       I("Walnuts",8,"cupboard",200,true), I("Crunchy peanut butter",12,"cupboard",340,true),
        I("Frozen blueberries",40,"frozen",500), I("Ground cinnamon",1,"cupboard",45,true)]};
 FIXED["pb-banana-oats"].ing.cheryl = share(FIXED["pb-banana-oats"].ing.jon, 0.75);
 
@@ -431,8 +431,8 @@ FIXED["berry-oat"].ing.cheryl = share(FIXED["berry-oat"].ing.jon, 0.75);
 FIXED["skyr-bowl"].ing = {
   jon:   [I("Plain Skyr",250,"dairy",1000,true), I("Whey protein powder",32,"cupboard",1000,true),
           I("Semi-skimmed milk",20,"dairy",2000,true,"ml"), I("Frozen raspberries",100,"frozen",500),
-          I("Chia seeds",12,"cupboard",300,true), I("Walnuts",15,"cupboard",200,true),
-          I("Pumpkin seeds",10,"cupboard",200,true), I("Bananas",60,"fresh")]
+          I("Chia seeds",12,"cupboard",300,true), I("Walnuts",8,"cupboard",200,true),
+          I("Pumpkin seeds",10,"cupboard",200,true), I("Bananas",30,"fresh")]
 };
 FIXED["skyr-bowl"].ing.cheryl = share(FIXED["skyr-bowl"].ing.jon, 0.75);
 FIXED["huel-milbona"].ing = {
@@ -444,7 +444,7 @@ FIXED["banana-skyr"].ing     = {jon:[I("Bananas",120,"fresh"), I("Plain Skyr",10
 FIXED["banana-skyr-150"].ing = {jon:[I("Bananas",120,"fresh"), I("Plain Skyr",150,"dairy",1000,true)]};
 FIXED["milbona"].ing         = {jon:[I("Milbona high-protein drink (Lidl)",1,"cupboard",1,false,"bottle")]};
 FIXED["huel-bar"].ing        = {jon:[I("Huel protein bar",1,"cupboard",1,false,"bar")]};
-FIXED["whey-pear"].ing       = {jon:[I("Whey protein powder",20,"cupboard",1000,true), I("Pears",170,"fresh",null,false)]};
+FIXED["whey-pear"].ing       = {jon:[I("Whey protein powder",30,"cupboard",1000,true), I("Pears",170,"fresh",null,false)]};
 FIXED["cottage-rye"].ing   = {jon:[I("Plain cottage cheese",150,"dairy",300),
   I("Rye crispbread",20,"cupboard",200,true), I("Chives",5,"fresh"), I("Lemons",15,"fresh")]};
 FIXED["eggs-dukkah"].ing   = {jon:[I("Eggs",110,"dairy",null,true), I("Plain Skyr",80,"dairy",1000,true),
@@ -483,12 +483,12 @@ const CHERYL_LUNCH_ING = [I("Plain Skyr",75,"dairy",1000,true), I("Bananas",90,"
 const R = (ing, method, cheryl, note) => ({ing, method, cheryl, note});
 FIXED["bacon-cottage"].mix = [["Back bacon (3 rashers)",75],["Cottage cheese",200],
   ["High-protein wrap",60],["Mushrooms",70],["Tomatoes",70]];
-FIXED["gingerbread"].mix = [["Reduced-fat milk",250,"ml"],["Vanilla protein powder",40],
-  ["Rolled oats",30],["Maple syrup",14],["Whole roasted almonds",30],
+FIXED["gingerbread"].mix = [["Reduced-fat milk",250,"ml"],["Vanilla protein powder",44],
+  ["Rolled oats",30],["Maple syrup",5],["Whole roasted almonds",18],
   ["Ground cinnamon",1.3],["Ground nutmeg",0.5],["Ground ginger",0.5]];
 FIXED["pb-banana-oats"].mix = [["Water",250,"ml"],["Rolled oats",50],["Cinnamon, a pinch",1],
   ["Vanilla protein powder",25],["Banana \u2014 weighed, peeled, mashed",120],
-  ["Maple syrup",14],["Walnuts, chopped (about 6)",15],["Crunchy peanut butter",16],
+  ["Maple syrup",7],["Walnuts, chopped (about 6)",8],["Crunchy peanut butter",12],
   ["Blueberries, for the jam",40]];
 FIXED["cherry-berry"].mix = [["Frozen cherries, pitted",75],["Frozen raspberries",75],
   ["Vanilla protein powder",40],["Whey",5],["Rolled oats",27],["Cocoa powder",5],
@@ -499,8 +499,8 @@ FIXED["almond-blueberry"].mix = [["Almond milk",375,"ml"],["Vanilla protein powd
 FIXED["berry-oat"].mix = [["Skyr",200],["Whey",32],["Milk",150,"ml"],
   ["Frozen mixed berries",100],["Porridge oats",30],["Chia seeds",12]];
 FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",20,"ml"],
-  ["Frozen raspberries",100],["Chia seeds",12],["Walnuts or almonds",15],
-  ["Pumpkin seeds",10],["Banana, weighed",60]];
+  ["Frozen raspberries",100],["Chia seeds",12],["Walnuts or almonds",8],
+  ["Pumpkin seeds",10],["Banana, weighed",30]];
 
 FIXED["bacon-cottage"].recipe = R(
   ["3 rashers back bacon, grilled","200g cottage cheese","1 high-protein wrap",
@@ -643,7 +643,7 @@ FIXED["own-thing"].recipe = R(
 
 FIXED["huel-bar"].recipe = R(["One bar, in the bag before you leave"], [], null, null);
 
-FIXED["whey-pear"].recipe = R(["20g whey in water","1 large pear"], [],
+FIXED["whey-pear"].recipe = R(["30g whey in water","1 large pear"], [],
   null, "<b>Weigh the whey into a shaker the night before and put the pear in the bag.</b> The pear is there for the fibre, which is what this day is short of.");
 
 FIXED["ms-bought"].recipe = R(
