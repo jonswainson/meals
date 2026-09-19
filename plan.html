@@ -19,6 +19,9 @@
 
   header{position:sticky;top:0;z-index:20;background:var(--bg);
     border-bottom:1px solid var(--line);padding-top:max(10px,env(safe-area-inset-top))}
+  /* Pinning the one-line summary is worth 137px. Pinning the opened detail is not —
+     while it is open the header scrolls away like anything else. */
+  body.totals-open header{position:static}
   .title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 16px 8px}
   h1{font-size:1.1rem;margin:0;letter-spacing:-.01em}
   .title a{color:var(--accent);font-size:.82rem;text-decoration:none;white-space:nowrap}
@@ -35,8 +38,22 @@
   nav button.amber .dot{display:block}
   nav button.on .dot{background:#fff}
 
-  .totals{background:var(--soft);padding:9px 16px;font-size:.83rem;
-    border-bottom:1px solid var(--line)}
+  /* One line pinned; the detail is a tap away. The header was eating half the
+     screen and the recipes are what you actually stand at the hob reading. */
+  .totals{background:var(--soft);font-size:.83rem;border-bottom:1px solid var(--line)}
+  .totals>summary{display:block;list-style:none;position:relative;cursor:pointer;
+    padding:9px 36px 9px 16px;-webkit-tap-highlight-color:transparent}
+  .totals>summary::-webkit-details-marker{display:none}
+  .totals>summary::after{content:"";position:absolute;right:17px;top:50%;
+    width:7px;height:7px;margin-top:-6px;border-right:2px solid var(--muted);
+    border-bottom:2px solid var(--muted);transform:rotate(45deg)}
+  .totals[open]>summary::after{transform:rotate(-135deg);margin-top:-2px}
+  .tsum{display:flex;justify-content:space-between;gap:10px;align-items:baseline;
+    font-variant-numeric:tabular-nums}
+  .tsum .sep{color:var(--muted)}
+  .tsum .flag{display:inline-block;width:6px;height:6px;border-radius:50%;
+    background:var(--warn);margin-left:7px;vertical-align:.1em}
+  .tbody{padding:0 16px 10px}
   .wk{margin-top:7px;padding-top:7px;border-top:1px solid var(--line)}
   .trow{display:flex;justify-content:space-between;gap:10px;padding:3px 0;
     font-variant-numeric:tabular-nums;align-items:baseline}
@@ -143,7 +160,7 @@
     <a href="./">Shopping list →</a>
   </div>
   <nav id="tabs"></nav>
-  <div class="totals" id="totals"></div>
+  <details class="totals" id="totals"></details>
 </header>
 
 <div id="day"></div>
@@ -887,47 +904,70 @@ function renderTabs(){
 
 function renderTotals(d){
   const el = $("#totals");
+  const eating = ["jon","cheryl"].filter(w => d.diners.includes(w));
+  const wrap = (sum, body) =>
+    '<summary><span class="tsum"><span class="who">' + d.title + '</span>' +
+    '<span>' + sum + '</span></span></summary>' +
+    (body ? '<div class="tbody">' + body + '</div>' : '');
+
   if (d.free){
-    el.innerHTML = '<div class="trow"><span class="who">Saturday</span><span class="ok">Not counted</span></div>';
+    el.innerHTML = wrap('<span class="ok">Not counted</span>', "");
+    el.open = false;
+    document.body.classList.remove("totals-open");
     return;
   }
-  let h = "";
-  const eating = ["jon","cheryl"].filter(w => d.diners.includes(w));
+
+  let sum = "", body = "", flag = false;
+
   eating.forEach(who => {
     const {v, problems} = status(d, who);
-    h += '<div class="trow"><span class="who">' + (who==="jon"?"Jon":"Cheryl") + '</span>' +
-      '<span class="' + (problems.length?"amber":"ok") + '"><b>' + Math.round(v.kcal) +
-      '</b> kcal · <b>' + n1(v.protein) + 'g</b> protein · ' + n1(v.fibre) + 'g fibre · ' +
-      n1(v.salt) + 'g salt</span></div>';
+    if (problems.length) flag = true;
+    const name = who === "jon" ? "Jon" : "Cheryl";
+    sum += (sum ? ' <span class="sep">\u00b7</span> ' : "") +
+      '<span class="' + (problems.length ? "amber" : "ok") + '">' + name +
+      ' <b>' + Math.round(v.kcal).toLocaleString() + '</b></span>';
+    body += '<div class="trow"><span class="who">' + name + '</span>' +
+      '<span class="' + (problems.length ? "amber" : "ok") + '"><b>' +
+      Math.round(v.kcal).toLocaleString() + '</b> kcal \u00b7 <b>' + n1(v.protein) + 'g</b> protein \u00b7 ' + n1(v.fibre) +
+      'g fibre \u00b7 ' + n1(v.salt) + 'g salt</span></div>';
   });
   eating.forEach(who => {
     const line = fixLine(who, status(d, who).problems);
-    if (line) h += '<p class="fix">' + line + '</p>';
+    if (line) body += '<p class="fix">' + line + '</p>';
   });
+
   /* the week, which is the number that actually decides whether this works */
-  h += '<div class="wk">';
+  body += '<div class="wk">';
   eating.forEach(who => {
     const w = weekTotal(who), t = TARGETS[who];
     const per = Math.round(w.total / w.days), gap = per - t.kcal;
-    h += '<div class="trow"><span class="who">' + (who === "jon" ? "Jon" : "Cheryl") +
+    if (Math.abs(gap) > t.band) flag = true;
+    body += '<div class="trow"><span class="who">' + (who === "jon" ? "Jon" : "Cheryl") +
       ", the week</span><span class=\"" + (Math.abs(gap) > t.band ? "amber" : "ok") + '"><b>' +
       w.total.toLocaleString() + '</b> kcal over ' + w.days + ' days \u00b7 <b>' + per +
       '</b> a day \u00b7 ' + (gap > 0 ? "+" : "") + gap + ' vs ' + t.kcal + '</span></div>';
   });
   const anyAssumed = eating.some(who => weekTotal(who).assumed > 0);
   if (anyAssumed)
-    h += '<p class="fix">Includes an assumed <b>1,200 kcal</b> for the cheat meal (900 for Cheryl). ' +
+    body += '<p class="fix">Includes an assumed <b>1,200 kcal</b> for the cheat meal (900 for Cheryl). ' +
          'Nobody has measured it \u2014 but leaving it out of the week made the plan look like a ' +
          'deficit it is not.</p>';
-  h += '</div>';
+  body += '</div>';
 
   const free = freeSlots(d);
   if (free.length)
-    h += '<p class="fix">' + free.map(f => f === "afternoon" ? "2:30" : f).join(" and ") +
+    body += '<p class="fix">' + free.map(f => f === "afternoon" ? "2:30" : f).join(" and ") +
          ' is your own, so calories and protein are not scored. <b>Salt still is</b> \u2014 an ' +
          'untracked meal can only add to it.</p>';
-  el.innerHTML = h;
+
+  if (flag) sum += '<span class="flag"></span>';
+  el.innerHTML = wrap(sum, body);
+  el.open = TOTALS_OPEN;
+  document.body.classList.toggle("totals-open", TOTALS_OPEN);
 }
+
+/* Collapsed by default and remembered, because it is pinned to the top of every day. */
+let TOTALS_OPEN = localStorage.getItem("totals-open") === "1";
 
 /* Any combination should land near 1,900, so each slot has a target and every card
    says where it sits against it. Set in recipes.json as slotTargets. */
@@ -1426,6 +1466,13 @@ $("#build").onclick = () => {
   toast(list.items.length + " items — opening the list");
   setTimeout(() => { location.href = "./?w=" + WEEK.id; }, 650);
 };
+
+/* The details element survives re-render, so only the reload case needs storing. */
+$("#totals").addEventListener("toggle", e => {
+  TOTALS_OPEN = e.target.open;
+  document.body.classList.toggle("totals-open", TOTALS_OPEN);
+  try { localStorage.setItem("totals-open", TOTALS_OPEN ? "1" : "0"); } catch(err){}
+});
 
 $("#reset").onclick = () => {
   if (!confirm("Put the week back to the original plan? Swaps and portions are lost.")) return;
