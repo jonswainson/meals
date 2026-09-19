@@ -159,6 +159,10 @@ const FIXED = {
   "berry-oat":    {name:"Berry and oat smoothie",
                    jon:{kcal:531,protein:57.6,fibre:10.8,salt:0.4},
                    cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
+  "cherry-berry":  {name:"Cherry berry smoothie",
+    jon:{kcal:635,protein:47.7,fibre:12,salt:0.55}, cheryl:{kcal:476,protein:35.8,fibre:9,salt:0.41}},
+  "almond-blueberry": {name:"Almond and blueberry smoothie",
+    jon:{kcal:618,protein:34.8,fibre:11.3,salt:0.7}, cheryl:{kcal:464,protein:26.1,fibre:8.5,salt:0.53}},
   "skyr-bowl":    {name:"The Skyr bowl",
                    jon:{kcal:587,protein:61.5,fibre:13.3,salt:0.4},
                    cheryl:{kcal:440,protein:46.1,fibre:10.0,salt:0.30}},
@@ -203,7 +207,7 @@ const FIXED = {
 };
 
 /* how long the fixed items take */
-Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
+Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"huel-milbona":0,"banana-skyr":1,
   "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"ms-bought":0,
   "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
@@ -214,7 +218,7 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"huel-milbona":0,"banana-skyr":1,
    from the macros when the feed moved, which ran her ~38 kcal light every day. */
 /* Breakfasts and afternoon feeds were the only slots with no way to change them. */
 const SLOT_OPTIONS = {
-  breakfast: ["berry-oat","skyr-bowl","huel-milbona","huel-bottle"],
+  breakfast: ["berry-oat","cherry-berry","almond-blueberry","skyr-bowl","huel-milbona","huel-bottle"],
   afternoon: ["banana-skyr","banana-skyr-150","cottage-rye","eggs-dukkah","biltong-apple",
               "huel-bar","whey-pear","prawns-pear","none"]
 };
@@ -321,6 +325,19 @@ const I = (item,grams,aisle,packSize,staple,unit) =>
 const share = (list, f) => list.map(i =>
   Object.assign({}, i, {grams: Math.round(i.grams * f * 10) / 10}));
 
+FIXED["cherry-berry"].ing = {
+  jon:[I("Frozen cherries",75,"frozen",500), I("Frozen raspberries",75,"frozen",500),
+       I("Whey protein powder",40,"cupboard",1000,true), I("Rolled oats",27,"cupboard",1000,true),
+       I("Cocoa powder",5,"cupboard",250,true), I("Semi-skimmed milk",250,"dairy",2000,true,"ml"),
+       I("Dark chocolate, 70%",20,"cupboard",100,true)]};
+FIXED["cherry-berry"].ing.cheryl = share(FIXED["cherry-berry"].ing.jon, 0.75);
+
+FIXED["almond-blueberry"].ing = {
+  jon:[I("Almond milk",375,"dairy",1000,true,"ml"), I("Whey protein powder",30,"cupboard",1000,true),
+       I("Rolled oats",18,"cupboard",1000,true), I("Bananas",120,"fresh"),
+       I("Frozen blueberries",80,"frozen",500), I("Almond butter",24,"cupboard",250,true)]};
+FIXED["almond-blueberry"].ing.cheryl = share(FIXED["almond-blueberry"].ing.jon, 0.75);
+
 FIXED["berry-oat"].ing = {
   jon:   [I("Plain Skyr",200,"dairy",1000,true), I("Whey protein powder",32,"cupboard",1000,true),
           I("Semi-skimmed milk",150,"dairy",2000,true,"ml"), I("Frozen mixed berries",100,"frozen",500),
@@ -361,11 +378,40 @@ const CHERYL_LUNCH_ING = [I("Plain Skyr",75,"dairy",1000,true), I("Bananas",90,"
 
 /* ---------- how to make the fixed items ---------- */
 const R = (ing, method, cheryl, note) => ({ing, method, cheryl, note});
+FIXED["cherry-berry"].mix = [["Frozen cherries, pitted",75],["Frozen raspberries",75],
+  ["Vanilla protein powder",40],["Rolled oats",27],["Cocoa powder",5],
+  ["Reduced-fat milk",250,"ml"],["70% dark chocolate, shaved",20]];
+FIXED["almond-blueberry"].mix = [["Almond milk",375,"ml"],["Vanilla protein powder",30],
+  ["Rolled oats",18],["Banana, frozen \u2014 weighed, peeled",120],
+  ["Frozen blueberries",80],["Almond butter",24]];
 FIXED["berry-oat"].mix = [["Skyr",200],["Whey",32],["Milk",150,"ml"],
   ["Frozen mixed berries",100],["Porridge oats",30],["Chia seeds",12]];
 FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",20,"ml"],
   ["Frozen raspberries",100],["Chia seeds",12],["Walnuts or almonds",15],
   ["Pumpkin seeds",10],["Banana, weighed",60]];
+
+FIXED["cherry-berry"].recipe = R(
+  ["75g frozen cherries, pitted \u00b7 75g frozen raspberries","40g vanilla protein powder",
+   "3 tbsp rolled oats (~27g) \u00b7 2 tsp cocoa (~5g)","250ml reduced-fat milk \u00b7 4\u20135 ice cubes",
+   "1\u00bd tbsp 70% dark chocolate (~20g), shaved, on top"],
+  ["Everything in and blend on high until smooth. A little water if your powder is thick.",
+   "Chocolate shaved over at the end, not blended \u2014 blended it just disappears."],
+  null,
+  "<b>47.7g of protein, a shade under the 50\u201358g breakfast band.</b> Centr's own figure, not " +
+  "re-costed here. A 30g Skyr alongside closes it.<br><br><b>36.4g of sugar</b>, the highest of any " +
+  "breakfast here \u2014 mostly fruit and milk, but about 10g is the chocolate. Salt is an estimate.");
+
+FIXED["almond-blueberry"].recipe = R(
+  ["375ml almond milk \u00b7 30g vanilla protein powder","2 tbsp rolled oats (~18g)",
+   "<b>1 banana, frozen \u2014 weighed at 120g peeled</b>","80g frozen blueberries",
+   "1\u00bd tbsp almond butter (~24g)"],
+  ["Everything in and blend on high. Serve straight away.",
+   "A little water if your powder is thick."],
+  null,
+  "<b>34.8g of protein \u2014 15g under the 50\u201358g breakfast band, and the lowest here by a " +
+  "distance.</b> On its own this is not a breakfast for Jon; with 200g of Skyr alongside it is.<br><br>" +
+  "<b>Centr says \"1 medium banana\", unweighed.</b> That is the documented 196g trap by name \u2014 " +
+  "his last one was 196g, which would put this at about 690 kcal. Weighed at 120g here. Salt is an estimate.");
 
 FIXED["berry-oat"].recipe = R(
   ["200g Skyr · 32g whey · 150ml milk","100g frozen mixed berries","30g porridge oats · 12g chia seeds"],
