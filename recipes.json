@@ -1,5 +1,5 @@
 {
- "version": "2026-09-19b",
+ "version": "2026-09-19c",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -4217,10 +4217,6 @@
    ],
    "tips": [
     {
-     "tone": "hot",
-     "text": "Roast the chicken yourself. Pre-packed cooked chicken takes this box from 1.03g of salt to 2.07g and stops it being the low-salt lunch it is."
-    },
-    {
      "tone": "go",
      "text": "The 6g of olive oil is not optional and the efficiency test must not be allowed near it — without fat the dip slides off the carrot and you taste nothing."
     },
@@ -5365,10 +5361,6 @@
     "Tenderstem into the pea water for the last 3 minutes."
    ],
    "tips": [
-    {
-     "tone": "hot",
-     "text": "Unsmoked haddock only. Smoked runs 1.9–3.05g of salt per 100g, so a 200g portion is 3.8–6.1g — the whole day's ceiling in one dinner."
-    },
     {
      "tone": "go",
      "text": "The peas are crushed into the potatoes, not served beside them. A vegetable on the side of a teenager's plate is optional; a vegetable inside the starch is dinner."
