@@ -187,6 +187,12 @@ const FIXED = {
   "whey-pear":    {name:"20g whey in water + a large pear",
                    jon:{kcal:151,protein:15.6,fibre:5.9,salt:0.1},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+  "cheat-meal":   {name:"Cheat meal \u2014 untracked",
+    jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true, bought:true},
+  "roast-sunday": {name:"Sunday roast, cooked", bought:true,
+    jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.5,plateGrams:720},
+    cheryl:{kcal:524,protein:53.1,fibre:8.3,salt:1.12,plateGrams:540},
+    daughter:{kcal:531,protein:43.2,fibre:6.3,salt:1,plateGrams:450}},
   "own-thing":    {name:"Something else \u2014 our own thing",
     jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true},
   "none":         {name:"Nothing",
@@ -216,7 +222,7 @@ const FIXED = {
 
 /* how long the fixed items take */
 Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":15,"gingerbread":5,"milbona":0,"huel-milbona":0,"banana-skyr":1,
-  "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"own-thing":0,"ms-bought":0,
+  "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"own-thing":0,"cheat-meal":0,"roast-sunday":90,"ms-bought":0,
   "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
 
@@ -232,7 +238,8 @@ const SMOOTHIES = ["berry-oat","cherry-berry","gingerbread","almond-blueberry"];
 
 /* Fixed lunches and dinners - the roast, the bought ones - had no picker at all, so the
    roast night was the one night you could not say "we'll do our own thing". */
-const FIXED_FOR_SLOT = {lunch:["ms-bought","huel-bottle"], dinner:["sunday-roast","work-pizza"]};
+const FIXED_FOR_SLOT = {lunch:["ms-bought","huel-bottle"],
+                        dinner:["roast-sunday","sunday-roast","work-pizza","cheat-meal"]};
 
 const SLOT_OPTIONS = {
   breakfast: ["berry-oat","cherry-berry","gingerbread","almond-blueberry","pb-banana-oats","skyr-bowl",
@@ -251,85 +258,98 @@ const TARGETS = {
 
 /* ---------- the week ---------- */
 const DEFAULT_WEEK = {
-  id:"2026-09-14",
-  label:"14–18 Sept",
+  id:"2026-09-19",
+  label:"19\u201325 Sept",
   days:[
-    {id:"mon",label:"Mon",title:"Monday",tags:"Home · trains · leg day",
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Home \u00b7 cheat meal tonight",
      diners:["jon","cheryl","daughter"],
-     breakfast:"berry-oat", afternoon:"banana-skyr",
+     breakfast:"pb-banana-oats", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"chicken-butter-bean-tub",portions:2,daughter:false,alt:""},
-     dinner:{kind:"fixed",id:"sunday-roast"}},
-
-    {id:"tue",label:"Tue",title:"Tuesday",tags:"Howden · your daughter out",
-     diners:["jon","cheryl"],
-     breakfast:"skyr-bowl", afternoon:"huel-bar",
-     lunch:{kind:"recipe",id:"tuna-butter-bean-fennel-tub",portions:2,daughter:false,alt:""},
-     dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:false,alt:""}},
-
-    {id:"wed",label:"Wed",title:"Wednesday",tags:"London · out at 05:15",
-     diners:["jon","cheryl","daughter"],
-     breakfast:"huel-milbona", afternoon:"whey-pear",
-     lunch:{kind:"fixed",id:"ms-bought",cheryl:"huel-bottle"},
-     dinner:{kind:"recipe",id:"baked-meatballs-ciabatta",portions:5,daughter:true,alt:""}},
-
-    {id:"thu",label:"Thu",title:"Thursday",tags:"Home · trains",
+     dinner:{kind:"fixed",id:"cheat-meal"}},
+    {id:"sun",label:"Sun",title:"Sunday",tags:"Home \u00b7 roast day",
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
-     lunch:{kind:"leftover",from:"tue"},
-     dinner:{kind:"recipe",id:"honey-glazed-chicken-wedges",portions:3,daughter:true,alt:""}},
-
-    {id:"fri",label:"Fri",title:"Friday",tags:"Home · trains · leg day",
-     diners:["jon","cheryl","daughter"],
-     breakfast:"berry-oat", afternoon:"banana-skyr-150",
-     lunch:{kind:"leftover",from:"wed"},
-     dinner:{kind:"recipe",id:"coconut-chicken-rice",portions:3,daughter:true,alt:""}},
-
-    {id:"sat",label:"Sat",free:true}
-  ]
-};
-
-
-const WEEK_0921 = {
-  id:"2026-09-21",
-  label:"21–25 Sept",
-  days:[
-    {id:"mon",label:"Mon",title:"Monday",tags:"Home · trains · leg day",
+     lunch:{kind:"recipe",id:"tuna-butter-bean-fennel-tub",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"roast-sunday"}},
+    {id:"mon",label:"Mon",title:"Monday",tags:"Home \u00b7 trains \u00b7 leg day",
      diners:["jon","cheryl","daughter"],
      breakfast:"berry-oat", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"prawn-butter-bean-salad",portions:2,daughter:false,alt:""},
      dinner:{kind:"fixed",id:"sunday-roast"}},
-    {id:"tue",label:"Tue",title:"Tuesday",tags:"London · 05:15–22:15 · Jon only",
+    {id:"tue",label:"Tue",title:"Tuesday",tags:"London \u00b7 05:15\u201322:15 \u00b7 Jon only",
      diners:["jon"],
      breakfast:"huel-milbona", afternoon:"prawns-pear",
      lunch:{kind:"fixed",id:"ms-bought"},
      dinner:{kind:"fixed",id:"work-pizza"}},
-    {id:"wed",label:"Wed",title:"Wednesday",tags:"Home · rest day",
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Home \u00b7 rest day",
      diners:["jon","cheryl","daughter"],
-     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     breakfast:"berry-oat", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
      dinner:{kind:"recipe",id:"piri-piri-chicken-crushed-potato",portions:5,daughter:true,alt:""}},
-    {id:"thu",label:"Thu",title:"Thursday",tags:"Home · trains",
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Home \u00b7 trains",
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
      lunch:{kind:"leftover",from:"wed"},
      dinner:{kind:"recipe",id:"crumbed-cod-crushed-potato",portions:5,daughter:true,alt:""}},
-    {id:"fri",label:"Fri",title:"Friday",tags:"Home · trains · leg day · measurement morning",
+    {id:"fri",label:"Fri",title:"Friday",tags:"Home \u00b7 trains \u00b7 leg day \u00b7 measurement morning \u00b7 SHOP TONIGHT",
      diners:["jon","cheryl","daughter"],
      breakfast:"berry-oat", afternoon:"banana-skyr-150",
      lunch:{kind:"leftover",from:"thu"},
-     dinner:{kind:"recipe",id:"loaded-jacket-potatoes",portions:3,daughter:true,alt:""}},
-    {id:"sat",label:"Sat",free:true}
+     dinner:{kind:"recipe",id:"loaded-jacket-potatoes",portions:3,daughter:true,alt:""}}
   ]
 };
 
-/* This week stays live until Friday's cooking is done; next week takes over on
-   Saturday, which is when the shop happens. Either is reachable from the header. */
-const WEEKS = [DEFAULT_WEEK, WEEK_0921];
+const WEEK_0926 = {
+  id:"2026-09-26",
+  label:"26 Sept \u2013 2 Oct",
+  days:[
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Home \u00b7 cheat meal tonight",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"pb-banana-oats", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"tuna-chickpea-salad",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"cheat-meal"}},
+    {id:"sun",label:"Sun",title:"Sunday",tags:"Home \u00b7 roast day",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"mackerel-beetroot-barley-tub",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"roast-sunday"}},
+    {id:"mon",label:"Mon",title:"Monday",tags:"Home \u00b7 trains \u00b7 leg day",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"prawn-butter-bean-salad",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"sunday-roast"}},
+    {id:"tue",label:"Tue",title:"Tuesday",tags:"Home \u00b7 rest day",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"chicken-butter-bean-tub",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:true,alt:""}},
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Home \u00b7 trains",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"tortilla-chicken-piquillo",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"baked-meatballs-ciabatta",portions:5,daughter:true,alt:""}},
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Home \u00b7 trains",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"leftover",from:"tue"},
+     dinner:{kind:"recipe",id:"honey-glazed-chicken-wedges",portions:4,daughter:true,alt:""}},
+    {id:"fri",label:"Fri",title:"Friday",tags:"Home \u00b7 trains \u00b7 leg day \u00b7 SHOP TONIGHT",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr-150",
+     lunch:{kind:"leftover",from:"wed"},
+     dinner:{kind:"recipe",id:"baked-salmon-lentils",portions:3,daughter:true,alt:""}}
+  ]
+};
+
+/* The week runs Saturday to Friday, because the shop is Friday evening: the food
+   lands Friday night and the first meal out of it is Saturday breakfast. Next week
+   takes over on its own Saturday. Either is reachable from the header. */
+const WEEKS = [DEFAULT_WEEK, WEEK_0926];
 function pickWeek(){
   let i;
   try { const c = localStorage.getItem("week-choice");
         if (c !== null) i = WEEKS.findIndex(w => w.id === c); } catch(e){}
-  if (i === undefined || i < 0) i = (Date.now() >= new Date(2026,8,19).getTime()) ? 1 : 0;
+  if (i === undefined || i < 0) i = (Date.now() >= new Date(2026,8,26).getTime()) ? 1 : 0;
   return WEEKS[i];
 }
 
@@ -401,6 +421,18 @@ FIXED["eggs-dukkah"].ing   = {jon:[I("Eggs",110,"dairy",null,true), I("Plain Sky
 FIXED["biltong-apple"].ing = {jon:[I("Biltong",25,"cupboard",70), I("Apples",150,"fresh"),
   I("Walnuts",10,"cupboard",200,true)]};
 FIXED["huel-bottle"].ing     = {cheryl:[I("Huel Black ready-to-drink",1,"cupboard",1,true,"bottle")]};
+/* Sunday cooks the joint; Monday reheats the meat with fresh veg. Two sets of
+   accompaniments, one joint. Before the weekend was in the planner the joint was
+   outside the shop entirely - with a Saturday-to-Friday week it has to be in it. */
+FIXED["roast-sunday"].ing    = {household:[
+  I("Roasting joint",1200,"meat-fish",null,false),
+  I("Potatoes, floury (Maris Piper or King Edward)",700,"fresh",2500),
+  I("Carrots",300,"fresh",500), I("Broccoli",300,"fresh"), I("Savoy cabbage",250,"fresh"),
+  I("Gravy granules",30,"cupboard",200,true)]};
+FIXED["roast-sunday"].ing.household[0].assumed = true;
+FIXED["roast-sunday"].ing.household[0].note =
+  "assumed beef and assumed weight - enough for Sunday's three plates and Monday's dinner";
+
 FIXED["sunday-roast"].ing    = {household:[
   I("Potatoes, floury (Maris Piper or King Edward)",530,"fresh",2500),
   I("Carrots",250,"fresh",500), I("Broccoli",250,"fresh"), I("Savoy cabbage",200,"fresh"),
@@ -527,6 +559,21 @@ FIXED["milbona"].recipe = R(
   "Nothing to make and nothing to carry cold.<br><br>" +
   "<b>If it goes mid-morning it is the 2:30 feed MOVED, not a fifth one.</b> That swap is " +
   "already sanctioned \u2014 it is what Wednesday's 19:30 prawns are. Four feeds, wherever they land.");
+
+FIXED["cheat-meal"].recipe = R(
+  [], [], null,
+  "<b>One a week, and nothing about it is counted.</b> Usually Saturday, but it moves \u2014 put it " +
+  "on whichever night it actually happens and Saturday goes back to a normal dinner.<br><br>" +
+  "The day it lands on is reported but not scored, and nothing for it reaches the shopping list.");
+
+FIXED["roast-sunday"].recipe = R(
+  ["The joint \u00b7 roast potatoes \u00b7 carrots, broccoli, cabbage \u00b7 gravy"],
+  ["Cook enough for Monday's lunch and Monday's dinner as well \u2014 three meals out of one oven " +
+   "is what makes the start of the week work."],
+  "<b>Three-quarters of Jon's</b>, off the same plates.",
+  "<b>These are the beef figures, and the joint has never been confirmed.</b> Chicken, pork or " +
+  "lamb move the protein by up to 15g at about the same calories, so Sunday and Monday both shift " +
+  "if it is not beef.");
 
 FIXED["own-thing"].recipe = R(
   [], [], null,
@@ -1222,11 +1269,12 @@ fetch("recipes.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
   DATA.recipes = DATA.recipes.concat([freeMeal("lunch"), freeMeal("dinner")]);
   BASE = pickWeek(); KEY = "plan-" + BASE.id; WEEK = load();
 
-  /* "today" only means something on the week that actually contains today */
+  /* "today" only means something on the week that actually contains today, and the
+     week no longer starts on Monday, so find the day by its id rather than by index */
   const start = new Date(BASE.id + "T00:00:00");
   const days  = Math.floor((Date.now() - start.getTime()) / 86400000);
-  const wd    = new Date().getDay();
-  TODAY = (days >= 0 && days < 6 && wd >= 1 && wd <= 6) ? wd - 1 : -1;
+  const ID    = ["sun","mon","tue","wed","thu","fri","sat"][new Date().getDay()];
+  TODAY = (days >= 0 && days < 7) ? WEEK.days.findIndex(x => x.id === ID) : -1;
   current = TODAY < 0 ? 0 : TODAY;
 
   const other = WEEKS[WEEKS.indexOf(BASE) === 0 ? 1 : 0];
