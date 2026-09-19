@@ -1,5 +1,5 @@
 {
- "version": "2026-09-19k",
+ "version": "2026-09-19m",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -152,27 +152,36 @@
      "packUnit": "g",
      "staple": true,
      "note": "to serve"
+    },
+    {
+     "item": "Pumpkin seeds",
+     "grams": 50,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they pop"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 602,
-     "protein": 65.1,
-     "fibre": 14.7,
+     "kcal": 658,
+     "protein": 68.1,
+     "fibre": 15.3,
      "salt": 1.66,
      "plateGrams": 624
     },
     "cheryl": {
-     "kcal": 452,
-     "protein": 48.8,
-     "fibre": 11.0,
+     "kcal": 494,
+     "protein": 51.0,
+     "fibre": 11.4,
      "salt": 1.2,
      "plateGrams": 468
     },
     "daughter": {
-     "kcal": 323,
-     "protein": 34.9,
-     "fibre": 7.9,
+     "kcal": 353,
+     "protein": 36.5,
+     "fibre": 8.2,
      "salt": 0.9,
      "plateGrams": 335,
      "note": "corpus describes her plate but gives no figures",
@@ -206,7 +215,8 @@
     "Get the pan properly hot before anything goes in, then the chicken in a single layer — <b>don't crowd it or it steams instead of colouring</b>. At this quantity that is two batches, 6 minutes each.",
     "Peppers and onion in for 4–5 minutes, keeping some bite.",
     "Spices in for the last minute <b>with a splash of water so they toast rather than burn</b>, then the limes squeezed over the pan.",
-    "<b>Lime squeezed over off the heat, at the table.</b> Lime cooked into the pan is lime you cannot taste - the aromatics go with the steam."
+    "<b>Lime squeezed over off the heat, at the table.</b> Lime cooked into the pan is lime you cannot taste - the aromatics go with the steam.",
+    "<b>Toasted pumpkin seeds over at the table.</b> Everything else in a fajita is soft or wet."
    ],
    "tips": [
     {
@@ -413,27 +423,36 @@
      "packSize": 200,
      "packUnit": "g",
      "staple": false
+    },
+    {
+     "item": "Wholemeal breadcrumbs",
+     "grams": 60,
+     "aisle": "bakery",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "pangrattato: fried in a little oil until hard and deep brown"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 706,
-     "protein": 55.9,
-     "fibre": 12.8,
+     "kcal": 748,
+     "protein": 57.3,
+     "fibre": 13.6,
      "salt": 1.37,
      "plateGrams": 677
     },
     "cheryl": {
-     "kcal": 530,
-     "protein": 41.9,
-     "fibre": 9.6,
+     "kcal": 562,
+     "protein": 43.0,
+     "fibre": 10.2,
      "salt": 1.0,
      "plateGrams": 508
     },
     "daughter": {
-     "kcal": 590,
-     "protein": 46.7,
-     "fibre": 10.7,
+     "kcal": 625,
+     "protein": 47.9,
+     "fibre": 11.4,
      "salt": 1.1,
      "plateGrams": 566,
      "note": "0.8 of a portion with 75g dry pasta",
@@ -467,7 +486,8 @@
     "Onion and grated carrot into the oil for 6 minutes, then the garlic for one minute more.",
     "Mince in and <b>browned properly — 6 or 7 minutes without constant stirring</b>. Colour is flavour.",
     "Purée in and cooked out for a minute, then the tomatoes, the rinsed dry lentils, the herbs, the Worcestershire sauce and the water.",
-    "Simmer 25–30 minutes, stirring now and then — <b>the lentils catch if left alone</b>. Weigh {{3}}g of salt into the whole pan at the end rather than seasoning by eye."
+    "Simmer 25–30 minutes, stirring now and then — <b>the lentils catch if left alone</b>. Weigh {{3}}g of salt into the whole pan at the end rather than seasoning by eye.",
+    "<b>Pangrattato over each bowl.</b> Breadcrumbs fried hard in a little oil - the poor man's parmesan, and the only thing in a bolognese with any texture."
    ],
    "tips": [
     {
@@ -826,28 +846,37 @@
      "packUnit": "g",
      "staple": false,
      "note": "1 lemon"
+    },
+    {
+     "item": "Flaked almonds",
+     "grams": 40,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they colour"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 526,
-     "protein": 51.8,
-     "fibre": 10.8,
+     "kcal": 587,
+     "protein": 53.9,
+     "fibre": 12.1,
      "salt": 1.25,
      "plateGrams": 480,
      "note": "one fifth of the tray"
     },
     "cheryl": {
-     "kcal": 394,
-     "protein": 38.8,
-     "fibre": 8.1,
+     "kcal": 440,
+     "protein": 40.4,
+     "fibre": 9.0,
      "salt": 0.9,
      "plateGrams": 360
     },
     "daughter": {
-     "kcal": 422,
-     "protein": 41.5,
-     "fibre": 8.7,
+     "kcal": 471,
+     "protein": 43.2,
+     "fibre": 9.7,
      "salt": 1.0,
      "plateGrams": 385,
      "note": "chickpeas left on the tray - she refuses visible pulses. No starch in this dish, so her plate is light; add bread or potatoes for her",
@@ -880,7 +909,8 @@
    "method": [
     "Oven to 200°C. Toss everything except the spinach and the lemon across <b>two roasting trays — two isn't optional, nothing browns in a crowded one</b>.",
     "25–30 minutes, swapping the trays halfway.",
-    "Stir the spinach through the hot tray to wilt it, then the lemon over."
+    "Stir the spinach through the hot tray to wilt it, then the lemon over.",
+    "<b>Flaked almonds toasted dry and scattered over.</b> Harissa and chickpeas are both soft; almonds are what North Africa already does about that."
    ],
    "tips": [
     {
@@ -1262,28 +1292,37 @@
      "packSize": 750,
      "packUnit": "g",
      "staple": true
+    },
+    {
+     "item": "Flaked almonds",
+     "grams": 50,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they colour"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 524,
-     "protein": 44,
-     "fibre": 6.4,
+     "kcal": 585,
+     "protein": 46.1,
+     "fibre": 7.7,
      "salt": 0.93,
      "plateGrams": 400,
      "note": "raw sum 425g; salmon loses ~20% in the oven"
     },
     "cheryl": {
-     "kcal": 393,
-     "protein": 33.0,
-     "fibre": 4.8,
+     "kcal": 439,
+     "protein": 34.6,
+     "fibre": 5.7,
      "salt": 0.7,
      "plateGrams": 300
     },
     "daughter": {
-     "kcal": 333,
-     "protein": 27.9,
-     "fibre": 4.1,
+     "kcal": 372,
+     "protein": 29.2,
+     "fibre": 4.9,
      "salt": 0.6,
      "plateGrams": 254,
      "note": "salmon and tomatoes only - the green lentils are visible. No starch; her plate is light",
@@ -1317,7 +1356,8 @@
     "Oven to 200°C. Tomatoes, garlic and oil into a dish for 10 minutes, until they start to burst.",
     "Stir in the drained lentils and sit the salmon on top, skin-side up, with <b>{{2}}g of salt weighed across the whole dish</b> rather than seasoned by eye.",
     "12–14 minutes. Done when it flakes under light pressure — <b>err early, it keeps cooking out of the oven</b>.",
-    "Greens through the hot lentils, lemon over everything."
+    "Greens through the hot lentils, lemon over everything.",
+    "<b>Toasted flaked almonds over the lentils.</b> Salmon, lentils and tomatoes are three soft things in a row."
    ],
    "tips": [
     {
@@ -1481,28 +1521,37 @@
      "packUnit": "g",
      "staple": true,
      "note": "across the whole tray"
+    },
+    {
+     "item": "Wholemeal breadcrumbs",
+     "grams": 36,
+     "aisle": "bakery",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "pangrattato: fried in a little oil until hard and deep brown"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 632,
-     "protein": 64,
-     "fibre": 14,
+     "kcal": 674,
+     "protein": 65.4,
+     "fibre": 14.8,
      "salt": 1.36,
      "plateGrams": 700,
      "note": "raw sum 849g; roasting takes ~18% off"
     },
     "cheryl": {
-     "kcal": 474,
-     "protein": 48.0,
-     "fibre": 10.5,
+     "kcal": 506,
+     "protein": 49.1,
+     "fibre": 11.1,
      "salt": 1.0,
      "plateGrams": 525
     },
     "daughter": {
-     "kcal": 479,
-     "protein": 48.5,
-     "fibre": 10.6,
+     "kcal": 511,
+     "protein": 49.6,
+     "fibre": 11.2,
      "salt": 1.0,
      "plateGrams": 530,
      "assumed": true
@@ -1517,7 +1566,8 @@
     "Oven to 200°C. <b>Potatoes in first, on their own</b>, tossed in half the oil and half of the {{2}}g of weighed salt. 20 minutes.",
     "Meanwhile rub the chicken with the remaining oil, the spices and the rest of the salt. <b>Butterfly the breasts or bash them to an even thickness</b> — an untouched breast is thick at one end and thin at the other, and the thin end is dry before the thick end is cooked.",
     "After 20 minutes add the peppers and onion, sit the chicken on top, and back in for 20–22 minutes.",
-    "Lemon over everything. Rest the chicken 5 minutes before slicing."
+    "Lemon over everything. Rest the chicken 5 minutes before slicing.",
+    "<b>Pangrattato over the tray at the end</b>, with the lemon zest through it."
    ],
    "tips": [
     {
@@ -1682,28 +1732,37 @@
      "packUnit": "g",
      "staple": true,
      "note": "across the whole potato tray"
+    },
+    {
+     "item": "Sesame seeds",
+     "grams": 32,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted until they smell nutty"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 664,
-     "protein": 67.5,
-     "fibre": 9.3,
+     "kcal": 710,
+     "protein": 68.9,
+     "fibre": 10.2,
      "salt": 2.22,
      "plateGrams": 562,
      "note": "245g raw thigh, 200g raw potato, 100g asparagus, 80g edamame"
     },
     "cheryl": {
-     "kcal": 498,
-     "protein": 50.6,
-     "fibre": 7.0,
+     "kcal": 532,
+     "protein": 51.7,
+     "fibre": 7.7,
      "salt": 1.7,
      "plateGrams": 422
     },
     "daughter": {
-     "kcal": 476,
-     "protein": 48.4,
-     "fibre": 6.7,
+     "kcal": 509,
+     "protein": 49.4,
+     "fibre": 7.4,
      "salt": 1.6,
      "plateGrams": 403,
      "note": "240g chicken, 170g wedges, asparagus if she'll have it. Salt derived from her glaze share"
@@ -1736,7 +1795,8 @@
     "<b>{{53}}ml of reduced-salt soy</b>, the tomato purée, the honey and the crushed garlic in a bag or bowl with the chicken, 15 minutes minimum — the honey needs that long to do anything. Not {{80}}ml of ordinary soy: that is {{12.8}}g of salt in the batch and it puts Jon's day at 6.75g.",
     "Oven to 200°C. Wedges tossed in the teaspoon of oil and <b>{{1}}g of salt weighed across the whole potato tray</b>, on their own tray, 25 minutes.",
     "Chicken into an ovenproof dish with its marinade for 35 minutes, started at the same time as the wedges.",
-    "Asparagus onto the wedge tray for the last 5–8 minutes. Edamame from frozen into boiling water for 4."
+    "Asparagus onto the wedge tray for the last 5–8 minutes. Edamame from frozen into boiling water for 4.",
+    "<b>Toasted sesame over the chicken.</b> The glaze is soy and honey; sesame is the third note it is missing."
    ],
    "tips": [
     {
@@ -1905,28 +1965,37 @@
      "packSize": 750,
      "packUnit": "g",
      "staple": true
+    },
+    {
+     "item": "Flaked almonds",
+     "grams": 30,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they colour"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 720,
-     "protein": 50.1,
-     "fibre": 13.1,
+     "kcal": 781,
+     "protein": 52.2,
+     "fibre": 14.3,
      "salt": 1.31,
      "plateGrams": 620,
      "note": "raw sum 728g"
     },
     "cheryl": {
-     "kcal": 540,
-     "protein": 37.6,
-     "fibre": 9.8,
+     "kcal": 586,
+     "protein": 39.2,
+     "fibre": 10.7,
      "salt": 1.0,
      "plateGrams": 465
     },
     "daughter": {
-     "kcal": 446,
-     "protein": 31.0,
-     "fibre": 8.1,
+     "kcal": 484,
+     "protein": 32.3,
+     "fibre": 8.9,
      "salt": 0.8,
      "plateGrams": 384,
      "note": "salmon and sweet potato; everything sits separately on the tray",
@@ -1942,7 +2011,8 @@
     "Oven to 200°C. Sweet potato with half the oil and half of the {{2}}g of weighed salt, <b>10 minutes on its own</b>, skin on.",
     "Courgette, red onion and garlic in with the remaining oil. 10 more minutes.",
     "Salmon on top with the rest of the salt, asparagus and tomatoes around it. 10–12 minutes — <b>done when it flakes under light pressure; err early</b>.",
-    "Butter beans stirred through the hot tray for the last 2 minutes. Lemon and basil over everything."
+    "Butter beans stirred through the hot tray for the last 2 minutes. Lemon and basil over everything.",
+    "<b>Toasted flaked almonds over.</b>"
    ],
    "tips": [
     {
@@ -2137,28 +2207,37 @@
      "packUnit": "g",
      "staple": false,
      "note": "50g Jon, none for Cheryl, 140g daughter; wholegrain default applied"
+    },
+    {
+     "item": "Wholemeal breadcrumbs",
+     "grams": 60,
+     "aisle": "bakery",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "pangrattato: fried in a little oil until hard and deep brown"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 666,
-     "protein": 57.1,
-     "fibre": 10.8,
+     "kcal": 708,
+     "protein": 58.5,
+     "fibre": 11.6,
      "salt": 2.04,
      "plateGrams": 591,
      "note": "one fifth of the pan + a 50g slice"
     },
     "cheryl": {
-     "kcal": 500,
-     "protein": 42.8,
-     "fibre": 8.1,
+     "kcal": 531,
+     "protein": 43.9,
+     "fibre": 8.7,
      "salt": 1.5,
      "plateGrams": 443
     },
     "daughter": {
-     "kcal": 767,
-     "protein": 65.8,
-     "fibre": 12.4,
+     "kcal": 815,
+     "protein": 67.5,
+     "fibre": 13.4,
      "salt": 2.4,
      "plateGrams": 681,
      "note": "a full portion and two slices"
@@ -2192,7 +2271,8 @@
     "Onion, garlic and thyme into the same pan until soft, scraping up what the meatballs left behind.",
     "Lentils and the stock in first — <b>simmer 10 minutes before the tomatoes go anywhere near them</b>. Tomato acidity stops red lentils breaking down, and lentils that stay whole are lentils your daughter spots. Water or quarter-strength stock only; a full-strength cube is 2.4g of salt into the batch.",
     "Tomatoes and basil in, simmered uncovered 15–20 minutes until reduced by a quarter.",
-    "Oven to 200°C. Meatballs into the sauce for 10 minutes, cheese over, back in until it melts. Basil, then to the table with the wholemeal ciabatta."
+    "Oven to 200°C. Meatballs into the sauce for 10 minutes, cheese over, back in until it melts. Basil, then to the table with the wholemeal ciabatta.",
+    "<b>Pangrattato over the top before serving.</b> The ciabatta goes soft in the sauce - this is the crunch that survives."
    ],
    "tips": [
     {
@@ -2535,28 +2615,37 @@
      "packUnit": "ml",
      "staple": true,
      "note": "in at the end - this dish had no acid at all"
+    },
+    {
+     "item": "Flaked almonds",
+     "grams": 50,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they colour"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 716,
-     "protein": 67.7,
-     "fibre": 17.3,
+     "kcal": 777,
+     "protein": 69.8,
+     "fibre": 18.6,
      "salt": 3.12,
      "plateGrams": 690,
      "note": "raw sum 793g; the broth reduces"
     },
     "cheryl": {
-     "kcal": 537,
-     "protein": 50.7,
-     "fibre": 13.0,
+     "kcal": 583,
+     "protein": 52.3,
+     "fibre": 13.9,
      "salt": 2.37,
      "plateGrams": 518
     },
     "daughter": {
-     "kcal": 519,
-     "protein": 49.1,
-     "fibre": 12.5,
+     "kcal": 563,
+     "protein": 50.6,
+     "fibre": 13.4,
      "salt": 2.28,
      "plateGrams": 500,
      "note": "beans and broccoli alongside rather than under - nothing stirred together",
@@ -2592,7 +2681,8 @@
     "Out. Beans and stock in, broccoli laid on top, back in for 15 minutes. <b>Use half-strength stock and add no salt</b> — a full-strength cube is about 2.4g of salt into the dish, and this is already one of the saltiest plates here.",
     "Chicken and broccoli out to rest. <b>Mash a few of the beans into the broth to thicken it</b> — that step is the difference between a braise and a bowl of soup.",
     "Beans into the bowls, sliced chicken and broccoli on top, wholegrain baguette on the table.",
-    "<b>Sherry vinegar in off the heat.</b> Smoked paprika, chorizo and beans are all deep, soft and savoury; without acid the whole plate sits in one register."
+    "<b>Sherry vinegar in off the heat.</b> Smoked paprika, chorizo and beans are all deep, soft and savoury; without acid the whole plate sits in one register.",
+    "<b>Toasted almonds over.</b> A picada in all but name, and it is what stops this being three soft brown things."
    ],
    "tips": [
     {
@@ -3217,20 +3307,29 @@
      "packSize": null,
      "packUnit": "g",
      "staple": false
+    },
+    {
+     "item": "Pumpkin seeds",
+     "grams": 10,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they pop"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 337,
-     "protein": 36.3,
-     "fibre": 9.1,
+     "kcal": 393,
+     "protein": 39.3,
+     "fibre": 9.7,
      "salt": 1.29,
      "plateGrams": 420
     },
     "cheryl": {
-     "kcal": 253,
-     "protein": 27.2,
-     "fibre": 6.8,
+     "kcal": 295,
+     "protein": 29.4,
+     "fibre": 7.2,
      "salt": 1.0,
      "plateGrams": 315
     },
@@ -3242,7 +3341,8 @@
    },
    "method": [
     "Drain the tuna and rinse the chickpeas, then both into a bowl with the leaves, tomatoes and cucumber.",
-    "Oil and lemon over, and <b>no salt</b> — the tuna is carrying it already."
+    "Oil and lemon over, and <b>no salt</b> — the tuna is carrying it already.",
+    "<b>Toasted pumpkin seeds over at the tub.</b>"
    ],
    "tips": [
     {
@@ -3705,20 +3805,29 @@
      "packUnit": "g",
      "staple": false,
      "note": "at the flask"
+    },
+    {
+     "item": "Pumpkin seeds",
+     "grams": 40,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they pop"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 531,
-     "protein": 51,
-     "fibre": 14,
+     "kcal": 587,
+     "protein": 54.0,
+     "fibre": 14.6,
      "salt": 1.8,
      "plateGrams": 654
     },
     "cheryl": {
-     "kcal": 398,
-     "protein": 38.2,
-     "fibre": 10.5,
+     "kcal": 440,
+     "protein": 40.4,
+     "fibre": 10.9,
      "salt": 1.4,
      "plateGrams": 490
     },
@@ -3751,7 +3860,8 @@
     "Oil into a wide pan over high heat, chicken in one layer — two batches at this quantity, <b>4 minutes a side without moving it</b>. This browning is most of the flavour and it is the step people skip. Out onto a plate.",
     "Onion into the same pan for 5 minutes, scraping the brown off the base. Garlic and all three spices for 60 seconds — <b>dry heat before any liquid or the paprika stays raw and chalky</b>.",
     "Peppers, passata, stock, chickpeas, the {{2.4}}g of weighed salt and the chicken back in with anything it has leaked. Simmer uncovered 20 minutes until it thickens and a spoon leaves a trail.",
-    "Cool fast and portion into four tubs. <b>The lemon and parsley go in at the flask in the morning, not now</b> — a squeeze of acid that has sat in the fridge for three days tastes of nothing."
+    "Cool fast and portion into four tubs. <b>The lemon and parsley go in at the flask in the morning, not now</b> — a squeeze of acid that has sat in the fridge for three days tastes of nothing.",
+    "<b>Toasted pumpkin seeds in a twist of foil, added at the flask.</b> They cannot travel in the braise or they soften."
    ],
    "tips": [
     {
@@ -3878,21 +3988,30 @@
      "packSize": 35,
      "packUnit": "g",
      "staple": true
+    },
+    {
+     "item": "Pumpkin seeds",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they pop"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 498,
-     "protein": 56.4,
-     "fibre": 11.8,
+     "kcal": 554,
+     "protein": 59.4,
+     "fibre": 12.4,
      "salt": 0.89,
      "plateGrams": 600,
      "note": "verified week's rebalanced figures. The chef's own panel (444/51.5/11.7) runs 5-7% optimistic at his quantities: 422/48.2/10.0"
     },
     "cheryl": {
-     "kcal": 374,
-     "protein": 42.3,
-     "fibre": 8.9,
+     "kcal": 416,
+     "protein": 44.5,
+     "fibre": 9.3,
      "salt": 0.7,
      "plateGrams": 450
     },
@@ -3906,7 +4025,8 @@
    "method": [
     "<b>Red onion into the lemon juice first, on its own, for five minutes.</b> It goes from harsh to sweet and slightly pink, and it stops being the thing you can still taste an hour later.",
     "Beans, fennel, oil, capers, pepper and chilli mixed and left five minutes — <b>fennel needs that time in acid to lose its aniseed edge</b>.",
-    "Tuna flaked in last, in big pieces, stirred once. <b>Tomatoes and parsley on top, not mixed in</b>, so they go in when you open the tub rather than leaking over the beans."
+    "Tuna flaked in last, in big pieces, stirred once. <b>Tomatoes and parsley on top, not mixed in</b>, so they go in when you open the tub rather than leaking over the beans.",
+    "<b>Toasted pumpkin seeds over at the tub</b>, not packed in."
    ],
    "tips": [
     {
@@ -5177,28 +5297,37 @@
      "packSize": 30,
      "packUnit": "g",
      "staple": false
+    },
+    {
+     "item": "Crispy shallots",
+     "grams": 40,
+     "aisle": "cupboard",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": true,
+     "note": "the jar ones are fine and they keep for months"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 685,
-     "protein": 63,
-     "fibre": 10.3,
+     "kcal": 745,
+     "protein": 63.5,
+     "fibre": 10.6,
      "salt": 2,
      "plateGrams": 554,
      "note": "every milligram of the 2.0g is the smoked haddock. Commercial smoking varies nearly twofold, so this could be 1.7-2.4g"
     },
     "cheryl": {
-     "kcal": 514,
-     "protein": 47.2,
-     "fibre": 7.7,
+     "kcal": 559,
+     "protein": 47.6,
+     "fibre": 7.9,
      "salt": 1.5,
      "plateGrams": 416
     },
     "daughter": {
-     "kcal": 584,
-     "protein": 53.7,
-     "fibre": 8.8,
+     "kcal": 635,
+     "protein": 54.1,
+     "fibre": 9.1,
      "salt": 1.7,
      "plateGrams": 472,
      "note": "fish flaked on top, never stirred through, so she can see exactly what she is eating"
@@ -5232,7 +5361,8 @@
     "Both lots of fish into a wide pan, just covered with water, bay leaf in. Bring it barely to a tremble and <b>take it off the heat immediately</b> — it poaches through in 4 minutes in the residual heat. Lift out, flake into big pieces, and keep {{250}}ml of the poaching liquid.",
     "Butter and oil, onion 6 minutes. Garlic, curry powder and turmeric for 60 seconds in dry heat.",
     "Brown basmati in, stirred to coat, then the reserved poaching liquid and water to the packet's ratio — <b>that liquid is smoky and free and it is where the 'no added salt' gets away with it</b>. Lid on, simmer 25 minutes.",
-    "Peas and spinach forked through in the last 3 minutes. <b>Fish on top, not stirred in</b>, lid on, 2 minutes off the heat to warm through. Eggs halved on top, then lemon, herbs and pepper."
+    "Peas and spinach forked through in the last 3 minutes. <b>Fish on top, not stirred in</b>, lid on, 2 minutes off the heat to warm through. Eggs halved on top, then lemon, herbs and pepper.",
+    "<b>Crispy shallots over at the table.</b> Kedgeree is rice, fish and egg - nothing in it has an edge."
    ],
    "tips": [
     {
@@ -5645,28 +5775,37 @@
      "packUnit": "g",
      "staple": false,
      "note": "40g Jon, none for Cheryl, 50g daughter"
+    },
+    {
+     "item": "Wholemeal breadcrumbs",
+     "grams": 48,
+     "aisle": "bakery",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "pangrattato: fried in a little oil until hard and deep brown"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 558,
-     "protein": 60.8,
-     "fibre": 16.2,
+     "kcal": 600,
+     "protein": 62.2,
+     "fibre": 17.0,
      "salt": 2.1,
      "plateGrams": 630,
      "note": "salt breakdown: beans 0.4, bread 0.4, anchovy 0.4, stock 0.3, cod 0.4. Drop the bread and it is 1.7g. There is no added salt to remove"
     },
     "cheryl": {
-     "kcal": 418,
-     "protein": 45.6,
-     "fibre": 12.1,
+     "kcal": 449,
+     "protein": 46.7,
+     "fibre": 12.7,
      "salt": 1.6,
      "plateGrams": 472
     },
     "daughter": {
-     "kcal": 370,
-     "protein": 40.3,
-     "fibre": 10.7,
+     "kcal": 398,
+     "protein": 41.3,
+     "fibre": 11.3,
      "salt": 1.4,
      "plateGrams": 418,
      "note": "60g beans ALONGSIDE rather than under, 50g sourdough to mop. Nothing stirred together"
@@ -5701,7 +5840,8 @@
     "Beans and stock in. <b>Mash about a quarter of the beans against the side of the pan</b> — that is the step that makes it a braise rather than fish sitting in soup, and it takes ten seconds.",
     "Cod laid on top, lid on, <b>8–10 minutes on the lowest heat</b>. The fish steams over the beans rather than boiling in them, which is why it stays in flakes rather than falling apart.",
     "Spinach pushed into the broth around the fish for the last minute.",
-    "Gremolata — anchovy chopped to a paste, lemon zest, parsley and raw garlic — mixed and scattered raw over the top at the table. <b>Never cooked</b>: heat kills the lemon zest and turns the raw garlic sulphurous."
+    "Gremolata — anchovy chopped to a paste, lemon zest, parsley and raw garlic — mixed and scattered raw over the top at the table. <b>Never cooked</b>: heat kills the lemon zest and turns the raw garlic sulphurous.",
+    "<b>Pangrattato over each bowl.</b> The sourdough mops, it does not crunch."
    ],
    "tips": [
     {
@@ -6569,27 +6709,36 @@
      "packUnit": "g",
      "staple": true,
      "note": "loosened with lemon, spooned over at the table"
+    },
+    {
+     "item": "Dukkah",
+     "grams": 32,
+     "aisle": "cupboard",
+     "packSize": 100,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted cumin, coriander seed, sesame and pepper, crushed"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 595,
-     "protein": 61.6,
-     "fibre": 13.8,
+     "kcal": 643,
+     "protein": 63.2,
+     "fibre": 14.8,
      "salt": 1.24,
      "plateGrams": 611
     },
     "cheryl": {
-     "kcal": 446,
-     "protein": 46.2,
-     "fibre": 10.4,
+     "kcal": 482,
+     "protein": 47.4,
+     "fibre": 11.1,
      "salt": 0.9,
      "plateGrams": 458
     },
     "daughter": {
-     "kcal": 535,
-     "protein": 55.3,
-     "fibre": 12.4,
+     "kcal": 578,
+     "protein": 56.7,
+     "fibre": 13.3,
      "salt": 1.1,
      "plateGrams": 549,
      "note": "MORE FIBRE THAN EITHER ADULT because she takes the full 55g bulgur portion - the first time that has been true in this system. ~3.5mg of haem iron from the mince"
@@ -6630,7 +6779,8 @@
     "Bulgur into a bowl, boiling water to 2cm above it, a plate on top, 12 minutes. Fork it through. Done.",
     "Sauce: peppers in the oil for 6 minutes, cumin and chilli for 60 seconds, passata in, then simmer 12 minutes uncovered until it darkens and thickens. <b>Spinach in at the end and stirred until it disappears completely into the sauce</b> — at {{190}}g across four portions it is invisible, and it is fibre and folate on the daughter's plate.",
     "Kofta browned hard in a dry non-stick pan, <b>4 minutes a side and not turned early</b>, then into the sauce for 5 minutes to finish.",
-    "Skyr loosened with lemon and spooned over at the table. Mint on top."
+    "Skyr loosened with lemon and spooned over at the table. Mint on top.",
+    "<b>Dukkah over the skyr.</b> Same toasted-whole-spice trick the corpus already uses on the eggs."
    ],
    "tips": [
     {
@@ -6774,20 +6924,29 @@
      "packSize": null,
      "packUnit": "g",
      "staple": false
+    },
+    {
+     "item": "Pumpkin seeds",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they pop"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 457,
-     "protein": 54,
-     "fibre": 8.2,
+     "kcal": 513,
+     "protein": 57.0,
+     "fibre": 8.8,
      "salt": 1.75,
      "plateGrams": 502
     },
     "cheryl": {
-     "kcal": 343,
-     "protein": 40.5,
-     "fibre": 6.1,
+     "kcal": 385,
+     "protein": 42.7,
+     "fibre": 6.5,
      "salt": 1.3,
      "plateGrams": 376
     },
@@ -6799,7 +6958,8 @@
    "method": [
     "Butter beans drained and rinsed into the tub, then the cooked chicken sliced in on top of them.",
     "Leaves, halved tomatoes and cucumber over, and <b>the oil and lemon kept in a separate pot until you eat</b> — leaves dressed at breakfast are wet leaves at lunchtime.",
-    "Two tubs from one assembly. Nothing here is cooked."
+    "Two tubs from one assembly. Nothing here is cooked.",
+    "<b>Toasted pumpkin seeds over at the tub</b>, not packed in."
    ],
    "tips": [
     {
@@ -6931,20 +7091,29 @@
      "packSize": null,
      "packUnit": "g",
      "staple": false
+    },
+    {
+     "item": "Flaked almonds",
+     "grams": 20,
+     "aisle": "cupboard",
+     "packSize": 200,
+     "packUnit": "g",
+     "staple": true,
+     "note": "toasted in a dry pan until they colour"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 535,
-     "protein": 67.3,
-     "fibre": 10.0,
+     "kcal": 596,
+     "protein": 69.4,
+     "fibre": 11.2,
      "salt": 1.07,
      "plateGrams": 562
     },
     "cheryl": {
-     "kcal": 401,
-     "protein": 50.5,
-     "fibre": 7.5,
+     "kcal": 447,
+     "protein": 52.1,
+     "fibre": 8.4,
      "salt": 0.82,
      "plateGrams": 422
     },
@@ -6957,7 +7126,8 @@
     "Whip the Skyr with the oil and the lemon until it is glossy — <b>straight from the pot it is chalky and it sits on top of things instead of coating them</b>.",
     "Butter beans drained and rinsed, then folded through the dressing so they take it up.",
     "Prawns, leaves, halved tomatoes and cucumber on top, stirred once. Nothing is cooked.",
-    "Two plates from one assembly."
+    "Two plates from one assembly.",
+    "<b>Toasted flaked almonds over at the tub</b>, not packed in."
    ],
    "tips": [
     {
@@ -7121,28 +7291,37 @@
      "packUnit": "g",
      "staple": false,
      "note": "squeezed in off the heat - this is doing the job salt would"
+    },
+    {
+     "item": "Wholemeal breadcrumbs",
+     "grams": 60,
+     "aisle": "bakery",
+     "packSize": null,
+     "packUnit": "g",
+     "staple": true,
+     "note": "pangrattato: fried in a little oil until hard and deep brown"
     }
    ],
    "plates": {
     "jon": {
-     "kcal": 590,
-     "protein": 65.6,
-     "fibre": 17,
+     "kcal": 632,
+     "protein": 67.0,
+     "fibre": 17.8,
      "salt": 1.6,
      "plateGrams": 700,
      "note": "150g cooked chicken, 235g beans, 200g passata, 130g spinach"
     },
     "cheryl": {
-     "kcal": 443,
-     "protein": 49.2,
-     "fibre": 12.8,
+     "kcal": 474,
+     "protein": 50.3,
+     "fibre": 13.4,
      "salt": 1.2,
      "plateGrams": 525
     },
     "daughter": {
-     "kcal": 442,
-     "protein": 49.2,
-     "fibre": 12.8,
+     "kcal": 474,
+     "protein": 50.3,
+     "fibre": 13.4,
      "salt": 1.2,
      "plateGrams": 525,
      "note": "her share is the corpus median, 75% of Jon's - it was a straight copy of Cheryl's"
@@ -7183,7 +7362,8 @@
     "<b>Passata and a splash of water.</b> Simmer 5 minutes.",
     "<b>Beans and chicken in.</b> Warm through 3-4 minutes. The chicken is already cooked, so you are heating it rather than cooking it - don't let it sit and go stringy.",
     "<b>Spinach in handfuls</b>, stirring until each one collapses. About 2 minutes.",
-    "<b>Lemon and black pepper off the heat.</b>"
+    "<b>Lemon and black pepper off the heat.</b>",
+    "<b>Pangrattato over the top.</b> Fifteen minutes of one-pan cooking gives you nothing with a texture."
    ],
    "tips": [
     {
@@ -7397,5 +7577,6 @@
  ],
  "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8.",
  "portionRule": "One recipe, one set of ingredients, one ratio. Jon's plate is the recipe's portion; Cheryl has three-quarters of it (4:3); the daughter's share is whatever her plate weight has always been, of the same food. Nothing is made twice and nobody gets a different version. Set 18 September 2026 after Cheryl had spent a week making two smoothies.",
- "lunchRule": "Warming up is fine - reheating a portion, filling a flask, a soup out of the freezer, a few minutes in a pan. PREPARING AND COOKING RAW INGREDIENTS IS NOT: no fish, no raw meat, nothing with a prep stage and a cook stage. That happens the night before or with the weekend batch. Set 19 September 2026, clarified the same day: the line is raw ingredients, not heat."
+ "lunchRule": "Warming up is fine - reheating a portion, filling a flask, a soup out of the freezer, a few minutes in a pan. PREPARING AND COOKING RAW INGREDIENTS IS NOT: no fish, no raw meat, nothing with a prep stage and a cook stage. That happens the night before or with the weekend batch. Set 19 September 2026, clarified the same day: the line is raw ingredients, not heat.",
+ "crispRule": "Chef's rule, 19 September: every dish carries one crisp element - 8-15g of toasted seed, nut or breadcrumb. Twenty-one of thirty-three had none, and the dishes this family already likes are, without exception, the ones that do. Costs 45-70 kcal a plate."
 }

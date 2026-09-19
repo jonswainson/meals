@@ -930,11 +930,11 @@ function prepBlock(r){
 
 /* Chef's rule, 19 September: every dish wants one crisp element. Nineteen of thirty-six had
    none, and the dishes the family already likes are, without exception, the ones that do. */
-const CRISP = /crispbread|crouton|pangrattato|breadcrumb|walnut|almond|peanut|pumpkin seed|seeds|nuts|crackling|cornichon|crisp|toasted|pitta|crispy/i;
+const CRISP = /crispbread|crouton|pangrattato|breadcrumb|walnut|almond|peanut|pumpkin seed|sesame|dukkah|shallot|seeds|nuts|crackling|cornichon|crisp|toasted|pitta|crispy|charred|apple/i;
 function crispNote(r){
   if (!r || r.retired || !(r.ingredients||[]).length) return "";
-  const has = r.ingredients.some(i => CRISP.test(i.item)) ||
-              (r.method||[]).some(m => /crisp|toasted|crunch|charred/i.test(m));
+  const has = r.ingredients.some(i => CRISP.test(i.item)) || CRISP.test(r.name) ||
+              (r.method||[]).some(m => /crisp|toasted|crunch|charred|crouton|pangrattato/i.test(m));
   return has ? "" :
     '<p class="note"><b>Nothing crisp in this one.</b> 8\u201315g of toasted seed, nut or ' +
     'breadcrumb over the top is 50\u2013100 kcal and it is the difference between a plate you ' +
