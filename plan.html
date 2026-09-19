@@ -187,6 +187,8 @@ const FIXED = {
   "whey-pear":    {name:"20g whey in water + a large pear",
                    jon:{kcal:151,protein:15.6,fibre:5.9,salt:0.1},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+  "own-thing":    {name:"Something else \u2014 our own thing",
+    jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true},
   "none":         {name:"Nothing",
                    jon:{kcal:0,protein:0,fibre:0,salt:0},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
@@ -214,7 +216,7 @@ const FIXED = {
 
 /* how long the fixed items take */
 Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":15,"gingerbread":5,"milbona":0,"huel-milbona":0,"banana-skyr":1,
-  "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"ms-bought":0,
+  "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"own-thing":0,"ms-bought":0,
   "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
 
@@ -223,11 +225,20 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":
    the same pair CHERYL_LUNCH_ING has been buying all along. The banana was dropped
    from the macros when the feed moved, which ran her ~38 kcal light every day. */
 /* Breakfasts and afternoon feeds were the only slots with no way to change them. */
+/* Monday, Wednesday and Friday are smoothie mornings: pick one on any of them and the
+   others follow. Only days already on a smoothie move - a travel-day Huel stays put. */
+const SMOOTHIE_DAYS = ["mon","wed","fri"];
+const SMOOTHIES = ["berry-oat","cherry-berry","gingerbread","almond-blueberry"];
+
+/* Fixed lunches and dinners - the roast, the bought ones - had no picker at all, so the
+   roast night was the one night you could not say "we'll do our own thing". */
+const FIXED_FOR_SLOT = {lunch:["ms-bought","huel-bottle"], dinner:["sunday-roast","work-pizza"]};
+
 const SLOT_OPTIONS = {
   breakfast: ["berry-oat","cherry-berry","gingerbread","almond-blueberry","pb-banana-oats","skyr-bowl",
-              "huel-milbona","huel-bottle"],
+              "huel-milbona","huel-bottle","own-thing"],
   afternoon: ["banana-skyr","banana-skyr-150","milbona","cottage-rye","eggs-dukkah","biltong-apple",
-              "huel-bar","whey-pear","prawns-pear","none"]
+              "huel-bar","whey-pear","prawns-pear","none","own-thing"]
 };
 
 const CHERYL_LUNCH_ADDON = {kcal:133,protein:9.3,fibre:1.7,salt:0.11,
@@ -517,6 +528,11 @@ FIXED["milbona"].recipe = R(
   "<b>If it goes mid-morning it is the 2:30 feed MOVED, not a fifth one.</b> That swap is " +
   "already sanctioned \u2014 it is what Wednesday's 19:30 prawns are. Four feeds, wherever they land.");
 
+FIXED["own-thing"].recipe = R(
+  [], [], null,
+  "<b>Nothing is counted for this one.</b> The day's totals below cover the other meals only, " +
+  "and the day will not be marked amber \u2014 there is no point warning about a number nobody has.");
+
 FIXED["huel-bar"].recipe = R(["One bar, in the bag before you leave"], [], null, null);
 
 FIXED["whey-pear"].recipe = R(["20g whey in water","1 large pear"], [],
@@ -582,6 +598,16 @@ let BASE = DEFAULT_WEEK, KEY = "plan-" + DEFAULT_WEEK.id;
 const $ = s => document.querySelector(s);
 const clone = o => JSON.parse(JSON.stringify(o));
 const recipe = id => DATA.recipes.find(r => r.id === id);
+/* "our own thing" needs to be pickable in the recipe slots too, and swappable back out,
+   so it goes in as a real entry with nothing in it rather than a special case. */
+const ZEROPLATE = {kcal:0,protein:0,fibre:0,salt:0,plateGrams:0};
+const freeMeal = slot => ({
+  id:"own-" + slot, name:"Something else \u2014 our own thing", slot, free:true,
+  basePortions:1, timeMinutes:0, tags:["free"], ingredients:[], method:[], tips:[],
+  plates:{jon:ZEROPLATE, cheryl:ZEROPLATE, daughter:null},
+  plateSplit:{servedByWeight:true, grams:{}},
+  leftover:{leavesLunch:false}
+});
 const day = id => WEEK.days.find(d => d.id === id);
 
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(WEEK)); }catch(e){} }
@@ -641,8 +667,18 @@ function leftoverPlate(r, who){
 const dayTotal = (d, who) => d.free ? ZERO :
   ["breakfast","lunch","afternoon","dinner"].reduce((a,s) => add(a, mealFor(d,s,who)), ZERO);
 
+/* Something else = no numbers, so the day is reported but not judged. */
+const freeSlots = d => ["breakfast","lunch","afternoon","dinner"].filter(sl => {
+  const m = d[sl];
+  if (typeof m === "string") return !!(FIXED[m] || {}).free;
+  if (m && m.kind === "fixed") return !!(FIXED[m.id] || {}).free;
+  if (m && m.kind === "recipe") return /^own-/.test(m.id);
+  return false;
+});
+
 function status(d, who){
   const t = TARGETS[who], v = dayTotal(d, who), problems = [];
+  if (freeSlots(d).length) return {v, problems};
   const dk = Math.round(v.kcal - t.kcal);
   if (Math.abs(dk) > t.band) problems.push({k:"kcal", d:dk});
   if (v.protein < t.protein) problems.push({k:"protein", d:Math.round((v.protein - t.protein)*10)/10});
@@ -700,6 +736,10 @@ function renderTotals(d){
     const line = fixLine(who, status(d, who).problems);
     if (line) h += '<p class="fix">' + line + '</p>';
   });
+  const free = freeSlots(d);
+  if (free.length)
+    h += '<p class="fix">' + free.map(f => f === "afternoon" ? "2:30" : f).join(" and ") +
+         ' is your own, so the day is not scored. Everything else is counted above.</p>';
   el.innerHTML = h;
 }
 
@@ -721,6 +761,12 @@ const fixedOptionsFor = (slot, sel) => (SLOT_OPTIONS[slot] || [])
     return '<option value="' + id + '"' + (id === sel ? " selected" : "") + '>' + f.name +
       (f.jon.kcal ? ' \u2014 ' + f.jon.kcal + ' kcal, ' + f.jon.protein + 'g' : '') + '</option>';
   }).join("");
+
+const fixedTail = (slot, sel) => (FIXED_FOR_SLOT[slot] || []).map(id => {
+  const f = FIXED[id]; if (!f) return "";
+  return '<option value="' + id + '"' + (id === sel ? " selected" : "") + '>' + f.name +
+    (f.jon.kcal ? ' \u2014 ' + f.jon.kcal + ' kcal, ' + f.jon.protein + 'g' : '') + '</option>';
+}).join("");
 
 const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot)
   .sort((a,b) => a.name.localeCompare(b.name))
@@ -785,6 +831,9 @@ function mealCard(d, slot){
   if (m.kind === "fixed"){
     const f = FIXED[m.id];
     h = cardHead(d, slot, label, f.name, macroRow(f.jon, f), cls);
+    if (FIXED_FOR_SLOT[slot])
+      h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) +
+           fixedTail(slot, m.id) + '</select>';
     h += fixedRecipe(f, sharesFor(d, slot));
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
@@ -836,7 +885,8 @@ function mealCard(d, slot){
 
   const r = recipe(m.id);
   h = cardHead(d, slot, label, r ? r.name : "\u2014", r ? macroRow(r.plates.jon, r) : "", cls);
-  h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) + '</select>';
+  h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) +
+       fixedTail(slot, m.id) + '</select>';
   h += '<div class="ctrl"><label>Portions</label><div class="step">' +
        '<button class="dec" data-slot="' + slot + '">−</button><span>' + m.portions + '</span>' +
        '<button class="inc" data-slot="' + slot + '">+</button></div>' +
@@ -1027,14 +1077,32 @@ function render(){
 function wire(d){
   document.querySelectorAll("select.fswap").forEach(sel => {
     sel.onchange = () => {
-      d[sel.dataset.slot] = sel.value;
-      save(); render(); toast(FIXED[sel.value].name + " in");
+      const slot = sel.dataset.slot, id = sel.value;
+      d[slot] = id;
+      let also = 0;
+      if (slot === "breakfast" && SMOOTHIES.includes(id) && SMOOTHIE_DAYS.includes(d.id))
+        SMOOTHIE_DAYS.forEach(k => {
+          const o = day(k);
+          if (o && o !== d && typeof o.breakfast === "string" &&
+              SMOOTHIES.includes(o.breakfast) && o.breakfast !== id){ o.breakfast = id; also++; }
+        });
+      save(); render();
+      toast(FIXED[id].name + " in" + (also ? " \u2014 and on " + also +
+            " other smoothie morning" + (also > 1 ? "s" : "") : ""));
     };
   });
   document.querySelectorAll("select.swap").forEach(sel => {
     sel.onchange = () => {
-      const m = d[sel.dataset.slot], r = recipe(sel.value);
-      m.id = sel.value;
+      const slot = sel.dataset.slot, id = sel.value;
+      if (FIXED[id]){                      /* the roast, the bought ones */
+        d[slot] = {kind:"fixed", id};
+        save(); render(); toast(FIXED[id].name + " in");
+        return;
+      }
+      const r = recipe(id), was = d[slot];
+      const m = (was && was.kind === "recipe") ? was
+              : {kind:"recipe", id, portions:1, daughter:false, alt:""};
+      m.id = id; d[slot] = m;
       const diners = d.diners.filter(p => p !== "daughter" || m.daughter).length;
       if (m.portions < diners) m.portions = diners;
       save(); render(); toast(r.name + " in");
@@ -1151,6 +1219,7 @@ function toast(m){
    old recipes.json and silently falls back to stale figures. */
 fetch("recipes.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
   DATA = d;
+  DATA.recipes = DATA.recipes.concat([freeMeal("lunch"), freeMeal("dinner")]);
   BASE = pickWeek(); KEY = "plan-" + BASE.id; WEEK = load();
 
   /* "today" only means something on the week that actually contains today */
