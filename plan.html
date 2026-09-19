@@ -926,6 +926,19 @@ function renderTotals(d){
   el.innerHTML = h;
 }
 
+/* Any combination should land near 1,900, so each slot has a target and every card
+   says where it sits against it. Set in recipes.json as slotTargets. */
+function slotGap(slot, kcal){
+  const t = (DATA.slotTargets || {})[slot];
+  if (!t || !kcal) return "";
+  const g = Math.round(kcal - t);
+  if (Math.abs(g) <= 40) return '<p class="note">On target for a ' +
+    (slot === "afternoon" ? "2:30 feed" : slot) + ' \u2014 ' + t + ' kcal.</p>';
+  return '<p class="note' + (g > 0 ? ' warn' : '') + '"><b>' + (g > 0 ? "+" : "") + g +
+    ' kcal against a ' + t + '</b> for this slot. Four slots at target make 1,900; this one ' +
+    (g > 0 ? 'has to come back off another meal.' : 'leaves room on another meal.') + '</p>';
+}
+
 const macroRow = (p, r) =>
   '<div class="macros"><div><b>' + Math.round(p.kcal) + '</b> <span>kcal</span></div>' +
   '<div><b>' + p.protein + 'g</b> <span>protein</span></div>' +
@@ -1022,6 +1035,7 @@ function mealCard(d, slot){
     h = cardHead(d, slot, label, f.name, macroRow(f.jon, f), cls);
     if ((SLOT_OPTIONS[slot] || []).length)
       h += '<select class="fswap" data-slot="' + slot + '">' + fixedOptionsFor(slot, m) + '</select>';
+    if (!f.free) h += slotGap(slot, f.jon.kcal);
     return closeCard(h + fixedRecipe(f, sharesFor(d, slot)), d, slot);
   }
   if (m.kind === "fixed"){
@@ -1032,6 +1046,7 @@ function mealCard(d, slot){
     if (FIXED_FOR_SLOT[slot])
       h += '<select class="swap" data-slot="' + slot + '">' + optionsFor(slot, m.id) +
            fixedTail(slot, m.id) + '</select>';
+    if (!f.free) h += slotGap(slot, f.jon.kcal);
     h += fixedRecipe(FIXED[m.id], sharesFor(d, slot));
     if (rid !== m.id)
       h += '<p class="note prep"><b>Following Sunday.</b> Change the joint there and this changes ' +
@@ -1132,6 +1147,7 @@ function mealCard(d, slot){
       h += '</ul>';
       if (r.plateSpec.note) h += '<p class="note">' + r.plateSpec.note + '</p>';
     }
+    h += slotGap(slot, r.plates.jon.kcal);
     if (slot === "lunch") h += prepBlock(r);
     h += crispNote(r);
     h += splitBlock(r, d.diners.includes("daughter") && m.daughter);
