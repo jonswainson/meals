@@ -86,6 +86,7 @@
     border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
   .note{font-size:.82rem;color:var(--muted);margin:9px 0 0;line-height:1.45}
   .note.warn{color:var(--warn)}
+  .note.prep{color:var(--go);font-weight:500}
   .ing{margin:9px 0 0;padding-left:18px;font-size:.87rem;color:var(--muted)}
   .rh{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
     margin:13px 0 0;font-weight:700}
@@ -608,6 +609,19 @@ const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot)
     '</option>')
   .join("");
 
+/* No cooking at lunchtime. A lunch that needs a hob says when it gets one. */
+const PREP_LABEL = {"weekend":"Weekend batch", "night-before":"Made the night before",
+                    "same-day":"Nothing to cook"};
+function prepBlock(r){
+  const pr = r && r.prep; if (!pr) return "";
+  let h = '<p class="note' + (pr.when === "same-day" ? '' : ' prep') + '"><b>' +
+          (PREP_LABEL[pr.when] || pr.when) + '.</b> ' + pr.note + '</p>';
+  if (pr.cooksAtLunch)
+    h += '<p class="note warn"><b>This one breaks the no-cooking-at-lunch rule.</b> ' +
+         pr.cooksAtLunch + '</p>';
+  return h;
+}
+
 /* Nothing about who eats what should have to be inferred from an absence. */
 function slotNote(d, slot){
   if (!d.diners.includes("cheryl")) return "";
@@ -685,6 +699,8 @@ function mealCard(d, slot){
         h += '<p class="note warn">That costed portion is <b>' + pj.kcal + ' kcal</b>, over the ' +
              '550 top of the lunch slot. <b>Take ' + pj.overBand.grams + 'g</b> instead — ' +
              pj.overBand.kcal + ' kcal, ' + pj.overBand.protein + 'g protein.</p>';
+      h += '<p class="note prep"><b>Leftovers \u2014 reheat and nothing else.</b> ' +
+           'The cooking was done on ' + (src ? src.label : 'the night it was made') + '.</p>';
       if (lo.note) h += '<p class="note">' + lo.note + '</p>';
 
       const eaten = src.diners.filter(p => p !== "daughter" || src.dinner.daughter).length;
@@ -743,6 +759,7 @@ function mealCard(d, slot){
       h += '</ul>';
       if (r.plateSpec.note) h += '<p class="note">' + r.plateSpec.note + '</p>';
     }
+    if (slot === "lunch") h += prepBlock(r);
     h += splitBlock(r, d.diners.includes("daughter") && m.daughter);
 
     /* the list has to be what THIS cook needs, not what the recipe's base batch needs */

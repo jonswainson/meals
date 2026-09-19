@@ -1,5 +1,5 @@
 {
- "version": "2026-09-18a",
+ "version": "2026-09-19a",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -2904,6 +2904,10 @@
       "cheryl": 25
      }
     ]
+   },
+   "prep": {
+    "when": "same-day",
+    "note": "Assembled cold."
    }
   },
   {
@@ -3058,6 +3062,10 @@
       "cheryl": 25
      }
     ]
+   },
+   "prep": {
+    "when": "same-day",
+    "note": "Assembled cold."
    }
   },
   {
@@ -3204,6 +3212,10 @@
       "cheryl": 20
      }
     ]
+   },
+   "prep": {
+    "when": "same-day",
+    "note": "Assembled cold."
    }
   },
   {
@@ -3287,6 +3299,10 @@
      "jon": 850,
      "cheryl": 638
     }
+   },
+   "prep": {
+    "when": "same-day",
+    "note": "Nothing is prepared at all."
    }
   },
   {
@@ -3454,6 +3470,11 @@
      "jon": 710,
      "cheryl": 532
     }
+   },
+   "prep": {
+    "when": "weekend",
+    "note": "Six tubs from one 45-minute cook. Three days in the fridge, three months in the freezer. At lunch it is reheated and nothing else.",
+    "cooksAtLunch": "The halloumi croutons are fried fresh at the bowl - 3-4 minutes in a pan. That is cooking at lunchtime and the rule now says no. Either fry them with the weekend batch and take them cold, or leave them off at lunch and keep this recipe for a dinner."
    }
   },
   {
@@ -3657,6 +3678,10 @@
      "jon": 654,
      "cheryl": 490
     }
+   },
+   "prep": {
+    "when": "weekend",
+    "note": "Four portions from one cook. Flask scalded with boiling water and filled above 75C holds above 60C to 1pm."
    }
   },
   {
@@ -3836,6 +3861,10 @@
       "cheryl": 20
      }
     ]
+   },
+   "prep": {
+    "when": "night-before",
+    "note": "The onion wants its five minutes in the lemon before anything else goes in."
    }
   },
   {
@@ -3858,7 +3887,7 @@
      "packSize": 650,
      "packUnit": "g",
      "staple": false,
-     "note": "RAW weight - poached or roasted the night before, sliced cold"
+     "note": "poached ahead and cooled, not cooked at lunch"
     },
     {
      "item": "Wholemeal pitta",
@@ -3960,6 +3989,7 @@
     "note": "assembled in the morning from chicken cooked the night before. Roast 750g of breast on Sunday and this is Tuesday and Wednesday"
    },
    "method": [
+    "<b>Chicken poached ahead, never at lunchtime.</b> Breast into barely-simmering water, lid on, 12 minutes, then left in the water to cool. Do it with the weekend batch or the night before and slice it cold.",
     "Slaw first, at least an hour ahead: cabbage, carrot, onion, cider vinegar and the {{2}}g of sugar into a tub and <b>squeezed hard with your hands for thirty seconds</b>. The squeezing is the recipe — it breaks the cabbage cells so it pickles in an hour instead of a day, and it takes the raw cabbage smell out.",
     "Skyr and Dijon whisked together with plenty of black pepper. This is the sauce and it is 35 calories.",
     "Warm the wholemeal pitta for 20 seconds so it opens without tearing. <b>Sauce inside both walls first — it waterproofs the bread.</b> Then the cold sliced chicken, then the slaw, then the leaves at the very top.",
@@ -4023,6 +4053,10 @@
       "cheryl": 10
      }
     ]
+   },
+   "prep": {
+    "when": "night-before",
+    "note": "Slaw an hour ahead at minimum; the chicken is poached ahead and sliced cold."
    }
   },
   {
@@ -4239,6 +4273,10 @@
       "cheryl": 35
      }
     ]
+   },
+   "prep": {
+    "when": "night-before",
+    "note": "The chicken is poached with the weekend batch, never at lunch."
    }
   },
   {
@@ -4436,6 +4474,10 @@
       "cheryl": 10
      }
     ]
+   },
+   "prep": {
+    "when": "night-before",
+    "note": "<b>The barley is 30 minutes on the hob</b> - do it then, and dress it while it is still warm."
    }
   },
   {
@@ -4664,6 +4706,10 @@
       "cheryl": 15
      }
     ]
+   },
+   "prep": {
+    "when": "weekend",
+    "note": "Eaten cold as a wedge - a tortilla is built for room temperature."
    }
   },
   {
@@ -6689,6 +6735,10 @@
       "cheryl": 25
      }
     ]
+   },
+   "prep": {
+    "when": "night-before",
+    "note": "The chicken is bought ready-cooked."
    }
   },
   {
@@ -6847,9 +6897,14 @@
       "cheryl": 105
      }
     ]
+   },
+   "prep": {
+    "when": "night-before",
+    "note": "The prawns are bought ready-cooked."
    }
   }
  ],
  "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8.",
- "portionRule": "One recipe, one set of ingredients, one ratio. Jon's plate is the recipe's portion; Cheryl has three-quarters of it (4:3); the daughter's share is whatever her plate weight has always been, of the same food. Nothing is made twice and nobody gets a different version. Set 18 September 2026 after Cheryl had spent a week making two smoothies."
+ "portionRule": "One recipe, one set of ingredients, one ratio. Jon's plate is the recipe's portion; Cheryl has three-quarters of it (4:3); the daughter's share is whatever her plate weight has always been, of the same food. Nothing is made twice and nobody gets a different version. Set 18 September 2026 after Cheryl had spent a week making two smoothies.",
+ "lunchRule": "No cooking at lunchtime - there is no time for it. A warm lunch is either leftovers from a dinner or a soup or braise batch-cooked the previous weekend, reheated and nothing else. Anything that needs a hob or an oven is done the night before or with the weekend batch. Set 19 September 2026."
 }
