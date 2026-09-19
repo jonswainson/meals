@@ -160,9 +160,9 @@ const FIXED = {
                    jon:{kcal:531,protein:57.6,fibre:10.8,salt:0.4},
                    cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
   "cherry-berry":  {name:"Cherry berry smoothie",
-    jon:{kcal:635,protein:47.7,fibre:12,salt:0.55}, cheryl:{kcal:476,protein:35.8,fibre:9,salt:0.41}},
+    jon:{kcal:525,protein:46.1,fibre:9.6,salt:0.53}, cheryl:{kcal:394,protein:34.6,fibre:7.2,salt:0.40}},
   "almond-blueberry": {name:"Almond and blueberry smoothie",
-    jon:{kcal:618,protein:34.8,fibre:11.3,salt:0.7}, cheryl:{kcal:464,protein:26.1,fibre:8.5,salt:0.53}},
+    jon:{kcal:669,protein:50,fibre:11.4,salt:0.85}, cheryl:{kcal:502,protein:37.5,fibre:8.6,salt:0.64}},
   "pb-banana-oats": {name:"Peanut butter, banana and blueberry oats",
     jon:{kcal:603,protein:29.5,fibre:11.4,salt:0.3}, cheryl:{kcal:452,protein:22.1,fibre:8.6,salt:0.23}},
   "gingerbread":  {name:"Gingerbread smoothie",
@@ -349,14 +349,14 @@ FIXED["pb-banana-oats"].ing.cheryl = share(FIXED["pb-banana-oats"].ing.jon, 0.75
 FIXED["cherry-berry"].ing = {
   jon:[I("Frozen cherries",75,"frozen",500), I("Frozen raspberries",75,"frozen",500),
        I("Whey protein powder",40,"cupboard",1000,true), I("Rolled oats",27,"cupboard",1000,true),
-       I("Cocoa powder",5,"cupboard",250,true), I("Semi-skimmed milk",250,"dairy",2000,true,"ml"),
-       I("Dark chocolate, 70%",20,"cupboard",100,true)]};
+       I("Cocoa powder",5,"cupboard",250,true), I("Semi-skimmed milk",250,"dairy",2000,true,"ml")]};
 FIXED["cherry-berry"].ing.cheryl = share(FIXED["cherry-berry"].ing.jon, 0.75);
 
 FIXED["almond-blueberry"].ing = {
   jon:[I("Almond milk",375,"dairy",1000,true,"ml"), I("Whey protein powder",30,"cupboard",1000,true),
        I("Rolled oats",18,"cupboard",1000,true), I("Bananas",120,"fresh"),
-       I("Frozen blueberries",80,"frozen",500), I("Almond butter",24,"cupboard",250,true)]};
+       I("Frozen blueberries",80,"frozen",500), I("Whole almonds",20,"cupboard",200,true),
+       I("Whey protein powder",20,"cupboard",1000,true)]};
 FIXED["almond-blueberry"].ing.cheryl = share(FIXED["almond-blueberry"].ing.jon, 0.75);
 
 FIXED["berry-oat"].ing = {
@@ -409,10 +409,10 @@ FIXED["pb-banana-oats"].mix = [["Water",250,"ml"],["Rolled oats",50],["Cinnamon,
   ["Blueberries, for the jam",40]];
 FIXED["cherry-berry"].mix = [["Frozen cherries, pitted",75],["Frozen raspberries",75],
   ["Vanilla protein powder",40],["Rolled oats",27],["Cocoa powder",5],
-  ["Reduced-fat milk",250,"ml"],["70% dark chocolate, shaved",20]];
+  ["Reduced-fat milk",250,"ml"]];
 FIXED["almond-blueberry"].mix = [["Almond milk",375,"ml"],["Vanilla protein powder",30],
-  ["Rolled oats",18],["Banana, frozen \u2014 weighed, peeled",120],
-  ["Frozen blueberries",80],["Almond butter",24]];
+  ["Whey",20],["Rolled oats",18],["Banana, frozen \u2014 weighed, peeled",120],
+  ["Frozen blueberries",80],["Whole almonds",20]];
 FIXED["berry-oat"].mix = [["Skyr",200],["Whey",32],["Milk",150,"ml"],
   ["Frozen mixed berries",100],["Porridge oats",30],["Chia seeds",12]];
 FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",20,"ml"],
@@ -453,26 +453,29 @@ FIXED["pb-banana-oats"].recipe = R(
 
 FIXED["cherry-berry"].recipe = R(
   ["75g frozen cherries, pitted \u00b7 75g frozen raspberries","40g vanilla protein powder",
-   "3 tbsp rolled oats (~27g) \u00b7 2 tsp cocoa (~5g)","250ml reduced-fat milk \u00b7 4\u20135 ice cubes",
-   "1\u00bd tbsp 70% dark chocolate (~20g), shaved, on top"],
-  ["Everything in and blend on high until smooth. A little water if your powder is thick.",
-   "Chocolate shaved over at the end, not blended \u2014 blended it just disappears."],
+   "3 tbsp rolled oats (~27g) \u00b7 2 tsp cocoa (~5g)","250ml reduced-fat milk \u00b7 4\u20135 ice cubes"],
+  ["Everything in and blend on high until smooth. A little water if your powder is thick."],
   null,
-  "<b>47.7g of protein, a shade under the 50\u201358g breakfast band.</b> Centr's own figure, not " +
-  "re-costed here. A 30g Skyr alongside closes it.<br><br><b>36.4g of sugar</b>, the highest of any " +
-  "breakfast here \u2014 mostly fruit and milk, but about 10g is the chocolate. Salt is an estimate.");
+  "<b>Centr tops this with 20g of shaved chocolate. Removed \u2014 it was never being added.</b> " +
+  "That is 110 kcal and about 10g of sugar out, which is what brings it from 635 to 525 and " +
+  "makes it a weekday breakfast.<br><br>" +
+  "<b>46.1g of protein, still under the 50\u201358g band.</b> There are 110 calories of room now, " +
+  "so <b>5g of whey closes it</b> \u2014 544 kcal and 50.1g.");
 
 FIXED["almond-blueberry"].recipe = R(
-  ["375ml almond milk \u00b7 30g vanilla protein powder","2 tbsp rolled oats (~18g)",
+  ["375ml almond milk \u00b7 30g vanilla protein powder \u00b7 <b>20g whey</b>",
+   "2 tbsp rolled oats (~18g)",
    "<b>1 banana, frozen \u2014 weighed at 120g peeled</b>","80g frozen blueberries",
-   "1\u00bd tbsp almond butter (~24g)"],
+   "<b>20g whole almonds</b>"],
   ["Everything in and blend on high. Serve straight away.",
    "A little water if your powder is thick."],
   null,
-  "<b>34.8g of protein \u2014 15g under the 50\u201358g breakfast band, and the lowest here by a " +
-  "distance.</b> On its own this is not a breakfast for Jon; with 200g of Skyr alongside it is.<br><br>" +
-  "<b>Centr says \"1 medium banana\", unweighed.</b> That is the documented 196g trap by name \u2014 " +
-  "his last one was 196g, which would put this at about 690 kcal. Weighed at 120g here. Salt is an estimate.");
+  "<b>Changed from Centr:</b> whole almonds instead of almond butter, and 20g of whey added. " +
+  "That takes it from 34.8g of protein to <b>50.0g \u2014 into the band</b>, at the cost of 51 kcal.<br><br>" +
+  "<b>669 kcal is the top of the breakfast range, and it puts a normal Monday at about 2,000.</b> " +
+  "The lever is the banana: at 60g rather than 120g it is 616 kcal and the day lands at 1,948.<br><br>" +
+  "<b>Centr says \"1 medium banana\", unweighed</b> \u2014 the documented 196g trap. 120g here. " +
+  "Salt is an estimate.");
 
 FIXED["berry-oat"].recipe = R(
   ["200g Skyr · 32g whey · 150ml milk","100g frozen mixed berries","30g porridge oats · 12g chia seeds"],
