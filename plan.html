@@ -37,6 +37,7 @@
 
   .totals{background:var(--soft);padding:9px 16px;font-size:.83rem;
     border-bottom:1px solid var(--line)}
+  .wk{margin-top:7px;padding-top:7px;border-top:1px solid var(--line)}
   .trow{display:flex;justify-content:space-between;gap:10px;padding:3px 0;
     font-variant-numeric:tabular-nums;align-items:baseline}
   .who{color:var(--muted);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase}
@@ -190,7 +191,8 @@ const FIXED = {
                    jon:{kcal:151,protein:15.6,fibre:5.9,salt:0.1},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "cheat-meal":   {name:"Cheat meal \u2014 untracked",
-    jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true, bought:true},
+    jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0},
+    free:true, bought:true, assumedKcal:1200, assumedCheryl:900},
   "roast-beef": {name:"Sunday roast \u2014 Beef", bought:true,
     jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.50,plateGrams:720},
     cheryl:{kcal:524,protein:53.1,fibre:8.3,salt:1.12,plateGrams:540},
@@ -799,6 +801,29 @@ function leftoverPlate(r, who){
   return x.overBand || x;   /* count what the card tells him to take */
 }
 
+/* The day it lands on is not scored, but the WEEK has to count it or the whole plan
+   flatters itself. 1,200 is an assumption, stated, not a measurement. */
+function assumedFree(d, who){
+  let k = 0;
+  ["breakfast","lunch","afternoon","dinner"].forEach(sl => {
+    const m = d[sl];
+    const id = (typeof m === "string") ? m : (m && m.kind === "fixed" ? m.id : null);
+    const f = id && FIXED[id];
+    if (f && f.assumedKcal && d.diners.includes(who))
+      k += (who === "cheryl" ? (f.assumedCheryl || f.assumedKcal * 0.75) : f.assumedKcal);
+  });
+  return k;
+}
+
+function weekTotal(who){
+  let kcal = 0, assumed = 0, days = 0;
+  WEEK.days.forEach(d => {
+    if (d.free || !d.diners.includes(who)) return;
+    kcal += dayTotal(d, who).kcal; assumed += assumedFree(d, who); days++;
+  });
+  return {kcal, assumed, days, total: kcal + assumed};
+}
+
 const dayTotal = (d, who) => d.free ? ZERO :
   ["breakfast","lunch","afternoon","dinner"].reduce((a,s) => add(a, mealFor(d,s,who)), ZERO);
 
@@ -876,6 +901,23 @@ function renderTotals(d){
     const line = fixLine(who, status(d, who).problems);
     if (line) h += '<p class="fix">' + line + '</p>';
   });
+  /* the week, which is the number that actually decides whether this works */
+  h += '<div class="wk">';
+  eating.forEach(who => {
+    const w = weekTotal(who), t = TARGETS[who];
+    const per = Math.round(w.total / w.days), gap = per - t.kcal;
+    h += '<div class="trow"><span class="who">' + (who === "jon" ? "Jon" : "Cheryl") +
+      ", the week</span><span class=\"" + (Math.abs(gap) > t.band ? "amber" : "ok") + '"><b>' +
+      w.total.toLocaleString() + '</b> kcal over ' + w.days + ' days \u00b7 <b>' + per +
+      '</b> a day \u00b7 ' + (gap > 0 ? "+" : "") + gap + ' vs ' + t.kcal + '</span></div>';
+  });
+  const anyAssumed = eating.some(who => weekTotal(who).assumed > 0);
+  if (anyAssumed)
+    h += '<p class="fix">Includes an assumed <b>1,200 kcal</b> for the cheat meal (900 for Cheryl). ' +
+         'Nobody has measured it \u2014 but leaving it out of the week made the plan look like a ' +
+         'deficit it is not.</p>';
+  h += '</div>';
+
   const free = freeSlots(d);
   if (free.length)
     h += '<p class="fix">' + free.map(f => f === "afternoon" ? "2:30" : f).join(" and ") +
