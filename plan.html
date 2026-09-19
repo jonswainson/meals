@@ -552,7 +552,7 @@ FIXED["cherry-berry"].recipe = R(
   "That is 110 kcal and about 10g of sugar out, which is what brings it from 635 to 525 and " +
   "makes it a weekday breakfast.<br><br>" +
   "The 110 calories that freed up have bought <b>5g of whey</b>, which puts it at 544 kcal and " +
-  "<b>50.1g of protein \u2014 inside the band</b>. A normal Monday lands at 1,876.");
+  "<b>50.1g of protein \u2014 inside the band</b>.");
 
 FIXED["almond-blueberry"].recipe = R(
   ["375ml almond milk \u00b7 30g vanilla protein powder \u00b7 <b>20g whey</b>",
@@ -564,8 +564,9 @@ FIXED["almond-blueberry"].recipe = R(
   null,
   "<b>Changed from Centr:</b> whole almonds instead of almond butter, and 20g of whey added. " +
   "That takes it from 34.8g of protein to <b>50.0g \u2014 into the band</b>, at the cost of 51 kcal.<br><br>" +
-  "<b>The banana is halved to 60g</b>, which brings it from 669 to 616 and puts Monday at 1,948 " +
-  "instead of 2,001.<br><br>" +
+  "<b>The banana is halved to 60g</b>, which brings it from 669 to 616.<br><br>" +
+  "<b>Still the heaviest breakfast here.</b> On a day that is already near target it will tip it " +
+  "over \u2014 check the day total rather than trusting a number written into this card.<br><br>" +
   "That leaves protein at <b>49.3g, seven-tenths of a gram under the band</b>. Closing it costs " +
   "more calories than the gap is worth \u2014 on a 1,900 kcal day, 0.7g of protein is noise and " +
   "50 kcal is not.<br><br>" +
@@ -812,10 +813,15 @@ const freeSlots = d => ["breakfast","lunch","afternoon","dinner"].filter(sl => {
 
 function status(d, who){
   const t = TARGETS[who], v = dayTotal(d, who), problems = [];
-  if (freeSlots(d).length) return {v, problems};
-  const dk = Math.round(v.kcal - t.kcal);
-  if (Math.abs(dk) > t.band) problems.push({k:"kcal", d:dk});
-  if (v.protein < t.protein) problems.push({k:"protein", d:Math.round((v.protein - t.protein)*10)/10});
+  const partial = freeSlots(d).length > 0;
+  /* Calories and protein are targets and a missing meal makes them meaningless.
+     Salt is a ceiling: an untracked meal can only add to it, so a breach on a
+     partial day is real and gets flagged. Suppressing it hid every Saturday. */
+  if (!partial){
+    const dk = Math.round(v.kcal - t.kcal);
+    if (Math.abs(dk) > t.band) problems.push({k:"kcal", d:dk});
+    if (v.protein < t.protein) problems.push({k:"protein", d:Math.round((v.protein - t.protein)*10)/10});
+  }
   if (v.salt > t.salt) problems.push({k:"salt", d:Math.round((v.salt - t.salt)*10)/10});
   return {v, problems};
 }
@@ -873,7 +879,8 @@ function renderTotals(d){
   const free = freeSlots(d);
   if (free.length)
     h += '<p class="fix">' + free.map(f => f === "afternoon" ? "2:30" : f).join(" and ") +
-         ' is your own, so the day is not scored. Everything else is counted above.</p>';
+         ' is your own, so calories and protein are not scored. <b>Salt still is</b> \u2014 an ' +
+         'untracked meal can only add to it.</p>';
   el.innerHTML = h;
 }
 

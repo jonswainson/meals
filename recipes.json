@@ -1,5 +1,5 @@
 {
- "version": "2026-09-19e",
+ "version": "2026-09-19g",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -453,11 +453,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 380,
-      "kcal": 386,
-      "protein": 31.6,
-      "fibre": 6.7,
-      "salt": 0.79,
+      "grams": 360,
+      "kcal": 376,
+      "protein": 29.7,
+      "fibre": 6.8,
+      "salt": 0.71,
       "source": "derived"
      }
     }
@@ -827,11 +827,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 455,
-      "kcal": 385,
-      "protein": 34.7,
-      "fibre": 9.0,
-      "salt": 0.99,
+      "grams": 340,
+      "kcal": 372,
+      "protein": 36.6,
+      "fibre": 7.6,
+      "salt": 0.85,
       "source": "derived"
      }
     }
@@ -1233,11 +1233,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 350,
-      "kcal": 386,
-      "protein": 30.8,
-      "fibre": 6.1,
-      "salt": 0.84,
+      "grams": 285,
+      "kcal": 373,
+      "protein": 31.3,
+      "fibre": 4.6,
+      "salt": 0.66,
       "source": "derived"
      }
     }
@@ -1549,7 +1549,7 @@
      "packSize": 150,
      "packUnit": "ml",
      "staple": false,
-     "note": "NOT 60ml of ordinary soy - that is 9.6g of salt in the batch and puts Jon's day at 6.75g"
+     "note": "reduced-salt only - see the method for what ordinary soy does to the day"
     },
     {
      "item": "Tomato puree",
@@ -1956,28 +1956,13 @@
    "secondPanForDaughter": false,
    "ingredients": [
     {
-     "item": "Pork mince, 5%",
-     "grams": 375,
+     "item": "Ready-made meatballs",
+     "grams": 750,
      "aisle": "meat-fish",
-     "packSize": 500,
+     "packSize": 350,
      "packUnit": "g",
-     "staple": false
-    },
-    {
-     "item": "Beef mince, 5%",
-     "grams": 375,
-     "aisle": "meat-fish",
-     "packSize": 500,
-     "packUnit": "g",
-     "staple": false
-    },
-    {
-     "item": "Rolled oats",
-     "grams": 63,
-     "aisle": "cupboard",
-     "packSize": 1000,
-     "packUnit": "g",
-     "staple": true
+     "staple": false,
+     "note": "bought, not rolled - roughly 1.0-1.3g of salt per 100g against 0.1g for plain mince"
     },
     {
      "item": "Onions",
@@ -2122,11 +2107,11 @@
       "source": "costed"
      },
      "cheryl": {
-      "grams": 380,
-      "kcal": 383,
-      "protein": 36.8,
-      "fibre": 5.3,
-      "salt": 1.05,
+      "grams": 410,
+      "kcal": 463,
+      "protein": 39.6,
+      "fibre": 7.5,
+      "salt": 1.39,
       "source": "derived"
      }
     }
@@ -2312,11 +2297,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 295,
-      "kcal": 386,
-      "protein": 35.3,
-      "fibre": 2.8,
-      "salt": 1.63,
+      "grams": 260,
+      "kcal": 379,
+      "protein": 32.9,
+      "fibre": 2.4,
+      "salt": 1.62,
       "source": "derived"
      }
     }
@@ -2512,11 +2497,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 450,
-      "kcal": 385,
-      "protein": 35.4,
-      "fibre": 8.9,
-      "salt": 1.83,
+      "grams": 340,
+      "kcal": 379,
+      "protein": 34.7,
+      "fibre": 8.5,
+      "salt": 1.71,
       "source": "derived"
      }
     }
@@ -2834,7 +2819,7 @@
      "kcal": 302,
      "protein": 51.5,
      "fibre": 3.3,
-     "salt": 0.4,
+     "salt": 1.72,
      "plateGrams": 375,
      "note": "verified week's re-costing. Book said 340/38/6: calories 38 high and protein 13.5g LOW"
     },
@@ -2842,7 +2827,7 @@
      "kcal": 226,
      "protein": 38.6,
      "fibre": 2.5,
-     "salt": 0.3,
+     "salt": 1.29,
      "plateGrams": 281
     },
     "daughter": null
@@ -2908,7 +2893,10 @@
    "prep": {
     "when": "same-day",
     "note": "Assembled cold."
-   }
+   },
+   "warnings": [
+    "<b>Salt was recorded at 0.4g and is really about 1.7g.</b> 150g of pre-packed cooked chicken carries it; the identical ingredient in the butter bean tub was costed correctly all along."
+   ]
   },
   {
    "id": "prawn-and-skyr",
@@ -3430,11 +3418,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 550,
-      "kcal": 384,
-      "protein": 31.6,
-      "fibre": 6.8,
-      "salt": 3.31,
+      "grams": 480,
+      "kcal": 375,
+      "protein": 31.9,
+      "fibre": 5.4,
+      "salt": 3.07,
       "source": "derived"
      }
     }
@@ -3643,11 +3631,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 525,
-      "kcal": 384,
-      "protein": 32.9,
-      "fibre": 12.1,
-      "salt": 1.47,
+      "grams": 460,
+      "kcal": 374,
+      "protein": 35.9,
+      "fibre": 9.9,
+      "salt": 1.31,
       "source": "derived"
      }
     }
@@ -4628,11 +4616,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 380,
-      "kcal": 386,
-      "protein": 36.1,
-      "fibre": 4.5,
-      "salt": 1.27,
+      "grams": 365,
+      "kcal": 373,
+      "protein": 35.0,
+      "fibre": 4.2,
+      "salt": 1.33,
       "source": "derived"
      }
     }
@@ -4880,11 +4868,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 375,
-      "kcal": 383,
-      "protein": 35.0,
-      "fibre": 7.8,
-      "salt": 0.87,
+      "grams": 340,
+      "kcal": 374,
+      "protein": 34.1,
+      "fibre": 6.6,
+      "salt": 0.83,
       "source": "derived"
      }
     }
@@ -5102,11 +5090,11 @@
       "source": "derived"
      },
      "cheryl": {
-      "grams": 325,
-      "kcal": 386,
-      "protein": 36.9,
-      "fibre": 7.0,
-      "salt": 1.26,
+      "grams": 305,
+      "kcal": 377,
+      "protein": 34.6,
+      "fibre": 5.6,
+      "salt": 1.1,
       "source": "derived"
      }
     }
@@ -5338,11 +5326,11 @@
       }
      },
      "cheryl": {
-      "grams": 375,
-      "kcal": 386,
-      "protein": 33.9,
-      "fibre": 9.9,
-      "salt": 1.07,
+      "grams": 440,
+      "kcal": 426,
+      "protein": 36.6,
+      "fibre": 10.3,
+      "salt": 1.1,
       "source": "derived"
      }
     }
@@ -5568,11 +5556,11 @@
       "source": "costed"
      },
      "cheryl": {
-      "grams": 515,
-      "kcal": 383,
-      "protein": 42.6,
-      "fibre": 13.1,
-      "salt": 1.46,
+      "grams": 425,
+      "kcal": 376,
+      "protein": 41.1,
+      "fibre": 10.9,
+      "salt": 1.44,
       "source": "derived"
      }
     }
@@ -6025,11 +6013,11 @@
       }
      },
      "cheryl": {
-      "grams": 425,
-      "kcal": 386,
-      "protein": 42.2,
-      "fibre": 10.0,
-      "salt": 0.58,
+      "grams": 450,
+      "kcal": 421,
+      "protein": 47.5,
+      "fibre": 9.9,
+      "salt": 0.64,
       "source": "derived"
      }
     }
@@ -6138,13 +6126,13 @@
      "note": "RAW, not cooked in brine. In OFF the heat, lid on, 3 minutes in residual heat only"
     },
     {
-     "item": "Prawn shells or reduced-salt stock cube",
+     "item": "Reduced-salt fish or chicken stock",
      "grams": 1100,
      "aisle": "cupboard",
-     "packSize": null,
+     "packSize": 1000,
      "packUnit": "ml",
      "staple": false,
-     "note": "shell stock takes 20 minutes, is free, and is the difference between this and a bowl of barley"
+     "note": "or the stock you make from the prawn shells, which costs nothing and is better"
     },
     {
      "item": "Frozen peas",
@@ -6498,11 +6486,11 @@
       }
      },
      "cheryl": {
-      "grams": 440,
-      "kcal": 387,
-      "protein": 38.9,
-      "fibre": 9.8,
-      "salt": 0.75,
+      "grams": 455,
+      "kcal": 443,
+      "protein": 45.9,
+      "fibre": 10.3,
+      "salt": 0.89,
       "source": "derived"
      }
     }
@@ -6899,7 +6887,7 @@
    "id": "chicken-bean-spinach-pot",
    "name": "Chicken, bean and spinach pot",
    "slot": "dinner",
-   "basePortions": 3,
+   "basePortions": 5,
    "timeMinutes": 15,
    "handsOnMinutes": 15,
    "tags": [
@@ -6911,7 +6899,7 @@
    "ingredients": [
     {
      "item": "Cooked chicken breast, pre-packed",
-     "grams": 375,
+     "grams": 625,
      "aisle": "meat-fish",
      "packSize": 150,
      "packUnit": "g",
@@ -6920,16 +6908,16 @@
     },
     {
      "item": "Butter beans",
-     "grams": 588,
+     "grams": 980,
      "aisle": "cupboard",
      "packSize": 400,
      "packUnit": "g",
      "staple": true,
-     "note": "3 tins, drained and RINSED - the tin liquid is where the salt is"
+     "note": "4 tins, drained and RINSED - the tin liquid is where the salt is"
     },
     {
      "item": "Passata",
-     "grams": 500,
+     "grams": 833,
      "aisle": "cupboard",
      "packSize": 500,
      "packUnit": "g",
@@ -6937,7 +6925,7 @@
     },
     {
      "item": "Spinach",
-     "grams": 325,
+     "grams": 542,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -6946,7 +6934,7 @@
     },
     {
      "item": "Onions",
-     "grams": 150,
+     "grams": 250,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
@@ -6954,7 +6942,7 @@
     },
     {
      "item": "Garlic",
-     "grams": 15,
+     "grams": 25,
      "aisle": "cupboard",
      "packSize": null,
      "packUnit": "g",
@@ -6963,7 +6951,7 @@
     },
     {
      "item": "Olive oil",
-     "grams": 13,
+     "grams": 22,
      "aisle": "cupboard",
      "packSize": 500,
      "packUnit": "ml",
@@ -6971,7 +6959,7 @@
     },
     {
      "item": "Smoked paprika",
-     "grams": 6,
+     "grams": 10,
      "aisle": "cupboard",
      "packSize": 45,
      "packUnit": "g",
@@ -6979,7 +6967,7 @@
     },
     {
      "item": "Chilli flakes",
-     "grams": 2,
+     "grams": 3,
      "aisle": "cupboard",
      "packSize": 35,
      "packUnit": "g",
@@ -6987,7 +6975,7 @@
     },
     {
      "item": "Dried oregano",
-     "grams": 2,
+     "grams": 3,
      "aisle": "cupboard",
      "packSize": 45,
      "packUnit": "g",
@@ -6995,7 +6983,7 @@
     },
     {
      "item": "Lemons",
-     "grams": 35,
+     "grams": 58,
      "aisle": "fresh",
      "packSize": null,
      "packUnit": "g",
