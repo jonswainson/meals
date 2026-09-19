@@ -180,9 +180,9 @@ const FIXED = {
   "cherry-berry":  {name:"Cherry berry smoothie",
     jon:{kcal:480,protein:48.3,fibre:9.6,salt:0.57}, cheryl:{kcal:360,protein:36.2,fibre:7.2,salt:0.43}},
   "almond-blueberry": {name:"Almond and blueberry smoothie",
-    jon:{kcal:532,protein:46.6,fibre:9.8,salt:0.85}, cheryl:{kcal:399,protein:35.0,fibre:7.4,salt:0.64}},
+    jon:{kcal:528,protein:50.6,fibre:8.9,salt:0.52}, cheryl:{kcal:396,protein:37.9,fibre:6.7,salt:0.39}},
   "pb-banana-oats": {name:"Peanut butter, banana and blueberry oats",
-    jon:{kcal:540,protein:31.4,fibre:10.2,salt:0.25}, cheryl:{kcal:405,protein:23.5,fibre:7.6,salt:0.19}},
+    jon:{kcal:523,protein:46.1,fibre:7.7,salt:0.43}, cheryl:{kcal:392,protein:34.5,fibre:5.7,salt:0.32}},
   "gingerbread":  {name:"Gingerbread smoothie",
     jon:{kcal:537,protein:50.7,fibre:7.3,salt:0.52}, cheryl:{kcal:403,protein:38.0,fibre:5.5,salt:0.39}},
   "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
@@ -213,27 +213,27 @@ const FIXED = {
   "roast-beef": {name:"Sunday roast \u2014 Beef", bought:true,
     jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.50,plateGrams:720},
     cheryl:{kcal:524,protein:53.1,fibre:8.3,salt:1.12,plateGrams:540},
-    daughter:{kcal:436,protein:44.2,fibre:6.9,salt:0.94,plateGrams:450}},
+    daughter:{plateGrams:450}},
   "roast-pork": {name:"Sunday roast \u2014 Pork", bought:true,
     jon:{kcal:707,protein:71.0,fibre:11.1,salt:1.50,plateGrams:720},
     cheryl:{kcal:530,protein:53.2,fibre:8.3,salt:1.12,plateGrams:540},
-    daughter:{kcal:442,protein:44.4,fibre:6.9,salt:0.94,plateGrams:450}},
+    daughter:{plateGrams:450}},
   "roast-chicken": {name:"Sunday roast \u2014 Chicken", bought:true,
     jon:{kcal:646,protein:64.9,fibre:11.1,salt:1.50,plateGrams:720},
     cheryl:{kcal:484,protein:48.7,fibre:8.3,salt:1.12,plateGrams:540},
-    daughter:{kcal:404,protein:40.6,fibre:6.9,salt:0.94,plateGrams:450}},
+    daughter:{plateGrams:450}},
   "roast-turkey": {name:"Sunday roast \u2014 Turkey", bought:true,
     jon:{kcal:631,protein:68.8,fibre:11.1,salt:1.50,plateGrams:720},
     cheryl:{kcal:473,protein:51.6,fibre:8.3,salt:1.12,plateGrams:540},
-    daughter:{kcal:394,protein:43.0,fibre:6.9,salt:0.94,plateGrams:450}},
+    daughter:{plateGrams:450}},
   "roast-lamb": {name:"Sunday roast \u2014 Lamb", bought:true,
     jon:{kcal:745,protein:69.2,fibre:11.1,salt:1.50,plateGrams:720},
     cheryl:{kcal:559,protein:51.9,fibre:8.3,salt:1.12,plateGrams:540},
-    daughter:{kcal:466,protein:43.2,fibre:6.9,salt:0.94,plateGrams:450}},
-  "roast-ham": {name:"Sunday roast \u2014 Roast ham", bought:true,
-    jon:{kcal:703,protein:62.5,fibre:11.1,salt:6.46,plateGrams:720},
-    cheryl:{kcal:527,protein:46.9,fibre:8.3,salt:4.85,plateGrams:540},
-    daughter:{kcal:439,protein:39.1,fibre:6.9,salt:4.04,plateGrams:450}},
+    daughter:{plateGrams:450}},
+  "roast-ham": {name:"Sunday roast \u2014 Roast ham", bought:true, monthly:true, noLeftoverLunch:true,
+    jon:{kcal:703,protein:62.5,fibre:11.1,salt:4.66,plateGrams:720},
+    cheryl:{kcal:527,protein:46.9,fibre:8.3,salt:3.50,plateGrams:540},
+    daughter:{plateGrams:450}},
   "own-thing":    {name:"Something else \u2014 our own thing",
     jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}, free:true},
   "none":         {name:"Nothing",
@@ -258,11 +258,11 @@ const FIXED = {
   "sunday-roast": {name:"Sunday's roast", bought:true,
                    jon:{kcal:698,protein:70.8,fibre:11.1,salt:1.5,plateGrams:720},
                    cheryl:{kcal:524,protein:53.1,fibre:8.3,salt:1.12,plateGrams:540},
-                   daughter:{kcal:531,protein:43.2,fibre:6.3,salt:1.0,plateGrams:450}}
+                   daughter:{plateGrams:450}}
 };
 
 /* how long the fixed items take */
-Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":15,"gingerbread":5,"bacon-cottage":10,"milbona":0,"huel-milbona":0,"banana-skyr":1,
+Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":12,"gingerbread":5,"bacon-cottage":10,"milbona":0,"huel-milbona":0,"banana-skyr":1,
   "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"own-thing":0,"cheat-meal":0,"roast-beef":90,"roast-pork":90,"roast-chicken":90,"roast-turkey":90,"roast-lamb":90,"roast-ham":90,"ms-bought":0,
   "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
@@ -293,9 +293,13 @@ const SLOT_OPTIONS = {
 const CHERYL_LUNCH_ADDON = {kcal:133,protein:9.3,fibre:1.7,salt:0.11,
                             label:"three-quarters of Jon's 2:30 \u2014 90g banana and 75g Skyr"};
 
+/* Coach ruling, 19 September: THE TARGET IS WEEKLY. Six counted days at 1,900 plus a
+   Saturday of about 2,400 that nobody measures - 13,800 for the week. The +611 the
+   planner kept reporting as an overage was the cheat meal, and it was always budgeted.
+   weekKcal is what the week is scored against; kcal is still the daily one. */
 const TARGETS = {
-  jon:    {kcal:1900, band:50, protein:170, salt:6},
-  cheryl: {kcal:1400, band:80, protein:110, salt:6}
+  jon:    {kcal:1900, band:50, protein:170, salt:6, cheatKcal:2400, weekBand:350, fibre:25},
+  cheryl: {kcal:1400, band:80, protein:110, salt:6, cheatKcal:1800, weekBand:300, fibre:22}
 };
 
 /* ---------- the week ---------- */
@@ -419,9 +423,11 @@ FIXED["gingerbread"].ing = {
 FIXED["gingerbread"].ing.cheryl = share(FIXED["gingerbread"].ing.jon, 0.75);
 
 FIXED["pb-banana-oats"].ing = {
-  jon:[I("Rolled oats",50,"cupboard",1000,true), I("Whey protein powder",25,"cupboard",1000,true),
-       I("Bananas",90,"fresh"), I("Maple syrup",7,"cupboard",250,true),
-       I("Walnuts",8,"cupboard",200,true), I("Crunchy peanut butter",12,"cupboard",340,true),
+  jon:[I("Plain Skyr",200,"dairy",450,true), I("Rolled oats",28,"cupboard",1000,true),
+       I("Whey protein powder",22,"cupboard",1000,true),
+       I("Bananas",85,"fresh"), I("Maple syrup",5,"cupboard",250,true),
+       I("Walnuts",5,"cupboard",200,true), I("Crunchy peanut butter",7,"cupboard",340,true),
+       I("Chia seeds",6,"cupboard",300,true),
        I("Frozen blueberries",40,"frozen",500), I("Ground cinnamon",1,"cupboard",45,true)]};
 FIXED["pb-banana-oats"].ing.cheryl = share(FIXED["pb-banana-oats"].ing.jon, 0.75);
 
@@ -432,10 +438,11 @@ FIXED["cherry-berry"].ing = {
 FIXED["cherry-berry"].ing.cheryl = share(FIXED["cherry-berry"].ing.jon, 0.75);
 
 FIXED["almond-blueberry"].ing = {
-  jon:[I("Almond milk",375,"dairy",1000,true,"ml"), I("Whey protein powder",30,"cupboard",1000,true),
-       I("Rolled oats",18,"cupboard",1000,true), I("Bananas",60,"fresh"),
-       I("Frozen blueberries",80,"frozen",500), I("Whole almonds",20,"cupboard",200,true),
-       I("Whey protein powder",20,"cupboard",1000,true)]};
+  jon:[I("Plain Skyr",200,"dairy",450,true), I("Semi-skimmed milk",100,"dairy",2000,true,"ml"),
+       I("Whey protein powder",25,"cupboard",1000,true),
+       I("Rolled oats",15,"cupboard",1000,true), I("Bananas",70,"fresh"),
+       I("Frozen blueberries",80,"frozen",500), I("Whole almonds",8,"cupboard",200,true),
+       I("Chia seeds",10,"cupboard",300,true)]};
 FIXED["almond-blueberry"].ing.cheryl = share(FIXED["almond-blueberry"].ing.jon, 0.75);
 
 FIXED["berry-oat"].ing = {
@@ -503,16 +510,16 @@ FIXED["bacon-cottage"].mix = [["Back bacon (3 rashers)",75],["Cottage cheese",20
 FIXED["gingerbread"].mix = [["Reduced-fat milk",250,"ml"],["Vanilla protein powder",44],
   ["Rolled oats",30],["Maple syrup",5],["Whole roasted almonds",18],
   ["Ground cinnamon",1.3],["Ground nutmeg",0.5],["Ground ginger",0.5]];
-FIXED["pb-banana-oats"].mix = [["Water",250,"ml"],["Rolled oats",50],["Cinnamon, a pinch",1],
-  ["Vanilla protein powder",25],["Banana \u2014 weighed, peeled, mashed",120],
-  ["Maple syrup",7],["Walnuts, chopped (about 6)",8],["Crunchy peanut butter",12],
-  ["Blueberries, for the jam",40]];
+FIXED["pb-banana-oats"].mix = [["Plain Skyr",200],["Water",200,"ml"],["Rolled oats",28],
+  ["Cinnamon, a pinch",1],["Whey protein powder",22],["Banana \u2014 weighed, peeled, mashed",70],
+  ["Maple syrup",5],["Walnuts, chopped",5],["Crunchy peanut butter",7],
+  ["Chia seeds",6],["Blueberries, for the jam",40]];
 FIXED["cherry-berry"].mix = [["Frozen cherries, pitted",75],["Frozen raspberries",75],
   ["Vanilla protein powder",40],["Whey",5],["Rolled oats",27],["Cocoa powder",5],
   ["Reduced-fat milk",250,"ml"]];
-FIXED["almond-blueberry"].mix = [["Almond milk",375,"ml"],["Vanilla protein powder",30],
-  ["Whey",20],["Rolled oats",18],["Banana, frozen \u2014 weighed, peeled",60],
-  ["Frozen blueberries",80],["Whole almonds",20]];
+FIXED["almond-blueberry"].mix = [["Plain Skyr",200],["Reduced-fat milk",100,"ml"],
+  ["Whey protein powder",25],["Rolled oats",15],["Banana, frozen \u2014 weighed, peeled",60],
+  ["Frozen blueberries",80],["Whole almonds",8],["Chia seeds",10]];
 FIXED["berry-oat"].mix = [["Skyr",200],["Whey",32],["Milk",150,"ml"],
   ["Frozen mixed berries",100],["Porridge oats",30],["Chia seeds",12]];
 FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",20,"ml"],
@@ -544,25 +551,30 @@ FIXED["gingerbread"].recipe = R(
   "Salt is an estimate.");
 
 FIXED["pb-banana-oats"].recipe = R(
-  ["250ml water \u00b7 50g rolled oats \u00b7 a pinch of cinnamon \u00b7 a pinch of salt",
-   "25g vanilla protein powder \u00b7 <b>1 banana, weighed at 120g peeled</b>, mashed",
-   "2 tsp maple syrup (~14g) \u00b7 6 walnuts (~15g), chopped",
-   "1 tbsp crunchy peanut butter (~16g)",
+  ["<b>200g plain Skyr \u00b7 22g whey</b> \u2014 the standing base, stirred in at the end",
+   "200ml water \u00b7 28g rolled oats \u00b7 a pinch of cinnamon",
+   "<b>Banana, weighed at 70g peeled</b>, mashed \u00b7 6g chia seeds",
+   "1 tsp maple syrup (~5g) \u00b7 walnuts (~5g), chopped",
+   "2 tsp crunchy peanut butter (~7g)",
    "<b>Jam:</b> 40g blueberries \u00b7 1 tsp water"],
-  ["Water, oats, cinnamon and the pinch of salt into a saucepan. Gentle simmer, a few minutes.",
-   "<b>Protein powder and mashed banana in, and keep stirring until it is thick and creamy.</b> " +
-   "More water if it tightens too far. Off the heat. This is the step that makes it what it is \u2014 " +
-   "stop early and it is porridge with powder in it.",
+  ["Water, oats, chia and the cinnamon into a saucepan. Gentle simmer, a few minutes.",
+   "<b>Mashed banana in, and keep stirring until it is thick and creamy.</b> " +
+   "More water if it tightens too far. Off the heat.",
+   "<b>Skyr and whey stirred in off the heat, never on it</b> \u2014 Skyr splits if you boil it, " +
+   "and whey in a hot pan goes grainy. This is the step that makes it what it is.",
    "Jam alongside at the same time: blueberries and a teaspoon of water in a small pan, stirred " +
    "often until thick and jammy.",
    "<b>Thin the peanut butter with a little hot water to a paste</b> so it drizzles instead of sitting " +
    "in a lump.",
    "Oats in the bowl, then the jam, the maple, the walnuts and the peanut butter."],
   null,
-  "<b>29.5g of protein \u2014 the lowest breakfast here, 20g under the weekday band.</b> That is " +
-  "fine for what it is: this is the weekend one, and Saturday is not counted. On a weekday it " +
-  "needs 200g of Skyr beside it.<br><br>" +
-  "<b>Centr says \"1 medium banana\", unweighed</b> \u2014 the 196g trap again. 120g here.");
+  "<b>Rebuilt on the standing dairy base, 19 September.</b> It was the only breakfast here made on " +
+  "water, which is why it was the weakest \u2014 29.5g of protein and no iodine or calcium at all. " +
+  "200g of Skyr and the whey take it to <b>46.1g of protein</b>, and the oats, banana, nuts and " +
+  "peanut butter all came down to pay for it: <b>523 kcal against a 520 slot target.</b><br><br>" +
+  "<b>It is no longer the weekend-only one.</b> That exemption existed because it could not carry a " +
+  "weekday; it can now.<br><br>" +
+  "<b>Centr says \"1 medium banana\", unweighed</b> \u2014 the 196g trap again. 70g here.");
 
 FIXED["cherry-berry"].recipe = R(
   ["75g frozen cherries, pitted \u00b7 75g frozen raspberries","40g vanilla protein powder",
@@ -577,23 +589,25 @@ FIXED["cherry-berry"].recipe = R(
   "<b>50.1g of protein \u2014 inside the band</b>.");
 
 FIXED["almond-blueberry"].recipe = R(
-  ["375ml almond milk \u00b7 30g vanilla protein powder \u00b7 <b>20g whey</b>",
-   "2 tbsp rolled oats (~18g)",
+  ["<b>200g plain Skyr \u00b7 25g whey</b> \u2014 the standing base",
+   "100ml reduced-fat milk \u00b7 2 tbsp rolled oats (~15g)",
    "<b>Half a banana, frozen \u2014 weighed at 60g peeled</b>","80g frozen blueberries",
-   "<b>20g whole almonds</b>"],
-  ["Everything in and blend on high. Serve straight away.",
-   "A little water if your powder is thick."],
+   "<b>8g whole almonds \u00b7 10g chia seeds</b>"],
+  ["Whey in first, then everything else \u2014 powder sitting on the blades goes lumpy.",
+   "Blend on high. Serve straight away.",
+   "A little more milk if it is too thick to pour."],
   null,
-  "<b>Changed from Centr:</b> whole almonds instead of almond butter, and 20g of whey added. " +
-  "That takes it from 34.8g of protein to <b>50.0g \u2014 into the band</b>, at the cost of 51 kcal.<br><br>" +
-  "<b>The banana is halved to 60g</b>, which brings it from 669 to 616.<br><br>" +
-  "<b>Still the heaviest breakfast here.</b> On a day that is already near target it will tip it " +
-  "over \u2014 check the day total rather than trusting a number written into this card.<br><br>" +
-  "That leaves protein at <b>49.3g, seven-tenths of a gram under the band</b>. Closing it costs " +
-  "more calories than the gap is worth \u2014 on a 1,900 kcal day, 0.7g of protein is noise and " +
-  "50 kcal is not.<br><br>" +
-  "<b>Centr says \"1 medium banana\", unweighed</b> \u2014 the documented 196g trap. Weighed here. " +
-  "Salt is an estimate.");
+  "<b>Off the almond milk, 19 September.</b> This and the peanut butter oats were the only two " +
+  "breakfasts not built on the standing base, and that \u2014 not the recipe \u2014 was the iodine " +
+  "and calcium gap the dietician found. Almond milk is 13 kcal and 0.4g of protein per 100ml, it is " +
+  "calcium-fortified but essentially never iodine-fortified, and at 32 kcal per gram of protein it " +
+  "has no business near a protein target.<br><br>" +
+  "<b>200g of Skyr and 100ml of milk replace 375ml of almond milk.</b> Protein goes from 46.6g to " +
+  "<b>50.6g</b>, salt from 0.85g to 0.52g, and it lands at <b>528 kcal against a 520 slot " +
+  "target</b> \u2014 it was the heaviest breakfast in the file and it no longer is.<br><br>" +
+  "<b>The almonds came down from 20g to 8g</b> and 10g of chia went in, which holds the fibre at " +
+  "8.9g for a third of the calories.<br><br>" +
+  "<b>Centr says \"1 medium banana\", unweighed</b> \u2014 the documented 196g trap. Weighed here.");
 
 FIXED["berry-oat"].recipe = R(
   ["200g Skyr · 32g whey · 150ml milk","100g frozen mixed berries","30g porridge oats · 12g chia seeds"],
@@ -642,15 +656,34 @@ ROASTS.forEach(id => {
   const cut = FIXED[id].name.split("\u2014 ")[1].toLowerCase();
   FIXED[id].recipe = R(
     ["The " + cut + " joint \u00b7 200g roast potatoes \u00b7 100g carrots, 100g broccoli, 80g cabbage \u00b7 60ml gravy"],
-    ["Cook enough for Monday as well \u2014 two dinners out of one oven is what makes the week start."],
+    (id === "roast-ham"
+      ? ["<b>Simmer the joint in fresh water first and throw the water away.</b> Cover it cold, bring " +
+         "it up, 20 minutes a 500g, then drain, glaze and finish it in the oven for 25 minutes at " +
+         "200\u00b0C. <b>This is a step, not a tip</b> \u2014 skip it and the plate is 6.46g of salt " +
+         "against a 6g day.",
+         "<b>Cook only what Sunday eats. Anything left is frozen the same night.</b>"]
+      : ["Cook enough for Monday as well \u2014 two dinners out of one oven is what makes the week start."]),
     "<b>Three-quarters of Jon's</b>, off the same plates.",
     (id === "roast-ham"
-      ? "<b>5.8g of salt on one plate, against 6g for the whole day.</b> Ham is cured; that is what " +
-        "curing is. Everything else on Sunday has to be close to salt-free, and Monday's leftovers " +
-        "carry the same load. The other five joints are all 1.5g."
+      ? "<b>4.66g of salt on one plate, simmered \u2014 78% of the whole day, and that is the " +
+        "good number.</b> Unsimmered it is 6.46g, over the ceiling on its own. Ham is cured; that is " +
+        "what curing is, and the other five joints are all about 1.5g.<br><br>" +
+        "<b>Coach ruling, 19 September \u2014 three conditions, all mandatory:</b><br>" +
+        "1. <b>Simmer in fresh water and discard it.</b> It is in the method above as a step.<br>" +
+        "2. <b>Once a month at most</b>, not once a week.<br>" +
+        "3. <b>The leftovers are frozen, not eaten on Monday.</b> This is the single exception to " +
+        "\"every dinner leaves a next-day lunch\" \u2014 that rule is there to save effort, not to " +
+        "make a salt load land twice.<br><br>" +
+        "<b>Everything else on Sunday has to be close to salt-free</b>, and even then it is tight: " +
+        "the rest of this day as planned is about 1.7g, which puts the day over 6g on its own. " +
+        "Check the day total at the top before you commit to this joint.<br><br>" +
+        "<b>What decided it was not Jon.</b> Your daughter takes 2.91g on this plate against the " +
+        "same 6g ceiling an adult has, and she was taking it twice in a week."
       : "<b>Accompaniments are the same whatever the joint</b> \u2014 only the 180g of meat moves. " +
         "Anchored on the costed beef plate.") +
-    "<br><br><b>Monday's dinner follows this choice automatically.</b>");
+    (id === "roast-ham"
+      ? "<br><br><b>Monday's dinner does NOT follow this one</b> \u2014 pick Monday separately."
+      : "<br><br><b>Monday's dinner follows this choice automatically.</b>"));
 });
 
 FIXED["own-thing"].recipe = R(
@@ -729,7 +762,13 @@ const ZEROPLATE = {kcal:0,protein:0,fibre:0,salt:0,plateGrams:0};
 /* Monday is the same joint reheated, so it follows Sunday rather than holding its own
    figures. Pick lamb on Sunday and Monday is lamb. */
 /* Monday's "off Sunday's joint" resolves to whichever joint Sunday is actually cooking. */
-const followRoast = id => (id === "sunday-roast" && roastOn("sun")) || id;
+/* Monday inherits Sunday's joint - except the ham, whose leftovers are frozen rather than
+   eaten the next day (coach ruling 3.1). Following it would land the salt twice. */
+const followRoast = id => {
+  if (id !== "sunday-roast") return id;
+  const r = roastOn("sun");
+  return (r && !(FIXED[r] || {}).noLeftoverLunch) ? r : id;
+};
 
 function roastOn(dayId){
   const dd = WEEK && WEEK.days && WEEK.days.find(x => x.id === dayId);
@@ -781,6 +820,9 @@ const add = (a,b) => ({kcal:a.kcal+b.kcal, protein:a.protein+b.protein,
                        fibre:a.fibre+b.fibre, salt:a.salt+b.salt});
 
 function mealFor(d, slot, who){
+  /* Coach ruling 3.4: she is never scored. Her plates carry weights and no macros at all,
+     so this has to return before anything tries to add them up. */
+  if (who === "daughter") return ZERO;
   const m = d[slot];
   if (typeof m === "string"){
     const f = FIXED[m]; return (f && f[who]) ? f[who] : ZERO;
@@ -796,7 +838,10 @@ function mealFor(d, slot, who){
   }
   if (m.kind === "recipe"){
     const r = recipe(m.id); if (!r) return ZERO;
-    if (who === "daughter" && !m.daughter) return ZERO;
+    /* Coach ruling 3.4, 19 September: no calorie or protein figure is computed or shown for
+       her, on a plate or a day. She is portioned by composition, the same food in her own
+       share. Her plates carry weights only. */
+    if (who === "daughter") return ZERO;
     let v = r.plates[who] || ZERO;
     if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_ADDON);
     return v;
@@ -836,6 +881,20 @@ function assumedFree(d, who){
   return k;
 }
 
+/* The weekly target is BUILT from the days actually counted, never hard-coded. A fixed
+   13,800 is only right for a seven-day week with one cheat meal - Cheryl eats six days
+   this week and a constant read her as 1,300 short of a target she was never on. This is
+   the same mistake as the +611: comparing against a week nobody was planning. */
+function weekTarget(who){
+  const t = TARGETS[who];
+  let days = 0, cheat = 0;
+  WEEK.days.forEach(d => {
+    if (d.free || !d.diners.includes(who)) return;
+    days++; if (assumedFree(d, who) > 0) cheat++;
+  });
+  return {kcal: (days - cheat) * t.kcal + cheat * t.cheatKcal, days, cheat};
+}
+
 function weekTotal(who){
   let kcal = 0, assumed = 0, days = 0;
   WEEK.days.forEach(d => {
@@ -872,6 +931,22 @@ function status(d, who){
   return {v, problems};
 }
 
+/* Coach ruling 3.5: fibre is REPORTED, never gating. It can never fail a plan or trigger
+   a substitution - where it competes with calories and protein inside 1,900, fibre loses.
+   The only thing worth saying is a pattern, so this looks for three consecutive counted
+   days under 25g and says nothing at all otherwise. */
+function fibreRun(who){
+  const t = TARGETS[who]; let best = null, run = [];
+  WEEK.days.forEach(d => {
+    const counted = !d.free && d.diners.includes(who) && freeSlots(d).length === 0;
+    if (!counted){ run = []; return; }
+    if (dayTotal(d, who).fibre < t.fibre) run.push(d.title);
+    else run = [];
+    if (run.length >= 3 && (!best || run.length > best.length)) best = run.slice();
+  });
+  return best;
+}
+
 function fixLine(who, problems){
   if (!problems.length) return "";
   const bits = problems.map(p =>
@@ -880,8 +955,14 @@ function fixLine(who, problems){
   const kcal = problems.find(p => p.k === "kcal");
   const prot = problems.find(p => p.k === "protein");
   let sug = "";
-  if (prot && prot.d <= -15) sug = " Close it with plain Skyr — 100g is 63 kcal and 11g.";
-  else if (prot)             sug = " Under by less than 15g, which the brief says to leave alone.";
+  /* Coach ruling, 19 September: 170g is a FLOOR, not a target. 167.7g is a fail and so is
+     169.3g. This used to say a shortfall under 15g could be left alone, which was true of a
+     target and is not true of a floor. Protein is protected ahead of calories: a day light on
+     calories that hits protein is fine and the reverse is not. */
+  if (prot && prot.d <= -15) sug = " That is a fail — 170g is a floor. Closest fix is plain Skyr: 100g is 63 kcal and 11g.";
+  else if (prot)             sug = " <b>170g is a floor, so this is a fail even though it is close.</b> " +
+                                   Math.ceil(Math.abs(prot.d) / 11 * 100) + "g of plain Skyr covers it for " +
+                                   Math.ceil(Math.abs(prot.d) / 11 * 63) + " kcal.";
   else if (kcal && kcal.d < 0) sug = " A bigger afternoon feed is the easiest 100–200.";
   else if (kcal && kcal.d > 0) sug = " An apple at 2:30 instead, or a smaller plate.";
   return (who === "jon" ? "Jon" : "Cheryl") + ": " + bits.join(" · ") + "." + sug;
@@ -940,19 +1021,34 @@ function renderTotals(d){
   /* the week, which is the number that actually decides whether this works */
   body += '<div class="wk">';
   eating.forEach(who => {
-    const w = weekTotal(who), t = TARGETS[who];
-    const per = Math.round(w.total / w.days), gap = per - t.kcal;
-    if (Math.abs(gap) > t.band) flag = true;
+    const w = weekTotal(who), t = TARGETS[who], tg = weekTarget(who);
+    const gap = w.total - tg.kcal, off = Math.abs(gap) > t.weekBand;
+    if (off) flag = true;
     body += '<div class="trow"><span class="who">' + (who === "jon" ? "Jon" : "Cheryl") +
-      ", the week</span><span class=\"" + (Math.abs(gap) > t.band ? "amber" : "ok") + '"><b>' +
-      w.total.toLocaleString() + '</b> kcal over ' + w.days + ' days \u00b7 <b>' + per +
-      '</b> a day \u00b7 ' + (gap > 0 ? "+" : "") + gap + ' vs ' + t.kcal + '</span></div>';
+      ", the week</span><span class=\"" + (off ? "amber" : "ok") + '"><b>' +
+      w.total.toLocaleString() + '</b> kcal \u00b7 ' + (gap > 0 ? "+" : "") + gap.toLocaleString() +
+      ' vs ' + tg.kcal.toLocaleString() + '</span></div>';
   });
   const anyAssumed = eating.some(who => weekTotal(who).assumed > 0);
   if (anyAssumed)
-    body += '<p class="fix">Includes an assumed <b>1,200 kcal</b> for the cheat meal (900 for Cheryl). ' +
-         'Nobody has measured it \u2014 but leaving it out of the week made the plan look like a ' +
-         'deficit it is not.</p>';
+  {
+    const tg = weekTarget("jon");
+    body += '<p class="fix"><b>The week is the target, not the day.</b> ' + (tg.days - tg.cheat) +
+         ' counted days at ' + TARGETS.jon.kcal.toLocaleString() + ' plus ' + (tg.cheat === 1 ? 'a day' :
+         tg.cheat + ' days') + ' of about ' + TARGETS.jon.cheatKcal.toLocaleString() +
+         ' that nobody measures \u2014 <b>' + tg.kcal.toLocaleString() + ' for Jon\'s week</b>. ' +
+         'The cheat meal is inside that figure at an assumed 1,200 kcal (900 for Cheryl); it was ' +
+         'always budgeted, and it is not something to pay back on Monday. ' +
+         '<b>Each person\'s target is built from the days they actually eat</b>, so it is not the ' +
+         'same number for both of them.</p>';
+  }
+  eating.forEach(who => {
+    const run = fibreRun(who);
+    if (run) body += '<p class="fix"><b>' + (who === "jon" ? "Jon" : "Cheryl") + ': fibre under ' +
+      TARGETS[who].fibre + 'g on ' + run.length + ' days running</b> \u2014 ' + run.join(", ") +
+      '. Reported, not a failure: fibre never outranks calories or protein. Worth a look only ' +
+      'because it is a run rather than a day.</p>';
+  });
   body += '</div>';
 
   const free = freeSlots(d);
@@ -1108,6 +1204,12 @@ function mealCard(d, slot){
     if (rid !== m.id)
       h += '<p class="note prep"><b>Following Sunday.</b> Change the joint there and this changes ' +
            'with it \u2014 it is the same meat, reheated in the gravy.</p>';
+    /* the one joint Monday cannot inherit: the ham's leftovers are frozen, not eaten */
+    if (m.id === "sunday-roast" && (FIXED[roastOn("sun")] || {}).noLeftoverLunch)
+      h += '<p class="note warn"><b>Sunday is the ham, so there are no leftovers for tonight.</b> ' +
+           'They go in the freezer the same night \u2014 a 4.66g plate is not one to eat twice in ' +
+           'two days. <b>Pick Monday\'s dinner yourself</b>; the figures above are the generic roast ' +
+           'and are not what you are eating.</p>';
     if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
     return closeCard(h, d, slot);
@@ -1193,8 +1295,10 @@ function mealCard(d, slot){
   }
   if (r && r.plates.jon && r.plates.jon.assumed)
     h += '<p class="note warn">Jon\'s plate here is <b>derived, not tested</b> — treat the numbers as an estimate.</p>';
-  if (d.diners.includes("daughter") && r && r.plates.daughter && r.plates.daughter.assumed)
-    h += '<p class="note warn">Your daughter\'s plate is <b>derived and never tested</b> — nobody has built one for this meal.</p>';
+  if (d.diners.includes("daughter") && r && r.plates.daughter && r.plates.daughter.derivedShare)
+    h += '<p class="note">Her share here is <b>derived from the ratio, not built for this meal</b> — ' +
+         'it is the same food in her own portion, so treat the weight as a starting point and ' +
+         'go by what she actually eats.</p>';
   if (d.diners.includes("daughter") && r && !r.plates.daughter)
     h += '<p class="note">Not a family meal — nothing here for your daughter.</p>';
   if (r && r.retired)
