@@ -1,5 +1,5 @@
 {
- "version": "2026-09-19a",
+ "version": "2026-09-19b",
  "aisles": [
   "fresh",
   "meat-fish",
@@ -3473,8 +3473,8 @@
    },
    "prep": {
     "when": "weekend",
-    "note": "Six tubs from one 45-minute cook. Three days in the fridge, three months in the freezer. At lunch it is reheated and nothing else.",
-    "cooksAtLunch": "The halloumi croutons are fried fresh at the bowl - 3-4 minutes in a pan. That is cooking at lunchtime and the rule now says no. Either fry them with the weekend batch and take them cold, or leave them off at lunch and keep this recipe for a dinner."
+    "note": "Six tubs from one 45-minute cook. Three days in the fridge, three months in the freezer. At lunch the soup is reheated; see the pan note below for the croutons.",
+    "pan": "The halloumi croutons are four minutes in a dry pan at the bowl. That is the only lunch in the corpus with a pan in it. Nothing raw, nothing prepped - if that is too much on a given day, take the soup plain and the croutons are 120 kcal you did not eat."
    }
   },
   {
@@ -4080,7 +4080,7 @@
      "packSize": 650,
      "packUnit": "g",
      "staple": false,
-     "note": "RAW weight - roasted and cold, sliced thick"
+     "note": "poached with the weekend batch and sliced cold - never cooked at lunch"
     },
     {
      "item": "Plain Skyr",
@@ -4538,7 +4538,7 @@
      "packSize": 650,
      "packUnit": "g",
      "staple": false,
-     "note": "1cm dice"
+     "note": "cooked into the tortilla ahead; the wedge is eaten cold"
     },
     {
      "item": "Olive oil",
@@ -6906,5 +6906,5 @@
  ],
  "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8.",
  "portionRule": "One recipe, one set of ingredients, one ratio. Jon's plate is the recipe's portion; Cheryl has three-quarters of it (4:3); the daughter's share is whatever her plate weight has always been, of the same food. Nothing is made twice and nobody gets a different version. Set 18 September 2026 after Cheryl had spent a week making two smoothies.",
- "lunchRule": "No cooking at lunchtime - there is no time for it. A warm lunch is either leftovers from a dinner or a soup or braise batch-cooked the previous weekend, reheated and nothing else. Anything that needs a hob or an oven is done the night before or with the weekend batch. Set 19 September 2026."
+ "lunchRule": "Warming up is fine - reheating a portion, filling a flask, a soup out of the freezer, a few minutes in a pan. PREPARING AND COOKING RAW INGREDIENTS IS NOT: no fish, no raw meat, nothing with a prep stage and a cook stage. That happens the night before or with the weekend batch. Set 19 September 2026, clarified the same day: the line is raw ingredients, not heat."
 }

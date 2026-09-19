@@ -616,9 +616,7 @@ function prepBlock(r){
   const pr = r && r.prep; if (!pr) return "";
   let h = '<p class="note' + (pr.when === "same-day" ? '' : ' prep') + '"><b>' +
           (PREP_LABEL[pr.when] || pr.when) + '.</b> ' + pr.note + '</p>';
-  if (pr.cooksAtLunch)
-    h += '<p class="note warn"><b>This one breaks the no-cooking-at-lunch rule.</b> ' +
-         pr.cooksAtLunch + '</p>';
+  if (pr.pan) h += '<p class="note"><b>There is a pan in this one.</b> ' + pr.pan + '</p>';
   return h;
 }
 
