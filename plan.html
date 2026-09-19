@@ -179,6 +179,8 @@ const FIXED = {
   "banana-skyr-150":{name:"120g banana + 150g Skyr",
                    jon:{kcal:207,protein:17.9,fibre:2.2,salt:0.2},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+  "milbona":      {name:"Milbona high-protein drink, 330ml", bought:true,
+    jon:{kcal:215,protein:35,fibre:0,salt:0.2}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "huel-bar":     {name:"Huel protein bar",
                    jon:{kcal:205,protein:15,fibre:3,salt:0.4},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
@@ -211,7 +213,7 @@ const FIXED = {
 };
 
 /* how long the fixed items take */
-Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":15,"gingerbread":5,"huel-milbona":0,"banana-skyr":1,
+Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":15,"gingerbread":5,"milbona":0,"huel-milbona":0,"banana-skyr":1,
   "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"ms-bought":0,
   "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
@@ -224,7 +226,7 @@ Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":
 const SLOT_OPTIONS = {
   breakfast: ["berry-oat","cherry-berry","gingerbread","almond-blueberry","pb-banana-oats","skyr-bowl",
               "huel-milbona","huel-bottle"],
-  afternoon: ["banana-skyr","banana-skyr-150","cottage-rye","eggs-dukkah","biltong-apple",
+  afternoon: ["banana-skyr","banana-skyr-150","milbona","cottage-rye","eggs-dukkah","biltong-apple",
               "huel-bar","whey-pear","prawns-pear","none"]
 };
 
@@ -378,6 +380,7 @@ FIXED["huel-milbona"].ing = {
 };
 FIXED["banana-skyr"].ing     = {jon:[I("Bananas",120,"fresh"), I("Plain Skyr",100,"dairy",1000,true)]};
 FIXED["banana-skyr-150"].ing = {jon:[I("Bananas",120,"fresh"), I("Plain Skyr",150,"dairy",1000,true)]};
+FIXED["milbona"].ing         = {jon:[I("Milbona high-protein drink (Lidl)",1,"cupboard",1,false,"bottle")]};
 FIXED["huel-bar"].ing        = {jon:[I("Huel protein bar",1,"cupboard",1,false,"bar")]};
 FIXED["whey-pear"].ing       = {jon:[I("Whey protein powder",20,"cupboard",1000,true), I("Pears",170,"fresh",null,false)]};
 FIXED["cottage-rye"].ing   = {jon:[I("Plain cottage cheese",150,"dairy",300),
@@ -499,6 +502,13 @@ FIXED["banana-skyr"].recipe = R(["120g banana, weighed and peeled","100g plain S
 FIXED["banana-skyr-150"].recipe = R(["120g banana, weighed and peeled","150g plain Skyr"], [],
   null,
   "The bigger Skyr is here because Friday is the tightest day for protein.");
+
+FIXED["milbona"].recipe = R(
+  ["One 330ml bottle"], [], null,
+  "<b>35g of protein for 215 kcal</b> \u2014 6.1 kcal per gram, the best trade in this list. " +
+  "Nothing to make and nothing to carry cold.<br><br>" +
+  "<b>If it goes mid-morning it is the 2:30 feed MOVED, not a fifth one.</b> That swap is " +
+  "already sanctioned \u2014 it is what Wednesday's 19:30 prawns are. Four feeds, wherever they land.");
 
 FIXED["huel-bar"].recipe = R(["One bar, in the bag before you leave"], [], null, null);
 
