@@ -44,8 +44,8 @@
     "total": 196,
     "ingredientsInRecipesJson": 161,
     "additionalPlanHtmlIngredients": 35,
-    "high": 152,
-    "medium": 44,
+    "high": 153,
+    "medium": 43,
     "low": 0
   },
   "items": {
@@ -922,6 +922,22 @@
         "mackerel-beetroot-barley-tub"
       ]
     },
+    "Cottage cheese, low fat": {
+      "per": "100g",
+      "kcal": 63,
+      "protein": 9.2,
+      "fat": 0.6,
+      "carbs": 5.1,
+      "fibre": 0.5,
+      "salt": 0.38,
+      "source": "Pack label photographed by Jon, 20 September 2026 - Lidl Milbona LOW FAT cottage cheese, 300g pot, 4 x 75g servings",
+      "confidence": "high",
+      "state": "as sold",
+      "cookedYield": 1.0,
+      "inRecipesJson": false,
+      "packGrams": 300,
+      "note": "LOW FAT, which is what Jon buys. The previous figure was CoFID's plain (standard) cottage cheese at 98 kcal and 12.6g protein - a third more energy and a third more protein than the pot in his fridge. Standard cottage cheese is a different ingredient and if it is ever used it needs its own line, the same way home-roasted and pre-packed chicken do."
+    },
     "Courgette": {
       "per": "100g",
       "kcal": 18,
@@ -1614,18 +1630,20 @@
     },
     "High-protein wraps": {
       "per": "100g",
-      "kcal": 267,
-      "protein": 20.0,
-      "fat": 6.7,
-      "carbs": 26.7,
-      "fibre": 8.3,
-      "salt": 1.67,
-      "source": "Manufacturer data, UK retail — UK high-protein wrap, 60 g",
-      "confidence": "medium",
-      "state": "raw/dry",
+      "kcal": 293,
+      "protein": 16.0,
+      "fat": 3.8,
+      "carbs": 47.6,
+      "fibre": 2.4,
+      "salt": 0.99,
+      "source": "Pack label photographed by Jon, 20 September 2026 - Lidl high protein wrap, 61g each, 6 per pack",
+      "confidence": "high",
+      "state": "as sold",
       "cookedYield": 1.0,
       "inRecipesJson": false,
-      "note": "plan.html item, and the largest single uncertainty in the breakfast block. A 60 g wrap = 160 kcal / 12 g protein / 1.0 g salt. Light 45 g wraps run 118 kcal / 8 g protein. Costed at the 60 g wrap the .mix names."
+      "unitGrams": 61,
+      "unitsPerPack": 6,
+      "note": "THE ACTUAL PRODUCT, replacing a generic estimate that was the largest single uncertainty in the breakfast block and was wrong in every direction: it had 20g of protein (really 16), 8.3g of fibre (really 2.4) and 1.67g of salt (really 0.99). The fibre error was the big one - a 60g wrap was being credited with 5.0g and carries 1.4g. Label is internally consistent: per-100g x 0.61 reproduces the stated per-wrap column exactly."
     },
     "Honey": {
       "per": "100g",
@@ -2287,21 +2305,6 @@
         "harissa-chicken-chickpeas",
         "turkey-black-bean-chilli"
       ]
-    },
-    "Plain cottage cheese": {
-      "per": "100g",
-      "kcal": 98,
-      "protein": 12.6,
-      "fat": 4.3,
-      "carbs": 3.1,
-      "fibre": 0.0,
-      "salt": 0.5,
-      "source": "UK CoFID 2021 (McCance & Widdowson, 7th ed.) — Cheese, cottage, plain",
-      "confidence": "high",
-      "state": "raw/dry",
-      "cookedYield": 1.0,
-      "inRecipesJson": false,
-      "note": "plan.html item."
     },
     "Plain Skyr": {
       "per": "100g",
@@ -3706,5 +3709,6 @@
         "bolognese-hidden-lentils"
       ]
     }
-  }
+  },
+  "labelSourced": "Where Jon has photographed the pack, the pack wins and confidence is high. Generic CoFID entries are a starting point, not the product in the fridge - both items corrected on 20 September moved by more than 30% on at least one figure."
 }
