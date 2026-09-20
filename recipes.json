@@ -725,7 +725,7 @@
             "daughter": 167
           },
           {
-            "item": "Tuna in spring water, tinned",
+            "item": "Tuna in spring water, no added salt",
             "jon": 68,
             "cheryl": 51,
             "daughter": 43
@@ -3219,7 +3219,7 @@
       "id": "tuna-chickpea-salad",
       "name": "Tuna and chickpea salad",
       "slot": "lunch",
-      "basePortions": 1,
+      "basePortions": 2,
       "timeMinutes": 3,
       "tags": [
         "no-cook",
@@ -3229,7 +3229,7 @@
       "ingredients": [
         {
           "item": "Tuna in spring water, no added salt",
-          "grams": 145,
+          "grams": 254,
           "aisle": "cupboard",
           "packSize": 145,
           "packUnit": "g",
@@ -3238,7 +3238,7 @@
         },
         {
           "item": "Chickpeas, tinned",
-          "grams": 170,
+          "grams": 298,
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
@@ -3247,7 +3247,7 @@
         },
         {
           "item": "Salad leaves",
-          "grams": 60,
+          "grams": 105,
           "aisle": "fresh",
           "packSize": 100,
           "packUnit": "g",
@@ -3256,7 +3256,7 @@
         },
         {
           "item": "Cherry tomatoes",
-          "grams": 80,
+          "grams": 140,
           "aisle": "fresh",
           "packSize": 250,
           "packUnit": "g",
@@ -3265,7 +3265,7 @@
         },
         {
           "item": "Cucumber",
-          "grams": 60,
+          "grams": 105,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -3274,7 +3274,7 @@
         },
         {
           "item": "Olive oil",
-          "grams": 5,
+          "grams": 8.8,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
@@ -3283,7 +3283,7 @@
         },
         {
           "item": "Lemon juice",
-          "grams": 15,
+          "grams": 26.2,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -3291,7 +3291,7 @@
         },
         {
           "item": "Pumpkin seeds",
-          "grams": 12,
+          "grams": 21.0,
           "aisle": "cupboard",
           "packSize": 200,
           "packUnit": "g",
@@ -3344,7 +3344,7 @@
         },
         "components": [
           {
-            "item": "Tuna in spring water, tinned",
+            "item": "Tuna in spring water, no added salt",
             "jon": 145,
             "cheryl": 109
           },
@@ -3374,7 +3374,8 @@
       "prep": {
         "when": "same-day",
         "note": "Assembled cold."
-      }
+      },
+      "notes": []
     },
     {
       "id": "convenience-fallback",
@@ -4035,7 +4036,7 @@
         },
         "components": [
           {
-            "item": "Tuna in spring water, tinned",
+            "item": "Tuna in spring water, no added salt",
             "jon": 189,
             "cheryl": 142
           },
@@ -4070,7 +4071,7 @@
       "id": "pitta-poached-chicken-slaw",
       "name": "Wholemeal pitta, poached chicken, skyr-mustard and pickled slaw",
       "slot": "lunch",
-      "basePortions": 1,
+      "basePortions": 2,
       "timeMinutes": 10,
       "tags": [
         "travels",
@@ -4081,7 +4082,7 @@
       "ingredients": [
         {
           "item": "Chicken breast, raw",
-          "grams": 170,
+          "grams": 298,
           "aisle": "meat-fish",
           "packSize": 650,
           "packUnit": "g",
@@ -4090,7 +4091,7 @@
         },
         {
           "item": "Wholemeal pitta",
-          "grams": 65,
+          "grams": 114,
           "aisle": "bakery",
           "packSize": 390,
           "packUnit": "g",
@@ -4099,7 +4100,7 @@
         },
         {
           "item": "Plain Skyr",
-          "grams": 50,
+          "grams": 88,
           "aisle": "dairy",
           "packSize": 450,
           "packUnit": "g",
@@ -4107,7 +4108,7 @@
         },
         {
           "item": "Dijon mustard",
-          "grams": 5,
+          "grams": 8.8,
           "aisle": "cupboard",
           "packSize": 185,
           "packUnit": "g",
@@ -4115,7 +4116,7 @@
         },
         {
           "item": "Red cabbage",
-          "grams": 80,
+          "grams": 140,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4124,7 +4125,7 @@
         },
         {
           "item": "Carrots",
-          "grams": 40,
+          "grams": 70,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4133,7 +4134,7 @@
         },
         {
           "item": "Red onions",
-          "grams": 20,
+          "grams": 35,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4141,7 +4142,7 @@
         },
         {
           "item": "Cider vinegar",
-          "grams": 15,
+          "grams": 26.2,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
@@ -4149,7 +4150,7 @@
         },
         {
           "item": "Sugar",
-          "grams": 2,
+          "grams": 3.5,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "g",
@@ -4157,7 +4158,7 @@
         },
         {
           "item": "Rocket or watercress",
-          "grams": 20,
+          "grams": 35,
           "aisle": "fresh",
           "packSize": 60,
           "packUnit": "g",
@@ -4257,13 +4258,14 @@
       "prep": {
         "when": "night-before",
         "note": "Slaw an hour ahead at minimum; the chicken is poached ahead and sliced cold."
-      }
+      },
+      "notes": []
     },
     {
       "id": "dip-box",
       "name": "The dip box - whipped skyr, cold chicken, rye and raw vegetables",
       "slot": "lunch",
-      "basePortions": 1,
+      "basePortions": 2,
       "timeMinutes": 6,
       "tags": [
         "no-cook",
@@ -4275,7 +4277,7 @@
       "ingredients": [
         {
           "item": "Chicken breast, raw",
-          "grams": 160,
+          "grams": 280,
           "aisle": "meat-fish",
           "packSize": 650,
           "packUnit": "g",
@@ -4284,7 +4286,7 @@
         },
         {
           "item": "Plain Skyr",
-          "grams": 120,
+          "grams": 210,
           "aisle": "dairy",
           "packSize": 450,
           "packUnit": "g",
@@ -4293,7 +4295,7 @@
         },
         {
           "item": "Olive oil",
-          "grams": 6,
+          "grams": 10.5,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
@@ -4302,7 +4304,7 @@
         },
         {
           "item": "Lemon juice",
-          "grams": 10,
+          "grams": 17.5,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4310,7 +4312,7 @@
         },
         {
           "item": "Garlic",
-          "grams": 2,
+          "grams": 3.5,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4319,7 +4321,7 @@
         },
         {
           "item": "Dill",
-          "grams": 4,
+          "grams": 7.0,
           "aisle": "fresh",
           "packSize": 30,
           "packUnit": "g",
@@ -4327,7 +4329,7 @@
         },
         {
           "item": "Salt, weighed",
-          "grams": 0.4,
+          "grams": 0.7,
           "aisle": "cupboard",
           "packSize": 750,
           "packUnit": "g",
@@ -4335,7 +4337,7 @@
         },
         {
           "item": "Rye crispbread",
-          "grams": 25,
+          "grams": 44,
           "aisle": "bakery",
           "packSize": 200,
           "packUnit": "g",
@@ -4344,7 +4346,7 @@
         },
         {
           "item": "Cucumber",
-          "grams": 80,
+          "grams": 140,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4353,7 +4355,7 @@
         },
         {
           "item": "Carrots",
-          "grams": 60,
+          "grams": 105,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4362,7 +4364,7 @@
         },
         {
           "item": "Red peppers",
-          "grams": 60,
+          "grams": 105,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4370,7 +4372,7 @@
         },
         {
           "item": "Cherry tomatoes",
-          "grams": 80,
+          "grams": 140,
           "aisle": "fresh",
           "packSize": 250,
           "packUnit": "g",
@@ -4378,7 +4380,7 @@
         },
         {
           "item": "Walnuts",
-          "grams": 8,
+          "grams": 14.0,
           "aisle": "cupboard",
           "packSize": 200,
           "packUnit": "g",
@@ -4474,13 +4476,14 @@
       "prep": {
         "when": "night-before",
         "note": "The chicken is poached with the weekend batch, never at lunch."
-      }
+      },
+      "notes": []
     },
     {
       "id": "mackerel-beetroot-barley-tub",
       "name": "Mackerel and beetroot with dill and horseradish cream",
       "slot": "lunch",
-      "basePortions": 1,
+      "basePortions": 2,
       "timeMinutes": 10,
       "tags": [
         "no-cook",
@@ -4492,7 +4495,7 @@
       "ingredients": [
         {
           "item": "Mackerel fillets in spring water, tinned",
-          "grams": 105,
+          "grams": 184,
           "aisle": "cupboard",
           "packSize": 125,
           "packUnit": "g",
@@ -4501,7 +4504,7 @@
         },
         {
           "item": "Pearl barley, dry",
-          "grams": 30,
+          "grams": 52,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "g",
@@ -4510,7 +4513,7 @@
         },
         {
           "item": "Cooked beetroot",
-          "grams": 100,
+          "grams": 175,
           "aisle": "fresh",
           "packSize": 250,
           "packUnit": "g",
@@ -4520,7 +4523,7 @@
         },
         {
           "item": "Cucumber",
-          "grams": 100,
+          "grams": 175,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4529,7 +4532,7 @@
         },
         {
           "item": "Red onions",
-          "grams": 20,
+          "grams": 35,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4537,7 +4540,7 @@
         },
         {
           "item": "Plain Skyr",
-          "grams": 95,
+          "grams": 166,
           "aisle": "dairy",
           "packSize": 450,
           "packUnit": "g",
@@ -4546,7 +4549,7 @@
         },
         {
           "item": "Hot horseradish",
-          "grams": 10,
+          "grams": 17.5,
           "aisle": "cupboard",
           "packSize": 180,
           "packUnit": "g",
@@ -4554,7 +4557,7 @@
         },
         {
           "item": "Lemon juice",
-          "grams": 15,
+          "grams": 26.2,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -4562,7 +4565,7 @@
         },
         {
           "item": "Rocket",
-          "grams": 30,
+          "grams": 52,
           "aisle": "fresh",
           "packSize": 60,
           "packUnit": "g",
@@ -4571,7 +4574,7 @@
         },
         {
           "item": "Dill",
-          "grams": 5,
+          "grams": 8.8,
           "aisle": "fresh",
           "packSize": 30,
           "packUnit": "g",
@@ -4579,7 +4582,7 @@
         },
         {
           "item": "Olive oil",
-          "grams": 0,
+          "grams": 0.0,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
@@ -4587,7 +4590,7 @@
         },
         {
           "item": "Rye crispbread",
-          "grams": 15,
+          "grams": 26.2,
           "aisle": "cupboard",
           "packSize": 200,
           "packUnit": "g",
@@ -4596,7 +4599,7 @@
         },
         {
           "item": "Cornichons",
-          "grams": 15,
+          "grams": 26.2,
           "aisle": "cupboard",
           "packSize": 300,
           "packUnit": "g",
@@ -4697,7 +4700,8 @@
         "when": "night-before",
         "note": "<b>The barley is 30 minutes on the hob</b> - do it then, and dress it while it is still warm."
       },
-      "recosted": "skyr beaten and cut to 110g, horseradish to 15g, rye and cornichons added"
+      "recosted": "skyr beaten and cut to 110g, horseradish to 15g, rye and cornichons added",
+      "notes": []
     },
     {
       "id": "tortilla-chicken-piquillo",
@@ -7555,5 +7559,6 @@
     "proteinFloor": "170g is a FLOOR, not a target. 167.7g is a fail. Protein is protected ahead of calories in every trade-off: a day light on calories that hits protein is fine, and the reverse is not.",
     "breakfastBase": "All seven breakfasts carry the standard dairy base - 200g plain Skyr plus a scoop of whey. A genuinely dairy-free breakfast needs a named iodine source and must be flagged. Almond milk is not one, and at 32 kcal per gram of protein it belongs nowhere near a protein target."
   },
-  "plates_daughter_note": "Her column carries PLATE WEIGHTS ONLY - no calories and no protein, anywhere, by coach ruling 3.4 of 19 September. She eats the same food in her own share, portioned by composition exactly as Cheryl is. A teenage girl should not be handed a daily calorie number; that is a wellbeing judgement, not a planning one, and nobody in this system is her dietitian. If her nutrition is to be assessed properly that is a GP or a registered dietitian."
+  "plates_daughter_note": "Her column carries PLATE WEIGHTS ONLY - no calories and no protein, anywhere, by coach ruling 3.4 of 19 September. She eats the same food in her own share, portioned by composition exactly as Cheryl is. A teenage girl should not be handed a daily calorie number; that is a wellbeing judgement, not a planning one, and nobody in this system is her dietitian. If her nutrition is to be assessed properly that is a GP or a registered dietitian.",
+  "portionConvention": "basePortions is how many PLATES the ingredient list makes, and the ingredient list always covers everyone who eats it. Jon is one plate and Cheryl is three-quarters of one, so a two-person lunch is basePortions 2 and its ingredients are 1.75 x Jon's portion. Four lunches were written the other way - basePortions 1 with Jon's portion only - and the shopping list, which scales by portions/basePortions, was buying 2 x Jon for a 1.75 x Jon need. Corrected 20 September 2026."
 }

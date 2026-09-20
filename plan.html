@@ -59,6 +59,7 @@
     font-variant-numeric:tabular-nums;align-items:baseline}
   .who{color:var(--muted);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase}
   .ok{color:var(--go)}.amber{color:var(--warn)}
+  .cnt{color:var(--muted);font-size:.85em;white-space:nowrap}
   .fix{margin:6px 0 0;font-size:.82rem;color:var(--warn);line-height:1.45}
   .tag{font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
     color:var(--accent);font-weight:700;padding:11px 16px 0;display:block}
@@ -279,7 +280,7 @@ const SMOOTHIES = ["berry-oat","cherry-berry","gingerbread","almond-blueberry"];
 
 /* Fixed lunches and dinners - the roast, the bought ones - had no picker at all, so the
    roast night was the one night you could not say "we'll do our own thing". */
-const FIXED_FOR_SLOT = {lunch:["ms-bought","huel-bottle"],
+const FIXED_FOR_SLOT = {lunch:["skyr-bowl","ms-bought","huel-bottle"],
                         dinner:["roast-beef","roast-pork","roast-chicken","roast-turkey","roast-lamb","roast-ham","sunday-roast","work-pizza","cheat-meal"]};
 
 const SLOT_OPTIONS = {
@@ -425,7 +426,7 @@ FIXED["gingerbread"].ing.cheryl = share(FIXED["gingerbread"].ing.jon, 0.75);
 FIXED["pb-banana-oats"].ing = {
   jon:[I("Plain Skyr",200,"dairy",450,true), I("Rolled oats",28,"cupboard",1000,true),
        I("Whey protein powder",22,"cupboard",1000,true),
-       I("Bananas",85,"fresh"), I("Maple syrup",5,"cupboard",250,true),
+       I("Bananas",70,"fresh"), I("Maple syrup",5,"cupboard",250,true),
        I("Walnuts",5,"cupboard",200,true), I("Crunchy peanut butter",7,"cupboard",340,true),
        I("Chia seeds",6,"cupboard",300,true),
        I("Frozen blueberries",40,"frozen",500), I("Ground cinnamon",1,"cupboard",45,true)]};
@@ -440,7 +441,7 @@ FIXED["cherry-berry"].ing.cheryl = share(FIXED["cherry-berry"].ing.jon, 0.75);
 FIXED["almond-blueberry"].ing = {
   jon:[I("Plain Skyr",200,"dairy",450,true), I("Semi-skimmed milk",100,"dairy",2000,true,"ml"),
        I("Whey protein powder",25,"cupboard",1000,true),
-       I("Rolled oats",15,"cupboard",1000,true), I("Bananas",70,"fresh"),
+       I("Rolled oats",15,"cupboard",1000,true), I("Bananas",60,"fresh"),
        I("Frozen blueberries",80,"frozen",500), I("Whole almonds",8,"cupboard",200,true),
        I("Chia seeds",10,"cupboard",300,true)]};
 FIXED["almond-blueberry"].ing.cheryl = share(FIXED["almond-blueberry"].ing.jon, 0.75);
@@ -505,8 +506,12 @@ const CHERYL_LUNCH_ING = [I("Plain Skyr",75,"dairy",1000,true), I("Bananas",90,"
 
 /* ---------- how to make the fixed items ---------- */
 const R = (ing, method, cheryl, note) => ({ing, method, cheryl, note});
-FIXED["bacon-cottage"].mix = [["Back bacon (3 rashers)",75],["Cottage cheese",200],
-  ["High-protein wrap",60],["Mushrooms",70],["Tomatoes",70]];
+/* "(3 rashers)" used to live in the label, so it stayed at 3 while the grams beside it
+   scaled to two people. Counts now hang off the weight and scale with it. */
+FIXED["bacon-cottage"].mix = [["Back bacon",75,"g",{each:25,one:"rasher",many:"rashers"}],
+  ["Cottage cheese",200],
+  ["High-protein wrap",60,"g",{each:60,one:"wrap",many:"wraps"}],
+  ["Mushrooms",70],["Tomatoes",70]];
 FIXED["gingerbread"].mix = [["Reduced-fat milk",250,"ml"],["Vanilla protein powder",44],
   ["Rolled oats",30],["Maple syrup",5],["Whole roasted almonds",18],
   ["Ground cinnamon",1.3],["Ground nutmeg",0.5],["Ground ginger",0.5]];
@@ -833,7 +838,7 @@ function mealFor(d, slot, who){
     const id = followRoast((who === "cheryl" && m.cheryl) ? m.cheryl : m.id);
     const f = FIXED[id]; if (!f) return ZERO;
     let v = f[who] || ZERO;
-    if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_ADDON);
+    if (slot === "lunch" && who === "cheryl" && !isFreeMeal(m)) v = add(v, CHERYL_LUNCH_ADDON);
     return v;
   }
   if (m.kind === "recipe"){
@@ -843,7 +848,7 @@ function mealFor(d, slot, who){
        share. Her plates carry weights only. */
     if (who === "daughter") return ZERO;
     let v = r.plates[who] || ZERO;
-    if (slot === "lunch" && who === "cheryl") v = add(v, CHERYL_LUNCH_ADDON);
+    if (slot === "lunch" && who === "cheryl" && !isFreeMeal(m)) v = add(v, CHERYL_LUNCH_ADDON);
     return v;
   }
   if (m.kind === "leftover"){
@@ -908,13 +913,18 @@ const dayTotal = (d, who) => d.free ? ZERO :
   ["breakfast","lunch","afternoon","dinner"].reduce((a,s) => add(a, mealFor(d,s,who)), ZERO);
 
 /* Something else = no numbers, so the day is reported but not judged. */
-const freeSlots = d => ["breakfast","lunch","afternoon","dinner"].filter(sl => {
-  const m = d[sl];
+const isFreeMeal = m => {
   if (typeof m === "string") return !!(FIXED[m] || {}).free;
   if (m && m.kind === "fixed") return !!(FIXED[m.id] || {}).free;
   if (m && m.kind === "recipe") return /^own-/.test(m.id);
   return false;
-});
+};
+const freeSlots = d => ["breakfast","lunch","afternoon","dinner"].filter(sl => isFreeMeal(d[sl]));
+
+/* Cheryl's 2:30 feed is carried on her lunch because she teaches - but it is still a meal,
+   and if the lunch is "something else" the feed goes with it. Without this, setting every
+   slot on a day to nothing still reported her at 133 kcal. */
+const cherylAddonOn = d => !!(d && d.lunch && !isFreeMeal(d.lunch));
 
 function status(d, who){
   const t = TARGETS[who], v = dayTotal(d, who), problems = [];
@@ -1153,10 +1163,14 @@ function slotNote(d, slot){
   if (slot === "afternoon")
     return '<p class="note"><b>Jon only.</b> Cheryl is teaching at 2:30, so her Skyr and ' +
            'banana go with her lunch instead. Nothing here for her.</p>';
-  if (slot === "lunch")
+  if (slot === "lunch"){
+    if (!cherylAddonOn(d))
+      return '<p class="note">Lunch is your own, so <b>Cheryl\'s 2:30 feed goes with it</b> — ' +
+             'nothing is counted for her here, and nothing for it reaches the shopping list.</p>';
     return '<p class="note"><b>Cheryl has ' + CHERYL_LUNCH_ADDON.label + ' with this</b>, ' +
            'on top of whatever the lunch is — her 2:30 feed, moved because she is teaching. ' +
            'Already counted in her figures and already on the shopping list.</p>';
+  }
   return "";
 }
 const closeCard = (h, d, slot) => h + slotNote(d, slot) + '</div></details>';
@@ -1364,15 +1378,43 @@ function fixedRecipe(f, shares){
   const r = f.recipe; if (!r) return "";
   let h = "";
   if (f.mix){
-    const n = shares || 1;
-    h += '<h3 class="rh">' + (n > 1 ? 'Make this much' : 'Ingredients') + '</h3><ul class="ing"><li>' +
-      f.mix.map(([item, g, unit]) => {
-        const v = g * n;
-        return item + ' \u2014 ' + (v >= 10 ? Math.round(v) : Math.round(v*10)/10) + (unit || 'g');
-      }).join('</li><li>') + '</li></ul>';
-    if (n > 1)
-      h += '<p class="note"><b>One lot, poured 4 : 3.</b> The bigger one is Jon\'s. ' +
-           'Nothing is made twice.</p>';
+    const n = shares || 1, c = n - 1;
+    const q = (v, unit) => (v >= 10 ? Math.round(v) : Math.round(v*10)/10) + (unit || 'g');
+    /* a count that scales with the weight, so three rashers does not stay three rashers
+       when the pan is feeding two people */
+    const qc = (v, unit, cnt) => {
+      let out = q(v, unit);
+      if (!cnt) return out;
+      const raw = v / cnt.each, r = Math.round(raw * 2) / 2;
+      if (r <= 0) return out;
+      const exact = Math.abs(raw - Math.round(raw)) < 0.06;
+      const num = exact ? String(Math.round(raw))
+                        : (Math.abs(r - Math.round(r)) < 0.01 ? String(Math.round(r)) : String(r));
+      return out + ' <span class="cnt">' + (exact ? '' : 'about ') + num + ' ' +
+             ((exact ? Math.round(raw) : r) === 1 ? cnt.one : cnt.many) + '</span>';
+    };
+    if (c > 0){
+      /* The combined figure on its own read as one person's portion - Jon weighed out 350g
+         of cottage cheese for himself when 200g was his and 150g was Cheryl's. The recipes
+         have carried a per-person column since the 4:3 rule went in; these never did. */
+      h += '<h3 class="rh">How much each</h3>' +
+           '<div class="ratio"><b>4 : 3</b><span>jon &middot; cheryl</span></div>' +
+           '<div class="splitwrap"><table class="split"><thead><tr><th></th><th>Jon</th>' +
+           '<th>Cheryl</th><th>In the pan</th></tr></thead><tbody>' +
+        f.mix.map(([item, g, unit, cnt]) =>
+          '<tr><td>' + item + '</td><td><b>' + qc(g, unit, cnt) + '</b></td><td>' +
+          qc(g * c, unit, cnt) + '</td><td>' + qc(g * n, unit, cnt) + '</td></tr>').join('') +
+        '</tbody></table></div>' +
+        '<p class="note"><b>Jon\'s column is one portion \u2014 that is the recipe.</b> The last ' +
+        'column is the two of them together, which is what goes in the pan and what the shopping ' +
+        'list buys. <b>Don\'t weigh the last column onto one plate.</b></p>' +
+        '<p class="note">Where something comes in units, <b>the weight is the real instruction</b> ' +
+        'and the count beside it is a guide \u2014 three-quarters of a rasher is a real number and ' +
+        'not a real rasher. Round in Jon\'s favour on his plate and keep the pan honest.</p>';
+    } else
+      h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' +
+        f.mix.map(([item, g, unit, cnt]) => item + ' \u2014 ' + qc(g, unit, cnt)).join('</li><li>') +
+        '</li></ul>';
   } else if (r.ing && r.ing.length)
     h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' + r.ing.join('</li><li>') + '</li></ul>';
   if (r.method && r.method.length)
@@ -1529,6 +1571,22 @@ function wire(d){
   });
 }
 
+/* Some things are bought by number and nobody weighs them at the shop. "Bananas 1,514g"
+   is a true figure and a useless one. Grams-per-unit are the same ones the recipe notes
+   already use - 2 limes for 130g, 2 onions for 300g - so the count and the weight agree.
+   Banana weights everywhere in this file are PEELED, which is the 196g trap: a medium
+   banana is about 120g peeled and about 175g in the skin. */
+const COUNT_UNIT = {
+  "Bananas":                {each:120, one:"banana",   many:"bananas", note:"peeled weight"},
+  "Lemons":                 {each:85,  one:"lemon",    many:"lemons"},
+  "Limes":                  {each:65,  one:"lime",     many:"limes"},
+  "Onions":                 {each:150, one:"onion",    many:"onions"},
+  "Red onions":             {each:120, one:"red onion",many:"red onions"},
+  "Red peppers":            {each:160, one:"pepper",   many:"peppers"},
+  "Red and yellow peppers": {each:175, one:"pepper",   many:"peppers"},
+  "Cucumber":               {each:300, one:"cucumber", many:"cucumbers"}
+};
+
 /* ---------- shopping list ---------- */
 function buildList(){
   const agg = {}, extras = [];
@@ -1560,8 +1618,8 @@ function buildList(){
       take(f.ing.household, 1);
     });
 
-    /* Cheryl's lunchtime Skyr, on every day she has a lunch */
-    if (d.diners.includes("cheryl") && d.lunch) take(CHERYL_LUNCH_ING, 1);
+    /* Cheryl's lunchtime Skyr, on every day she has a lunch that is actually a lunch */
+    if (d.diners.includes("cheryl") && cherylAddonOn(d)) take(CHERYL_LUNCH_ING, 1);
     ["lunch","dinner"].forEach(slot => {
       const m = d[slot];
       if (!m || m.kind !== "recipe") return;
@@ -1581,7 +1639,12 @@ function buildList(){
   Object.values(agg).forEach(a => {
     const g = Math.ceil(a.grams);
     let qty;
-    if (a.packSize){
+    const cu = (a.unit === "g") ? COUNT_UNIT[a.item] : null;
+    if (cu){
+      const n = Math.ceil(g / cu.each);
+      qty = n + " " + (n === 1 ? cu.one : cu.many) +
+            " \u00b7 about " + g + "g" + (cu.note ? " " + cu.note : "");
+    } else if (a.packSize){
       const packs = Math.ceil(g / a.packSize);
       qty = packs + " × " + a.packSize + a.unit;
       if (packs * a.packSize > g) qty += " · need " + g + a.unit;
