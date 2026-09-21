@@ -176,16 +176,16 @@
 /* ---------- fixed items: not swappable, no ingredients ---------- */
 const FIXED = {
   "berry-oat":    {name:"Berry and oat smoothie",
-                   jon:{kcal:531,protein:57.6,fibre:10.8,salt:0.4},
-                   cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
+                   jon:{kcal:531,protein:57.6,fibre:10.8,salt:0.61},
+                   cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.46}},
   "cherry-berry":  {name:"Cherry berry smoothie",
-    jon:{kcal:480,protein:48.3,fibre:9.6,salt:0.57}, cheryl:{kcal:360,protein:36.2,fibre:7.2,salt:0.43}},
+    jon:{kcal:480,protein:50.1,fibre:10.3,salt:0.52}, cheryl:{kcal:360,protein:37.6,fibre:7.7,salt:0.39}},
   "almond-blueberry": {name:"Almond and blueberry smoothie",
     jon:{kcal:528,protein:50.6,fibre:8.9,salt:0.52}, cheryl:{kcal:396,protein:37.9,fibre:6.7,salt:0.39}},
   "pb-banana-oats": {name:"Peanut butter, banana and blueberry oats",
     jon:{kcal:523,protein:46.1,fibre:7.7,salt:0.43}, cheryl:{kcal:392,protein:34.5,fibre:5.7,salt:0.32}},
   "gingerbread":  {name:"Gingerbread smoothie",
-    jon:{kcal:537,protein:50.7,fibre:7.3,salt:0.52}, cheryl:{kcal:403,protein:38.0,fibre:5.5,salt:0.39}},
+    jon:{kcal:537,protein:50.6,fibre:6.0,salt:0.51}, cheryl:{kcal:403,protein:38.0,fibre:4.5,salt:0.38}},
   "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
     jon:{kcal:493,protein:43.2,fibre:3.9,salt:3.56}, cheryl:{kcal:370,protein:32.4,fibre:3.0,salt:2.67}},
   "skyr-bowl":    {name:"The Skyr bowl",
@@ -551,15 +551,24 @@ FIXED["bacon-cottage"].recipe = R(
   "0.72g and costs 4.1g of protein.");
 
 FIXED["gingerbread"].recipe = R(
-  ["250ml reduced-fat milk \u00b7 40g vanilla protein powder","\u2153 cup rolled oats (~30g)",
-   "2 tsp maple syrup (~14g) \u00b7 30g whole roasted almonds",
-   "\u00bd tsp cinnamon \u00b7 \u00bc tsp nutmeg \u00b7 \u00bc tsp ginger","4\u20135 ice cubes"],
+  ["250ml reduced-fat milk \u00b7 <b>44g whey</b>","\u2153 cup rolled oats (~30g)",
+   "1 tsp maple syrup (~5g) \u00b7 <b>18g whole roasted almonds</b>",
+   "\u00bd tsp cinnamon (1.3g) \u00b7 \u00bc tsp nutmeg \u00b7 \u00bc tsp ginger","4\u20135 ice cubes"],
   ["Everything in and blend on high until smooth and creamy. A little water if your powder is thick.",
    "Into the glass, dusted with extra cinnamon."],
   null,
-  "<b>50g of protein \u2014 the only one of the new smoothies that lands in the 50\u201358g band.</b> " +
-  "Centr's own figure. 8.8g of fibre is the lowest of the five, so take it on a high-fibre lunch day. " +
-  "Salt is an estimate.");
+  "<b>50.6g of protein \u2014 the only one of the new smoothies that lands in the 50\u201358g " +
+  "band.</b> 537 kcal, 17 over the 520 breakfast slot.<br><br>" +
+  "<b>Its fibre was recorded three different ways and all of them were wrong except the " +
+  "arithmetic.</b> This card said 8.8g, Centr's own figure; the macros said 7.3g; the ingredients " +
+  "add up to <b>6.0g</b>, and that is what it now carries. Energy, protein and salt were right to " +
+  "within a tenth \u2014 only the fibre had drifted.<br><br>" +
+  "<b>6.0g is the lowest breakfast here</b>, against 12.1g for the Skyr bowl and 10.8g for the " +
+  "berry and oat. Take it on a high-fibre lunch day. Nearly half of what it has is the 18g of " +
+  "almonds and the oats \u2014 the milk and the whey bring none.<br><br>" +
+  "<b>Quantities on this card were also stale</b>: it read 40g of protein powder, 14g of maple " +
+  "syrup and 30g of almonds, where the drink is built from 44g, 5g and 18g. The table below has " +
+  "always been the one the figures come from.");
 
 FIXED["pb-banana-oats"].recipe = R(
   ["<b>200g plain Skyr \u00b7 22g whey</b> \u2014 the standing base, stirred in at the end",
@@ -596,8 +605,9 @@ FIXED["cherry-berry"].recipe = R(
   "<b>Centr tops this with 20g of shaved chocolate. Removed \u2014 it was never being added.</b> " +
   "That is 110 kcal and about 10g of sugar out, which is what brings it from 635 to 525 and " +
   "makes it a weekday breakfast.<br><br>" +
-  "The 110 calories that freed up have bought <b>5g of whey</b>, which puts it at 544 kcal and " +
-  "<b>50.1g of protein \u2014 inside the band</b>.");
+  "The 110 calories that freed up have bought <b>5g of whey</b>, which puts it at <b>480 kcal and " +
+  "50.1g of protein \u2014 inside the band</b>. This card claimed 544 kcal until 21 September; the " +
+  "ingredients have always added up to 480.");
 
 FIXED["almond-blueberry"].recipe = R(
   ["<b>200g plain Skyr \u00b7 25g whey</b> \u2014 the standing base",
@@ -629,12 +639,13 @@ FIXED["berry-oat"].recipe = R(
 
 FIXED["skyr-bowl"].recipe = R(
   ["250g Skyr (plain or raspberry)","32g whey · 20ml milk","100g frozen raspberries",
-   "12g chia · 15g walnuts or almonds · 10g pumpkin seeds","60g banana, weighed"],
+   "12g chia · <b>8g</b> walnuts or almonds · 10g pumpkin seeds","<b>30g</b> banana, weighed"],
   ["<b>Whey powder in first, then the Skyr, then stir.</b> The other way round and you spend five minutes chasing lumps.",
    "Berries and banana on top. <b>Seeds and nuts last</b>, so they stay crunchy.",
    "If the bowl is too solid to eat, give the frozen raspberries five minutes to soften."],
   "<b>The smaller helping</b> \u2014 three-quarters of Jon's, not three-quarters of the whole bowl. " +
-  "About 440 kcal and 46g.");
+  "About 390 kcal and 45g. <b>This card said 440 and 46g until 21 September</b>, which was neither " +
+  "three-quarters of anything nor what the bowl contains.");
 
 FIXED["huel-milbona"].recipe = R(
   ["Huel Black bottle — 06:15, in the car","Milbona high-protein drink — 07:15, on the train"],
