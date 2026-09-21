@@ -1487,7 +1487,8 @@ function splitBlock(r, eats){
     const tot = who.reduce((a,[k]) => a + (c[k]||0), 0) || 1;
     if (rat && who.some(([k],i) => Math.abs((c[k]||0)/tot - rat.rr[i]/rat.n) > 0.12))
       odd.push(c.item.split(",")[0].toLowerCase());
-    h += '<tr><td>' + c.item.split(",")[0] + '</td>' +
+    h += '<tr><td>' + c.item.split(",")[0] +
+         (c.note ? ' <span class="cnt">' + c.note + '</span>' : '') + '</td>' +
          who.map(([k]) => '<td>' + (c[k] ? '<b>' + c[k] + '</b>g' : '\u2014') + '</td>').join('') +
          '</tr>';
   });
@@ -1671,9 +1672,16 @@ function buildList(){
         qty += " \u00b7 " + packs + " pack" + (packs > 1 ? "s" : "") + " of " + cu.perPack;
       }
     } else if (a.packSize){
-      const packs = Math.ceil(g / a.packSize);
+      /* A 400g tin of beans is 400g of tin-and-liquid and about 235g of beans. Every recipe
+         here specifies them drained, so the number of tins has to come off the DRAINED yield
+         or the list buys too few - Jon ran short of butter beans on 21 September doing exactly
+         this. Yields live in recipes.json so there is one place to correct them. */
+      const drained = (DATA.drainedYields || {})[a.item];
+      const per = drained || a.packSize;
+      const packs = Math.ceil(g / per);
       qty = packs + " × " + a.packSize + a.unit;
-      if (packs * a.packSize > g) qty += " · need " + g + a.unit;
+      if (drained) qty += " · need " + g + a.unit + " drained";
+      else if (packs * a.packSize > g) qty += " · need " + g + a.unit;
     } else qty = g + a.unit;
     if (a.assumed) qty += " · estimated";
 

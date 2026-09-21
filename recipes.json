@@ -6987,35 +6987,36 @@
       "ingredients": [
         {
           "item": "Raw king prawns",
-          "grams": 350,
+          "grams": 320,
           "aisle": "meat-fish",
           "packSize": 180,
           "packUnit": "g",
           "staple": false,
           "cooked": true,
-          "note": "POACHED WITH THE WEEKEND BATCH and cooled - not bought ready-cooked. Ready-cooked prawns sit in brine at about 1.25g of salt per 100g"
+          "note": "POACHED AHEAD and cooled - 320g raw gives about 275g on the plates. Ready-cooked prawns are fine and are what Jon actually buys, but say WHICH: in brine is ~1.25g of salt per 100g, and a sealed tray with no liquid is not costed here yet."
         },
         {
           "item": "Butter beans",
-          "grams": 260,
+          "grams": 235,
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "note": "drained and rinsed",
+          "note": "drained and rinsed - EXACTLY ONE 400g TIN, which drains to about 235g. It asked for 260g until 21 September, which is more than a tin holds.",
           "staple": true
         },
         {
           "item": "Salad leaves",
-          "grams": 120,
+          "grams": 60,
           "aisle": "fresh",
           "packSize": 150,
           "packUnit": "g",
           "staple": false,
-          "assumed": true
+          "assumed": true,
+          "note": "cut from 120g on 21 September - it was 0.17 kcal a gram and most of the bulk"
         },
         {
           "item": "Cherry tomatoes",
-          "grams": 100,
+          "grams": 80,
           "aisle": "fresh",
           "packSize": 300,
           "packUnit": "g",
@@ -7023,7 +7024,7 @@
         },
         {
           "item": "Cucumber",
-          "grams": 60,
+          "grams": 40,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
@@ -7031,21 +7032,21 @@
         },
         {
           "item": "Plain Skyr",
-          "grams": 200,
+          "grams": 180,
           "aisle": "dairy",
           "packSize": 1000,
           "packUnit": "g",
-          "note": "whipped, as the dressing",
+          "note": "whipped, as the dressing. Cut from 200g on 21 September",
           "staple": true
         },
         {
           "item": "Olive oil",
-          "grams": 4,
+          "grams": 8,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
           "staple": true,
-          "note": "cut back - it was carrying calories the dish did not need"
+          "note": "raised from 4g on 21 September: the plate needed calories back that were not water"
         },
         {
           "item": "Lemons",
@@ -7057,28 +7058,29 @@
         },
         {
           "item": "Flaked almonds",
-          "grams": 16,
+          "grams": 24,
           "aisle": "cupboard",
           "packSize": 200,
           "packUnit": "g",
           "staple": true,
-          "note": "toasted in a dry pan until they colour"
+          "note": "toasted in a dry pan until they colour - raised from 16g, the crisp element and the densest thing here"
         }
       ],
       "plates": {
         "jon": {
-          "kcal": 477,
-          "protein": 61.1,
-          "fibre": 10.3,
-          "salt": 1.43,
-          "plateGrams": 576
+          "kcal": 482,
+          "protein": 56.1,
+          "fibre": 9.5,
+          "salt": 1.29,
+          "plateGrams": 527,
+          "note": "157g poached prawns, 134g butter beans, 103g whipped Skyr, 103g of leaves, tomato and cucumber, 14g toasted almonds"
         },
         "cheryl": {
-          "kcal": 358,
-          "protein": 45.8,
-          "fibre": 7.7,
-          "salt": 1.07,
-          "plateGrams": 432
+          "kcal": 362,
+          "protein": 42.1,
+          "fibre": 7.1,
+          "salt": 0.97,
+          "plateGrams": 395
         },
         "daughter": null
       },
@@ -7095,7 +7097,7 @@
       "tips": [
         {
           "tone": "hot",
-          "text": "Ready-cooked prawns in brine are about 1.25g of salt per 100g, so 350g is roughly 4.4g across the two plates. That is why nothing else here is salted."
+          "text": "Prawns are three different ingredients wearing one name. RAW, poached ahead, is what this is costed on: 320g raw gives 275g on the plates and about 0.16g of salt on Jon's. READY-COOKED IN BRINE is about 1.25g of salt per 100g and would put roughly 1.2g extra on his plate on its own. READY-COOKED IN A SEALED TRAY with no liquid - what Jon buys - is somewhere between and has no figure here yet. Send the label and it gets one."
         },
         {
           "tone": "go",
@@ -7106,34 +7108,55 @@
         "servedByWeight": false,
         "source": "ratio",
         "grams": {
-          "jon": 576,
-          "cheryl": 432
+          "jon": 527,
+          "cheryl": 395
         },
         "components": [
           {
-            "item": "Butter beans",
-            "jon": 149,
-            "cheryl": 111
+            "item": "Raw king prawns",
+            "jon": 157,
+            "cheryl": 118,
+            "note": "cooked weight, off 320g raw"
           },
           {
-            "item": "Salad leaves",
-            "jon": 69,
-            "cheryl": 51
+            "item": "Butter beans",
+            "jon": 134,
+            "cheryl": 101
+          },
+          {
+            "item": "Plain Skyr",
+            "jon": 103,
+            "cheryl": 77
           },
           {
             "item": "Cherry tomatoes",
-            "jon": 57,
-            "cheryl": 43
+            "jon": 46,
+            "cheryl": 34
           },
           {
-            "item": "Cucumber",
+            "item": "Salad leaves",
             "jon": 34,
             "cheryl": 26
           },
           {
-            "item": "Plain Skyr",
-            "jon": 114,
-            "cheryl": 86
+            "item": "Cucumber",
+            "jon": 23,
+            "cheryl": 17
+          },
+          {
+            "item": "Flaked almonds",
+            "jon": 14,
+            "cheryl": 10
+          },
+          {
+            "item": "Lemons",
+            "jon": 11,
+            "cheryl": 9
+          },
+          {
+            "item": "Olive oil",
+            "jon": 5,
+            "cheryl": 3
           }
         ]
       },
@@ -7141,7 +7164,11 @@
         "when": "night-before",
         "note": "The prawns are poached with the weekend batch and cooled. Built the night before."
       },
-      "recosted": "raw prawns poached ahead instead of bought in brine (19 Sept chef review)"
+      "recosted": "raw prawns poached ahead instead of bought in brine (19 Sept chef review)",
+      "warnings": [
+        "<b>This plate was 617g and is now 527g.</b> Jon made it on 21 September and could not finish it comfortably. The recorded plate weight said 576g, which was wrong in the reassuring direction - the ingredients came to 617g. It is a salad, so it is the least energy-dense lunch in the file at 0.92 kcal a gram, and the bulk came off the leaves, the cucumber and the Skyr rather than off the protein.",
+        "<b>Say which prawns.</b> Raw and poached ahead is what this is costed on. Ready-cooked IN BRINE is about 1.25g of salt per 100g and would add roughly 1.2g to Jon's plate. Ready-cooked in a sealed tray with no liquid - what Jon buys - sits somewhere between and <b>is not costed: send the label</b>."
+      ]
     },
     {
       "id": "chicken-bean-spinach-pot",
@@ -7560,5 +7587,17 @@
     "breakfastBase": "All seven breakfasts carry the standard dairy base - 200g plain Skyr plus a scoop of whey. A genuinely dairy-free breakfast needs a named iodine source and must be flagged. Almond milk is not one, and at 32 kcal per gram of protein it belongs nowhere near a protein target."
   },
   "plates_daughter_note": "Her column carries PLATE WEIGHTS ONLY - no calories and no protein, anywhere, by coach ruling 3.4 of 19 September. She eats the same food in her own share, portioned by composition exactly as Cheryl is. A teenage girl should not be handed a daily calorie number; that is a wellbeing judgement, not a planning one, and nobody in this system is her dietitian. If her nutrition is to be assessed properly that is a GP or a registered dietitian.",
-  "portionConvention": "basePortions is how many PLATES the ingredient list makes, and the ingredient list always covers everyone who eats it. Jon is one plate and Cheryl is three-quarters of one, so a two-person lunch is basePortions 2 and its ingredients are 1.75 x Jon's portion. Four lunches were written the other way - basePortions 1 with Jon's portion only - and the shopping list, which scales by portions/basePortions, was buying 2 x Jon for a 1.75 x Jon need. Corrected 20 September 2026."
+  "portionConvention": "basePortions is how many PLATES the ingredient list makes, and the ingredient list always covers everyone who eats it. Jon is one plate and Cheryl is three-quarters of one, so a two-person lunch is basePortions 2 and its ingredients are 1.75 x Jon's portion. Four lunches were written the other way - basePortions 1 with Jon's portion only - and the shopping list, which scales by portions/basePortions, was buying 2 x Jon for a 1.75 x Jon need. Corrected 20 September 2026.",
+  "drainedYields": {
+    "note": "Grams left in the sieve from ONE pack, for ingredients every recipe specifies drained. The shopping list must divide by these, not by the pack's gross weight - a 400g tin of beans is 400g of tin-and-liquid and about 235g of beans. Jon hit this on 21 September: the prawn salad asked for 260g of drained butter beans and the list bought one 400g tin, which cannot contain it.",
+    "Butter beans": 235,
+    "Chickpeas, tinned": 240,
+    "Black beans, tinned": 240,
+    "Cannellini beans, tinned": 240,
+    "Kidney beans, tinned": 240,
+    "Green lentils, tinned": 240,
+    "Sweetcorn, tinned": 165,
+    "Tuna in spring water, no added salt": 112,
+    "Mackerel fillets in spring water, tinned": 110
+  }
 }
