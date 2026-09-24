@@ -1208,6 +1208,37 @@ const cardHead = (d, slot, label, name, macros, cls) =>
 const sharesFor = (d, slot) =>
   1 + (d.diners.includes("cheryl") && slot !== "afternoon" ? 0.75 : 0);
 
+/* "Portions 3 \u00b7 recipe makes 5" read as though the recipe would make 5 whatever was
+   set. The family set 3 for three dinners and could not tell what they were cooking. It is
+   said plainly now - and because a portion is a share of the recipe, not a plate (plates run
+   4:3 and the daughter's is her own size), it checks the batch really covers tonight's
+   plates. At 3 the haddock came to 546g for three plates that take 593g. */
+function scaleNote(r, m, d){
+  let h = '<p class="note">' + (m.portions === r.basePortions
+    ? 'Quantities as written \u2014 the recipe is for ' + r.basePortions + '.'
+    : 'The recipe is written for ' + r.basePortions + '. <b>Every quantity on this card has ' +
+      'been scaled to ' + m.portions + '</b> \u2014 cook what the card shows.') + '</p>';
+  const comps = (r.plateSplit || {}).components || [];
+  const batch = {}; r.ingredients.forEach(i => batch[i.item] = i.grams);
+  const who = ["jon","cheryl"].filter(w => d.diners.includes(w));
+  if (d.diners.includes("daughter") && m.daughter) who.push("daughter");
+  let worst = null, min = 0;
+  comps.forEach(c => {
+    const need = who.reduce((a, w) => a + (c[w] || 0), 0), full = batch[c.item];
+    if (!need || !full) return;
+    const have = full * m.portions / r.basePortions;
+    min = Math.max(min, Math.ceil(need * r.basePortions / full - 1e-9));
+    if (have < need * 0.97 && (!worst || have / need < worst.have / worst.need))
+      worst = {item: c.item.split(",")[0].toLowerCase(), have, need};
+  });
+  if (worst)
+    h += '<p class="note warn"><b>At ' + m.portions + ' there isn\'t quite enough for tonight\'s ' +
+         who.length + ' plates</b> \u2014 it makes ' + Math.round(worst.have) + 'g of ' + worst.item +
+         ' and the plates take ' + Math.round(worst.need) + 'g. <b>Set it to ' + min + '.</b> ' +
+         'The number is shares of the recipe, not plates, and the plates are different sizes.</p>';
+  return h;
+}
+
 function mealCard(d, slot){
   const m = d[slot];
   const solo = slot === "afternoon" && d.diners.includes("cheryl");
@@ -1305,8 +1336,8 @@ function mealCard(d, slot){
   h += '<div class="ctrl"><label>Portions</label><div class="step">' +
        '<button class="dec" data-slot="' + slot + '">−</button><span>' + m.portions + '</span>' +
        '<button class="inc" data-slot="' + slot + '">+</button></div>' +
-       (r ? '<label style="margin-left:auto">recipe makes ' + r.basePortions + '</label>' : '') +
        '</div>';
+  if (r) h += scaleNote(r, m, d);
 
   /* Swapping a leftover lunch away leaves the dinner still cooking for it, and nothing
      else in the week points back, so the spare portions would go unremarked. */
