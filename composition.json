@@ -41,10 +41,10 @@
     "Limes and Lemons are listed as whole fruit but only the juice and zest are eaten; they are costed at the juice/zest yield, not at whole-fruit composition."
   ],
   "counts": {
-    "total": 198,
-    "ingredientsInRecipesJson": 163,
+    "total": 200,
+    "ingredientsInRecipesJson": 165,
     "additionalPlanHtmlIngredients": 35,
-    "high": 154,
+    "high": 156,
     "medium": 44,
     "low": 0
   },
@@ -2335,6 +2335,20 @@
         "turkey-black-bean-chilli"
       ]
     },
+    "Pine nuts": {
+      "per": "100g",
+      "kcal": 688,
+      "protein": 14.0,
+      "fat": 68.6,
+      "carbs": 4.0,
+      "fibre": 1.9,
+      "salt": 0.01,
+      "source": "CoFID / McCance & Widdowson - pine nuts",
+      "confidence": "high",
+      "state": "raw",
+      "cookedYield": 1.0,
+      "inRecipesJson": true
+    },
     "Plain Skyr": {
       "per": "100g",
       "kcal": 63,
@@ -3701,6 +3715,21 @@
       "usedIn": [
         "chicken-fajitas"
       ]
+    },
+    "Wholewheat penne, dry": {
+      "per": "100g",
+      "kcal": 324,
+      "protein": 13.4,
+      "fat": 2.5,
+      "carbs": 58.0,
+      "fibre": 9.0,
+      "salt": 0.02,
+      "source": "UK CoFID 2021 (McCance & Widdowson, 7th ed.) — Pasta, wholemeal, dry",
+      "confidence": "high",
+      "state": "raw/dry",
+      "cookedYield": 2.6,
+      "inRecipesJson": true,
+      "note": "Same wholewheat pasta as the spaghetti entry; only the shape differs."
     },
     "Wholewheat spaghetti, dry": {
       "per": "100g",

@@ -7677,6 +7677,246 @@
         ]
       },
       "warnings": []
+    },
+    {
+      "id": "chicken-arrabbiata-penne",
+      "name": "Chicken arrabbiata with wholewheat penne",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 25,
+      "handsOnMinutes": 20,
+      "tags": [
+        "quick",
+        "spicy"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Chicken breast, raw",
+          "grams": 500,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false,
+          "note": "bite-size pieces"
+        },
+        {
+          "item": "Wholewheat penne, dry",
+          "grams": 180,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": true,
+          "note": "dry weight"
+        },
+        {
+          "item": "Chopped tomatoes, tinned",
+          "grams": 800,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "2 tins"
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "3 cloves, sliced"
+        },
+        {
+          "item": "Chilli flakes",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 35,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tsp"
+        },
+        {
+          "item": "Red chilli",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1, sliced — keep the seeds for more kick"
+        },
+        {
+          "item": "Red peppers",
+          "grams": 320,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2, sliced"
+        },
+        {
+          "item": "Spinach",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Olive oil",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1.5,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "into the sauce"
+        },
+        {
+          "item": "Parmesan",
+          "grams": 25,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "grated"
+        },
+        {
+          "item": "Pine nuts",
+          "grams": 20,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "note": "toasted"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 710,
+          "protein": 69.9,
+          "fibre": 14.6,
+          "salt": 1.31,
+          "plateGrams": 720
+        },
+        "cheryl": {
+          "kcal": 533,
+          "protein": 52.4,
+          "fibre": 10.9,
+          "salt": 0.98,
+          "plateGrams": 540
+        },
+        "daughter": {
+          "plateGrams": 540,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Good the next day, reheated or cold.",
+        "portions": {
+          "jon": {
+            "grams": 486,
+            "kcal": 480,
+            "protein": 47.2,
+            "fibre": 9.9,
+            "salt": 0.88,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 390,
+            "kcal": 385,
+            "protein": 37.9,
+            "fibre": 7.9,
+            "salt": 0.71,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Pasta water on — no salt in it. Penne in when it boils, about 11 minutes.",
+        "Meanwhile, toast the pine nuts in a dry frying pan until golden, then tip them out.",
+        "Same pan, the oil, and the chicken in for 4 minutes until coloured all over.",
+        "Garlic, fresh chilli, chilli flakes and peppers in for 3 minutes.",
+        "Tomatoes and the {{1.5}}g of salt in. Simmer 8–10 minutes until the chicken is cooked through and the sauce has thickened. Stir in the spinach until it wilts.",
+        "Drain the pasta and toss it through the sauce with a splash of the cooking water. Parmesan and pine nuts over at the table."
+      ],
+      "tips": [
+        {
+          "tone": "go",
+          "text": "Want more kick? Keep the seeds in the chilli, or add another pinch of flakes."
+        },
+        {
+          "tone": "plain",
+          "text": "Prawns instead: 500g of frozen raw king prawns, defrosted. Skip step 3 and add them in the last 3–4 minutes of step 5, until they turn pink. About 60 kcal and 13g of protein less on Jon's plate."
+        },
+        {
+          "tone": "plain",
+          "text": "Set the portions to 5 and it makes two lunch tubs as well."
+        }
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 720,
+          "cheryl": 540,
+          "daughter": 540
+        },
+        "components": [
+          {
+            "item": "Chicken breast, raw",
+            "jon": 200.0,
+            "cheryl": 150.0,
+            "daughter": 150.0
+          },
+          {
+            "item": "Wholewheat penne, dry",
+            "jon": 72.0,
+            "cheryl": 54.0,
+            "daughter": 54.0
+          },
+          {
+            "item": "Chopped tomatoes, tinned",
+            "jon": 320.0,
+            "cheryl": 240.0,
+            "daughter": 240.0
+          },
+          {
+            "item": "Red peppers",
+            "jon": 128.0,
+            "cheryl": 96.0,
+            "daughter": 96.0
+          },
+          {
+            "item": "Spinach",
+            "jon": 60.0,
+            "cheryl": 45.0,
+            "daughter": 45.0
+          },
+          {
+            "item": "Parmesan",
+            "jon": 10.0,
+            "cheryl": 7.5,
+            "daughter": 7.5
+          },
+          {
+            "item": "Pine nuts",
+            "jon": 8.0,
+            "cheryl": 6.0,
+            "daughter": 6.0
+          }
+        ]
+      },
+      "warnings": []
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8. RE-DERIVED 19 September 2026 against the new composition table: every portion below is the weight that lands on its target off that person's own re-costed plate, so weight and macros now agree by construction. Jon's target is the 480 kcal lunch slot target; Cheryl's is still the observed 385 and still needs the coach.",
