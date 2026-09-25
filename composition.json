@@ -41,11 +41,11 @@
     "Limes and Lemons are listed as whole fruit but only the juice and zest are eaten; they are costed at the juice/zest yield, not at whole-fruit composition."
   ],
   "counts": {
-    "total": 196,
-    "ingredientsInRecipesJson": 161,
+    "total": 198,
+    "ingredientsInRecipesJson": 163,
     "additionalPlanHtmlIngredients": 35,
-    "high": 153,
-    "medium": 43,
+    "high": 154,
+    "medium": 44,
     "low": 0
   },
   "items": {
@@ -135,6 +135,20 @@
         "honey-glazed-chicken-wedges",
         "salmon-roasted-veg-traybake"
       ]
+    },
+    "Baby corn": {
+      "per": "100g",
+      "kcal": 24,
+      "protein": 2.5,
+      "fat": 0.4,
+      "carbs": 2.7,
+      "fibre": 1.7,
+      "salt": 0.01,
+      "source": "CoFID / McCance & Widdowson - sweetcorn, baby, raw",
+      "confidence": "medium",
+      "state": "raw",
+      "cookedYield": 1.0,
+      "inRecipesJson": true
     },
     "Back bacon": {
       "per": "100g",
@@ -2285,6 +2299,21 @@
       "cookedYield": 1.0,
       "inRecipesJson": false,
       "note": "plan.html item."
+    },
+    "Penang curry paste": {
+      "per": "100g",
+      "kcal": 65,
+      "protein": 2.9,
+      "fat": 1.4,
+      "carbs": 8.3,
+      "fibre": 0,
+      "salt": 6.7,
+      "source": "Pack label photographed by Jon, 25 September 2026 - Mae Jum Penang curry paste, about 70g a pack",
+      "confidence": "high",
+      "state": "as sold",
+      "cookedYield": 1.0,
+      "inRecipesJson": true,
+      "note": "Fibre is not stated on the label, so it counts as 0. The salt is what matters: 6.7g per 100g, so the whole pack is about 4.7g across a three-plate curry."
     },
     "Peppers": {
       "per": "100g",

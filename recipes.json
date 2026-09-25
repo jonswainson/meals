@@ -7477,6 +7477,206 @@
           "text": "A whole duck is 2 to 2.2kg raw and yields only about 800g of meat. That is three plates and two lunches and nothing over - do not plan a third meal off it."
         }
       ]
+    },
+    {
+      "id": "penang-chicken-curry",
+      "name": "Penang chicken curry with baby corn and peppers",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 30,
+      "handsOnMinutes": 15,
+      "tags": [
+        "one-pan",
+        "quick"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Chicken thighs, skinless boneless",
+          "grams": 650,
+          "aisle": "meat-fish",
+          "packSize": 900,
+          "packUnit": "g",
+          "staple": false,
+          "note": "cut into bite-size pieces"
+        },
+        {
+          "item": "Penang curry paste",
+          "grams": 70,
+          "aisle": "cupboard",
+          "packSize": 70,
+          "packUnit": "g",
+          "staple": true,
+          "note": "the whole pack"
+        },
+        {
+          "item": "Reduced-fat coconut milk, tinned",
+          "grams": 400,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "ml",
+          "staple": false,
+          "note": "one tin"
+        },
+        {
+          "item": "Baby corn",
+          "grams": 300,
+          "aisle": "fresh",
+          "packSize": 175,
+          "packUnit": "g",
+          "staple": false,
+          "note": "halved lengthways"
+        },
+        {
+          "item": "Red peppers",
+          "grams": 320,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2, in strips"
+        },
+        {
+          "item": "Jasmine rice, dry",
+          "grams": 100,
+          "aisle": "cupboard",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": true,
+          "note": "dry weight"
+        },
+        {
+          "item": "Dry-roasted unsalted peanuts",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true,
+          "note": "crushed"
+        },
+        {
+          "item": "Limes",
+          "grams": 65,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1 lime"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 721,
+          "protein": 61.9,
+          "fibre": 7.0,
+          "salt": 2.38,
+          "plateGrams": 718
+        },
+        "cheryl": {
+          "kcal": 541,
+          "protein": 46.4,
+          "fibre": 5.3,
+          "salt": 1.79,
+          "plateGrams": 539
+        },
+        "daughter": {
+          "plateGrams": 539,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats well. Cool the rice fast, fridge within the hour, and reheat once until piping hot.",
+        "portions": {
+          "jon": {
+            "grams": 478,
+            "kcal": 480,
+            "protein": 41.2,
+            "fibre": 4.7,
+            "salt": 1.58,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 383,
+            "kcal": 385,
+            "protein": 33.0,
+            "fibre": 3.7,
+            "salt": 1.27,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Rice on first, as the packet says — usually about 12 minutes.",
+        "Spoon the thick cream off the top of the coconut milk into a wide pan and fry the whole pack of Penang paste in it for 2–3 minutes, stirring, until it smells fragrant. No oil needed.",
+        "Chicken in, stirred to coat, 5 minutes.",
+        "The rest of the coconut milk, the baby corn and the peppers in. Simmer 10–12 minutes until the chicken is cooked through and the sauce has thickened. A splash of water if it gets too thick.",
+        "<b>No salt or fish sauce</b> — the paste already has plenty. Off the heat, squeeze in the lime.",
+        "Serve over the rice with the crushed peanuts scattered over at the table."
+      ],
+      "tips": [
+        {
+          "tone": "go",
+          "text": "Thighs rather than breast — they stay juicy in the sauce."
+        },
+        {
+          "tone": "plain",
+          "text": "Set the portions to 5 and it makes two lunch tubs as well."
+        },
+        {
+          "tone": "hot",
+          "text": "Any spare rice: cool it fast, fridge within the hour, and reheat once until piping hot."
+        }
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 718,
+          "cheryl": 539,
+          "daughter": 539
+        },
+        "components": [
+          {
+            "item": "Chicken thighs, skinless boneless",
+            "jon": 260,
+            "cheryl": 195,
+            "daughter": 195
+          },
+          {
+            "item": "Jasmine rice, dry",
+            "jon": 40,
+            "cheryl": 30,
+            "daughter": 30
+          },
+          {
+            "item": "Reduced-fat coconut milk, tinned",
+            "jon": 160,
+            "cheryl": 120,
+            "daughter": 120
+          },
+          {
+            "item": "Baby corn",
+            "jon": 120,
+            "cheryl": 90,
+            "daughter": 90
+          },
+          {
+            "item": "Red peppers",
+            "jon": 128,
+            "cheryl": 96,
+            "daughter": 96
+          },
+          {
+            "item": "Dry-roasted unsalted peanuts",
+            "jon": 6,
+            "cheryl": 4.5,
+            "daughter": 4.5
+          }
+        ]
+      },
+      "warnings": []
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8. RE-DERIVED 19 September 2026 against the new composition table: every portion below is the weight that lands on its target off that person's own re-costed plate, so weight and macros now agree by construction. Jon's target is the 480 kcal lunch slot target; Cheryl's is still the observed 385 and still needs the coach.",
