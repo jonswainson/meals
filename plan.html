@@ -243,7 +243,7 @@ const FIXED = {
   "ms-bought":    {name:"Bought in London — M&S salmon and a Caesar box", bought:true,
                    jon:{kcal:497,protein:50.4,fibre:1.25,salt:2.48},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
-  "huel-bottle":  {name:"Huel Black bottle", bought:true,
+  "huel-bottle":  {name:"Huel Black bottle",
                    jon:{kcal:400,protein:35,fibre:6,salt:0.7},
                    cheryl:{kcal:400,protein:35,fibre:6,salt:0.7}},
   "cottage-rye": {name:"Cottage cheese, lemon and pepper on rye",
@@ -350,11 +350,11 @@ const WEEK_0926 = {
   id:"2026-09-26",
   label:"26 Sept \u2013 2 Oct",
   days:[
-    {id:"sat",label:"Sat",title:"Saturday",tags:"Home \u00b7 the cheat meal is Wednesday this week",
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Long walk \u00b7 Huel for lunch \u00b7 pub dinner is the cheat meal",
      diners:["jon","cheryl","daughter"],
      breakfast:"pb-banana-oats", afternoon:"banana-skyr",
-     lunch:{kind:"recipe",id:"tuna-chickpea-salad",portions:2,daughter:false,alt:""},
-     dinner:{kind:"recipe",id:"chicken-fajitas",portions:3,daughter:true,alt:""}},
+     lunch:{kind:"fixed",id:"huel-bottle"},
+     dinner:{kind:"fixed",id:"cheat-meal"}},
     {id:"sun",label:"Sun",title:"Sunday",tags:"Home \u00b7 roast day",
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
@@ -370,7 +370,7 @@ const WEEK_0926 = {
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"chicken-butter-bean-tub",portions:2,daughter:false,alt:""},
      dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:true,alt:""}},
-    {id:"wed",label:"Wed",title:"Wednesday",tags:"Jon in London, staying over \u00b7 pizza out is this week\u2019s cheat meal",
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Jon in London, staying over \u00b7 pizza out is next Saturday\u2019s cheat meal, taken early",
      diners:["jon","cheryl","daughter"],
      breakfast:"huel-milbona", afternoon:"huel-bar",
      lunch:{kind:"fixed",id:"ms-bought",cheryl:"huel-bottle"},
@@ -476,7 +476,8 @@ FIXED["eggs-dukkah"].ing   = {jon:[I("Eggs",110,"dairy",null,true), I("Plain Sky
   I("Dukkah",3,"cupboard",100,true), I("Lemons",5,"fresh")]};
 FIXED["biltong-apple"].ing = {jon:[I("Biltong",25,"cupboard",70), I("Apples",150,"fresh"),
   I("Walnuts",10,"cupboard",200,true)]};
-FIXED["huel-bottle"].ing     = {cheryl:[I("Huel Black ready-to-drink",1,"cupboard",1,true,"bottle")]};
+FIXED["huel-bottle"].ing     = {jon:   [I("Huel Black ready-to-drink",1,"cupboard",1,true,"bottle")],
+                                cheryl:[I("Huel Black ready-to-drink",1,"cupboard",1,true,"bottle")]};
 /* Sunday cooks the joint; Monday reheats the meat with fresh veg. Two sets of
    accompaniments, one joint. Before the weekend was in the planner the joint was
    outside the shop entirely - with a Saturday-to-Friday week it has to be in it. */
@@ -1734,8 +1735,13 @@ function buildList(){
     if (a.assumed) qty += " · estimated";
 
     /* only small cupboard quantities stay in the check-you-have strip */
-    const bulk = a.packSize ? g > a.packSize : g > 200;
-    if (a.staple && a.aisle === "cupboard" && !bulk) staples.push([a.item, g + a.unit]);
+    /* Things kept in stock and counted in bottles or bars - Huel Black - belong in the
+       check-you-have strip however many the week uses. Counting "4 bottles" against a
+       pack of 1 made them "bulk" and put them on the list when the cupboard was full. */
+    const bulk = (a.unit !== "g" && a.unit !== "ml") ? false
+               : (a.packSize ? g > a.packSize : g > 200);
+    const amount = (a.unit === "g" || a.unit === "ml") ? g + a.unit : g + " " + a.unit + (g > 1 ? "s" : "");
+    if (a.staple && a.aisle === "cupboard" && !bulk) staples.push([a.item, amount]);
     else items.push([names[a.aisle] || "Cupboard", a.item, qty, order.indexOf(a.aisle)]);
   });
 
