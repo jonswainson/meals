@@ -369,16 +369,16 @@ const WEEK_0926 = {
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"chicken-butter-bean-tub",portions:2,daughter:false,alt:""},
-     dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:true,alt:""}},
+     dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:3,daughter:true,alt:""}},
     {id:"wed",label:"Wed",title:"Wednesday",tags:"Jon in London, staying over \u00b7 pizza out is next Saturday\u2019s cheat meal, taken early",
      diners:["jon","cheryl","daughter"],
      breakfast:"huel-milbona", afternoon:"huel-bar",
      lunch:{kind:"fixed",id:"ms-bought",cheryl:"huel-bottle"},
      dinner:{kind:"fixed",id:"cheat-meal",cheryl:"own-thing"}},
-    {id:"thu",label:"Thu",title:"Thursday",tags:"Jon back from London for a late dinner \u00b7 his breakfast and lunch are bought, the chilli tub is Cheryl\u2019s",
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Jon back from London for a late dinner \u00b7 M&S breakfast and lunch for Jon, a Huel for Cheryl",
      diners:["jon","cheryl","daughter"],
      breakfast:{kind:"fixed",id:"own-thing",cheryl:"skyr-bowl"}, afternoon:"huel-bar",
-     lunch:{kind:"leftover",from:"tue"},
+     lunch:{kind:"fixed",id:"ms-bought",cheryl:"huel-bottle"},
      dinner:{kind:"recipe",id:"honey-glazed-chicken-wedges",portions:5,daughter:true,alt:""}},
     {id:"fri",label:"Fri",title:"Friday",tags:"Home \u00b7 trains \u00b7 leg day \u00b7 SHOP TONIGHT",
      diners:["jon","cheryl","daughter"],
@@ -1738,9 +1738,16 @@ function buildList(){
     /* Things kept in stock and counted in bottles or bars - Huel Black - belong in the
        check-you-have strip however many the week uses. Counting "4 bottles" against a
        pack of 1 made them "bulk" and put them on the list when the cupboard was full. */
+    /* A drained ingredient is judged against what one tin drains to, not the tin's gross
+       weight: "288g" of black beans sat in the strip looking like a tin's worth when it is
+       two. More than one tin's drained yield goes on the main list with the tin count. */
+    const drainedY = (DATA.drainedYields || {})[a.item];
     const bulk = (a.unit !== "g" && a.unit !== "ml") ? false
+               : drainedY ? g > drainedY
                : (a.packSize ? g > a.packSize : g > 200);
-    const amount = (a.unit === "g" || a.unit === "ml") ? g + a.unit : g + " " + a.unit + (g > 1 ? "s" : "");
+    const amount = drainedY ? "1 tin \u00b7 " + g + "g drained"
+                 : (a.unit === "g" || a.unit === "ml") ? g + a.unit
+                 : g + " " + a.unit + (g > 1 ? "s" : "");
     if (a.staple && a.aisle === "cupboard" && !bulk) staples.push([a.item, amount]);
     else items.push([names[a.aisle] || "Cupboard", a.item, qty, order.indexOf(a.aisle)]);
   });
