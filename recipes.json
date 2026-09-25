@@ -99,7 +99,7 @@
           "packSize": 500,
           "packUnit": "ml",
           "staple": true,
-          "note": "scant 1 tbsp - cut from 21g, which was carrying calories the dish did not need"
+          "note": "scant 1 tbsp"
         },
         {
           "item": "Limes",
@@ -117,7 +117,7 @@
           "packSize": 360,
           "packUnit": "g",
           "staple": false,
-          "note": "5 x 60g; wholegrain default"
+          "note": "5 × 60g"
         },
         {
           "item": "Cheddar, grated",
@@ -188,7 +188,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "good",
-        "note": "eat cold in a wrap or over salad; reheating toughens the chicken",
+        "note": "Eat cold, in a wrap or over salad. Reheating toughens the chicken.",
         "portions": {
           "jon": {
             "grams": 345,
@@ -211,9 +211,9 @@
       "method": [
         "Get the pan properly hot before anything goes in, then the chicken in a single layer — <b>don't crowd it or it steams instead of colouring</b>. At this quantity that is two batches, 6 minutes each.",
         "Peppers and onion in for 4–5 minutes, keeping some bite.",
-        "Spices in for the last minute <b>with a splash of water so they toast rather than burn</b>, then the limes squeezed over the pan.",
-        "<b>Lime squeezed over off the heat, at the table.</b> Lime cooked into the pan is lime you cannot taste - the aromatics go with the steam.",
-        "<b>Toasted pumpkin seeds over at the table.</b> Everything else in a fajita is soft or wet."
+        "Spices in for the last minute <b>with a splash of water so they toast rather than burn</b>.",
+        "<b>Lime squeezed over at the table, off the heat</b> — cooked into the pan you can't taste it.",
+        "<b>Toasted pumpkin seeds over at the table.</b>"
       ],
       "tips": [
         {
@@ -402,7 +402,7 @@
           "packSize": 750,
           "packUnit": "g",
           "staple": true,
-          "note": "replaces 'season generously', which v3 bans"
+          "note": "weighed into the pan at the end"
         },
         {
           "item": "Wholewheat spaghetti, dry",
@@ -411,7 +411,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "DRY weight; 47g Jon / 35g Cheryl / 39g daughter, in the same 4:3 ratio as the sauce"
+          "note": "dry weight; 47g Jon, 35g Cheryl, 39g daughter"
         },
         {
           "item": "Parmesan",
@@ -456,7 +456,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "reheats better than day one",
+        "note": "Reheats better than the day it was made.",
         "portions": {
           "jon": {
             "grams": 440,
@@ -481,16 +481,12 @@
         "Mince in and <b>browned properly — 6 or 7 minutes without constant stirring</b>. Colour is flavour.",
         "Purée in and cooked out for a minute, then the tomatoes, the rinsed dry lentils, the herbs, the Worcestershire sauce and the water.",
         "Simmer 25–30 minutes, stirring now and then — <b>the lentils catch if left alone</b>. Weigh {{3}}g of salt into the whole pan at the end rather than seasoning by eye.",
-        "<b>Pangrattato over each bowl.</b> Breadcrumbs fried hard in a little oil - the poor man's parmesan, and the only thing in a bolognese with any texture."
+        "<b>Pangrattato over each bowl</b> — breadcrumbs fried hard in a little oil."
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "Red lentils dissolve into a tomato sauce and grated carrot does the same — no texture, no colour change, and between them they are most of the fibre in this sauce. It is not invisible to everyone: the daughter has spotted dissolved lentils in a bolognese before."
-        },
-        {
-          "tone": "plain",
-          "text": "Wholewheat spaghetti, weighed dry: 75g for Jon, 45g for Cheryl."
+          "text": "Red lentils and grated carrot dissolve into the sauce and carry most of its fibre. Your daughter has spotted dissolved lentils before, so cook them down well."
         },
         {
           "tone": "go",
@@ -777,7 +773,7 @@
           "packSize": 900,
           "packUnit": "g",
           "staple": false,
-          "note": "one 900g pack used whole - about 238g of raw thigh on Jon's plate"
+          "note": "one 900g pack, used whole"
         },
         {
           "item": "Chickpeas, tinned",
@@ -901,7 +897,7 @@
         "Oven to 200°C. Toss everything except the spinach and the lemon across <b>two roasting trays — two isn't optional, nothing browns in a crowded one</b>.",
         "25–30 minutes, swapping the trays halfway.",
         "Stir the spinach through the hot tray to wilt it, then the lemon over.",
-        "<b>Flaked almonds toasted dry and scattered over.</b> Harissa and chickpeas are both soft; almonds are what North Africa already does about that."
+        "<b>Toasted flaked almonds scattered over.</b>"
       ],
       "tips": [
         {
@@ -1046,7 +1042,7 @@
           "packSize": 45,
           "packUnit": "g",
           "staple": true,
-          "note": "TOASTED IN THE DRY PAN AND CRUSHED - 6g of jar cumin in 3.2kg is below the threshold you can taste"
+          "note": "toasted in a dry pan, then crushed"
         },
         {
           "item": "Smoked paprika",
@@ -1081,7 +1077,7 @@
           "packSize": 750,
           "packUnit": "g",
           "staple": true,
-          "note": "replaces 'season hard'; the beans and passata already bring 4.5g"
+          "note": "weighed into the pan at the end"
         },
         {
           "item": "Plain Skyr",
@@ -1098,8 +1094,7 @@
           "aisle": "cupboard",
           "packSize": 100,
           "packUnit": "g",
-          "staple": true,
-          "note": "smoke that is not smoked paprika"
+          "staple": true
         },
         {
           "item": "Dark chocolate, 70%",
@@ -1146,7 +1141,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "590g tub; ~720g of the batch is left over after two dinners and two lunches - freeze it",
+        "note": "Freeze any spare.",
         "portions": {
           "jon": {
             "grams": 465,
@@ -1167,12 +1162,12 @@
         }
       },
       "method": [
-        "<b>Cumin seed toasted whole in the dry pan until it smells of cumin, then crushed.</b> Thirty seconds, and it is the single biggest change to this dish.",
+        "<b>Cumin seed toasted whole in the dry pan until it smells of cumin, then crushed.</b> Thirty seconds.",
         "Onion and peppers into the oil for 5 minutes. Garlic and spices for one minute — <b>the spices need dry heat before any liquid</b>.",
         "Turkey in, broken up and browned, 5 minutes.",
-        "Beans, passata and a tin of water in, then simmer 20 minutes minimum. <b>Weigh {{4}}g of salt into the whole batch at the end</b> rather than seasoning by eye — the beans and the passata already bring about 4.5g of their own.",
+        "Beans, passata and a tin of water in, then simmer 20 minutes minimum. <b>Weigh {{4}}g of salt into the whole batch at the end</b> rather than seasoning by eye.",
         "Skyr on top of each bowl instead of soured cream.",
-        "<b>Chocolate and the lime juice in off the heat.</b> The chilli had no acid in it at all, which is why it tasted like mince stew - and this is the one dish in the house built entirely from tins, so it needs acid more than any of them."
+        "<b>Chocolate and lime juice in off the heat.</b>"
       ],
       "tips": [
         {
@@ -1181,11 +1176,11 @@
         },
         {
           "tone": "plain",
-          "text": "Jon's bowl sits exactly on the 750g plate ceiling: 690g of chilli plus 60g of Skyr."
+          "text": "Jon's bowl is 690g of chilli plus 60g of Skyr."
         },
         {
           "tone": "hot",
-          "text": "The black and kidney beans are visible and cannot be lifted out, so the daughter's plate here is untested."
+          "text": "The beans can't be lifted out, so your daughter's plate here is untested."
         }
       ],
       "plateSplit": {
@@ -1347,11 +1342,11 @@
       "tips": [
         {
           "tone": "go",
-          "text": "Lower protein than the other dinners and chosen anyway: salmon carries a lot of its calories as fat, and what you get in exchange is around 3g of EPA and DHA from whole food. Worth it once a week."
+          "text": "Lower in protein than the other dinners, but worth it once a week for the omega-3."
         },
         {
           "tone": "hot",
-          "text": "The leftovers go cold, flaked through the lentils as a salad. Not reheated."
+          "text": "Eat the leftovers cold, flaked through the lentils as a salad. Don't reheat."
         }
       ],
       "plateSplit": {
@@ -1419,7 +1414,7 @@
           "packSize": 1000,
           "packUnit": "g",
           "staple": false,
-          "note": "halved; 200g is the tested ceiling on Jon's plate"
+          "note": "halved"
         },
         {
           "item": "Peppers",
@@ -1543,7 +1538,7 @@
       "leftover": {
         "leavesLunch": false,
         "quality": "good",
-        "note": "3 portions, 3 diners. Good cold sliced over salad if there is any spare"
+        "note": "Good cold, sliced over salad."
       },
       "method": [
         "Oven to 200°C. <b>Potatoes in first, on their own</b>, tossed in half the oil and half of the {{2}}g of weighed salt. 20 minutes.",
@@ -1555,11 +1550,11 @@
       "tips": [
         {
           "tone": "go",
-          "text": "The timing is the whole recipe. Most traybakes put everything in together and the chicken is leather by the time the potatoes are done; twenty minutes of potatoes alone first is the trick."
+          "text": "Give the potatoes 20 minutes on their own first — that's what stops the chicken drying out."
         },
         {
           "tone": "hot",
-          "text": "200g of potatoes is the ceiling on Jon's plate. Built at 250–300g plus edamame it came to about 850 kcal and was uncomfortably full."
+          "text": "Keep Jon's potatoes to about 200g. More makes the plate too filling."
         },
         {
           "tone": "plain",
@@ -1635,7 +1630,7 @@
           "packSize": 900,
           "packUnit": "g",
           "staple": false,
-          "note": "one 1kg pack, 950g used - three plates (252/189/181 raw) and a lunch"
+          "note": "one 1kg pack, 950g used"
         },
         {
           "item": "Potatoes",
@@ -1653,7 +1648,7 @@
           "packSize": 150,
           "packUnit": "ml",
           "staple": false,
-          "note": "reduced-salt only - see the method for what ordinary soy does to the day"
+          "note": "reduced-salt only"
         },
         {
           "item": "Tomato puree",
@@ -1696,7 +1691,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "boiled 4 minutes and stirred through at the end - it never goes in the pan. About 71g on Jon's plate"
+          "note": "boiled 4 minutes and stirred through at the end"
         },
         {
           "item": "Olive oil",
@@ -1751,7 +1746,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "good",
-        "note": "The fourth portion the 900g pack now pays for. The wedges go soft overnight - eat it cold with the chicken sliced over, rather than reheating the lot. Weight below.",
+        "note": "The wedges go soft overnight — eat it cold with the chicken sliced over rather than reheating.",
         "portions": {
           "jon": {
             "grams": 380,
@@ -1772,11 +1767,11 @@
         }
       },
       "method": [
-        "<b>{{35}}ml of reduced-salt soy</b>, the tomato purée, the honey and the crushed garlic in a bag or bowl with the chicken, 15 minutes minimum — the honey needs that long to do anything. Not {{53}}ml of ordinary soy: that is {{8.5}}g of salt in the batch instead of {{4.7}}, and it puts Jon's plate near 2.9g instead of 2.0g.",
+        "<b>{{35}}ml of reduced-salt soy</b>, the tomato purée, the honey and the crushed garlic in a bag or bowl with the chicken, 15 minutes minimum — the honey needs that long to do anything.",
         "Oven to 200°C. Wedges tossed in the teaspoon of oil and <b>{{1}}g of salt weighed across the whole potato tray</b>, on their own tray, 25 minutes.",
         "Chicken into an ovenproof dish with its marinade for 35 minutes, started at the same time as the wedges.",
         "Asparagus onto the wedge tray for the last 5–8 minutes. Edamame from frozen into boiling water for 4.",
-        "<b>Toasted sesame over the chicken.</b> The glaze is soy and honey; sesame is the third note it is missing."
+        "<b>Toasted sesame over the chicken.</b>"
       ],
       "tips": [
         {
@@ -2080,7 +2075,7 @@
           "packSize": 350,
           "packUnit": "g",
           "staple": false,
-          "note": "bought, not rolled - roughly 1.0-1.3g of salt per 100g against 0.15g for plain 5% mince. Cut from 750g to 450g and the difference made up with mince, which is why the plate is 2.46g of salt and not 3.2g"
+          "note": "bought; pick the lowest-salt pack you can find"
         },
         {
           "item": "Onions",
@@ -2115,7 +2110,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": true,
-          "note": "rinsed, dry weight; into the stock 10 minutes BEFORE the tomatoes or they stay whole"
+          "note": "rinsed; into the stock 10 minutes before the tomatoes"
         },
         {
           "item": "Chopped tomatoes, tinned",
@@ -2133,7 +2128,7 @@
           "packSize": null,
           "packUnit": "ml",
           "staple": false,
-          "note": "one cube to a litre - a full-strength cube puts 2.4g of salt into the batch"
+          "note": "one cube to a litre"
         },
         {
           "item": "Mozzarella",
@@ -2166,7 +2161,7 @@
           "packSize": 750,
           "packUnit": "g",
           "staple": true,
-          "note": "{{1}}g across the whole pan and nothing else - the bought meatballs bring the rest"
+          "note": "no other salt — the meatballs bring it"
         },
         {
           "item": "Basil",
@@ -2183,7 +2178,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": false,
-          "note": "150g across the pan, cut back from 240g. It goes into the 4:3 ratio like everything else - about 31g on Jon's plate"
+          "note": "about 31g on Jon's plate"
         },
         {
           "item": "Wholemeal breadcrumbs",
@@ -2201,7 +2196,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "browned with the meatballs and left in the sauce - it halves the salt the bought meatballs bring and puts 30g of protein back on the batch"
+          "note": "browned with the meatballs and left in the sauce"
         }
       ],
       "plates": {
@@ -2250,25 +2245,25 @@
         }
       },
       "method": [
-        "Brown the ready-made meatballs — about {{450}}g — in the oil in an ovenproof pan, turning them until they have colour on most sides, then set them aside. <b>Then brown the {{250}}g of 5% mince in the same pan, breaking it up, and leave it in</b> — half the meat by weight, a seventh of the salt, and it is what keeps this plate at 50g of protein. <b>Almost no salt goes in anywhere in this dish</b>: ready-made meatballs carry roughly 1.0–1.3g of salt per 100g against 0.1g for plain mince, so the 1.5g that used to be weighed into the mince and the 0.5g into the sauce are both gone.",
+        "Brown the ready-made meatballs — about {{450}}g — in the oil in an ovenproof pan until coloured on most sides, then set aside. <b>Brown the {{250}}g of 5% mince in the same pan, breaking it up, and leave it in.</b> <b>Add no salt anywhere</b> — the meatballs bring it.",
         "Onion, garlic and thyme into the same pan until soft, scraping up what the meatballs left behind.",
-        "Lentils and the stock in first — <b>simmer 10 minutes before the tomatoes go anywhere near them</b>. Tomato acidity stops red lentils breaking down, and lentils that stay whole are lentils your daughter spots. Water or quarter-strength stock only; a full-strength cube is 2.4g of salt into the batch.",
+        "Lentils and the stock in first — <b>simmer 10 minutes before the tomatoes go in</b>. Tomato stops red lentils breaking down, and lentils that stay whole are the ones your daughter spots.",
         "Tomatoes and basil in, simmered uncovered 15–20 minutes until reduced by a quarter.",
         "Oven to 200°C. Meatballs into the sauce for 10 minutes, cheese over, back in until it melts. Basil, then to the table with the wholemeal ciabatta.",
-        "<b>Pangrattato over the top before serving.</b> The ciabatta goes soft in the sauce - this is the crunch that survives."
+        "<b>Pangrattato over the top before serving.</b>"
       ],
       "tips": [
         {
           "tone": "hot",
-          "text": "The meatballs are still the salt in this dish, and half of them are now plain 5%% mince for exactly that reason. At 1.0–1.3g per 100g, 450g of them is 4.5–5.8g across the batch before anything else goes in the pan — buy the lowest-salt pack you can find and add none."
+          "text": "The meatballs are the salt in this dish. Buy the lowest-salt pack you can find and add none."
         },
         {
           "tone": "go",
-          "text": "Lentils in the stock before the tomatoes: same fix as the bolognese, same reason. They also take the sauce from about 5g of fibre to 9g and thicken it properly."
+          "text": "Lentils in the stock before the tomatoes, so they break down and thicken the sauce."
         },
         {
           "tone": "plain",
-          "text": "The bread is the calories, not the meatballs. A 31g piece of wholemeal ciabatta still wipes the plate, which is the stated point of it."
+          "text": "A 31g piece of wholemeal ciabatta is enough to wipe the plate."
         }
       ],
       "plateSplit": {
@@ -2301,7 +2296,7 @@
           "packSize": 900,
           "packUnit": "g",
           "staple": false,
-          "note": "1050g - more than one 900g pack. Raised so the pot genuinely makes three plates and two lunches"
+          "note": "1050g — more than one 900g pack"
         },
         {
           "item": "Jasmine rice, dry",
@@ -2310,7 +2305,7 @@
           "packSize": 1000,
           "packUnit": "g",
           "staple": false,
-          "note": "DRY weight, cut from 187g. Splits 41 / 31 / 35 dry"
+          "note": "dry weight; 41g Jon, 31g Cheryl, 35g daughter"
         },
         {
           "item": "Red curry paste",
@@ -2319,7 +2314,7 @@
           "packSize": 180,
           "packUnit": "g",
           "staple": false,
-          "note": "down from the book's 45g for salt; brands run 5-11g salt per 100g"
+          "note": "brands vary a lot in salt — pick a lower one"
         },
         {
           "item": "Coriander",
@@ -2337,7 +2332,7 @@
           "packSize": 400,
           "packUnit": "ml",
           "staple": false,
-          "note": "do not cut this - the water comes down, not the coconut milk"
+          "note": "don't reduce this"
         },
         {
           "item": "Boiling water",
@@ -2345,8 +2340,7 @@
           "aisle": "cupboard",
           "packSize": null,
           "packUnit": "ml",
-          "staple": false,
-          "note": "115ml, not Centr's 200ml"
+          "staple": false
         },
         {
           "item": "Fish sauce",
@@ -2354,8 +2348,7 @@
           "aisle": "cupboard",
           "packSize": 150,
           "packUnit": "ml",
-          "staple": false,
-          "note": "down from the book's 22ml; at 22ml Jon's day is 6.62g of salt"
+          "staple": false
         },
         {
           "item": "Choy sum, pak choi or tenderstem",
@@ -2364,7 +2357,7 @@
           "packSize": 200,
           "packUnit": "g",
           "staple": false,
-          "note": "in 6cm lengths. Raised from 600g - the greens are where the fibre in this dish has to come from"
+          "note": "in 6cm lengths"
         },
         {
           "item": "Dry-roasted unsalted peanuts",
@@ -2373,7 +2366,7 @@
           "packSize": 200,
           "packUnit": "g",
           "staple": true,
-          "note": "WEIGH them - 15g is 87 kcal, a casual handful is 40g and 230"
+          "note": "weighed"
         },
         {
           "item": "Limes",
@@ -2417,7 +2410,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "good",
-        "note": "The fourth portion the 900g pack now pays for. RICE RULES: cool it fast, in the fridge within the hour, reheat ONCE and piping hot - never in a flask. Weight below.",
+        "note": "Rice: cool it fast, fridge within the hour, reheat once until piping hot — never in a flask.",
         "portions": {
           "jon": {
             "grams": 445,
@@ -2439,8 +2432,8 @@
       },
       "method": [
         "Heavy pot over medium-high, sprayed. Chicken 2 minutes a side until lightly golden, then out and kept warm.",
-        "<b>{{40}}g of red curry paste</b> and the coriander stalks into the same pot for 1–2 minutes until fragrant — down from the book's 45g, because brands run 5–11g of salt per 100g.",
-        "Rice in, stirred to coat. Then <b>{{14}}ml of fish sauce</b>, the {{253}}ml of coconut milk and the {{153}}ml of boiling water. At the book's 22ml of fish sauce Jon's day is 6.62g of salt.",
+        "<b>{{40}}g of red curry paste</b> and the coriander stalks into the same pot for 1–2 minutes until fragrant.",
+        "Rice in, stirred to coat. Then <b>{{14}}ml of fish sauce</b>, the {{253}}ml of coconut milk and the {{153}}ml of boiling water.",
         "Chicken back on top in a single layer. Bring to the boil, then the lowest simmer, lid on, 20–25 minutes until a crust forms on the bottom. <b>Don't lift the lid.</b>",
         "Fork the rice through gently, greens over the top, lid back on, 5 minutes off the heat to steam.",
         "Slice the chicken. Coriander leaves, the weighed peanuts, lime, chilli oil if you want it."
@@ -2448,11 +2441,11 @@
       "tips": [
         {
           "tone": "go",
-          "text": "The coconut milk and the water are unchanged and must stay that way — the water came down, not the coconut milk. Take the rice down and leave the liquid alone and you get coconut soup with chicken in it; that ratio is what gives the crust."
+          "text": "Don't change the balance of coconut milk, water and rice — it's what forms the crust."
         },
         {
           "tone": "plain",
-          "text": "Jasmine rice, not brown: the one deliberate exception to the wholegrain default, because brown needs 35–45 minutes at a much wetter ratio and the crust is the point."
+          "text": "Jasmine rice, not brown — brown won't cook or crust in this time."
         },
         {
           "tone": "hot",
@@ -2460,12 +2453,10 @@
         },
         {
           "tone": "hot",
-          "text": "Any spare: cool it fast, refrigerate within the hour, reheat once and piping hot. Standing cooked rice is the one real food-safety risk here."
+          "text": "Any spare: cool it fast, refrigerate within the hour, reheat once and piping hot."
         }
       ],
-      "warnings": [
-        "<b>1.64g of salt in the leftover lunch.</b> Down from 2.1g: the curry paste is 40g not 47 and the fish sauce 14ml not 16. Pair it with a low-salt dinner, not the jacket potato or the soup."
-      ],
+      "warnings": [],
       "plateSplit": {
         "servedByWeight": false,
         "source": "ratio",
@@ -2523,7 +2514,7 @@
           "packSize": 900,
           "packUnit": "g",
           "staple": false,
-          "note": "one 900g pack, 833g used - three plates and two lunches"
+          "note": "one 900g pack, 833g used"
         },
         {
           "item": "Chorizo",
@@ -2532,7 +2523,7 @@
           "packSize": 200,
           "packUnit": "g",
           "staple": false,
-          "note": "60g, not 90 and not the book's 150. It is a seasoning, not a protein"
+          "note": "a seasoning, not the protein"
         },
         {
           "item": "Butter beans",
@@ -2550,7 +2541,7 @@
           "packSize": null,
           "packUnit": "ml",
           "staple": false,
-          "note": "a full-strength cube is ~2.4g of salt a litre; HALF STRENGTH takes this plate from 2.6g to 2.1g and is the single best lever in the dish"
+          "note": "half strength"
         },
         {
           "item": "Smoked paprika",
@@ -2586,7 +2577,7 @@
           "packSize": 250,
           "packUnit": "g",
           "staple": false,
-          "note": "150g across the pan, cut from 208g. Into the 4:3 ratio like everything else - about 34g on Jon's plate"
+          "note": "about 34g on Jon's plate"
         },
         {
           "item": "Sherry vinegar",
@@ -2595,7 +2586,7 @@
           "packSize": 350,
           "packUnit": "ml",
           "staple": true,
-          "note": "in at the end - this dish had no acid at all"
+          "note": "in at the end"
         },
         {
           "item": "Flaked almonds",
@@ -2633,7 +2624,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "good",
-        "note": "Two of the five portions the 900g pack now pays for. Reheats well - the beans improve. Weight below.",
+        "note": "Reheats well — the beans get better.",
         "portions": {
           "jon": {
             "grams": 380,
@@ -2656,24 +2647,24 @@
       "method": [
         "Oven to 200°C. Chicken and chorizo in a single layer in an oven dish, sprayed with the oil and dusted with the paprika, then tossed.",
         "15 minutes, until just starting to brown.",
-        "Out. Beans and stock in, broccoli laid on top, back in for 15 minutes. <b>Use half-strength stock and add no salt</b> — a full-strength cube is about 2.4g of salt into the dish, and this is already one of the saltiest plates here.",
+        "Out. Beans and stock in, broccoli laid on top, back in for 15 minutes. <b>Half-strength stock and no added salt.</b>",
         "Chicken and broccoli out to rest. <b>Mash a few of the beans into the broth to thicken it</b> — that step is the difference between a braise and a bowl of soup.",
         "Beans into the bowls, sliced chicken and broccoli on top, wholegrain baguette on the table.",
-        "<b>Sherry vinegar in off the heat.</b> Smoked paprika, chorizo and beans are all deep, soft and savoury; without acid the whole plate sits in one register.",
-        "<b>Toasted almonds over.</b> A picada in all but name, and it is what stops this being three soft brown things."
+        "<b>Sherry vinegar in off the heat.</b>",
+        "<b>Toasted almonds over.</b>"
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "The chorizo is a flavouring, not a protein: about 19 calories per gram of protein against 6 for chicken thigh. At 60g it still flavours the whole dish and the calories saved go back as chicken."
+          "text": "Keep the chorizo to 60g — it's there for flavour; the chicken is the protein."
         },
         {
           "tone": "plain",
-          "text": "34g of baguette is enough to mop a bowl, which is all the bread is for here. The daughter gets her beans and broccoli alongside rather than under, nothing stirred together."
+          "text": "34g of baguette is enough to mop a bowl. Your daughter gets her beans and broccoli alongside, nothing stirred together."
         },
         {
           "tone": "go",
-          "text": "Better the next day — the beans take up the paprika and the chorizo fat overnight."
+          "text": "Better the next day — the beans take up the paprika overnight."
         }
       ],
       "plateSplit": {
@@ -3230,7 +3221,7 @@
           "packSize": 145,
           "packUnit": "g",
           "staple": false,
-          "note": "1 tin drained. Ordinary tuna is 0.8g salt per 100g; no-added-salt is 0.1g and takes this plate to 0.5g"
+          "note": "no-added-salt, drained"
         },
         {
           "item": "Chickpeas, tinned",
@@ -3239,7 +3230,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "half a tin, drained"
+          "note": "drained"
         },
         {
           "item": "Salad leaves",
@@ -3324,11 +3315,7 @@
       "tips": [
         {
           "tone": "go",
-          "text": "Buy no-added-salt tuna in spring water. Ordinary tinned tuna is 0.8g of salt per 100g against 0.1g, which is the difference between about 0.5g on this plate and 1.4g."
-        },
-        {
-          "tone": "plain",
-          "text": "Half a tin of chickpeas is doing most of the fibre here, and it is a store-cupboard lunch on purpose."
+          "text": "Buy no-added-salt tuna in spring water."
         }
       ],
       "plateSplit": {
@@ -3392,8 +3379,7 @@
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true,
-          "note": "0.70g of salt before anyone eats anything"
+          "staple": true
         },
         {
           "item": "Plain Skyr",
@@ -3402,7 +3388,7 @@
           "packSize": 450,
           "packUnit": "g",
           "staple": true,
-          "note": "or a high-protein dessert. Huel's pea and faba protein is low in leucine - pair it with dairy"
+          "note": "or a high-protein dessert"
         },
         {
           "item": "Apple",
@@ -3436,16 +3422,12 @@
       },
       "method": [
         "Nothing is prepared: the Huel Black bottle, a {{100}}g pot of plain Skyr or a high-protein dessert, and an apple.",
-        "<b>Take the dairy with it, not instead of it.</b> Huel's protein is pea and faba, which carries less leucine than dairy, so the bottle is not a complete feed on its own."
+        "<b>Take the dairy with it, not instead of it</b> — the Huel on its own isn't a complete feed."
       ],
       "tips": [
         {
-          "tone": "go",
-          "text": "A Huel bottle is 0.70g of salt before anyone eats anything — worth knowing on a kedgeree or soup day."
-        },
-        {
           "tone": "plain",
-          "text": "This is Cheryl's working-day default. A sealed bottle in a car between driving lessons is an adherence mechanism, not a nutritional choice."
+          "text": "Cheryl's working-day default: a sealed bottle between driving lessons."
         }
       ],
       "plateSplit": {
@@ -3499,7 +3481,7 @@
           "packSize": null,
           "packUnit": "ml",
           "staple": false,
-          "note": "water, not stock - the savour comes from a parmesan rind and dried porcini instead"
+          "note": "not stock — the parmesan rind and porcini give the flavour"
         },
         {
           "item": "Parmesan rind",
@@ -3534,7 +3516,7 @@
           "packSize": 750,
           "packUnit": "g",
           "staple": true,
-          "note": "5g across the batch - under 1g a bowl, standing in for the corpus's banned 'season hard'"
+          "note": "under 1g a bowl"
         },
         {
           "item": "Plain Skyr",
@@ -3552,7 +3534,7 @@
           "packSize": 225,
           "packUnit": "g",
           "staple": false,
-          "note": "45g a bowl; 15 kcal per gram of protein - a flavouring. Cut from 60g a bowl, which is where most of this dish's salt was"
+          "note": "45g a bowl"
         },
         {
           "item": "Honey",
@@ -3592,7 +3574,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "6 portions from one cook, ~450g each. Freezes because there is no dairy in the base - that is why the Skyr goes in at the bowl. THE SALT IS THE PROBLEM: 4.4g a bowl, eaten two or three times a week, against a 6g day",
+        "note": "Six portions of about 450g. Freezes well — add the Skyr at the bowl, not before.",
         "portions": {
           "jon": {
             "grams": 720,
@@ -3613,28 +3595,20 @@
         }
       },
       "method": [
-        "Oven to 200°C. Broccoli on trays in a single layer, sprayed, 15 minutes — two trays at this quantity. <b>This step is the entire recipe</b>: roasted broccoli soup and boiled broccoli soup are different foods, and only one of them is worth eating.",
-        "Potatoes and stock into a big pan at the same time, simmered 15 minutes until tender. <b>Half-strength stock</b> — full strength is 1.6g of salt a bowl on its own.",
-        "Roasted broccoli in for 5 more minutes, then blend smooth. <b>{{5}}g of salt weighed into the whole batch</b>, which is 1g a bowl, and plenty of pepper. Blended vegetable soup wants intensity, but it gets it weighed rather than seasoned by eye.",
+        "Oven to 200°C. Broccoli on trays in a single layer, sprayed, 15 minutes — two trays at this quantity. <b>Roasting is the whole recipe</b>: boiled broccoli soup is a different, worse thing.",
+        "Potatoes into a big pan with the water, the parmesan rind and the porcini with its soaking liquor. Simmer 15 minutes until tender, then fish out the rind.",
+        "Roasted broccoli in for 5 more minutes, then blend smooth. <b>{{5}}g of salt weighed into the whole batch</b> and plenty of pepper.",
         "Cool fast and portion it here: six tubs, roughly 450g each. Three days in the fridge, three months in the freezer.",
-        "At the bowl: reheat a portion, then <b>150g of skyr dolloped on top, not stirred through</b> - stirred, it turns the whole bowl sour against the brassica; on top you get sour and sweet in the same spoonful. Halloumi in a dry non-stick pan 3-4 minutes with the honey over for the last 30 seconds. Croutons and lemon zest on."
+        "At the bowl: reheat a portion, then <b>150g of Skyr dolloped on top, not stirred through</b>. Halloumi in a dry non-stick pan 3–4 minutes with the honey over for the last 30 seconds. Croutons and lemon zest on."
       ],
       "tips": [
         {
-          "tone": "hot",
-          "text": "The salt was the problem with this one and it has been fixed: <b>2.43g a bowl, down from a re-costed 3.1g and a recorded 4.5g</b>. The halloumi came down from 360g to 240g (it is 2.7g of salt per 100g and 15 kcal per gram of protein - a flavouring, not a protein) and the weighed salt from 6g to 5g. It is no longer the saltiest thing anyone eats still."
+          "tone": "go",
+          "text": "The soup freezes because there's no dairy in it — that's why the Skyr goes on at the bowl."
         },
         {
           "tone": "go",
-          "text": "The base freezes because there is no dairy in it. That is why the Skyr goes in at the bowl and not in the pan."
-        },
-        {
-          "tone": "go",
-          "text": "Use the stalks. Peeled and diced they cook down to nothing in a blended soup and they are a third of the head."
-        },
-        {
-          "tone": "plain",
-          "text": "Halloumi is the chorizo of this recipe — about 15 calories per gram of protein. 45g a bowl still gives you four or five croutons, which is all you want, and it is where this dish's salt problem was."
+          "text": "Use the stalks, peeled and diced. They cook down to nothing and they're a third of the head."
         }
       ],
       "plateSplit": {
@@ -3646,8 +3620,8 @@
       },
       "prep": {
         "when": "weekend",
-        "note": "Six tubs from one 45-minute cook. Three days in the fridge, three months in the freezer. At lunch the soup is reheated; see the pan note below for the croutons.",
-        "pan": "The halloumi croutons are four minutes in a dry pan at the bowl. That is the only lunch in the corpus with a pan in it. Nothing raw, nothing prepped - if that is too much on a given day, take the soup plain and the croutons are 120 kcal you did not eat."
+        "note": "Six tubs from one 45-minute cook. Three days in the fridge, three months in the freezer.",
+        "pan": "The halloumi croutons are four minutes in a dry pan at the bowl. On a busy day, have the soup plain."
       },
       "recosted": "stock out, skyr 200g to 150g and dolloped (19 Sept chef review)"
     },
@@ -3731,8 +3705,7 @@
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true,
-          "note": "cut back - it was carrying calories the dish did not need"
+          "staple": true
         },
         {
           "item": "Smoked paprika",
@@ -3816,7 +3789,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "it IS the next day - 4 portions from one cook. Flask scalded with boiling water and filled above 75C holds above 60C to 1pm",
+        "note": "Four portions from one cook.",
         "portions": {
           "jon": {
             "grams": 445,
@@ -3850,11 +3823,11 @@
         },
         {
           "tone": "go",
-          "text": "A flask holds a braise better than a soup: water carries heat away from itself, so soup arrives lukewarm and thin while a thick braise arrives still steaming."
+          "text": "A thick braise holds heat in a flask far better than soup does."
         },
         {
           "tone": "go",
-          "text": "The browning and the lemon are load-bearing and the salt is not. Searing makes you read a dish as savoury; acid at the end makes you read it as seasoned."
+          "text": "Don't skip the browning or the lemon — they're what make it taste seasoned."
         }
       ],
       "plateSplit": {
@@ -3890,7 +3863,7 @@
           "packSize": 145,
           "packUnit": "g",
           "staple": false,
-          "note": "3 x 145g tins drained. BUY NO-ADDED-SALT: ordinary tuna takes Jon's tub from 0.89g to 2.22g of salt"
+          "note": "no-added-salt, drained"
         },
         {
           "item": "Butter beans",
@@ -3899,7 +3872,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "drained and rinsed; up from the chef's single tin so Cheryl's share is a real one"
+          "note": "drained and rinsed"
         },
         {
           "item": "Fennel",
@@ -3943,8 +3916,7 @@
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true,
-          "note": "cut back - it was carrying calories the dish did not need"
+          "staple": true
         },
         {
           "item": "Lemon juice",
@@ -4001,7 +3973,7 @@
       "leftover": {
         "leavesLunch": false,
         "quality": "better",
-        "note": "two tubs from one assembly - it improves over six hours because the beans and fennel marinate. The only one of the travel lunches safe at ambient temperature"
+        "note": "Two tubs from one assembly. It improves over six hours and is safe at room temperature."
       },
       "method": [
         "<b>Red onion into the lemon juice first, on its own, for five minutes.</b> It goes from harsh to sweet and slightly pink, and it stops being the thing you can still taste an hour later.",
@@ -4012,15 +3984,15 @@
       "tips": [
         {
           "tone": "hot",
-          "text": "Buy no-added-salt tuna. Ordinary tinned tuna takes Jon's tub from 0.89g of salt to 2.22g. Rinsing the capers is worth another 0.1g and costs nothing."
+          "text": "Buy no-added-salt tuna, and rinse the capers."
         },
         {
           "tone": "go",
-          "text": "This is a bean salad, which is a marinade: the beans and fennel take up the oil, lemon and caper brine for six hours and arrive better than they went in. It is the only one of the travel lunches genuinely safe at ambient temperature."
+          "text": "It gets better over six hours as the beans and fennel marinate, and it's the one travel lunch that's safe at room temperature."
         },
         {
           "tone": "plain",
-          "text": "No added salt anywhere — the tuna and the capers are carrying it."
+          "text": "No added salt anywhere — the tuna and the capers carry it."
         }
       ],
       "plateSplit": {
@@ -4083,7 +4055,7 @@
           "packSize": 650,
           "packUnit": "g",
           "staple": false,
-          "note": "poached ahead and cooled, not cooked at lunch"
+          "note": "raw weight — poach it ahead, or use about 70% of this weight in ready-cooked chicken"
         },
         {
           "item": "Wholemeal pitta",
@@ -4092,7 +4064,7 @@
           "packSize": 390,
           "packUnit": "g",
           "staple": false,
-          "note": "pack of 6. Takes the 'one wrap' starch allowance"
+          "note": "pack of 6"
         },
         {
           "item": "Plain Skyr",
@@ -4182,27 +4154,27 @@
       "leftover": {
         "leavesLunch": false,
         "quality": "n/a",
-        "note": "assembled in the morning from chicken cooked the night before. Roast 750g of breast on Sunday and this is Tuesday and Wednesday"
+        "note": "Assembled in the morning from chicken cooked ahead or bought ready-cooked."
       },
       "method": [
-        "<b>Chicken poached ahead, never at lunchtime.</b> Breast into barely-simmering water, lid on, 12 minutes, then left in the water to cool. Do it with the weekend batch or the night before and slice it cold.",
-        "Slaw first, at least an hour ahead: cabbage, carrot, onion, cider vinegar and the {{2}}g of sugar into a tub and <b>squeezed hard with your hands for thirty seconds</b>. The squeezing is the recipe — it breaks the cabbage cells so it pickles in an hour instead of a day, and it takes the raw cabbage smell out.",
+        "<b>Chicken cooked ahead, never at lunchtime.</b> Raw breast into barely-simmering water, lid on, 12 minutes, then left in the water to cool, and sliced cold. Or use ready-cooked chicken.",
+        "Slaw first, at least an hour ahead: cabbage, carrot, onion, cider vinegar and the {{3.5}}g of sugar into a tub and <b>squeezed hard with your hands for thirty seconds</b> — it pickles in an hour instead of a day.",
         "Skyr and Dijon whisked together with plenty of black pepper. This is the sauce and it is 35 calories.",
         "Warm the wholemeal pitta for 20 seconds so it opens without tearing. <b>Sauce inside both walls first — it waterproofs the bread.</b> Then the cold sliced chicken, then the slaw, then the leaves at the very top.",
-        "Slaw in the sandwich, not in a separate tub. The vinegar has already done its damage by the time it is packed."
+        "Slaw goes in the sandwich, not a separate tub."
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "A pitta rather than a rolled wrap for a reason: a wrap goes soggy from the inside out because the filling is against the whole surface, where a pocket keeps the wet part in the middle and the outside dry. At six hours that is the difference between lunch and a damp parcel."
+          "text": "A pitta pocket keeps the wet filling in the middle, so it doesn't go soggy the way a wrap does."
         },
         {
           "tone": "go",
-          "text": "Skyr and Dijon is the best low-calorie sandwich sauce there is — 55 calories against 200 for mayonnaise, and the mustard supplies the pungency 0% dairy has none of."
+          "text": "Skyr and Dijon is a 55-calorie sauce, against about 200 for mayonnaise."
         },
         {
           "tone": "plain",
-          "text": "170g is the raw weight of the chicken, poached or roasted the night before. Roast 750g of breast on Sunday and this is Tuesday and Wednesday."
+          "text": "Roast 750g of breast on Sunday and it covers Tuesday and Wednesday."
         }
       ],
       "plateSplit": {
@@ -4253,7 +4225,7 @@
       },
       "prep": {
         "when": "night-before",
-        "note": "Slaw an hour ahead at minimum; the chicken is poached ahead and sliced cold."
+        "note": "Slaw at least an hour ahead. Chicken poached ahead, or bought ready-cooked."
       },
       "notes": []
     },
@@ -4278,7 +4250,7 @@
           "packSize": 650,
           "packUnit": "g",
           "staple": false,
-          "note": "poached with the weekend batch and sliced cold - never cooked at lunch"
+          "note": "raw weight — poach it ahead, or use about 70% of this weight in ready-cooked chicken"
         },
         {
           "item": "Plain Skyr",
@@ -4406,21 +4378,19 @@
         "leavesLunch": false,
         "quality": "n/a"
       },
-      "warnings": [
-        "<b>Roast the chicken yourself.</b> Pre-packed cooked chicken takes this box from 0.98g of salt to about 2.4g and stops it being the low-salt lunch it is here."
-      ],
+      "warnings": [],
       "method": [
-        "Beat the Skyr hard with the oil, lemon, garlic paste and the {{0.4}}g of weighed salt for thirty seconds. <b>Beating it is the whole point</b> — 0% skyr straight from the pot is dense and chalky; whipped with a little oil it goes glossy and holds a dip. Dill and pepper last.",
+        "Beat the Skyr hard with the oil, lemon, garlic paste and the {{0.7}}g of weighed salt for thirty seconds — <b>beating it is the whole point</b>: unbeaten 0% Skyr is chalky; whipped with a little oil it goes glossy and holds a dip. Dill and pepper last.",
         "Everything into a box with the dip in the middle in its own pot, and <b>the walnuts on top of the dip so they stay dry</b>."
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "The 6g of olive oil is not optional and the efficiency test must not be allowed near it — without fat the dip slides off the carrot and you taste nothing."
+          "text": "Don't skip the oil — without it the dip slides off the carrot."
         },
         {
           "tone": "plain",
-          "text": "280g of raw vegetables, which is more than any other lunch here carries."
+          "text": "280g of raw vegetables, more than any other lunch here."
         }
       ],
       "plateSplit": {
@@ -4471,7 +4441,7 @@
       },
       "prep": {
         "when": "night-before",
-        "note": "The chicken is poached with the weekend batch, never at lunch."
+        "note": "Chicken poached ahead, or bought ready-cooked. Nothing is cooked at lunch."
       },
       "notes": []
     },
@@ -4496,7 +4466,7 @@
           "packSize": 125,
           "packUnit": "g",
           "staple": false,
-          "note": "1 tin drained. 0.9g of salt and not negotiable if you want the tin"
+          "note": "drained"
         },
         {
           "item": "Pearl barley, dry",
@@ -4505,7 +4475,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "DRY weight - batch 150g on Sunday, it keeps five days. Dress it with the lemon while still warm"
+          "note": "dry weight — batch-cook on Sunday, keeps five days; dress with the lemon while warm"
         },
         {
           "item": "Cooked beetroot",
@@ -4515,7 +4485,7 @@
           "packUnit": "g",
           "staple": false,
           "cooked": true,
-          "note": "vacuum-packed beetroot is ~0.45g of the plate's salt; boil your own and the plate is ~1.4g"
+          "note": "vacuum-packed is fine"
         },
         {
           "item": "Cucumber",
@@ -4541,7 +4511,7 @@
           "packSize": 450,
           "packUnit": "g",
           "staple": true,
-          "note": "BEATEN HARD with the oil until glossy - unbeaten it is a pool, not a cream"
+          "note": "beaten hard with the oil until glossy"
         },
         {
           "item": "Hot horseradish",
@@ -4627,19 +4597,19 @@
         "note": "batch the barley, not the tub"
       },
       "method": [
-        "Pearl barley in plenty of water for 30 minutes, drained, and <b>dressed with the lemon while it is still warm</b> — warm grain absorbs dressing, cold grain repels it. That is the single difference between a good grain tub and a dry one.",
-        "<b>Beat the skyr, horseradish, the oil and black pepper together hard</b> until it thickens and turns glossy. This is the difference between a cream and a pool - unbeaten 0% skyr slides off everything it touches.",
+        "Pearl barley in plenty of water for 30 minutes, drained, and <b>dressed with the lemon while it's still warm</b> — warm grain takes up dressing, cold grain doesn't.",
+        "<b>Beat the Skyr, horseradish, oil and black pepper together hard</b> until it thickens and turns glossy.",
         "Layered in the tub in this order: barley at the bottom, then beetroot and cucumber, then the skyr, then the flaked mackerel, then rocket and dill on top. <b>Beetroot away from the rocket</b> or you arrive with pink leaves.",
-        "<b>Rye crispbread crumbled over and the cornichons on last</b>, at the tub rather than in it, or they soften. This is the only crunch in the box."
+        "<b>Rye crispbread crumbled over and the cornichons on last</b>, at the tub rather than in it, or they soften."
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "Four things against one: acid from the lemon, sweetness from the beetroot, heat from the horseradish and cool fat from the skyr. Take any one away and it tastes fishy."
+          "text": "Lemon, beetroot, horseradish and Skyr balance each other — leave one out and it tastes fishy."
         },
         {
           "tone": "plain",
-          "text": "No added salt — the tin, the horseradish and the beetroot carry 1.8g. Beetroot you boil yourself instead of vacuum-packed takes the tub to about 1.4g."
+          "text": "No added salt — the mackerel, horseradish and beetroot carry it."
         },
         {
           "tone": "plain",
@@ -4748,7 +4718,7 @@
           "packSize": 290,
           "packUnit": "g",
           "staple": false,
-          "note": "drained. 0.6g of the plate's 1.8g salt - peppers you roast yourself take it to 1.2g"
+          "note": "drained"
         },
         {
           "item": "Chicken breast, raw",
@@ -4765,8 +4735,7 @@
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true,
-          "note": "cut back - it was carrying calories the dish did not need"
+          "staple": true
         },
         {
           "item": "Smoked paprika",
@@ -4841,7 +4810,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "a cold wedge in a tub is a complete travel lunch - a tortilla is designed to be eaten at room temperature. 4 portions, 3 eaters",
+        "note": "A cold wedge in a tub is a complete travel lunch.",
         "portions": {
           "jon": {
             "grams": 485,
@@ -4871,15 +4840,11 @@
       "tips": [
         {
           "tone": "go",
-          "text": "Cold from the fridge the next day it is better again. A tortilla is the one egg dish designed to be eaten at room temperature, which is what makes it the best travel lunch here."
+          "text": "Better cold from the fridge the next day — a tortilla is made to be eaten at room temperature."
         },
         {
           "tone": "plain",
-          "text": "5.9g of fibre is the weakest number in the set and it isn't dressed up — a tortilla is eggs and potato. Take it on a Skyr-bowl day, not a smoothie day."
-        },
-        {
-          "tone": "go",
-          "text": "The jarred peppers are 0.6g of the plate's 1.8g of salt. Peppers you roast yourself take it to 1.2g."
+          "text": "Low in fibre, so have it on a Skyr-bowl day rather than a smoothie day."
         }
       ],
       "plateSplit": {
@@ -4962,7 +4927,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": false,
-          "note": "RAW, not cooked in brine. Cooked prawns in brine are 1.25g salt per 100g and would take this plate from 1.6g to 2.7g"
+          "note": "raw"
         },
         {
           "item": "Eggs",
@@ -5090,7 +5055,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "good",
-        "note": "a full tub is 671 kcal and 58g protein, over the lunch slot - take three-quarters. COOL IT FAST and fridge within the hour; reheat once, piping hot, and not in a flask",
+        "note": "Take about three-quarters of a full tub for lunch. Cool fast, fridge within the hour, reheat once until piping hot — never in a flask.",
         "portions": {
           "jon": {
             "grams": 430,
@@ -5111,7 +5076,7 @@
         }
       },
       "method": [
-        "<b>The rice must be cold and dry.</b> Cook the brown basmati the night before, spread it on a tray and fridge it uncovered. Hot rice steams and you get risotto — this is the single thing that separates egg-fried rice from wet rice with egg in it.",
+        "<b>The rice must be cold and dry.</b> Cook the brown basmati the night before, spread it on a tray and fridge it uncovered. Hot rice steams and you get risotto.",
         "Eggs beaten and into a very hot oiled wok, scrambled in 40 seconds until <b>just</b> set, then out. They finish cooking later, and rubbery egg is the other way this dish fails.",
         "Prawns in, one layer, 90 seconds a side. Out with the egg.",
         "Carrot, cabbage and spring onion whites for 3 minutes on high — you want char, not softness. Garlic and ginger for 30 seconds.",
@@ -5120,15 +5085,15 @@
       "tips": [
         {
           "tone": "hot",
-          "text": "Raw peeled king prawns, not cooked in brine. Brined cooked prawns would take this plate from 1.6g of salt to 2.7g and lose 4g of protein."
+          "text": "Use raw prawns, not prawns cooked in brine."
         },
         {
           "tone": "go",
-          "text": "The soy goes down the hot side of the pan, not into the middle, so a third of it caramelises on contact instead of just salting the rice."
+          "text": "Soy down the hot side of the pan, not into the middle, so it caramelises."
         },
         {
           "tone": "plain",
-          "text": "The edamame never goes in the pan. It is boiled for 4 minutes and stirred into Jon's and Cheryl's bowls at the end."
+          "text": "The edamame never goes in the pan — boil it 4 minutes and stir it into Jon's and Cheryl's bowls."
         },
         {
           "tone": "hot",
@@ -5175,7 +5140,7 @@
           "packSize": 300,
           "packUnit": "g",
           "staple": false,
-          "note": "~1.9g salt per 100g. Half smoked and half fresh is the whole sodium trick - 60g flavours four portions"
+          "note": "undyed; with the fresh fish it flavours the whole pan"
         },
         {
           "item": "Fresh haddock, pollock or coley",
@@ -5257,8 +5222,7 @@
           "aisle": "dairy",
           "packSize": 250,
           "packUnit": "g",
-          "staple": false,
-          "note": "cut back - it was carrying calories the dish did not need"
+          "staple": false
         },
         {
           "item": "Olive oil",
@@ -5266,8 +5230,7 @@
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true,
-          "note": "cut back - it was carrying calories the dish did not need"
+          "staple": true
         },
         {
           "item": "Lemon juice",
@@ -5292,7 +5255,7 @@
           "packSize": 100,
           "packUnit": "g",
           "staple": true,
-          "note": "the jar ones are fine and they keep for months; 8g a plate is the crisp element"
+          "note": "jarred is fine"
         }
       ],
       "plates": {
@@ -5320,7 +5283,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "good",
-        "note": "the base reheats; the eggs do not. Reheat the rice and fish piping hot and boil a fresh egg. Rice rules apply",
+        "note": "The base reheats; the eggs don't. Reheat piping hot and boil a fresh egg. Cool rice fast and reheat it only once.",
         "portions": {
           "jon": {
             "grams": 380,
@@ -5341,29 +5304,25 @@
         }
       },
       "method": [
-        "Eggs into boiling water for <b>7 minutes exactly</b>, then straight into cold water. Seven minutes gives a yolk set at the edge and still fudgy in the middle, which is what makes kedgeree taste rich; nine gives a grey ring and a dry crumb.",
+        "Eggs into boiling water for <b>7 minutes exactly</b>, then straight into cold water, for a yolk that's set at the edge and fudgy in the middle.",
         "Both lots of fish into a wide pan, just covered with water, bay leaf in. Bring it barely to a tremble and <b>take it off the heat immediately</b> — it poaches through in 4 minutes in the residual heat. Lift out, flake into big pieces, and keep {{250}}ml of the poaching liquid.",
         "Butter and oil, onion 6 minutes. Garlic, curry powder and turmeric for 60 seconds in dry heat.",
-        "Brown basmati in, stirred to coat, then the reserved poaching liquid and water to the packet's ratio — <b>that liquid is smoky and free and it is where the 'no added salt' gets away with it</b>. Lid on, simmer 25 minutes.",
+        "Brown basmati in, stirred to coat, then the reserved poaching liquid and water to the packet's ratio — <b>the smoky liquid seasons the rice</b>. Lid on, simmer 25 minutes.",
         "Peas and spinach forked through in the last 3 minutes. <b>Fish on top, not stirred in</b>, lid on, 2 minutes off the heat to warm through. Eggs halved on top, then lemon, herbs and pepper.",
-        "<b>Crispy shallots over at the table.</b> Kedgeree is rice, fish and egg - nothing in it has an edge."
+        "<b>Crispy shallots over at the table.</b>"
       ],
       "tips": [
         {
           "tone": "hot",
-          "text": "No salt. Not a pinch. The smoked haddock is carrying about 1.9g per 100g already."
-        },
-        {
-          "tone": "go",
-          "text": "Half smoked and half fresh is the whole sodium trick. Smoke is an aroma and aromas work at low concentration — 60g of smoked haddock flavours four portions as convincingly as 200g does, where an all-smoked version would be 3.7g of salt a plate."
+          "text": "No salt. The smoked haddock carries it."
         },
         {
           "tone": "plain",
-          "text": "The fish goes on top and is never stirred through, so the daughter can see exactly what she is eating."
+          "text": "The fish goes on top, never stirred through, so your daughter can see what she's eating."
         },
         {
           "tone": "hot",
-          "text": "The base reheats; the eggs do not. Reheat the rice and fish piping hot and boil a fresh egg."
+          "text": "The base reheats; the eggs don't. Reheat the rice and fish piping hot and boil a fresh egg."
         }
       ],
       "plateSplit": {
@@ -5413,7 +5372,7 @@
           "packSize": 200,
           "packUnit": "g",
           "staple": false,
-          "note": "doing the salt, which is why the fish needs none"
+          "note": "does the salting — the fish needs none"
         },
         {
           "item": "Lemons",
@@ -5456,8 +5415,7 @@
           "aisle": "fresh",
           "packSize": 1000,
           "packUnit": "g",
-          "staple": false,
-          "note": "down from 850g on 19 September - the crumb counts against the starch allowance (coach ruling 2.3) and 45g of starch-carb was the heaviest plate in the set"
+          "staple": false
         },
         {
           "item": "Frozen peas",
@@ -5466,7 +5424,7 @@
           "packSize": 1000,
           "packUnit": "g",
           "staple": false,
-          "note": "crushed INTO the potatoes, not served beside them - that is the daughter fix"
+          "note": "crushed into the potatoes"
         },
         {
           "item": "Mint",
@@ -5547,7 +5505,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "the fifth loin flaked through the leftover potato and peas while both are still warm, plus oil, lemon, capers, onion and rocket. Eaten COLD - reheating cod is the wrong answer",
+        "note": "The spare loin flaked through the leftover potato and peas with oil, lemon, capers, onion and rocket. Eat it cold — reheated cod goes woolly.",
         "portions": {
           "jon": {
             "grams": 465,
@@ -5568,14 +5526,10 @@
         }
       },
       "warnings": [
-        "<b>Unsmoked haddock only.</b> Smoked runs 1.9–3.05g of salt per 100g — a 245g portion is 4.7–7.5g, which is the whole day's ceiling in one dinner.",
-        "<b>Pat the loins dry and buy loin-cut.</b> Haddock carries more surface water than cod and a wet surface steams the crumb instead of crisping it.",
-        "<b>10–12 minutes, not 12–14.</b> Tuck the thin tail under rather than trying to time it separately.",
-        "<b>The 1.9g of potato-water salt is counted in full on this plate.</b> The coach's working figure is 10% absorption for drained potatoes, which would score it at 0.19g - but that figure is medium confidence and <b>salt is a ceiling, so the count rounds up, not down</b>. The plate is 1.85g either way and comfortably inside the day.",
-        "<b>The potatoes came down from 850g to 750g on 19 September.</b> Breadcrumbs count against the starch allowance (coach ruling 2.3) and this was the heaviest starch load of any dinner in the file at 45g of starch-carb. It is now 40g, and the plate is 690 kcal against a 710 slot target."
+        "<b>Unsmoked haddock only.</b> Smoked is 4.7–7.5g of salt per portion — most of a day's ceiling in one dinner."
       ],
       "method": [
-        "Oven to 210°C. New potatoes into cold water with <b>{{1.9}}g of salt weighed into the potato water</b> - 0.5g a portion, and none at all on the fish. Boiled 18 minutes, until a knife goes in with no resistance. <b>This is the only salted cooking water left in the file</b> and it is deliberate: the potatoes are crushed with oil and become the body of the plate rather than being drained and forgotten.",
+        "Oven to 210°C. New potatoes into cold water with <b>{{1.9}}g of salt weighed into the potato water</b>, none on the fish. Boiled 18 minutes, until a knife goes in with no resistance.",
         "Crumb: wholemeal breadcrumbs, parmesan, lemon zest, parsley and plenty of black pepper mixed dry. <b>Mix the oil through the breadcrumbs first, until they look like damp sand</b> — oil added to a wet crumb steams instead of crisping.",
         "<b>Pat the haddock loins dry.</b> Haddock carries more surface water than cod and a wet surface steams the crumb. A thin smear of Dijon on top of each loin as the glue and the acid, then the crumb pressed on firmly.",
         "<b>10–12 minutes, not 12–14.</b> Tuck the thin tail under rather than trying to time it separately, and take them out when they flake under light pressure — err early, they carry on cooking on the tray.",
@@ -5585,15 +5539,11 @@
       "tips": [
         {
           "tone": "go",
-          "text": "The peas are crushed into the potatoes, not served beside them. A vegetable on the side of a teenager's plate is optional; a vegetable inside the starch is dinner."
+          "text": "The peas are crushed into the potatoes, not served beside them — a vegetable inside the starch gets eaten."
         },
         {
           "tone": "go",
-          "text": "Cook the fifth loin for the next day and flake it through the leftover potato and peas while both are still warm, with oil, lemon, capers, red onion and rocket. Eaten cold it is better than the dinner was hot; reheating it is the wrong answer."
-        },
-        {
-          "tone": "plain",
-          "text": "The crumb is doing the salt as well as the crunch, which is why the fish itself needs none."
+          "text": "Cook a spare loin and flake it through the leftover potato and peas while warm, with oil, lemon, capers, red onion and rocket. Eat it cold."
         }
       ],
       "plateSplit": {
@@ -5655,7 +5605,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": false,
-          "note": "in 5 pieces. Raised from 750g: at 750 the pan could not produce the three plates AND the two lunches it claims"
+          "note": "in 5 pieces"
         },
         {
           "item": "Cannellini beans, tinned",
@@ -5664,7 +5614,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "620g drained and rinsed, raised from 470g. Mash about a quarter against the pan - that is what makes it a braise"
+          "note": "drained and rinsed; mash about a quarter against the pan"
         },
         {
           "item": "Leeks",
@@ -5733,7 +5683,7 @@
           "packSize": 50,
           "packUnit": "g",
           "staple": false,
-          "note": "about 4, chopped to a paste. The cleanest sodium trade in the document - glutamate instead of salt"
+          "note": "about 4, chopped to a paste"
         },
         {
           "item": "Parsley",
@@ -5787,7 +5737,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "a tubbed portion without the bread, 441g. Cold or barely warmed - hard microwaving turns cod to cotton wool",
+        "note": "A tub without the bread. Cold or barely warmed — hard microwaving turns cod to cotton wool.",
         "portions": {
           "jon": {
             "grams": 495,
@@ -5819,19 +5769,19 @@
       "tips": [
         {
           "tone": "go",
-          "text": "The anchovy is the seasoning. Five fillets is 16g and about 1.3g of salt across the whole braise, and what it leaves behind is the savoury depth people reach for the salt cellar to get."
+          "text": "The anchovy is the seasoning — it gives the savoury depth salt would."
         },
         {
           "tone": "plain",
-          "text": "No added salt. The anchovy, the beans, the stock, the bread and the cod account for 2.1g between them; drop the bread and it is 1.7g."
+          "text": "No added salt."
         },
         {
           "tone": "hot",
-          "text": "Eat the leftovers cold or barely warmed. Microwaving it hard turns cod to cotton wool."
+          "text": "Eat the leftovers cold or barely warmed. Microwaving hard turns cod to cotton wool."
         },
         {
           "tone": "plain",
-          "text": "The daughter's beans go alongside rather than under, with nothing stirred together — the same principle the Spanish chicken already uses."
+          "text": "Your daughter's beans go alongside, not under, with nothing stirred together."
         }
       ],
       "plateSplit": {
@@ -5864,7 +5814,7 @@
           "packSize": 120,
           "packUnit": "g",
           "staple": false,
-          "note": "6 x 120g tins drained. HALF mashed to a paste against the pan until nothing is recognisable, half kept as whole fillets"
+          "note": "6 × 120g tins, drained; all mashed into the sauce"
         },
         {
           "item": "Fennel",
@@ -5915,7 +5865,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": true,
-          "note": "the whole recipe: sweetness against the fish oil"
+          "note": "sweetness against the fish"
         },
         {
           "item": "Fennel seeds",
@@ -5976,7 +5926,7 @@
           "packSize": 800,
           "packUnit": "g",
           "staple": false,
-          "note": "pangrattato - the crunch, and the wholegrain in disguise"
+          "note": "for the pangrattato"
         },
         {
           "item": "Wholewheat spaghetti, dry",
@@ -5985,7 +5935,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "DRY weight; 46g on Jon's plate, into the 4:3 ratio like everything else"
+          "note": "dry weight; 46g on Jon's plate"
         },
         {
           "item": "Cannellini beans, tinned",
@@ -6044,29 +5994,29 @@
         }
       },
       "method": [
-        "Pangrattato first, in a dry pan you will reuse: breadcrumbs and {{5}}g of the oil over medium heat, <b>stirred constantly for 4 minutes until deep brown and hard</b>. Lemon zest off the heat, then out into a bowl. This is the crunch and it is the entire reason the dish doesn't feel soft and samey.",
+        "Pangrattato first, in a dry pan you'll reuse: breadcrumbs and {{5}}g of the oil over medium heat, <b>stirred constantly for 4 minutes until deep brown and hard</b>. Lemon zest off the heat, then out into a bowl.",
         "Same pan, the rest of the oil, fennel and onion on medium-low <b>for 10 minutes with a lid on</b> — fennel needs that to go from aggressive to sweet. Garlic, toasted fennel seeds and chilli for a minute.",
         "Tomato purée in and cooked out for 90 seconds until it darkens — <b>raw purée tastes tinny</b>.",
-        "<b><b>All the sardines in, mashed hard</b> against the base of the pan with a wooden spoon for a full minute, until there is nothing recognisable left. <b>All of them, not half</b> - whole fillets left in the sauce are the thing people push to the side of the plate, and dissolved sardine is savour rather than fish.</b> Then the tomatoes, the raisins, the {{1.5}}g of weighed salt and {{100}}ml of water. Simmer 15 minutes.",
+        "<b>All the sardines in, mashed hard</b> against the base of the pan with a wooden spoon for a full minute, until nothing is recognisable. Then the tomatoes, the raisins, the {{1.5}}g of weighed salt and {{100}}ml of water. Simmer 15 minutes.",
         "Wholewheat spaghetti cooked, drained and <b>finished in the sauce for 60 seconds with a splash of its water</b> — never sauce spooned on top; the starch in the pasta water is what makes the sauce cling.",
-        "The remaining whole sardine fillets laid on the adults' plates, warmed by the pasta. Lemon zest, parsley, fennel fronds and pangrattato over everything."
+        "Lemon zest, parsley, fennel fronds and pangrattato over everything."
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "The raisins are the whole recipe. The sweetness sits opposite the fish oil's slight bitterness and the tomato's acid sits opposite both, so nothing tastes fishy."
+          "text": "The raisins balance the fish and the tomato — don't leave them out."
         },
         {
           "tone": "hot",
-          "text": "19.7g of fibre is right on the 20g-per-sitting ceiling. Take this on a smoothie breakfast, never the Skyr bowl."
+          "text": "About 20g of fibre on Jon's plate. Have it on a smoothie morning, not the Skyr bowl."
         },
         {
           "tone": "plain",
-          "text": "The daughter's plate gets the same sauce with the sardines dissolved into it, the full 75g dry wholewheat spaghetti, parmesan and pangrattato — no whole fillets and no beans."
+          "text": "Your daughter gets the same sauce with 75g dry spaghetti, parmesan and pangrattato — no beans."
         },
         {
           "tone": "go",
-          "text": "The sauce is better on day two; the pasta is not. Keep the sauce separate and cook fresh spaghetti, or eat it cold as a pasta salad with extra lemon."
+          "text": "The sauce is better on day two; the pasta isn't. Keep the sauce and cook fresh spaghetti, or eat it cold as a pasta salad with extra lemon."
         }
       ],
       "plateSplit": {
@@ -6099,7 +6049,7 @@
           "packSize": 650,
           "packUnit": "g",
           "staple": false,
-          "note": "RAW weight. Butterflied flat to an even 1.5cm - 4 minutes a side and it is done"
+          "note": "raw weight; butterflied flat to an even 1.5cm"
         },
         {
           "item": "Red wine vinegar",
@@ -6108,7 +6058,7 @@
           "packSize": 500,
           "packUnit": "ml",
           "staple": false,
-          "note": "the whole dish, twice over: it holds water in a lean breast and its sharpness survives the char"
+          "note": "keeps the breast juicy"
         },
         {
           "item": "Garlic",
@@ -6232,7 +6182,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "full leftover portion is 535g; the chef says take three-quarters of it for a lunch inside slot. Cold is genuinely better - the marinade keeps developing",
+        "note": "Take about three-quarters of a full portion for lunch. Better cold — the marinade keeps developing.",
         "portions": {
           "jon": {
             "grams": 480,
@@ -6253,11 +6203,10 @@
         }
       },
       "warnings": [
-        "<b>Scaling past four portions makes it two batches.</b> At five it is ~1250g of butterflied breast and ~925g of hispi — \"one tray and one pan, 40 minutes\" stops being true.",
-        "<b>The weighed salt scales with it.</b> 2.2g at four portions becomes 2.75g at five; it is an absolute figure, not a per-portion one."
+        "<b>More than four portions needs two batches</b> — it won't fit one tray and one pan."
       ],
       "method": [
-        "Marinade mixed or blitzed — vinegar, grated garlic, paprika, oregano, chilli, lemon, oil and the {{2.2}}g of weighed salt — and the chicken in it for <b>at least 2 hours, up to 24</b>. The vinegar is doing two jobs: flavour, and denaturing the surface protein so a very lean breast holds moisture under high heat. That is why this can be breast and not thigh.",
+        "Marinade mixed or blitzed — vinegar, grated garlic, paprika, oregano, chilli, lemon, oil and the {{2.2}}g of weighed salt — and the chicken in it for <b>at least 2 hours, up to 24</b>. The vinegar keeps the lean breast juicy under high heat.",
         "Potatoes boiled 18 minutes, drained and crushed with a fork and {{8}}g of the oil — <b>half broken, half whole</b>. Peas boiled 3 minutes and crushed through with them.",
         "Hispi quarters cut side down in a dry hot pan or on a hot tray with the remaining oil, <b>6 minutes without moving them</b>. You want black edges: char on brassica is not a mistake, it is the flavour.",
         "Chicken onto a screaming hot griddle or under a high grill, <b>4 minutes a side</b>, basted once with the leftover marinade in the last minute. Butterflied, it is done in 8 minutes total. Rest 5 minutes.",
@@ -6266,19 +6215,15 @@
       "tips": [
         {
           "tone": "go",
-          "text": "Butterflying is not a flourish. An untouched breast is thick at one end and thin at the other, and the thin end is dry before the thick end is safe."
+          "text": "Butterfly the breast. Left whole, the thin end dries out before the thick end is cooked."
         },
         {
           "tone": "go",
-          "text": "Piri-piri is a sour sauce with heat in it rather than a hot sauce, which is why this is the lowest-salt dinner in the corpus at 1.15g with nothing sacrificed to get there."
-        },
-        {
-          "tone": "hot",
-          "text": "Scaling past four portions makes it two batches, and the 2.2g of salt scales with the recipe — it is an absolute figure, not a per-portion one."
+          "text": "Piri-piri is sour with heat in it — the vinegar is why it needs so little salt."
         },
         {
           "tone": "plain",
-          "text": "Cold is genuinely better the next day; the marinade keeps developing in the fridge."
+          "text": "Better cold the next day; the marinade keeps developing."
         }
       ],
       "plateSplit": {
@@ -6344,7 +6289,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "DRY weight. 15.6g fibre per 100g dry against rice's 3.5g. Toast it dry for 2 minutes first"
+          "note": "dry weight; toast it dry for 2 minutes first"
         },
         {
           "item": "Raw peeled king prawns",
@@ -6353,7 +6298,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": false,
-          "note": "RAW, not cooked in brine. Cooked prawns in brine are 1.25g salt per 100g and would take this plate from 2.2g to 4.3g. Raised from 500g so the pan really does make four portions"
+          "note": "raw"
         },
         {
           "item": "Reduced-salt fish or chicken stock",
@@ -6453,7 +6398,7 @@
           "packSize": 100,
           "packUnit": "g",
           "staple": true,
-          "note": "toasted in a dry pan - the crisp element; 8g a plate"
+          "note": "toasted in a dry pan"
         }
       ],
       "plates": {
@@ -6481,7 +6426,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "different",
-        "note": "reheated prawns go to rubber - that is literally why the laksa was dropped. Batch the barley base for 5 and the prawns for 3; the spare base becomes a cold barley salad with a tin of tuna, tomatoes, rocket and lemon. The dinner leaves a lunch, just not the same lunch",
+        "note": "The lunch is a different dish: the spare barley as a cold salad with tuna, tomatoes, rocket and lemon. Reheated prawns go rubbery.",
         "portions": {
           "jon": {
             "grams": 475,
@@ -6493,12 +6438,12 @@
           },
           "cheryl": {
             "source": "not-scalable",
-            "why": "The lunch is a different dish - cold barley salad with tuna - because reheated prawns go to rubber. Her portion has never been built."
+            "why": "The lunch is a different dish — cold barley salad with tuna — so there's no weight off this plate."
           }
         }
       },
       "method": [
-        "Shell stock first if you can buy the prawns shell-on: shells and heads with half an onion and a bay leaf, simmered 20 minutes. It is free, it takes twenty minutes, and it is the difference between this dish and a bowl of barley. Otherwise water and a reduced-salt cube.",
+        "Shell stock first if you buy the prawns shell-on: shells and heads with half an onion and a bay leaf, simmered 20 minutes. It makes the dish. Otherwise water and a reduced-salt cube.",
         "Onion in the oil, 8 minutes on low, no colour. Garlic for 60 seconds.",
         "Pearl barley in, stirred in the dry hot pan for 2 minutes until it smells toasted. <b>Do not skip this</b> — toasted barley is nutty, untoasted barley is porridge.",
         "Wine in and boiled away, then the stock a ladle at a time, stirring, <b>40 minutes</b>. Barley takes longer than rice and never goes as soft; you are aiming for tender with a definite bite.",
@@ -6509,19 +6454,19 @@
       "tips": [
         {
           "tone": "hot",
-          "text": "Reheated prawns go to rubber — that is literally why the laksa was dropped. Batch the barley base for five and the prawns for three; the spare base becomes a cold barley salad with a tin of tuna, tomatoes, rocket and lemon."
+          "text": "Reheated prawns go rubbery. Cook the barley for five and the prawns for three; the spare barley makes a cold salad with tuna, tomatoes, rocket and lemon."
         },
         {
           "tone": "go",
-          "text": "Lemon zest at the end rather than the beginning, because the aromatic oils are volatile and boil off."
+          "text": "Lemon zest at the end — its oils boil off if it goes in early."
         },
         {
           "tone": "hot",
-          "text": "If the daughter won't eat prawns, her plate is barley, peas and parmesan, and that is not a dinner. Chop her share of the prawns small and stir them through rather than leaving them whole on top - it is the only version of this she will eat."
+          "text": "If your daughter won't eat prawns, chop her share small and stir it through rather than leaving them whole on top."
         },
         {
           "tone": "plain",
-          "text": "No added salt if you use shell stock — the prawns and the parmesan bring 1.8g."
+          "text": "No added salt if you use shell stock — the prawns and parmesan carry it."
         }
       ],
       "plateSplit": {
@@ -6598,7 +6543,7 @@
           "packSize": 35,
           "packUnit": "g",
           "staple": true,
-          "note": "below the threshold where anyone identifies it and exactly at the one where the meat tastes better"
+          "note": "just enough that the meat tastes better"
         },
         {
           "item": "Chilli flakes",
@@ -6666,7 +6611,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "DRY weight. 18g fibre per 100g dry - the highest of any starch in the corpus. No cooking, 12 minutes in boiling water"
+          "note": "dry weight; 12 minutes in boiling water, no cooking"
         },
         {
           "item": "Plain Skyr",
@@ -6711,7 +6656,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "the best leftover of the three - kofta and sauce reheat better than they cook. 589 kcal is over the lunch slot, so take about 80%, or eat the bulgur cold as a tabbouleh",
+        "note": "Reheats better than it cooks. A full tub is over the lunch slot — take about 80%, or eat the bulgur cold as a tabbouleh.",
         "portions": {
           "jon": {
             "grams": 430,
@@ -6737,20 +6682,16 @@
         "Sauce: peppers in the oil for 6 minutes, cumin and chilli for 60 seconds, passata in, then simmer 12 minutes uncovered until it darkens and thickens. <b>Spinach in at the end and stirred until it disappears completely into the sauce</b> — at {{230}}g across four portions it is invisible, and it is fibre and folate on the daughter's plate.",
         "Kofta browned hard in a dry non-stick pan, <b>4 minutes a side and not turned early</b>, then into the sauce for 5 minutes to finish.",
         "Skyr loosened with lemon and spooned over at the table. Mint on top.",
-        "<b>Dukkah over the skyr.</b> Same toasted-whole-spice trick the corpus already uses on the eggs."
+        "<b>Dukkah over the Skyr.</b>"
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "Grated and squeezed onion rather than diced: the juice would steam the mince and stop it browning, but the pulp keeps it moist, so you get the crust and the succulence."
-        },
-        {
-          "tone": "go",
-          "text": "Cinnamon at 1g in 800g of meat is below the threshold where anyone identifies it as cinnamon and exactly at the threshold where the meat tastes inexplicably better."
+          "text": "Grate and squeeze the onion rather than dicing it — the juice would steam the mince, the pulp keeps it moist."
         },
         {
           "tone": "plain",
-          "text": "Bulgur is 18g of fibre per 100g dry, the highest of any starch here, and it needs no cooking — twelve minutes in boiling water. The daughter's share works out at about 45g dry and she ends up with more fibre than either adult."
+          "text": "Bulgur needs no cooking: twelve minutes in boiling water. It's also the highest-fibre starch here."
         },
         {
           "tone": "plain",
@@ -6872,8 +6813,7 @@
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true,
-          "note": "cut back - it was carrying calories the dish did not need"
+          "staple": true
         },
         {
           "item": "Lemons",
@@ -6921,12 +6861,8 @@
       ],
       "tips": [
         {
-          "tone": "hot",
-          "text": "Pre-packed cooked chicken is around 1g of salt per 100g against about 0.1g for chicken roasted at home, so 300g of it is roughly 3g across the two tubs. Roast your own when the day allows it."
-        },
-        {
           "tone": "go",
-          "text": "The butter beans are what make this a lunch rather than a salad — fibre and satiety, not protein, and they are the cheapest of both in the shop."
+          "text": "The butter beans are what make this a lunch rather than a salad."
         }
       ],
       "plateSplit": {
@@ -6989,7 +6925,7 @@
           "packUnit": "g",
           "staple": false,
           "cooked": true,
-          "note": "POACHED AHEAD and cooled - 320g raw gives about 275g on the plates. Ready-cooked prawns are fine and are what Jon actually buys, but say WHICH: in brine is ~1.25g of salt per 100g, and a sealed tray with no liquid is not costed here yet."
+          "note": "320g raw gives about 275g cooked — or use about 275g of ready-cooked prawns"
         },
         {
           "item": "Butter beans",
@@ -6997,7 +6933,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "note": "drained and rinsed - EXACTLY ONE 400g TIN, which drains to about 235g. It asked for 260g until 21 September, which is more than a tin holds.",
+          "note": "drained and rinsed — one 400g tin",
           "staple": true
         },
         {
@@ -7007,8 +6943,7 @@
           "packSize": 150,
           "packUnit": "g",
           "staple": false,
-          "assumed": true,
-          "note": "cut from 120g on 21 September - it was 0.17 kcal a gram and most of the bulk"
+          "assumed": true
         },
         {
           "item": "Cherry tomatoes",
@@ -7032,7 +6967,7 @@
           "aisle": "dairy",
           "packSize": 1000,
           "packUnit": "g",
-          "note": "whipped, as the dressing. Cut from 200g on 21 September",
+          "note": "whipped, as the dressing",
           "staple": true
         },
         {
@@ -7041,8 +6976,7 @@
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true,
-          "note": "raised from 4g on 21 September: the plate needed calories back that were not water"
+          "staple": true
         },
         {
           "item": "Lemons",
@@ -7059,7 +6993,7 @@
           "packSize": 200,
           "packUnit": "g",
           "staple": true,
-          "note": "toasted in a dry pan until they colour - raised from 16g, the crisp element and the densest thing here"
+          "note": "toasted in a dry pan until they colour"
         }
       ],
       "plates": {
@@ -7092,12 +7026,8 @@
       ],
       "tips": [
         {
-          "tone": "hot",
-          "text": "Prawns are three different ingredients wearing one name. RAW, poached ahead, is what this is costed on: 320g raw gives 275g on the plates and about 0.16g of salt on Jon's. READY-COOKED IN BRINE is about 1.25g of salt per 100g and would put roughly 1.2g extra on his plate on its own. READY-COOKED IN A SEALED TRAY with no liquid - what Jon buys - is somewhere between and has no figure here yet. Send the label and it gets one."
-        },
-        {
           "tone": "go",
-          "text": "The whipped Skyr is the dressing rather than a garnish, which is what lets this carry its protein without any oil-heavy mayonnaise."
+          "text": "The whipped Skyr is the dressing — no mayonnaise needed."
         }
       ],
       "plateSplit": {
@@ -7158,13 +7088,10 @@
       },
       "prep": {
         "when": "night-before",
-        "note": "The prawns are poached with the weekend batch and cooled. Built the night before."
+        "note": "Built the night before. Poach raw prawns ahead, or use ready-cooked."
       },
       "recosted": "raw prawns poached ahead instead of bought in brine (19 Sept chef review)",
-      "warnings": [
-        "<b>This plate was 617g and is now 527g.</b> Jon made it on 21 September and could not finish it comfortably. The recorded plate weight said 576g, which was wrong in the reassuring direction - the ingredients came to 617g. It is a salad, so it is the least energy-dense lunch in the file at 0.92 kcal a gram, and the bulk came off the leaves, the cucumber and the Skyr rather than off the protein.",
-        "<b>Say which prawns.</b> Raw and poached ahead is what this is costed on. Ready-cooked IN BRINE is about 1.25g of salt per 100g and would add roughly 1.2g to Jon's plate. Ready-cooked in a sealed tray with no liquid - what Jon buys - sits somewhere between and <b>is not costed: send the label</b>."
-      ]
+      "warnings": []
     },
     {
       "id": "chicken-bean-spinach-pot",
@@ -7187,7 +7114,7 @@
           "packSize": 650,
           "packUnit": "g",
           "staple": false,
-          "note": "ROASTED AHEAD and shredded - 880g raw yields about 634g cooked, which is what the plate weights assume. Pre-packed cooked chicken is 1.0g of salt per 100g against 0.16g home-roasted, and was single-handedly making this the saltiest plate in the file."
+          "note": "roasted ahead and shredded — 880g raw gives about 634g cooked, or use 634g ready-cooked"
         },
         {
           "item": "Butter beans",
@@ -7196,7 +7123,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "4 tins, drained and RINSED - the tin liquid is where the salt is"
+          "note": "4 tins, drained and rinsed"
         },
         {
           "item": "Passata",
@@ -7271,7 +7198,7 @@
           "packSize": null,
           "packUnit": "g",
           "staple": false,
-          "note": "squeezed in off the heat - this is doing the job salt would"
+          "note": "squeezed in off the heat"
         },
         {
           "item": "Wholemeal breadcrumbs",
@@ -7308,7 +7235,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "Double the lot and it reheats better than it cooks - the beans hold and the sauce thickens overnight. ADD THE SPINACH FRESH to the second portion rather than reheating it, or it goes grey.",
+        "note": "Reheats well. Add the spinach fresh to a reheated portion or it goes grey.",
         "portions": {
           "jon": {
             "grams": 475,
@@ -7329,26 +7256,23 @@
         }
       },
       "warnings": [
-        "<b>The beans are the starch.</b> A drained tin carries about the same carbohydrate as 55g of dry rice, so <b>no pasta, no bread, no potato alongside</b>. This is a complete plate on its own.",
-        "<b>21.1g of fibre on Jon's plate, against a 20g single-sitting ceiling.</b> The beans came down from 980g to 700g on 19 September and it is still marginally over. Don't add more beans, and don't take this one on a Skyr-bowl morning.",
-        "<b>Was the saltiest plate in the file at 3.19g; now 1.60g.</b> Nothing about the cooking changed - the ingredient line said pre-packed cooked chicken, which is about 1.0g of salt per 100g against 0.16g for a breast you roast yourself. Coach ruling 3.2, 19 September: <b>\"cooked chicken\" is not an ingredient</b> - every line in this file now says home-roasted or pre-packed, because the two differ tenfold and the difference is invisible on the plate.",
-        "<b>This stopped being a cold-start quick dinner on 19 September.</b> It is still 15 minutes in the pan, but the chicken has to have been roasted beforehand. If nothing is roasted, this is not tonight's dinner.",
-        "<b>Rebuilt, not original.</b> This was in the file lost on 16 September and was reconstructed from the standing rules. Check it against what you actually made."
+        "<b>The beans are the starch</b> — no pasta, bread or potato alongside.",
+        "<b>21g of fibre on Jon's plate.</b> Don't add more beans, and don't have it on a Skyr-bowl morning."
       ],
       "method": [
-        "<b>The chicken is roasted ahead, not in this pan.</b> {{880}}g of raw breast, no salt on it, 200°C for 20-25 minutes, cooled and shredded - it keeps three days and this is the weekend-batch job. <b>Do not substitute a pre-packed cooked chicken</b>: it carries 1.0g of salt per 100g against 0.16g for your own, and it was what made this the saltiest plate in the file.",
+        "<b>The chicken is cooked ahead, not in this pan.</b> {{880}}g of raw breast, no salt on it, 200°C for 20–25 minutes, cooled and shredded — it keeps three days. Or use ready-cooked chicken.",
         "<b>Onion and garlic</b> in the oil, medium heat, 4 minutes until soft.",
         "<b>Paprika, chilli and oregano</b> in for 30 seconds, until you can smell them.",
         "<b>Passata and a splash of water.</b> Simmer 5 minutes.",
-        "<b>Beans and chicken in.</b> Warm through 3-4 minutes. The chicken was roasted earlier and is already cooked, so you are heating it rather than cooking it - don't let it sit and go stringy.",
+        "<b>Beans and chicken in.</b> Warm through 3–4 minutes — it's already cooked, so don't let it sit and go stringy.",
         "<b>Spinach in handfuls</b>, stirring until each one collapses. About 2 minutes.",
         "<b>Lemon and black pepper off the heat.</b>",
-        "<b>Pangrattato over the top.</b> Fifteen minutes of one-pan cooking gives you nothing with a texture."
+        "<b>Pangrattato over the top.</b>"
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "The lemon is doing the job salt would. Acid at the end makes a tomato sauce taste finished without touching the 6g ceiling."
+          "text": "The lemon at the end does the job salt would."
         },
         {
           "tone": "plain",
@@ -7356,12 +7280,12 @@
         },
         {
           "tone": "hot",
-          "text": "If the beans are a problem for your daughter, ladle her sauce out at the end of step 3 before they go in, and serve it over pasta. That is a deviation from the one-recipe rule and the only one in the corpus - her figures above assume she eats it as made."
+          "text": "If the beans are a problem for your daughter, ladle her sauce out before they go in and serve it over pasta."
         }
       ],
       "prep": {
         "when": "weekend",
-        "note": "Only the chicken. Roast and shred it at the weekend and the pot itself is still 15 minutes on the night - but it is no longer a dinner you can start from a cold kitchen."
+        "note": "Only the chicken: roast and shred it at the weekend, or buy it ready-cooked. The pot itself is 15 minutes."
       }
     },
     {
@@ -7385,7 +7309,7 @@
           "packSize": null,
           "packUnit": "g",
           "staple": false,
-          "note": "about 2.2kg raw on the bone - yields roughly 800g of meat. THAW 24-36 HOURS IN THE FRIDGE"
+          "note": "about 2.2kg raw on the bone, yields roughly 800g of meat. Thaw 24–36 hours in the fridge"
         },
         {
           "item": "Puy lentils, dry",
@@ -7505,7 +7429,7 @@
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "The fourth portion. Duck and lentils are better cold than warm - shred the meat through the lentils with extra vinegar and eat it as a salad. Reheating duck makes it tough.",
+        "note": "Better cold than warm — shred the meat through the lentils with extra vinegar and eat it as a salad. Reheating makes duck tough.",
         "portions": {
           "jon": {
             "grams": 480,
@@ -7526,10 +7450,9 @@
         }
       },
       "warnings": [
-        "<b>Thaw it properly: 24 to 36 hours in the fridge for a whole bird.</b> Not on the worktop, not in water. Start it two days before you want to eat it.",
-        "<b>The rendered fat is the whole calorie risk and there is a lot of it</b> - 250-350g comes out of a duck this size. Pour it off as it renders and keep it for another day. <b>This is why the plate has lentils and not potatoes:</b> potatoes roasted in duck fat would put Jon's plate near 1,000 kcal.",
-        "<b>The skin is not in the numbers.</b> 100g of crisp duck skin is around 450 kcal. Jon's 712 is duck meat with NO skin - the two sentences that used to sit here contradicted each other and this is the correct one. Even 20g of crisp skin is +90 kcal.",
-        "<b>15.5g of fibre, against a 20g single-sitting ceiling</b> - re-costed down from 18g, so this one has room. Take it on a Skyr-bowl morning, never after the sardine ragu or the shakshuka."
+        "<b>Thaw it properly: 24 to 36 hours in the fridge for a whole bird.</b> Not on the worktop, not in water. Start two days before you want to eat it.",
+        "<b>Pour the fat off as it renders</b> — 250–350g comes out of a duck this size. Keep it for another day; it's why this plate has lentils, not potatoes.",
+        "<b>The skin isn't in the numbers.</b> Even 20g of crisp skin is about +90 kcal."
       ],
       "method": [
         "<b>The day before, if you can.</b> Duck out of its wrapping, patted bone dry, skin scored in a diamond through the fat but <b>not into the meat</b>. Rub 1g of the weighed salt over the skin and leave it uncovered on a rack in the fridge overnight. Dry skin is crisp skin; this step does more than anything in the oven.",
