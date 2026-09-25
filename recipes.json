@@ -527,7 +527,7 @@
           "packSize": 2000,
           "packUnit": "g",
           "staple": false,
-          "note": "3 x 275g; buy one large and two smaller"
+          "note": "3 potatoes of about 275g"
         },
         {
           "item": "Olive oil",
@@ -552,7 +552,7 @@
           "packSize": 145,
           "packUnit": "g",
           "staple": false,
-          "note": "NO-ADDED-SALT tuna, drained. Ordinary tuna is 0.8g salt per 100g and would add 1.1g to the batch"
+          "note": "no-added-salt, drained"
         },
         {
           "item": "Light mayonnaise",
@@ -561,7 +561,7 @@
           "packSize": 500,
           "packUnit": "g",
           "staple": false,
-          "note": "cut again on 19 September; the Skyr took its place. Cut with skyr and Dijon, never used neat"
+          "note": "for the tuna mayo"
         },
         {
           "item": "Sweetcorn, tinned",
@@ -579,7 +579,7 @@
           "packSize": 415,
           "packUnit": "g",
           "staple": true,
-          "note": "reduced-salt - about 0.5g saved"
+          "note": "reduced-salt"
         },
         {
           "item": "Cheddar, grated",
@@ -596,7 +596,7 @@
           "packSize": 250,
           "packUnit": "g",
           "staple": false,
-          "note": "a genuine scrape, halved again on 19 September - it was 59 kcal of nothing"
+          "note": "a scrape"
         },
         {
           "item": "Salad leaves",
@@ -605,8 +605,7 @@
           "packSize": 100,
           "packUnit": "g",
           "staple": false,
-          "assumed": true,
-          "note": "'salad' is unquantified in the corpus"
+          "assumed": true
         },
         {
           "item": "Plain Skyr",
@@ -615,7 +614,7 @@
           "packSize": 1000,
           "packUnit": "g",
           "staple": true,
-          "note": "into the mayo, not on top. Nearly doubled on 19 September to carry the protein the butter and mayonnaise were not"
+          "note": "for the tuna mayo"
         },
         {
           "item": "Dijon mustard",
@@ -623,7 +622,8 @@
           "aisle": "cupboard",
           "packSize": 200,
           "packUnit": "g",
-          "staple": true
+          "staple": true,
+          "note": "for the tuna mayo"
         },
         {
           "item": "Cornichons",
@@ -632,7 +632,7 @@
           "packSize": 300,
           "packUnit": "g",
           "staple": true,
-          "note": "finely diced, into the tuna mayo"
+          "note": "finely diced"
         },
         {
           "item": "Red onions",
@@ -641,7 +641,7 @@
           "packSize": null,
           "packUnit": "g",
           "staple": false,
-          "note": "soaked in lemon 5 minutes first"
+          "note": "finely diced"
         },
         {
           "item": "Smoked mackerel fillets",
@@ -650,7 +650,8 @@
           "packSize": 200,
           "packUnit": "g",
           "staple": false,
-          "note": "70g across the whole tray, flaked over - it is the protein the cottage cheese was carrying, with flavour"
+          "note": "flaked over the top",
+          "cooked": true
         },
         {
           "item": "Pumpkin seeds",
@@ -659,7 +660,7 @@
           "packSize": 200,
           "packUnit": "g",
           "staple": true,
-          "note": "toasted in a dry pan - the crisp element; 10g a plate"
+          "note": "toasted"
         }
       ],
       "plates": {
@@ -691,22 +692,20 @@
       },
       "method": [
         "Oven to 200°C. Prick the potatoes and rub them with the oil and the {{2}}g of coarse salt.",
-        "Straight onto the shelf for 60–75 minutes. <b>No foil — foil steams them and you lose the skin.</b>",
-        "Everything else onto the table and people build their own.",
-        "<b>Two toppings, not five.</b> Tuna mayo made properly - mayo cut with the skyr and the Dijon, cornichon and lemon-soaked onion through it - and the mackerel flaked over. The old build put tuna mayo, beans, cottage cheese, cheddar and salad on one potato: three wet white things competing and nothing with a texture except the skin."
+        "Straight onto the oven shelf for 60–75 minutes, until the skins are crisp. <b>No foil</b> — it steams the skin.",
+        "While they bake, soak the diced red onion in a squeeze of lemon for 5 minutes, and toast the pumpkin seeds in a dry pan until they start to pop.",
+        "<b>Tuna mayo:</b> mix the Skyr, mayonnaise and Dijon, then stir in the tuna, cornichons and onion.",
+        "Warm the beans.",
+        "Split the potatoes and add a scrape of butter. Everyone builds their own: tuna mayo, beans, sweetcorn and cheddar, then the mackerel flaked over and the seeds on top. Salad on the side."
       ],
       "tips": [
         {
-          "tone": "plain",
-          "text": "Jon's build is the tuna mayo (68g of no-added-salt tuna on his plate, mayo cut with skyr and Dijon), his share of the baked beans, the flaked mackerel, salad, and the toasted pumpkin seeds over the top. The cottage cheese is gone - the mackerel replaced it."
-        },
-        {
           "tone": "go",
-          "text": "Short on time? Microwave 6 minutes first, then 30 minutes in the hot oven. The skin still crisps."
+          "text": "Short on time? Microwave the potatoes for 6 minutes first, then 30 minutes in the hot oven. The skins still crisp."
         },
         {
           "tone": "hot",
-          "text": "Cook only the number you will eat. A reheated jacket goes leathery."
+          "text": "Cook only the number you'll eat. A reheated jacket goes leathery."
         }
       ],
       "plateSplit": {
@@ -756,10 +755,7 @@
           }
         ]
       },
-      "recosted": "cottage cheese out, 80g smoked mackerel in, no-added-salt tuna, reduced-salt beans, mayo cut with skyr and Dijon. 648->731 kcal, salt 3.62->2.93",
-      "warnings": [
-        "<b>The weakest protein-per-calorie dinner in the file, and it put Friday under the 170g floor.</b> 19 September: the butter halved to a scrape, the mayonnaise cut from 25g to 15g and the Skyr nearly doubled to 300g - the same tuna mayo, made with more of what carries protein and less of what carries only fat. Jon's plate went from 46.0g of protein to 50.8g at the same calories."
-      ]
+      "warnings": []
     },
     {
       "id": "harissa-chicken-chickpeas",
