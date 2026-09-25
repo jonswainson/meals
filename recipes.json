@@ -7917,6 +7917,393 @@
         ]
       },
       "warnings": []
+    },
+    {
+      "id": "beef-barley-stew-slow-cooker",
+      "name": "Slow-cooker beef and barley stew",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 480,
+      "handsOnMinutes": 10,
+      "tags": [
+        "slow-cooker",
+        "one-pot",
+        "freezes"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Diced beef, braising steak",
+          "grams": 700,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Pearl barley, dry",
+          "grams": 110,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": true,
+          "note": "rinsed"
+        },
+        {
+          "item": "Onions",
+          "grams": 200,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2, chopped"
+        },
+        {
+          "item": "Carrots",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2, in chunks"
+        },
+        {
+          "item": "Swede",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "in chunks"
+        },
+        {
+          "item": "Chopped tomatoes, tinned",
+          "grams": 400,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tin"
+        },
+        {
+          "item": "Beef stock, half strength",
+          "grams": 100,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Worcestershire sauce",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": true,
+          "note": "1 tbsp"
+        },
+        {
+          "item": "Thyme",
+          "grams": 3,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "a few sprigs"
+        },
+        {
+          "item": "Bay leaf",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": true,
+          "note": "2 leaves"
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1.5,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Spinach or kale",
+          "grams": 60,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "kale, stirred in at the end"
+        },
+        {
+          "item": "Crispy shallots",
+          "grams": 20,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "note": "from a jar, on top"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 705,
+          "protein": 68.4,
+          "fibre": 13.6,
+          "salt": 1.52,
+          "plateGrams": 740
+        },
+        "cheryl": {
+          "kcal": 528,
+          "protein": 51.3,
+          "fibre": 10.2,
+          "salt": 1.14,
+          "plateGrams": 555
+        },
+        "daughter": {
+          "plateGrams": 555,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats and freezes well.",
+        "portions": {
+          "jon": {
+            "grams": 504,
+            "kcal": 480,
+            "protein": 46.6,
+            "fibre": 9.3,
+            "salt": 1.04,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 404,
+            "kcal": 385,
+            "protein": 37.4,
+            "fibre": 7.4,
+            "salt": 0.83,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Everything except the kale and crispy shallots into the slow cooker: beef, barley, onions, carrots, swede, tomatoes, stock, Worcestershire, thyme, bay and the {{1.5}}g of salt. Stir.",
+        "Lid on: <b>8 hours on low or 5 on high</b>. It looks dry at first — the vegetables release plenty of liquid, so don't add more.",
+        "10 minutes before serving, stir in the kale.",
+        "Take out the bay leaves. Crispy shallots on top at the table."
+      ],
+      "tips": [
+        {
+          "tone": "go",
+          "text": "Got 5 minutes? Brown the beef in a hot pan before it goes in — it deepens the flavour."
+        },
+        {
+          "tone": "plain",
+          "text": "Set the portions to 5 and it makes two lunch tubs as well. It freezes well."
+        }
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "grams": {
+          "jon": 740,
+          "cheryl": 555,
+          "daughter": 555
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "chicken-chickpea-tagine-slow-cooker",
+      "name": "Slow-cooker chicken and chickpea tagine",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 360,
+      "handsOnMinutes": 10,
+      "tags": [
+        "slow-cooker",
+        "one-pot",
+        "freezes"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Chicken thighs, skinless boneless",
+          "grams": 750,
+          "aisle": "meat-fish",
+          "packSize": 900,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Chickpeas, tinned",
+          "grams": 240,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tin, drained and rinsed"
+        },
+        {
+          "item": "Onions",
+          "grams": 200,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2, sliced"
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "3 cloves, crushed"
+        },
+        {
+          "item": "Chopped tomatoes, tinned",
+          "grams": 400,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tin"
+        },
+        {
+          "item": "Dried apricots",
+          "grams": 80,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": true,
+          "note": "halved"
+        },
+        {
+          "item": "Ras el hanout",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 40,
+          "packUnit": "g",
+          "staple": true,
+          "note": "2 tsp"
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 100,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1.0,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Lemon juice",
+          "grams": 20,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "half a lemon"
+        },
+        {
+          "item": "Coriander",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chopped"
+        },
+        {
+          "item": "Flaked almonds",
+          "grams": 20,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true,
+          "note": "toasted"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 690,
+          "protein": 72.5,
+          "fibre": 13.4,
+          "salt": 1.54,
+          "plateGrams": 715
+        },
+        "cheryl": {
+          "kcal": 518,
+          "protein": 54.4,
+          "fibre": 10.0,
+          "salt": 1.16,
+          "plateGrams": 535
+        },
+        "daughter": {
+          "plateGrams": 535,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats and freezes well.",
+        "portions": {
+          "jon": {
+            "grams": 497,
+            "kcal": 480,
+            "protein": 50.4,
+            "fibre": 9.3,
+            "salt": 1.07,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 399,
+            "kcal": 385,
+            "protein": 40.4,
+            "fibre": 7.5,
+            "salt": 0.86,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Everything except the lemon, coriander and almonds into the slow cooker: chicken, chickpeas, onions, garlic, tomatoes, apricots, ras el hanout, stock and the {{1}}g of salt. Stir.",
+        "Lid on: <b>6 hours on low or 3–4 on high</b>. Pull the chicken into chunks with two forks at the end.",
+        "Toast the flaked almonds in a dry pan until golden.",
+        "Stir in the lemon juice. Coriander and almonds over at the table."
+      ],
+      "tips": [
+        {
+          "tone": "plain",
+          "text": "If your daughter won't eat the chickpeas, give her couscous or bread alongside."
+        },
+        {
+          "tone": "plain",
+          "text": "Set the portions to 5 and it makes two lunch tubs as well. It freezes well."
+        }
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "grams": {
+          "jon": 715,
+          "cheryl": 535,
+          "daughter": 535
+        }
+      },
+      "warnings": []
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8. RE-DERIVED 19 September 2026 against the new composition table: every portion below is the weight that lands on its target off that person's own re-costed plate, so weight and macros now agree by construction. Jon's target is the 480 kcal lunch slot target; Cheryl's is still the observed 385 and still needs the coach.",

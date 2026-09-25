@@ -41,11 +41,11 @@
     "Limes and Lemons are listed as whole fruit but only the juice and zest are eaten; they are costed at the juice/zest yield, not at whole-fruit composition."
   ],
   "counts": {
-    "total": 200,
-    "ingredientsInRecipesJson": 165,
+    "total": 205,
+    "ingredientsInRecipesJson": 170,
     "additionalPlanHtmlIngredients": 35,
-    "high": 156,
-    "medium": 44,
+    "high": 158,
+    "medium": 47,
     "low": 0
   },
   "items": {
@@ -296,6 +296,20 @@
       "cookedYield": 0.68,
       "inRecipesJson": false,
       "note": "plan.html item. RAW, boneless. Roasting loses ~32%: a 1,200 g joint yields ~815 g of cooked meat at 29.5 g protein and 200 kcal per 100 g."
+    },
+    "Beef stock, half strength": {
+      "per": "100g",
+      "kcal": 3,
+      "protein": 0.3,
+      "fat": 0.1,
+      "carbs": 0.2,
+      "fibre": 0.0,
+      "salt": 0.25,
+      "source": "One stock cube or pot to a litre, made at half strength",
+      "confidence": "medium",
+      "state": "as made",
+      "cookedYield": 1.0,
+      "inRecipesJson": true
     },
     "Biltong": {
       "per": "100g",
@@ -1060,6 +1074,21 @@
         "turkey-black-bean-chilli"
       ]
     },
+    "Diced beef, braising steak": {
+      "per": "100g",
+      "kcal": 140,
+      "protein": 21.0,
+      "fat": 6.0,
+      "carbs": 0.0,
+      "fibre": 0.0,
+      "salt": 0.15,
+      "source": "Typical UK supermarket diced braising steak, raw",
+      "confidence": "medium",
+      "state": "raw",
+      "cookedYield": 1.0,
+      "inRecipesJson": true,
+      "note": "Generic until Jon sends the pack label - fat content varies a lot between packs."
+    },
     "Dijon mustard": {
       "per": "100g",
       "kcal": 150,
@@ -1096,6 +1125,20 @@
         "dip-box",
         "mackerel-beetroot-barley-tub"
       ]
+    },
+    "Dried apricots": {
+      "per": "100g",
+      "kcal": 158,
+      "protein": 4.0,
+      "fat": 0.6,
+      "carbs": 36.5,
+      "fibre": 6.3,
+      "salt": 0.04,
+      "source": "CoFID / McCance & Widdowson - apricots, ready-to-eat, dried",
+      "confidence": "high",
+      "state": "as sold",
+      "cookedYield": 1.0,
+      "inRecipesJson": true
     },
     "Dried oregano": {
       "per": "100g",
@@ -2520,6 +2563,21 @@
         "egg-fried-brown-rice-prawns"
       ]
     },
+    "Ras el hanout": {
+      "per": "100g",
+      "kcal": 290,
+      "protein": 11.0,
+      "fat": 12.0,
+      "carbs": 35.0,
+      "fibre": 30.0,
+      "salt": 0.1,
+      "source": "Typical spice-blend figures",
+      "confidence": "medium",
+      "state": "as sold",
+      "cookedYield": 1.0,
+      "inRecipesJson": true,
+      "note": "Assumes a blend with no added salt - check the jar; some contain it."
+    },
     "Raw king prawns": {
       "per": "100g",
       "kcal": 76,
@@ -3208,6 +3266,20 @@
       "usedIn": [
         "pitta-poached-chicken-slaw"
       ]
+    },
+    "Swede": {
+      "per": "100g",
+      "kcal": 24,
+      "protein": 0.7,
+      "fat": 0.3,
+      "carbs": 5.0,
+      "fibre": 1.9,
+      "salt": 0.03,
+      "source": "CoFID / McCance & Widdowson - swede, raw",
+      "confidence": "high",
+      "state": "raw",
+      "cookedYield": 1.0,
+      "inRecipesJson": true
     },
     "Sweet potato": {
       "per": "100g",

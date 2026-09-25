@@ -1043,6 +1043,8 @@ function slotGap(slot, kcal){
     (g > 0 ? 'has to come back off another meal.' : 'leaves room on another meal.') + '</p>';
 }
 
+/* slow cooks read as hours: "8 hr", not "480 min" */
+const mins = m => m >= 120 ? (Math.round(m / 30) / 2) + " hr" : m + " min";
 const macroRow = (p, r) =>
   '<div class="macros"><div><b>' + Math.round(p.kcal) + '</b> <span>kcal</span></div>' +
   '<div><b>' + p.protein + 'g</b> <span>protein</span></div>' +
@@ -1051,7 +1053,7 @@ const macroRow = (p, r) =>
   (r && typeof r.timeMinutes === "number"
      ? '<div>' + (r.timeMinutes === 0
          ? '<b>No cooking</b>'
-         : '<b>' + r.timeMinutes + ' min</b> <span>' +
+         : '<b>' + mins(r.timeMinutes) + '</b> <span>' +
            (r.handsOnMinutes ? r.handsOnMinutes + ' hands-on' : 'to cook') + '</span>') + '</div>'
      : '') + '</div>';
 
@@ -1083,7 +1085,7 @@ const optionsFor = (slot, sel) => DATA.recipes.filter(r => r.slot === slot && (!
   .sort((a,b) => a.name.localeCompare(b.name))
   .map(r => '<option value="' + r.id + '"' + (r.id===sel?" selected":"") + '>' +
     r.name + ' — ' + Math.round(r.plates.jon.kcal) + ' kcal, ' + r.plates.jon.protein + 'g' +
-    (typeof r.timeMinutes === "number" ? ', ' + (r.timeMinutes === 0 ? "no cooking" : r.timeMinutes + ' min') : '') +
+    (typeof r.timeMinutes === "number" ? ', ' + (r.timeMinutes === 0 ? "no cooking" : mins(r.timeMinutes)) : '') +
     '</option>')
   .join("");
 
