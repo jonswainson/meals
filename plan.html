@@ -358,7 +358,7 @@ const WEEK_0926 = {
     {id:"sun",label:"Sun",title:"Sunday",tags:"Home \u00b7 roast day",
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
-     lunch:{kind:"recipe",id:"mackerel-beetroot-barley-tub",portions:2,daughter:false,alt:""},
+     lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
      dinner:{kind:"fixed",id:"roast-beef"}},
     {id:"mon",label:"Mon",title:"Monday",tags:"Home \u00b7 trains \u00b7 leg day",
      diners:["jon","cheryl","daughter"],
@@ -1102,9 +1102,10 @@ function prepBlock(r){
 
 /* Chef's rule, 19 September: every dish wants one crisp element. Nineteen of thirty-six had
    none, and the dishes the family already likes are, without exception, the ones that do. */
-const CRISP = /crispbread|crouton|pangrattato|breadcrumb|walnut|almond|peanut|pumpkin seed|sesame|dukkah|shallot|seeds|nuts|crackling|cornichon|crisp|toasted|pitta|crispy|charred|apple/i;
+const CRISP = /ciabatta|sourdough|baguette|crispbread|crouton|pangrattato|breadcrumb|walnut|almond|peanut|pumpkin seed|sesame|dukkah|shallot|seeds|nuts|crackling|cornichon|crisp|toasted|pitta|crispy|charred|apple/i;
 function crispNote(r){
-  if (!r || r.retired || !(r.ingredients||[]).length) return "";
+  /* skipCrispNote: kept simple on purpose, so the card doesn't nag for a topping */
+  if (!r || r.retired || r.skipCrispNote || !(r.ingredients||[]).length) return "";
   const has = r.ingredients.some(i => CRISP.test(i.item)) || CRISP.test(r.name) ||
               (r.method||[]).some(m => /crisp|toasted|crunch|charred|crouton|pangrattato/i.test(m));
   return has ? "" :
