@@ -965,7 +965,7 @@
       "id": "turkey-black-bean-chilli",
       "name": "Turkey and black bean chilli",
       "slot": "dinner",
-      "basePortions": 5,
+      "basePortions": 3,
       "timeMinutes": 35,
       "tags": [
         "batch",
@@ -976,11 +976,12 @@
       "ingredients": [
         {
           "item": "Turkey mince, 5%",
-          "grams": 850,
+          "grams": 500,
           "aisle": "meat-fish",
           "packSize": 500,
           "packUnit": "g",
-          "staple": false
+          "staple": false,
+          "note": "1 pack"
         },
         {
           "item": "Black beans, tinned",
@@ -989,20 +990,11 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "2 tins, drained"
-        },
-        {
-          "item": "Kidney beans, tinned",
-          "grams": 240,
-          "aisle": "cupboard",
-          "packSize": 400,
-          "packUnit": "g",
-          "staple": true,
-          "note": "1 tin, drained"
+          "note": "2 tins, drained and rinsed"
         },
         {
           "item": "Passata",
-          "grams": 850,
+          "grams": 400,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "g",
@@ -1010,21 +1002,21 @@
         },
         {
           "item": "Onions",
-          "grams": 300,
+          "grams": 150,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
           "staple": false,
-          "note": "2"
+          "note": "1, chopped"
         },
         {
           "item": "Peppers",
-          "grams": 450,
+          "grams": 160,
           "aisle": "fresh",
           "packSize": null,
           "packUnit": "g",
           "staple": false,
-          "note": "3"
+          "note": "1, chopped"
         },
         {
           "item": "Garlic",
@@ -1033,16 +1025,16 @@
           "packSize": null,
           "packUnit": "g",
           "staple": false,
-          "note": "5 cloves"
+          "note": "3 cloves, crushed"
         },
         {
-          "item": "Cumin seed, whole",
-          "grams": 16,
+          "item": "Ground cumin",
+          "grams": 4,
           "aisle": "cupboard",
           "packSize": 45,
           "packUnit": "g",
           "staple": true,
-          "note": "toasted in a dry pan, then crushed"
+          "note": "2 tsp"
         },
         {
           "item": "Smoked paprika",
@@ -1055,55 +1047,38 @@
         },
         {
           "item": "Chilli flakes",
-          "grams": 4,
+          "grams": 2,
           "aisle": "cupboard",
           "packSize": 35,
           "packUnit": "g",
           "staple": true,
-          "note": "2 tsp"
+          "note": "1 tsp — more for extra kick"
         },
         {
           "item": "Olive oil",
-          "grams": 10,
+          "grams": 15,
           "aisle": "cupboard",
           "packSize": 500,
           "packUnit": "ml",
-          "staple": true
+          "staple": true,
+          "note": "1 tbsp"
         },
         {
           "item": "Salt, weighed",
-          "grams": 4,
+          "grams": 1,
           "aisle": "cupboard",
           "packSize": 750,
-          "packUnit": "g",
-          "staple": true,
-          "note": "weighed into the pan at the end"
-        },
-        {
-          "item": "Plain Skyr",
-          "grams": 180,
-          "aisle": "dairy",
-          "packSize": 450,
-          "packUnit": "g",
-          "staple": true,
-          "note": "60g a bowl, instead of soured cream"
-        },
-        {
-          "item": "Chipotle paste",
-          "grams": 12,
-          "aisle": "cupboard",
-          "packSize": 100,
           "packUnit": "g",
           "staple": true
         },
         {
-          "item": "Dark chocolate, 70%",
-          "grams": 10,
-          "aisle": "cupboard",
-          "packSize": 100,
+          "item": "Plain Skyr",
+          "grams": 150,
+          "aisle": "dairy",
+          "packSize": 1000,
           "packUnit": "g",
           "staple": true,
-          "note": "in at the end - depth, not sweetness"
+          "note": "on top: 60g Jon, 45g each for Cheryl and your daughter"
         },
         {
           "item": "Limes",
@@ -1112,86 +1087,84 @@
           "packSize": null,
           "packUnit": "g",
           "staple": false,
-          "note": "juice in off the heat"
+          "note": "1 lime"
         }
       ],
       "plates": {
         "jon": {
-          "kcal": 708,
-          "protein": 70.3,
-          "fibre": 19.5,
-          "salt": 2.6,
-          "plateGrams": 688,
-          "note": "688g on the plate, inside the 750g ceiling"
+          "kcal": 710,
+          "protein": 70.6,
+          "fibre": 19.3,
+          "salt": 1.93,
+          "plateGrams": 720
         },
         "cheryl": {
-          "kcal": 531,
-          "protein": 52.7,
-          "fibre": 14.6,
-          "salt": 1.95,
-          "plateGrams": 516
+          "kcal": 532,
+          "protein": 52.9,
+          "fibre": 14.5,
+          "salt": 1.45,
+          "plateGrams": 540
         },
         "daughter": {
-          "plateGrams": 468,
-          "portionedBy": "composition",
-          "note": "UNTESTED. Neither the corpus nor the verified week ever builds her a chilli plate, and the black and kidney beans are visible and cannot be lifted out",
-          "derivedShare": true
+          "plateGrams": 540,
+          "portionedBy": "composition"
         }
       },
       "leftover": {
         "leavesLunch": true,
         "quality": "better",
-        "note": "Freeze any spare.",
+        "note": "Better the next day, and freezes well.",
         "portions": {
           "jon": {
-            "grams": 465,
-            "kcal": 478,
-            "protein": 47.5,
-            "fibre": 13.2,
-            "salt": 1.76,
+            "grams": 487,
+            "kcal": 480,
+            "protein": 47.7,
+            "fibre": 13.1,
+            "salt": 1.3,
             "source": "derived"
           },
           "cheryl": {
-            "grams": 375,
-            "kcal": 386,
+            "grams": 390,
+            "kcal": 385,
             "protein": 38.3,
-            "fibre": 10.6,
-            "salt": 1.42,
+            "fibre": 10.5,
+            "salt": 1.04,
             "source": "derived"
           }
         }
       },
       "method": [
-        "<b>Cumin seed toasted whole in the dry pan until it smells of cumin, then crushed.</b> Thirty seconds.",
-        "Onion and peppers into the oil for 5 minutes. Garlic and spices for one minute — <b>the spices need dry heat before any liquid</b>.",
-        "Turkey in, broken up and browned, 5 minutes.",
-        "Beans, passata and a tin of water in, then simmer 20 minutes minimum. <b>Weigh {{4}}g of salt into the whole batch at the end</b> rather than seasoning by eye.",
-        "Skyr on top of each bowl instead of soured cream.",
-        "<b>Chocolate and lime juice in off the heat.</b>"
+        "Oil in a big pan. Onion and pepper in for 5 minutes.",
+        "Garlic, cumin, paprika and chilli flakes in for 1 minute.",
+        "Turkey in, broken up, 5 minutes until browned.",
+        "Beans, passata and the {{1}}g of salt in. Simmer 20 minutes until thick — a splash of water if it gets too dry.",
+        "Squeeze of lime off the heat. Skyr on top of each bowl."
       ],
       "tips": [
         {
           "tone": "go",
-          "text": "Better on day two. The spices settle overnight."
+          "text": "Better on day two — the spices settle overnight."
         },
         {
           "tone": "plain",
-          "text": "Jon's bowl is 690g of chilli plus 60g of Skyr."
+          "text": "Set the portions to 5 and it makes two lunch tubs as well."
         },
         {
           "tone": "hot",
-          "text": "The beans can't be lifted out, so your daughter's plate here is untested."
+          "text": "The beans can't be lifted out, so if your daughter won't eat them she'll need something else."
         }
       ],
       "plateSplit": {
         "servedByWeight": true,
         "grams": {
-          "jon": 688,
-          "cheryl": 516,
-          "daughter": 468
+          "jon": 720,
+          "cheryl": 540,
+          "daughter": 540
         }
       },
-      "recosted": "toasted whole cumin, chipotle, chocolate and lime (19 Sept chef review)"
+      "recosted": "toasted whole cumin, chipotle, chocolate and lime (19 Sept chef review)",
+      "handsOnMinutes": 15,
+      "warnings": []
     },
     {
       "id": "baked-salmon-lentils",
@@ -8301,6 +8274,205 @@
           "jon": 715,
           "cheryl": 535,
           "daughter": 535
+        }
+      },
+      "warnings": []
+    },
+    {
+      "id": "beef-chilli-slow-cooker",
+      "name": "Slow-cooker beef chilli",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 360,
+      "handsOnMinutes": 15,
+      "tags": [
+        "slow-cooker",
+        "one-pot",
+        "freezes",
+        "spicy"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Beef mince, 5%",
+          "grams": 750,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Kidney beans, tinned",
+          "grams": 240,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tin, drained and rinsed"
+        },
+        {
+          "item": "Chopped tomatoes, tinned",
+          "grams": 400,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tin"
+        },
+        {
+          "item": "Onions",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1, chopped"
+        },
+        {
+          "item": "Peppers",
+          "grams": 240,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1–2, chopped"
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "3 cloves, crushed"
+        },
+        {
+          "item": "Ground cumin",
+          "grams": 4,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true,
+          "note": "2 tsp"
+        },
+        {
+          "item": "Smoked paprika",
+          "grams": 7,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tbsp"
+        },
+        {
+          "item": "Chilli flakes",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 35,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 tsp — more for extra kick"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Cheddar, grated",
+          "grams": 30,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "on top: 12g Jon, 9g each for Cheryl and your daughter"
+        },
+        {
+          "item": "Limes",
+          "grams": 60,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1 lime"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 704,
+          "protein": 79.0,
+          "fibre": 12.1,
+          "salt": 1.71,
+          "plateGrams": 740
+        },
+        "cheryl": {
+          "kcal": 528,
+          "protein": 59.3,
+          "fibre": 9.1,
+          "salt": 1.28,
+          "plateGrams": 555
+        },
+        "daughter": {
+          "plateGrams": 555,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "better",
+        "note": "Better the next day, and freezes well.",
+        "portions": {
+          "jon": {
+            "grams": 505,
+            "kcal": 480,
+            "protein": 53.9,
+            "fibre": 8.3,
+            "salt": 1.16,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 405,
+            "kcal": 385,
+            "protein": 43.2,
+            "fibre": 6.6,
+            "salt": 0.93,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Brown the mince in the oil in a hot frying pan for 5 minutes, breaking it up — mince doesn't brown in a slow cooker.",
+        "Into the slow cooker with everything else except the cheddar and lime: beans, tomatoes, onion, peppers, garlic, cumin, paprika, chilli flakes and the {{1}}g of salt. Stir.",
+        "Lid on: <b>6 hours on low or 3–4 on high</b>. Don't add liquid — it makes its own.",
+        "Squeeze of lime at the end. Cheddar on top of each bowl."
+      ],
+      "tips": [
+        {
+          "tone": "go",
+          "text": "Want more kick? Another pinch of chilli flakes, or a fresh chilli in with everything else."
+        },
+        {
+          "tone": "plain",
+          "text": "Set the portions to 5 and it makes two lunch tubs as well. It freezes well."
+        }
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "grams": {
+          "jon": 740,
+          "cheryl": 555,
+          "daughter": 555
         }
       },
       "warnings": []
