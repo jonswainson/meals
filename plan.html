@@ -350,16 +350,16 @@ const WEEK_0926 = {
   id:"2026-09-26",
   label:"26 Sept \u2013 2 Oct",
   days:[
-    {id:"sat",label:"Sat",title:"Saturday",tags:"Home \u00b7 cheat meal tonight",
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Home \u00b7 the cheat meal is Wednesday this week",
      diners:["jon","cheryl","daughter"],
      breakfast:"pb-banana-oats", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"tuna-chickpea-salad",portions:2,daughter:false,alt:""},
-     dinner:{kind:"fixed",id:"cheat-meal"}},
+     dinner:{kind:"recipe",id:"chicken-fajitas",portions:3,daughter:true,alt:""}},
     {id:"sun",label:"Sun",title:"Sunday",tags:"Home \u00b7 roast day",
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"mackerel-beetroot-barley-tub",portions:2,daughter:false,alt:""},
-     dinner:{kind:"fixed",id:"roast-chicken"}},
+     dinner:{kind:"fixed",id:"roast-beef"}},
     {id:"mon",label:"Mon",title:"Monday",tags:"Home \u00b7 trains \u00b7 leg day",
      diners:["jon","cheryl","daughter"],
      breakfast:"berry-oat", afternoon:"banana-skyr",
@@ -370,21 +370,21 @@ const WEEK_0926 = {
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
      lunch:{kind:"recipe",id:"chicken-butter-bean-tub",portions:2,daughter:false,alt:""},
      dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:true,alt:""}},
-    {id:"wed",label:"Wed",title:"Wednesday",tags:"Home \u00b7 trains",
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Jon in London, staying over \u00b7 pizza out is this week\u2019s cheat meal",
      diners:["jon","cheryl","daughter"],
-     breakfast:"berry-oat", afternoon:"banana-skyr",
-     lunch:{kind:"recipe",id:"tortilla-chicken-piquillo",portions:2,daughter:false,alt:""},
-     dinner:{kind:"recipe",id:"baked-meatballs-ciabatta",portions:5,daughter:true,alt:""}},
-    {id:"thu",label:"Thu",title:"Thursday",tags:"Home \u00b7 trains",
+     breakfast:"huel-milbona", afternoon:"huel-bar",
+     lunch:{kind:"fixed",id:"ms-bought",cheryl:"huel-bottle"},
+     dinner:{kind:"fixed",id:"cheat-meal",cheryl:"own-thing"}},
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Jon back from London for a late dinner \u00b7 his breakfast and lunch are bought, the chilli tub is Cheryl\u2019s",
      diners:["jon","cheryl","daughter"],
-     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     breakfast:{kind:"fixed",id:"own-thing",cheryl:"skyr-bowl"}, afternoon:"huel-bar",
      lunch:{kind:"leftover",from:"tue"},
-     dinner:{kind:"recipe",id:"honey-glazed-chicken-wedges",portions:4,daughter:true,alt:""}},
+     dinner:{kind:"recipe",id:"honey-glazed-chicken-wedges",portions:5,daughter:true,alt:""}},
     {id:"fri",label:"Fri",title:"Friday",tags:"Home \u00b7 trains \u00b7 leg day \u00b7 SHOP TONIGHT",
      diners:["jon","cheryl","daughter"],
      breakfast:"berry-oat", afternoon:"banana-skyr-150",
-     lunch:{kind:"leftover",from:"wed"},
-     dinner:{kind:"recipe",id:"baked-salmon-lentils",portions:3,daughter:true,alt:""}}
+     lunch:{kind:"leftover",from:"thu"},
+     dinner:{kind:"recipe",id:"baked-salmon-lentils",portions:4,daughter:true,alt:""}}
   ]
 };
 
@@ -1213,6 +1213,22 @@ const sharesFor = (d, slot) =>
    said plainly now - and because a portion is a share of the recipe, not a plate (plates run
    4:3 and the daughter's is her own size), it checks the batch really covers tonight's
    plates. At 3 the haddock came to 546g for three plates that take 593g. */
+/* How many portions tonight's plates really take. A portion is a share of the recipe,
+   not a plate - plates run 4:3 and the daughter's is her own size - so counting heads
+   said "1 spare" where the batch only just covered three plates. */
+function platesInPortions(r, m, d){
+  const comps = (r.plateSplit || {}).components || [];
+  const batch = {}; r.ingredients.forEach(i => batch[i.item] = i.grams);
+  const who = ["jon","cheryl"].filter(w => d.diners.includes(w));
+  if (d.diners.includes("daughter") && m.daughter) who.push("daughter");
+  let need = 0;
+  comps.forEach(c => {
+    const g = who.reduce((a, w) => a + (c[w] || 0), 0), full = batch[c.item];
+    if (g && full) need = Math.max(need, g * r.basePortions / full);
+  });
+  return need || who.length;
+}
+
 function scaleNote(r, m, d){
   let h = '<p class="note">' + (m.portions === r.basePortions
     ? 'Quantities as written \u2014 the recipe is for ' + r.basePortions + '.'
@@ -1276,7 +1292,8 @@ function mealCard(d, slot){
            'They go in the freezer the same night \u2014 a 4.66g plate is not one to eat twice in ' +
            'two days. <b>Pick Monday\'s dinner yourself</b>; the figures above are the generic roast ' +
            'and are not what you are eating.</p>';
-    if (m.cheryl) h += '<p class="note">Cheryl has the ' + FIXED[m.cheryl].name.toLowerCase() + '.</p>';
+    if (m.cheryl) h += '<p class="note">Cheryl has the ' +
+                       FIXED[m.cheryl].name.replace(/^the /i, "").toLowerCase() + '.</p>';
     if (f.bought) h += '<p class="note">Not cooked here — nothing for the shopping list.</p>';
     return closeCard(h, d, slot);
   }
@@ -1343,7 +1360,7 @@ function mealCard(d, slot){
      else in the week points back, so the spare portions would go unremarked. */
   if (slot === "dinner" && r){
     const eaten = d.diners.filter(p => p !== "daughter" || m.daughter).length;
-    const spare = m.portions - eaten;
+    const spare = Math.floor(m.portions - platesInPortions(r, m, d) + 0.03);
     const claimed = WEEK.days.some(x => x.lunch && x.lunch.kind === "leftover" && x.lunch.from === d.id);
     if (spare > 0 && !claimed)
       h += '<p class="note warn"><b>' + spare + ' portion' + (spare > 1 ? 's' : '') +
