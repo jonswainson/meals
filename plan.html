@@ -183,7 +183,7 @@ const FIXED = {
   "almond-blueberry": {name:"Almond and blueberry smoothie",
     jon:{kcal:528,protein:50.6,fibre:8.9,salt:0.52}, cheryl:{kcal:396,protein:37.9,fibre:6.7,salt:0.39}},
   "pb-banana-oats": {name:"Peanut butter, banana and blueberry oats",
-    jon:{kcal:523,protein:46.1,fibre:7.7,salt:0.43}, cheryl:{kcal:392,protein:34.5,fibre:5.7,salt:0.32}},
+    jon:{kcal:619,protein:53.3,fibre:7.4,salt:0.61}, cheryl:{kcal:464,protein:40.0,fibre:5.5,salt:0.46}},
   "gingerbread":  {name:"Gingerbread smoothie",
     jon:{kcal:537,protein:50.6,fibre:6.0,salt:0.51}, cheryl:{kcal:403,protein:38.0,fibre:4.5,salt:0.38}},
   "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
@@ -424,12 +424,10 @@ FIXED["gingerbread"].ing = {
 FIXED["gingerbread"].ing.cheryl = share(FIXED["gingerbread"].ing.jon, 0.75);
 
 FIXED["pb-banana-oats"].ing = {
-  jon:[I("Plain Skyr",200,"dairy",450,true), I("Rolled oats",28,"cupboard",1000,true),
-       I("Whey protein powder",22,"cupboard",1000,true),
-       I("Bananas",70,"fresh"), I("Maple syrup",5,"cupboard",250,true),
-       I("Walnuts",5,"cupboard",200,true), I("Crunchy peanut butter",7,"cupboard",340,true),
-       I("Chia seeds",6,"cupboard",300,true),
-       I("Frozen blueberries",40,"frozen",500), I("Ground cinnamon",1,"cupboard",45,true)]};
+  jon:[I("Rolled oats",40,"cupboard",1000,true), I("Semi-skimmed milk",250,"dairy",2000,true,"ml"),
+       I("Whey protein powder",45,"cupboard",1000,true), I("Bananas",60,"fresh"),
+       I("Frozen blueberries",40,"frozen",500), I("Crunchy peanut butter",15,"cupboard",340,true),
+       I("Ground cinnamon",1,"cupboard",45,true)]};
 FIXED["pb-banana-oats"].ing.cheryl = share(FIXED["pb-banana-oats"].ing.jon, 0.75);
 
 FIXED["cherry-berry"].ing = {
@@ -516,10 +514,9 @@ FIXED["bacon-cottage"].mix = [["Back bacon",75,"g",{each:25,one:"rasher",many:"r
 FIXED["gingerbread"].mix = [["Reduced-fat milk",250,"ml"],["Vanilla protein powder",44],
   ["Rolled oats",30],["Maple syrup",5],["Whole roasted almonds",18],
   ["Ground cinnamon",1.3],["Ground nutmeg",0.5],["Ground ginger",0.5]];
-FIXED["pb-banana-oats"].mix = [["Plain Skyr",200],["Water",200,"ml"],["Rolled oats",28],
-  ["Cinnamon, a pinch",1],["Whey protein powder",22],["Banana \u2014 weighed, peeled, mashed",70],
-  ["Maple syrup",5],["Walnuts, chopped",5],["Crunchy peanut butter",7],
-  ["Chia seeds",6],["Blueberries, for the jam",40]];
+FIXED["pb-banana-oats"].mix = [["Rolled oats",40],["Semi-skimmed milk",250,"ml"],
+  ["Whey protein powder",45],["Banana \u2014 weighed, peeled, mashed",60],
+  ["Blueberries, for the jam",40],["Crunchy peanut butter",15],["Cinnamon, a pinch",1]];
 FIXED["cherry-berry"].mix = [["Frozen cherries, pitted",75],["Frozen raspberries",75],
   ["Vanilla protein powder",40],["Whey",5],["Rolled oats",27],["Cocoa powder",5],
   ["Reduced-fat milk",250,"ml"]];
@@ -550,24 +547,16 @@ FIXED["gingerbread"].recipe = R(
   "<b>The lowest-fibre breakfast here, at 6g.</b> Have it on a high-fibre lunch day.");
 
 FIXED["pb-banana-oats"].recipe = R(
-  ["<b>200g plain Skyr \u00b7 22g whey</b> \u2014 the standing base, stirred in at the end",
-   "200ml water \u00b7 28g rolled oats \u00b7 a pinch of cinnamon",
-   "<b>Banana, weighed at 70g peeled</b>, mashed \u00b7 6g chia seeds",
-   "1 tsp maple syrup (~5g) \u00b7 walnuts (~5g), chopped",
-   "2 tsp crunchy peanut butter (~7g)",
-   "<b>Jam:</b> 40g blueberries \u00b7 1 tsp water"],
-  ["Water, oats, chia and the cinnamon into a saucepan. Gentle simmer, a few minutes.",
-   "<b>Mashed banana in, and keep stirring until it is thick and creamy.</b> " +
-   "More water if it tightens too far. Off the heat.",
-   "<b>Skyr and whey stirred in off the heat, never on it</b> \u2014 Skyr splits if you boil it, " +
-   "and whey in a hot pan goes grainy. This is the step that makes it what it is.",
-   "Jam alongside at the same time: blueberries and a teaspoon of water in a small pan, stirred " +
-   "often until thick and jammy.",
-   "<b>Thin the peanut butter with a little hot water to a paste</b> so it drizzles instead of sitting " +
-   "in a lump.",
-   "Oats in the bowl, then the jam, the maple, the walnuts and the peanut butter."],
+  ["40g rolled oats \u00b7 250ml semi-skimmed milk \u00b7 a pinch of cinnamon",
+   "<b>45g whey</b> (about 6 tbsp)","<b>Banana, weighed at 60g peeled</b>, mashed",
+   "1 tbsp crunchy peanut butter (15g)","<b>Jam:</b> 40g blueberries \u00b7 1 tsp water"],
+  ["Oats, milk, a splash of water and the cinnamon into a saucepan. Simmer gently, stirring, 4\u20135 minutes until thick.",
+   "Mashed banana in, and keep stirring until it's thick and creamy.",
+   "<b>Off the heat, stir in the whey</b> \u2014 whey on the heat goes grainy. Loosen with a splash of hot water or milk if it gets too thick.",
+   "Jam alongside at the same time: blueberries and a teaspoon of water in a small pan, stirred until thick and jammy.",
+   "<b>Thin the peanut butter with a little hot water</b> so it drizzles, then over the oats with the jam. Eat it hot."],
   null,
-  "<b>Weigh the banana</b> — 70g peeled is about half a medium one.");
+  "<b>A weekend breakfast.</b> 619 kcal, about 100 over the breakfast target, with 53g of protein.");
 
 FIXED["cherry-berry"].recipe = R(
   ["75g frozen cherries, pitted \u00b7 75g frozen raspberries","40g vanilla protein powder",
