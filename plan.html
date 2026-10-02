@@ -388,16 +388,63 @@ const WEEK_0926 = {
   ]
 };
 
+const WEEK_1003 = {
+  id:"2026-10-03",
+  label:"3\u20139 Oct",
+  days:[
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Home \u00b7 no cheat meal this week \u2014 it was Wednesday\u2019s pizza",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"penang-chicken-curry",portions:3,daughter:true,alt:""}},
+    {id:"sun",label:"Sun",title:"Sunday",tags:"Home \u00b7 roast day \u2014 pick the joint on the dinner card",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"pb-banana-oats", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"tuna-chickpea-salad",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"roast-chicken"}},
+    {id:"mon",label:"Mon",title:"Monday",tags:"Jon in London all day \u00b7 Cheryl and Freya sort themselves",
+     diners:["jon"],
+     breakfast:"huel-milbona", afternoon:"huel-bar",
+     lunch:{kind:"fixed",id:"ms-bought"},
+     dinner:{kind:"fixed",id:"own-thing"}},
+    {id:"tue",label:"Tue",title:"Tuesday",tags:"Jon in London, home for dinner \u00b7 Sunday\u2019s roast",
+     diners:["jon","cheryl","daughter"],
+     breakfast:{kind:"fixed",id:"own-thing",cheryl:"skyr-bowl"}, afternoon:"huel-bar",
+     lunch:{kind:"fixed",id:"ms-bought",cheryl:"huel-bottle"},
+     dinner:{kind:"fixed",id:"sunday-roast"}},
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Home",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"chicken-butter-bean-tub",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"chicken-arrabbiata-penne",portions:5,daughter:true,alt:""}},
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Home \u00b7 slow cooker on in the morning",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"leftover",from:"wed"},
+     dinner:{kind:"recipe",id:"beef-chilli-slow-cooker",portions:5,daughter:true,alt:""}},
+    {id:"fri",label:"Fri",title:"Friday",tags:"Home \u00b7 SHOP TONIGHT",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr-150",
+     lunch:{kind:"leftover",from:"thu"},
+     dinner:{kind:"recipe",id:"salmon-roasted-veg-traybake",portions:3,daughter:true,alt:""}}
+  ]
+};
+
 /* The week runs Saturday to Friday, because the shop is Friday evening: the food
    lands Friday night and the first meal out of it is Saturday breakfast. Next week
    takes over on its own Saturday. Either is reachable from the header. */
-const WEEKS = [DEFAULT_WEEK, WEEK_0926];
+const WEEKS = [DEFAULT_WEEK, WEEK_0926, WEEK_1003];
+/* the latest week that has started; before the first, the first */
+function dateWeek(){
+  let cur = WEEKS[0];
+  WEEKS.forEach(w => { if (Date.now() >= new Date(w.id + "T00:00:00").getTime()) cur = w; });
+  return cur;
+}
 function pickWeek(){
   let i;
   try { const c = localStorage.getItem("week-choice");
         if (c !== null) i = WEEKS.findIndex(w => w.id === c); } catch(e){}
-  if (i === undefined || i < 0) i = (Date.now() >= new Date(2026,8,26).getTime()) ? 1 : 0;
-  return WEEKS[i];
+  return (i === undefined || i < 0) ? dateWeek() : WEEKS[i];
 }
 
 /* ---------- ingredients for the fixed items, so they reach the list ---------- */
@@ -638,8 +685,8 @@ ROASTS.forEach(id => {
         "3. Freeze the leftovers \u2014 don't eat them on Monday."
       : "<b>Accompaniments are the same whatever the joint</b> \u2014 only the 180g of meat changes.") +
     (id === "roast-ham"
-      ? "<br><br><b>Monday's dinner does NOT follow this one</b> \u2014 pick Monday separately."
-      : "<br><br><b>Monday's dinner follows this choice automatically.</b>"));
+      ? "<br><br><b>The leftover-roast dinner later in the week does NOT follow this one</b> \u2014 pick it separately."
+      : "<br><br><b>The leftover-roast dinner later in the week follows this joint automatically.</b>"));
 });
 
 FIXED["own-thing"].recipe = R(
@@ -1201,7 +1248,7 @@ function mealCard(d, slot){
   if (m.kind === "fixed"){
     const rid = followRoast(m.id), f = FIXED[rid];
     const nm = (rid !== m.id)
-      ? "Monday, off Sunday's joint \u2014 " + f.name.split("\u2014 ")[1] : f.name;
+      ? d.title + ", off Sunday's joint \u2014 " + f.name.split("\u2014 ")[1] : f.name;
     h = cardHead(d, slot, label, nm, macroRow(f.jon, f), cls);
     if (FIXED_FOR_SLOT[slot])
       h += '<select class="swap" data-slot="' + slot + '"' +
@@ -1217,7 +1264,7 @@ function mealCard(d, slot){
     if (m.id === "sunday-roast" && (FIXED[roastOn("sun")] || {}).noLeftoverLunch)
       h += '<p class="note warn"><b>Sunday is the ham, so there are no leftovers for tonight.</b> ' +
            'They go in the freezer the same night \u2014 a 4.66g plate is not one to eat twice in ' +
-           'two days. <b>Pick Monday\'s dinner yourself</b>; the figures above are the generic roast ' +
+           'two days. <b>Pick tonight\'s dinner yourself</b>; the figures above are the generic roast ' +
            'and are not what you are eating.</p>';
     if (m.cheryl) h += '<p class="note">Cheryl has the ' +
                        FIXED[m.cheryl].name.replace(/^the /i, "").toLowerCase() + '.</p>';
@@ -1699,7 +1746,7 @@ $("#totals").addEventListener("toggle", e => {
 
 $("#reset").onclick = () => {
   if (!confirm("Put the week back to the original plan? Swaps and portions are lost.")) return;
-  WEEK = clone(DEFAULT_WEEK); save(); render(); toast("Week reset");
+  WEEK = clone(BASE); save(); render(); toast("Week reset");
 };
 
 let tid;
@@ -1724,7 +1771,9 @@ fetch("recipes.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
   TODAY = (days >= 0 && days < 7) ? WEEK.days.findIndex(x => x.id === ID) : -1;
   current = TODAY < 0 ? 0 : TODAY;
 
-  const other = WEEKS[WEEKS.indexOf(BASE) === 0 ? 1 : 0];
+  /* from this week the button goes forward; from any other week it comes back */
+  const cur = dateWeek(), ci = WEEKS.indexOf(cur);
+  const other = (BASE === cur) ? (WEEKS[ci + 1] || WEEKS[ci - 1]) : cur;
   $("#wk").textContent = BASE.label;   /* the range is the identity; it must fit one line */
   document.title = "The week \u00b7 " + BASE.label;
   $("#flip").textContent = other.label + " →";
