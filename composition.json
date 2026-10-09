@@ -1740,7 +1740,7 @@
     "Huel Black ready-to-drink": {
       "per": "100ml",
       "kcal": 80,
-      "protein": 8.0,
+      "protein": 7.0,
       "fat": 4.0,
       "carbs": 3.4,
       "fibre": 1.4,
@@ -1750,7 +1750,7 @@
       "state": "cooked",
       "cookedYield": 1.0,
       "inRecipesJson": true,
-      "note": "A 500 ml bottle is 400 kcal / 40 g protein / 0.71 g salt. The corpus books it at 35 g protein — 5 g low.",
+      "note": "A 500 ml bottle is 400 kcal / 35 g protein / 0.71 g salt - the ready-to-drink Huel Black the house buys (Jon, 7 October 2026). The powder is 40 g a serving; this is not the powder.",
       "usedIn": [
         "convenience-fallback"
       ]
@@ -2589,9 +2589,9 @@
       "source": "UK CoFID 2021 (McCance & Widdowson, 7th ed.) — Prawns, raw",
       "confidence": "high",
       "state": "raw/dry",
-      "cookedYield": 0.75,
+      "cookedYield": 0.86,
       "inRecipesJson": true,
-      "note": "RAW. DUPLICATE NAME — identical to 'Raw peeled king prawns'. Two spellings for one item; worth merging.",
+      "note": "RAW. Poached for the prawn salad: 320g raw gives about 275g cooked (0.86), as the card says. 'Raw peeled king prawns' keeps 0.75 because it is stir-fried hard in the fried rice and orzotto.",
       "usedIn": [
         "prawn-butter-bean-salad"
       ]

@@ -141,8 +141,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "staple": true,
-          "note": "drained, 1 large tin"
+          "staple": true
         },
         {
           "item": "Plain Skyr",
@@ -199,11 +198,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 275,
-            "kcal": 384,
-            "protein": 38.6,
-            "fibre": 7.4,
-            "salt": 1.0,
+            "grams": 259,
+            "kcal": 362,
+            "protein": 36.4,
+            "fibre": 7.0,
+            "salt": 0.95,
             "source": "derived"
           }
         }
@@ -283,6 +282,53 @@
             "daughter": 11
           }
         ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Wholemeal wraps",
+            "unit": "count",
+            "one": "wrap",
+            "many": "wraps",
+            "jon": 1,
+            "cheryl": 1,
+            "daughter": 1
+          },
+          {
+            "what": "Cheddar",
+            "unit": "g",
+            "jon": 12,
+            "cheryl": 9,
+            "daughter": 7
+          },
+          {
+            "what": "Salsa",
+            "unit": "g",
+            "jon": 25,
+            "cheryl": 18,
+            "daughter": 13
+          },
+          {
+            "what": "Black beans",
+            "unit": "g",
+            "jon": 66,
+            "cheryl": 49,
+            "daughter": 35
+          },
+          {
+            "what": "Plain Skyr",
+            "unit": "g",
+            "jon": 21,
+            "cheryl": 15,
+            "daughter": 11
+          }
+        ],
+        "share": {
+          "label": "the chicken and peppers",
+          "jon": 322,
+          "cheryl": 244,
+          "daughter": 174
+        }
       }
     },
     {
@@ -467,11 +513,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 350,
-            "kcal": 382,
-            "protein": 34.2,
-            "fibre": 7.1,
-            "salt": 0.86,
+            "grams": 330,
+            "kcal": 361,
+            "protein": 32.2,
+            "fibre": 6.8,
+            "salt": 0.81,
             "source": "derived"
           }
         }
@@ -499,6 +545,23 @@
           "jon": 648,
           "cheryl": 486,
           "daughter": 542
+        }
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Spaghetti, cooked",
+            "unit": "g",
+            "jon": 101,
+            "cheryl": 76,
+            "daughter": 85
+          }
+        ],
+        "share": {
+          "label": "the sauce",
+          "jon": 547,
+          "cheryl": 410,
+          "daughter": 457
         }
       }
     },
@@ -548,7 +611,7 @@
           "packSize": 145,
           "packUnit": "g",
           "staple": false,
-          "note": "no-added-salt, drained"
+          "note": "no-added-salt"
         },
         {
           "item": "Light mayonnaise",
@@ -565,8 +628,7 @@
           "aisle": "cupboard",
           "packSize": 198,
           "packUnit": "g",
-          "staple": false,
-          "note": "drained"
+          "staple": false
         },
         {
           "item": "Baked beans",
@@ -751,7 +813,55 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [],
+      "serve": {
+        "rows": [
+          {
+            "what": "Baked potato",
+            "unit": "count",
+            "one": "potato",
+            "many": "potatoes",
+            "jon": 1,
+            "cheryl": 1,
+            "daughter": 1
+          },
+          {
+            "what": "Sweetcorn",
+            "unit": "g",
+            "jon": 26,
+            "cheryl": 20,
+            "daughter": 16
+          },
+          {
+            "what": "Baked beans",
+            "unit": "g",
+            "jon": 124,
+            "cheryl": 93,
+            "daughter": 77
+          },
+          {
+            "what": "Cheddar",
+            "unit": "g",
+            "jon": 15,
+            "cheryl": 11,
+            "daughter": 9
+          },
+          {
+            "what": "Salad leaves",
+            "unit": "g",
+            "jon": 39,
+            "cheryl": 29,
+            "daughter": 24
+          }
+        ],
+        "share": {
+          "label": "the tuna mayo",
+          "jon": 223,
+          "cheryl": 168,
+          "daughter": 140
+        },
+        "note": "Smaller potatoes for Cheryl and your daughter."
+      }
     },
     {
       "id": "harissa-chicken-chickpeas",
@@ -781,8 +891,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "staple": true,
-          "note": "2 tins, drained"
+          "staple": true
         },
         {
           "item": "Peppers",
@@ -884,11 +993,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 315,
-            "kcal": 385,
-            "protein": 34.9,
-            "fibre": 9.0,
-            "salt": 0.95,
+            "grams": 296,
+            "kcal": 362,
+            "protein": 32.8,
+            "fibre": 8.5,
+            "salt": 0.89,
             "source": "derived"
           }
         }
@@ -959,6 +1068,15 @@
             "daughter": 76
           }
         ]
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the trays",
+          "jon": 580,
+          "cheryl": 435,
+          "daughter": 465
+        }
       }
     },
     {
@@ -990,7 +1108,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "2 tins, drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Passata",
@@ -1124,11 +1242,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 390,
-            "kcal": 385,
-            "protein": 38.3,
-            "fibre": 10.5,
-            "salt": 1.04,
+            "grams": 365,
+            "kcal": 360,
+            "protein": 35.8,
+            "fibre": 9.8,
+            "salt": 0.98,
             "source": "derived"
           }
         }
@@ -1165,7 +1283,16 @@
       "recosted": "toasted whole cumin, chipotle, chocolate and lime (19 Sept chef review)",
       "handsOnMinutes": 15,
       "warnings": [],
-      "skipCrispNote": true
+      "skipCrispNote": true,
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the chilli",
+          "jon": 720,
+          "cheryl": 540,
+          "daughter": 540
+        }
+      }
     },
     {
       "id": "baked-salmon-lentils",
@@ -1195,8 +1322,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "staple": true,
-          "note": "2 tins, drained"
+          "staple": true
         },
         {
           "item": "Cherry tomatoes",
@@ -1297,11 +1423,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 260,
-            "kcal": 388,
-            "protein": 32.8,
-            "fibre": 6.5,
-            "salt": 0.73,
+            "grams": 240,
+            "kcal": 358,
+            "protein": 30.3,
+            "fibre": 5.9,
+            "salt": 0.67,
             "source": "derived"
           }
         }
@@ -1357,6 +1483,29 @@
             "daughter": 51
           }
         ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Salmon",
+            "unit": "count",
+            "one": "fillet",
+            "many": "fillets",
+            "jon": 1,
+            "cheryl": 1,
+            "daughter": 1
+          }
+        ],
+        "share": {
+          "label": "the lentils and tomatoes",
+          "jon": 414,
+          "cheryl": 241,
+          "daughter": 203
+        },
+        "adjusted": {
+          "jon": -98
+        },
+        "adjustSide": "green lentils"
       }
     },
     {
@@ -1456,8 +1605,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "staple": true,
-          "note": "1 tin, drained"
+          "staple": true
         },
         {
           "item": "Tenderstem broccoli",
@@ -1581,6 +1729,25 @@
             "daughter": 56
           }
         ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Chicken",
+            "unit": "count",
+            "one": "breast",
+            "many": "breasts",
+            "jon": 1,
+            "cheryl": 1,
+            "daughter": 1
+          }
+        ],
+        "share": {
+          "label": "the potatoes, peppers and beans",
+          "jon": 565,
+          "cheryl": 423,
+          "daughter": 428
+        }
       }
     },
     {
@@ -1731,11 +1898,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 305,
-            "kcal": 385,
-            "protein": 37.2,
-            "fibre": 6.5,
-            "salt": 1.07,
+            "grams": 285,
+            "kcal": 360,
+            "protein": 34.8,
+            "fibre": 6.1,
+            "salt": 1.01,
             "source": "derived"
           }
         }
@@ -1795,6 +1962,39 @@
             "daughter": 52
           }
         ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Chicken, cooked",
+            "unit": "g",
+            "jon": 182,
+            "cheryl": 137,
+            "daughter": 130
+          },
+          {
+            "what": "Potatoes, cooked",
+            "unit": "g",
+            "jon": 170,
+            "cheryl": 128,
+            "daughter": 122
+          },
+          {
+            "what": "Asparagus",
+            "unit": "g",
+            "jon": 99,
+            "cheryl": 75,
+            "daughter": 71
+          },
+          {
+            "what": "Edamame",
+            "unit": "g",
+            "jon": 68,
+            "cheryl": 51,
+            "daughter": 49
+          }
+        ],
+        "share": null
       }
     },
     {
@@ -1904,8 +2104,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "staple": true,
-          "note": "1 tin, drained"
+          "staple": true
         },
         {
           "item": "Salt, weighed",
@@ -2026,6 +2225,30 @@
             "daughter": 65
           }
         ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Salmon",
+            "unit": "count",
+            "one": "fillet",
+            "many": "fillets",
+            "jon": 1,
+            "cheryl": 1,
+            "daughter": 1
+          }
+        ],
+        "share": {
+          "label": "the vegetables",
+          "jon": 391,
+          "cheryl": 167,
+          "daughter": 281
+        },
+        "adjusted": {
+          "jon": 44,
+          "cheryl": 124
+        },
+        "adjustSide": "the vegetables"
       }
     },
     {
@@ -2200,11 +2423,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 305,
-            "kcal": 377,
-            "protein": 27.3,
-            "fibre": 6.1,
-            "salt": 1.29,
+            "grams": 281,
+            "kcal": 347,
+            "protein": 25.2,
+            "fibre": 5.6,
+            "salt": 1.19,
             "source": "derived"
           }
         }
@@ -2236,6 +2459,23 @@
           "jon": 547,
           "cheryl": 411,
           "daughter": 631
+        }
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Wholemeal ciabatta",
+            "unit": "g",
+            "jon": 30,
+            "cheryl": 23,
+            "daughter": 35
+          }
+        ],
+        "share": {
+          "label": "the meatballs and sauce",
+          "jon": 517,
+          "cheryl": 388,
+          "daughter": 596
         }
       }
     },
@@ -2385,11 +2625,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 360,
-            "kcal": 388,
-            "protein": 36.3,
-            "fibre": 4.5,
-            "salt": 1.33,
+            "grams": 334,
+            "kcal": 359,
+            "protein": 33.7,
+            "fibre": 4.1,
+            "salt": 1.23,
             "source": "derived"
           }
         }
@@ -2455,6 +2695,15 @@
             "daughter": 290
           }
         ]
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the pot",
+          "jon": 660,
+          "cheryl": 495,
+          "daughter": 566
+        }
       }
     },
     {
@@ -2496,7 +2745,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "2 tins, drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Chicken stock",
@@ -2599,11 +2848,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 305,
-            "kcal": 387,
-            "protein": 34.4,
-            "fibre": 9.2,
-            "salt": 1.4,
+            "grams": 285,
+            "kcal": 362,
+            "protein": 32.2,
+            "fibre": 8.6,
+            "salt": 1.31,
             "source": "derived"
           }
         }
@@ -2639,7 +2888,24 @@
           "daughter": 406
         }
       },
-      "recosted": "chorizo 150g to 90g, sherry vinegar added (19 Sept chef review)"
+      "recosted": "chorizo 150g to 90g, sherry vinegar added (19 Sept chef review)",
+      "serve": {
+        "rows": [
+          {
+            "what": "Wholegrain baguette",
+            "unit": "g",
+            "jon": 30,
+            "cheryl": 22,
+            "daughter": 22
+          }
+        ],
+        "share": {
+          "label": "the dish",
+          "jon": 530,
+          "cheryl": 398,
+          "daughter": 384
+        }
+      }
     },
     {
       "id": "indian-lentil-shakshuka",
@@ -2662,7 +2928,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "2 tins, drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Chopped tomatoes, tinned",
@@ -3185,7 +3451,7 @@
           "packSize": 145,
           "packUnit": "g",
           "staple": false,
-          "note": "no-added-salt, drained"
+          "note": "no-added-salt"
         },
         {
           "item": "Chickpeas, tinned",
@@ -3193,8 +3459,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "staple": true,
-          "note": "drained"
+          "staple": true
         },
         {
           "item": "Salad leaves",
@@ -3255,14 +3520,14 @@
           "kcal": 503,
           "protein": 52.7,
           "fibre": 12.9,
-          "salt": 2.05,
+          "salt": 1.04,
           "plateGrams": 520
         },
         "cheryl": {
           "kcal": 377,
           "protein": 39.5,
           "fibre": 9.7,
-          "salt": 1.54,
+          "salt": 0.78,
           "plateGrams": 390
         },
         "daughter": null
@@ -3315,14 +3580,50 @@
             "jon": 60,
             "cheryl": 45
           }
-        ],
-        "note": "basePortions is 1, so THE INGREDIENT LIST IS JON'S PLATE and the figures above cost 100% of it. Cheryl's column is three-quarters of a SECOND list - the shopping list buys portions x the list, so with two eaters it buys two. Do not read these two columns as a division of one list."
+        ]
       },
       "prep": {
         "when": "same-day",
         "note": "Assembled cold."
       },
-      "notes": []
+      "notes": [],
+      "serve": {
+        "rows": [
+          {
+            "what": "Tuna in spring water",
+            "unit": "g",
+            "jon": 145,
+            "cheryl": 109
+          },
+          {
+            "what": "Chickpeas",
+            "unit": "g",
+            "jon": 170,
+            "cheryl": 128
+          },
+          {
+            "what": "Salad leaves",
+            "unit": "g",
+            "jon": 60,
+            "cheryl": 45
+          },
+          {
+            "what": "Cherry tomatoes",
+            "unit": "g",
+            "jon": 80,
+            "cheryl": 60
+          },
+          {
+            "what": "Cucumber",
+            "unit": "g",
+            "jon": 60,
+            "cheryl": 45
+          }
+        ],
+        "share": null,
+        "adjusted": {},
+        "tub": true
+      }
     },
     {
       "id": "convenience-fallback",
@@ -3404,6 +3705,30 @@
       "prep": {
         "when": "same-day",
         "note": "Nothing is prepared at all."
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Huel Black ready-to-drink",
+            "unit": "ml",
+            "jon": 500,
+            "cheryl": 375
+          },
+          {
+            "what": "Plain Skyr",
+            "unit": "g",
+            "jon": 100,
+            "cheryl": 75
+          },
+          {
+            "what": "Apple",
+            "unit": "g",
+            "jon": 60,
+            "cheryl": 45
+          }
+        ],
+        "share": null,
+        "adjusted": {}
       }
     },
     {
@@ -3549,11 +3874,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 575,
-            "kcal": 384,
-            "protein": 34.5,
-            "fibre": 9.0,
-            "salt": 1.94,
+            "grams": 540,
+            "kcal": 361,
+            "protein": 32.4,
+            "fibre": 8.5,
+            "salt": 1.82,
             "source": "derived"
           }
         }
@@ -3587,7 +3912,15 @@
         "note": "Six tubs from one 45-minute cook. Three days in the fridge, three months in the freezer.",
         "pan": "The halloumi croutons are four minutes in a dry pan at the bowl. On a busy day, have the soup plain."
       },
-      "recosted": "stock out, skyr 200g to 150g and dolloped (19 Sept chef review)"
+      "recosted": "stock out, skyr 200g to 150g and dolloped (19 Sept chef review)",
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the soup",
+          "jon": 720,
+          "cheryl": 540
+        }
+      }
     },
     {
       "id": "smoky-chicken-chickpea-braise",
@@ -3619,7 +3952,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "2 tins, drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Red peppers",
@@ -3764,11 +4097,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 355,
-            "kcal": 383,
-            "protein": 34.9,
-            "fibre": 8.6,
-            "salt": 1.31,
+            "grams": 334,
+            "kcal": 360,
+            "protein": 32.8,
+            "fibre": 8.1,
+            "salt": 1.23,
             "source": "derived"
           }
         }
@@ -3804,6 +4137,14 @@
       "prep": {
         "when": "weekend",
         "note": "Four portions from one cook. Flask scalded with boiling water and filled above 75C holds above 60C to 1pm."
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the braise",
+          "jon": 444,
+          "cheryl": 333
+        }
       }
     },
     {
@@ -3827,7 +4168,7 @@
           "packSize": 145,
           "packUnit": "g",
           "staple": false,
-          "note": "no-added-salt, drained"
+          "note": "no-added-salt"
         },
         {
           "item": "Butter beans",
@@ -3836,7 +4177,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Fennel",
@@ -3997,6 +4338,43 @@
       "prep": {
         "when": "night-before",
         "note": "The onion wants its five minutes in the lemon before anything else goes in."
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Tuna in spring water",
+            "unit": "g",
+            "jon": 189,
+            "cheryl": 142
+          },
+          {
+            "what": "Butter beans",
+            "unit": "g",
+            "jon": 172,
+            "cheryl": 129
+          },
+          {
+            "what": "Fennel",
+            "unit": "g",
+            "jon": 92,
+            "cheryl": 69
+          },
+          {
+            "what": "Cherry tomatoes",
+            "unit": "g",
+            "jon": 115,
+            "cheryl": 86
+          },
+          {
+            "what": "Red onions",
+            "unit": "g",
+            "jon": 29,
+            "cheryl": 21
+          }
+        ],
+        "share": null,
+        "adjusted": {},
+        "tub": true
       }
     },
     {
@@ -4191,7 +4569,56 @@
         "when": "night-before",
         "note": "Slaw at least an hour ahead. Chicken poached ahead, or bought ready-cooked."
       },
-      "notes": []
+      "notes": [],
+      "serve": {
+        "rows": [
+          {
+            "what": "Chicken, cooked",
+            "unit": "g",
+            "jon": 122,
+            "cheryl": 92
+          },
+          {
+            "what": "Wholemeal pitta",
+            "unit": "g",
+            "jon": 65,
+            "cheryl": 49
+          },
+          {
+            "what": "Plain Skyr",
+            "unit": "g",
+            "jon": 50,
+            "cheryl": 38
+          },
+          {
+            "what": "Red cabbage",
+            "unit": "g",
+            "jon": 80,
+            "cheryl": 60
+          },
+          {
+            "what": "Carrots",
+            "unit": "g",
+            "jon": 40,
+            "cheryl": 30
+          },
+          {
+            "what": "Red onions",
+            "unit": "g",
+            "jon": 20,
+            "cheryl": 15
+          },
+          {
+            "what": "Rocket or watercress",
+            "unit": "g",
+            "jon": 20,
+            "cheryl": 15
+          }
+        ],
+        "share": null,
+        "adjusted": {},
+        "tub": true
+      }
     },
     {
       "id": "dip-box",
@@ -4407,7 +4834,56 @@
         "when": "night-before",
         "note": "Chicken poached ahead, or bought ready-cooked. Nothing is cooked at lunch."
       },
-      "notes": []
+      "notes": [],
+      "serve": {
+        "rows": [
+          {
+            "what": "Chicken, cooked",
+            "unit": "g",
+            "jon": 115,
+            "cheryl": 86
+          },
+          {
+            "what": "Plain Skyr",
+            "unit": "g",
+            "jon": 120,
+            "cheryl": 90
+          },
+          {
+            "what": "Rye crispbread",
+            "unit": "g",
+            "jon": 25,
+            "cheryl": 19
+          },
+          {
+            "what": "Cucumber",
+            "unit": "g",
+            "jon": 80,
+            "cheryl": 60
+          },
+          {
+            "what": "Carrots",
+            "unit": "g",
+            "jon": 60,
+            "cheryl": 45
+          },
+          {
+            "what": "Red peppers",
+            "unit": "g",
+            "jon": 60,
+            "cheryl": 45
+          },
+          {
+            "what": "Cherry tomatoes",
+            "unit": "g",
+            "jon": 80,
+            "cheryl": 60
+          }
+        ],
+        "share": null,
+        "adjusted": {},
+        "tub": true
+      }
     },
     {
       "id": "mackerel-beetroot-barley-tub",
@@ -4429,8 +4905,7 @@
           "aisle": "cupboard",
           "packSize": 125,
           "packUnit": "g",
-          "staple": false,
-          "note": "drained"
+          "staple": false
         },
         {
           "item": "Pearl barley, dry",
@@ -4683,8 +5158,7 @@
           "aisle": "cupboard",
           "packSize": 290,
           "packUnit": "g",
-          "staple": false,
-          "note": "drained"
+          "staple": false
         },
         {
           "item": "Chicken breast, raw",
@@ -4787,11 +5261,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 390,
-            "kcal": 387,
-            "protein": 40.9,
-            "fibre": 4.8,
-            "salt": 1.26,
+            "grams": 364,
+            "kcal": 361,
+            "protein": 38.2,
+            "fibre": 4.5,
+            "salt": 1.18,
             "source": "derived"
           }
         }
@@ -4861,6 +5335,15 @@
       "prep": {
         "when": "weekend",
         "note": "Eaten cold as a wedge - a tortilla is built for room temperature."
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the tortilla",
+          "jon": 484,
+          "cheryl": 363,
+          "cut": true
+        }
       }
     },
     {
@@ -5032,11 +5515,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 345,
-            "kcal": 384,
-            "protein": 32.7,
-            "fibre": 6.5,
-            "salt": 1.02,
+            "grams": 322,
+            "kcal": 359,
+            "protein": 30.6,
+            "fibre": 6.1,
+            "salt": 0.95,
             "source": "derived"
           }
         }
@@ -5065,6 +5548,15 @@
       "plateSplit": {
         "servedByWeight": true,
         "grams": {
+          "jon": 640,
+          "cheryl": 480,
+          "daughter": 525
+        }
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the fried rice",
           "jon": 640,
           "cheryl": 480,
           "daughter": 525
@@ -5256,11 +5748,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 305,
-            "kcal": 387,
-            "protein": 34.2,
-            "fibre": 6.0,
-            "salt": 1.09,
+            "grams": 285,
+            "kcal": 362,
+            "protein": 32.0,
+            "fibre": 5.6,
+            "salt": 1.02,
             "source": "derived"
           }
         }
@@ -5290,6 +5782,15 @@
       "plateSplit": {
         "servedByWeight": true,
         "grams": {
+          "jon": 560,
+          "cheryl": 420,
+          "daughter": 477
+        }
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the kedgeree",
           "jon": 560,
           "cheryl": 420,
           "daughter": 477
@@ -5451,11 +5952,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 375,
-            "kcal": 398,
-            "protein": 39.4,
-            "fibre": 9.8,
-            "salt": 1.02,
+            "grams": 349,
+            "kcal": 371,
+            "protein": 36.6,
+            "fibre": 9.1,
+            "salt": 0.95,
             "source": "derived"
           }
         }
@@ -5517,7 +6018,46 @@
         ]
       },
       "idWas": "crumbed-cod-crushed-potato",
-      "note": "id still reads 'cod'; the recipe has been haddock throughout since the substitution"
+      "note": "id still reads 'cod'; the recipe has been haddock throughout since the substitution",
+      "serve": {
+        "rows": [
+          {
+            "what": "Haddock",
+            "unit": "count",
+            "one": "loin",
+            "many": "loins",
+            "jon": 1,
+            "cheryl": 1,
+            "daughter": 1
+          },
+          {
+            "what": "Crushed potatoes",
+            "unit": "g",
+            "jon": 241,
+            "cheryl": 140,
+            "daughter": 124
+          },
+          {
+            "what": "Peas",
+            "unit": "g",
+            "jon": 159,
+            "cheryl": 119,
+            "daughter": 106
+          },
+          {
+            "what": "Tenderstem",
+            "unit": "g",
+            "jon": 43,
+            "cheryl": 32,
+            "daughter": 29
+          }
+        ],
+        "share": null,
+        "adjusted": {
+          "jon": -45
+        },
+        "adjustSide": "crushed potatoes"
+      }
     },
     {
       "id": "cod-cannellini-leek-braise",
@@ -5549,7 +6089,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "drained and rinsed; mash about a quarter against the pan"
+          "note": "rinsed; mash about a quarter against the pan"
         },
         {
           "item": "Leeks",
@@ -5636,7 +6176,7 @@
           "packSize": 800,
           "packUnit": "g",
           "staple": false,
-          "note": "40g Jon, none for Cheryl, 50g daughter"
+          "note": "to mop up; the serving guide says how much each"
         }
       ],
       "plates": {
@@ -5675,11 +6215,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 395,
-            "kcal": 387,
-            "protein": 45.1,
-            "fibre": 10.4,
-            "salt": 1.39,
+            "grams": 371,
+            "kcal": 364,
+            "protein": 42.5,
+            "fibre": 9.8,
+            "salt": 1.3,
             "source": "derived"
           }
         }
@@ -5716,6 +6256,23 @@
           "jon": 716,
           "cheryl": 537,
           "daughter": 476
+        }
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Wholemeal sourdough",
+            "unit": "g",
+            "jon": 38,
+            "cheryl": 28,
+            "daughter": 25
+          }
+        ],
+        "share": {
+          "label": "the braise",
+          "jon": 678,
+          "cheryl": 509,
+          "daughter": 451
         }
       }
     },
@@ -5870,7 +6427,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "1 tin drained, for Jon's and Cheryl's plates only"
+          "note": "for Jon's and Cheryl's plates only"
         },
         {
           "item": "Parmesan",
@@ -6121,11 +6678,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 385,
-            "kcal": 383,
-            "protein": 45.1,
-            "fibre": 9.1,
-            "salt": 0.58,
+            "grams": 360,
+            "kcal": 358,
+            "protein": 42.2,
+            "fibre": 8.6,
+            "salt": 0.54,
             "source": "derived"
           }
         }
@@ -6194,6 +6751,46 @@
             "daughter": 39
           }
         ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Chicken, cooked",
+            "unit": "g",
+            "jon": 191,
+            "cheryl": 143,
+            "daughter": 141
+          },
+          {
+            "what": "Potatoes, cooked",
+            "unit": "g",
+            "jon": 174,
+            "cheryl": 130,
+            "daughter": 128
+          },
+          {
+            "what": "Peas",
+            "unit": "g",
+            "jon": 114,
+            "cheryl": 85,
+            "daughter": 84
+          },
+          {
+            "what": "Hispi cabbage",
+            "unit": "g",
+            "jon": 157,
+            "cheryl": 118,
+            "daughter": 116
+          },
+          {
+            "what": "Plain Skyr",
+            "unit": "g",
+            "jon": 53,
+            "cheryl": 40,
+            "daughter": 39
+          }
+        ],
+        "share": null
       }
     },
     {
@@ -6395,6 +6992,15 @@
           "cheryl": 520,
           "daughter": 558
         }
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the orzotto",
+          "jon": 694,
+          "cheryl": 520,
+          "daughter": 558
+        }
       }
     },
     {
@@ -6586,11 +7192,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 345,
-            "kcal": 386,
-            "protein": 37.0,
-            "fibre": 9.5,
-            "salt": 0.7,
+            "grams": 322,
+            "kcal": 362,
+            "protein": 34.6,
+            "fibre": 8.9,
+            "salt": 0.65,
             "source": "derived"
           }
         }
@@ -6669,6 +7275,39 @@
             "daughter": 78
           }
         ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Bulgur, cooked",
+            "unit": "g",
+            "jon": 140,
+            "cheryl": 104,
+            "daughter": 126
+          },
+          {
+            "what": "Kofta",
+            "unit": "count",
+            "one": "kofta",
+            "many": "kofta",
+            "jon": 4,
+            "cheryl": 3,
+            "daughter": 4
+          },
+          {
+            "what": "Plain Skyr",
+            "unit": "g",
+            "jon": 87,
+            "cheryl": 65,
+            "daughter": 78
+          }
+        ],
+        "share": {
+          "label": "the sauce",
+          "jon": 251,
+          "cheryl": 190,
+          "daughter": 226
+        }
       }
     },
     {
@@ -6698,7 +7337,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "note": "drained and rinsed",
+          "note": "rinsed",
           "staple": true
         },
         {
@@ -6822,6 +7461,43 @@
       "prep": {
         "when": "night-before",
         "note": "The chicken is bought ready-cooked."
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Cooked chicken breast",
+            "unit": "g",
+            "jon": 171,
+            "cheryl": 128
+          },
+          {
+            "what": "Butter beans",
+            "unit": "g",
+            "jon": 148,
+            "cheryl": 111
+          },
+          {
+            "what": "Salad leaves",
+            "unit": "g",
+            "jon": 68,
+            "cheryl": 51
+          },
+          {
+            "what": "Cherry tomatoes",
+            "unit": "g",
+            "jon": 68,
+            "cheryl": 51
+          },
+          {
+            "what": "Cucumber",
+            "unit": "g",
+            "jon": 34,
+            "cheryl": 26
+          }
+        ],
+        "share": null,
+        "adjusted": {},
+        "tub": true
       }
     },
     {
@@ -6843,7 +7519,6 @@
           "packSize": 180,
           "packUnit": "g",
           "staple": false,
-          "cooked": true,
           "note": "320g raw gives about 275g cooked — or use about 275g of ready-cooked prawns"
         },
         {
@@ -6852,7 +7527,7 @@
           "aisle": "cupboard",
           "packSize": 400,
           "packUnit": "g",
-          "note": "drained and rinsed — one 400g tin",
+          "note": "rinsed",
           "staple": true
         },
         {
@@ -6921,7 +7596,7 @@
           "protein": 56.1,
           "fibre": 9.5,
           "salt": 1.29,
-          "plateGrams": 527,
+          "plateGrams": 516,
           "note": "157g poached prawns, 134g butter beans, 103g whipped Skyr, 103g of leaves, tomato and cucumber, 14g toasted almonds"
         },
         "cheryl": {
@@ -6929,7 +7604,7 @@
           "protein": 42.1,
           "fibre": 7.1,
           "salt": 0.97,
-          "plateGrams": 395
+          "plateGrams": 387
         },
         "daughter": null
       },
@@ -6953,8 +7628,8 @@
         "servedByWeight": false,
         "source": "ratio",
         "grams": {
-          "jon": 527,
-          "cheryl": 395
+          "jon": 516,
+          "cheryl": 387
         },
         "components": [
           {
@@ -7010,7 +7685,56 @@
         "note": "Built the night before. Poach raw prawns ahead, or use ready-cooked."
       },
       "recosted": "raw prawns poached ahead instead of bought in brine (19 Sept chef review)",
-      "warnings": []
+      "warnings": [],
+      "serve": {
+        "rows": [
+          {
+            "what": "Prawns, cooked",
+            "unit": "g",
+            "jon": 157,
+            "cheryl": 118
+          },
+          {
+            "what": "Butter beans",
+            "unit": "g",
+            "jon": 134,
+            "cheryl": 101
+          },
+          {
+            "what": "Plain Skyr",
+            "unit": "g",
+            "jon": 103,
+            "cheryl": 77
+          },
+          {
+            "what": "Cherry tomatoes",
+            "unit": "g",
+            "jon": 46,
+            "cheryl": 34
+          },
+          {
+            "what": "Salad leaves",
+            "unit": "g",
+            "jon": 34,
+            "cheryl": 26
+          },
+          {
+            "what": "Cucumber",
+            "unit": "g",
+            "jon": 23,
+            "cheryl": 17
+          },
+          {
+            "what": "Flaked almonds",
+            "unit": "g",
+            "jon": 14,
+            "cheryl": 10
+          }
+        ],
+        "share": null,
+        "adjusted": {},
+        "tub": true
+      }
     },
     {
       "id": "chicken-bean-spinach-pot",
@@ -7042,7 +7766,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "4 tins, drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Passata",
@@ -7165,11 +7889,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 380,
-            "kcal": 394,
-            "protein": 45.5,
-            "fibre": 11.0,
-            "salt": 0.87,
+            "grams": 356,
+            "kcal": 370,
+            "protein": 42.6,
+            "fibre": 10.4,
+            "salt": 0.83,
             "source": "derived"
           }
         }
@@ -7202,7 +7926,16 @@
         "when": "weekend",
         "note": "Only the chicken: roast and shred it at the weekend, or buy it ready-cooked. The pot itself is 15 minutes."
       },
-      "skipCrispNote": true
+      "skipCrispNote": true,
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the pot",
+          "jon": 668,
+          "cheryl": 501,
+          "daughter": 501
+        }
+      }
     },
     {
       "id": "crispy-duck-lentils-red-cabbage",
@@ -7356,11 +8089,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 385,
-            "kcal": 385,
-            "protein": 39.5,
-            "fibre": 8.4,
-            "salt": 0.7,
+            "grams": 360,
+            "kcal": 360,
+            "protein": 37.0,
+            "fibre": 7.8,
+            "salt": 0.66,
             "source": "derived"
           }
         }
@@ -7392,7 +8125,41 @@
           "tone": "hot",
           "text": "A whole duck is 2 to 2.2kg raw and yields only about 800g of meat. That is three plates and two lunches and nothing over - do not plan a third meal off it."
         }
-      ]
+      ],
+      "serve": {
+        "rows": [
+          {
+            "what": "Duck, carved",
+            "unit": "g",
+            "jon": 200,
+            "cheryl": 150,
+            "daughter": 150
+          },
+          {
+            "what": "Puy lentils, cooked",
+            "unit": "g",
+            "jon": 145,
+            "cheryl": 109,
+            "daughter": 109
+          },
+          {
+            "what": "Red cabbage",
+            "unit": "g",
+            "jon": 106,
+            "cheryl": 80,
+            "daughter": 80
+          },
+          {
+            "what": "Tenderstem",
+            "unit": "g",
+            "jon": 109,
+            "cheryl": 82,
+            "daughter": 82
+          }
+        ],
+        "share": null,
+        "adjusted": {}
+      }
     },
     {
       "id": "penang-chicken-curry",
@@ -7514,11 +8281,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 383,
-            "kcal": 385,
-            "protein": 33.0,
-            "fibre": 3.7,
-            "salt": 1.27,
+            "grams": 358,
+            "kcal": 360,
+            "protein": 30.9,
+            "fibre": 3.5,
+            "salt": 1.19,
             "source": "derived"
           }
         }
@@ -7592,7 +8359,31 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [],
+      "serve": {
+        "rows": [
+          {
+            "what": "Rice, cooked",
+            "unit": "g",
+            "jon": 108,
+            "cheryl": 81,
+            "daughter": 81
+          },
+          {
+            "what": "Dry-roasted unsalted peanuts",
+            "unit": "g",
+            "jon": 6,
+            "cheryl": 4,
+            "daughter": 4
+          }
+        ],
+        "share": {
+          "label": "the curry",
+          "jon": 604,
+          "cheryl": 454,
+          "daughter": 454
+        }
+      }
     },
     {
       "id": "chicken-arrabbiata-penne",
@@ -7748,11 +8539,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 390,
-            "kcal": 385,
-            "protein": 37.9,
-            "fibre": 7.9,
-            "salt": 0.71,
+            "grams": 364,
+            "kcal": 360,
+            "protein": 35.4,
+            "fibre": 7.4,
+            "salt": 0.66,
             "source": "derived"
           }
         }
@@ -7832,7 +8623,16 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [],
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the pasta",
+          "jon": 720,
+          "cheryl": 540,
+          "daughter": 540
+        }
+      }
     },
     {
       "id": "beef-barley-stew-slow-cooker",
@@ -7997,11 +8797,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 404,
-            "kcal": 385,
-            "protein": 37.4,
-            "fibre": 7.4,
-            "salt": 0.83,
+            "grams": 378,
+            "kcal": 360,
+            "protein": 35.0,
+            "fibre": 7.0,
+            "salt": 0.78,
             "source": "derived"
           }
         }
@@ -8030,7 +8830,16 @@
           "daughter": 555
         }
       },
-      "warnings": []
+      "warnings": [],
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the stew",
+          "jon": 740,
+          "cheryl": 555,
+          "daughter": 555
+        }
+      }
     },
     {
       "id": "chicken-chickpea-tagine-slow-cooker",
@@ -8061,7 +8870,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "1 tin, drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Onions",
@@ -8186,11 +8995,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 399,
-            "kcal": 385,
-            "protein": 40.4,
-            "fibre": 7.5,
-            "salt": 0.86,
+            "grams": 373,
+            "kcal": 360,
+            "protein": 37.8,
+            "fibre": 7.0,
+            "salt": 0.8,
             "source": "derived"
           }
         }
@@ -8219,7 +9028,16 @@
           "daughter": 535
         }
       },
-      "warnings": []
+      "warnings": [],
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the tagine",
+          "jon": 715,
+          "cheryl": 535,
+          "daughter": 535
+        }
+      }
     },
     {
       "id": "beef-chilli-slow-cooker",
@@ -8251,7 +9069,7 @@
           "packSize": 400,
           "packUnit": "g",
           "staple": true,
-          "note": "1 tin, drained and rinsed"
+          "note": "rinsed"
         },
         {
           "item": "Chopped tomatoes, tinned",
@@ -8385,11 +9203,11 @@
             "source": "derived"
           },
           "cheryl": {
-            "grams": 405,
-            "kcal": 385,
-            "protein": 43.2,
-            "fibre": 6.6,
-            "salt": 0.93,
+            "grams": 379,
+            "kcal": 360,
+            "protein": 40.4,
+            "fibre": 6.2,
+            "salt": 0.87,
             "source": "derived"
           }
         }
@@ -8419,10 +9237,19 @@
         }
       },
       "warnings": [],
-      "skipCrispNote": true
+      "skipCrispNote": true,
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the chilli",
+          "jon": 740,
+          "cheryl": 555,
+          "daughter": 555
+        }
+      }
     }
   ],
-  "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off that person's own dinner plate - not off the other person's, because the two plates are differently composed. Jon's portions target the middle of the brief's stated 400-550 lunch band. CHERYL HAS NO STATED LUNCH BAND ANYWHERE; hers target 385 kcal, the middle of the 350-420 her own verified week already runs at. That is observed, not ruled on, and needs the coach. The method reproduces the one Cheryl leftover ever hand-costed (Thursday's chilli tub) at 386/37.9 against 387/37.8. RE-DERIVED 19 September 2026 against the new composition table: every portion below is the weight that lands on its target off that person's own re-costed plate, so weight and macros now agree by construction. Jon's target is the 480 kcal lunch slot target; Cheryl's is still the observed 385 and still needs the coach.",
+  "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",
   "portionRule": "One recipe, one set of ingredients, one ratio. Jon's plate is the recipe's portion; Cheryl has three-quarters of it (4:3); the daughter's share is whatever her plate weight has always been, of the same food. Nothing is made twice and nobody gets a different version. Set 18 September 2026 after Cheryl had spent a week making two smoothies.",
   "lunchRule": "Warming up is fine - reheating a portion, filling a flask, a soup out of the freezer, a few minutes in a pan. PREPARING AND COOKING RAW INGREDIENTS IS NOT: no fish, no raw meat, nothing with a prep stage and a cook stage. That happens the night before or with the weekend batch. Set 19 September 2026, clarified the same day: the line is raw ingredients, not heat.",
   "crispRule": "Chef's rule, 19 September: every dish carries one crisp element - 8-15g of toasted seed, nut or breadcrumb. Twenty-one of thirty-three had none, and the dishes this family already likes are, without exception, the ones that do. Costs 45-70 kcal a plate. 19 September re-cost: the jacket potatoes and the barley orzotto were the last two dishes with nothing crisp in them and both now carry a weighed garnish. Every live recipe in the file satisfies the rule.",
@@ -8460,6 +9287,8 @@
     "Green lentils, tinned": 240,
     "Sweetcorn, tinned": 165,
     "Tuna in spring water, no added salt": 112,
-    "Mackerel fillets in spring water, tinned": 110
+    "Mackerel fillets in spring water, tinned": 110,
+    "Jarred roasted red peppers": 190,
+    "noteJarredPeppers": "Estimate, 7 October 2026: no 290g jar publishes a drained weight. Larger UK jars run 67-78% peppers (Aleyna 480g gives 320g drained; Cooks & Co 460g about 360g), so 290g x 0.67 rounded down. The tortilla needs 150g, so one jar covers it either way."
   }
 }

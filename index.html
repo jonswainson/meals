@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
-<title>Shopping · 14–18 Sept</title>
+<title>Shopping</title>
 <style>
   :root{--bg:#faf9f7;--fg:#1a1a1a;--muted:#6b6b6b;--line:#e2e0dc;
     --card:#fff;--soft:#f3f1ed;--accent:#8a5a2b;--go:#3d7a4e;--hot:#a03232}
@@ -140,9 +140,6 @@
   <strong>That's everything.</strong>
 </div>
 
-<p class="note">
-  <strong>No beef to buy</strong> — Monday's lunch and dinner both come off Sunday's joint.<br><strong>Wednesday's lunch is bought in London</strong> — the M&amp;S salmon pack and the chicken Caesar box. Not part of this shop.<br><br>
-  </p>
 
 <div class="foot">
   <button id="undo" disabled>Undo</button>
@@ -153,109 +150,105 @@
 <div class="toast" id="toast"></div>
 
 <script>
-let ITEMS = [
-  ["Fresh","Bananas","7 loose"],
-  ["Fresh","Pears","4"],
-  ["Fresh","Salad leaves","1 × 150g bag"],
-  ["Fresh","Cherry tomatoes","2 × 300g punnets — 320g needed across both tubs"],
-  ["Fresh","Cucumber","1"],
-  ["Fresh","Fennel","1 bulb"],
-  ["Fresh","Onions","1 × 1kg net"],
-  ["Fresh","Red onions","1 × 3-pack"],
-  ["Fresh","Garlic","2 bulbs"],
-  ["Fresh","Peppers","1 pack of 3"],
-  ["Fresh","Potatoes &mdash; <b>floury</b>, Maris Piper or King Edward","1 × 2.5kg bag &middot; roasties Monday, wedges Thursday"],
-  ["Fresh","Carrots","1 × 500g"],
-  ["Fresh","Broccoli","1 head"],
-  ["Fresh","Savoy cabbage","1"],
-  ["Fresh","Asparagus","2 × 125g bunches"],
-  ["Fresh","Pak choi or choy sum","500g"],
-  ["Fresh","Lemons","1 × 4-pack"],
-  ["Fresh","Limes","2"],
-  ["Fresh","Flat-leaf parsley &mdash; <b>fresh</b>","1 pack &middot; 16g across Tuesday's two tubs"],
-  ["Fresh","Coriander &mdash; <b>fresh</b>","1 pack &middot; Friday's rice needs the stalks too"],
-  ["Fresh","Thyme &mdash; <b>fresh</b>","1 pack &middot; 4 sprigs for Wednesday's meatballs"],
-  ["Fresh","Basil &mdash; <b>fresh</b>","1 pack &middot; Wednesday's meatballs, torn in at the end"],
+/* The list is whatever the planner last built for this week (localStorage
+   `list-<week>`), or whatever a shared link carries. There is no built-in
+   fallback any more: a hard-coded September list shown in October was worse
+   than an honest empty page. */
+let ITEMS = [];      /* [aisle, name, qty] */
+let STAPLES = [];    /* [name, amount] */
+let GENERATED = null;
 
-  ["Meat &amp; fish","Cooked chicken breast, pre-packed","<b>300g</b> &middot; usually 2 packs &middot; no spare"],
-  ["Meat &amp; fish","Chicken thighs, skinless boneless","<b>1.3kg</b> &middot; 650g Thursday, 650g Friday &middot; no spare"],
-  ["Meat &amp; fish","Turkey mince, 5%","2 × 500g"],
-  ["Meat &amp; fish","Beef and pork meatballs, ready-made","~750g &middot; usually 2 packs &middot; <b>check the salt per 100g</b>"],
-  ["Meat &amp; fish","Tuna in spring water","1 × 4-pack of 145g tins — no added salt"],
-
-  ["Dairy","Plain Skyr","3 × 1kg tubs"],
-  ["Dairy","Semi-skimmed milk","2 × 2L &middot; recipes need 680ml, the rest is the house"],
-  ["Dairy","Mozzarella","1 × 125g ball"],
-  ["Dairy","Parmesan","1 × 100g wedge"],
-
-  ["Cupboard","Butter beans","3 × 400g tins"],
-  ["Cupboard","Black beans","2 × 400g tins"],
-  ["Cupboard","Kidney beans","1 × 400g tin"],
-  ["Cupboard","Chopped tomatoes","3 × 400g tins"],
-  ["Cupboard","Passata","2 × 500g cartons"],
-  ["Cupboard","Coconut milk, reduced fat","1 × 400ml tin"],
-  ["Cupboard","Red lentils, dry","1 × 500g bag"],
-  ["Cupboard","Jasmine rice","1 × 1kg"],
-  ["Cupboard","Peanuts, dry roasted, unsalted","1 × 200g bag"],
-  ["Cupboard","Capers","1 small jar"],
-  ["Cupboard","Wholemeal ciabatta","1 loaf"],
-  ["Cupboard","Reduced-salt soy sauce","1 × 150ml"],
-  ["Cupboard","Fish sauce","1 × 150ml"],
-  ["Cupboard","Red curry paste","1 × 110g jar"],
-  ["Cupboard","Gravy granules","1 tub"],
-  ["Cupboard","Huel protein bar","1"],
-  ["Cupboard","Milbona high-protein drink","1 — Lidl"],
-
-  ["Frozen","Mixed berries","1 × 500g"],
-  ["Frozen","Raspberries","1 × 500g"],
-  ["Frozen","Edamame, shelled","1 × 400g bag"]
-];
-
-let STAPLES = [
-  ["Huel Black","2 bottles — Cheryl's Wednesday lunch and Jon's Wednesday breakfast"],
-  ["Whey",""],
-  ["Porridge oats",""],
-  ["Chia seeds",""],
-  ["Walnuts or almonds",""],
-  ["Pumpkin seeds",""],
-  ["Olive oil",""],
-  ["Spray oil",""],
-  ["Cumin",""],
-  ["Smoked paprika",""],
-  ["Chilli flakes",""],
-  ["Honey",""],
-  ["Tomato pur\u00e9e",""]
-];
-let pantry = [];   /* sized once the list is settled */  /* 0 unresolved · 1 have · 2 need · 3 need+got */
+/* Ticks are remembered by name, with the quantity they were ticked at. They
+   used to be positions, so rebuilding the list or opening a link against a
+   different list ticked the wrong things. A rebuilt line keeps its tick only
+   if it still asks for the same amount: "2 tins" ticked never covers "3 tins". */
+let got = {};         /* item name -> qty when ticked */
+let pantry = {};      /* staple name -> 1 have · 2 need · 3 need+got; absent = unresolved */
+let extras = [];      /* [{n, t}] */
+let seenExtras = [];  /* planner extras already offered, so one you remove stays removed */
 let showHave = false;
-
-/* Which week the planner last generated. Without this the list page would go on
-   showing week one for ever once a second week existed. */
-const WEEK_ID = (function(){
-  try { return localStorage.getItem("list-current") || "2026-09-14"; }
-  catch(e){ return "2026-09-14"; }
-})();
-const KEY = "shop-" + WEEK_ID;
-/* Seven days, and the week no longer starts on a Monday - it runs Saturday to Friday,
-   because the shop is Friday evening. Read the day names off the dates. */
-const WEEK_LABEL = (function(){
-  try {
-    const a = new Date(WEEK_ID + "T00:00:00"), b = new Date(a.getTime() + 6*86400000);
-    const M = ["January","February","March","April","May","June","July","August",
-               "September","October","November","December"];
-    const D = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    const same = a.getMonth() === b.getMonth();
-    return D[a.getDay()] + " " + a.getDate() + (same ? "" : " " + M[a.getMonth()]) +
-           " \u2013 " + D[b.getDay()] + " " + b.getDate() + " " + M[b.getMonth()];
-  } catch(e){ return ""; }
-})();
-let ticks = new Array(ITEMS.length).fill(0);
-let extras = [];
 let history = [];
 
 const $ = s => document.querySelector(s);
+const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
-/* ---------- encoding for the share link ---------- */
+/* Which week. The planner opens this page as ./?w=<week>; a shared link may
+   carry another. list-current is the fallback for a bare visit. */
+let WEEK_ID = (function(){
+  const w = new URLSearchParams(location.search).get("w");
+  if (w && ISO.test(w)) return w;
+  try { return localStorage.getItem("list-current") || ""; } catch(e){ return ""; }
+})();
+const key = () => "shop-" + WEEK_ID;
+
+/* Seven days, Saturday to Friday, because the shop is Friday evening. Day 7 is
+   found with setDate, not +6×24 hours: Sunday 25 October is 25 hours long. */
+function weekLabel(id){
+  if (!id || !ISO.test(id)) return "";
+  const a = new Date(id + "T00:00:00"), b = new Date(a);
+  b.setDate(a.getDate() + 6);
+  const M = ["January","February","March","April","May","June","July","August",
+             "September","October","November","December"];
+  const D = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const same = a.getMonth() === b.getMonth();
+  return D[a.getDay()] + " " + a.getDate() + (same ? "" : " " + M[a.getMonth()]) +
+         " – " + D[b.getDay()] + " " + b.getDate() + " " + M[b.getMonth()];
+}
+/* "Saturday 3 – Friday 9 October" -> "3–9 Oct" */
+const shortLabel = l => l.replace(/^\w+ /, "").replace(/ – \w+ /, "–")
+                         .replace(/ (\w+)$/, (m, w) => " " + w.slice(0, 3));
+
+/* ---------- the list ---------- */
+function adopt(g){
+  if (!g || !Array.isArray(g.items)) return false;
+  ITEMS   = g.items.map(i => [String(i[0]), String(i[1]), String(i[2] || "")]);
+  STAPLES = (g.staples || []).map(s => [String(s[0]), String(s[1] || "")]);
+  GENERATED = g;
+  return true;
+}
+function loadGenerated(){
+  ITEMS = []; STAPLES = []; GENERATED = null;
+  try {
+    const raw = localStorage.getItem("list-" + WEEK_ID);
+    if (raw) adopt(JSON.parse(raw));
+  } catch(e){}
+}
+const isGot = it => got[it[1]] === it[2];
+
+/* ---------- state ---------- */
+function snap(){
+  return {got: {...got}, p: {...pantry}, x: extras.map(e => [e.n, e.t]), seen: seenExtras.slice()};
+}
+function setState(o){
+  o = o || {};
+  got = (o.got && typeof o.got === "object") ? o.got : {};
+  pantry = (o.p && typeof o.p === "object" && !Array.isArray(o.p)) ? o.p : {};
+  extras = Array.isArray(o.x) ? o.x.map(e => ({n: String(e[0]), t: e[1] ? 1 : 0})) : [];
+  seenExtras = Array.isArray(o.seen) ? o.seen.map(String) : [];
+}
+/* Saved state and share links from before 7 October held positions, base64'd. */
+function legacy(o){
+  got = {}; pantry = {};
+  if (typeof o.t === "string")
+    o.t.split("").forEach((c, i) => { if (c === "1" && ITEMS[i]) got[ITEMS[i][1]] = ITEMS[i][2]; });
+  if (typeof o.p === "string")
+    o.p.split("").forEach((c, i) => { if (+c && STAPLES[i]) pantry[STAPLES[i][0]] = +c; });
+  extras = Array.isArray(o.x) ? o.x.map(e => ({n: String(e[0]), t: e[1] ? 1 : 0})) : [];
+}
+function save(){
+  try { localStorage.setItem(key(), JSON.stringify(snap())); } catch(e){}
+}
+function load(){
+  let s = null;
+  try { s = localStorage.getItem(key()); } catch(e){}
+  if (!s) return;
+  try { setState(JSON.parse(s)); }
+  catch(e){ try { legacy(JSON.parse(b64d(s))); } catch(e2){} }
+}
+
+/* ---------- the share link ---------- */
+/* It carries the whole list, not just the ticks: the other phone may never
+   have built this week, and ticks mean nothing without the lines they tick. */
 function b64e(s){
   const b = new TextEncoder().encode(s); let x = "";
   b.forEach(c => x += String.fromCharCode(c));
@@ -266,66 +259,79 @@ function b64d(s){
   const b = atob(s), a = Uint8Array.from(b, c => c.charCodeAt(0));
   return new TextDecoder().decode(a);
 }
-function encode(){
-  return b64e(JSON.stringify({t: ticks.join(""), p: pantry.join(""),
-                              x: extras.map(e => [e.n, e.t])}));
+function payload(){
+  return b64e(JSON.stringify({v: 2, w: WEEK_ID, built: GENERATED ? GENERATED.built : 0,
+                              items: ITEMS, staples: STAPLES, ...snap()}));
 }
-function decode(s){
+function receive(s){
   const o = JSON.parse(b64d(s));
-  if (typeof o.t === "string")
-    ticks = o.t.split("").map(Number).slice(0, ITEMS.length);
-  while (ticks.length < ITEMS.length) ticks.push(0);
-  if (typeof o.p === "string")
-    pantry = o.p.split("").map(Number).slice(0, STAPLES.length);
-  while (pantry.length < STAPLES.length) pantry.push(0);
-  if (Array.isArray(o.x)) extras = o.x.map(e => ({n: e[0], t: e[1] ? 1 : 0}));
+  if (o.v !== 2){ legacy(o); return; }
+  if (o.w && ISO.test(o.w) && o.w !== WEEK_ID){ WEEK_ID = o.w; loadGenerated(); }
+  if (Array.isArray(o.items)){
+    adopt({weekId: WEEK_ID, built: o.built || 0, items: o.items, staples: o.staples || [],
+           extras: (GENERATED && GENERATED.extras) || []});
+    try {
+      localStorage.setItem("list-" + WEEK_ID, JSON.stringify(GENERATED));
+      localStorage.setItem("list-current", WEEK_ID);
+    } catch(e){}
+  }
+  setState(o);
+}
+function cleanUrl(){
+  try { window.history.replaceState(null, "", location.pathname + (WEEK_ID ? "?w=" + WEEK_ID : "")); }
+  catch(e){}
 }
 
-/* ---------- storage ---------- */
-function save(){
-  try { localStorage.setItem(KEY, encode()); } catch(e){}
-}
-function load(){
-  try {
-    const s = localStorage.getItem(KEY);
-    if (s) decode(s);
-  } catch(e){}
+/* Planner extras ("Fri: fish fingers") are offered once. Removing one sticks. */
+function mergePlannerExtras(){
+  if (!GENERATED) return;
+  let changed = false;
+  (GENERATED.extras || []).forEach(n => {
+    if (seenExtras.includes(n)) return;
+    seenExtras.push(n); changed = true;
+    if (!extras.some(e => e.n.toLowerCase() === n.toLowerCase())) extras.push({n: n, t: 0});
+  });
+  if (changed) save();
 }
 
 /* ---------- rendering ---------- */
+/* Every name and quantity goes in as text. Extras arrive typed or in a link,
+   and "<" in one used to break the row (or worse). */
 const TICK = '<svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function el(tag, cls, text){
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
 
 function renderStaples(){
   const box = document.getElementById("staples");
   const foot = document.getElementById("stockFoot");
+  document.getElementById("stockBox").hidden = !STAPLES.length;
   box.innerHTML = "";
 
-  STAPLES.forEach((st, i) => {
-    if (pantry[i] !== 0 && !(showHave && pantry[i] === 1)) return;
-    const d = document.createElement("div");
-    d.className = "sp";
-    d.innerHTML = '<span class="n">' + st[0] +
-      (st[1] ? '<em>' + st[1] + '</em>' : '') + '</span>';
+  STAPLES.forEach(st => {
+    const s = pantry[st[0]] || 0;
+    if (s !== 0 && !(showHave && s === 1)) return;
+    const d = el("div", "sp");
+    const n = el("span", "n", st[0]);
+    if (st[1]) n.appendChild(el("em", "", st[1]));
+    d.appendChild(n);
 
-    const have = document.createElement("button");
-    have.textContent = pantry[i] === 1 ? "In stock" : "Got it";
-    have.onclick = () => { snapshot(); pantry[i] = pantry[i] === 1 ? 0 : 1; commit(); };
-
-    const need = document.createElement("button");
-    need.className = "need"; need.textContent = "Need it";
-    need.onclick = () => { snapshot(); pantry[i] = 2; commit();
-                           toast(st[0] + " added to the list"); };
-
+    const have = el("button", "", s === 1 ? "In stock" : "Got it");
+    have.onclick = () => { snapshot(); if (s === 1) delete pantry[st[0]]; else pantry[st[0]] = 1; commit(); };
+    const need = el("button", "need", "Need it");
+    need.onclick = () => { snapshot(); pantry[st[0]] = 2; commit(); toast(st[0] + " added to the list"); };
     d.appendChild(have); d.appendChild(need);
     box.appendChild(d);
   });
 
-  const haveCount = pantry.filter(v => v === 1).length;
-  const left = pantry.filter(v => v === 0).length;
-  if (!left && !showHave)
-    box.innerHTML = '<div class="sp"><span class="n">All checked.</span></div>';
+  const haveCount = STAPLES.filter(st => pantry[st[0]] === 1).length;
+  const left = STAPLES.filter(st => !pantry[st[0]]).length;
+  if (!left && !showHave) box.innerHTML = '<div class="sp"><span class="n">All checked.</span></div>';
   foot.innerHTML = haveCount
-    ? haveCount + ' marked as in stock \u00b7 <a href="#" id="toggleHave">' +
+    ? haveCount + ' marked as in stock · <a href="#" id="toggleHave">' +
       (showHave ? 'hide' : 'show') + '</a>'
     : 'Tap <strong>Got it</strong> if it is in the cupboard, or <strong>Need it</strong> ' +
       'to move it onto the list.';
@@ -333,103 +339,106 @@ function renderStaples(){
   if (t) t.onclick = e => { e.preventDefault(); showHave = !showHave; renderStaples(); };
 }
 
-function togglePantryTick(i){
-  snapshot(); pantry[i] = pantry[i] === 3 ? 2 : 3; commit();
-}
-
 function render(){
   renderStaples();
   const wrap = $("#list");
   wrap.innerHTML = "";
-  let sec = null, ul = null;
 
-  ITEMS.forEach((it, i) => {
+  if (!ITEMS.length && !STAPLES.length){
+    const p = el("p", "note");
+    p.innerHTML = '<strong>No list for this week yet.</strong> Open <a href="plan.html">the week</a> ' +
+      'and press <strong>Build shopping list</strong>, or open a list someone has shared with you.';
+    wrap.appendChild(p);
+  }
+
+  let sec = null, ul = null;
+  ITEMS.forEach(it => {
     if (it[0] !== sec){
       sec = it[0];
-      const h = document.createElement("p");
-      h.className = "sec"; h.innerHTML = sec;
-      wrap.appendChild(h);
-      ul = document.createElement("ul");
-      wrap.appendChild(ul);
+      wrap.appendChild(el("p", "sec", sec));
+      ul = el("ul"); wrap.appendChild(ul);
     }
-    ul.appendChild(row(it[1], it[2], ticks[i], () => toggle(i)));
+    ul.appendChild(row(it[1], it[2], isGot(it), () => toggle(it)));
   });
 
-  const needed = STAPLES.map((st,i) => [st,i]).filter(([st,i]) => pantry[i] >= 2);
+  const needed = STAPLES.filter(st => (pantry[st[0]] || 0) >= 2);
   if (needed.length){
-    const h = document.createElement("p");
-    h.className = "sec"; h.textContent = "Also need";
-    wrap.appendChild(h);
-    const el = document.createElement("ul");
-    needed.forEach(([st,i]) => {
-      const li = row(st[0], st[1], pantry[i] === 3 ? 1 : 0, () => togglePantryTick(i));
-      const rm = document.createElement("span");
-      rm.className = "rm"; rm.textContent = "\u00d7";
-      rm.onclick = ev => { ev.stopPropagation(); snapshot(); pantry[i] = 1; commit();
+    wrap.appendChild(el("p", "sec", "Also need"));
+    const list = el("ul");
+    needed.forEach(st => {
+      const li = row(st[0], st[1], pantry[st[0]] === 3, () => {
+        snapshot(); pantry[st[0]] = pantry[st[0]] === 3 ? 2 : 3; commit(); });
+      const rm = el("span", "rm", "×");
+      rm.onclick = ev => { ev.stopPropagation(); snapshot(); pantry[st[0]] = 1; commit();
                            toast("Moved back to in stock"); };
       li.appendChild(rm);
-      el.appendChild(li);
+      list.appendChild(li);
     });
-    wrap.appendChild(el);
+    wrap.appendChild(list);
   }
 
   if (extras.length){
-    const h = document.createElement("p");
-    h.className = "sec"; h.textContent = "Also";
-    wrap.appendChild(h);
-    const el = document.createElement("ul");
+    wrap.appendChild(el("p", "sec", "Also"));
+    const list = el("ul");
     extras.forEach((e, j) => {
-      const li = row(e.n, "", e.t, () => toggleExtra(j));
-      const rm = document.createElement("span");
-      rm.className = "rm"; rm.textContent = "×";
-      rm.onclick = ev => { ev.stopPropagation(); removeExtra(j); };
+      const li = row(e.n, "", e.t, () => { snapshot(); extras[j].t = extras[j].t ? 0 : 1; commit(); });
+      const rm = el("span", "rm", "×");
+      rm.onclick = ev => { ev.stopPropagation(); snapshot(); extras.splice(j, 1); commit(); toast("Removed"); };
       li.appendChild(rm);
-      el.appendChild(li);
+      list.appendChild(li);
     });
-    wrap.appendChild(el);
+    wrap.appendChild(list);
   }
 
   const total = ITEMS.length + extras.length + needed.length;
-  const got = ticks.reduce((a,b) => a+b, 0) + extras.reduce((a,e) => a+e.t, 0) +
-              pantry.filter(v => v === 3).length;
-  $("#count").textContent = got + " of " + total;
-  $("#fill").style.width = total ? (got/total*100) + "%" : "0%";
-  $("#done").classList.toggle("show", total > 0 && got === total);
+  const done = ITEMS.filter(isGot).length + extras.reduce((a, e) => a + e.t, 0) +
+               needed.filter(st => pantry[st[0]] === 3).length;
+  $("#count").textContent = done + " of " + total;
+  $("#fill").style.width = total ? (done / total * 100) + "%" : "0%";
+  $("#done").classList.toggle("show", total > 0 && done === total);
   $("#undo").disabled = history.length === 0;
 }
 
 function row(name, qty, on, fn){
-  const li = document.createElement("li");
-  if (on) li.className = "on";
-  li.innerHTML = '<span class="box">' + TICK + '</span><span class="txt">' +
-    '<span class="nm">' + name + '</span>' +
-    (qty ? '<span class="qt">' + qty + '</span>' : '') + '</span>';
+  const li = el("li", on ? "on" : "");
+  const box = el("span", "box"); box.innerHTML = TICK;
+  const txt = el("span", "txt");
+  txt.appendChild(el("span", "nm", name));
+  if (qty) txt.appendChild(el("span", "qt", qty));
+  li.appendChild(box); li.appendChild(txt);
   li.onclick = fn;
   return li;
 }
 
+function labels(){
+  const l = weekLabel(WEEK_ID);
+  $("#sub").textContent = l + (GENERATED && l ? " · built from the week" : "");
+  document.title = l ? "Shopping · " + shortLabel(l) : "Shopping";
+}
+
 /* ---------- actions ---------- */
 function snapshot(){
-  history.push({t: ticks.slice(), p: pantry.slice(), x: extras.map(e => ({...e}))});
+  history.push(snap());
   if (history.length > 60) history.shift();
 }
-function toggle(i){ snapshot(); ticks[i] = ticks[i] ? 0 : 1; commit(); }
-function toggleExtra(j){ snapshot(); extras[j].t = extras[j].t ? 0 : 1; commit(); }
-function removeExtra(j){ snapshot(); extras.splice(j,1); commit(); toast("Removed"); }
+function toggle(it){
+  snapshot();
+  if (isGot(it)) delete got[it[1]]; else got[it[1]] = it[2];
+  commit();
+}
 function commit(){ save(); render(); }
 
 $("#undo").onclick = () => {
   if (!history.length) return;
-  const p = history.pop();
-  ticks = p.t; extras = p.x;
-  if (p.p) pantry = p.p;
+  setState(history.pop());
   commit(); toast("Undone");
 };
 
 $("#clear").onclick = () => {
   snapshot();
-  ticks = ticks.map(() => 0);
+  got = {};
   extras.forEach(e => e.t = 0);
+  Object.keys(pantry).forEach(k => { if (pantry[k] === 3) pantry[k] = 2; });
   commit(); toast("All unticked");
 };
 
@@ -452,7 +461,7 @@ $("#new").addEventListener("keydown", e => {
 
 /* ---------- share ---------- */
 function shareUrl(){
-  return location.href.split("#")[0] + "#" + encode();
+  return location.origin + location.pathname + "?w=" + WEEK_ID + "#" + payload();
 }
 
 /* works without a secure context, unlike navigator.clipboard */
@@ -476,9 +485,14 @@ $("#share").onclick = async () => {
     toast("Sharing needs the online version");
     return;
   }
+  if (!ITEMS.length && !STAPLES.length){
+    toast("Nothing to share yet");
+    return;
+  }
 
   const url = shareUrl();
-  const label = "Shopping list · 14–18 Sept";
+  const l = weekLabel(WEEK_ID);
+  const label = "Shopping list" + (l ? " · " + shortLabel(l) : "");
 
   if (navigator.share){
     try {
@@ -515,69 +529,37 @@ function toast(msg){
   tid = setTimeout(() => t.classList.remove("show"), 1700);
 }
 
-/* ---------- a list generated by the planner takes precedence ---------- */
-let GENERATED = null;
-document.addEventListener("DOMContentLoaded", () => {
-  const el = document.getElementById("sub");
-  if (el && !el.textContent) el.textContent = WEEK_LABEL;
-  document.title = "Shopping \u00b7 " + WEEK_LABEL
-    .replace(/^\w+ /, "").replace(/ \u2013 \w+ /, "\u2013").replace(/ (\w+)$/, (m,w) => " " + w.slice(0,3));
-});
-(function adoptGenerated(){
-  try {
-    const raw = localStorage.getItem("list-" + WEEK_ID);
-    if (!raw) return;
-    const g = JSON.parse(raw);
-    if (!g || !Array.isArray(g.items) || !g.items.length) return;
-    ITEMS   = g.items.map(i => [i[0], i[1], i[2]]);
-    STAPLES = (g.staples || []).map(s => [s[0], s[1] || ""]);
-    GENERATED = g;
-  } catch(e){}
-})();
-
 /* ---------- boot ---------- */
-(function init(){
-  ticks  = new Array(ITEMS.length).fill(0);
-  pantry = new Array(STAPLES.length).fill(0);
-  let fromLink = false;
-  if (location.hash.length > 1){
-    try { decode(location.hash.slice(1)); fromLink = true; } catch(e){}
-  }
-  if (!fromLink) load(); else save();
-
-  if (GENERATED && (GENERATED.extras || []).length){
-    GENERATED.extras.forEach(n => {
-      if (!extras.some(e => e.n.toLowerCase() === n.toLowerCase()))
-        extras.push({n:n, t:0});
-    });
+/* A link replaces this phone's ticks with the sender's. If it is the same
+   week, Undo brings this phone's own back. */
+function takeLink(){
+  const week = WEEK_ID, before = snap();
+  try {
+    receive(location.hash.slice(1));
+    history = (WEEK_ID === week) ? history.concat([before]) : [];
     save();
-  }
-
-  if (GENERATED) {
-    const el = document.getElementById("sub");
-    if (el) el.textContent = WEEK_LABEL + " · built from the week";
-  }
-  render();
-  if (fromLink){
-    history_clean();
-    toast("List received");
-  }
-})();
-function history_clean(){
-  try { window.history.replaceState(null, "", location.pathname + location.search); } catch(e){}
+    return true;
+  } catch(e){ return false; }
+  finally { cleanUrl(); }
 }
+
+(function init(){
+  loadGenerated();
+  load();
+  const fromLink = location.hash.length > 1 && takeLink();
+  mergePlannerExtras();
+  labels();
+  render();
+  if (fromLink) toast(history.length ? "List received — Undo to go back" : "List received");
+})();
 
 /* a shared link tapped while the page is already open changes the hash
    without reloading, so nothing would happen otherwise */
 window.addEventListener("hashchange", () => {
   if (location.hash.length <= 1) return;
-  try {
-    snapshot();
-    decode(location.hash.slice(1));
-    save(); render(); history_clean();
-    toast("List received — Undo to go back");
-  } catch(e){
-    history_clean();
+  if (takeLink()){
+    mergePlannerExtras(); labels(); render();
+    toast(history.length ? "List received — Undo to go back" : "List received");
   }
 });
 </script>

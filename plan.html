@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
-<title>The week · 14–18 Sept</title>
+<title>The week</title>
 <style>
   :root{--bg:#faf9f7;--fg:#1a1a1a;--muted:#6b6b6b;--line:#e2e0dc;
     --card:#fff;--soft:#f3f1ed;--accent:#8a5a2b;--go:#3d7a4e;--warn:#9a6a12;--hot:#a03232}
@@ -105,6 +105,7 @@
     border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
   .note{font-size:.82rem;color:var(--muted);margin:9px 0 0;line-height:1.45}
   .note.warn{color:var(--warn)}
+  .note.stale{margin:12px 16px 0;padding:12px 14px;border:1px solid var(--warn);border-radius:10px}
   .note.prep{color:var(--go);font-weight:500}
   .ing{margin:9px 0 0;padding-left:18px;font-size:.87rem;color:var(--muted)}
   .rh{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
@@ -192,8 +193,8 @@ const FIXED = {
                    jon:{kcal:522,protein:59.7,fibre:12.1,salt:0.52},
                    cheryl:{kcal:392,protein:44.8,fibre:9.1,salt:0.39}},
   "huel-milbona": {name:"Huel Black, then a Milbona on the train",
-                   jon:{kcal:615,protein:70,fibre:7.5,salt:1.2},
-                   cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.30}},
+                   jon:{kcal:615,protein:70,fibre:6.0,salt:0.9},
+                   cheryl:{kcal:398,protein:43.2,fibre:8.1,salt:0.46}},
   "banana-skyr":  {name:"120g banana + 100g Skyr",
                    jon:{kcal:177,protein:12.4,fibre:2.2,salt:0.15},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
@@ -206,8 +207,8 @@ const FIXED = {
                    jon:{kcal:205,protein:15,fibre:3,salt:0.4},
                    cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "whey-pear":    {name:"30g whey in water + a large pear",
-                   jon:{kcal:182,protein:23.6,fibre:5.9,salt:0.13},
-                   cheryl:{kcal:136,protein:17.7,fibre:4.4,salt:0.10}},
+                   jon:{kcal:182,protein:23.6,fibre:4.4,salt:0.13},
+                   cheryl:{kcal:136,protein:17.7,fibre:3.3,salt:0.10}},
   "cheat-meal":   {name:"Cheat meal \u2014 untracked",
     jon:{kcal:0,protein:0,fibre:0,salt:0}, cheryl:{kcal:0,protein:0,fibre:0,salt:0},
     free:true, bought:true, assumedKcal:1200, assumedCheryl:900},
@@ -251,7 +252,7 @@ const FIXED = {
   "eggs-dukkah": {name:"Two boiled eggs, cumin dukkah and Skyr",
     jon:{kcal:230,protein:23.3,fibre:0.6,salt:0.49}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "biltong-apple": {name:"Biltong, apple and walnuts",
-    jon:{kcal:221,protein:14.6,fibre:3.4,salt:0.94}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
+    jon:{kcal:221,protein:14.6,fibre:3.4,salt:1.14}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "prawns-pear": {name:"M&S king prawns + a large pear, 19:30 on the train", bought:true,
     jon:{kcal:220,protein:34.4,fibre:5,salt:1.9}, cheryl:{kcal:0,protein:0,fibre:0,salt:0}},
   "work-pizza": {name:"Pizza provided at work, 17:45", bought:true,
@@ -430,22 +431,87 @@ const WEEK_1003 = {
   ]
 };
 
+const WEEK_1010 = {
+  id:"2026-10-10", label:"10\u201316 Oct",
+  days:[
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Out for the day \u00b7 packed lunch \u00b7 cheat meal tonight",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"huel-bar",
+     lunch:{kind:"recipe",id:"tuna-butter-bean-fennel-tub",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"cheat-meal"}},
+    {id:"sun",label:"Sun",title:"Sunday",tags:"Home \u00b7 Sunday roast out tonight",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"gingerbread", afternoon:"banana-skyr",
+     lunch:{kind:"recipe",id:"roast-broccoli-soup-halloumi",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"own-thing"}},
+    {id:"mon",label:"Mon",title:"Monday",tags:"Home",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"almond-blueberry", afternoon:"eggs-dukkah",
+     lunch:{kind:"recipe",id:"chicken-butter-bean-tub",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"chicken-fajitas",portions:5,daughter:true,alt:""}},
+    {id:"tue",label:"Tue",title:"Tuesday",tags:"Home",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"banana-skyr",
+     lunch:{kind:"leftover",from:"mon"},
+     dinner:{kind:"recipe",id:"bolognese-hidden-lentils",portions:3,daughter:true,alt:""}},
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Jon in the Howden office \u00b7 Huel Black and a protein drink",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"milbona",
+     lunch:{kind:"fixed",id:"huel-bottle"},
+     dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:true,alt:""}},
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Home \u00b7 slow cooker on in the morning",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"cherry-berry", afternoon:"cottage-rye",
+     lunch:{kind:"leftover",from:"wed"},
+     dinner:{kind:"recipe",id:"chicken-chickpea-tagine-slow-cooker",portions:5,daughter:true,alt:""}},
+    {id:"fri",label:"Fri",title:"Friday",tags:"Home \u00b7 SHOP TONIGHT",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"almond-blueberry", afternoon:"banana-skyr-150",
+     lunch:{kind:"leftover",from:"thu"},
+     dinner:{kind:"recipe",id:"crumbed-cod-crushed-potato",portions:4,daughter:true,alt:""}}
+  ]
+};
+
 /* The week runs Saturday to Friday, because the shop is Friday evening: the food
    lands Friday night and the first meal out of it is Saturday breakfast. Next week
    takes over on its own Saturday. Either is reachable from the header. */
-const WEEKS = [DEFAULT_WEEK, WEEK_0926, WEEK_1003];
+const WEEKS = [DEFAULT_WEEK, WEEK_0926, WEEK_1003, WEEK_1010];
 /* the latest week that has started; before the first, the first */
 function dateWeek(){
   let cur = WEEKS[0];
   WEEKS.forEach(w => { if (Date.now() >= new Date(w.id + "T00:00:00").getTime()) cur = w; });
   return cur;
 }
+/* A week picked from the header. Looking ahead lasts until that week arrives; looking
+   back lasts for this visit only. It used to last for ever: flip once and the page
+   stayed on that week after newer ones were added. */
 function pickWeek(){
-  let i;
-  try { const c = localStorage.getItem("week-choice");
-        if (c !== null) i = WEEKS.findIndex(w => w.id === c); } catch(e){}
-  return (i === undefined || i < 0) ? dateWeek() : WEEKS[i];
+  const cur = dateWeek(), ci = WEEKS.indexOf(cur);
+  try {
+    const past = WEEKS.findIndex(w => w.id === sessionStorage.getItem("week-past"));
+    if (past >= 0 && past < ci) return WEEKS[past];
+    const c = localStorage.getItem("week-choice");
+    const i = WEEKS.findIndex(w => w.id === c);
+    if (i > ci) return WEEKS[i];
+    if (c !== null) localStorage.removeItem("week-choice");
+  } catch(e){}
+  return cur;
 }
+function chooseWeek(w){
+  const ci = WEEKS.indexOf(dateWeek()), i = WEEKS.indexOf(w);
+  try {
+    sessionStorage.removeItem("week-past"); localStorage.removeItem("week-choice");
+    if (i < ci) sessionStorage.setItem("week-past", w.id);
+    if (i > ci) localStorage.setItem("week-choice", w.id);
+  } catch(e){}
+}
+/* Days between two dates by the calendar, not by 24-hour blocks: 25 October is 25
+   hours long, and dividing by 86,400,000 lost "today" for its last hour. */
+const dayIndex = (fromId, date) => {
+  const a = new Date(fromId + "T00:00:00");
+  return Math.round((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
+                     Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())) / 86400000);
+};
 
 /* ---------- ingredients for the fixed items, so they reach the list ---------- */
 const I = (item,grams,aisle,packSize,staple,unit) =>
@@ -781,11 +847,38 @@ const freeMeal = slot => ({
 });
 const day = id => WEEK.days.find(d => d.id === id);
 
-function save(){ try{ localStorage.setItem(KEY, JSON.stringify(WEEK)); }catch(e){} }
+/* Only what was changed on this phone is saved - a swap, the portions, the daughter
+   box - and it is laid over the week as shipped each time the page loads. Saving the
+   whole week froze it: a correction to the plan never reached a phone that had made
+   one swap earlier in the week, until someone pressed Reset. */
+const SLOTS = ["breakfast","lunch","afternoon","dinner"];
+function changes(w){
+  const base = {}, out = {};
+  BASE.days.forEach(d => base[d.id] = d);
+  w.days.forEach(d => {
+    const b = base[d.id]; if (!b) return;
+    SLOTS.forEach(sl => {
+      if (JSON.stringify(d[sl]) !== JSON.stringify(b[sl])) (out[d.id] = out[d.id] || {})[sl] = d[sl];
+    });
+  });
+  return out;
+}
+function save(){
+  try{ localStorage.setItem(KEY, JSON.stringify({id: BASE.id, v: 2, changes: changes(WEEK)})); }catch(e){}
+}
 function load(){
-  try{ const s = localStorage.getItem(KEY);
-       if (s){ const w = JSON.parse(s); if (w && w.id === BASE.id) return heal(w); } }catch(e){}
-  return clone(BASE);
+  const w = clone(BASE);
+  try{
+    const s = localStorage.getItem(KEY);
+    const o = s && JSON.parse(s);
+    if (!o || o.id !== BASE.id) return w;
+    /* a whole saved week, from before 8 October, is read as its differences */
+    const ch = o.v === 2 ? (o.changes || {}) : (o.days ? changes(o) : {});
+    w.days.forEach(d => SLOTS.forEach(sl => {
+      if (ch[d.id] && sl in ch[d.id]) d[sl] = ch[d.id][sl];
+    }));
+  }catch(e){}
+  return heal(w);
 }
 
 /* A saved plan on someone's phone can point at an id that has since been renamed or
@@ -870,7 +963,9 @@ function assumedFree(d, who){
   let k = 0;
   ["breakfast","lunch","afternoon","dinner"].forEach(sl => {
     const m = d[sl];
-    const id = (typeof m === "string") ? m : (m && m.kind === "fixed" ? m.id : null);
+    /* Cheryl's own version of the slot counts for her, not Jon's cheat meal */
+    const id = (typeof m === "string") ? m
+             : (m && m.kind === "fixed") ? ((who === "cheryl" && m.cheryl) || m.id) : null;
     const f = id && FIXED[id];
     if (f && f.assumedKcal && d.diners.includes(who))
       k += (who === "cheryl" ? (f.assumedCheryl || f.assumedKcal * 0.75) : f.assumedKcal);
@@ -884,12 +979,31 @@ function assumedFree(d, who){
    the same mistake as the +611: comparing against a week nobody was planning. */
 function weekTarget(who){
   const t = TARGETS[who];
-  let days = 0, cheat = 0;
+  let days = 0, cheat = 0, own = 0;
   WEEK.days.forEach(d => {
     if (d.free || !d.diners.includes(who)) return;
     days++; if (assumedFree(d, who) > 0) cheat++;
+    own += ownSlotKcal(d, who);
   });
-  return {kcal: (days - cheat) * t.kcal + cheat * t.cheatKcal, days, cheat};
+  return {kcal: (days - cheat) * t.kcal + cheat * t.cheatKcal - own, days, cheat, own};
+}
+
+/* An own-thing meal has no figures, so its slot comes out of the target as well as the
+   total. Counting it as 0 kcal against a full day read Jon's week as 1,050 short when two
+   lunches were simply his own. A cheat meal is different: assumedFree prices it. */
+function ownSlotKcal(d, who){
+  const scale = TARGETS[who].kcal / TARGETS.jon.kcal, st = DATA.slotTargets || {};
+  let k = 0;
+  ["breakfast","lunch","afternoon","dinner"].forEach(sl => {
+    const m = d[sl];
+    const mine = (who === "cheryl" && m && m.kind === "fixed" && m.cheryl) ? m.cheryl : m;
+    const f = FIXED[typeof mine === "string" ? mine : (mine && mine.id)] || {};
+    if (!isFreeMeal(mine) || f.assumedKcal) return;
+    /* Cheryl's 2:30 rides on her lunch, so her lunch slot carries both */
+    if (who === "cheryl" && sl === "afternoon") return;
+    k += ((st[sl] || 0) + (who === "cheryl" && sl === "lunch" ? (st.afternoon || 0) : 0)) * scale;
+  });
+  return Math.round(k);
 }
 
 function weekTotal(who){
@@ -1340,6 +1454,17 @@ function mealCard(d, slot){
       h += '<p class="note warn"><b>' + spare + ' portion' + (spare > 1 ? 's' : '') +
            ' spare</b> \u2014 this makes ' + m.portions + ', ' + eaten + ' eaten tonight, and no ' +
            'lunch this week is taking the rest. Drop the portions or the shopping list buys for them.</p>';
+    /* Tomorrow's tubs come out of the pan before anyone is served, or a hungry table
+       eats them. Weighed whole, as the lunch card says. */
+    const lunch = WEEK.days.find(x => x.lunch && x.lunch.kind === "leftover" && x.lunch.from === d.id);
+    if (lunch){
+      const tubs = ["jon","cheryl"].filter(w => lunch.diners.includes(w))
+        .map(w => [w, leftoverPortion(r, w)]).filter(([, x]) => x && x.grams);
+      if (tubs.length)
+        h += '<p class="note prep"><b>Before you serve, set aside ' + lunch.title + '\'s lunch</b>: ' +
+             tubs.map(([w, x]) => (w === "jon" ? "Jon" : "Cheryl") + ' ' + x.grams + 'g').join(', ') +
+             ', a fair mix of everything in the pan.</p>';
+    }
   }
 
   if (d.diners.includes("daughter") && r && r.plates.daughter){
@@ -1392,9 +1517,10 @@ function mealCard(d, slot){
     const amt = g => { const v = g * sc; return v >= 10 ? Math.round(v) : Math.round(v*10)/10; };
     h += '<h3 class="rh">Ingredients</h3>' +
       '<ul class="ing"><li>' +
-      r.ingredients.map(i => i.item + ' — ' + amt(i.grams) + (i.packUnit === "ml" ? "ml" : "g") +
-        state(i) + (i.note ? ', ' + i.note : '') +
-        (i.assumed ? ' <i>· quantity estimated</i>' : '')).join('</li><li>') + '</li></ul>';
+      r.ingredients.map(i => { const dp = drainedPacks(i.item, i.packSize, i.grams * sc);
+        return i.item + ' — ' + amt(i.grams) + (i.packUnit === "ml" ? "ml" : "g") +
+        state(i) + (dp ? ' (' + dp + ')' : '') + (i.note ? ', ' + i.note : '') +
+        (i.assumed ? ' <i>· quantity estimated</i>' : ''); }).join('</li><li>') + '</li></ul>';
     if ((r.method||[]).length){
       /* {{n}} marks a quantity that belongs to this batch. Day totals, per-100g rates and
          per-portion figures are left as bare numbers and never scale. */
@@ -1478,7 +1604,62 @@ function ratioOf(vals){
   return {rr, n: rr.reduce((x,y) => x+y, 0)};
 }
 
+/* How a finished dish reaches the plates (recipes.json `serve`, built by
+   tools/build_serve.py). Cooked together, shared together: a pot is split into equal
+   parts by the 4:3 rule, with the plate weights as a check. Cooked apart, weighed
+   cooked. Whole things counted. Never per-ingredient grams out of a mixed dish. */
+function serveBlock(r, eats){
+  const s = r.serve;
+  const who = [["jon","Jon"],["cheryl","Cheryl"],["daughter","Your daughter"]]
+    .filter(([k]) => (s.share ? s.share[k] !== undefined : s.rows.some(x => x[k] !== undefined)) &&
+                     (k !== "daughter" || eats));
+  if (!who.length) return "";
+  const amt = (row, k) => row[k] === undefined ? "—"
+    : row.unit === "count" ? row[k] + " " + (row[k] === 1 ? row.one : row.many)
+    : row[k] + (row.unit || "g");
+  let h = '<h3 class="rh">How much each</h3>';
+
+  const adj = Object.keys(s.adjusted || {}).filter(k => who.some(([w]) => w === k));
+  const inline = lab => lab === "Your daughter" ? "your daughter" : lab;
+  const weights = s.share && who.map(([k,lab]) => inline(lab) + ' ' + s.share[k] + 'g').join(' · ');
+  if (s.share && !adj.length){
+    const rat = ratioOf(who.map(([k]) => s.share[k]));
+    const parts = who.map(([k,lab],i) => inline(lab) + ' ' + rat.rr[i]).join(', ');
+    h += '<div class="ratio"><b>' + rat.rr.join(' : ') + '</b><span>' +
+         who.map(([,lab]) => lab.toLowerCase()).join(' &middot; ') + '</span></div>';
+    h += '<p class="note">' + (s.share.cut
+      ? '<b>Cut ' + s.share.label + ' into ' + rat.n + ' equal wedges</b>: ' + parts + '.'
+      : '<b>Share ' + s.share.label + ' by eye in ' + rat.n + ' equal parts</b>: ' + parts + '.') +
+      ' To check it on the scales: ' + weights + '.</p>';
+  } else if (s.share){
+    /* a whole fillet has moved the split, so equal parts would be wrong: weights only */
+    h += '<p class="note"><b>Share ' + s.share.label + ' by weight</b>: ' + weights + '.</p>';
+  }
+  if (s.rows.length){
+    h += '<div class="splitwrap"><table class="split"><thead><tr><th>' +
+         (s.share ? 'Plus, on each plate' : s.tub ? 'Into each tub' : 'On each plate') + '</th>' +
+         who.map(([,lab]) => '<th>' + lab.replace("Your daughter", "Daughter") + '</th>').join('') +
+         '</tr></thead><tbody>' +
+         s.rows.map(row => '<tr><td>' + row.what +
+           (row.note ? ' <span class="cnt">' + row.note + '</span>' : '') + '</td>' +
+           who.map(([k]) => '<td><b>' + amt(row, k) + '</b></td>').join('') + '</tr>').join('') +
+         '</tbody></table></div>';
+  }
+  if (adj.length)
+    h += '<p class="note">' + adj.map(k => {
+      const lab = who.find(([w]) => w === k)[1], d = s.adjusted[k];
+      return '<b>' + lab + '\'s is a whole one</b>, ' + Math.abs(d) + ' kcal ' + (d > 0 ? 'more' : 'less') +
+             ' than an exact share, so ' + (d > 0 ? 'less' : 'more') + ' of ' + s.adjustSide;
+    }).join('; ') + ' — already in the weights above.</p>';
+  if (s.note) h += '<p class="note">' + s.note + '</p>';
+  if (!s.share)
+    h += '<p class="note">' + (s.tub ? 'As it goes into the tub — drained, and cooked where it says so.'
+                                     : 'Weighed as served: cooked, on the plate.') + '</p>';
+  return h;
+}
+
 function splitBlock(r, eats){
+  if (r.serve) return serveBlock(r, eats);
   const s = r.plateSplit; if (!s) return "";
   const who = [["jon","Jon"],["cheryl","Cheryl"],["daughter","Daughter"]]
     .filter(([k]) => s.grams[k] !== undefined && (k !== "daughter" || eats));
@@ -1506,8 +1687,9 @@ function splitBlock(r, eats){
     const tot = who.reduce((a,[k]) => a + (c[k]||0), 0) || 1;
     if (rat && who.some(([k],i) => Math.abs((c[k]||0)/tot - rat.rr[i]/rat.n) > 0.12))
       odd.push(c.item.split(",")[0].toLowerCase());
+    const cnote = c.note || ((DATA.drainedYields || {})[c.item] ? 'drained' : '');
     h += '<tr><td>' + c.item.split(",")[0] +
-         (c.note ? ' <span class="cnt">' + c.note + '</span>' : '') + '</td>' +
+         (cnote ? ' <span class="cnt">' + cnote + '</span>' : '') + '</td>' +
          who.map(([k]) => '<td>' + (c[k] ? '<b>' + c[k] + '</b>g' : '\u2014') + '</td>').join('') +
          '</tr>';
   });
@@ -1529,8 +1711,19 @@ function splitBlock(r, eats){
 }
 
 /* standing rule 8: every weight is raw and dry unless it says otherwise */
+/* Anything used drained is weighed drained on the card and bought by the tin on the list.
+   Both count tins here, off the drained yield in recipes.json, so the card can never say
+   one tin while the list buys two - the notes used to carry hand-typed counts that did. */
+function drainedPacks(item, packSize, g){
+  const y = (DATA.drainedYields || {})[item];
+  if (!y || !packSize) return null;
+  const n = Math.ceil(Math.ceil(g) / y), word = /jar/i.test(item) ? "jar" : "tin";
+  return n + " × " + packSize + "g " + word + (n > 1 ? "s" : "");
+}
+
 function state(i){
   if (i.cooked) return ' <i>cooked</i>';
+  if ((DATA.drainedYields || {})[i.item]) return ' <i>drained</i>';
   if (i.aisle === "meat-fish") return ' <i>raw</i>';
   if (/pasta|rice|lentil|oats|bulgur|barley|couscous|quinoa|breadcrumb/i.test(i.item))
     return ' <i>dry</i>';
@@ -1612,32 +1805,104 @@ function wire(d){
   });
 }
 
-/* Some things are bought by number and nobody weighs them at the shop. "Bananas 1,514g"
-   is a true figure and a useless one. Grams-per-unit are the same ones the recipe notes
-   already use - 2 limes for 130g, 2 onions for 300g - so the count and the weight agree.
-   Banana weights everywhere in this file are PEELED, which is the 196g trap: a medium
-   banana is about 120g peeled and about 175g in the skin. */
-const COUNT_UNIT = {
-  "Bananas":                {each:120, one:"banana",   many:"bananas", note:"peeled weight"},
-  "Lemons":                 {each:85,  one:"lemon",    many:"lemons"},
-  "Limes":                  {each:65,  one:"lime",     many:"limes"},
-  "Onions":                 {each:150, one:"onion",    many:"onions"},
-  "Red onions":             {each:120, one:"red onion",many:"red onions"},
-  "Red peppers":            {each:160, one:"pepper",   many:"peppers"},
-  "Red and yellow peppers": {each:175, one:"pepper",   many:"peppers"},
-  "Cucumber":               {each:300, one:"cucumber", many:"cucumbers"},
-  "High-protein wraps":     {each:61,  one:"wrap",     many:"wraps", perPack:6}
+/* ---------- how things are bought ---------- */
+/* Three stages, three kinds of quantity (Jon, 7 October): the list buys whole things -
+   bananas, heads, tins, packs - the recipe card weighs in grams, and serving uses common
+   sense. Everything below is about the first stage only. */
+
+/* A recipe names an ingredient; the shop sells something else. Lemon juice is lemons
+   (about 30g of juice from a 65g lemon); "Red peppers" and "Peppers" are one line in the
+   shop, not two that each round down. `per` converts recipe grams to shop grams. */
+const SHOP_AS = {
+  "Lemon juice":            {item:"Lemons", per:65/30},
+  "Lemon zest":             {item:"Lemons", per:65/6},
+  "Peppers":                {item:"Peppers"},
+  "Red peppers":            {item:"Peppers"},
+  "Red and yellow peppers": {item:"Peppers"},
+  "Potatoes":               {item:"Potatoes, floury (Maris Piper or King Edward)"},
+  "Apple":                  {item:"Apples"},
+  "Spinach or kale":        {item:"Spinach"},
+  "Rocket or watercress":   {item:"Rocket"},
+  "Cinnamon":               {item:"Ground cinnamon"},
+  /* Jon buys "Easy" diced garlic in a pot, not bulbs */
+  "Garlic":                 {item:"Easy garlic, diced (pot)"},
+  "Whole chicken or crown": {item:"Whole chicken, extra large"}
 };
+
+/* One answer per shop item for pack, aisle and whether it is kept in. Recipes used to
+   disagree (Skyr in 450g and 1kg tubs, garlic both fresh and a cupboard staple) and the
+   list took whichever recipe it met first, so garlic could vanish into the strip. Items
+   not named here take the most common answer across the recipes that use them. */
+const SHOP_ITEM = {
+  "Easy garlic, diced (pot)":  {aisle:"cupboard", staple:true, packSize:null,
+                                note: g => "about " + Math.max(1, Math.round(g / 5)) + " tsp"},
+  "Lemons":                    {aisle:"fresh", staple:false, packSize:null,
+                                note: () => "bottled juice if you run short"},
+  "Peppers":                   {aisle:"fresh", staple:false, packSize:null},
+  "Plain Skyr":                {packSize:1000},
+  "Huel Black ready-to-drink": {aisle:"cupboard", staple:true, unit:"bottle", packSize:1},
+  "Chives":                    {packSize:20},
+  /* cut off the end of a block, not bought: a check, never a line */
+  "Parmesan rind":             {aisle:"cupboard", staple:true, packSize:null}
+};
+/* Not bought at all */
+const NOT_BOUGHT = new Set(["Water", "Boiling water"]);
+/* Kept in the house all the time (Jon, 7 October): only ever a check, whatever the amount. */
+const ALWAYS_IN = new Set(["Huel Black ready-to-drink", "Frozen blueberries", "Frozen raspberries",
+                           "Frozen cherries", "Frozen mixed berries"]);
+/* Not kept in: bought when a recipe needs them, even where a recipe calls them a staple. */
+const NOT_KEPT = new Set(["Butter", "Parmesan", "Cheddar, grated", "Light mayonnaise",
+  "Dijon mustard", "Capers", "Reduced-salt soy sauce", "Red wine vinegar", "Cider vinegar",
+  "Sherry vinegar", "Tomato puree", "Wholemeal breadcrumbs", "Gravy granules",
+  "Worcestershire sauce", "Fish sauce"]);
+
+/* Sold by the each. `each` is the weight the recipes mean by one: peeled for bananas
+   (110g - a medium UK banana, not the 120g top end, which left the list one short). */
+const COUNT_UNIT = {
+  "Bananas":                    {each:110, one:"banana",   many:"bananas", note:"weigh them peeled"},
+  "Lemons":                     {each:65,  one:"lemon",    many:"lemons"},
+  "Limes":                      {each:65,  one:"lime",     many:"limes"},
+  "Onions":                     {each:150, one:"onion",    many:"onions"},
+  "Red onions":                 {each:120, one:"red onion",many:"red onions"},
+  "Peppers":                    {each:165, one:"pepper",   many:"peppers"},
+  "Cucumber":                   {each:300, one:"cucumber", many:"cucumbers"},
+  "Broccoli":                   {each:350, one:"head",     many:"heads"},
+  "Courgette":                  {each:250, one:"courgette",many:"courgettes"},
+  "Savoy cabbage":              {each:700, one:"cabbage",  many:"cabbages"},
+  "Pointed/hispi cabbage":      {each:550, one:"cabbage",  many:"cabbages"},
+  "Red cabbage":                {each:800, one:"cabbage",  many:"cabbages"},
+  "Fennel":                     {each:250, one:"bulb",     many:"bulbs"},
+  "Leeks":                      {each:200, one:"leek",     many:"leeks"},
+  "Swede":                      {each:800, one:"swede",    many:"swedes"},
+  "Red chilli":                 {each:15,  one:"chilli",   many:"chillies"},
+  "Apples":                     {each:150, one:"apple",    many:"apples"},
+  "Pears":                      {each:200, one:"pear",     many:"pears"},
+  "Tomatoes":                   {each:100, one:"tomato",   many:"tomatoes"},
+  "Haddock loins, unsmoked":    {each:190, one:"loin",     many:"loins"},
+  "Carrots":                    {each:80,  one:"carrot",   many:"carrots"},
+  "Eggs":                       {each:55,  one:"egg",      many:"eggs", perPack:6},
+  "Whole chicken, extra large": {each:2400,one:"extra-large chicken", many:"extra-large chickens"},
+  "High-protein wraps":         {each:61,  one:"wrap",     many:"wraps", perPack:6}
+};
+const COUNT_WORDS = {bar:["bar","bars"], bottle:["bottle","bottles"]};
+
+/* Totals are sums of scaled fractions, so 2000g can arrive as 2000.4g. A pack is only
+   counted as needed once the shortfall is more than 2% of it - a sixth tin of tomatoes
+   for one gram is not a real need. */
+const packsFor = (g, per) => Math.max(1, Math.ceil(g / per - 0.02));
 
 /* ---------- shopping list ---------- */
 function buildList(){
   const agg = {}, extras = [];
   const take = (list, scale) => (list||[]).forEach(i => {
-    const k = i.item + "|" + (i.packUnit || "g");
-    if (!agg[k]) agg[k] = {item:i.item, grams:0, aisle:i.aisle || "cupboard",
-                           packSize:i.packSize || null, unit:i.packUnit || "g",
-                           staple:!!i.staple, assumed:!!i.assumed};
-    agg[k].grams += i.grams * scale;
+    const as = SHOP_AS[i.item] || {};
+    let item = as.item || i.item, grams = i.grams * scale * (as.per || 1), unit = i.packUnit || "g";
+    /* the one recipe that pours Huel by the ml still buys bottles */
+    if (item === "Huel Black ready-to-drink" && unit === "ml"){ grams /= 500; unit = "bottle"; }
+    const k = item + "|" + unit;
+    if (!agg[k]) agg[k] = {item, unit, grams:0, seen:[], assumed:false};
+    agg[k].grams += grams;
+    agg[k].seen.push(i);
     if (i.assumed) agg[k].assumed = true;
   });
 
@@ -1673,53 +1938,68 @@ function buildList(){
     });
   });
 
+  /* the most common answer among the recipes, the bigger pack on a tie */
+  const usual = (seen, f) => {
+    const n = new Map();
+    seen.forEach(i => { const v = f(i); if (v != null) n.set(v, (n.get(v) || 0) + 1); });
+    return [...n.entries()].sort((a,b) => (b[1] - a[1]) || (+b[0] - +a[0] || 0))
+             .map(e => e[0])[0] ?? null;
+  };
+
   const order = DATA.aisles || ["fresh","meat-fish","dairy","cupboard","frozen","bakery"];
   const names = {fresh:"Fresh", "meat-fish":"Meat & fish", dairy:"Dairy",
                  cupboard:"Cupboard", frozen:"Frozen", bakery:"Bakery"};
   const items = [], staples = [];
 
   Object.values(agg).forEach(a => {
-    const g = Math.ceil(a.grams);
+    if (NOT_BOUGHT.has(a.item)) return;
+    const fix = SHOP_ITEM[a.item] || {};
+    const aisle = fix.aisle || usual(a.seen, i => i.aisle) || "cupboard";
+    const packSize = ("packSize" in fix) ? fix.packSize : +usual(a.seen, i => i.packSize ? +i.packSize : null) || null;
+    const kept = ALWAYS_IN.has(a.item) ||
+                 (!NOT_KEPT.has(a.item) && (fix.staple ?? a.seen.some(i => i.staple === true || i.staple === "true")));
+    const unit = fix.unit || a.unit;
+    const weighed = unit === "g" || unit === "ml";
+    const g = weighed ? Math.round(a.grams) : Math.round(a.grams * 100) / 100;
+    if (g <= 0) return;
+
     let qty;
-    const cu = (a.unit === "g") ? COUNT_UNIT[a.item] : null;
+    const cu = weighed ? COUNT_UNIT[a.item] : null;
+    const dp = drainedPacks(a.item, packSize, g);
     if (cu){
-      const n = Math.ceil(g / cu.each);
-      qty = n + " " + (n === 1 ? cu.one : cu.many) +
-            " \u00b7 about " + g + "g" + (cu.note ? " " + cu.note : "");
+      const n = packsFor(g, cu.each);
+      qty = n + " " + (n === 1 ? cu.one : cu.many) + " · about " + g + "g" + (cu.note ? ", " + cu.note : "");
       if (cu.perPack){
         const packs = Math.ceil(n / cu.perPack);
-        qty += " \u00b7 " + packs + " pack" + (packs > 1 ? "s" : "") + " of " + cu.perPack;
+        qty += " · " + packs + " pack" + (packs > 1 ? "s" : "") + " of " + cu.perPack;
       }
-    } else if (a.packSize){
-      /* A 400g tin of beans is 400g of tin-and-liquid and about 235g of beans. Every recipe
-         here specifies them drained, so the number of tins has to come off the DRAINED yield
-         or the list buys too few - Jon ran short of butter beans on 21 September doing exactly
-         this. Yields live in recipes.json so there is one place to correct them. */
-      const drained = (DATA.drainedYields || {})[a.item];
-      const per = drained || a.packSize;
-      const packs = Math.ceil(g / per);
-      qty = packs + " × " + a.packSize + a.unit;
-      if (drained) qty += " · need " + g + a.unit + " drained";
-      else if (packs * a.packSize > g) qty += " · need " + g + a.unit;
-    } else qty = g + a.unit;
+    } else if (!weighed){
+      const n = Math.ceil(g - 0.01), w = COUNT_WORDS[unit] || [unit, unit + "s"];
+      qty = n + " " + (n === 1 ? w[0] : w[1]);
+    } else if (dp){
+      qty = dp + " · need " + g + unit + " drained";
+    } else if (packSize){
+      const packs = packsFor(g, packSize);
+      qty = packs + " × " + packSize + unit;
+      if (packs * packSize > g) qty += " · need " + g + unit;
+      if (g < packSize * 0.25) qty += " — small amount, skip if you have some";
+    } else qty = g + unit;
+    if (fix.note) qty += " · " + fix.note(g);
     if (a.assumed) qty += " · estimated";
 
-    /* only small cupboard quantities stay in the check-you-have strip */
-    /* Things kept in stock and counted in bottles or bars - Huel Black - belong in the
-       check-you-have strip however many the week uses. Counting "4 bottles" against a
-       pack of 1 made them "bulk" and put them on the list when the cupboard was full. */
-    /* A drained ingredient is judged against what one tin drains to, not the tin's gross
-       weight: "288g" of black beans sat in the strip looking like a tin's worth when it is
-       two. More than one tin's drained yield goes on the main list with the tin count. */
+    /* The check-you-have strip is for things kept in: always for the always-in items,
+       otherwise only while the week needs less than half a pack (or half a tin's drained
+       weight). At half a pack or more it goes on the list - "check you have 300g of
+       penne" was answered "yes" with a nearly empty bag. */
     const drainedY = (DATA.drainedYields || {})[a.item];
-    const bulk = (a.unit !== "g" && a.unit !== "ml") ? false
-               : drainedY ? g > drainedY
-               : (a.packSize ? g > a.packSize : g > 200);
-    const amount = drainedY ? "1 tin \u00b7 " + g + "g drained"
-                 : (a.unit === "g" || a.unit === "ml") ? g + a.unit
-                 : g + " " + a.unit + (g > 1 ? "s" : "");
-    if (a.staple && a.aisle === "cupboard" && !bulk) staples.push([a.item, amount]);
-    else items.push([names[a.aisle] || "Cupboard", a.item, qty, order.indexOf(a.aisle)]);
+    const unitPack = drainedY || packSize;
+    const small = !weighed ? g <= 2 : (unitPack ? g < unitPack * 0.5 : true);
+    const amount = !weighed ? qty
+                 : drainedY ? g + "g drained"
+                 : g + unit + (fix.note ? " · " + fix.note(g) : "");
+    if (ALWAYS_IN.has(a.item) || (kept && small && (aisle === "cupboard" || !weighed)))
+      staples.push([a.item, amount]);
+    else items.push([names[aisle] || "Cupboard", a.item, qty, order.indexOf(aisle)]);
   });
 
   items.sort((x,y) => (x[3] - y[3]) || x[1].localeCompare(y[1]));
@@ -1765,8 +2045,7 @@ fetch("recipes.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
 
   /* "today" only means something on the week that actually contains today, and the
      week no longer starts on Monday, so find the day by its id rather than by index */
-  const start = new Date(BASE.id + "T00:00:00");
-  const days  = Math.floor((Date.now() - start.getTime()) / 86400000);
+  const days  = dayIndex(BASE.id, new Date());
   const ID    = ["sun","mon","tue","wed","thu","fri","sat"][new Date().getDay()];
   TODAY = (days >= 0 && days < 7) ? WEEK.days.findIndex(x => x.id === ID) : -1;
   current = TODAY < 0 ? 0 : TODAY;
@@ -1776,11 +2055,25 @@ fetch("recipes.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
   const other = (BASE === cur) ? (WEEKS[ci + 1] || WEEKS[ci - 1]) : cur;
   $("#wk").textContent = BASE.label;   /* the range is the identity; it must fit one line */
   document.title = "The week \u00b7 " + BASE.label;
-  $("#flip").textContent = other.label + " →";
-  $("#flip").onclick = () => {
-    try { localStorage.setItem("week-choice", other.id); } catch(e){}
-    location.reload();
-  };
+  if (other){
+    const back = WEEKS.indexOf(other) < WEEKS.indexOf(BASE);
+    $("#flip").textContent = back ? "\u2190 " + other.label : other.label + " \u2192";
+    $("#flip").onclick = () => { chooseWeek(other); location.reload(); };
+  } else $("#flip").hidden = true;
+
+  /* Past the end of the last planned week there is nothing to cook from or shop for.
+     The page used to open quietly on last Saturday as if that were this week. */
+  if (BASE === cur && dayIndex(cur.id, new Date()) >= 7){
+    const next = new Date(cur.id + "T00:00:00");
+    next.setDate(next.getDate() + 7 * Math.floor(dayIndex(cur.id, new Date()) / 7));
+    const end = new Date(next); end.setDate(next.getDate() + 6);
+    const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+    const range = next.getDate() + (next.getMonth() === end.getMonth() ? "" : " " + M[next.getMonth()]) +
+                  "\u2013" + end.getDate() + " " + M[end.getMonth()];
+    $("#day").insertAdjacentHTML("beforebegin",
+      '<p class="note warn stale"><strong>No plan for ' + range + ' yet.</strong> ' +
+      'This is ' + BASE.label + ', which has finished \u2014 don\'t shop from it.</p>');
+  }
   render();
 }).catch(err => {
   /* this used to swallow programming errors as "check your connection" */
