@@ -1645,8 +1645,13 @@ function serveBlock(r, eats){
       : '<b>Share ' + s.share.label + ' by eye in ' + rat.n + ' equal parts</b>: ' + parts + '.') +
       ' To check it on the scales: ' + weights + '.</p>';
   } else if (s.share){
-    /* a whole fillet has moved the split, so equal parts would be wrong: weights only */
-    h += '<p class="note"><b>Share ' + s.share.label + ' by weight</b>: ' + weights + '.</p>';
+    /* A whole fillet has moved the split, so 4:3 parts would be wrong. Percentages of
+       whatever came out of the pan work for any amount cooked and anyone eating; the
+       weights are the full recipe's, as a check. */
+    const tot = who.reduce((a, [k]) => a + s.share[k], 0);
+    const pct = who.map(([k,lab]) => inline(lab) + ' ' + Math.round(s.share[k] / tot * 100) + '%').join(', ');
+    h += '<p class="note"><b>Weigh all of ' + s.share.label + ', then split it ' + pct + '.</b> ' +
+         'At the full recipe that is ' + weights + '.</p>';
   }
   if (s.rows.length){
     h += '<div class="splitwrap"><table class="split"><thead><tr><th>' +

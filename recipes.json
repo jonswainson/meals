@@ -3643,39 +3643,17 @@
       "serve": {
         "rows": [
           {
-            "what": "Tuna in spring water",
+            "what": "Pumpkin seeds",
             "unit": "g",
-            "jon": 145,
-            "cheryl": 109
-          },
-          {
-            "what": "Chickpeas",
-            "unit": "g",
-            "jon": 170,
-            "cheryl": 128
-          },
-          {
-            "what": "Salad leaves",
-            "unit": "g",
-            "jon": 60,
-            "cheryl": 45
-          },
-          {
-            "what": "Cherry tomatoes",
-            "unit": "g",
-            "jon": 80,
-            "cheryl": 60
-          },
-          {
-            "what": "Cucumber",
-            "unit": "g",
-            "jon": 60,
-            "cheryl": 45
+            "jon": 12,
+            "cheryl": 9
           }
         ],
-        "share": null,
-        "adjusted": {},
-        "tub": true
+        "share": {
+          "label": "the salad",
+          "jon": 508,
+          "cheryl": 381
+        }
       }
     },
     {
@@ -4413,39 +4391,23 @@
       "serve": {
         "rows": [
           {
-            "what": "Tuna in spring water",
-            "unit": "g",
-            "jon": 189,
-            "cheryl": 142
-          },
-          {
-            "what": "Butter beans",
-            "unit": "g",
-            "jon": 172,
-            "cheryl": 129
-          },
-          {
-            "what": "Fennel",
-            "unit": "g",
-            "jon": 92,
-            "cheryl": 69
-          },
-          {
             "what": "Cherry tomatoes",
             "unit": "g",
             "jon": 115,
             "cheryl": 86
           },
           {
-            "what": "Red onions",
+            "what": "Pumpkin seeds",
             "unit": "g",
-            "jon": 29,
-            "cheryl": 21
+            "jon": 9,
+            "cheryl": 7
           }
         ],
-        "share": null,
-        "adjusted": {},
-        "tub": true
+        "share": {
+          "label": "the bean, fennel and tuna salad",
+          "jon": 460,
+          "cheryl": 345
+        }
       }
     },
     {
@@ -4665,28 +4627,16 @@
             "cheryl": 49
           },
           {
-            "what": "Plain Skyr",
+            "what": "Sauce (Skyr and Dijon)",
             "unit": "g",
-            "jon": 50,
-            "cheryl": 38
+            "jon": 56,
+            "cheryl": 42
           },
           {
-            "what": "Red cabbage",
+            "what": "Slaw",
             "unit": "g",
-            "jon": 80,
-            "cheryl": 60
-          },
-          {
-            "what": "Carrots",
-            "unit": "g",
-            "jon": 40,
-            "cheryl": 30
-          },
-          {
-            "what": "Red onions",
-            "unit": "g",
-            "jon": 20,
-            "cheryl": 15
+            "jon": 157,
+            "cheryl": 118
           },
           {
             "what": "Rocket or watercress",
@@ -4924,10 +4874,10 @@
             "cheryl": 86
           },
           {
-            "what": "Plain Skyr",
+            "what": "Dip (whipped Skyr)",
             "unit": "g",
-            "jon": 120,
-            "cheryl": 90
+            "jon": 142,
+            "cheryl": 107
           },
           {
             "what": "Rye crispbread",
@@ -6138,20 +6088,6 @@
             "daughter": 1
           },
           {
-            "what": "Crushed potatoes",
-            "unit": "g",
-            "jon": 241,
-            "cheryl": 140,
-            "daughter": 124
-          },
-          {
-            "what": "Peas",
-            "unit": "g",
-            "jon": 159,
-            "cheryl": 119,
-            "daughter": 106
-          },
-          {
             "what": "Tenderstem",
             "unit": "g",
             "jon": 43,
@@ -6159,11 +6095,16 @@
             "daughter": 29
           }
         ],
-        "share": null,
+        "share": {
+          "label": "the pea and potato crush",
+          "jon": 413,
+          "cheryl": 269,
+          "daughter": 239
+        },
         "adjusted": {
           "jon": -45
         },
-        "adjustSide": "crushed potatoes"
+        "adjustSide": "the pea and potato crush"
       }
     },
     {
@@ -6878,20 +6819,6 @@
             "daughter": 141
           },
           {
-            "what": "Potatoes, cooked",
-            "unit": "g",
-            "jon": 174,
-            "cheryl": 130,
-            "daughter": 128
-          },
-          {
-            "what": "Peas",
-            "unit": "g",
-            "jon": 114,
-            "cheryl": 85,
-            "daughter": 84
-          },
-          {
             "what": "Hispi cabbage",
             "unit": "g",
             "jon": 157,
@@ -6899,14 +6826,19 @@
             "daughter": 116
           },
           {
-            "what": "Plain Skyr",
+            "what": "Skyr sauce",
             "unit": "g",
             "jon": 53,
             "cheryl": 40,
             "daughter": 39
           }
         ],
-        "share": null
+        "share": {
+          "label": "the pea and potato crush",
+          "jon": 311,
+          "cheryl": 233,
+          "daughter": 230
+        }
       }
     },
     {
@@ -7420,7 +7352,7 @@
             "daughter": 4
           },
           {
-            "what": "Plain Skyr",
+            "what": "Skyr sauce",
             "unit": "g",
             "jon": 87,
             "cheryl": 65,
@@ -7814,51 +7746,17 @@
       "serve": {
         "rows": [
           {
-            "what": "Prawns, cooked",
-            "unit": "g",
-            "jon": 157,
-            "cheryl": 118
-          },
-          {
-            "what": "Butter beans",
-            "unit": "g",
-            "jon": 134,
-            "cheryl": 101
-          },
-          {
-            "what": "Plain Skyr",
-            "unit": "g",
-            "jon": 103,
-            "cheryl": 77
-          },
-          {
-            "what": "Cherry tomatoes",
-            "unit": "g",
-            "jon": 46,
-            "cheryl": 34
-          },
-          {
-            "what": "Salad leaves",
-            "unit": "g",
-            "jon": 34,
-            "cheryl": 26
-          },
-          {
-            "what": "Cucumber",
-            "unit": "g",
-            "jon": 23,
-            "cheryl": 17
-          },
-          {
             "what": "Flaked almonds",
             "unit": "g",
             "jon": 14,
             "cheryl": 10
           }
         ],
-        "share": null,
-        "adjusted": {},
-        "tub": true
+        "share": {
+          "label": "the salad",
+          "jon": 502,
+          "cheryl": 377
+        }
       }
     },
     {

@@ -73,7 +73,7 @@ CFG = {
     "beef-kofta-bulgur-skyr": dict(label="the sauce",
         count={"Beef mince, 5%": (50, "kofta", "kofta")},
         apart=["Bulgur wheat, dry"], potitems=["Passata", "Red peppers", "Spinach"],
-        within=["Onions"],
+        within=["Onions"], names={"Plain Skyr": "Skyr sauce"},
         adjust="Bulgur wheat, dry"),
     "chicken-fajitas": dict(label="the chicken and peppers",
         potitems=["Chicken breast, raw", "Red and yellow peppers", "Onions"],
@@ -93,22 +93,31 @@ CFG = {
         count={"Chicken breast, raw": (200, "breast", "breasts")},
         potitems=["New potatoes", "Peppers", "Red onions", "Butter beans", "Tenderstem broccoli"],
         adjust="pot"),
-    "crumbed-cod-crushed-potato": dict(
+    # the peas are crushed into the potatoes: one crush, shared, never two rows
+    "crumbed-cod-crushed-potato": dict(label="the pea and potato crush",
         count={"Haddock loins, unsmoked": (190, "loin", "loins")},
-        adjust="New potatoes"),
-    "piri-piri-chicken-crushed-potato": dict(),
+        potitems=["New potatoes", "Frozen peas"], adjust="pot",
+        onitems=["Wholemeal breadcrumbs", "Parmesan", "Dijon mustard", "Parsley"]),
+    "piri-piri-chicken-crushed-potato": dict(label="the pea and potato crush",
+        potitems=["Potatoes", "Frozen peas"], names={"Plain Skyr": "Skyr sauce"}),
     "crispy-duck-lentils-red-cabbage": dict(manual=[("Duck, carved", 200), ("Puy lentils, cooked", 145),
                                                     ("Red cabbage", 106), ("Tenderstem", 109)]),
     "convenience-fallback": dict(asis=True),
     "honey-glazed-chicken-wedges": dict(),
 
     # cold tubs and plates, assembled not cooked together
-    "tuna-chickpea-salad": dict(tub=True),
-    "tuna-butter-bean-fennel-tub": dict(tub=True),
+    # mixed in one bowl: one salad, shared; only what goes on top is its own row
+    "tuna-chickpea-salad": dict(pot="all", label="the salad", keep=["Pumpkin seeds"]),
+    "tuna-butter-bean-fennel-tub": dict(pot="all", label="the bean, fennel and tuna salad",
+        keep=["Cherry tomatoes", "Pumpkin seeds"]),
     "chicken-butter-bean-tub": dict(tub=True),
-    "prawn-butter-bean-salad": dict(tub=True, drop=["Lemons", "Olive oil"]),
-    "dip-box": dict(tub=True, cookedahead=["Chicken breast, raw"]),
-    "pitta-poached-chicken-slaw": dict(tub=True, cookedahead=["Chicken breast, raw"]),
+    "prawn-butter-bean-salad": dict(pot="all", label="the salad", keep=["Flaked almonds"]),
+    "dip-box": dict(tub=True, cookedahead=["Chicken breast, raw"],
+        groups={"Dip (whipped Skyr)": ["Plain Skyr", "Olive oil", "Lemon juice", "Garlic", "Dill",
+                                       "Salt, weighed", "Black pepper"]}),
+    "pitta-poached-chicken-slaw": dict(tub=True, cookedahead=["Chicken breast, raw"],
+        groups={"Sauce (Skyr and Dijon)": ["Plain Skyr", "Dijon mustard", "Black pepper"],
+                "Slaw": ["Red cabbage", "Carrots", "Red onions", "Cider vinegar", "Sugar"]}),
 }
 
 # what a raw ingredient is called once it is on the plate
@@ -162,8 +171,14 @@ def build(r, cfg):
         return out
 
     if cfg.get("tub"):
+        grouped = {i for items in (cfg.get("groups") or {}).values() for i in items}
+        rows = []
+        for label, items in (cfg.get("groups") or {}).items():
+            row = {"what": label, "unit": "g"}
+            for w in eaters: row[w] = r1(sum(raw(i, w) for i in items if i in ing))
+            rows.append(row)
         for c in ps.get("components") or []:
-            if c["item"] in cfg.get("drop", []): continue
+            if c["item"] in cfg.get("drop", []) or c["item"] in grouped: continue
             ck = c["item"] in cfg.get("cookedahead", [])
             already = "cooked weight" in (c.get("note") or "")
             row = {"what": served_name(c["item"]) if ck else
@@ -171,9 +186,21 @@ def build(r, cfg):
             if c.get("note") and not already: row["note"] = c["note"]
             for w in eaters:
                 if c.get(w) is not None: row[w] = r1(c[w] * (yld(c["item"]) if ck else 1))
-            out["rows"].append(row)
+            rows.append(row)
+        # groups sit where their first part was in the list
+        out["rows"] = rows[len(cfg.get("groups") or {}):]
+        for g in rows[:len(cfg.get("groups") or {})]:
+            first = next(i for i in cfg["groups"][g["what"]] if i in comps or i in ing)
+            out["rows"].insert(min(len(out["rows"]), list(comps).index(first) if first in comps else len(out["rows"])), g)
         out["tub"] = True
         return out
+
+    # on top, not mixed in: a row of its own, as it goes on
+    for item in cfg.get("keep", []):
+        if item not in ing: continue
+        row = {"what": served_name(item), "unit": "g"}
+        for w in eaters: row[w] = r1(raw(item, w))
+        out["rows"].append(row)
 
     # cooked apart: weighed cooked
     for item in cfg.get("apart", []):
@@ -215,6 +242,9 @@ def build(r, cfg):
                     # the planned share, not the whole counted thing: the count's
                     # rounding is settled in kcal below, not taken out of the pot
                     rest -= raw(row["item"], w) * yld(row["item"])
+            # what sits on a counted thing (the crumb on a loin) is not part of the pot
+            for item in cfg.get("onitems", []):
+                rest -= raw(item, w) * yld(item)
             sp[w] = max(0, r1(rest))
         if cfg.get("cut"): sp["cut"] = True
         out["share"] = sp
@@ -240,6 +270,9 @@ def build(r, cfg):
                 row[w] = max(0, r1(row[w] + delta))
         out["adjusted"][w] = r1(drift)
     if not out["adjusted"]: del out["adjusted"]
+    for row in out["rows"]:
+        for item, name in (cfg.get("names") or {}).items():
+            if row["what"] == served_name(item): row["what"] = name
     if cfg.get("note"): out["note"] = cfg["note"]
     if cfg.get("adjust") and out.get("adjusted"):
         out["adjustSide"] = (out["share"]["label"] if cfg["adjust"] == "pot"
