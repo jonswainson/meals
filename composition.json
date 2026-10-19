@@ -3838,6 +3838,51 @@
       "usedIn": [
         "bolognese-hidden-lentils"
       ]
+    },
+    "Black pepper": {
+      "per": "100g",
+      "fat": 3.3,
+      "carbs": 38.7,
+      "source": "USDA FoodData Central SR Legacy — Spices, pepper, black",
+      "confidence": "medium",
+      "state": "raw/dry",
+      "cookedYield": 1.0,
+      "inRecipesJson": true,
+      "kcal": 251,
+      "protein": 10.4,
+      "fibre": 25.3,
+      "salt": 0.05,
+      "note": "Ground to taste; costed at about 1g a dish."
+    },
+    "White pepper": {
+      "per": "100g",
+      "fat": 2.1,
+      "carbs": 42.4,
+      "source": "USDA FoodData Central SR Legacy — Spices, pepper, white",
+      "confidence": "medium",
+      "state": "raw/dry",
+      "cookedYield": 1.0,
+      "inRecipesJson": true,
+      "kcal": 296,
+      "protein": 10.4,
+      "fibre": 26.2,
+      "salt": 0.01,
+      "note": "A pinch, costed at about 0.5g."
+    },
+    "Chilli oil": {
+      "per": "100ml",
+      "fat": 100,
+      "carbs": 0,
+      "source": "As rapeseed oil; the chilli is negligible",
+      "confidence": "medium",
+      "state": "raw/dry",
+      "cookedYield": 1.0,
+      "inRecipesJson": true,
+      "kcal": 884,
+      "fibre": 0,
+      "protein": 0,
+      "salt": 0,
+      "note": "Optional, at the table."
     }
   },
   "labelSourced": "Where Jon has photographed the pack, the pack wins and confidence is high. Generic CoFID entries are a starting point, not the product in the fridge - both items corrected on 20 September moved by more than 30% on at least one figure."

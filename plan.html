@@ -626,14 +626,17 @@ FIXED["bacon-cottage"].mix = [["Back bacon",75,"g",{each:25,one:"rasher",many:"r
   ["High-protein wrap",61,"g",{each:61,one:"wrap",many:"wraps"}],
   ["Mushrooms",70],["Tomatoes",70]];
 FIXED["gingerbread"].mix = [["Reduced-fat milk",250,"ml"],["Vanilla protein powder",44],
-  ["Rolled oats",30],["Maple syrup",5],["Whole roasted almonds",18]];
+  ["Rolled oats",30],["Maple syrup",5],["Whole roasted almonds",18],
+  ["Ground cinnamon","1 tsp"],["Ground nutmeg","\u00bd tsp"],["Ground ginger","\u00bd tsp"],["Ice cubes","4\u20135"],["Water","a splash, if thick"]];
 FIXED["pb-banana-oats"].mix = [["Rolled oats",40],["Semi-skimmed milk",250,"ml"],
   ["Whey protein powder",45],["Banana \u2014 weighed, peeled, mashed",60],
   ["Blueberries, for the jam",40],["Crunchy peanut butter",15],["Walnuts, chopped",10],
-  ["Honey",7]];
+  ["Honey",7],
+  ["Ground cinnamon","1 tsp"],["Water","a splash, and 1 tsp for the jam"]];
 FIXED["cherry-berry"].mix = [["Frozen cherries, pitted",75],["Frozen raspberries",75],
   ["Vanilla protein powder",40],["Whey",5],["Rolled oats",27],["Cocoa powder",5],
-  ["Reduced-fat milk",250,"ml"]];
+  ["Reduced-fat milk",250,"ml"],
+  ["Ice cubes","4\u20135"],["Water","a splash, if thick"]];
 FIXED["almond-blueberry"].mix = [["Plain Skyr",200],["Reduced-fat milk",100,"ml"],
   ["Whey protein powder",25],["Rolled oats",15],["Banana, frozen \u2014 weighed, peeled",60],
   ["Frozen blueberries",80],["Whole almonds",8],["Chia seeds",10]];
@@ -1514,18 +1517,23 @@ function mealCard(d, slot){
 
     /* the list has to be what THIS cook needs, not what the recipe's base batch needs */
     const sc = m.portions / r.basePortions;
-    const amt = g => { const v = g * sc; return v >= 10 ? Math.round(v) : Math.round(v*10)/10; };
+    const amt = g => wholeGrams(g * sc);
     h += '<h3 class="rh">Ingredients</h3>' +
       '<ul class="ing"><li>' +
       r.ingredients.map(i => { const dp = drainedPacks(i.item, i.packSize, i.grams * sc);
-        return i.item + ' — ' + amt(i.grams) + (i.packUnit === "ml" ? "ml" : "g") +
-        state(i) + (dp ? ' (' + dp + ')' : '') + (i.note ? ', ' + i.note : '') +
+        const ms = i.amount || measure(i.item, i.grams * sc);
+        const note = ms ? dropMeasureNote(i.note) : i.note;
+        return i.item.replace(", weighed", "") + ' — ' +
+        (ms || amt(i.grams) + (i.packUnit === "ml" ? "ml" : "g")) +
+        (ms ? "" : state(i)) + (dp ? ' (' + dp + ')' : '') + (note ? ', ' + note : '') +
         (i.assumed ? ' <i>· quantity estimated</i>' : ''); }).join('</li><li>') + '</li></ul>';
     if ((r.method||[]).length){
       /* {{n}} marks a quantity that belongs to this batch. Day totals, per-100g rates and
          per-portion figures are left as bare numbers and never scale. */
       const meth = r.method.map(t =>
-        t.replace(/\{\{([\d.]+)\}\}/g, (_, v) => amt(parseFloat(v))));
+        t.replace(/\{\{([\d.]+)\}\}(g|ml)?((?:\s+of)?[^.{]{0,40})/g,
+          (_, v, unit, rest) => unit ? methodAmount(parseFloat(v) * sc, unit, rest) + rest
+                                     : amt(parseFloat(v)) + (rest || "")));
       h += '<h3 class="rh">Method</h3><ol class="ing"><li>' + meth.join('</li><li>') + '</li></ol>';
     }
     (r.tips||[]).forEach(t => {
@@ -1545,7 +1553,9 @@ function fixedRecipe(f, shares){
   let h = "";
   if (f.mix){
     const n = shares || 1, c = n - 1;
-    const q = (v, unit) => (v >= 10 ? Math.round(v) : Math.round(v*10)/10) + (unit || 'g');
+    const q = (v, unit) => wholeGrams(v) + (unit || 'g');
+    /* a row whose amount is words ("1 tsp", "4–5") is for the pan, not each person */
+    const qm = (item, v, unit) => measure(item, v) || q(v, unit);
     /* a count that scales with the weight, so three rashers does not stay three rashers
        when the pan is feeding two people */
     const qc = (v, unit, cnt) => {
@@ -1567,9 +1577,11 @@ function fixedRecipe(f, shares){
            '<div class="ratio"><b>4 : 3</b><span>jon &middot; cheryl</span></div>' +
            '<div class="splitwrap"><table class="split"><thead><tr><th></th><th>Jon</th>' +
            '<th>Cheryl</th><th>In the pan</th></tr></thead><tbody>' +
-        f.mix.map(([item, g, unit, cnt]) =>
-          '<tr><td>' + item + '</td><td><b>' + qc(g, unit, cnt) + '</b></td><td>' +
-          qc(g * c, unit, cnt) + '</td><td>' + qc(g * n, unit, cnt) + '</td></tr>').join('') +
+        f.mix.map(([item, g, unit, cnt]) => typeof g === "string"
+          ? '<tr><td>' + item + '</td><td></td><td></td><td>' + g + '</td></tr>'
+          : '<tr><td>' + item + '</td><td><b>' + (cnt ? qc(g, unit, cnt) : qm(item, g, unit)) + '</b></td><td>' +
+            (cnt ? qc(g * c, unit, cnt) : qm(item, g * c, unit)) + '</td><td>' +
+            (cnt ? qc(g * n, unit, cnt) : qm(item, g * n, unit)) + '</td></tr>').join('') +
         '</tbody></table></div>' +
         '<p class="note"><b>Jon\'s column is one portion \u2014 that is the recipe.</b> The last ' +
         'column is the two of them together, which is what goes in the pan and what the shopping ' +
@@ -1579,7 +1591,8 @@ function fixedRecipe(f, shares){
         'not a real rasher. Round in Jon\'s favour on his plate and keep the pan honest.</p>';
     } else
       h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' +
-        f.mix.map(([item, g, unit, cnt]) => item + ' \u2014 ' + qc(g, unit, cnt)).join('</li><li>') +
+        f.mix.map(([item, g, unit, cnt]) => item + ' \u2014 ' +
+          (typeof g === "string" ? g : cnt ? qc(g, unit, cnt) : qm(item, g, unit))).join('</li><li>') +
         '</li></ul>';
   } else if (r.ing && r.ing.length)
     h += '<h3 class="rh">Ingredients</h3><ul class="ing"><li>' + r.ing.join('</li><li>') + '</li></ul>';
@@ -1719,6 +1732,65 @@ function drainedPacks(item, packSize, g){
   if (!y || !packSize) return null;
   const n = Math.ceil(Math.ceil(g) / y), word = /jar/i.test(item) ? "jar" : "tin";
   return n + " × " + packSize + "g " + word + (n > 1 ? "s" : "");
+}
+
+/* ---------- how much, as the cook measures it ---------- */
+/* Over a hot pan nobody weighs 1.8g of cinnamon, and the kitchen scales read whole
+   grams only (Jon, 19 October). So small amounts are spoons, worked out from the
+   grams so they still scale with the portions; a few things are counted; everything
+   else is a whole number of grams. The grams stay in the data for costing and for
+   the shopping list. */
+/* grams (or ml) in one level teaspoon */
+const SPOON = {
+  "Ground cumin":2, "Smoked paprika":2.3, "Ground cinnamon":2.6, "Cinnamon":2.6, "Ground coriander":2,
+  "Turmeric":3, "Mild curry powder":2.5, "Ras el hanout":2.5, "Ground ginger":1.8, "Ground nutmeg":2.2,
+  "Garlic powder":3, "Chilli flakes":1.5, "Dried oregano":1, "Black pepper":2.3, "White pepper":2.3,
+  "Salt, weighed":6, "Coarse salt, for the skins":5, "Sugar":4, "Honey":7, "Maple syrup":5,
+  "Olive oil":5, "Rapeseed oil":5, "Toasted sesame oil":5, "Chilli oil":5,
+  "Reduced-salt soy sauce":5, "Fish sauce":5, "Worcestershire sauce":5,
+  "Red wine vinegar":5, "Cider vinegar":5, "Sherry vinegar":5, "Lemon juice":5,
+  "Tomato puree":5, "Dijon mustard":5, "Light mayonnaise":5, "Red curry paste":5, "Harissa":5,
+  "Capers":4, "Garlic":5, "Chia seeds":4, "Cocoa powder":2.5, "Butter":5, "Sesame seeds":3,
+  "Crunchy peanut butter":5, "Dukkah":2.5, "Water":5
+};
+/* counted, not weighed: grams each, one, many */
+const SHOWN_COUNT = {
+  "Bay leaf":[0.5,"bay leaf","bay leaves"], "Thyme":[1,"sprig","sprigs"],
+  "Anchovy fillets in oil":[4,"fillet","fillets"], "Red chilli":[15,"chilli","chillies"],
+  "Limes":[65,"lime","limes"], "Lemons":[65,"lemon","lemons"]
+};
+const FRAC = {0.25:"¼", 0.5:"½", 0.75:"¾"};
+const frac = v => { const w = Math.floor(v + 1e-9), f = Math.round((v - w) * 4) / 4;
+  return f >= 1 ? String(w + 1) : (w ? String(w) : "") + (FRAC[f] || "") || "0"; };
+function spoonText(tsp){
+  if (tsp < 0.2) return "a pinch";
+  if (tsp < 2.75) return frac(Math.max(0.25, Math.round(tsp * 4) / 4)) + " tsp";
+  return frac(Math.round(tsp / 3 * 4) / 4) + " tbsp";
+}
+/* the measure for `g` of `item`, or null when grams are the right answer:
+   no spoon for it, or more than three tablespoons */
+function measure(item, g){
+  if (item === "Spray oil") return "a light spray";
+  if (item === "Lemon zest"){ const n = Math.max(0.5, Math.round(g / 3 * 2) / 2);
+    return "zest of " + frac(n) + " lemon" + (n > 1 ? "s" : ""); }
+  const c = SHOWN_COUNT[item];
+  if (c){ const n = Math.max(0.5, Math.round(g / c[0] * 2) / 2);
+    return frac(n) + " " + (n > 1 ? c[2] : c[1]); }
+  const per = SPOON[item];
+  if (!per || g / per > 9.5) return null;
+  return spoonText(g / per);
+}
+const wholeGrams = v => Math.max(1, Math.round(v));
+/* a spoon or count in a note now duplicates (and, scaled, contradicts) the measure */
+const dropMeasureNote = n => String(n || "").replace(
+  /^(about |scant |a scant )?[\d.½¼¾⅓]+\s*(tsp|tbsp|cloves?|leaves|lemons?|limes?|sprigs?)\b[\s,;—–-]*/i, "");
+/* the method's scaled amounts of things you pour or sprinkle: "the {{2}}g of salt" */
+const METHOD_SPOON = [[/salt/, "Salt, weighed"], [/sugar/, "Sugar"], [/fish sauce/, "Fish sauce"],
+  [/soy/, "Reduced-salt soy sauce"], [/curry paste/, "Red curry paste"], [/\boil\b/, "Olive oil"]];
+function methodAmount(v, unit, rest){
+  const hit = METHOD_SPOON.find(([re]) => re.test(rest.slice(0, 30)));
+  const m = hit && (unit === "g" || unit === "ml") ? measure(hit[1], v) : null;
+  return m ? m : wholeGrams(v) + unit;
 }
 
 function state(i){
