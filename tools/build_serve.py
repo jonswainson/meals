@@ -141,7 +141,7 @@ CFG = {
     "cheeseburger-potato-bowls": dict(label="the beef and cheese",
         potitems=["Beef mince, 5%", "Reduced-fat cheddar"], names={"Potatoes": "Crispy potatoes"},
         groups={"Burger sauce": ["Greek yoghurt, 0% fat", "Tomato ketchup", "American mustard"],
-                "Pickles and red onion": ["Dill pickles", "Red onions"]}),
+                "Tomato, pickles and red onion": ["Tomatoes", "Dill pickles", "Red onions"]}),
     "creamy-steak-mushroom-pasta": dict(label="the creamy tagliatelle",
         potitems=["Wholewheat tagliatelle, dry", "Mushrooms"], names={"Sirloin steak": "Steak, sliced"}),
     "hot-honey-chicken-parmesan-potatoes": dict(label="the hot honey chicken",

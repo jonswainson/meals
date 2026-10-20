@@ -12862,6 +12862,15 @@
           "note": "grated"
         },
         {
+          "item": "Tomatoes",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "about 2, diced"
+        },
+        {
           "item": "Red onions",
           "grams": 55,
           "aisle": "fresh",
@@ -12882,42 +12891,42 @@
       ],
       "plates": {
         "jon": {
-          "kcal": 713,
-          "protein": 61.6,
-          "fibre": 7.1,
-          "salt": 2.3,
-          "plateGrams": 506
+          "kcal": 724,
+          "protein": 62.0,
+          "fibre": 7.7,
+          "salt": 2.32,
+          "plateGrams": 554
         },
         "cheryl": {
-          "kcal": 535,
-          "protein": 46.2,
-          "fibre": 5.3,
-          "salt": 1.73,
-          "plateGrams": 380
+          "kcal": 543,
+          "protein": 46.5,
+          "fibre": 5.8,
+          "salt": 1.74,
+          "plateGrams": 416
         },
         "daughter": {
-          "plateGrams": 380,
+          "plateGrams": 416,
           "portionedBy": "composition"
         }
       },
       "leftover": {
         "leavesLunch": true,
         "quality": "good",
-        "note": "Keep the sauce, onion and pickles apart if saving any.",
+        "note": "Keep the sauce, tomato, onion and pickles apart if saving any.",
         "portions": {
           "jon": {
-            "grams": 341,
+            "grams": 367,
             "kcal": 480,
-            "protein": 41.5,
-            "fibre": 4.8,
-            "salt": 1.55,
+            "protein": 41.1,
+            "fibre": 5.1,
+            "salt": 1.54,
             "source": "derived"
           },
           "cheryl": {
-            "grams": 256,
+            "grams": 275,
             "kcal": 360,
-            "protein": 31.1,
-            "fibre": 3.6,
+            "protein": 30.8,
+            "fibre": 3.8,
             "salt": 1.16,
             "source": "derived"
           }
@@ -12928,15 +12937,15 @@
         "Large frying pan over medium-high heat. Mince in for 6–8 minutes until browned and cooked through, seasoned with the garlic powder, the rest of the salt and black pepper.",
         "Burger sauce: the yoghurt, ketchup and mustard mixed.",
         "Crispy potatoes into bowls, the beef on top and the cheddar over it, left to melt.",
-        "Red onion and pickles on top, and the burger sauce over generously."
+        "Tomato, red onion and pickles on top, and the burger sauce over generously."
       ],
       "plateSplit": {
         "servedByWeight": false,
         "source": "ratio",
         "grams": {
-          "jon": 506,
-          "cheryl": 380,
-          "daughter": 380
+          "jon": 554,
+          "cheryl": 416,
+          "daughter": 416
         },
         "components": [
           {
@@ -12963,11 +12972,11 @@
             "daughter": 41
           },
           {
-            "what": "Pickles and red onion",
+            "what": "Tomato, pickles and red onion",
             "unit": "g",
-            "jon": 44,
-            "cheryl": 33,
-            "daughter": 33
+            "jon": 92,
+            "cheryl": 69,
+            "daughter": 69
           },
           {
             "what": "Crispy potatoes",
