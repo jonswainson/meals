@@ -4407,6 +4407,21 @@
       "fibre": 0.2,
       "salt": 0.7,
       "source": "Light soft cheese, UK label average"
+    },
+    "Wholewheat tagliatelle, dry": {
+      "per": "100g",
+      "kcal": 348,
+      "protein": 13.4,
+      "fat": 2.5,
+      "carbs": 64.0,
+      "fibre": 9.0,
+      "salt": 0.01,
+      "cookedYield": 2.6,
+      "state": "raw/dry",
+      "inRecipesJson": true,
+      "confidence": "medium",
+      "source": "Wholewheat pasta, dry — UK pack average",
+      "note": "DRY weight."
     }
   },
   "labelSourced": "Where Jon has photographed the pack, the pack wins and confidence is high. Generic CoFID entries are a starting point, not the product in the fridge - both items corrected on 20 September moved by more than 30% on at least one figure."
