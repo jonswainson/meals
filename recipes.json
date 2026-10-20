@@ -13220,6 +13220,237 @@
           "daughter": 285
         }
       }
+    },
+    {
+      "id": "korean-beef-udon",
+      "name": "Korean spicy beef udon with pak choi",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 20,
+      "handsOnMinutes": 20,
+      "tags": [
+        "quick",
+        "beef",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Beef mince, 5%",
+          "grams": 600.0,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Garlic",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Ginger",
+          "grams": 8,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "grated"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Gochujang",
+          "grams": 40.0,
+          "aisle": "cupboard",
+          "packSize": 170,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Reduced-salt soy sauce",
+          "grams": 10.0,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Toasted sesame oil",
+          "grams": 5,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Water",
+          "grams": 60,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Udon noodles, straight to wok",
+          "grams": 450.0,
+          "aisle": "cupboard",
+          "packSize": 300,
+          "packUnit": "g",
+          "staple": false,
+          "note": "150g pouches, ready to eat"
+        },
+        {
+          "item": "Choy sum, pak choi or tenderstem",
+          "grams": 250,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "pak choi, sliced"
+        },
+        {
+          "item": "Spinach",
+          "grams": 200,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Spring onions",
+          "grams": 40,
+          "aisle": "fresh",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced"
+        },
+        {
+          "item": "Sesame seeds",
+          "grams": 6,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Red chilli",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced, optional, for the top"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 706,
+          "protein": 64.3,
+          "fibre": 6.6,
+          "salt": 3.03,
+          "plateGrams": 504
+        },
+        "cheryl": {
+          "kcal": 529,
+          "protein": 48.2,
+          "fibre": 4.9,
+          "salt": 2.28,
+          "plateGrams": 378
+        },
+        "daughter": {
+          "plateGrams": 378,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats with a splash of water to loosen the noodles.",
+        "portions": {
+          "jon": {
+            "grams": 343,
+            "kcal": 480,
+            "protein": 43.7,
+            "fibre": 4.5,
+            "salt": 2.06,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 257,
+            "kcal": 360,
+            "protein": 32.8,
+            "fibre": 3.4,
+            "salt": 1.54,
+            "source": "derived"
+          }
+        }
+      },
+      "tips": [
+        {
+          "tone": "hot",
+          "text": "Salty: about 3g on Jon's plate, from the gochujang, soy and udon. Add no salt, and have it on a low-salt day."
+        },
+        {
+          "tone": "plain",
+          "text": "Leave the chilli off any bowl that wants it milder."
+        },
+        {
+          "tone": "plain",
+          "text": "Udon pouches usually come in twos: the spare keeps in the cupboard for next time."
+        }
+      ],
+      "method": [
+        "Gochujang, soy sauce, sesame oil and water mixed into a sauce.",
+        "Large frying pan or wok over medium-high heat. Mince in for 6–7 minutes, broken up, until browned. Garlic, ginger and black pepper in for the last minute.",
+        "Pak choi in for 2 minutes, then the sauce, simmered for 2 minutes.",
+        "Udon in straight from the pouches, loosened with a fork, and the spinach on top. Tossed for 2–3 minutes until the noodles are hot, the spinach has wilted and everything is coated.",
+        "Into bowls, topped with the spring onions, sesame seeds and sliced chilli for anyone who wants it."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 504,
+          "cheryl": 378,
+          "daughter": 378
+        },
+        "components": [
+          {
+            "item": "Beef mince, 5%",
+            "jon": 240,
+            "cheryl": 180,
+            "daughter": 180
+          },
+          {
+            "item": "Udon noodles, straight to wok",
+            "jon": 180,
+            "cheryl": 135,
+            "daughter": 135
+          }
+        ]
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the beef noodles",
+          "jon": 504,
+          "cheryl": 378,
+          "daughter": 378
+        }
+      }
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",

@@ -142,6 +142,7 @@ CFG = {
         potitems=["Beef mince, 5%", "Reduced-fat cheddar"], names={"Potatoes": "Crispy potatoes"},
         groups={"Burger sauce": ["Greek yoghurt, 0% fat", "Tomato ketchup", "American mustard"],
                 "Tomato, pickles and red onion": ["Tomatoes", "Dill pickles", "Red onions"]}),
+    "korean-beef-udon": dict(pot="all", label="the beef noodles"),
     "creamy-steak-mushroom-pasta": dict(label="the creamy tagliatelle",
         potitems=["Wholewheat tagliatelle, dry", "Mushrooms"], names={"Sirloin steak": "Steak, sliced"}),
     "hot-honey-chicken-parmesan-potatoes": dict(label="the hot honey chicken",

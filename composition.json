@@ -4422,6 +4422,35 @@
       "confidence": "medium",
       "source": "Wholewheat pasta, dry — UK pack average",
       "note": "DRY weight."
+    },
+    "Udon noodles, straight to wok": {
+      "per": "100g",
+      "kcal": 144,
+      "protein": 3.8,
+      "fat": 0.5,
+      "carbs": 29.6,
+      "fibre": 1.2,
+      "salt": 0.45,
+      "cookedYield": 1.0,
+      "state": "ready to eat",
+      "inRecipesJson": true,
+      "confidence": "medium",
+      "source": "Straight-to-wok udon, UK pouch average",
+      "note": "Ready-cooked 150g pouches; weight as packed."
+    },
+    "Gochujang": {
+      "per": "100g",
+      "kcal": 220,
+      "protein": 4.5,
+      "fat": 1.5,
+      "carbs": 45.0,
+      "fibre": 2.5,
+      "salt": 7.0,
+      "cookedYield": 1.0,
+      "state": "raw/dry",
+      "inRecipesJson": true,
+      "confidence": "medium",
+      "source": "Gochujang paste, UK retail average (salt varies 5-9g)"
     }
   },
   "labelSourced": "Where Jon has photographed the pack, the pack wins and confidence is high. Generic CoFID entries are a starting point, not the product in the fridge - both items corrected on 20 September moved by more than 30% on at least one figure."
