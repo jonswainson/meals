@@ -151,6 +151,37 @@
   .toast.show{opacity:1;transform:translate(-50%,0)}
   .free{margin:40px 16px;text-align:center;color:var(--muted);font-size:.95rem}
   .free strong{display:block;color:var(--fg);font-size:1.05rem;margin-bottom:8px}
+
+  /* the meal picker: a sheet from the bottom, over the lunch and dinner menus */
+  .pickbtn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    font:inherit;font-size:16px;text-align:left;padding:11px 12px;border:1px solid var(--line);
+    border-radius:8px;background:var(--card);color:var(--fg);cursor:pointer;margin-top:10px}
+  .pickbtn span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .pickbtn b{flex:0 0 auto;font-weight:600;color:var(--accent);font-size:.85rem}
+  .sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:40}
+  .sheet{position:fixed;left:0;right:0;bottom:0;z-index:41;max-width:620px;margin-inline:auto;
+    background:var(--bg);border-radius:16px 16px 0 0;max-height:88vh;display:flex;flex-direction:column;
+    box-shadow:0 -6px 24px rgba(0,0,0,.18);padding-bottom:env(safe-area-inset-bottom)}
+  .sheet-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 6px}
+  .sheet-hd h2{font-size:1.05rem;margin:0}
+  .sheet-x{font:inherit;font-size:1.4rem;line-height:1;background:none;border:none;color:var(--muted);
+    padding:6px 8px;cursor:pointer}
+  .sheet-q{flex:0 0 auto;margin:6px 16px 0;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--line);
+    border-radius:10px;background:var(--card);color:var(--fg)}
+  .chips{display:flex;flex:0 0 auto;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;font:inherit;font-size:.85rem;padding:7px 12px;border-radius:99px;
+    border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+  .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .sheet-list{overflow-y:auto;padding:0 16px 16px;-webkit-overflow-scrolling:touch}
+  .sheet-list h3{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+    margin:14px 0 4px}
+  .opt{display:block;width:100%;text-align:left;font:inherit;background:none;border:none;
+    border-bottom:1px solid var(--line);padding:10px 2px;color:var(--fg);cursor:pointer}
+  .opt.cur{font-weight:600}
+  .opt small{display:block;font-size:.78rem;color:var(--muted);margin-top:2px}
+  .opt.recent{opacity:.5}
+  .sheet-none{color:var(--muted);font-size:.9rem;padding:18px 2px}
 </style>
 </head>
 <body>
@@ -1891,6 +1922,114 @@ function render(){
   el.innerHTML = '<span class="tag">' + d.tags + '</span>' +
     ["breakfast","lunch","afternoon","dinner"].map(s => mealCard(d, s)).join("");
   wire(d);
+  enhancePickers(d);
+}
+
+
+/* ---------- the meal picker ---------- */
+/* Tapping a lunch or dinner opens a sheet with search, filters and the menu in its
+   groups, and anything eaten in the last fortnight greyed (Jon, 21 October). The menu
+   underneath stays and does the work: choosing here sets it and fires its change. */
+const PICK_FILTERS = [["all","All"], ["quick","Quick"], ["slow","Slow cooker"], ["lunch","Makes tomorrow's lunch"],
+                      ["chicken","Chicken"], ["beef","Beef"], ["fish","Fish"], ["turkey","Turkey"]];
+const DAY_IDS = ["sat","sun","mon","tue","wed","thu","fri"];
+function dayDate(weekId, dayId){
+  const t = new Date(weekId + "T00:00:00"); t.setDate(t.getDate() + DAY_IDS.indexOf(dayId)); return t;
+}
+/* rid -> when it was last eaten in the fortnight before day d, from the weeks as planned
+   (this week as changed on this phone) */
+function recentMeals(d){
+  const today = dayDate(WEEK.id, d.id), seen = {};
+  WEEKS.forEach(w => (w.id === WEEK.id ? WEEK : w).days.forEach(x => ["lunch","dinner"].forEach(sl => {
+    const m = x[sl]; if (!m || m.kind !== "recipe") return;
+    const ago = dayIndex(w.id, today) - DAY_IDS.indexOf(x.id);
+    if (ago < 1 || ago > 14) return;
+    if (!seen[m.id] || seen[m.id].ago > ago) seen[m.id] = {ago, label: x.label, earlier: w.id !== WEEK.id};
+  })));
+  return seen;
+}
+function pickMeta(id, d, slot, recent){
+  const r = recipe(id); if (!r) return {text: "", tags: [], group: "other"};
+  const bits = [];
+  if (typeof r.timeMinutes === "number") bits.push(r.timeMinutes === 0 ? "no cooking" : mins(r.timeMinutes));
+  if ((r.plates.jon || {}).protein >= 70) bits.push(Math.round(r.plates.jon.protein) + "g protein");
+  const leaves = !!(r.leftover && r.leftover.leavesLunch && slot === "dinner");
+  if (leaves) bits.push("leaves lunch");
+  const on = usedOn(id, d, slot); if (on.length) bits.push("on " + on.join(", "));
+  const rc = recent[id];
+  /* earlier this week is already "on Mon" above; only earlier weeks need saying */
+  if (rc && rc.earlier) bits.push("had " + rc.label + (rc.ago > 7 + DAY_IDS.length ? " two weeks ago" : " last week"));
+  const g = dishGroup(r), tags = ["all", g];
+  if (typeof r.timeMinutes === "number" && r.timeMinutes <= 30) tags.push("quick");
+  if (leaves) tags.push("lunch");
+  return {text: bits.join(" \u00b7 "), tags, recent: !!rc, name: r.name};
+}
+function openPicker(sel, d){
+  const slot = sel.dataset.slot, recent = recentMeals(d);
+  let filter = "all", q = "";
+  const items = [];
+  [...sel.children].forEach(node => {
+    const group = node.tagName === "OPTGROUP" ? node.label : "";
+    (node.tagName === "OPTGROUP" ? [...node.children] : [node]).forEach(o => {
+      const meta = pickMeta(o.value, d, slot, recent);
+      items.push({value: o.value, name: meta.name || o.textContent, meta: meta.text,
+                  tags: meta.name ? meta.tags : ["all"], recent: !!meta.recent, group,
+                  cur: o.value === sel.value});
+    });
+  });
+  const bg = document.createElement("div"); bg.className = "sheet-bg";
+  const sh = document.createElement("div"); sh.className = "sheet";
+  sh.setAttribute("role", "dialog"); sh.setAttribute("aria-label", "Choose " + slot);
+  sh.innerHTML = '<div class="sheet-hd"><h2>Choose ' + slot + '</h2>' +
+    '<button class="sheet-x" aria-label="Close">\u00d7</button></div>' +
+    '<input class="sheet-q" type="search" placeholder="Search" autocomplete="off" enterkeyhint="search">' +
+    '<div class="chips">' + PICK_FILTERS.filter(([k]) => k === "all" || items.some(i => i.tags.includes(k)))
+      .map(([k, l]) => '<button class="chip' + (k === "all" ? " on" : "") + '" data-k="' + k + '">' + l + '</button>').join("") +
+    '</div><div class="sheet-list"></div>';
+  const list = sh.querySelector(".sheet-list");
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const draw = () => {
+    const want = items.filter(i => i.tags.includes(filter) &&
+      (!q || (i.name + " " + i.group).toLowerCase().includes(q)));
+    let html = "", group = null;
+    want.forEach(i => {
+      if (i.group !== group){ group = i.group; if (group) html += '<h3>' + esc(group) + '</h3>'; }
+      html += '<button class="opt' + (i.cur ? " cur" : "") + (i.recent ? " recent" : "") + '" data-v="' +
+              esc(i.value) + '">' + esc(i.name) + (i.meta ? '<small>' + esc(i.meta) + '</small>' : '') + '</button>';
+    });
+    list.innerHTML = html || '<p class="sheet-none">Nothing matches.</p>';
+  };
+  const close = () => { bg.remove(); sh.remove(); document.removeEventListener("keydown", onKey); };
+  const onKey = e => { if (e.key === "Escape") close(); };
+  bg.onclick = close;
+  sh.querySelector(".sheet-x").onclick = close;
+  sh.querySelector(".sheet-q").oninput = e => { q = e.target.value.trim().toLowerCase(); draw(); };
+  sh.querySelectorAll(".chip").forEach(c => c.onclick = () => {
+    filter = c.dataset.k;
+    sh.querySelectorAll(".chip").forEach(x => x.classList.toggle("on", x === c));
+    draw();
+  });
+  list.onclick = e => {
+    const b = e.target.closest(".opt"); if (!b) return;
+    close();
+    if (b.dataset.v !== sel.value){ sel.value = b.dataset.v; sel.dispatchEvent(new Event("change")); }
+  };
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(bg); document.body.appendChild(sh);
+  draw();
+}
+/* each lunch and dinner menu gets a button that opens the picker; the menu hides */
+function enhancePickers(d){
+  document.querySelectorAll("select.swap").forEach(sel => {
+    const o = sel.options[sel.selectedIndex];
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "pickbtn"; b.setAttribute("aria-haspopup", "dialog");
+    b.innerHTML = '<span></span><b>Change</b>';
+    b.querySelector("span").textContent = o ? (recipe(o.value) ? recipe(o.value).name : o.textContent) : "Choose";
+    b.onclick = () => openPicker(sel, d);
+    sel.hidden = true;
+    sel.parentNode.insertBefore(b, sel);
+  });
 }
 
 function wire(d){
