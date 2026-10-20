@@ -10939,6 +10939,1212 @@
           "daughter": 300
         }
       }
+    },
+    {
+      "id": "sesame-beef-lettuce-cups",
+      "name": "Sticky sesame beef lettuce cups with rice",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 30,
+      "handsOnMinutes": 25,
+      "tags": [
+        "quick",
+        "beef"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Beef mince, 5%",
+          "grams": 600,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Toasted sesame oil",
+          "grams": 4,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Reduced-salt soy sauce",
+          "grams": 30,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Honey",
+          "grams": 30,
+          "aisle": "cupboard",
+          "packSize": 340,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Rice vinegar",
+          "grams": 13,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Garlic",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Ginger",
+          "grams": 8,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "grated"
+        },
+        {
+          "item": "Cornflour",
+          "grams": 3,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Water",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Jasmine rice, dry",
+          "grams": 150,
+          "aisle": "cupboard",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": true,
+          "note": "dry weight"
+        },
+        {
+          "item": "Little gem lettuce",
+          "grams": 200,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2 heads, separated into cups"
+        },
+        {
+          "item": "Cucumber",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "diced"
+        },
+        {
+          "item": "Carrots",
+          "grams": 120,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1 large, in matchsticks"
+        },
+        {
+          "item": "Spring onions",
+          "grams": 40,
+          "aisle": "fresh",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced"
+        },
+        {
+          "item": "Sesame seeds",
+          "grams": 6,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Light mayonnaise",
+          "grams": 30,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Sriracha",
+          "grams": 5,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 700,
+          "protein": 59.6,
+          "fibre": 4.1,
+          "salt": 2.31,
+          "plateGrams": 593
+        },
+        "cheryl": {
+          "kcal": 525,
+          "protein": 44.7,
+          "fibre": 3.1,
+          "salt": 1.73,
+          "plateGrams": 445
+        },
+        "daughter": {
+          "plateGrams": 445,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": false,
+        "quality": "poor",
+        "note": "Best fresh: keep the beef and the salad apart if saving any."
+      },
+      "method": [
+        "Rice on first, as the packet says.",
+        "Large frying pan over medium-high heat. Mince in for 6–7 minutes, broken up, until deeply browned; pour off any fat.",
+        "Meanwhile whisk the sesame oil, soy sauce, honey, rice vinegar, garlic and ginger. Mix the cornflour with the water separately.",
+        "Sauce over the beef for 2 minutes, stirring, then the cornflour mix for 1–2 minutes until glossy and sticky.",
+        "Mayonnaise and sriracha mixed.",
+        "Lettuce separated into cups and filled with the sticky beef, cucumber and carrot. Spicy mayo over, then the spring onions and sesame seeds. Rice alongside."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 593,
+          "cheryl": 445,
+          "daughter": 445
+        },
+        "components": [
+          {
+            "item": "Beef mince, 5%",
+            "jon": 240,
+            "cheryl": 180,
+            "daughter": 180
+          },
+          {
+            "item": "Jasmine rice, dry",
+            "jon": 60,
+            "cheryl": 45,
+            "daughter": 45
+          },
+          {
+            "item": "Little gem lettuce",
+            "jon": 80,
+            "cheryl": 60,
+            "daughter": 60
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Lettuce, cucumber and carrot",
+            "unit": "g",
+            "jon": 181,
+            "cheryl": 136,
+            "daughter": 136
+          },
+          {
+            "what": "Spicy mayo",
+            "unit": "g",
+            "jon": 14,
+            "cheryl": 10,
+            "daughter": 10
+          },
+          {
+            "what": "Rice, cooked",
+            "unit": "g",
+            "jon": 162,
+            "cheryl": 122,
+            "daughter": 122
+          }
+        ],
+        "share": {
+          "label": "the sticky beef",
+          "jon": 236,
+          "cheryl": 177,
+          "daughter": 177
+        }
+      }
+    },
+    {
+      "id": "pumpkin-turkey-orzo-sage",
+      "name": "Creamy pumpkin turkey orzo with crispy sage",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 35,
+      "handsOnMinutes": 30,
+      "tags": [
+        "quick",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Turkey mince, 5%",
+          "grams": 380,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true,
+          "note": "2 tsp for the turkey, the rest for the sage"
+        },
+        {
+          "item": "Sage",
+          "grams": 3,
+          "aisle": "fresh",
+          "packSize": 15,
+          "packUnit": "g",
+          "staple": false,
+          "note": "about 10 leaves"
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Orzo, dry",
+          "grams": 180,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": true,
+          "note": "dry weight"
+        },
+        {
+          "item": "Pumpkin puree",
+          "grams": 160,
+          "aisle": "cupboard",
+          "packSize": 425,
+          "packUnit": "g",
+          "staple": false,
+          "note": "tinned, not pie filling"
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 500,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Double cream",
+          "grams": 50,
+          "aisle": "dairy",
+          "packSize": 300,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Parmesan",
+          "grams": 35,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated, a little kept back to finish"
+        },
+        {
+          "item": "Ground nutmeg",
+          "grams": 0.5,
+          "aisle": "cupboard",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Spinach",
+          "grams": 100,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 716,
+          "protein": 51.2,
+          "fibre": 5.3,
+          "salt": 1.45,
+          "plateGrams": 503
+        },
+        "cheryl": {
+          "kcal": 537,
+          "protein": 38.4,
+          "fibre": 4.0,
+          "salt": 1.09,
+          "plateGrams": 377
+        },
+        "daughter": {
+          "plateGrams": 377,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats well with a splash of water.",
+        "portions": {
+          "jon": {
+            "grams": 337,
+            "kcal": 480,
+            "protein": 34.3,
+            "fibre": 3.6,
+            "salt": 0.97,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 253,
+            "kcal": 360,
+            "protein": 25.7,
+            "fibre": 2.7,
+            "salt": 0.73,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "2 tsp of the oil in a large frying pan over medium-high heat. Turkey in, seasoned with the salt and black pepper, left to brown before breaking it into chunky crumbs. 5–6 minutes, then out onto a plate.",
+        "The rest of the oil in. Sage leaves in for 20–30 seconds a side until crisp, then out onto kitchen paper.",
+        "Garlic and orzo into the pan for about 1 minute.",
+        "Pumpkin and stock in. Simmer 9–11 minutes, stirring often, until the orzo is just tender and most of the liquid has gone.",
+        "Heat down. Cream, most of the Parmesan, the nutmeg and the turkey stirred in, then the spinach folded through until it wilts. Creamy but not soupy.",
+        "More black pepper, the last of the Parmesan, and the crispy sage over the top."
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "source": "ratio",
+        "grams": {
+          "jon": 503,
+          "cheryl": 377,
+          "daughter": 377
+        }
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the orzo",
+          "jon": 503,
+          "cheryl": 377,
+          "daughter": 377
+        }
+      }
+    },
+    {
+      "id": "lemon-butter-chicken-parmesan-mash",
+      "name": "Crispy lemon butter chicken with Parmesan mash and green beans",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 35,
+      "handsOnMinutes": 30,
+      "tags": [
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Chicken breast, raw",
+          "grams": 470,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced into thin cutlets"
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 4,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "half on the chicken, half in the mash"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "plenty"
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 1.5,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Plain flour",
+          "grams": 11,
+          "aisle": "cupboard",
+          "packSize": 1500,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Olive oil",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Potatoes",
+          "grams": 620,
+          "aisle": "fresh",
+          "packSize": 2500,
+          "packUnit": "g",
+          "staple": false,
+          "note": "peeled and chopped"
+        },
+        {
+          "item": "Butter",
+          "grams": 38,
+          "aisle": "dairy",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": false,
+          "note": "half in the mash, half in the sauce"
+        },
+        {
+          "item": "Semi-skimmed milk",
+          "grams": 85,
+          "aisle": "dairy",
+          "packSize": 2000,
+          "packUnit": "ml",
+          "staple": true,
+          "note": "warmed, for the mash"
+        },
+        {
+          "item": "Parmesan",
+          "grams": 48,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated: two-thirds in the mash, a third in the sauce"
+        },
+        {
+          "item": "Garlic",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 125,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Lemon juice",
+          "grams": 20,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Lemon zest",
+          "grams": 2,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Parsley",
+          "grams": 5,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chopped"
+        },
+        {
+          "item": "Green beans",
+          "grams": 300,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "trimmed"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 700,
+          "protein": 61.7,
+          "fibre": 10.2,
+          "salt": 2.61,
+          "plateGrams": 550
+        },
+        "cheryl": {
+          "kcal": 525,
+          "protein": 46.3,
+          "fibre": 7.6,
+          "salt": 1.96,
+          "plateGrams": 412
+        },
+        "daughter": {
+          "plateGrams": 412,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats well; loosen the mash with a splash of milk.",
+        "portions": {
+          "jon": {
+            "grams": 377,
+            "kcal": 480,
+            "protein": 42.3,
+            "fibre": 7.0,
+            "salt": 1.79,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 283,
+            "kcal": 360,
+            "protein": 31.7,
+            "fibre": 5.2,
+            "salt": 1.34,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Potatoes into cold water, brought to the boil and simmered 12–15 minutes until tender.",
+        "Meanwhile season the chicken cutlets with half the salt, black pepper and the garlic powder, then dust lightly with the flour.",
+        "Oil in a large frying pan over medium-high heat. Chicken in for 3–4 minutes a side until golden and cooked through. Out and set aside.",
+        "Green beans into a pan of boiling water for 4–5 minutes, then drained.",
+        "Half the butter and the garlic into the chicken pan for 30 seconds. Stock in and simmered 2–3 minutes, then the lemon juice, lemon zest and a third of the Parmesan stirred in.",
+        "Potatoes drained and mashed with the rest of the butter, the warm milk, the rest of the Parmesan, the rest of the salt and black pepper.",
+        "Chicken back into the sauce to warm through. Over the mash with the green beans, parsley over."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 550,
+          "cheryl": 412,
+          "daughter": 412
+        },
+        "components": [
+          {
+            "item": "Chicken breast, raw",
+            "jon": 188,
+            "cheryl": 141,
+            "daughter": 141
+          },
+          {
+            "item": "Potatoes",
+            "jon": 248,
+            "cheryl": 186,
+            "daughter": 186
+          },
+          {
+            "item": "Green beans",
+            "jon": 120,
+            "cheryl": 90,
+            "daughter": 90
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Parmesan mash",
+            "unit": "g",
+            "jon": 253,
+            "cheryl": 190,
+            "daughter": 190
+          },
+          {
+            "what": "Green beans",
+            "unit": "g",
+            "jon": 108,
+            "cheryl": 81,
+            "daughter": 81
+          }
+        ],
+        "share": {
+          "label": "the lemon butter chicken",
+          "jon": 189,
+          "cheryl": 141,
+          "daughter": 141
+        }
+      }
+    },
+    {
+      "id": "buffalo-chicken-loaded-sweet-potatoes",
+      "name": "Crispy buffalo chicken loaded sweet potatoes",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 35,
+      "handsOnMinutes": 20,
+      "tags": [
+        "spicy",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Sweet potato",
+          "grams": 840,
+          "aisle": "fresh",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": false,
+          "note": "3 large, about 280g each"
+        },
+        {
+          "item": "Chicken breast, raw",
+          "grams": 570,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false,
+          "note": "cubed"
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 2.5,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "½ tsp"
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 1.3,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Cornflour",
+          "grams": 25,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Olive oil",
+          "grams": 12,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Buffalo sauce",
+          "grams": 50,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Butter",
+          "grams": 12,
+          "aisle": "dairy",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": false,
+          "note": "melted"
+        },
+        {
+          "item": "Greek yoghurt, 0% fat",
+          "grams": 70,
+          "aisle": "dairy",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Light mayonnaise",
+          "grams": 25,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Ranch seasoning",
+          "grams": 7,
+          "aisle": "cupboard",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Water",
+          "grams": 30,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": false,
+          "amount": "2–3 tbsp, to thin"
+        },
+        {
+          "item": "Spring onions",
+          "grams": 35,
+          "aisle": "fresh",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced"
+        },
+        {
+          "item": "Chives",
+          "grams": 5,
+          "aisle": "fresh",
+          "packSize": 20,
+          "packUnit": "g",
+          "staple": false,
+          "note": "snipped"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 713,
+          "protein": 62.5,
+          "fibre": 10.7,
+          "salt": 3.62,
+          "plateGrams": 534
+        },
+        "cheryl": {
+          "kcal": 534,
+          "protein": 46.8,
+          "fibre": 8.0,
+          "salt": 2.72,
+          "plateGrams": 401
+        },
+        "daughter": {
+          "plateGrams": 401,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Keep the ranch apart and add it after reheating.",
+        "portions": {
+          "jon": {
+            "grams": 359,
+            "kcal": 480,
+            "protein": 42.1,
+            "fibre": 7.2,
+            "salt": 2.44,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 269,
+            "kcal": 360,
+            "protein": 31.6,
+            "fibre": 5.4,
+            "salt": 1.83,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Prick the sweet potatoes and microwave 6–8 minutes until almost tender, then into a 220°C oven for 12–15 minutes until soft with lightly crisp skins.",
+        "Season the chicken with the salt, black pepper and garlic powder, then toss with the cornflour. Oil in a large frying pan over medium-high heat, chicken in for 7–9 minutes, turning, until golden, crisp and cooked through.",
+        "Buffalo sauce mixed with the melted butter, and the hot chicken tossed in it until glossy.",
+        "Yoghurt, mayonnaise and ranch seasoning mixed, with enough water to make a drizzle.",
+        "Split the sweet potatoes and fluff the middles with a fork. Load with the buffalo chicken, drizzle with the ranch, then the spring onions and chives."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 534,
+          "cheryl": 401,
+          "daughter": 401
+        },
+        "components": [
+          {
+            "item": "Sweet potato",
+            "jon": 336,
+            "cheryl": 252,
+            "daughter": 252
+          },
+          {
+            "item": "Chicken breast, raw",
+            "jon": 228,
+            "cheryl": 171,
+            "daughter": 171
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Ranch drizzle",
+            "unit": "g",
+            "jon": 45,
+            "cheryl": 34,
+            "daughter": 34
+          },
+          {
+            "what": "Sweet potato",
+            "unit": "count",
+            "one": "sweet potato",
+            "many": "sweet potatoes",
+            "jon": 1,
+            "cheryl": 1,
+            "daughter": 1
+          }
+        ],
+        "share": {
+          "label": "the buffalo chicken",
+          "jon": 253,
+          "cheryl": 165,
+          "daughter": 165
+        },
+        "adjusted": {
+          "jon": -48
+        },
+        "adjustSide": "the buffalo chicken"
+      }
+    },
+    {
+      "id": "balsamic-beef-parmesan-mash-slow-cooker",
+      "name": "Slow-cooker balsamic beef with carrots and Parmesan mash",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 480,
+      "handsOnMinutes": 30,
+      "tags": [
+        "slow-cooker",
+        "beef",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Diced beef, braising steak",
+          "grams": 500,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false,
+          "note": "lean, fat trimmed, in large chunks"
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1.5,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "a pinch on the beef, the rest in the mash"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 6,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Onions",
+          "grams": 100,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced"
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Tomato puree",
+          "grams": 20,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Carrots",
+          "grams": 250,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "in chunks"
+        },
+        {
+          "item": "Beef stock, half strength",
+          "grams": 250,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Balsamic vinegar",
+          "grams": 35,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Worcestershire sauce",
+          "grams": 6,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Dried thyme",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 10,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Potatoes",
+          "grams": 680,
+          "aisle": "fresh",
+          "packSize": 2500,
+          "packUnit": "g",
+          "staple": false,
+          "note": "peeled and chopped"
+        },
+        {
+          "item": "Semi-skimmed milk",
+          "grams": 80,
+          "aisle": "dairy",
+          "packSize": 2000,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Butter",
+          "grams": 18,
+          "aisle": "dairy",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Parmesan",
+          "grams": 28,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated"
+        },
+        {
+          "item": "Parsley",
+          "grams": 5,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chopped"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 709,
+          "protein": 55.1,
+          "fibre": 9.8,
+          "salt": 1.67,
+          "plateGrams": 716
+        },
+        "cheryl": {
+          "kcal": 532,
+          "protein": 41.3,
+          "fibre": 7.3,
+          "salt": 1.25,
+          "plateGrams": 537
+        },
+        "daughter": {
+          "plateGrams": 537,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Better the next day. Loosen the mash with a splash of milk.",
+        "portions": {
+          "jon": {
+            "grams": 485,
+            "kcal": 480,
+            "protein": 37.3,
+            "fibre": 6.6,
+            "salt": 1.13,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 364,
+            "kcal": 360,
+            "protein": 28.0,
+            "fibre": 4.9,
+            "salt": 0.85,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Pat the beef dry and season with a pinch of the salt and black pepper. Oil in a frying pan over medium-high heat, beef in for 2–3 minutes a side until deeply browned, then into the slow cooker.",
+        "Onion into the same pan for 3–4 minutes, then the garlic and tomato purée for a minute. Into the slow cooker.",
+        "The carrots, stock, balsamic, Worcestershire and thyme in too. Lid on: 8 hours on low or 5 on high, until the beef pulls apart.",
+        "Lift out the beef and carrots. Boil the liquid in a pan for 5–10 minutes until it thickens into a gravy. Break the beef into large chunks and stir it back in with the carrots.",
+        "Meanwhile the potatoes boiled 15–18 minutes until tender, drained, and mashed with the milk, butter, Parmesan, the rest of the salt and black pepper.",
+        "Mash into bowls, the beef, carrots and gravy on top, parsley over."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 716,
+          "cheryl": 537,
+          "daughter": 537
+        },
+        "components": [
+          {
+            "item": "Diced beef, braising steak",
+            "jon": 200,
+            "cheryl": 150,
+            "daughter": 150
+          },
+          {
+            "item": "Potatoes",
+            "jon": 272,
+            "cheryl": 204,
+            "daughter": 204
+          },
+          {
+            "item": "Carrots",
+            "jon": 100,
+            "cheryl": 75,
+            "daughter": 75
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Parmesan mash",
+            "unit": "g",
+            "jon": 268,
+            "cheryl": 201,
+            "daughter": 201
+          }
+        ],
+        "share": {
+          "label": "the beef, carrots and gravy",
+          "jon": 448,
+          "cheryl": 336,
+          "daughter": 336
+        }
+      }
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",

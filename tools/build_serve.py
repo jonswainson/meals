@@ -121,6 +121,20 @@ CFG = {
     "garlic-steak-bites-parmesan-polenta": dict(label="the Parmesan polenta",
         potitems=["Polenta, quick-cook, dry", "Spinach", "Semi-skimmed milk", "Parmesan"],
         names={"Sirloin steak": "Steak bites"}),
+    "sesame-beef-lettuce-cups": dict(label="the sticky beef", apart=["Jasmine rice, dry"],
+        potitems=["Beef mince, 5%"],
+        groups={"Lettuce, cucumber and carrot": ["Little gem lettuce", "Cucumber", "Carrots"],
+                "Spicy mayo": ["Light mayonnaise", "Sriracha"]}),
+    "pumpkin-turkey-orzo-sage": dict(pot="all", label="the orzo"),
+    "lemon-butter-chicken-parmesan-mash": dict(label="the lemon butter chicken",
+        potitems=["Chicken breast, raw"],
+        groups={"Parmesan mash": ["Potatoes", ("Butter", 0.5), "Semi-skimmed milk", ("Parmesan", 2/3)]}),
+    "buffalo-chicken-loaded-sweet-potatoes": dict(label="the buffalo chicken",
+        count={"Sweet potato": (280, "sweet potato", "sweet potatoes")}, potitems=["Chicken breast, raw"],
+        adjust="pot", groups={"Ranch drizzle": ["Greek yoghurt, 0% fat", "Light mayonnaise", "Ranch seasoning", "Water"]}),
+    "balsamic-beef-parmesan-mash-slow-cooker": dict(label="the beef, carrots and gravy",
+        potitems=["Diced beef, braising steak", "Carrots"],
+        groups={"Parmesan mash": ["Potatoes", "Semi-skimmed milk", "Butter", "Parmesan"]}),
     "hot-honey-chicken-parmesan-potatoes": dict(label="the hot honey chicken",
         potitems=["Chicken breast, raw"], names={"New potatoes": "Parmesan potatoes"}),
 
@@ -221,6 +235,15 @@ def build(r, cfg):
         for w in eaters: row[w] = r1(raw(item, w))
         out["rows"].append(row)
 
+    # mixed together before serving (a mash, a dressing): one row, its parts summed.
+    # A part can be (item, fraction) when the rest of it goes elsewhere.
+    part = lambda i: (i, 1) if isinstance(i, str) else (i[0], i[1])
+    for label, items in (cfg.get("groups") or {}).items():
+        row = {"what": label, "unit": "g"}
+        for w in eaters:
+            row[w] = r1(sum(raw(n, w) * f * yld(n) for n, f in map(part, items) if n in ing))
+        out["rows"].append(row)
+
     # cooked apart: weighed cooked
     for item in cfg.get("apart", []):
         row = {"what": served_name(item), "unit": "g"}
@@ -241,7 +264,8 @@ def build(r, cfg):
 
     # separate components not otherwise placed, for plated dishes
     placed = (set(cfg.get("apart", [])) | set(cfg.get("count") or {}) | set(cfg.get("potitems", []))
-              | set(cfg.get("within", [])))
+              | set(cfg.get("within", []))
+              | {i if isinstance(i, str) else i[0] for g in (cfg.get("groups") or {}).values() for i in g})
     if cfg.get("pot") != "all":
         for item, c in comps.items():
             if item in placed: continue
