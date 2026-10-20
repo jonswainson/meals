@@ -190,7 +190,7 @@ const FIXED = {
   "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
     jon:{kcal:493,protein:43.2,fibre:3.9,salt:3.56}, cheryl:{kcal:370,protein:32.4,fibre:3.0,salt:2.67}},
   "salmon-eggs":  {name:"Smoked salmon, poached eggs and spinach on sourdough",
-    jon:{kcal:530,protein:39.8,fibre:7.4,salt:2.75}, cheryl:{kcal:403,protein:32.4,fibre:4.9,salt:2.63}},
+    jon:{kcal:609,protein:46.8,fibre:7.4,salt:2.93}, cheryl:{kcal:403,protein:32.4,fibre:4.9,salt:2.63}},
   "skyr-bowl":    {name:"The Skyr bowl",
                    jon:{kcal:522,protein:59.7,fibre:12.1,salt:0.52},
                    cheryl:{kcal:392,protein:44.8,fibre:9.1,salt:0.39}},
@@ -533,7 +533,7 @@ FIXED["bacon-cottage"].ing.cheryl = share(FIXED["bacon-cottage"].ing.jon, 0.75);
 
 /* Cheryl doesn't eat avocado: her plate is her own, a thicker slice of toast in its place */
 FIXED["salmon-eggs"].ing = {
-  jon:   [I("Eggs",165,"dairy",330,true), I("Smoked salmon",50,"meat-fish",100), I("Avocado",40,"fresh"),
+  jon:   [I("Eggs",220,"dairy",330,true), I("Smoked salmon",50,"meat-fish",100), I("Avocado",40,"fresh"),
           I("Spinach",80,"fresh",200), I("Wholemeal sourdough",50,"bakery",800)],
   cheryl:[I("Eggs",110,"dairy",330,true), I("Smoked salmon",50,"meat-fish",100),
           I("Spinach",60,"fresh",200), I("Wholemeal sourdough",60,"bakery",800)]};
@@ -656,14 +656,14 @@ FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",2
   ["Pumpkin seeds",10],["Banana, weighed",30]];
 
 FIXED["salmon-eggs"].recipe = R(
-  ["<b>Jon:</b> 3 eggs \u00b7 50g smoked salmon (half a 100g pack) \u00b7 40g avocado (about a third) \u00b7 80g spinach \u00b7 1 slice sourdough (50g)",
+  ["<b>Jon:</b> 4 eggs \u00b7 50g smoked salmon (half a 100g pack) \u00b7 40g avocado (about a third) \u00b7 80g spinach \u00b7 1 slice sourdough (50g)",
    "<b>Cheryl:</b> 2 eggs \u00b7 50g smoked salmon (the other half) \u00b7 60g spinach \u00b7 1 thick slice sourdough (60g) \u00b7 no avocado",
    "Black pepper"],
   ["A wide pan of water at a bare simmer \u2014 no bubbles breaking the surface. Crack each egg into a cup, then slide it in. <b>3 minutes</b> for a set white and a runny yolk; lift out with a slotted spoon onto kitchen paper.",
    "While they poach, toast the sourdough, and wilt the spinach in a dry pan with a splash of water for 1\u20132 minutes. Squeeze the water out.",
    "Jon's avocado sliced or smashed onto his toast. Then the spinach, the smoked salmon and the eggs on top, with plenty of black pepper."],
   "No avocado, and a thicker slice of toast in its place. Two eggs. About 400 kcal and 32g of protein.",
-  "<b>Smoked salmon is salty</b> \u2014 2.75g on Jon's plate. Have it on a low-salt dinner day, not with the bacon wrap or a salty dinner.");
+  "<b>Smoked salmon is salty</b> \u2014 2.93g on Jon's plate. Have it on a low-salt dinner day, not with the bacon wrap or a salty dinner.");
 
 FIXED["bacon-cottage"].recipe = R(
   ["3 rashers back bacon, grilled","200g LOW FAT cottage cheese","1 high-protein wrap (61g)",
