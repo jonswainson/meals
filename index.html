@@ -103,6 +103,9 @@
   .toast.show{opacity:1;transform:translate(-50%,0)}
 
   .note{margin:22px 16px 0;font-size:.83rem;color:var(--muted);line-height:1.6}
+  .stale{margin:14px 16px 0;padding:12px 14px;border:1px solid var(--hot);border-radius:10px;
+    color:var(--hot);font-size:.88rem;line-height:1.5}
+  .stale a{color:inherit}
   .done{margin:22px 16px 0;padding:14px 16px;background:var(--soft);
     border-radius:10px;font-size:.9rem;display:none}
   .done.show{display:block}
@@ -128,6 +131,7 @@
   <p class="stockfoot" id="stockFoot"></p>
 </details>
 
+<div id="stale" class="stale" hidden></div>
 <div id="list"></div>
 
 <div class="add">
@@ -414,6 +418,21 @@ function labels(){
   const l = weekLabel(WEEK_ID);
   $("#sub").textContent = l + (GENERATED && l ? " · built from the week" : "");
   document.title = l ? "Shopping · " + shortLabel(l) : "Shopping";
+
+  /* The shop is Friday evening and it buys for the week that starts on Saturday. So
+     from the Friday of a list's own week, the list is for a week that is ending. On
+     16 October Cheryl shopped from 10-16 October's list, because nothing said so. */
+  const box = $("#stale");
+  box.hidden = true;
+  if (!WEEK_ID || !ISO.test(WEEK_ID)) return;
+  const start = new Date(WEEK_ID + "T00:00:00"), today = new Date();
+  const day = Math.round((Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) -
+                          Date.UTC(start.getFullYear(), start.getMonth(), start.getDate())) / 86400000);
+  if (day < 6) return;
+  box.innerHTML = '<strong>This list is for ' + shortLabel(l) + ', which ' +
+    (day === 6 ? 'ends today' : 'has finished') + '.</strong> Don\'t shop from it. Open ' +
+    '<a href="plan.html">the week</a>, go to next week and press <strong>Build shopping list</strong>.';
+  box.hidden = false;
 }
 
 /* ---------- actions ---------- */
