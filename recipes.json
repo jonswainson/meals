@@ -10201,6 +10201,244 @@
           "daughter": 405
         }
       }
+    },
+    {
+      "id": "hot-honey-chicken-parmesan-potatoes",
+      "name": "Crispy hot honey chicken with Parmesan potatoes and tenderstem",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 40,
+      "handsOnMinutes": 20,
+      "tags": [
+        "leaves-lunch",
+        "spicy"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "New potatoes",
+          "grams": 760,
+          "aisle": "fresh",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": false,
+          "note": "halved"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 22,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 3,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1.5,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "half for the potatoes, half for the chicken"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Tenderstem broccoli",
+          "grams": 300,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Parmesan",
+          "grams": 40,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated"
+        },
+        {
+          "item": "Chicken breast, raw",
+          "grams": 570,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false,
+          "note": "bite-size pieces"
+        },
+        {
+          "item": "Smoked paprika",
+          "grams": 1.2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Onion powder",
+          "grams": 1.2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Honey",
+          "grams": 42,
+          "aisle": "cupboard",
+          "packSize": 340,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Hot sauce",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Cider vinegar",
+          "grams": 5,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Parsley",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chopped"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 716,
+          "protein": 70.5,
+          "fibre": 11.3,
+          "salt": 1.79,
+          "plateGrams": 609
+        },
+        "cheryl": {
+          "kcal": 537,
+          "protein": 52.8,
+          "fibre": 8.5,
+          "salt": 1.34,
+          "plateGrams": 456
+        },
+        "daughter": {
+          "plateGrams": 456,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Good the next day; the potatoes soften.",
+        "portions": {
+          "jon": {
+            "grams": 408,
+            "kcal": 480,
+            "protein": 47.3,
+            "fibre": 7.6,
+            "salt": 1.2,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 306,
+            "kcal": 360,
+            "protein": 35.5,
+            "fibre": 5.7,
+            "salt": 0.9,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Oven to 220°C. Potatoes tossed with 1 tbsp of the oil, half the garlic powder, {{0.75}}g of salt and black pepper. Cut-side down on a tray, roast 25–30 minutes until golden and crisp.",
+        "For the last 10 minutes, the tenderstem onto the tray, turned in the oil already on it.",
+        "For the last 5 minutes, the Parmesan over the potatoes.",
+        "Meanwhile season the chicken with the paprika, onion powder, the rest of the garlic powder, {{0.75}}g of salt and black pepper.",
+        "The rest of the oil in a large frying pan over medium-high heat. Chicken in for 6–8 minutes, turning now and then, until golden and cooked through.",
+        "Honey, hot sauce and cider vinegar mixed. Heat down to low, over the chicken, and tossed for 1–2 minutes until sticky and glossy.",
+        "The hot honey chicken with the Parmesan potatoes and tenderstem, parsley over."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 609,
+          "cheryl": 456,
+          "daughter": 456
+        },
+        "components": [
+          {
+            "item": "New potatoes",
+            "jon": 304,
+            "cheryl": 228,
+            "daughter": 228
+          },
+          {
+            "item": "Tenderstem broccoli",
+            "jon": 120,
+            "cheryl": 90,
+            "daughter": 90
+          },
+          {
+            "item": "Chicken breast, raw",
+            "jon": 228,
+            "cheryl": 171,
+            "daughter": 171
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Parmesan potatoes",
+            "unit": "g",
+            "jon": 280,
+            "cheryl": 210,
+            "daughter": 210
+          },
+          {
+            "what": "Tenderstem",
+            "unit": "g",
+            "jon": 108,
+            "cheryl": 81,
+            "daughter": 81
+          }
+        ],
+        "share": {
+          "label": "the hot honey chicken",
+          "jon": 221,
+          "cheryl": 165,
+          "daughter": 165
+        }
+      }
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",

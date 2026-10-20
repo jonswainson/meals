@@ -4031,6 +4031,35 @@
       "salt": 7.2,
       "source": "USDA FoodData Central SR Legacy — Spices, chili powder (a blend with salt)",
       "note": "Contains salt."
+    },
+    "Hot sauce": {
+      "per": "100ml",
+      "cookedYield": 1.0,
+      "state": "raw/dry",
+      "inRecipesJson": true,
+      "confidence": "medium",
+      "kcal": 10,
+      "protein": 0.5,
+      "fat": 0.3,
+      "carbs": 1.0,
+      "fibre": 0.5,
+      "salt": 9.5,
+      "source": "Cayenne pepper hot sauce (Frank's RedHot type), label",
+      "note": "Salty: by the tablespoon."
+    },
+    "Onion powder": {
+      "per": "100g",
+      "cookedYield": 1.0,
+      "state": "raw/dry",
+      "inRecipesJson": true,
+      "confidence": "high",
+      "kcal": 341,
+      "protein": 10.4,
+      "fat": 1.0,
+      "carbs": 79.1,
+      "fibre": 15.2,
+      "salt": 0.19,
+      "source": "USDA FoodData Central SR Legacy — Spices, onion powder"
     }
   },
   "labelSourced": "Where Jon has photographed the pack, the pack wins and confidence is high. Generic CoFID entries are a starting point, not the product in the fridge - both items corrected on 20 September moved by more than 30% on at least one figure."

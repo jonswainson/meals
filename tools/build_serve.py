@@ -113,6 +113,8 @@ CFG = {
     "honey-garlic-chicken-rice-bowls": dict(label="the sticky chicken", apart=["Jasmine rice, dry"],
         potitems=["Chicken breast, raw"], names={"Choy sum, pak choi or tenderstem": "Pak choi"}),
     "beef-sweet-potato-taco-bake": dict(pot="all", label="the bake"),
+    "hot-honey-chicken-parmesan-potatoes": dict(label="the hot honey chicken",
+        potitems=["Chicken breast, raw"], names={"New potatoes": "Parmesan potatoes"}),
 
     # cold tubs and plates, assembled not cooked together
     # mixed in one bowl: one salad, shared; only what goes on top is its own row
