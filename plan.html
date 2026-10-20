@@ -182,6 +182,7 @@
   .opt small{display:block;font-size:.78rem;color:var(--muted);margin-top:2px}
   .opt.recent{opacity:.5}
   .sheet-none{color:var(--muted);font-size:.9rem;padding:18px 2px}
+  .opt.pin{flex:0 0 auto;margin:4px 16px 0;width:auto;border:1px dashed var(--line);border-radius:10px;padding:10px 12px}
 </style>
 </head>
 <body>
@@ -1977,11 +1978,16 @@ function openPicker(sel, d){
                   cur: o.value === sel.value});
     });
   });
+  /* "our own thing" is pinned at the top, so it is never a search away (Jon, 21 October) */
+  const ownAt = items.findIndex(i => /^own-/.test(i.value) || i.value === "own-thing");
+  const own = ownAt >= 0 ? items.splice(ownAt, 1)[0] : null;
   const bg = document.createElement("div"); bg.className = "sheet-bg";
   const sh = document.createElement("div"); sh.className = "sheet";
   sh.setAttribute("role", "dialog"); sh.setAttribute("aria-label", "Choose " + slot);
   sh.innerHTML = '<div class="sheet-hd"><h2>Choose ' + slot + '</h2>' +
     '<button class="sheet-x" aria-label="Close">\u00d7</button></div>' +
+    (own ? '<button class="opt pin' + (own.cur ? " cur" : "") + '" data-v="' + own.value + '">' +
+           'Something else \u2014 sourcing it ourselves<small>Not cooked from the planner; nothing on the list</small></button>' : '') +
     '<input class="sheet-q" type="search" placeholder="Search" autocomplete="off" enterkeyhint="search">' +
     '<div class="chips">' + PICK_FILTERS.filter(([k]) => k === "all" || items.some(i => i.tags.includes(k)))
       .map(([k, l]) => '<button class="chip' + (k === "all" ? " on" : "") + '" data-k="' + k + '">' + l + '</button>').join("") +
@@ -2014,6 +2020,8 @@ function openPicker(sel, d){
     close();
     if (b.dataset.v !== sel.value){ sel.value = b.dataset.v; sel.dispatchEvent(new Event("change")); }
   };
+  const pin = sh.querySelector(".opt.pin");
+  if (pin) pin.onclick = () => { close(); if (pin.dataset.v !== sel.value){ sel.value = pin.dataset.v; sel.dispatchEvent(new Event("change")); } };
   document.addEventListener("keydown", onKey);
   document.body.appendChild(bg); document.body.appendChild(sh);
   draw();
