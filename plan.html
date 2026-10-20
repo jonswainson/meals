@@ -183,6 +183,11 @@
   .opt.recent{opacity:.5}
   .sheet-none{color:var(--muted);font-size:.9rem;padding:18px 2px}
   .opt.pin{flex:0 0 auto;margin:4px 16px 0;width:auto;border:1px dashed var(--line);border-radius:10px;padding:10px 12px}
+
+  /* a recipe's photo, at the top of the opened card; small beside it in the picker */
+  .mphoto{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;margin:2px 0 6px;background:var(--soft)}
+  .opt.hasimg{display:flex;gap:10px;align-items:center}
+  .othumb{flex:0 0 auto;width:44px;height:44px;object-fit:cover;border-radius:8px;background:var(--soft)}
 </style>
 </head>
 <body>
@@ -1391,7 +1396,28 @@ const cardHead = (d, slot, label, name, macros, cls) =>
   '<details class="meal' + (cls || '') + '" data-card="' + d.id + '/' + slot + '"' +
   (OPEN.has(d.id + '/' + slot) ? ' open' : '') + '><summary>' +
   '<div class="slot">' + label + '</div><h2>' + name + '</h2>' + (macros || '') +
-  '</summary><div class="mbody">';
+  '</summary><div class="mbody">' + photoImg(mealId(d[slot]));
+
+/* Photos live in photos/ beside the site and are named in recipes.json: a recipe's own
+   `photo`, or `fixedPhotos` for the breakfasts and snacks. Added with tools/add_photo.py. */
+function photoFor(id){
+  if (!id || !DATA) return null;
+  const r = recipe(id);
+  return (r && r.photo) || (DATA.fixedPhotos || {})[id] || null;
+}
+/* the meal a slot holds; a leftover lunch shows the dinner it came from */
+function mealId(m){
+  if (!m) return null;
+  if (typeof m === "string") return m;
+  if (m.kind === "leftover"){ const src = day(m.from); return src && src.dinner ? mealId(src.dinner) : null; }
+  return m.id || null;
+}
+function photoImg(id){
+  const p = photoFor(id);
+  if (!p || !p.src) return "";
+  const alt = String(p.alt || "").replace(/"/g, "&quot;");
+  return '<img class="mphoto" src="' + p.src + '" alt="' + alt + '" loading="lazy">';
+}
 
 /* Jon is 1 share, Cheryl 0.75. The daughter is not modelled on the fixed items. */
 const sharesFor = (d, slot) =>
@@ -2000,8 +2026,11 @@ function openPicker(sel, d){
     let html = "", group = null;
     want.forEach(i => {
       if (i.group !== group){ group = i.group; if (group) html += '<h3>' + esc(group) + '</h3>'; }
-      html += '<button class="opt' + (i.cur ? " cur" : "") + (i.recent ? " recent" : "") + '" data-v="' +
-              esc(i.value) + '">' + esc(i.name) + (i.meta ? '<small>' + esc(i.meta) + '</small>' : '') + '</button>';
+      const ph = photoFor(i.value);
+      html += '<button class="opt' + (i.cur ? " cur" : "") + (i.recent ? " recent" : "") + (ph ? " hasimg" : "") +
+              '" data-v="' + esc(i.value) + '">' +
+              (ph ? '<img class="othumb" src="' + esc(ph.src) + '" alt="" loading="lazy"><span>' : '') +
+              esc(i.name) + (i.meta ? '<small>' + esc(i.meta) + '</small>' : '') + (ph ? '</span>' : '') + '</button>';
     });
     list.innerHTML = html || '<p class="sheet-none">Nothing matches.</p>';
   };

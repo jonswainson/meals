@@ -181,6 +181,12 @@ for r in DATA["recipes"]:
         if who in ("jon", "cheryl", "daughter") and g <= 0:
             fail("no serving guide", r["id"], "%s's share of %s is %sg" % (who, sv["share"]["label"], g))
 
+# 11. every photo named in recipes.json is there to be shown
+for owner, p in ([(r["id"], r.get("photo")) for r in DATA["recipes"]] +
+                 list((DATA.get("fixedPhotos") or {}).items())):
+    if p and not os.path.isfile(os.path.join(BASE, p.get("src", ""))):
+        fail("missing photo", owner, p.get("src", "(no src)"))
+
 # ------------------------------------------------------------------- report
 if findings:
     w = max(len(f[0]) for f in findings)
