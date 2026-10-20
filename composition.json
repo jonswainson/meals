@@ -3883,6 +3883,36 @@
       "protein": 0,
       "salt": 0,
       "note": "Optional, at the table."
+    },
+    "Smoked salmon": {
+      "per": "100g",
+      "cookedYield": 1.0,
+      "state": "raw/dry",
+      "inRecipesJson": false,
+      "kcal": 180,
+      "protein": 23.0,
+      "fat": 10.0,
+      "carbs": 0.0,
+      "fibre": 0.0,
+      "salt": 3.0,
+      "source": "UK supermarket smoked salmon, brand average (Scottish, cold-smoked)",
+      "confidence": "medium",
+      "note": "plan.html item. Salt runs 2.5-4.7g per 100g across brands; 3.0 is a typical pack. Ready to eat."
+    },
+    "Avocado": {
+      "per": "100g",
+      "cookedYield": 1.0,
+      "state": "raw/dry",
+      "inRecipesJson": false,
+      "kcal": 167,
+      "protein": 2.0,
+      "fat": 15.4,
+      "carbs": 8.6,
+      "fibre": 6.8,
+      "salt": 0.02,
+      "source": "USDA FoodData Central SR Legacy — Avocados, raw, California (Hass)",
+      "confidence": "high",
+      "note": "plan.html item. FLESH weight, stone and skin off."
     }
   },
   "labelSourced": "Where Jon has photographed the pack, the pack wins and confidence is high. Generic CoFID entries are a starting point, not the product in the fridge - both items corrected on 20 September moved by more than 30% on at least one figure."

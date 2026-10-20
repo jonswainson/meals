@@ -189,6 +189,8 @@ const FIXED = {
     jon:{kcal:537,protein:50.6,fibre:6.0,salt:0.51}, cheryl:{kcal:403,protein:38.0,fibre:4.5,salt:0.38}},
   "bacon-cottage": {name:"Bacon, cottage cheese and a protein wrap",
     jon:{kcal:493,protein:43.2,fibre:3.9,salt:3.56}, cheryl:{kcal:370,protein:32.4,fibre:3.0,salt:2.67}},
+  "salmon-eggs":  {name:"Smoked salmon, poached eggs and spinach on sourdough",
+    jon:{kcal:530,protein:39.8,fibre:7.4,salt:2.75}, cheryl:{kcal:403,protein:32.4,fibre:4.9,salt:2.63}},
   "skyr-bowl":    {name:"The Skyr bowl",
                    jon:{kcal:522,protein:59.7,fibre:12.1,salt:0.52},
                    cheryl:{kcal:392,protein:44.8,fibre:9.1,salt:0.39}},
@@ -264,7 +266,7 @@ const FIXED = {
 };
 
 /* how long the fixed items take */
-Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":12,"gingerbread":5,"bacon-cottage":10,"milbona":0,"huel-milbona":0,"banana-skyr":1,
+Object.entries({"berry-oat":3,"skyr-bowl":3,"cherry-berry":5,"almond-blueberry":5,"pb-banana-oats":12,"gingerbread":5,"bacon-cottage":10,"salmon-eggs":15,"milbona":0,"huel-milbona":0,"banana-skyr":1,
   "banana-skyr-150":1,"huel-bar":0,"whey-pear":1,"none":0,"own-thing":0,"cheat-meal":0,"roast-beef":90,"roast-pork":90,"roast-chicken":90,"roast-turkey":90,"roast-lamb":90,"roast-ham":90,"ms-bought":0,
   "huel-bottle":0,"sunday-roast":20,"prawns-pear":0,"work-pizza":0,"cottage-rye":2,"eggs-dukkah":12,"biltong-apple":0})
   .forEach(([k,v]) => { if (FIXED[k]) FIXED[k].timeMinutes = v; });
@@ -285,7 +287,7 @@ const FIXED_FOR_SLOT = {lunch:["skyr-bowl","ms-bought","huel-bottle"],
                         dinner:["roast-beef","roast-pork","roast-chicken","roast-turkey","roast-lamb","roast-ham","sunday-roast","work-pizza","cheat-meal"]};
 
 const SLOT_OPTIONS = {
-  breakfast: ["berry-oat","cherry-berry","gingerbread","almond-blueberry","bacon-cottage",
+  breakfast: ["berry-oat","cherry-berry","gingerbread","almond-blueberry","bacon-cottage","salmon-eggs",
               "pb-banana-oats","skyr-bowl",
               "huel-milbona","huel-bottle","own-thing"],
   afternoon: ["banana-skyr","banana-skyr-150","milbona","cottage-rye","eggs-dukkah","biltong-apple",
@@ -529,6 +531,13 @@ FIXED["bacon-cottage"].ing = {
        I("Tomatoes",70,"fresh")]};
 FIXED["bacon-cottage"].ing.cheryl = share(FIXED["bacon-cottage"].ing.jon, 0.75);
 
+/* Cheryl doesn't eat avocado: her plate is her own, a thicker slice of toast in its place */
+FIXED["salmon-eggs"].ing = {
+  jon:   [I("Eggs",165,"dairy",330,true), I("Smoked salmon",50,"meat-fish",100), I("Avocado",40,"fresh"),
+          I("Spinach",80,"fresh",200), I("Wholemeal sourdough",50,"bakery",800)],
+  cheryl:[I("Eggs",110,"dairy",330,true), I("Smoked salmon",50,"meat-fish",100),
+          I("Spinach",60,"fresh",200), I("Wholemeal sourdough",60,"bakery",800)]};
+
 FIXED["gingerbread"].ing = {
   jon:[I("Semi-skimmed milk",250,"dairy",2000,true,"ml"), I("Whey protein powder",44,"cupboard",1000,true),
        I("Rolled oats",30,"cupboard",1000,true), I("Maple syrup",5,"cupboard",250,true),
@@ -645,6 +654,16 @@ FIXED["berry-oat"].mix = [["Skyr",200],["Whey",32],["Milk",150,"ml"],
 FIXED["skyr-bowl"].mix = [["Skyr, plain or raspberry",250],["Whey",32],["Milk",20,"ml"],
   ["Frozen raspberries",100],["Chia seeds",12],["Walnuts or almonds",8],
   ["Pumpkin seeds",10],["Banana, weighed",30]];
+
+FIXED["salmon-eggs"].recipe = R(
+  ["<b>Jon:</b> 3 eggs \u00b7 50g smoked salmon (half a 100g pack) \u00b7 40g avocado (about a third) \u00b7 80g spinach \u00b7 1 slice sourdough (50g)",
+   "<b>Cheryl:</b> 2 eggs \u00b7 50g smoked salmon (the other half) \u00b7 60g spinach \u00b7 1 thick slice sourdough (60g) \u00b7 no avocado",
+   "Black pepper"],
+  ["A wide pan of water at a bare simmer \u2014 no bubbles breaking the surface. Crack each egg into a cup, then slide it in. <b>3 minutes</b> for a set white and a runny yolk; lift out with a slotted spoon onto kitchen paper.",
+   "While they poach, toast the sourdough, and wilt the spinach in a dry pan with a splash of water for 1\u20132 minutes. Squeeze the water out.",
+   "Jon's avocado sliced or smashed onto his toast. Then the spinach, the smoked salmon and the eggs on top, with plenty of black pepper."],
+  "No avocado, and a thicker slice of toast in its place. Two eggs. About 400 kcal and 32g of protein.",
+  "<b>Smoked salmon is salty</b> \u2014 2.75g on Jon's plate. Have it on a low-salt dinner day, not with the bacon wrap or a salty dinner.");
 
 FIXED["bacon-cottage"].recipe = R(
   ["3 rashers back bacon, grilled","200g LOW FAT cottage cheese","1 high-protein wrap (61g)",
@@ -1962,6 +1981,7 @@ const COUNT_UNIT = {
   "Carrots":                    {each:80,  one:"carrot",   many:"carrots"},
   "Eggs":                       {each:55,  one:"egg",      many:"eggs", perPack:6},
   "Whole chicken, extra large": {each:2400,one:"extra-large chicken", many:"extra-large chickens"},
+  "Avocado":                    {each:140, one:"avocado",  many:"avocados", note:"flesh weight"},
   "High-protein wraps":         {each:61,  one:"wrap",     many:"wraps", perPack:6}
 };
 const COUNT_WORDS = {bar:["bar","bars"], bottle:["bottle","bottles"]};
