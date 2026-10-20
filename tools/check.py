@@ -115,7 +115,9 @@ for r in DATA["recipes"]:
     ps = r.get("plateSplit") or {}
     comps = ps.get("components") or []
     if comps and ps.get("grams"):
-        done = sum(g * (COMP.get(n, {}).get("cookedYield") or 1) for n, g in ing.items())
+        # a yield of 0 (a lime squeezed, a rind fished out) leaves nothing on the plate
+        yl = lambda n: COMP.get(n, {}).get("cookedYield")
+        done = sum(g * (1 if yl(n) is None else yl(n)) for n, g in ing.items())
         for who in ("jon", "cheryl"):
             if who not in ps["grams"]: continue
             shares = sorted(c[who] / ing[c["item"]] for c in comps

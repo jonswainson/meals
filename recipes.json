@@ -10439,6 +10439,506 @@
           "daughter": 165
         }
       }
+    },
+    {
+      "id": "crispy-prawn-tacos",
+      "name": "Crispy prawn tacos with lime crema",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 30,
+      "handsOnMinutes": 30,
+      "tags": [
+        "fish",
+        "quick"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Raw peeled king prawns",
+          "grams": 600,
+          "aisle": "frozen",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": false,
+          "note": "peeled, deveined, thawed"
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Smoked paprika",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1.5,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Plain flour",
+          "grams": 25,
+          "aisle": "cupboard",
+          "packSize": 1500,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Eggs",
+          "grams": 55,
+          "aisle": "dairy",
+          "packSize": 330,
+          "packUnit": "g",
+          "staple": true,
+          "note": "1 large, beaten"
+        },
+        {
+          "item": "Panko breadcrumbs",
+          "grams": 60,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Rapeseed oil",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Corn tortillas, small",
+          "grams": 260,
+          "aisle": "bakery",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "10 small"
+        },
+        {
+          "item": "Red cabbage",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely shredded"
+        },
+        {
+          "item": "Greek yoghurt, 0% fat",
+          "grams": 150,
+          "aisle": "dairy",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Limes",
+          "grams": 130,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "juice of one for the crema, the other in wedges"
+        },
+        {
+          "item": "Water",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": false,
+          "amount": "1 tbsp, and a splash more if needed"
+        },
+        {
+          "item": "Red chilli",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "or a jalapeño, thinly sliced"
+        },
+        {
+          "item": "Coriander",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Avocado",
+          "grams": 40,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "Jon's tacos only, diced"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 719,
+          "protein": 60.2,
+          "fibre": 12.0,
+          "salt": 1.97,
+          "plateGrams": 481
+        },
+        "cheryl": {
+          "kcal": 539,
+          "protein": 49.1,
+          "fibre": 7.7,
+          "salt": 1.62,
+          "plateGrams": 364
+        },
+        "daughter": {
+          "plateGrams": 345,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": false,
+        "quality": "poor",
+        "note": "Best eaten straight away: the crumb goes soft."
+      },
+      "method": [
+        "Pat the prawns completely dry, then season with the garlic powder, paprika and {{1.5}}g of salt.",
+        "Three plates: the flour, the beaten egg, the panko. Each prawn lightly through the flour, then the egg, then the panko, pressed so the crumbs stick.",
+        "Oil in a large frying pan over medium-high heat. Prawns in for 2–3 minutes a side until deep golden, crisp and cooked through — in batches, so they crisp instead of steaming.",
+        "Crema: the yoghurt, the juice of one lime and the water stirred smooth, with a splash more water if it's too thick to drizzle.",
+        "Warm the tortillas. Fill with the shredded cabbage and the crispy prawns, and the diced avocado on Jon's.",
+        "Crema over, then the chilli, coriander and the other lime in wedges."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 481,
+          "cheryl": 364,
+          "daughter": 345
+        },
+        "components": [
+          {
+            "item": "Raw peeled king prawns",
+            "jon": 230,
+            "cheryl": 190,
+            "daughter": 180
+          },
+          {
+            "item": "Corn tortillas, small",
+            "jon": 100,
+            "cheryl": 82,
+            "daughter": 78
+          },
+          {
+            "item": "Red cabbage",
+            "jon": 57,
+            "cheryl": 48,
+            "daughter": 45
+          },
+          {
+            "item": "Greek yoghurt, 0% fat",
+            "jon": 57,
+            "cheryl": 48,
+            "daughter": 45
+          },
+          {
+            "item": "Avocado",
+            "jon": 40,
+            "cheryl": null,
+            "daughter": null
+          }
+        ]
+      },
+      "warnings": [],
+      "serve": {
+        "rows": [
+          {
+            "what": "Corn tortillas",
+            "unit": "count",
+            "one": "taco",
+            "many": "tacos",
+            "jon": 4,
+            "cheryl": 3,
+            "daughter": 3
+          },
+          {
+            "what": "Cabbage",
+            "unit": "g",
+            "jon": 40,
+            "cheryl": 34,
+            "daughter": 31
+          },
+          {
+            "what": "Lime crema",
+            "unit": "g",
+            "jon": 57,
+            "cheryl": 48,
+            "daughter": 45
+          },
+          {
+            "what": "Avocado",
+            "unit": "g",
+            "jon": 40
+          }
+        ],
+        "share": {
+          "label": "the crispy prawns",
+          "jon": 244,
+          "cheryl": 200,
+          "daughter": 191
+        },
+        "note": "Cheryl has a few more prawns in place of the avocado, so go by the weights for hers."
+      }
+    },
+    {
+      "id": "garlic-steak-bites-parmesan-polenta",
+      "name": "Garlic steak bites with Parmesan polenta and spinach",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 25,
+      "handsOnMinutes": 25,
+      "tags": [
+        "quick",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Sirloin steak, lean",
+          "grams": 600,
+          "aisle": "meat-fish",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "fat trimmed, in 3–4cm cubes"
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "half on the steak, half in the polenta"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "plenty"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Butter",
+          "grams": 10,
+          "aisle": "dairy",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": false,
+          "note": "half in the polenta, half with the garlic"
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely chopped"
+        },
+        {
+          "item": "Parsley",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chopped"
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 360,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Semi-skimmed milk",
+          "grams": 180,
+          "aisle": "dairy",
+          "packSize": 2000,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Polenta, quick-cook, dry",
+          "grams": 120,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Parmesan",
+          "grams": 35,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated"
+        },
+        {
+          "item": "Spinach",
+          "grams": 200,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 710,
+          "protein": 71.9,
+          "fibre": 3.7,
+          "salt": 1.63,
+          "plateGrams": 574
+        },
+        "cheryl": {
+          "kcal": 533,
+          "protein": 53.9,
+          "fibre": 2.8,
+          "salt": 1.22,
+          "plateGrams": 430
+        },
+        "daughter": {
+          "plateGrams": 430,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "The polenta sets firm: loosen it with a splash of milk as it reheats.",
+        "portions": {
+          "jon": {
+            "grams": 388,
+            "kcal": 480,
+            "protein": 48.6,
+            "fibre": 2.5,
+            "salt": 1.1,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 291,
+            "kcal": 360,
+            "protein": 36.5,
+            "fibre": 1.9,
+            "salt": 0.83,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Stock and milk to a gentle simmer. Whisk in the polenta slowly and cook as the packet says, stirring often, until thick and creamy.",
+        "Stir in half the butter, the Parmesan, a pinch of the salt and black pepper, then the spinach a handful at a time until it wilts. A splash of milk if it gets too thick.",
+        "Pat the steak very dry and season with the garlic powder, the rest of the salt and black pepper. Oil in a large frying pan over high heat.",
+        "Steak in one layer — two batches if need be — left alone for 1½–2 minutes to form a dark crust, then turned for 1–2 minutes more. Out once browned and cooked as you like it.",
+        "Heat down to medium. The rest of the butter and the garlic in for 30–45 seconds, then the steak and its juices back in, tossed for 30 seconds.",
+        "Polenta into bowls, the steak bites on top with the garlic butter, then the parsley and more black pepper."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 574,
+          "cheryl": 430,
+          "daughter": 430
+        },
+        "components": [
+          {
+            "item": "Sirloin steak, lean",
+            "jon": 240,
+            "cheryl": 180,
+            "daughter": 180
+          },
+          {
+            "item": "Polenta, quick-cook, dry",
+            "jon": 48,
+            "cheryl": 36,
+            "daughter": 36
+          },
+          {
+            "item": "Spinach",
+            "jon": 80,
+            "cheryl": 60,
+            "daughter": 60
+          },
+          {
+            "item": "Semi-skimmed milk",
+            "jon": 72,
+            "cheryl": 54,
+            "daughter": 54
+          },
+          {
+            "item": "Parmesan",
+            "jon": 14,
+            "cheryl": 10,
+            "daughter": 10
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Steak bites",
+            "unit": "g",
+            "jon": 173,
+            "cheryl": 130,
+            "daughter": 130
+          }
+        ],
+        "share": {
+          "label": "the Parmesan polenta",
+          "jon": 401,
+          "cheryl": 300,
+          "daughter": 300
+        }
+      }
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",

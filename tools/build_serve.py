@@ -113,6 +113,14 @@ CFG = {
     "honey-garlic-chicken-rice-bowls": dict(label="the sticky chicken", apart=["Jasmine rice, dry"],
         potitems=["Chicken breast, raw"], names={"Choy sum, pak choi or tenderstem": "Pak choi"}),
     "beef-sweet-potato-taco-bake": dict(pot="all", label="the bake"),
+    # tacos are built per person: count the tacos; the avocado is Jon's only
+    "crispy-prawn-tacos": dict(label="the crispy prawns",
+        count={"Corn tortillas, small": (26, "taco", "tacos")}, potitems=["Raw peeled king prawns"],
+        names={"Red cabbage": "Cabbage", "Greek yoghurt": "Lime crema"},
+        note="Cheryl has a few more prawns in place of the avocado, so go by the weights for hers."),
+    "garlic-steak-bites-parmesan-polenta": dict(label="the Parmesan polenta",
+        potitems=["Polenta, quick-cook, dry", "Spinach", "Semi-skimmed milk", "Parmesan"],
+        names={"Sirloin steak": "Steak bites"}),
     "hot-honey-chicken-parmesan-potatoes": dict(label="the hot honey chicken",
         potitems=["Chicken breast, raw"], names={"New potatoes": "Parmesan potatoes"}),
 
