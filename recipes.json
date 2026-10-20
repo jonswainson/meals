@@ -9303,6 +9303,904 @@
           "daughter": 555
         }
       }
+    },
+    {
+      "id": "honey-garlic-salmon-smashed-potatoes",
+      "name": "Honey garlic salmon with smashed potatoes and green beans",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 40,
+      "handsOnMinutes": 15,
+      "tags": [
+        "fish",
+        "one-tray",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Salmon fillets, raw",
+          "grams": 480,
+          "aisle": "meat-fish",
+          "packSize": 240,
+          "packUnit": "g",
+          "staple": false,
+          "note": "4 fillets"
+        },
+        {
+          "item": "New potatoes",
+          "grams": 680,
+          "aisle": "fresh",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Green beans",
+          "grams": 340,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "trimmed"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "for the potatoes"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Honey",
+          "grams": 24,
+          "aisle": "cupboard",
+          "packSize": 340,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Reduced-salt soy sauce",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Garlic",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Dijon mustard",
+          "grams": 8,
+          "aisle": "cupboard",
+          "packSize": 185,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Lemon juice",
+          "grams": 8,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 708,
+          "protein": 47.3,
+          "fibre": 11.5,
+          "salt": 1.66,
+          "plateGrams": 549
+        },
+        "cheryl": {
+          "kcal": 531,
+          "protein": 35.4,
+          "fibre": 8.7,
+          "salt": 1.24,
+          "plateGrams": 412
+        },
+        "daughter": {
+          "plateGrams": 412,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Good cold the next day; the potatoes soften.",
+        "portions": {
+          "jon": {
+            "grams": 372,
+            "kcal": 480,
+            "protein": 32.1,
+            "fibre": 7.8,
+            "salt": 1.13,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 279,
+            "kcal": 360,
+            "protein": 24.1,
+            "fibre": 5.8,
+            "salt": 0.85,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Oven to 220°C. Potatoes into cold water, brought to the boil and simmered 12–15 minutes until a knife goes in easily. Drain and leave them to steam dry for a minute.",
+        "Onto a lined tray and pressed flat with the bottom of a mug — gently, so they split but hold together. Half the oil, {{1}}g of salt and black pepper over. Roast 15 minutes.",
+        "Green beans tossed in the rest of the oil and onto the tray for 5 minutes.",
+        "Glaze: the honey, soy sauce, crushed garlic, Dijon and lemon juice mixed. Salmon onto the tray, skin-side down, and brushed with half of it.",
+        "Roast 10–12 minutes, brushing on the rest of the glaze halfway, until the salmon flakes easily and the potatoes are golden and crisp."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 549,
+          "cheryl": 412,
+          "daughter": 412
+        },
+        "components": [
+          {
+            "item": "Salmon fillets, raw",
+            "jon": 192,
+            "cheryl": 144,
+            "daughter": 144
+          },
+          {
+            "item": "New potatoes",
+            "jon": 272,
+            "cheryl": 204,
+            "daughter": 204
+          },
+          {
+            "item": "Green beans",
+            "jon": 136,
+            "cheryl": 102,
+            "daughter": 102
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Salmon",
+            "unit": "count",
+            "one": "fillet",
+            "many": "fillets",
+            "jon": 2,
+            "cheryl": 1,
+            "daughter": 1
+          },
+          {
+            "what": "Smashed potatoes",
+            "unit": "g",
+            "jon": 132,
+            "cheryl": 247,
+            "daughter": 188
+          },
+          {
+            "what": "Green beans",
+            "unit": "g",
+            "jon": 122,
+            "cheryl": 92,
+            "daughter": 92
+          }
+        ],
+        "share": null,
+        "adjusted": {
+          "jon": 96,
+          "cheryl": -48
+        },
+        "adjustSide": "crushed potatoes"
+      }
+    },
+    {
+      "id": "chicken-parmesan-orzo-peas",
+      "name": "Creamy Parmesan chicken orzo with peas and spinach",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 30,
+      "handsOnMinutes": 25,
+      "tags": [
+        "quick",
+        "one-pan",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Chicken breast, raw",
+          "grams": 550,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Dried mixed herbs",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 14,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "plenty"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Orzo, dry",
+          "grams": 165,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": true,
+          "note": "dry weight"
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 350,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Frozen peas",
+          "grams": 200,
+          "aisle": "frozen",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Spinach",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Single cream",
+          "grams": 70,
+          "aisle": "dairy",
+          "packSize": 300,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Parmesan",
+          "grams": 35,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated"
+        },
+        {
+          "item": "Parsley",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chopped"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 714,
+          "protein": 74.6,
+          "fibre": 8.1,
+          "salt": 1.42,
+          "plateGrams": 535
+        },
+        "cheryl": {
+          "kcal": 536,
+          "protein": 55.9,
+          "fibre": 6.1,
+          "salt": 1.06,
+          "plateGrams": 401
+        },
+        "daughter": {
+          "plateGrams": 401,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats well with a splash of water.",
+        "portions": {
+          "jon": {
+            "grams": 360,
+            "kcal": 480,
+            "protein": 50.2,
+            "fibre": 5.4,
+            "salt": 0.95,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 270,
+            "kcal": 360,
+            "protein": 37.7,
+            "fibre": 4.1,
+            "salt": 0.71,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Pat the chicken dry and season both sides with the garlic powder, mixed herbs, {{1}}g of salt and black pepper.",
+        "Oil in a large frying pan over medium-high heat. Chicken in for 5–7 minutes a side, until golden and cooked through. Out onto a plate to rest.",
+        "Heat down to medium. Garlic into the same pan for 30 seconds.",
+        "Orzo in and stirred for a minute to toast.",
+        "Stock in. Simmer 9–11 minutes, stirring often, until the orzo is just tender and most of the stock has gone. A splash of water if it dries out first.",
+        "Peas in for the last 3 minutes, then the spinach, stirred until it wilts.",
+        "Heat to low. Cream and Parmesan stirred in until glossy, with plenty of black pepper.",
+        "Slice the chicken and lay it over the orzo. Parsley over."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 535,
+          "cheryl": 401,
+          "daughter": 401
+        },
+        "components": [
+          {
+            "item": "Chicken breast, raw",
+            "jon": 220,
+            "cheryl": 165,
+            "daughter": 165
+          },
+          {
+            "item": "Orzo, dry",
+            "jon": 66,
+            "cheryl": 50,
+            "daughter": 50
+          },
+          {
+            "item": "Frozen peas",
+            "jon": 80,
+            "cheryl": 60,
+            "daughter": 60
+          },
+          {
+            "item": "Spinach",
+            "jon": 60,
+            "cheryl": 45,
+            "daughter": 45
+          },
+          {
+            "item": "Single cream",
+            "jon": 28,
+            "cheryl": 21,
+            "daughter": 21
+          },
+          {
+            "item": "Parmesan",
+            "jon": 14,
+            "cheryl": 10,
+            "daughter": 10
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Chicken, cooked",
+            "unit": "g",
+            "jon": 158,
+            "cheryl": 119,
+            "daughter": 119
+          }
+        ],
+        "share": {
+          "label": "the creamy orzo",
+          "jon": 377,
+          "cheryl": 282,
+          "daughter": 282
+        }
+      }
+    },
+    {
+      "id": "honey-garlic-chicken-rice-bowls",
+      "name": "Sticky honey garlic chicken rice bowls with pak choi",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 30,
+      "handsOnMinutes": 20,
+      "tags": [
+        "quick",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Jasmine rice, dry",
+          "grams": 200,
+          "aisle": "cupboard",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": true,
+          "note": "dry weight"
+        },
+        {
+          "item": "Chicken breast, raw",
+          "grams": 550,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false,
+          "note": "bite-size pieces"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 12,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Choy sum, pak choi or tenderstem",
+          "grams": 400,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "pak choi, halved lengthways"
+        },
+        {
+          "item": "Reduced-salt soy sauce",
+          "grams": 20,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Dark soy sauce",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Honey",
+          "grams": 54,
+          "aisle": "cupboard",
+          "packSize": 340,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Garlic",
+          "grams": 15,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Rice vinegar",
+          "grams": 13,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Toasted sesame oil",
+          "grams": 4,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Cornflour",
+          "grams": 3,
+          "aisle": "cupboard",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Water",
+          "grams": 25,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Spring onions",
+          "grams": 40,
+          "aisle": "fresh",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": false,
+          "note": "thinly sliced"
+        },
+        {
+          "item": "Sesame seeds",
+          "grams": 6,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 698,
+          "protein": 62.9,
+          "fibre": 4.3,
+          "salt": 2.07,
+          "plateGrams": 558
+        },
+        "cheryl": {
+          "kcal": 524,
+          "protein": 47.2,
+          "fibre": 3.2,
+          "salt": 1.55,
+          "plateGrams": 419
+        },
+        "daughter": {
+          "plateGrams": 419,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Cool the rice fast, fridge within the hour, and reheat once until piping hot.",
+        "portions": {
+          "jon": {
+            "grams": 384,
+            "kcal": 480,
+            "protein": 43.3,
+            "fibre": 3.0,
+            "salt": 1.42,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 288,
+            "kcal": 360,
+            "protein": 32.5,
+            "fibre": 2.2,
+            "salt": 1.06,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Rice on first, as the packet says, and keep it warm.",
+        "Sauce: the two soy sauces, honey, crushed garlic, rice vinegar, sesame oil, cornflour and water whisked together.",
+        "Pat the chicken dry. Oil in a large frying pan over medium-high heat, chicken in one layer and left alone for 2–3 minutes to colour, then 4–5 minutes more, turning, until cooked through. Black pepper; no salt — the soy carries it.",
+        "Meanwhile the pak choi into another pan with a splash of water, lid on, 2–3 minutes until the stalks are just tender.",
+        "Heat down to medium, sauce over the chicken, tossed for 2–3 minutes until it thickens into a sticky glaze.",
+        "Rice into bowls, pak choi alongside, the chicken spooned over, then the spring onions and sesame seeds."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 558,
+          "cheryl": 419,
+          "daughter": 419
+        },
+        "components": [
+          {
+            "item": "Jasmine rice, dry",
+            "jon": 80,
+            "cheryl": 60,
+            "daughter": 60
+          },
+          {
+            "item": "Chicken breast, raw",
+            "jon": 220,
+            "cheryl": 165,
+            "daughter": 165
+          },
+          {
+            "item": "Choy sum, pak choi or tenderstem",
+            "jon": 160,
+            "cheryl": 120,
+            "daughter": 120
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Rice, cooked",
+            "unit": "g",
+            "jon": 216,
+            "cheryl": 162,
+            "daughter": 162
+          },
+          {
+            "what": "Pak choi",
+            "unit": "g",
+            "jon": 112,
+            "cheryl": 84,
+            "daughter": 84
+          }
+        ],
+        "share": {
+          "label": "the sticky chicken",
+          "jon": 230,
+          "cheryl": 173,
+          "daughter": 173
+        }
+      }
+    },
+    {
+      "id": "beef-sweet-potato-taco-bake",
+      "name": "Cheesy beef and sweet potato taco bake",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 45,
+      "handsOnMinutes": 15,
+      "tags": [
+        "bake",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Sweet potato",
+          "grams": 510,
+          "aisle": "fresh",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": false,
+          "note": "peeled, small cubes"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 7,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Beef mince, 5%",
+          "grams": 400,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Red peppers",
+          "grams": 160,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "diced"
+        },
+        {
+          "item": "Chilli powder",
+          "grams": 4,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Ground cumin",
+          "grams": 3,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Smoked paprika",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Black beans, tinned",
+          "grams": 240,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "rinsed"
+        },
+        {
+          "item": "Salsa",
+          "grams": 180,
+          "aisle": "cupboard",
+          "packSize": 300,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Cheddar, grated",
+          "grams": 75,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 714,
+          "protein": 54.3,
+          "fibre": 16.1,
+          "salt": 2.29,
+          "plateGrams": 540
+        },
+        "cheryl": {
+          "kcal": 536,
+          "protein": 40.8,
+          "fibre": 12.0,
+          "salt": 1.72,
+          "plateGrams": 405
+        },
+        "daughter": {
+          "plateGrams": 405,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats well.",
+        "portions": {
+          "jon": {
+            "grams": 363,
+            "kcal": 480,
+            "protein": 36.5,
+            "fibre": 10.8,
+            "salt": 1.54,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 272,
+            "kcal": 360,
+            "protein": 27.4,
+            "fibre": 8.1,
+            "salt": 1.16,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Oven to 220°C. Sweet potato tossed with the oil and black pepper — no salt — in a baking dish. Roast 20–25 minutes until nearly tender and lightly browned.",
+        "Meanwhile brown the mince in a dry frying pan over medium-high heat, breaking it up, 5–6 minutes. The pepper, chilli powder, cumin, paprika and garlic powder in for 3–4 minutes.",
+        "Mince, black beans and salsa into the dish with the sweet potato and stirred gently, then the cheddar over the top.",
+        "Bake 10–12 minutes until bubbling, then 1–2 minutes under the grill to brown the cheese."
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "source": "ratio",
+        "grams": {
+          "jon": 540,
+          "cheryl": 405,
+          "daughter": 405
+        }
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the bake",
+          "jon": 540,
+          "cheryl": 405,
+          "daughter": 405
+        }
+      }
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",

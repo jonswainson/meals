@@ -105,6 +105,15 @@ CFG = {
     "convenience-fallback": dict(asis=True),
     "honey-glazed-chicken-wedges": dict(),
 
+    "honey-garlic-salmon-smashed-potatoes": dict(
+        count={"Salmon fillets, raw": (120, "fillet", "fillets")}, adjust="New potatoes",
+        names={"New potatoes": "Smashed potatoes"}),
+    "chicken-parmesan-orzo-peas": dict(label="the creamy orzo",
+        potitems=["Orzo, dry", "Frozen peas", "Spinach", "Single cream", "Parmesan"]),
+    "honey-garlic-chicken-rice-bowls": dict(label="the sticky chicken", apart=["Jasmine rice, dry"],
+        potitems=["Chicken breast, raw"], names={"Choy sum, pak choi or tenderstem": "Pak choi"}),
+    "beef-sweet-potato-taco-bake": dict(pot="all", label="the bake"),
+
     # cold tubs and plates, assembled not cooked together
     # mixed in one bowl: one salad, shared; only what goes on top is its own row
     "tuna-chickpea-salad": dict(pot="all", label="the salad", keep=["Pumpkin seeds"]),
@@ -126,7 +135,7 @@ SERVED_NAME = {
     "Wholewheat spaghetti, dry": "Spaghetti, cooked", "Jasmine rice, dry": "Rice, cooked",
     "Bulgur wheat, dry": "Bulgur, cooked", "Potatoes": "Potatoes, cooked",
     "New potatoes": "Crushed potatoes", "Frozen peas": "Peas", "Pointed/hispi cabbage": "Hispi cabbage",
-    "Tenderstem broccoli": "Tenderstem", "Frozen edamame": "Edamame", "Asparagus": "Asparagus",
+    "Tenderstem broccoli": "Tenderstem", "Green beans": "Green beans", "Frozen edamame": "Edamame", "Asparagus": "Asparagus",
     "Salmon fillets, raw": "Salmon", "Haddock loins, unsmoked": "Haddock",
     "Baking potatoes": "Baked potato", "Beef mince, 5%": "Kofta",
 }
