@@ -12145,6 +12145,845 @@
           "daughter": 336
         }
       }
+    },
+    {
+      "id": "garlic-chicken-mushroom-soup",
+      "name": "Creamy garlic chicken and mushroom soup",
+      "slot": "lunch",
+      "basePortions": 4,
+      "timeMinutes": 40,
+      "handsOnMinutes": 30,
+      "tags": [
+        "batch",
+        "flask",
+        "soup"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Chicken breast, raw",
+          "grams": 700,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 3,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "a pinch on the chicken, the rest in the soup"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "plenty"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true,
+          "note": "half for the chicken, half for the mushrooms"
+        },
+        {
+          "item": "Mushrooms",
+          "grams": 370,
+          "aisle": "fresh",
+          "packSize": 250,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chestnut, sliced"
+        },
+        {
+          "item": "Onions",
+          "grams": 120,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1 small, finely diced"
+        },
+        {
+          "item": "Garlic",
+          "grams": 20,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Thyme",
+          "grams": 2,
+          "aisle": "fresh",
+          "packSize": 20,
+          "packUnit": "g",
+          "staple": false,
+          "note": "leaves, plus a few to finish"
+        },
+        {
+          "item": "Dried mixed herbs",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 14,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Plain flour",
+          "grams": 30,
+          "aisle": "cupboard",
+          "packSize": 1500,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 1000,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Single cream",
+          "grams": 120,
+          "aisle": "dairy",
+          "packSize": 300,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Semi-skimmed milk",
+          "grams": 90,
+          "aisle": "dairy",
+          "packSize": 2000,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Parmesan",
+          "grams": 50,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 473,
+          "protein": 61.5,
+          "fibre": 2.4,
+          "salt": 2.14,
+          "plateGrams": 448
+        },
+        "cheryl": {
+          "kcal": 355,
+          "protein": 46.1,
+          "fibre": 1.8,
+          "salt": 1.6,
+          "plateGrams": 336
+        },
+        "daughter": null
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Four lunches from one cook. Reheat until piping hot.",
+        "portions": {
+          "jon": {
+            "grams": 455,
+            "kcal": 480,
+            "protein": 62.4,
+            "fibre": 2.4,
+            "salt": 2.17,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 341,
+            "kcal": 360,
+            "protein": 46.8,
+            "fibre": 1.8,
+            "salt": 1.63,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Season the chicken with a pinch of the salt and black pepper. Half the oil in a large pan, chicken in for 5–6 minutes a side until cooked through. Out and shredded with two forks.",
+        "The rest of the oil and the mushrooms in for 6–8 minutes until deeply browned. Set a few aside for the top.",
+        "Onion in for 3 minutes, then the garlic, thyme and mixed herbs for 30 seconds.",
+        "Flour stirred in for a minute, then the stock added gradually. Simmer 7–8 minutes until slightly thickened.",
+        "Heat down. The cream, milk, Parmesan, the rest of the salt and the shredded chicken stirred in, and simmered gently for 3–4 minutes.",
+        "Into four tubs, two of Jon's size and two of Cheryl's. The reserved mushrooms, a little thyme and black pepper on top."
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "source": "ratio",
+        "grams": {
+          "jon": 448,
+          "cheryl": 336
+        }
+      },
+      "prep": {
+        "when": "weekend",
+        "note": "Four lunches from one cook: two for Jon, two for Cheryl."
+      },
+      "tips": [
+        {
+          "tone": "go",
+          "text": "Brown the mushrooms properly before anything else goes in — that colour is most of the flavour."
+        }
+      ],
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the soup",
+          "jon": 448,
+          "cheryl": 336
+        }
+      }
+    },
+    {
+      "id": "buffalo-chicken-soup",
+      "name": "Creamy buffalo chicken soup",
+      "slot": "lunch",
+      "basePortions": 4,
+      "timeMinutes": 35,
+      "handsOnMinutes": 25,
+      "tags": [
+        "batch",
+        "flask",
+        "soup",
+        "spicy"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Olive oil",
+          "grams": 18,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Onions",
+          "grams": 120,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "1 small, diced"
+        },
+        {
+          "item": "Celery",
+          "grams": 120,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2 sticks, finely diced"
+        },
+        {
+          "item": "Garlic",
+          "grams": 18,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Chicken breast, raw",
+          "grams": 850,
+          "aisle": "meat-fish",
+          "packSize": 650,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 1140,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Buffalo sauce",
+          "grams": 72,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Smoked paprika",
+          "grams": 1.2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 1.2,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Reduced-fat cream cheese",
+          "grams": 170,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "softened"
+        },
+        {
+          "item": "Single cream",
+          "grams": 72,
+          "aisle": "dairy",
+          "packSize": 300,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Semi-skimmed milk",
+          "grams": 72,
+          "aisle": "dairy",
+          "packSize": 2000,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Spring onions",
+          "grams": 30,
+          "aisle": "fresh",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": false,
+          "note": "thinly sliced"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 471,
+          "protein": 66.2,
+          "fibre": 1.6,
+          "salt": 3.03,
+          "plateGrams": 501
+        },
+        "cheryl": {
+          "kcal": 353,
+          "protein": 49.6,
+          "fibre": 1.2,
+          "salt": 2.27,
+          "plateGrams": 376
+        },
+        "daughter": null
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Four lunches from one cook. Reheat until piping hot.",
+        "portions": {
+          "jon": {
+            "grams": 511,
+            "kcal": 480,
+            "protein": 67.5,
+            "fibre": 1.6,
+            "salt": 3.09,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 383,
+            "kcal": 360,
+            "protein": 50.6,
+            "fibre": 1.2,
+            "salt": 2.32,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Oil in a large pan. Onion and celery in for 4–5 minutes until softened, then the garlic for 30 seconds.",
+        "Chicken, stock, buffalo sauce, paprika, garlic powder and black pepper in — no added salt, the sauce carries it. Bring to a simmer, lid on, 12–15 minutes until the chicken is cooked through.",
+        "Lift out the chicken, shred it with two forks and put it back.",
+        "Heat down to low. Whisk in the cream cheese until smooth, then the cream and milk.",
+        "Simmer gently for 2–3 minutes. Into four tubs, two of Jon's size and two of Cheryl's, with the spring onions on top."
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "source": "ratio",
+        "grams": {
+          "jon": 501,
+          "cheryl": 376
+        }
+      },
+      "prep": {
+        "when": "weekend",
+        "note": "Four lunches from one cook: two for Jon, two for Cheryl."
+      },
+      "tips": [
+        {
+          "tone": "hot",
+          "text": "Salty: about 3g in Jon's tub, from the buffalo sauce and the stock. Have it on a low-salt dinner day."
+        }
+      ],
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the soup",
+          "jon": 501,
+          "cheryl": 376
+        }
+      }
+    },
+    {
+      "id": "tuscan-prawn-gnocchi",
+      "name": "Creamy Tuscan prawn gnocchi",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 20,
+      "handsOnMinutes": 20,
+      "tags": [
+        "quick",
+        "fish",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Raw peeled king prawns",
+          "grams": 400,
+          "aisle": "frozen",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": false,
+          "note": "thawed"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Garlic",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Sun-dried tomatoes",
+          "grams": 130,
+          "aisle": "cupboard",
+          "packSize": 280,
+          "packUnit": "g",
+          "staple": false,
+          "note": "drained and sliced"
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 130,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Light cooking cream",
+          "grams": 130,
+          "aisle": "dairy",
+          "packSize": 250,
+          "packUnit": "ml",
+          "staple": false
+        },
+        {
+          "item": "Dried mixed herbs",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 14,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Chilli flakes",
+          "grams": 0.5,
+          "aisle": "cupboard",
+          "packSize": 35,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Potato gnocchi",
+          "grams": 450,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Parmesan",
+          "grams": 40,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely grated"
+        },
+        {
+          "item": "Spinach",
+          "grams": 80,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 726,
+          "protein": 46.2,
+          "fibre": 7.0,
+          "salt": 3.53,
+          "plateGrams": 460
+        },
+        "cheryl": {
+          "kcal": 545,
+          "protein": 34.6,
+          "fibre": 5.3,
+          "salt": 2.65,
+          "plateGrams": 345
+        },
+        "daughter": {
+          "plateGrams": 345,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Reheats gently with a splash of water; the prawns firm up.",
+        "portions": {
+          "jon": {
+            "grams": 304,
+            "kcal": 480,
+            "protein": 30.5,
+            "fibre": 4.6,
+            "salt": 2.33,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 228,
+            "kcal": 360,
+            "protein": 22.9,
+            "fibre": 3.4,
+            "salt": 1.75,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Oil in a large frying pan over medium-high heat. Prawns in, with black pepper, for 1–2 minutes a side until pink. Out and set aside.",
+        "Garlic and sun-dried tomatoes into the pan for 1 minute.",
+        "Stock and cream in, with the mixed herbs and chilli flakes.",
+        "Gnocchi in and simmered 4–6 minutes, stirring now and then, until tender and the sauce has thickened. A splash of water if needed.",
+        "Parmesan and spinach stirred in until the spinach wilts and the sauce is creamy.",
+        "Prawns back in, tossed gently to coat."
+      ],
+      "plateSplit": {
+        "servedByWeight": true,
+        "source": "ratio",
+        "grams": {
+          "jon": 460,
+          "cheryl": 345,
+          "daughter": 345
+        }
+      },
+      "tips": [
+        {
+          "tone": "hot",
+          "text": "Salty: about 3.5g on Jon's plate, mostly the gnocchi and sun-dried tomatoes. Have it on a low-salt day, not after a salty lunch."
+        }
+      ],
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the gnocchi",
+          "jon": 460,
+          "cheryl": 345,
+          "daughter": 345
+        }
+      }
+    },
+    {
+      "id": "cheeseburger-potato-bowls",
+      "name": "Loaded cheeseburger potato bowls",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 35,
+      "handsOnMinutes": 15,
+      "tags": [
+        "beef",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Potatoes",
+          "grams": 680,
+          "aisle": "fresh",
+          "packSize": 2500,
+          "packUnit": "g",
+          "staple": false,
+          "note": "diced"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 25,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Smoked paprika",
+          "grams": 1.7,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1.5,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "a pinch on the potatoes, a pinch on the beef"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Beef mince, 5%",
+          "grams": 500,
+          "aisle": "meat-fish",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Garlic powder",
+          "grams": 1.7,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Greek yoghurt, 0% fat",
+          "grams": 100,
+          "aisle": "dairy",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Tomato ketchup",
+          "grams": 28,
+          "aisle": "cupboard",
+          "packSize": 460,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "American mustard",
+          "grams": 9,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false
+        },
+        {
+          "item": "Reduced-fat cheddar",
+          "grams": 68,
+          "aisle": "dairy",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "grated"
+        },
+        {
+          "item": "Red onions",
+          "grams": 55,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "finely diced"
+        },
+        {
+          "item": "Dill pickles",
+          "grams": 70,
+          "aisle": "cupboard",
+          "packSize": 300,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 713,
+          "protein": 61.6,
+          "fibre": 7.1,
+          "salt": 2.3,
+          "plateGrams": 506
+        },
+        "cheryl": {
+          "kcal": 535,
+          "protein": 46.2,
+          "fibre": 5.3,
+          "salt": 1.73,
+          "plateGrams": 380
+        },
+        "daughter": {
+          "plateGrams": 380,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Keep the sauce, onion and pickles apart if saving any.",
+        "portions": {
+          "jon": {
+            "grams": 341,
+            "kcal": 480,
+            "protein": 41.5,
+            "fibre": 4.8,
+            "salt": 1.55,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 256,
+            "kcal": 360,
+            "protein": 31.1,
+            "fibre": 3.6,
+            "salt": 1.16,
+            "source": "derived"
+          }
+        }
+      },
+      "method": [
+        "Oven to 220°C. Potatoes tossed with the oil, smoked paprika, a pinch of the salt and black pepper. Roast 25–30 minutes until golden and crisp.",
+        "Large frying pan over medium-high heat. Mince in for 6–8 minutes until browned and cooked through, seasoned with the garlic powder, the rest of the salt and black pepper.",
+        "Burger sauce: the yoghurt, ketchup and mustard mixed.",
+        "Crispy potatoes into bowls, the beef on top and the cheddar over it, left to melt.",
+        "Red onion and pickles on top, and the burger sauce over generously."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 506,
+          "cheryl": 380,
+          "daughter": 380
+        },
+        "components": [
+          {
+            "item": "Potatoes",
+            "jon": 272,
+            "cheryl": 204,
+            "daughter": 204
+          },
+          {
+            "item": "Beef mince, 5%",
+            "jon": 200,
+            "cheryl": 150,
+            "daughter": 150
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Burger sauce",
+            "unit": "g",
+            "jon": 55,
+            "cheryl": 41,
+            "daughter": 41
+          },
+          {
+            "what": "Pickles and red onion",
+            "unit": "g",
+            "jon": 44,
+            "cheryl": 33,
+            "daughter": 33
+          },
+          {
+            "what": "Crispy potatoes",
+            "unit": "g",
+            "jon": 218,
+            "cheryl": 163,
+            "daughter": 163
+          }
+        ],
+        "share": {
+          "label": "the beef and cheese",
+          "jon": 189,
+          "cheryl": 143,
+          "daughter": 143
+        }
+      }
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",
@@ -12187,6 +13026,8 @@
     "Tuna in spring water, no added salt": 112,
     "Mackerel fillets in spring water, tinned": 110,
     "Jarred roasted red peppers": 190,
-    "noteJarredPeppers": "Estimate, 7 October 2026: no 290g jar publishes a drained weight. Larger UK jars run 67-78% peppers (Aleyna 480g gives 320g drained; Cooks & Co 460g about 360g), so 290g x 0.67 rounded down. The tortilla needs 150g, so one jar covers it either way."
+    "noteJarredPeppers": "Estimate, 7 October 2026: no 290g jar publishes a drained weight. Larger UK jars run 67-78% peppers (Aleyna 480g gives 320g drained; Cooks & Co 460g about 360g), so 290g x 0.67 rounded down. The tortilla needs 150g, so one jar covers it either way.",
+    "Sun-dried tomatoes": 160,
+    "noteSunDriedTomatoes": "Estimate: a 280g jar of sun-dried tomatoes in oil drains to roughly 150-170g; 160 used."
   }
 }

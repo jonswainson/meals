@@ -135,6 +135,13 @@ CFG = {
     "balsamic-beef-parmesan-mash-slow-cooker": dict(label="the beef, carrots and gravy",
         potitems=["Diced beef, braising steak", "Carrots"],
         groups={"Parmesan mash": ["Potatoes", "Semi-skimmed milk", "Butter", "Parmesan"]}),
+    "garlic-chicken-mushroom-soup": dict(pot="all", label="the soup"),
+    "buffalo-chicken-soup": dict(pot="all", label="the soup"),
+    "tuscan-prawn-gnocchi": dict(pot="all", label="the gnocchi"),
+    "cheeseburger-potato-bowls": dict(label="the beef and cheese",
+        potitems=["Beef mince, 5%", "Reduced-fat cheddar"], names={"Potatoes": "Crispy potatoes"},
+        groups={"Burger sauce": ["Greek yoghurt, 0% fat", "Tomato ketchup", "American mustard"],
+                "Pickles and red onion": ["Dill pickles", "Red onions"]}),
     "hot-honey-chicken-parmesan-potatoes": dict(label="the hot honey chicken",
         potitems=["Chicken breast, raw"], names={"New potatoes": "Parmesan potatoes"}),
 
