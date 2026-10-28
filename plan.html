@@ -552,10 +552,51 @@ const WEEK_20261024 = {
   ]
 };
 
+const WEEK_20261031 = {
+  id:"2026-10-31", label:"31 Oct – 6 Nov",
+  days:[
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Home · cheat meal tonight",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"cherry-berry", afternoon:"huel-bar",
+     lunch:{kind:"recipe",id:"tuna-butter-bean-fennel-tub",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"cheat-meal"}},
+    {id:"sun",label:"Sun",title:"Sunday",tags:"Home",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"pb-banana-oats", afternoon:"eggs-dukkah",
+     lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"garlic-steak-bites-parmesan-polenta",portions:5,daughter:true,alt:""}},
+    {id:"mon",label:"Mon",title:"Monday",tags:"Home",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"skyr-bowl", afternoon:"banana-skyr",
+     lunch:{kind:"leftover",from:"sun"},
+     dinner:{kind:"recipe",id:"lemon-butter-chicken-parmesan-mash",portions:5,daughter:true,alt:""}},
+    {id:"tue",label:"Tue",title:"Tuesday",tags:"Home",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"almond-blueberry", afternoon:"cottage-rye",
+     lunch:{kind:"leftover",from:"mon"},
+     dinner:{kind:"recipe",id:"baked-salmon-lentils",portions:5,daughter:true,alt:""}},
+    {id:"wed",label:"Wed",title:"Wednesday",tags:"Home",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"gingerbread", afternoon:"milbona",
+     lunch:{kind:"leftover",from:"tue"},
+     dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:true,alt:""}},
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Home · slow cooker on in the morning",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"berry-oat", afternoon:"eggs-dukkah",
+     lunch:{kind:"leftover",from:"wed"},
+     dinner:{kind:"recipe",id:"chicken-chickpea-tagine-slow-cooker",portions:5,daughter:true,alt:""}},
+    {id:"fri",label:"Fri",title:"Friday",tags:"Home · SHOP TONIGHT",
+     diners:["jon","cheryl","daughter"],
+     breakfast:"almond-blueberry", afternoon:"banana-skyr-150",
+     lunch:{kind:"leftover",from:"thu"},
+     dinner:{kind:"recipe",id:"sesame-beef-lettuce-cups",portions:3,daughter:true,alt:""}}
+  ]
+};
+
 /* The week runs Saturday to Friday, because the shop is Friday evening: the food
    lands Friday night and the first meal out of it is Saturday breakfast. Next week
    takes over on its own Saturday. Either is reachable from the header. */
-const WEEKS = [DEFAULT_WEEK, WEEK_0926, WEEK_1003, WEEK_1010, WEEK_20261024];
+const WEEKS = [DEFAULT_WEEK, WEEK_0926, WEEK_1003, WEEK_1010, WEEK_20261024, WEEK_20261031];
 /* the latest week that has started; before the first, the first */
 function dateWeek(){
   let cur = WEEKS[0];
