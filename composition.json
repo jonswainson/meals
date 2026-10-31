@@ -4451,6 +4451,49 @@
       "inRecipesJson": true,
       "confidence": "medium",
       "source": "Gochujang paste, UK retail average (salt varies 5-9g)"
+    },
+    "Pork sausages": {
+      "per": "100g",
+      "kcal": 250,
+      "protein": 14.0,
+      "fat": 20.0,
+      "carbs": 5.0,
+      "fibre": 1.0,
+      "salt": 1.5,
+      "cookedYield": 0.75,
+      "state": "raw",
+      "inRecipesJson": true,
+      "confidence": "medium",
+      "source": "Standard UK pork sausages, label average (reduced-fat ones are about 170 kcal)",
+      "note": "Raw weight. A 454g pack is 8 sausages of about 57g; 6 is 340g."
+    },
+    "Pork loin steaks": {
+      "per": "100g",
+      "kcal": 160,
+      "protein": 22.0,
+      "fat": 8.0,
+      "carbs": 0.0,
+      "fibre": 0.0,
+      "salt": 0.15,
+      "cookedYield": 0.72,
+      "state": "raw",
+      "inRecipesJson": true,
+      "confidence": "medium",
+      "source": "Pork loin steaks, fat trimmed, UK label average"
+    },
+    "Apple sauce": {
+      "per": "100g",
+      "kcal": 70,
+      "protein": 0.2,
+      "fat": 0.1,
+      "carbs": 17.0,
+      "fibre": 1.2,
+      "salt": 0.02,
+      "cookedYield": 1.0,
+      "state": "ready",
+      "inRecipesJson": true,
+      "confidence": "medium",
+      "source": "Bramley apple sauce, UK label average"
     }
   },
   "labelSourced": "Where Jon has photographed the pack, the pack wins and confidence is high. Generic CoFID entries are a starting point, not the product in the fridge - both items corrected on 20 September moved by more than 30% on at least one figure."

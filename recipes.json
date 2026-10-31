@@ -13451,6 +13451,473 @@
           "daughter": 378
         }
       }
+    },
+    {
+      "id": "sausage-chicken-casserole",
+      "name": "Sausage and chicken casserole with beans",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 55,
+      "handsOnMinutes": 20,
+      "tags": [
+        "chicken",
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "Pork sausages",
+          "grams": 227.0,
+          "aisle": "meat-fish",
+          "packSize": 454,
+          "packUnit": "g",
+          "staple": false,
+          "note": "4 sausages, half a pack"
+        },
+        {
+          "item": "Chicken thighs, skinless boneless",
+          "grams": 400.0,
+          "aisle": "meat-fish",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "in large chunks"
+        },
+        {
+          "item": "Onions",
+          "grams": 150,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "sliced"
+        },
+        {
+          "item": "Garlic",
+          "grams": 10,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Carrots",
+          "grams": 200,
+          "aisle": "fresh",
+          "packSize": 500,
+          "packUnit": "g",
+          "staple": false,
+          "note": "in chunks"
+        },
+        {
+          "item": "Red peppers",
+          "grams": 240,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2, in chunks"
+        },
+        {
+          "item": "Smoked paprika",
+          "grams": 3,
+          "aisle": "cupboard",
+          "packSize": 45,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Dried thyme",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 14,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Tomato puree",
+          "grams": 15,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Chopped tomatoes, tinned",
+          "grams": 800,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Reduced-salt chicken stock",
+          "grams": 200,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "ml",
+          "staple": true,
+          "note": "1 reduced-salt cube"
+        },
+        {
+          "item": "Worcestershire sauce",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 150,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Cannellini beans, tinned",
+          "grams": 240.0,
+          "aisle": "cupboard",
+          "packSize": 400,
+          "packUnit": "g",
+          "staple": true,
+          "note": "drained and rinsed"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Parsley",
+          "grams": 5,
+          "aisle": "fresh",
+          "packSize": 30,
+          "packUnit": "g",
+          "staple": false,
+          "note": "chopped"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 707,
+          "protein": 58.0,
+          "fibre": 15.8,
+          "salt": 2.43,
+          "plateGrams": 760
+        },
+        "cheryl": {
+          "kcal": 530,
+          "protein": 43.5,
+          "fibre": 11.8,
+          "salt": 1.82,
+          "plateGrams": 570
+        },
+        "daughter": {
+          "plateGrams": 570,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "good",
+        "note": "Better the next day; reheat until piping hot.",
+        "portions": {
+          "jon": {
+            "grams": 516,
+            "kcal": 480,
+            "protein": 39.4,
+            "fibre": 10.7,
+            "salt": 1.65,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 387,
+            "kcal": 360,
+            "protein": 29.5,
+            "fibre": 8.0,
+            "salt": 1.24,
+            "source": "derived"
+          }
+        }
+      },
+      "tips": [
+        {
+          "tone": "go",
+          "text": "The chicken thighs carry most of the protein, so four sausages are enough."
+        },
+        {
+          "tone": "plain",
+          "text": "Reduced-fat sausages work too and take about 100 kcal off the pot."
+        }
+      ],
+      "method": [
+        "Large casserole pan over medium-high heat, no oil: the sausages give off their own. Sausages in for 6–8 minutes, turned, until browned all over, then out and each cut in half.",
+        "Chicken in for 4–5 minutes until coloured, then out with the sausages.",
+        "Onion, garlic, carrots and peppers in for 5 minutes until starting to soften. Smoked paprika, thyme and tomato puree stirred in for a minute.",
+        "Chopped tomatoes, stock and Worcestershire sauce in, then the sausages and the chicken. Brought to a simmer, lid on, 30 minutes.",
+        "Beans stirred in, lid off for 10 minutes until the sauce has thickened. Black pepper to taste.",
+        "Into bowls with the parsley over."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 760,
+          "cheryl": 570,
+          "daughter": 570
+        },
+        "components": [
+          {
+            "item": "Pork sausages",
+            "jon": 91,
+            "cheryl": 68,
+            "daughter": 68
+          },
+          {
+            "item": "Chicken thighs, skinless boneless",
+            "jon": 160,
+            "cheryl": 120,
+            "daughter": 120
+          }
+        ]
+      },
+      "serve": {
+        "rows": [],
+        "share": {
+          "label": "the casserole",
+          "jon": 760,
+          "cheryl": 570,
+          "daughter": 570
+        }
+      }
+    },
+    {
+      "id": "pork-loin-traybake",
+      "name": "Honey-mustard pork loin traybake with apple sauce",
+      "slot": "dinner",
+      "basePortions": 3,
+      "timeMinutes": 45,
+      "handsOnMinutes": 15,
+      "tags": [
+        "leaves-lunch"
+      ],
+      "secondPanForDaughter": false,
+      "ingredients": [
+        {
+          "item": "New potatoes",
+          "grams": 500.0,
+          "aisle": "fresh",
+          "packSize": 1000,
+          "packUnit": "g",
+          "staple": false,
+          "note": "halved"
+        },
+        {
+          "item": "Red onions",
+          "grams": 200,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "in wedges"
+        },
+        {
+          "item": "Red and yellow peppers",
+          "grams": 300,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "2, in chunks"
+        },
+        {
+          "item": "Olive oil",
+          "grams": 10.0,
+          "aisle": "cupboard",
+          "packSize": 500,
+          "packUnit": "ml",
+          "staple": true
+        },
+        {
+          "item": "Dried thyme",
+          "grams": 2,
+          "aisle": "cupboard",
+          "packSize": 14,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Salt, weighed",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 750,
+          "packUnit": "g",
+          "staple": true,
+          "note": "a pinch on the vegetables, a pinch on the pork"
+        },
+        {
+          "item": "Black pepper",
+          "grams": 1,
+          "aisle": "cupboard",
+          "packSize": 100,
+          "packUnit": "g",
+          "staple": true,
+          "amount": "to taste"
+        },
+        {
+          "item": "Pork loin steaks",
+          "grams": 600.0,
+          "aisle": "meat-fish",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "fat trimmed"
+        },
+        {
+          "item": "Dijon mustard",
+          "grams": 10,
+          "aisle": "cupboard",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Honey",
+          "grams": 14,
+          "aisle": "cupboard",
+          "packSize": 340,
+          "packUnit": "g",
+          "staple": true
+        },
+        {
+          "item": "Garlic",
+          "grams": 5,
+          "aisle": "fresh",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "crushed"
+        },
+        {
+          "item": "Green beans",
+          "grams": 250,
+          "aisle": "fresh",
+          "packSize": 200,
+          "packUnit": "g",
+          "staple": false,
+          "note": "trimmed"
+        },
+        {
+          "item": "Apple sauce",
+          "grams": 60.0,
+          "aisle": "cupboard",
+          "packSize": null,
+          "packUnit": "g",
+          "staple": false,
+          "note": "to serve"
+        }
+      ],
+      "plates": {
+        "jon": {
+          "kcal": 713,
+          "protein": 60.8,
+          "fibre": 12.4,
+          "salt": 1.04,
+          "plateGrams": 644
+        },
+        "cheryl": {
+          "kcal": 534,
+          "protein": 45.6,
+          "fibre": 9.3,
+          "salt": 0.78,
+          "plateGrams": 483
+        },
+        "daughter": {
+          "plateGrams": 483,
+          "portionedBy": "composition"
+        }
+      },
+      "leftover": {
+        "leavesLunch": true,
+        "quality": "ok",
+        "note": "The pork firms up when reheated; slice it thin.",
+        "portions": {
+          "jon": {
+            "grams": 434,
+            "kcal": 480,
+            "protein": 40.9,
+            "fibre": 8.3,
+            "salt": 0.7,
+            "source": "derived"
+          },
+          "cheryl": {
+            "grams": 326,
+            "kcal": 360,
+            "protein": 30.7,
+            "fibre": 6.2,
+            "salt": 0.52,
+            "source": "derived"
+          }
+        }
+      },
+      "tips": [
+        {
+          "tone": "go",
+          "text": "Take the pork out at 63°C in the middle and rest it 5 minutes: loin dries out fast."
+        }
+      ],
+      "method": [
+        "Oven to 200°C. Potatoes, onions and peppers tossed on a large tray with most of the oil, the thyme, a pinch of the salt and black pepper. Roast 20 minutes.",
+        "Mustard, honey and garlic mixed into a glaze. Pork rubbed with the last of the oil and the rest of the salt.",
+        "Tray out, everything turned, the pork on top with the glaze brushed over and the green beans round the edge. Back in for 15–18 minutes until the pork is just cooked through.",
+        "Pork rested for 5 minutes, then sliced. Served with the vegetables and the apple sauce on the side."
+      ],
+      "plateSplit": {
+        "servedByWeight": false,
+        "source": "ratio",
+        "grams": {
+          "jon": 644,
+          "cheryl": 483,
+          "daughter": 483
+        },
+        "components": [
+          {
+            "item": "Pork loin steaks",
+            "jon": 240,
+            "cheryl": 180,
+            "daughter": 180
+          },
+          {
+            "item": "New potatoes",
+            "jon": 200,
+            "cheryl": 150,
+            "daughter": 150
+          }
+        ]
+      },
+      "serve": {
+        "rows": [
+          {
+            "what": "Apple sauce",
+            "unit": "g",
+            "jon": 24,
+            "cheryl": 18,
+            "daughter": 18
+          },
+          {
+            "what": "Pork, sliced",
+            "unit": "g",
+            "jon": 173,
+            "cheryl": 130,
+            "daughter": 130
+          }
+        ],
+        "share": {
+          "label": "the roast vegetables",
+          "jon": 447,
+          "cheryl": 335,
+          "daughter": 335
+        }
+      }
     }
   ],
   "leftoverMethod": "A leftover lunch is a weighed portion of the same dish, so its macros scale with its weight off Jon's own dinner plate. Jon's tub is sized to the 480 kcal lunch slot target. Cheryl's tub is three-quarters of Jon's, like every other meal in the house (Jon, 7 October 2026) - it used to be sized to an observed 385 kcal, about 80% of his. Weight and macros agree by construction.",

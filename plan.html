@@ -554,42 +554,45 @@ const WEEK_20261024 = {
 
 const WEEK_20261031 = {
   id:"2026-10-31", label:"31 Oct – 6 Nov",
+  /* using up the freezers (Jon, 31 Oct): these come out of the freezer, not the shop */
+  freezer:["Beef roasting joint","Back bacon","Pork sausages","Chicken thighs, skinless boneless",
+           "Chicken breast, raw","Pork loin steaks","Apple sauce","Diced beef, braising steak","Beef mince, 5%"],
   days:[
-    {id:"sat",label:"Sat",title:"Saturday",tags:"Home · cheat meal tonight",
+    {id:"sat",label:"Sat",title:"Saturday",tags:"Home · cheat meal tonight · beef joint out to defrost",
      diners:["jon","cheryl","daughter"],
-     breakfast:"cherry-berry", afternoon:"huel-bar",
+     breakfast:"bacon-cottage", afternoon:"huel-bar",
      lunch:{kind:"recipe",id:"tuna-butter-bean-fennel-tub",portions:2,daughter:false,alt:""},
      dinner:{kind:"fixed",id:"cheat-meal"}},
-    {id:"sun",label:"Sun",title:"Sunday",tags:"Home",
+    {id:"sun",label:"Sun",title:"Sunday",tags:"Home · roast beef from the freezer",
      diners:["jon","cheryl","daughter"],
-     breakfast:"pb-banana-oats", afternoon:"eggs-dukkah",
+     breakfast:"berry-oat", afternoon:"eggs-dukkah",
      lunch:{kind:"recipe",id:"dip-box",portions:2,daughter:false,alt:""},
-     dinner:{kind:"recipe",id:"garlic-steak-bites-parmesan-polenta",portions:5,daughter:true,alt:""}},
-    {id:"mon",label:"Mon",title:"Monday",tags:"Home",
+     dinner:{kind:"fixed",id:"roast-beef"}},
+    {id:"mon",label:"Mon",title:"Monday",tags:"Home · Sunday’s beef for dinner",
      diners:["jon","cheryl","daughter"],
      breakfast:"skyr-bowl", afternoon:"banana-skyr",
-     lunch:{kind:"leftover",from:"sun"},
-     dinner:{kind:"recipe",id:"lemon-butter-chicken-parmesan-mash",portions:5,daughter:true,alt:""}},
+     lunch:{kind:"recipe",id:"pitta-poached-chicken-slaw",portions:2,daughter:false,alt:""},
+     dinner:{kind:"fixed",id:"sunday-roast"}},
     {id:"tue",label:"Tue",title:"Tuesday",tags:"Home",
      diners:["jon","cheryl","daughter"],
-     breakfast:"almond-blueberry", afternoon:"cottage-rye",
-     lunch:{kind:"leftover",from:"mon"},
-     dinner:{kind:"recipe",id:"baked-salmon-lentils",portions:5,daughter:true,alt:""}},
+     breakfast:"almond-blueberry", afternoon:"eggs-dukkah",
+     lunch:{kind:"recipe",id:"smoky-chicken-chickpea-braise",portions:2,daughter:false,alt:""},
+     dinner:{kind:"recipe",id:"sausage-chicken-casserole",portions:5,daughter:true,alt:""}},
     {id:"wed",label:"Wed",title:"Wednesday",tags:"Home",
      diners:["jon","cheryl","daughter"],
      breakfast:"gingerbread", afternoon:"milbona",
      lunch:{kind:"leftover",from:"tue"},
-     dinner:{kind:"recipe",id:"turkey-black-bean-chilli",portions:5,daughter:true,alt:""}},
-    {id:"thu",label:"Thu",title:"Thursday",tags:"Home · slow cooker on in the morning",
+     dinner:{kind:"recipe",id:"pork-loin-traybake",portions:3,daughter:true,alt:""}},
+    {id:"thu",label:"Thu",title:"Thursday",tags:"Jon in London, home for dinner · slow cooker on in the morning",
      diners:["jon","cheryl","daughter"],
-     breakfast:"berry-oat", afternoon:"eggs-dukkah",
-     lunch:{kind:"leftover",from:"wed"},
-     dinner:{kind:"recipe",id:"chicken-chickpea-tagine-slow-cooker",portions:5,daughter:true,alt:""}},
+     breakfast:"huel-milbona", afternoon:"none",
+     lunch:{kind:"fixed",id:"ms-bought",cheryl:"huel-bottle"},
+     dinner:{kind:"recipe",id:"beef-barley-stew-slow-cooker",portions:5,daughter:true,alt:""}},
     {id:"fri",label:"Fri",title:"Friday",tags:"Home · SHOP TONIGHT",
      diners:["jon","cheryl","daughter"],
      breakfast:"almond-blueberry", afternoon:"banana-skyr-150",
      lunch:{kind:"leftover",from:"thu"},
-     dinner:{kind:"recipe",id:"sesame-beef-lettuce-cups",portions:3,daughter:true,alt:""}}
+     dinner:{kind:"recipe",id:"cheeseburger-potato-bowls",portions:3,daughter:true,alt:""}}
   ]
 };
 
@@ -2298,7 +2301,7 @@ const packsFor = (g, per) => Math.max(1, Math.ceil(g / per - 0.02));
 
 /* ---------- shopping list ---------- */
 function buildList(){
-  const agg = {}, extras = [];
+  const agg = {}, extras = [], freezer = new Set(WEEK.freezer || BASE.freezer || []);
   const take = (list, scale) => (list||[]).forEach(i => {
     const as = SHOP_AS[i.item] || {};
     let item = as.item || i.item, grams = i.grams * scale * (as.per || 1), unit = i.packUnit || "g";
@@ -2402,6 +2405,9 @@ function buildList(){
     const amount = !weighed ? qty
                  : drainedY ? g + "g drained"
                  : g + unit + (fix.note ? " · " + fix.note(g) : "");
+    /* the week says it is already in the freezer: a check, not a line */
+    if (freezer.has(a.item) || a.seen.some(i => freezer.has(i.item))){
+      staples.push([a.item, (weighed ? g + unit : qty) + " \u00b7 in the freezer"]); return; }
     if (ALWAYS_IN.has(a.item) || (kept && small && (aisle === "cupboard" || !weighed)))
       staples.push([a.item, amount]);
     else items.push([names[aisle] || "Cupboard", a.item, qty, order.indexOf(aisle)]);
